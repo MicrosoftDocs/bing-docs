@@ -8,7 +8,7 @@ ms.topic: "overview"
 author: "swhite-msft"
 manager: ehansen
 ms.author: "scottwhi"
-ms.date: 8/15/2020
+ms.date: 07/15/2020
 ---
 
 # Release notes
@@ -23,7 +23,7 @@ Initial release of this version of Bing Search Services. These services replace 
 
 Go here to get a subscription key for the API package you want. Then, get familiar with the documentation for each of the APIs. Be sure to check out the quickstarts to get up and running quickly.
 
-- [Web Search API](bing-web-searchindex.md)
+- [Web Search API](bing-web-search/index.md)
 - [Image Search API](bing-image-search/index.md)
 - [News Search API](bing-news-search/index.md)
 - [Video Search API](bing-video-search/index.md)

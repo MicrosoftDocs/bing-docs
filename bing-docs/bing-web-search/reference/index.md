@@ -7,13 +7,13 @@ ms.subservice: bing-web-search
 author: swhite-msft
 manager: ehansen
 ms.topic: reference
-ms.date: 08/15/2020
+ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
 # Web Search API v7 reference
 
-The Web Search API lets you send a search query to Bing and get back search results that include links to webpages, images, and more. This section provides technical details about the webpages, related searches, and ranking results in addition to the query parameters that affect the search results. For examples that show how to make requests, see [Bing Web Search overview](../overview.md). 
+The Web Search API lets you send a search query to Bing and get back search results that include links to webpages, images, and more. This section provides technical details about the webpages, related searches, and ranking results in addition to the query parameters that affect the search results. For examples that show how to make requests, see [Bing Web Search overview](../index.md). 
   
 For information about permitted use and display of the results, see [Bing Search API Use and Display requirements](https://docs.microsoft.com/bing/bing-web-search/useanddisplayrequirements).
 

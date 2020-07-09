@@ -1,40 +1,19 @@
 - name: Web Search API
   href: index.md
 - name: Reference
-  href: ../hotel-service/hotel-api.md
+  href: reference/index.md
   items:
-  - name: Get started
-    href: ../hotel-service/get-started.md
-  - name: Get started with a service
-    href: ../hotel-service/get-started-service.md
-  - name: Manage campaigns
-    href: ../hotel-service/manage-hotel-campaigns.md
-  - name: Get reports
-    href: ../hotel-service/reporting.md
-  - name: Code examples
-    href: ../hotel-service/code-examples.md
-    displayName: .net c# csharp
-    items:
-    - name: Subaccounts
-      href: ../hotel-service/code-example-subaccounts.md
-    - name: Hotel Groups
-      href: ../hotel-service/code-example-hotel-groups.md
-    - name: Hotels
-      href: ../hotel-service/code-example-hotels.md
-    - name: Reporting
-      href: ../hotel-service/code-example-reporting.md
-    - name: Batch processing
-      href: ../hotel-service/code-example-batch.md
-    - name: OAuth
-      href: ../hotel-service/code-example-oauth.md
-      items:
-      - name: CodeGrantFlow
-        href: ../hotel-service/code-example-code-grant-flow.md
-      - name: Call CodeGrantFlow
-        href: ../hotel-service/code-example-call-code-grant-flow.md
-  - name: Hotel API reference
-    href: ../hotel-service/reference.md
-  - name: Throttling requests
-    href: ../hotel-service/throttle-requests.md
+  - name: Response objects
+    href: reference/response-objects.md
+  - name: Query parameters
+    href: reference/query-parameters.md
+  - name: Headers
+    href: reference/headers.md
+  - name: Market and language codes
+    href: reference/market-codes.md
+  - name: Error codes
+    href: reference/error-codes.md
+  - name: Entity types
+    href: reference/entity-types.md
 - name: Release notes
   href: release-notes.md

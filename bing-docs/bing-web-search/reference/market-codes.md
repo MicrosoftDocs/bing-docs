@@ -7,7 +7,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: reference
-ms.date: 08/15/2020
+ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
@@ -18,7 +18,7 @@ The following table lists the market code values that you may use to specify the
 > [!NOTE]
 > For APIs with limited market support, see the Endpoint section in the API's reference content.
 
-For a list of country codes that you may specify in the [cc](query-parameters.md#cc) query parameter, see [Country codes](#countrycodes).  
+For a list of country codes that you may specify in the [cc](query-parameters.md#cc) query parameter, see [Country codes](#country-codes).  
   
 |Country/Region|Language|Market code 
 |-|-|- 
@@ -106,7 +106,7 @@ The following are the country codes that you may specify in the [cc](query-param
 
 ## Bing supported language codes
 
-The following are the Bing supported languages that you may specify in the [setLang](../query-parameters.md#setlang) query parameter. The list is subject to change.  
+The following are the Bing supported languages that you may specify in the [setLang](query-parameters.md#setlang) query parameter. The list is subject to change.  
   
 |Supported Languages|Language Code
 |-|-  

@@ -7,7 +7,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: reference
-ms.date: 08/15/2020
+ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 

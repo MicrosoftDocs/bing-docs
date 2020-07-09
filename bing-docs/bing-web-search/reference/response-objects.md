@@ -7,7 +7,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: reference
-ms.date: 08/15/2017
+ms.date: 07/15/2017
 ms.author: scottwhi
 ---
 
@@ -41,7 +41,7 @@ If the request succeeds, the top-level object in the response is the [SearchResp
 |[SpellSuggestions](#spellsuggestions)|Defines a suggested query string that likely represents the user's intent.
 |[TextAttribution](#textattribution)|Defines a contractual rule for plain text attribution.
 |[TimeZone](#timezone)|Defines the date and time of one or more geographic locations.
-|[TimeZoneInformation](#timezoneinfo)|Defines the time zone information about a geographical location.
+|[TimeZoneInformation](#timezoneinformation)|Defines the time zone information about a geographical location.
 |[WebAnswer](#webanswer)|Defines a list of relevant webpage links.
 |[Webpage](#webpage)|Defines a webpage that is relevant to the query.
 
@@ -122,7 +122,7 @@ Defines an image.
 |hostPageUrl|The URL of the webpage that includes the image.<br/><br/>This URL and `contentUrl` may be the same URL.|String
 |name|An optional text string that contains random information about the image.|String
 |provider|The source of the image. The array will contain a single item.<br/><br/> You must attribute the image to the provider. For example, you may display the provider's name as the cursor hovers over the image or make the image a click-through link to the provider's website where the image is found.<br/><br/>If the image object is part of a larger object, and the larger object contains a contractual rule that applies to this object, you must use the contractual rule for attribution instead of this field.|[Organization](#organization)[]  
-|thumbnailUrl|The URL to a thumbnail of the image. For information about resizing the image, see [Resize and crop thumbnail images](../resize-and-crop-thumbnails).|String
+|thumbnailUrl|The URL to a thumbnail of the image. For information about resizing the image, see [Resize and crop thumbnail images](../resize-and-crop-thumbnails.md).|String
 |width|The width of the source image, in pixels.|Unsigned Short 
 
 ## LicenseAttribution  
@@ -227,8 +227,8 @@ Defines a list of related queries made by others.
   
 |Name|Value|Type
 |-|-|- 
-|id|An ID that uniquely identifies the related search answer.<br/><br/>The object includes this field only if the Ranking answer specifies that you should display all related searches in a group. For more information about how to use the ID, see [Ranking results](.../rank-results).|String
-|<a name="relatedsearch-value"></a>value|A list of related queries that were made by others.|[Query](#query_obj)[]  
+|id|An ID that uniquely identifies the related search answer.<br/><br/>The object includes this field only if the Ranking answer specifies that you should display all related searches in a group. For more information about how to use the ID, see [Ranking results](.../rank-results.md).|String
+|<a name="relatedsearch-value"></a>value|A list of related queries that were made by others.|[Query](#query)[]  
   
 ## SearchResponse  
 The response's top-level object for search requests that succeed.  
@@ -266,7 +266,7 @@ The search results include this response if Bing determines that the user may ha
 |Name|Value|Type
 |-|-|-  
 |id|An ID that uniquely identifies the spelling suggestion answer.<br><br>You use this field when you use [ranking response](#rankingresponse) to display the spelling suggestions. For more information about how to use the ID, see [Ranking results](../rank-results.md).|String
-|<a name="spell-value"></a>value|A list of suggested query strings that may represent the user's intention.<br><br>The list contains only one `Query` object.|[Query](#query_obj)[]
+|<a name="spell-value"></a>value|A list of suggested query strings that may represent the user's intention.<br><br>The list contains only one `Query` object.|[Query](#query)[]
 
 ## TextAttribution  
 Defines a contractual rule for plain text attribution.  
@@ -281,8 +281,8 @@ Defines the date and time of one or more geographic locations.
   
 |Name|Value|Type
 |-|-|-
-|<a name="othercitytimes"></a>otherCityTimes|A list of dates and times of nearby time zones.|[TimeZoneInformation](#timezoneinfo)[]
-|<a name="primarycitytime"></a>primaryCityTime|The data and time, in UTC, of the geographic location specified in the query.<br/><br/>If the query specified a specific geographic location (for example, a city), this object contains the name of the geographic location and the current date and time of the location, in UTC.<br/><br/>If the query specified a general geographic location, such as a state or country, this object contains the date and time of the primary city or state found within the specified state or country. If the location contains additional time zones, the `otherCityTimes` field contains the date and time of cities or states located in the other time zones.|[TimeZoneInformation](#timezoneinfo)
+|<a name="othercitytimes"></a>otherCityTimes|A list of dates and times of nearby time zones.|[TimeZoneInformation](#timezoneinformation)[]
+|<a name="primarycitytime"></a>primaryCityTime|The data and time, in UTC, of the geographic location specified in the query.<br/><br/>If the query specified a specific geographic location (for example, a city), this object contains the name of the geographic location and the current date and time of the location, in UTC.<br/><br/>If the query specified a general geographic location, such as a state or country, this object contains the date and time of the primary city or state found within the specified state or country. If the location contains additional time zones, the `otherCityTimes` field contains the date and time of cities or states located in the other time zones.|[TimeZoneInformation](#timezoneinformation)
   
 ## TimeZoneInformation  
 Defines a date and time for a geographical location.  
@@ -313,7 +313,7 @@ Defines a webpage that is relevant to the query.
 |<a name="datelastcrawled"></a>dateLastCrawled|The last time that Bing crawled the webpage. The date is in the form, YYYY-MM-DDTHH:MM:SS. For example, 2015-04-13T05:23:39.|String
 |<a name="deeplinks"></a>deepLinks|A list of links to related content that Bing found in the website that contains this webpage.<br/><br/>The `Webpage` object in this context includes only the `name`, `url`, `urlPingSuffix`, and `snippet` fields.|[Webpage](#webpage)[]
 |<a name="displayurl"></a>displayUrl|The display URL of the webpage. The URL is meant for display purposes only and is not well formed.|String
-|id|An ID that uniquely identifies this webpage in the list of web results.<br/><br/>The object includes this field only if the Ranking answer specifies that you mix the webpages with the other search results. Each webpage contains an ID that matches an ID in the Ranking answer. For more information, see [Ranking results](../rank-results).|String
+|id|An ID that uniquely identifies this webpage in the list of web results.<br/><br/>The object includes this field only if the Ranking answer specifies that you mix the webpages with the other search results. Each webpage contains an ID that matches an ID in the Ranking answer. For more information, see [Ranking results](../rank-results.md).|String
 |<a name="name"></a>name|The name of the webpage.<br/><br/>Use this name along with `url` to create a hyperlink that when clicked takes the user to the webpage.|String  
 |mentions|For internal use only.|Object
 |<a name="searchtags"></a>searchTags|A list of search tags that the webpage owner specified on the webpage. The API returns only indexed search tags.<br/><br/>The `name` field of the `MetaTag` object contains the indexed search tag. Search tags begin with search.* (for example, search.assetId). The `content` field contains the tag's value.|[MetaTag](#metatag)[]

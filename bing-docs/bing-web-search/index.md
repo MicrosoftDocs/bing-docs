@@ -8,7 +8,7 @@ ms.topic: "overview"
 author: "swhite-msft"
 manager: ehansen
 ms.author: "scottwhi"
-ms.date: 8/15/2020
+ms.date: 07/15/2020
 ---
 
 # Bing Web Search API
