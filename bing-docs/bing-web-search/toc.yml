@@ -1,9 +1,9 @@
 - name: Web Search API
   href: index.md
 - name: Reference
+  href: reference/endpoints.md
+  displayName: Endpoints
   items:
-  - name: Endpoints
-    href: reference/endpoints.md
   - name: Response objects
     href: reference/response-objects.md
   - name: Query parameters
