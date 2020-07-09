@@ -50,6 +50,6 @@ Things current Cognitive Services users must do prior to their subscription endi
 - [Custom Search API](bing-custom-search/reference/index.md)
 - [Spell Check API](bing-spell-check/reference/index.md)  
 
-Unfortunately, iff you use <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/bing-web-search/bing-web-stats" target="_blank">Web Search Analytics</a>, your Cognitive Services metrics will not be used to seed Bing Search Services analytics.
+Unfortunately, if you use <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/bing-web-search/bing-web-stats" target="_blank">Web Search Analytics</a>, your Cognitive Services metrics will not be used to seed Bing Search Services analytics.
 
 If you use <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/bing-local-business-search/local-search-reference" target="_blank">Local Business Search API</a>, it's not available in Bing Search Services. 

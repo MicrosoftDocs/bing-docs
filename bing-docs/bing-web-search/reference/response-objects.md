@@ -18,32 +18,8 @@ ms.author: scottwhi
 
 The following are the JSON response objects that the response may include. These objects are specific to the web answer. For details about the JSON objects for other answer types that the search results may include, see the API-specific reference documentation. For example, if the search results contain the images and news answers, see the <a href="https://docs.microsoft.com/bing/bing-image-search/reference/response-objects" target="_blank">Image Search API reference</a> and <a href="https://docs.microsoft.com/bing/bing-news-search/reference/response-objects" target="_blank">News Search API reference</a>.
 
-If the request succeeds, the top-level object in the response is the [SearchResponse](#searchresponse) object. And if the request fails, the top-level object is the [ErrorResponse](#errorresponse) object.
+If the request succeeds, the top-level object in the response is the [SearchResponse](#searchresponse) object. See the full list of objects in the right pane under **In this article**.
 
-|Object|Description  
-|-|-  
-|[Computation](#computation)|Defines an expression and its answer.
-|[Entity](#entity)|Defines an entity such as a person, place, or thing.
-|[Error](#error)|Defines an error that occurred.
-|[ErrorResponse](#errorresponse)|The top-level object that the response includes when the request fails.
-|[Identifiable](#identifiable)|Defines a resource ID.
-|[LicenseAttribution](#licenseattribution)|Defines a contractual rule for license attribution.
-|[LinkAttribution](#linkattribution)|Defines a contractual rule for link attribution.
-|[MediaAttribution](#mediaattribution)|Defines a contractual rule for media attribution.
-|[MetaTag](#metatag)|Defines a webpage's metadata.
-|[Query](#query)|Defines a query string.
-|[QueryContext](#querycontext)|Defines the query context that Bing used for the request.  
-|[RankingGroup](#rankinggroup)|Defines a search results group, such as mainline.  
-|[RankingItem](#rankingitem)|Defines a ranking group item to display.
-|[RankingResponse](#rankingresponse)|Defines where on the search results page content should be placed and in what order.
-|[RelatedSearchAnswer](#relatedsearchanswer)|Defines a list of related queries made by others.
-|[SearchResponse](#searchresponse)|The top-level object that the response includes when the request succeeds.
-|[SpellSuggestions](#spellsuggestions)|Defines a suggested query string that likely represents the user's intent.
-|[TextAttribution](#textattribution)|Defines a contractual rule for plain text attribution.
-|[TimeZone](#timezone)|Defines the date and time of one or more geographic locations.
-|[TimeZoneInformation](#timezoneinformation)|Defines the time zone information about a geographical location.
-|[WebAnswer](#webanswer)|Defines a list of relevant webpage links.
-|[Webpage](#webpage)|Defines a webpage that is relevant to the query.
 
 ## Entity  
 Defines an entity such as a person, place, or thing.  
@@ -51,9 +27,9 @@ Defines an entity such as a person, place, or thing.
 |Name|Value|Type
 |-|-|-
 |bingId|An ID that uniquely identifies this entity.|String  
-|contractualRules|A list of rules that you must adhere to if you display the entity. For example, the rules may govern attribution of the entity's description.<br/><br/>The following contractual rules may apply:<br/><br/><ul><li>[LicenseAttribution](#licenseattribution)</li><li>[LinkAttribution](#linkattribution)</li><li>[MediaAttribution](#mediaattribution)</li><li>[TextAttribution](#textattribution)</li></ul><br/>Not all entities include rules. If the entity provides contractual rules, you must abide by them. For more information about using contractual rules, see [Attributing Data](/bing/bing-entities-search/concepts/data-attribution).|Object[]
+|contractualRules|A list of rules that you must adhere to if you display the entity. For example, the rules may govern attribution of the entity's description.<br/><br/>The following contractual rules may apply:<ul><li>[LicenseAttribution](#licenseattribution)</li><li>[LinkAttribution](#linkattribution)</li><li>[MediaAttribution](#mediaattribution)</li><li>[TextAttribution](#textattribution)</li></ul>Not all entities include rules. If the entity provides contractual rules, you must abide by them. For more information about using contractual rules, see [Attributing Data](/bing/bing-entities-search/concepts/data-attribution).|Object[]
 |description|A short description of the entity.|String  
-|entityPresentationInfo|Additional information about the entity such as hints that you can use to determine the entity's type. To determine the entity's type, use the `entityScenario` and `entityTypeHint` fields. For example, the fields help you determine whether the entity is a dominant or disambiguation entity and whether it's a person or movie. The entity is a dominant entity if Bing believes that only one entity satisfies the request. If multiple entities could satisfy the request, the entity is a disambiguation entity and the user needs to select the entity they're interested in.|[EntityPresentationInfo](#entitypresentationinfo)  
+|entityPresentationInfo|Additional information about the entity such as hints that you can use to determine the entity's type. To determine the entity's type, use the `entityScenario` and `entityTypeHint` fields. For example, the fields help you determine whether the entity is a dominant or disambiguation entity and whether it's a person or movie.<br/><br/>The entity is a dominant entity if Bing believes that only one entity satisfies the request. If multiple entities could satisfy the request, the entity is a disambiguation entity and the user needs to select the entity they're interested in.|[EntityPresentationInfo](#entitypresentationinfo)  
 |image|An image of the entity.|[Image](#image)
 |name|The entity's name.|String
 |webSearchUrl|The URL that takes the user to the Bing search results page for this entity.|String
@@ -63,7 +39,7 @@ Defines an entity answer.
   
 |Name|Value|Type
 |-|-|-  
-|queryScenario|The supported query scenario. This field is set to DominantEntity or DisambiguationItem. The field is set to DominantEntity if Bing determines that only a single entity satisfies the request. For example, a book, movie, person, or attraction. If multiple entities could satisfy the request, the field is set to DisambiguationItem. For example, if the request uses the generic title of a movie franchise, the entity's type would likely be DisambiguationItem. But, if the request specifies a specific title from the franchise, the entity's type would likely be DominantEntity.|String
+|queryScenario|The supported query scenario. This field is set to DominantEntity or DisambiguationItem. The field is set to DominantEntity if Bing determines that only a single entity satisfies the request. For example, a book, movie, person, or attraction.<br/><br/>If multiple entities could satisfy the request, the field is set to DisambiguationItem. For example, if the request uses the generic title of a movie franchise, the entity's type would likely be DisambiguationItem. But, if the request specifies a specific title from the franchise, the entity's type would likely be DominantEntity.|String
 |value|A list of entities.|[Entity](#entity)[]   
 
 ## EntityPresentationInfo  
@@ -80,7 +56,7 @@ Defines an expression and its answer.
   
 |Element|Description|Type
 |-|-|-
-|<a name="computation-expression"></ad>expression|The math or conversion expression.<br/><br/>If the query contains a request to convert units of measure (for example, meters to feet), this field contains the *from* units and `value` contains the *to* units.<br/><br/>If the query contains a mathematical expression such as 2+2, this field contains the expression and `value` contains the answer.<br/><br/>Note that mathematical expressions may be normalized. For example, if the query was sqrt(4^2+8^2), the normalized expression may be sqrt((4^2)+(8^2)).<br/><br/>If the user's query is a math question and the [textDecorations](query-parameters.md#textdecorations) query parameter is set to **true**, the expression string may include formatting markers. For example, if the user's query is *log(2)*, the normalized expression includes the subscript markers. For more information, see [Hit highlighting](../hit-highlighting.md).|String
+|<a name="computation-expression"></a>expression|The math or conversion expression.<br/><br/>If the query contains a request to convert units of measure (for example, meters to feet), this field contains the *from* units and `value` contains the *to* units.<br/><br/>If the query contains a mathematical expression such as 2+2, this field contains the expression and `value` contains the answer.<br/><br/>Note that mathematical expressions may be normalized. For example, if the query was sqrt(4^2+8^2), the normalized expression may be sqrt((4^2)+(8^2)).<br/><br/>If the user's query is a math question and the [textDecorations](query-parameters.md#textdecorations) query parameter is set to **true**, the expression string may include formatting markers. For example, if the user's query is *log(2)*, the normalized expression includes the subscript markers. For more information, see [Hit highlighting](../hit-highlighting.md).|String
 |<a name="computation-value"></a>value|The expression's answer.|String  
   
 ## Error  
@@ -236,9 +212,7 @@ The response's top-level object for search requests that succeed.
 By default, the Search API includes all relevant answers unless:  
   
 -   The query specifies the [responseFilter](query-parameters.md#responsefilter) query parameter to limit the answers it returns 
-  
 -   One or more of the search components does not return results (for example, no news results are relevant to the query)  
-  
 -   The subscription key does not have access to the search component.  
   
 If the service suspects a denial of service attack, the request succeeds (HTTP status code is 200 OK), but the body of the response is empty.  
@@ -261,7 +235,7 @@ If the service suspects a denial of service attack, the request succeeds (HTTP s
 ## SpellSuggestions  
 Defines a suggested query string that likely represents the user's intent.  
   
-The search results include this response if Bing determines that the user may have intended to search for something different. For example, if the user searches for *alon brown*, Bing may determine that the user likely intended to search for Alton Brown instead (based on past searches by others of Alon Brown).  
+The search results include this response if Bing determines that the user may have intended to search for something different. For example, if the user searches for *alon brown*, Bing may determine that the user likely intended to search for *Alton Brown* instead (based on past searches by others of *alon brown*).  
   
 |Name|Value|Type
 |-|-|-  

@@ -15,7 +15,7 @@ ms.author: scottwhi
 
 The Web Search API lets you send a search query to Bing and get back search results that include links to webpages, images, and more. This section provides technical details about the webpages, related searches, and ranking results in addition to the query parameters that affect the search results. For examples that show how to make requests, see [Bing Web Search overview](../index.md). 
   
-For information about permitted use and display of the results, see [Bing Search API Use and Display requirements](https://docs.microsoft.com/bing/bing-web-search/useanddisplayrequirements).
+For information about permitted use and display of the results, see [Use and display requirements](../useanddisplayrequirements.md).
 
 > [!NOTE]
 > Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
@@ -28,14 +28,14 @@ https://api.cognitive.microsoft.com/bing/v7.0/search
 ```
 
 The request must use the HTTPS protocol. 
-  -
+
 > [!NOTE]
 > The maximum URL length is 2,048 characters. To ensure that your URL length does not exceed the limit, the maximum length of your query parameters should be less than 1,500 characters. If the URL exceeds 2,048 characters, the server returns 404 Not found.  
   
 ## Next steps
 
-> [!div class="nextstepaction"]
-> Check out the following programming elements you'll use when sending a search request:
-> - [headers](headers.md)
-> - [query parameters](query-parameters.md)
-> - [response objects](response-objects.md)
+Check out the following programming elements you'll use when sending search requests:
+
+- [Headers](headers.md)
+- [Query parameters](query-parameters.md)
+- [Response objects](response-objects.md)
