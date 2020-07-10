@@ -30,7 +30,7 @@ To request videos, send a GET request to one of the following URLs:
 |-|-
 |https://api.cognitive.microsoft.com/bing/v7.0/videos/search|Returns videos that are relevant to the users search query.
 |https://api.cognitive.microsoft.com/bing/v7.0/videos/details|Returns insights about a video, such as related videos.
-|https://api.cognitive.microsoft.com/bing/v7.0/videos/trending|Returns videos that are trending based on search requests made by others. The videos are broken out into different categories. For example, Top Music Videos.<br/><br/>For a list of markets that support trending videos, see [Trending videos](../trending-videos.md).
+|https://api.cognitive.microsoft.com/bing/v7.0/videos/trending|Returns videos that are trending based on search requests made by others. The videos are broken out into different categories. For example, Top Music Videos.<br/><br/>For a list of markets that support trending videos, see [Supported Trending Videos markets](market-codes.md#trending-video-api-markets).
 
 The request must use the HTTPS protocol. 
 

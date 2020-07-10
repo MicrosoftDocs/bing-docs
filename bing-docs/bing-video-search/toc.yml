@@ -14,7 +14,5 @@
     href: reference/market-codes.md
   - name: Error codes
     href: reference/error-codes.md
-  - name: Entity types
-    href: reference/entity-types.md
 - name: Release notes
   href: release-notes.md
