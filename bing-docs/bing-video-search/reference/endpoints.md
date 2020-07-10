@@ -22,9 +22,7 @@ For information about permitted use and display of the results, see [Use and dis
   
 ## Endpoints  
 
-To request video search results, send a GET request to on of the following endpoints:  
-  
-To request videos, send a GET request to one of the following URLs:  
+To request video search results, send a GET request to one of the following endpoints:  
   
 |Endpoint|Description 
 |-|-

@@ -16,11 +16,20 @@ ms.author: scottwhi
 > [!NOTE]
 > To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
 
-The following are the JSON response objects that the response may include. These objects are specific to the web answer. For details about the JSON objects for other answer types that the search results may include, see the API-specific reference documentation. For example, if the search results contain the images and news answers, see the <a href="https://docs.microsoft.com/bing/bing-image-search/reference/response-objects" target="_blank">Image Search API reference</a> and <a href="https://docs.microsoft.com/bing/bing-news-search/reference/response-objects" target="_blank">News Search API reference</a>.
+The following JSON response objects are specific to the web answer. For details about the JSON objects for other answer types that the search results may include, see the API-specific reference documentation. For example, if the search results contain the images and news answers, see the <a href="https://docs.microsoft.com/bing/bing-image-search/reference/response-objects" target="_blank">Image Search API reference</a> and <a href="https://docs.microsoft.com/bing/bing-news-search/reference/response-objects" target="_blank">News Search API reference</a>.
 
 If the request succeeds, the top-level object in the response is the [SearchResponse](#searchresponse) object. And if the request fails, the top-level object in the response is the [ErrorResponse](#errorresponse) object.
 
 For a list of possible objects, see **In this article** in the right pane.
+
+## Computation  
+
+Defines an expression and its answer.  
+  
+|Element|Description|Type
+|-|-|-
+|<a name="computation-expression"></a>expression|The math or conversion expression.<br/><br/>If the query contains a request to convert units of measure (for example, meters to feet), this field contains the *from* units and `value` contains the *to* units.<br/><br/>If the query contains a mathematical expression such as 2+2, this field contains the expression and `value` contains the answer.<br/><br/>Note that mathematical expressions may be normalized. For example, if the query was sqrt(4^2+8^2), the normalized expression may be sqrt((4^2)+(8^2)).<br/><br/>If the user's query is a math question and the [textDecorations](query-parameters.md#textdecorations) query parameter is set to **true**, the expression string may include formatting markers. For example, if the user's query is *log(2)*, the normalized expression includes the subscript markers. For more information, see [Hit highlighting](../hit-highlighting.md).|String
+|<a name="computation-value"></a>value|The expression's answer.|String  
 
 
 ## Entity  
@@ -56,14 +65,6 @@ Defines additional information about an entity such as type hints.
 |entityTypeDisplayHint|A display version of the entity hint. For example, if  `entityTypeHints` is Artist, this field may be set to *American Singer*.|String 
 |entityTypeHint|A list of hints that indicate the entity's type. The list could contain a single hint such as Movie or a list of hints such as Place, LocalBusiness, Restaurant. Each successive hint in the array narrows the entity's type.<br/><br/>For a list of possible types, see [Entity Types](entity-types.md). If the object does not include this field, Generic is assumed.|String[]  
 
-## Computation  
-
-Defines an expression and its answer.  
-  
-|Element|Description|Type
-|-|-|-
-|<a name="computation-expression"></a>expression|The math or conversion expression.<br/><br/>If the query contains a request to convert units of measure (for example, meters to feet), this field contains the *from* units and `value` contains the *to* units.<br/><br/>If the query contains a mathematical expression such as 2+2, this field contains the expression and `value` contains the answer.<br/><br/>Note that mathematical expressions may be normalized. For example, if the query was sqrt(4^2+8^2), the normalized expression may be sqrt((4^2)+(8^2)).<br/><br/>If the user's query is a math question and the [textDecorations](query-parameters.md#textdecorations) query parameter is set to **true**, the expression string may include formatting markers. For example, if the user's query is *log(2)*, the normalized expression includes the subscript markers. For more information, see [Hit highlighting](../hit-highlighting.md).|String
-|<a name="computation-value"></a>value|The expression's answer.|String  
   
 ## Error  
 
