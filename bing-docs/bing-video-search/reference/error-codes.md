@@ -11,7 +11,7 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# HTTP status codes that Bing Search APIs may return
+# HTTP status codes that Bing Video Search APIs may return
 
 The following are the possible HTTP status codes that a request may return.  
   

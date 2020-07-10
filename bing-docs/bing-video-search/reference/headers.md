@@ -11,7 +11,7 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Headers used by the Web Search API
+# Video Search API v7 headers
 
 The following are the headers that a request and response may include.  
 

@@ -11,7 +11,7 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Query parameters used by Web Search API
+# Web Search API v7 query parameters
 
 The following are the query parameters that the request may include. The Required column indicates whether you must specify the parameter. You must URL encode the query parameter values.  
   

@@ -11,12 +11,9 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Market and language codes used by Bing Search APIs
+# Market and language codes used by Bing Web Search API
 
 The following table lists the market code values that you may use to specify the [mkt](query-parameters.md#mkt) query parameter. Bing returns content for only these markets. The list is subject to change.  
-
-> [!NOTE]
-> Not all APIs support all markets. For APIs with limited market support, see the Endpoint section in the API's reference content.
 
 For a list of country codes that you may specify in the [cc](query-parameters.md#cc) query parameter, see [Country codes](#country-codes).  
   

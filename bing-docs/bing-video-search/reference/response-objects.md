@@ -11,7 +11,7 @@ ms.date: 07/15/2017
 ms.author: scottwhi
 ---
 
-# Response objects
+# Video Search API v7 response objects
 
 > [!NOTE]
 > To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.

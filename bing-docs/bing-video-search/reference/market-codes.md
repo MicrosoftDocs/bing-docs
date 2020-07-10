@@ -11,12 +11,12 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Market and language codes used by Bing Search APIs
+# Market and language codes used by Bing Video Search APIs
 
-The following table lists the market code values that you may use to specify the [mkt](query-parameters.md#mkt) query parameter. Bing returns content for only these markets. The list is subject to change.  
+The following table lists the market code values that you may use to specify the [mkt](query-parameters.md#mkt) query parameter when calling the Video Search API. Bing returns content for only these markets. The list is subject to change.  
 
 > [!NOTE]
-> Not all APIs support all markets. For APIs with limited market support, see the Endpoint section in the API's reference content.
+> The Trending Videos API does not support all markets. For a list of the markets it supports, see [Trending Video API markets](#trending-video-api-markets).
 
 For a list of country codes that you may specify in the [cc](query-parameters.md#cc) query parameter, see [Country codes](#country-codes).  
   
@@ -160,3 +160,23 @@ The following are the Bing supported languages that you may specify in the [setL
 |Turkish|tr
 |Ukrainian|uk
 |Vietnamese|vi
+
+## Trending Video API markets
+
+The following table lists the market code values that you may use to specify the [mkt](query-parameters.md#mkt) query parameter when calling the Trending Videos API. Bing returns content for only these markets. The list is subject to change.  
+  
+|Country/Region|Language|Market code 
+|-|-|- 
+|Australia|English|en-AU
+|Canada|English|en-CA
+|India|English|en-IN 
+|Indonesia|English|en-ID
+|Ireland|English|en-IE 
+|New Zealand|English|en-NZ
+|People's republic of China|Chinese|zh-CN
+|Republic of the Philippines|English|en-PH
+|Singapore|English|en-SG
+|South Africa|English|en-ZA
+|United Kingdom|English|en-GB 
+|United States|English|en-US  
+|Worldwide aggregate|English|en-WW  
