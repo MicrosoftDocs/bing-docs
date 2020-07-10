@@ -1,5 +1,5 @@
 ---
-title: Error codes used by the Bing Search APIs
+title: Error codes used by the Bing Web Search API
 titleSuffix: Bing Services
 description: Provides the list of HTTP status codes and service error codes that Bing Search may return.
 author: swhite-msft
@@ -11,7 +11,7 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# HTTP status codes that Bing Web Search APIs may return
+# HTTP status codes that Bing Web Search API may return
 
 The following are the possible HTTP status codes that a request may return.  
   

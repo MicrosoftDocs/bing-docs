@@ -1,5 +1,5 @@
 ---
-title: Error codes used by the Bing Search APIs
+title: Error codes used by Bing Video Search APIs
 titleSuffix: Bing Services
 description: Provides the list of HTTP status codes and service error codes that Bing Search may return.
 author: swhite-msft

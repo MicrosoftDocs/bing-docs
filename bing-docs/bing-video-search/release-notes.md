@@ -11,7 +11,7 @@ ms.author: "scottwhi"
 ms.date: 07/15/2020
 ---
 
-# Release notes
+# Video Search API release notes
 
 See the following sections for information about changes that were included with each release.
 

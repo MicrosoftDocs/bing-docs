@@ -1,5 +1,5 @@
 ---
-title: Market and language codes used by the Bing Search APIs
+title: Market and language codes used by the Bing Video Search APIs
 titleSuffix: Bing Services
 description: Provides the list of markets and languages that you may specify in Bing Search requests.
 author: swhite-msft
