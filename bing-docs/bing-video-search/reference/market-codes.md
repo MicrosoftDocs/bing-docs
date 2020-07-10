@@ -5,7 +5,7 @@ description: Provides the list of markets and languages that you may specify in 
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
-ms.subservice: bing-web-search
+ms.subservice: bing-video-search
 ms.topic: reference
 ms.date: 07/15/2020
 ms.author: scottwhi

@@ -20,7 +20,8 @@ For information about permitted use and display of the results, see [Use and dis
 > [!NOTE]
 > Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
   
-## Endpoints  
+## Endpoints 
+ 
 To request web search results, send a GET request to:  
   
 ```

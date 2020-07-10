@@ -1,7 +1,7 @@
 ---
-title: "Bing Web Search API release notes"
+title: "Bing Video Search API release notes"
 titleSuffix: Bing Services
-description: Identifies the changes made to Web Search API for each release.
+description: Identifies the changes made to Video Search API for each release.
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: "overview"
@@ -17,11 +17,11 @@ See the following sections for information about changes that were included with
 
 ## September 1, 2020
 
-Initial release of this version of Bing Web Search API. This API replaces the same API hosted by <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/bing-web-search/" target="_blank">Azure Cognitive Services</a>, which is being phased out. 
+Initial release of this version of Bing Video Search API. This API replaces the same API hosted by <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/bing-video-search/" target="_blank">Azure Cognitive Services</a>, which is being phased out. 
 
 ### New to Bing Search?
 
-Go here to get a subscription key for the package that includes this API. Then, get familiar with the [Web Search API](bing-web-search/index.md) documentation, and be sure to check out the quickstarts to get up and running quickly.
+Go here to get a subscription key for the package that includes this API. Then, get familiar with the [Video Search API](bing-video-search/index.md) documentation, and be sure to check out the quickstarts to get up and running quickly.
 
 
 ### Current Cognitive Services user?

@@ -18,10 +18,13 @@ ms.author: scottwhi
 
 The following are the JSON response objects that the response may include. These objects are specific to the web answer. For details about the JSON objects for other answer types that the search results may include, see the API-specific reference documentation. For example, if the search results contain the images and news answers, see the <a href="https://docs.microsoft.com/bing/bing-image-search/reference/response-objects" target="_blank">Image Search API reference</a> and <a href="https://docs.microsoft.com/bing/bing-news-search/reference/response-objects" target="_blank">News Search API reference</a>.
 
-If the request succeeds, the top-level object in the response is the [SearchResponse](#searchresponse) object. See the full list of objects in the right pane under **In this article**.
+If the request succeeds, the top-level object in the response is the [SearchResponse](#searchresponse) object. And if the request fails, the top-level object in the response is the [ErrorResponse](#errorresponse) object.
+
+For a list of possible objects, see **In this article** in the right pane.
 
 
 ## Entity  
+
 Defines an entity such as a person, place, or thing.  
   
 |Name|Value|Type
@@ -35,6 +38,7 @@ Defines an entity such as a person, place, or thing.
 |webSearchUrl|The URL that takes the user to the Bing search results page for this entity.|String
   
 ## EntityAnswer  
+
 Defines an entity answer.
   
 |Name|Value|Type
@@ -43,6 +47,7 @@ Defines an entity answer.
 |value|A list of entities.|[Entity](#entity)[]   
 
 ## EntityPresentationInfo  
+
 Defines additional information about an entity such as type hints. 
   
 |Name|Value|Type 
@@ -52,6 +57,7 @@ Defines additional information about an entity such as type hints.
 |entityTypeHint|A list of hints that indicate the entity's type. The list could contain a single hint such as Movie or a list of hints such as Place, LocalBusiness, Restaurant. Each successive hint in the array narrows the entity's type.<br/><br/>For a list of possible types, see [Entity Types](entity-types.md). If the object does not include this field, Generic is assumed.|String[]  
 
 ## Computation  
+
 Defines an expression and its answer.  
   
 |Element|Description|Type
@@ -60,6 +66,7 @@ Defines an expression and its answer.
 |<a name="computation-value"></a>value|The expression's answer.|String  
   
 ## Error  
+
 Defines the error that occurred.  
   
 |Element|Description|Type 
@@ -72,6 +79,7 @@ Defines the error that occurred.
 |<a name="error-value"></a>value|The query parameter's value that was not valid.|String
   
 ## ErrorResponse  
+
 The top-level object that the response includes when the request fails.  
   
 |Name|Value|Type
@@ -80,6 +88,7 @@ The top-level object that the response includes when the request fails.
 |<a name="errors"></a>errors|A list of errors that describe the reasons why the request failed.|[Error](#error)[]  
   
 ## Identifiable  
+
 Defines the identity of a resource.  
   
 |Name|Value|Type 
@@ -87,6 +96,7 @@ Defines the identity of a resource.
 |id|An identifier.|String  
 
 ## Image  
+
 Defines an image.  
   
 > [!NOTE]
@@ -102,6 +112,7 @@ Defines an image.
 |width|The width of the source image, in pixels.|Unsigned Short 
 
 ## LicenseAttribution  
+
 Defines a contractual rule for license attribution.  
   
 |Name|Value|Type  
@@ -113,6 +124,7 @@ Defines a contractual rule for license attribution.
 |targetPropertyName|The name of the field that the rule applies to.|String
   
 ## LinkAttribution  
+
 Defines a contractual rule for link attribution.  
   
 |Name|Value|Type
@@ -124,6 +136,7 @@ Defines a contractual rule for link attribution.
 |url|The URL to the provider's website. Use `text` and URL to create of hyperlink.|String
 
 ## MediaAttribution  
+
 Defines a contractual rule for media attribution.  
   
 |Name|Value|Type 
@@ -134,6 +147,7 @@ Defines a contractual rule for media attribution.
 |url|The URL that you use to create of hyperlink of the media content. For example, if the target is an image, you would use the URL to make the image clickable.|String  
 
 ## MetaTag  
+
 Defines a webpage's metadata.  
   
 |Name|Value|Type
@@ -142,6 +156,7 @@ Defines a webpage's metadata.
 |name|The name of the metadata.|String
 
 ## Organization  
+
 Defines a publisher.  
   
 Note that a publisher may provide their name or their website or both.  
@@ -152,6 +167,7 @@ Note that a publisher may provide their name or their website or both.
 |url|The URL to the publisher's website.<br/><br/>Note that the publisher may not provide a website.|String
 
 ## Query  
+
 Defines a search query.  
   
 The [SpellSuggestions](#spellsuggestions) object uses this object to suggest a query string that likely represents the user's intent. It's also used by [RelatedSearchAnswer](#relatedsearchanswer) to return a related query that other users have made.  
@@ -163,6 +179,7 @@ The [SpellSuggestions](#spellsuggestions) object uses this object to suggest a q
 |<a name="query-websearchurl"></a>webSearchUrl|The URL that takes the user to the Bing search results page for the query.<br/><br/>Only related search results include this field.|String
   
 ## QueryContext  
+
 Defines the query string that Bing used for the request.   
   
 |Element|Description|Type 
@@ -174,6 +191,7 @@ Defines the query string that Bing used for the request.
 |<a name="querycontext-originalquery"></a>originalQuery|The query string as specified in the request.|String  
   
 ## RankingGroup  
+
 Defines a search results group, such as mainline.  
   
 |Name|Value|Type
@@ -181,6 +199,7 @@ Defines a search results group, such as mainline.
 |<a name="rankinggroup-items"></a>items|A list of search result items to display in the group.|[RankingItem](#rankingitem)[]
   
 ## RankingItem  
+
 Defines a search result item to display. For more information about how to use the IDs, see [Ranking results](../rank-results.md).  
   
 |Name|Value|Type
@@ -190,6 +209,7 @@ Defines a search result item to display. For more information about how to use t
 |<a name="rankingitem-value"></a>value|The ID that identifies either an answer to display or an item of an answer to display. If the ID identifies an answer, display all items of the answer.|[Identifiable](#identifiable)
   
 ## RankingResponse  
+
 Defines where on the search results page content should be placed and in what order.  
   
 |Name|Value|Type
@@ -199,6 +219,7 @@ Defines where on the search results page content should be placed and in what or
 |<a name="ranking-sidebar"></a>sidebar|The search results to display in the sidebar section of the search results page.|[RankingGroup](#rankinggroup) 
   
 ## RelatedSearchAnswer  
+
 Defines a list of related queries made by others.  
   
 |Name|Value|Type
@@ -207,6 +228,7 @@ Defines a list of related queries made by others.
 |<a name="relatedsearch-value"></a>value|A list of related queries that were made by others.|[Query](#query)[]  
   
 ## SearchResponse  
+
 The response's top-level object for search requests that succeed.  
   
 By default, the Search API includes all relevant answers unless:  
@@ -233,6 +255,7 @@ If the service suspects a denial of service attack, the request succeeds (HTTP s
 |<a name="search-response-webpages"></a>webPages|A list of webpages that are relevant to the search query.|[WebAnswer](#webanswer)
   
 ## SpellSuggestions  
+
 Defines a suggested query string that likely represents the user's intent.  
   
 The search results include this response if Bing determines that the user may have intended to search for something different. For example, if the user searches for *alon brown*, Bing may determine that the user likely intended to search for *Alton Brown* instead (based on past searches by others of *alon brown*).  
@@ -243,6 +266,7 @@ The search results include this response if Bing determines that the user may ha
 |<a name="spell-value"></a>value|A list of suggested query strings that may represent the user's intention.<br><br>The list contains only one `Query` object.|[Query](#query)[]
 
 ## TextAttribution  
+
 Defines a contractual rule for plain text attribution.  
   
 |Name|Value|Type 
@@ -251,6 +275,7 @@ Defines a contractual rule for plain text attribution.
 |text|The attribution text.<br/><br/>Text attribution applies to the entity as a whole and should be displayed immediately following the entity presentation. If there are multiple text or link attribution rules that do not specify a target, you should concatenate them and display them using a "Data from: " label.|String    
 
 ## TimeZone  
+
 Defines the date and time of one or more geographic locations.  
   
 |Name|Value|Type
@@ -259,6 +284,7 @@ Defines the date and time of one or more geographic locations.
 |<a name="primarycitytime"></a>primaryCityTime|The data and time, in UTC, of the geographic location specified in the query.<br/><br/>If the query specified a specific geographic location (for example, a city), this object contains the name of the geographic location and the current date and time of the location, in UTC.<br/><br/>If the query specified a general geographic location, such as a state or country, this object contains the date and time of the primary city or state found within the specified state or country. If the location contains additional time zones, the `otherCityTimes` field contains the date and time of cities or states located in the other time zones.|[TimeZoneInformation](#timezoneinformation)
   
 ## TimeZoneInformation  
+
 Defines a date and time for a geographical location.  
   
 |Name|Value|Type
@@ -268,6 +294,7 @@ Defines a date and time for a geographical location.
 |<a name="tzinfo-utcoffset"></a>utcOffset|The offset from UTC. For example, UTC-7.|String
   
 ## WebAnswer  
+
 Defines a list of relevant webpage links.  
   
 |Name|Value|Type
@@ -279,6 +306,7 @@ Defines a list of relevant webpage links.
 |<a name="webanswer-websearchurl"></a>webSearchUrl|The URL to the Bing search results for the requested webpages.|String
   
 ## Webpage  
+
 Defines a webpage that is relevant to the query.  
   
 |Name|Value|Type

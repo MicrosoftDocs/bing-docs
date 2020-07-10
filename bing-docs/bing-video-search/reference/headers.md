@@ -1,11 +1,11 @@
 ---
-title: Headers used by Web Search API
+title: Headers used by Video Search API
 titleSuffix: Bing Services
 description: Describes the headers used by Bing Web Search API requests and responses.
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
-ms.subservice: bing-web-search
+ms.subservice: bing-video-search
 ms.topic: reference
 ms.date: 07/15/2020
 ms.author: scottwhi
