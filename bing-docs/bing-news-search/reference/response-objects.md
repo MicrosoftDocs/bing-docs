@@ -18,7 +18,7 @@ ms.author: scottwhi
 
 For a list of possible objects, see **In this article** in the right pane.
 
-The top-level object in the response depends on the endpoint you call. If you call `/news/search` or `/news`, the top-level object in the response is the [News](#news) object; and for `/news/trendingtopics`, it's [TrendingTopicAnswer](#trendingtopicanswer). If the request fails, the top-level object is the [ErrorResponse](#errorresponse) object.
+The top-level object in the response depends on the endpoint you call. If you call `/news/search` or `/news`, the top-level object in the response is the [News](#news) object; and for `/news/trendingtopics`, it's [TrendingTopicAnswer](#trendingtopics). If the request fails, the top-level object is the [ErrorResponse](#errorresponse) object.
 
 
 ## Error  
@@ -93,7 +93,7 @@ Defines a news article.
 |<a name="newsarticle-contractualrules"></a>contractualRules|A list of rules that you must adhere to if you display the article.<br/><br/>The following contractual rules may apply:<ul><li>[TextAttribution](#textattribution)</li></ul>If the article provides contractual rules, you must abide by them.<br/><br/>**NOTE:** Only articles returned by Web Search API include contractual rules. Articles returned by the News endpoints do not include contractual rules.|Object[]
 |<a name="newsarticle-datepublished"></a>datePublished|The date and time that Bing discovered the article. The date is in the format, YYYY-MM-DDTHH:MM:SS.|String
 |<a name="newsarticle-description"></a>description|A short description of the news article.|String
-|<a name="newsarticle-headline"></a>headline|A Boolean value that indicates whether the news article is a headline. If **true**, the article is a headline.<br/><br/>**NOTE:** The article includes this field only for news categories requests that do not specify the [category](#category) query parameter.|Boolean
+|<a name="newsarticle-headline"></a>headline|A Boolean value that indicates whether the news article is a headline. If **true**, the article is a headline.<br/><br/>**NOTE:** The article includes this field only for news categories requests that do not specify the [category](query-parameters.md#category) query parameter.|Boolean
 |id|An ID that uniquely identifies this article in the list of articles.<br/><br/>For information about how to use this field, see [Using Ranking to Display Results](../../bing-web-search/rank-results) in the Web Search API guide.|String
 |<a name="newsarticle-image"></a>image|An image related to the new article.<br/><br/>The `Image` object in this context contains only the `thumbnail` field.|[Image](#image)
 |<a name="newsarticle-mentions"></a>mentions|A list of entities (places or persons) mentioned in the article.|[Thing](#thing)[]

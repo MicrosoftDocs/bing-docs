@@ -1,5 +1,5 @@
 ---
-title: Market and language codes used by the Bing Video Search APIs
+title: Market and language codes used by the Bing News Search APIs
 titleSuffix: Bing Services
 description: Provides the list of markets and languages that you may specify in Bing Search requests.
 author: swhite-msft
@@ -11,7 +11,7 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Market and language codes used by Bing Video Search APIs
+# Market and language codes used by Bing News Search APIs
 
 The following table lists the market code values that you may use to specify the [mkt](query-parameters.md#mkt) query parameter when calling the Video Search API. Bing returns content for only these markets. The list is subject to change.  
 
