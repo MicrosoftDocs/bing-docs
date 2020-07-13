@@ -1,17 +1,17 @@
 ---
-title: Error codes used by Bing Video Search APIs
+title: Error codes used by Bing Image Search APIs
 titleSuffix: Bing Services
-description: Provides the list of HTTP status codes and service error codes that Bing Video Search may return.
+description: Provides the list of HTTP status codes and service error codes that Bing Image Search may return.
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
-ms.subservice: bing-video-search
+ms.subservice: bing-image-search
 ms.topic: reference
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# HTTP status codes that Bing Video Search APIs may return
+# HTTP status codes that Bing Image Search APIs may return
 
 The following are the possible HTTP status codes that a request may return.  
   

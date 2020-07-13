@@ -1,17 +1,17 @@
 ---
-title: Headers used by Video Search APIs
+title: Headers used by Image Search APIs
 titleSuffix: Bing Services
-description: Describes the headers used by Bing Video Search APIs in requests and responses.
+description: Describes the headers used by Bing Image Search APIs in requests and responses.
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
-ms.subservice: bing-video-search
+ms.subservice: bing-image-search
 ms.topic: reference
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Video Search API v7 headers
+# Image Search API v7 headers
 
 The following are the headers that a request and response may include.  
 

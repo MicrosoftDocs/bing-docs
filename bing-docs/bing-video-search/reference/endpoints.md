@@ -1,7 +1,7 @@
 ---
-title: Bing Video Search API v7 Reference
+title: Bing Video Search APIs v7 Reference
 titleSuffix: Bing Services
-description: Describes the programming elements of the Bing Video Search API.
+description: Describes the programming elements of the Bing Video Search APIs.
 ms.service: bing-search-services
 ms.subservice: bing-video-search
 author: swhite-msft
@@ -11,9 +11,9 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Video Search API v7 reference
+# Video Search APIs v7 reference
 
-The Video Search API lets you send a search query to Bing and get back a list of videos that are relevant to the search query. This section provides technical details about the query parameters and headers that you use to request videos and the JSON response objects that contain them. For examples that show how to make requests, see [Bing Video Search overview](../index.md). 
+The Video Search APIs let you search for videos that are relevant to the user's search query, get insights about videos, and get trending videos. This section provides technical details about the query parameters and headers that you use to request videos and the JSON response objects that contain them. For examples that show how to make requests, see [Bing Video Search overview](../index.md). 
   
 For information about permitted use and display of the results, see [Use and display requirements](../useanddisplayrequirements.md).
 
@@ -28,7 +28,7 @@ To request video search results, send a GET request to one of the following endp
 |-|-
 |https://api.cognitive.microsoft.com/bing/v7.0/videos/search|Returns videos that are relevant to the users search query.
 |https://api.cognitive.microsoft.com/bing/v7.0/videos/details|Returns insights about a video, such as related videos.
-|https://api.cognitive.microsoft.com/bing/v7.0/videos/trending|Returns videos that are trending based on search requests made by others. The videos are broken out into different categories. For example, Top Music Videos.<br/><br/>For a list of markets that support trending videos, see [Supported Trending Videos markets](market-codes.md#trending-video-api-markets).
+|https://api.cognitive.microsoft.com/bing/v7.0/videos/trending|Returns videos that are trending based on search requests made by others. The videos are broken out into different categories. For example, Top Music Videos.<br/><br/>For a list of markets that support trending videos, see [Supported trending videos markets](market-codes.md#trending-video-api-markets).
 
 The request must use the HTTPS protocol. 
 

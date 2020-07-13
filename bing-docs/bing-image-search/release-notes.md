@@ -1,9 +1,9 @@
 ---
-title: "Release notes for Bing Web Search API"
+title: "Release notes for Bing Image Search APIs"
 titleSuffix: Bing Services
-description: Identifies the changes made to Web Search API for each release.
+description: Identifies the changes made to Image Search APIs for each release.
 ms.service: bing-search-services
-ms.subservice: bing-web-search
+ms.subservice: bing-image-search
 ms.topic: "overview"
 author: "swhite-msft"
 manager: ehansen
@@ -11,17 +11,17 @@ ms.author: "scottwhi"
 ms.date: 07/15/2020
 ---
 
-# Release notes for Web Search API
+# Release notes for Image Search APIs
 
 See the following sections for information about changes that were included with each release.
 
 ## September 1, 2020
 
-Initial release of this version of Bing Web Search API. This API replaces the same API hosted by <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/bing-web-search/" target="_blank">Azure Cognitive Services</a>, which is being phased out. 
+Initial release of this version of Bing Image Search APIs. These APIs replace the same APIs hosted by <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/bing-image-search/" target="_blank">Azure Cognitive Services</a>, which are being phased out. 
 
 ### New to Bing Search?
 
-Go here to get a subscription key for the package that includes this API. Then, get familiar with the [Web Search API](bing-web-search/index.md) documentation, and be sure to check out the quickstarts to get up and running quickly.
+Go here to get a subscription key for the package that includes these APIs. Then, get familiar with the [Image Search API](bing-image-search/index.md) documentation, and be sure to check out the quickstarts to get up and running quickly.
 
 
 ### Current Cognitive Services user?

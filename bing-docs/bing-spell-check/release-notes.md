@@ -1,5 +1,5 @@
 ---
-title: "Bing Spell Check API release notes"
+title: "Release notes for Bing Spell Check API"
 titleSuffix: Bing Services
 description: Identifies the changes made to Spell Check API for each release.
 ms.service: bing-search-services
@@ -11,7 +11,7 @@ ms.author: "scottwhi"
 ms.date: 07/15/2020
 ---
 
-# Spell Check API release notes
+# Release notes for Spell Check API
 
 See the following sections for information about changes that were included with each release.
 
