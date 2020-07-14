@@ -1,9 +1,9 @@
 ---
-title: "Release notes for Bing Custom Image Search API"
+title: "Release notes for Bing Custom Video Search API"
 titleSuffix: Bing Services
-description: Identifies the changes made to Custom Image Search API for each release.
+description: Identifies the changes made to Custom Video Search API for each release.
 ms.service: bing-search-services
-ms.subservice: bing-custom-image-search
+ms.subservice: bing-custom-search
 ms.topic: "overview"
 author: "swhite-msft"
 manager: ehansen
@@ -11,17 +11,17 @@ ms.author: "scottwhi"
 ms.date: 07/15/2020
 ---
 
-# Release notes for Custom Image Search API
+# Release notes for Custom Video Search API
 
 See the following sections for information about changes that were included with each release.
 
 ## September 1, 2020
 
-Initial release of this version of Bing Custom Image Search API. This API replaces the same API hosted by <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/bing-custom-image-search/" target="_blank">Azure Cognitive Services</a>, which are being phased out. 
+Initial release of this version of Bing Custom Video Search API. This API replaces the same API hosted by <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/bing-custom-video-search/" target="_blank">Azure Cognitive Services</a>, which are being phased out. 
 
 ### New to Bing Search?
 
-Go here to get a subscription key for the package that includes this API. Then, get familiar with the [Custom Image Search API](bing-custom-image-search/index.md) documentation, and be sure to check out the quickstarts to get up and running quickly.
+Go here to get a subscription key for the package that includes this API. Then, get familiar with the [Custom Video Search API](bing-custom-video-search/index.md) documentation, and be sure to check out the quickstarts to get up and running quickly.
 
 
 ### Current Cognitive Services user?
