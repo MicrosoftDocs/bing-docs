@@ -71,5 +71,4 @@ If the service suspects a denial of service attack, the request succeeds (HTTP s
 |Name|Value|Type
 |-|-|-
 |_type|The type hint, which is set to Suggestions.|String
-|queryContext|The user's query string.|[QueryContext](#querycontext)
 |<a name="suggestions-suggestiongroups"></a>suggestionGroups|A list of suggested query strings grouped by type. For example, web search suggestions.|[SuggestionGroup](#suggestiongroup)[]

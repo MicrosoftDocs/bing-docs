@@ -60,7 +60,7 @@ Defines an image that is relevant to the query.
 |<a name="image-height"></a>height|The height of the source image, in pixels.|Unsigned Short
 |<a name="image-hostpagedisplayurl"></a>hostPageDisplayUrl|The display URL of the webpage that hosts the image.<br/><br/>Use this URL in your user interface to identify the host webpage that contains the image. The URL is not a well-formed and should not be used to access the host webpage. To access the host webpage, use the `hostPageUrl` URL.|String 
 |<a name="image-hostpageurl"></a>hostPageUrl|The URL of the webpage that includes the image. This URL and `contentUrl` may be the same URL.|String 
-|<a name="image-imageid"></a>imageId|An ID that uniquely identifies this image. If you want the image to be the first image in the response, set the [id](query-parameters.md#id) query parameter to this ID in your request.|String
+|<a name="image-imageid"></a>imageId|An ID that uniquely identifies this image.|String
 |<a name="image-name"></a>name|A title of the image.|String
 |<a name="image-thumbnail"></a>thumbnail|The width and height of the thumbnail image (see `thumbnailUrl`).|[MediaSize](#mediasize) 
 |<a name="image-thumbnailurl"></a>thumbnailUrl|A URL to a thumbnail of the image. For information about resizing the image, see [Resize and crop thumbnail images](../../bing-web-search/resize-and-crop-thumbnails.md).|String
