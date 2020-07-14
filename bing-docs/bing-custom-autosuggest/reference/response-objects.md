@@ -1,17 +1,17 @@
 ---
-title: Bing Autosuggest API v7 response objects
+title: Bing Custom Autosuggest API v7 response objects
 titleSuffix: Bing Services
-description: Describes the response objects that Bing Autosuggest API may return in the JSON response.
+description: Describes the response objects that Bing Custom Autosuggest API may return in the JSON response.
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
-ms.subservice: bing-autosuggest
+ms.subservice: bing-custom-autosuggest
 ms.topic: reference
 ms.date: 07/15/2017
 ms.author: scottwhi
 ---
 
-# Autosuggest API v7 response objects
+# Custom Autosuggest API v7 response objects
 
 For a list of possible objects, see **In this article** in the right pane.
 
@@ -40,19 +40,6 @@ The top-level object that the response includes when the request fails.
 |_type|Type hint, which is set to ErrorResponse.|String
 |<a name="errors"></a>errors|A list of errors that describe the reasons why the request failed.|[Error](#error)[]  
   
-  
-## QueryContext  
-
-Defines the query string that Bing used for the request.   
-  
-|Element|Description|Type 
-|-|-|-
-|adultIntent|Not used.|Boolean
-|alterationOverrideQuery|Not used.|String
-|alteredQuery|Not used.|String
-|askUserForLocation|Not used.|String
-|originalQuery|The user's query term.|String
-  
 
 ## SearchAction  
 
@@ -61,9 +48,8 @@ Defines a query search suggestion.
 |Name|Value|Type
 |-|-|-
 |displayText|The suggested query term to display in a user interface. |String
-|<a name="searchaction-query"></a>query|The suggested query term.<br/><br/>If the user selects the query term from the list of suggestions, use the term in a Bing API request and display the search results yourself. Or, use the URL in the `url` field to send the user to the Bing search results page for the suggested query.|String
+|<a name="searchaction-query"></a>query|The suggested query term.<br/><br/>If the user selects the query term from the list of suggestions, use the term in a Bing API request and display the search results yourself.|String
 |<a name="searchaction-searchkind"></a>searchKind|The type of suggestion. The following are the possible values:<ul><li>CustomSearch &mdash; The suggestion is from a non-web search suggestion data source.</li><li>WebSearch &mdash; The suggestion is from a web search suggestion data source.</li></ul>|String
-|<a name="searchaction-url"></a>url|The URL that takes the user to the Bing search results page for the suggested query.|String
   
 
 ## SuggestionGroup  

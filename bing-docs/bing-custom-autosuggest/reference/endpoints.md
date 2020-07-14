@@ -1,9 +1,9 @@
 ---
-title: Bing Autosuggest API v7 Reference
+title: Bing Custom Autosuggest API v7 Reference
 titleSuffix: Bing Services
-description: Describes the programming elements of the Bing Autosuggest API.
+description: Describes the programming elements of the Bing Custom Autosuggest API.
 ms.service: bing-search-services
-ms.subservice: bing-autosuggest
+ms.subservice: bing-custom-autosuggest
 author: swhite-msft
 manager: ehansen
 ms.topic: reference
@@ -11,11 +11,11 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Autosuggest API v7 reference
+# Custom Autosuggest API v7 reference
 
-The Autosuggest API lets you send a partial search query term to Bing and get back a list of suggested queries that other users have searched on or that are based on user intent. Typically, you use this API to support a richer search box experience. For example, you'd call this API for each character the user enters and populate the search box's drop-down list with the suggested query strings.  
+The Custom Autosuggest API lets you send a partial search query term to Bing and get back a list of suggested queries that other users have searched on or that are based on user intent. Typically, you use this API to support a richer search box experience. For example, you'd call this API for each character the user enters and populate the search box's drop-down list with the suggested query strings.  
 
-For examples that show how to make requests, see [Getting suggested search terms](../index.md). 
+For information about configuring custom suggestions, see [Configure your Custom Autosuggest experience](../define-custom-suggestions). 
   
 For information about permitted use and display of the results, see [Use and display requirements](../useanddisplayrequirements.md).
 
@@ -27,7 +27,7 @@ For information about permitted use and display of the results, see [Use and dis
 To request web search results, send a GET request to:  
   
 ```
-https://api.cognitive.microsoft.com/bing/v7.0/suggestions
+https://api.cognitive.microsoft.com/bingcustomsearch/v7.0/suggestions/search
 ```
 
 The request must use the HTTPS protocol. 
