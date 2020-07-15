@@ -88,7 +88,7 @@ Defines an image.
 |<a name="image-hostpagedisplayurl"></a>hostPageDisplayUrl|The display URL of the webpage that hosts the image.<br/><br/>Use this URL in your user interface to identify the host webpage that contains the image. The URL is not a well-formed and should not be used to access the host webpage. To access the host webpage, use the `hostPageUrl` URL.|String 
 |<a name="image-hostpageurl"></a>hostPageUrl|The URL of the webpage that includes the image. This URL and `contentUrl` may be the same URL.|String 
 |<a name="image-id"></a>id|An ID that uniquely identifies this image in the list of images.<br/><br/>The object includes this field only in a Web Search API response. For information about how to use this field, see [Ranking results](../../bing-web-search/rank-results.md) in the Web Search API guide.|String
-|<a name="image-imageid"></a>imageId|An ID that uniquely identifies this image. If you want the image to be the first image in the response, set the [id](query-parameters.md#id) query parameter to this ID in your request.|String
+|<a name="image-imageid"></a>imageId|An ID that uniquely identifies this image.|String
 |<a name="image-imageinsightstoken"></a>imageInsightsToken|The token that you use when calling the [Visual Search API](../../bing-visual-search/index.md) to get insights about the image.|String
 |<a name="image-insightsmetadata"></a>insightsMetadata|A count of the number of websites where you can shop or perform other actions related to the image.<br/><br/>For example, if the image is of an apple pie, this object includes a count of the number of websites where you can buy an apple pie. To indicate the number of offers in your UX, include badging such as a shopping cart icon that contains the count. When the user clicks on the icon, use the `imageInisghtsToken` in a [Visual Search API](../../bing-visual-search/index.md) request to get the list of websites.|[InsightsMetadata](#insightsmetadata) 
 |<a name="image-name"></a>name|A title of the image.|String
@@ -361,7 +361,7 @@ Defines a search query.
 |<a name="query-displaytext"></a>displayText|A display version of the query term.|String
 |<a name="query-searchurl"></a>searchUrl|The URL that you use to get the results of the related search. Before using the URL, append query parameters as appropriate.<br/><br/>Use this URL if you're displaying the results in your own user interface. Otherwise, use the URL in `webSearchUrl`.|String
 |<a name="query-text"></a>text|The query string. Use this string as the query term in a new search request.|String  
-|<a name="query-thumbnail"></a>thumbnail|The URL to a thumbnail of a related image.|[Thumbnail](#thumbnail) 
+|<a name="query-thumbnail"></a>thumbnail|The URL to a thumbnail of a related image. The Image object includes only the `url` field.|[Image](#image) 
 |<a name="query-websearchurl"></a>webSearchUrl|The URL that takes the user to the Bing search results page for the query.|String
 
 
@@ -380,7 +380,7 @@ Defines a cooking recipe.
 |totalTime|The total amount of time it takes to prepare and cook the recipe. For example, PT45M. For information about the time format, see <a href="http://en.wikipedia.org/wiki/ISO_8601#Durations" target="_blank">http://en.wikipedia.org/wiki/ISO_8601#Durations</a>.|String
 
 
-## RecipeModule
+## RecipesModule
 
 Defines a list of recipes.
 
