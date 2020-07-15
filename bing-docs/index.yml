@@ -1,0 +1,105 @@
+### YamlMime:Hub
+
+title: Microsoft Bing Search Developer documentation # < 60 chars
+summary: Official developer documentation for Microsoft Bing Search. # < 160 chars
+# brand: aspnet | azure | dotnet | dynamics | m365 | ms-graph | office | power-bi | power-platform | sql | sql-server | vs | visual-studio | windows | xamarin
+brand: m365
+
+metadata:
+  title: Microsoft Bing Search Developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Official developer documentation for Microsoft Bing Search. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: bing-search-services #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: hub-page # Required
+  author: swhite-msft #Required; your GitHub user alias, with correct capitalization.
+  ms.author: scottwhi #Required; microsoft alias of author; optional team alias.
+  ms.date: 07/15/2020 #Required; mm/dd/yyyy format.
+
+# conceptualContent section (optional)
+conceptualContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+  items:
+    # Card
+    - title: Bing Web Search API
+      links:
+        - url: https://docs.microsoft.com/bing/bing-web-search/
+          itemType: overview
+          text: Overview
+        # - url: https://docs.microsoft.com/en-us/advertising/guides/get-started
+        #   itemType: get-started
+        #   text: Get started
+        - url: https://docs.microsoft.com/bing/bing-web-search/reference
+          itemType: reference
+          text: Reference
+    # Card
+    - title: Bing Image Search API
+      links:
+        - url: https://docs.microsoft.com/bing/bing-image-search/
+          itemType: overview
+          text: Overview
+        - url: https://docs.microsoft.com/bing/bing-image-search/reference
+          itemType: reference
+          text: Reference
+    # Card
+    - title: Bing News Search API
+      links:
+        - url: https://docs.microsoft.com/bing/bing-news-search/
+          itemType: overview
+          text: Overview
+        - url: https://docs.microsoft.com/bing/bing-news-search/reference
+          itemType: reference
+          text: Reference
+    # Card
+    - title: Bing Video Search API
+      links:
+        - url: https://docs.microsoft.com/bing/bing-video-search/
+          itemType: overview
+          text: Overview
+        - url: https://docs.microsoft.com/bing/bing-video-search/reference
+          itemType: reference
+          text: Reference
+    # Card
+    - title: Bing Visual Search API
+      links:
+        - url: https://docs.microsoft.com/bing/bing-visual-search/
+          itemType: overview
+          text: Overview
+        - url: https://docs.microsoft.com/bing/bing-visual-search/reference
+          itemType: reference
+          text: Reference
+    # Card
+    - title: Bing Custom Search API
+      links:
+        - url: https://docs.microsoft.com/bing/bing-custom-search/
+          itemType: overview
+          text: Overview
+        - url: https://docs.microsoft.com/bing/bing-custom-search/reference
+          itemType: reference
+          text: Custom Search Reference
+        - url: https://docs.microsoft.com/bing/bing-custom-image-search/reference
+          itemType: reference
+          text: Custom Image Search Reference
+        - url: https://docs.microsoft.com/bing/bing-custom-video-search/reference
+          itemType: reference
+          text: Custom Video Search Reference
+        - url: https://docs.microsoft.com/bing/bing-custom-autosuggest/reference
+          itemType: reference
+          text: Custom Autosuggest Reference
+    # Card
+    - title: Bing Entity Search API
+      links:
+        - url: https://docs.microsoft.com/bing/bing-entity-search/
+          itemType: overview
+          text: Overview
+        - url: https://docs.microsoft.com/bing/bing-entity-search/reference
+          itemType: reference
+          text: Reference
+    # Card
+    - title: Bing Spell Check API
+      links:
+        - url: https://docs.microsoft.com/bing/bing-spell-check/
+          itemType: overview
+          text: Overview
+        - url: https://docs.microsoft.com/bing/bing-spell-check/reference
+          itemType: reference
+          text: Reference
+

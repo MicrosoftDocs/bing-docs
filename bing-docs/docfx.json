@@ -41,7 +41,10 @@
     "globalMetadata": {
       "breadcrumb_path": "/bing/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "MicrosoftDocs/bing-docs",
+      "defaultDevLang": "csharp",
+      "searchScope": ["Microsoft Advertising"]
     },
     "fileMetadata": {},
     "template": [],
