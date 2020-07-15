@@ -28,7 +28,7 @@ The JSON objects in this section are specific to the web answer. For details abo
 
 Defines an expression and its answer.  
   
-|Element|Description|Type
+|Name|Value|Type
 |-|-|-
 |<a name="computation-expression"></a>expression|The math or conversion expression.<br/><br/>If the query contains a request to convert units of measure (for example, meters to feet), this field contains the *from* units and `value` contains the *to* units.<br/><br/>If the query contains a mathematical expression such as 2+2, this field contains the expression and `value` contains the answer.<br/><br/>Note that mathematical expressions may be normalized. For example, if the query was sqrt(4^2+8^2), the normalized expression may be sqrt((4^2)+(8^2)).<br/><br/>If the user's query is a math question and the [textDecorations](query-parameters.md#textdecorations) query parameter is set to **true**, the expression string may include formatting markers. For example, if the user's query is *log(2)*, the normalized expression includes the subscript markers. For more information, see [Hit highlighting](../hit-highlighting.md).|String
 |<a name="computation-value"></a>value|The expression's answer.|String  
@@ -72,7 +72,7 @@ Defines additional information about an entity such as type hints.
 
 Defines the error that occurred.  
   
-|Element|Description|Type 
+|Name|Value|Type 
 |-|-|-  
 |<a name="error-code"></a>code|The error code that identifies the category of error. For a list of possible codes, see [Error codes](error-codes.md#error-codes).|String
 |<a name="error-message"></a>message|A description of the error.|String 
@@ -185,7 +185,7 @@ The [SpellSuggestions](#spellsuggestions) object uses this object to suggest a q
 
 Defines the query string that Bing used for the request.   
   
-|Element|Description|Type 
+|Name|Value|Type 
 |-|-|-
 |<a name="querycontext-adultintent"></a>adultIntent|A Boolean value that indicates whether the specified query has adult intent. The value is **true** if the query has adult intent.<br/><br/>If **true**, and the request's [safeSearch](query-parameters.md#safesearch) query parameter is set to Strict, the response contains only news results, if applicable.|Boolean
 |<a name="querycontext-alterationoverridequery"></a>alterationOverrideQuery|The query string to use to force Bing to use the original string. For example, if the query string is *saling downwind*, the override query string is *+saling downwind*. Remember to encode the query string, which results in *%2Bsaling+downwind*.<br/><br/>The object includes this field only if the original query string contains a spelling mistake.|String 

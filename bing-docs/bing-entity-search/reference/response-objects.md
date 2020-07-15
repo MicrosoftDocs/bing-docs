@@ -48,7 +48,7 @@ Defines additional information about an entity such as type hints.
 
 Defines the error that occurred.  
   
-|Element|Description|Type 
+|Name|Value|Type 
 |-|-|-  
 |<a name="error-code"></a>code|The error code that identifies the category of error. For a list of possible codes, see [Error codes](error-codes.md#error-codes).|String
 |<a name="error-message"></a>message|A description of the error.|String 
@@ -187,7 +187,7 @@ Defines a postal address.
 
 Defines the query string that Bing used for the request.   
   
-|Element|Description|Type 
+|Name|Value|Type 
 |-|-|-
 |<a name="querycontext-adultintent"></a>adultIntent|A Boolean value that indicates whether the specified query has adult intent. The value is **true** if the query has adult intent.<br/><br/>If **true**, and the request's [safeSearch](query-parameters.md#safesearch) query parameter is set to Strict, the response contains only news results, if applicable.|Boolean
 |<a name="querycontext-alterationoverridequery"></a>alterationOverrideQuery|The query string to use to force Bing to use the original string. For example, if the query string is *saling downwind*, the override query string is *+saling downwind*. Remember to encode the query string, which results in *%2Bsaling+downwind*.<br/><br/>The object includes this field only if the original query string contains a spelling mistake.|String 

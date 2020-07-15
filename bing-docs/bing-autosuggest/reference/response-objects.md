@@ -22,7 +22,7 @@ If the request succeeds, the top-level object in the response is the [Suggestion
 
 Defines the error that occurred.  
   
-|Element|Description|Type 
+|Name|Value|Type 
 |-|-|-  
 |<a name="error-code"></a>code|The error code that identifies the category of error. For a list of possible codes, see [Error codes](error-codes.md#error-codes).|String
 |<a name="error-message"></a>message|A description of the error.|String 
@@ -45,7 +45,7 @@ The top-level object that the response includes when the request fails.
 
 Defines the query string that Bing used for the request.   
   
-|Element|Description|Type 
+|Name|Value|Type 
 |-|-|-
 |adultIntent|Not used.|Boolean
 |alterationOverrideQuery|Not used.|String

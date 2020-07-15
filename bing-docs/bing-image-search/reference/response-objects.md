@@ -25,7 +25,7 @@ The top-level object in the response depends on the endpoint you call. If you ca
 
 Defines the category of trending images.  
   
-|Element|Description|Type
+|Name|Value|Type
 |-|-|-
 |<a name="tiles"></a>tiles|A list of images that are trending in the category. Each tile contains an image and a URL that returns more images of the subject. For example, if the category is Popular People Searches, the image is of a popular person and the URL would return more images of that person.|[Tile](#tile)[]
 |<a name="category-title"></a>title|The name of the image category. For example, Popular People Searches.|String
@@ -71,7 +71,7 @@ Defines an image that is relevant to the query.
 |<a name="image-hostpageurl"></a>hostPageUrl|The URL of the webpage that includes the image. This URL and `contentUrl` may be the same URL.|String 
 |<a name="image-id"></a>id|An ID that uniquely identifies this image in the list of images.<br/><br/>The object includes this field only in a Web Search API response. For information about how to use this field, see [Ranking results](../../bing-web-search/rank-results.md) in the Web Search API guide.|String
 |<a name="image-imageid"></a>imageId|An ID that uniquely identifies this image. If you want the image to be the first image in the response, set the [id](query-parameters.md#id) query parameter to this ID in your request.|String
-|<a name="image-imageinsightstoken"></a>imageInsightsToken|The token that you use when calling the [Visual Search API](../../bing-visual-search/index.md) to get insights about the image|String
+|<a name="image-imageinsightstoken"></a>imageInsightsToken|The token that you use when calling the [Visual Search API](../../bing-visual-search/index.md) to get insights about the image.|String
 |<a name="image-insightsmetadata"></a>insightsMetadata|A count of the number of websites where you can shop or perform other actions related to the image.<br/><br/>For example, if the image is of an apple pie, this object includes a count of the number of websites where you can buy an apple pie. To indicate the number of offers in your UX, include badging such as a shopping cart icon that contains the count. When the user clicks on the icon, use the `imageInisghtsToken` in a [Visual Search API](../../bing-visual-search/index.md) request to get the list of websites.|[InsightsMetadata](#insightsmetadata) 
 |<a name="image-name"></a>name|A title of the image.|String
 |<a name="image-thumbnail"></a>thumbnail|The width and height of the thumbnail image (see `thumbnailUrl`).|[MediaSize](#mediasize) 
@@ -102,7 +102,7 @@ The top-level object that the response includes when an image request succeeds.
 
 Defines a count of the number of websites where you can shop or perform other actions related to the image.  
   
-|Element|Description|Type
+|Name|Value|Type
 |-|-|-
 |<a name="availablesizescount"></a>availableSizesCount|The number of different sizes of the image that Bing found on one or more websites.|Unsigned Integer  
 |<a name="pagesincludingcount"></a>pagesIncludingCount|The number of webpages that include the image.|Unsigned Integer  
@@ -164,6 +164,6 @@ Defines a video tile.
 
 The top-level object that the response includes when a trending images request succeeds.  
   
-|Element|Description|Type
+|Name|Value|Type
 |-|-|-
 |categories|A list that identifies categories of images and a list of trending images in those categories.|[Category](#category)[]|  
