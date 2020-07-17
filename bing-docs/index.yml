@@ -1,13 +1,13 @@
 ### YamlMime:Hub
 
-title: Microsoft Bing Search Developer documentation # < 60 chars
-summary: Official developer documentation for Microsoft Bing Search. # < 160 chars
+title: Bing Search Services developer documentation # < 60 chars
+summary: Official developer documentation for Bing Search Services. Learn how to build web-connected apps and services that find webpages, images, news, videos, and more without advertisements. # < 160 chars
 # brand: aspnet | azure | dotnet | dynamics | m365 | ms-graph | office | power-bi | power-platform | sql | sql-server | vs | visual-studio | windows | xamarin
 brand: m365
 
 metadata:
-  title: Microsoft Bing Search Developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: Official developer documentation for Microsoft Bing Search. # Required; article description that is displayed in search results. < 160 chars.
+  title: Bing Search Services developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Official developer documentation for Bing Search Services. Learn how to build web-connected apps and services that find webpages, images, news, videos, and more without advertisements. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: bing-search-services #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: hub-page # Required
   author: swhite-msft #Required; your GitHub user alias, with correct capitalization.

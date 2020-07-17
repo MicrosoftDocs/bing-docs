@@ -44,7 +44,8 @@
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/bing-docs",
       "defaultDevLang": "csharp",
-      "searchScope": ["Microsoft Advertising"]
+      "searchScope": ["Bing Search"],
+      "uhfHeaderId": "MSDocsHeader-BingSearch"
     },
     "fileMetadata": {},
     "template": [],
