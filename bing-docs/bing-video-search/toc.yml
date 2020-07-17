@@ -1,4 +1,5 @@
 - name: Bing Video Search documentation
+  expanded: true
   items:
     - name: What is the Bing Video Search API?
       href: overview.md
@@ -84,8 +85,6 @@
   items:
   - name: Get API key
     href: https://azure.microsoft.com/try/cognitive-services/?api=bing-web-search-api
-  - name: Bing Web Search endpoint
-    href: web-search-endpoints.md
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
   - name: Language support

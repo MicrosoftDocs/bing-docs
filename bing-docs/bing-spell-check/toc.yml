@@ -1,6 +1,5 @@
 - name: Bing Spell Check documentation
-  href: index.md
-- name: Overview
+  expanded: true
   items:
   - name: What is the Bing Spell Check API?
     href: overview.md
@@ -76,8 +75,6 @@
   items:
   - name: Get API key
     href: https://azure.microsoft.com/try/cognitive-services/?api=bing-web-search-api
-  - name: Bing Web Search endpoint
-    href: web-search-endpoints.md
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
   - name: Language support
