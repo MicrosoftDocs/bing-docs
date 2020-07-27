@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Suggest search queries with the Bing Autosuggest REST API and Node.js"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Learn how to quickly start suggesting search terms in real time with the Bing Autosuggest API.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: quickstart
-ms.date: 05/06/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Suggest search queries with the Bing Autosuggest REST API and Node.js
@@ -21,7 +21,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
 
 * [Node.js 6](https://nodejs.org/en/download/) or later
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](../../../../includes/cognitive-services-bing-autosuggest-signup-requirements.md)]
+[!INCLUDE [bing-autosuggest-signup-requirements](../../includes/bing-autosuggest-signup-requirements.md)]
 
 ## Create a new application
 
@@ -33,13 +33,13 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
     let https = require ('https');
     ```
 
-2. Create variables for the API endpoint host and path, your subscription key, [market code](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-autosuggest-api-v7-reference#market-codes), and a search term. Use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. Create variables for the API endpoint host and path, your subscription key, [market code](../reference/market-codes.md), and a search term. 
 
     ```javascript
     // Replace the subscriptionKey string value with your valid subscription key.
     let subscriptionKey = 'enter key here';
     
-    let host = 'api.cognitive.microsoft.com';
+    let host = 'api.bing.microsoft.com';
     let path = '/bing/v7.0/Suggestions';
     
     let mkt = 'en-US';
@@ -185,7 +185,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../tutorials/autosuggest.md)
+> [Create a single-page web app](../tutorial/autosuggest.md)
 
 - [What is Bing Autosuggest?](../get-suggested-search-terms.md)
-- [Bing Autosuggest API v7 reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-autosuggest-api-v7-reference)
+- [Bing Autosuggest API v7 reference](../reference/endpoints.md)

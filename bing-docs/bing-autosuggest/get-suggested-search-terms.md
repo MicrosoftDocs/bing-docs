@@ -1,26 +1,27 @@
 ---
 title: What is Bing Autosuggest?
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: The Bing Autosuggest API returns a list of suggested queries based on the partial query string in the search box.
-services: cognitive-services
+services: bing-search-services
 author: swhite-msft
-manager: nitinme
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: overview
-ms.date: 12/18/2019
+ms.date: 07/15/2020
 ms.author: scottwhi
 ---
+
 # What is Bing Autosuggest?
 
 If your application sends queries to any of the Bing Search APIs, you can use the Bing Autosuggest API to improve your users' search experience. The Bing Autosuggest API returns a list of suggested queries based on the partial query string in the search box. As characters are entered into the search box, you can display suggestions in a drop-down list.
 
 ## Bing Autosuggest API features
 
-| Feature                                                                                                                                                                                 | Description                                                                                                                                                            |
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Suggest search terms in real-time](concepts/get-suggestions.md) | Improve your app experience by using the Autosuggest API to display suggested search terms as they're typed. |
+|Feature|Description
+|-|-
+|[Suggest search terms in real-time](concepts/get-suggestions.md)|Improve your app experience by using the Autosuggest API to display suggested search terms as they're typed.
 
 ## Workflow
 
@@ -34,7 +35,7 @@ Typically, you'd call this API each time the user types a new character in your 
 
 The following example shows a drop-down search box with suggested query terms from the Bing Autosuggest API.
 
-![Autosuggest drop-down search box list](./media/cognitive-services-bing-autosuggest-api/bing-autosuggest-drop-down-list.PNG)
+![Autosuggest drop-down search box list](media/bing-autosuggest-drop-down-list.PNG)
 
 When a user selects a suggestion from the drop-down list, you can use it to begin searching with one of the Bing Search APIs, or directly go to the Bing search results page.
 
@@ -42,11 +43,8 @@ When a user selects a suggestion from the drop-down list, you can use it to begi
 
 To get started quickly with your first request, see [Making Your First Query](quickstarts/csharp.md).
 
-Familiarize yourself with the [Bing Autosuggest API v7](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-autosuggest-api-v7-reference) reference. The reference contains the list of endpoints, headers, and query parameters that you'd use to request suggested query terms, and the definitions of the response objects.
+Familiarize yourself with the [Bing Autosuggest API v7](reference/endpoints.md) reference. The reference contains the list of endpoints, headers, and query parameters that you'd use to request suggested query terms, and the definitions of the response objects.
 
-Visit the [Bing Search API hub page](../bing-web-search/search-the-web.md) to explore the other available APIs.
+Learn how to search the web by using the [Bing Web Search API](../bing-web-search/search-the-web.md) and explore the other [Bing Search APIs](../bing-web-search/bing-api-comparison.md).
 
-
-Learn how to search the web by using the [Bing Web Search API](../bing-web-search/search-the-web.md), and explore the other[Bing Search APIs](../bing-web-search/index.yml).
-
-Be sure to read [Bing Use and Display Requirements](./useanddisplayrequirements.md) so you don't break any of the rules about using the search results.
+Be sure to read [Bing Use and Display Requirements](../bing-web-search/use-display-requirements.md) so you don't break any of the rules about using the search results.

@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Suggest search queries with the Bing Autosuggest REST API and C#"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Learn how to quickly start suggesting search terms in real time with the Bing Autosuggest API.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: quickstart
-ms.date: 05/06/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 # Quickstart: Suggest search queries with the Bing Autosuggest REST API and C#
 
@@ -21,7 +21,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
 * Any edition of [Visual Studio 2017 or later](https://www.visualstudio.com/downloads/).
 * If you're using Linux/MacOS, this application can be run using [Mono](https://www.mono-project.com/).
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](../../../../includes/cognitive-services-bing-autosuggest-signup-requirements.md)]
+[!INCLUDE [bing-autosuggest-signup-requirements](../../includes/bing-autosuggest-signup-requirements.md)]
 
 ## Create a Visual Search Solution
 
@@ -35,10 +35,10 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
     using System.Text;
     ```
 
-2. In a new class, create variables for your API host and path, [market code](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-autosuggest-api-v7-reference#market-codes), and a partial search query. Use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. In a new class, create variables for your API host and path, [market code](../reference/query-parameters.md#market-codes), and a partial search query. 
 
     ```csharp
-    static string host = "https://api.cognitive.microsoft.com";
+    static string host = "https://api.bing.microsoft.com";
     static string path = "/bing/v7.0/Suggestions";
     static string market = "en-US";
     static string key = "your-api-key";
@@ -156,9 +156,9 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Autosuggest tutorial](../tutorials/autosuggest.md)
+> [Bing Autosuggest tutorial](../tutorial/autosuggest.md)
 
 ## See also
 
 - [What is Bing Autosuggest?](../get-suggested-search-terms.md)
-- [Bing Autosuggest API v7 reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-autosuggest-api-v7-reference)
+- [Bing Autosuggest API v7 reference](../reference/endpoints.md)

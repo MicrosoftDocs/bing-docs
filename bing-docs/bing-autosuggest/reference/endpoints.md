@@ -1,6 +1,6 @@
 ---
 title: Bing Autosuggest API v7 Reference
-titleSuffix: Bing Services
+titleSuffix: Bing Search Services
 description: Describes the programming elements of the Bing Autosuggest API.
 ms.service: bing-search-services
 ms.subservice: bing-autosuggest
@@ -27,7 +27,7 @@ For information about permitted use and display of the results, see [Use and dis
 To request web search results, send a GET request to:  
   
 ```
-https://api.cognitive.microsoft.com/bing/v7.0/suggestions
+https://api.bing.microsoft.com/bing/v7.0/suggestions
 ```
 
 The request must use the HTTPS protocol. 

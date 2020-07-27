@@ -1,13 +1,13 @@
 ---
 title: Bing Autosuggest Go client library quickstart 
-titleSuffix: Azure Cognitive Services
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+titleSuffix: Bing Search Services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.topic: include
-ms.date: 05/06/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 Get started with the Bing Autosuggest client library for Go. Follow these steps to install the library and try out our examples for basic tasks. 
@@ -23,7 +23,7 @@ Use the Bing Autosuggest client library for Go to get search suggestions based o
 
 Begin using the Bing Autosuggest client library by creating an Azure resource. Choose the resource type below that's right for you:
 
-[!INCLUDE [cognitive-services-bing-autosuggest-signup-requirements](~/includes/cognitive-services-bing-autosuggest-signup-requirements.md)]
+[!INCLUDE [bing-autosuggest-signup-requirements](../../../includes/bing-autosuggest-signup-requirements.md)]
 
 ## Create environment variables
 
@@ -150,7 +150,7 @@ These code samples show you how to complete basic tasks using the Bing Autosugge
 ### Authenticate the client
 
 > [!NOTE] 
-> This quickstart assumes you've [created an environment variable](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account#configure-an-environment-variable-for-authentication)  for your Bing autosuggest key, named `BING_AUTOSUGGEST_SUBSCRIPTION_KEY`, and one for your endpoint named `BING_AUTOSUGGEST_ENDPOINT`.
+> This quickstart assumes you've created an environment variable for your Bing autosuggest key, named `BING_AUTOSUGGEST_SUBSCRIPTION_KEY`, and one for your endpoint named `BING_AUTOSUGGEST_ENDPOINT`.
 
 In the `main()` function, instantiate a client with your endpoint and key. 
 
@@ -166,7 +166,7 @@ client.Endpoint = endpoint
 
 ### Send an API request
 
-In the same method, use the client's [AutoSuggestMethodAsync](https://docs.microsoft.com/dotnet/api/microsoft.azure.cognitiveservices.search.autosuggest.autosuggestclientextensions.autosuggestmethodasync?view=azure-dotnet#Microsoft_Azure_CognitiveServices_Search_AutoSuggest_AutoSuggestClientExtensions_AutoSuggestMethodAsync_Microsoft_Azure_CognitiveServices_Search_AutoSuggest_IAutoSuggestClient_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_String_System_Collections_Generic_IList_System_String__System_Threading_CancellationToken_) method to send a query to Bing. Then, iterate over the [Suggestions](https://docs.microsoft.com/dotnet/api/microsoft.azure.cognitiveservices.search.autosuggest.models.suggestions?view=azure-dotnet) response, and print the first suggestion.
+In the same method, use the client's AutoSuggestMethodAsync method to send a query to Bing. Then, iterate over the Suggestions response, and print the first suggestion.
 
 ```Go
 // This should return the query suggestion "xbox."
@@ -200,12 +200,6 @@ Run your Go application with the `go run [arguments]` command from your applicat
 go run sample-app.go
 ```
 
-## Clean up resources
-
-If you want to clean up and remove a Cognitive Services subscription, you can delete the resource or resource group. Deleting the resource group also deletes any other resources associated with it.
-
-* [Delete a resource group in the Azure portal](../../../cognitive-services-apis-create-account.md#clean-up-resources).
-* [Delete a resource group in the Azure CLI](../../../cognitive-services-apis-create-account-cli.md#clean-up-resources).
 
 ## Next steps
 
@@ -215,4 +209,4 @@ If you want to clean up and remove a Cognitive Services subscription, you can de
 ## See also
 
 - [What is Bing Autosuggest?](../../get-suggested-search-terms.md)
-- [Bing Autosuggest API v7 reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-autosuggest-api-v7-reference)
+- [Bing Autosuggest API v7 reference](../../reference/endpoints.md)

@@ -73,11 +73,9 @@
     href: image-search-endpoint.md
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
-  - name: Language support
-    href: language-support.md
   - name: Analytics for Bing Autosuggest API
-    maintainContext: true
     href: ../bing-web-search/bing-web-stats.md
+    maintainContext: true
   - name: Compliance
     href: https://azure.microsoft.com/support/legal/cognitive-services-compliance-and-privacy/
   - name: Support

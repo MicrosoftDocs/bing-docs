@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Suggest search queries with the Bing Autosuggest REST API and PHP"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Learn how to quickly start suggesting search terms in real time with the Bing Autosuggest API.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: quickstart
-ms.date: 05/06/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Suggest search queries with the Bing Autosuggest REST API and PHP
@@ -21,15 +21,14 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
 
 * [PHP 5.6.x](https://php.net/downloads.php) or later
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](../../../../includes/cognitive-services-bing-autosuggest-signup-requirements.md)]
+[!INCLUDE [bing-autosuggest-signup-requirements](../../includes/bing-autosuggest-signup-requirements.md)]
 
 ## Get Autosuggest results
 
 1. Create a new PHP project in your favorite IDE.
 2. Add the code provided below.
 3. Replace the `subscriptionKey` value with an access key that's valid for your subscription.
-4. Use the global endpoint in the code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
-5. Run the program.
+1. Run the program.
 
 ```php
 <?php
@@ -44,7 +43,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
 // Replace the subscriptionKey string value with your valid subscription key.
 $subscriptionKey = 'enter key here';
 
-$host = "https://api.cognitive.microsoft.com";
+$host = "https://api.bing.microsoft.com";
 $path = "/bing/v7.0/Suggestions";
 
 $mkt = "en-US";
@@ -147,9 +146,9 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Autosuggest tutorial](../tutorials/autosuggest.md)
+> [Bing Autosuggest tutorial](../tutorial/autosuggest.md)
 
 ## See also
 
 - [What is Bing Autosuggest?](../get-suggested-search-terms.md)
-- [Bing Autosuggest API v7 reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-autosuggest-api-v7-reference)
+- [Bing Autosuggest API v7 reference](../reference/endpoints.md)

@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Suggest search queries with the Bing Autosuggest REST API and Java"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Learn how to quickly start suggesting search terms in real time with the Bing Autosuggest API.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: quickstart
-ms.date: 05/06/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Suggest search queries with the Bing Autosuggest REST API and Java
@@ -22,7 +22,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
 * The [Java Development Kit(JDK)](https://www.oracle.com/technetwork/java/javase/downloads/)
 * The [Gson library](https://github.com/google/gson)
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](../../../../includes/cognitive-services-bing-autosuggest-signup-requirements.md)]
+[!INCLUDE [bing-autosuggest-signup-requirements](../../includes/bing-autosuggest-signup-requirements.md)]
 
 ## Create and initialize a project
 
@@ -39,11 +39,11 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
     import com.google.gson.JsonParser;
     ```
 
-2. Create variables for your subscription key, the API host and path, your [market code](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-autosuggest-api-v7-reference#market-codes), and a search query. Use the global endpoint below, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. Create variables for your subscription key, the API host and path, your [market code](../reference/market-codes.md), and a search query.
     
     ```java
     static String subscriptionKey = "enter key here";
-    static String host = "https://api.cognitive.microsoft.com";
+    static String host = "https://api.bing.microsoft.com";
     static String path = "/bing/v7.0/Suggestions";
     static String mkt = "en-US";
     static String query = "sail";
@@ -199,7 +199,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../tutorials/autosuggest.md)
+> [Create a single-page web app](../tutorial/autosuggest.md)
 
 - [What is Bing Autosuggest?](../get-suggested-search-terms.md)
-- [Bing Autosuggest API v7 reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-autosuggest-api-v7-reference)
+- [Bing Autosuggest API v7 reference](../reference/endpoints.md)
