@@ -21,7 +21,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
 
 * [Node.js 6](https://nodejs.org/en/download/) or later
 
-[!INCLUDE [bing-autosuggest-signup-requirements](../../includes/bing-autosuggest-signup-requirements.md)]
+[!INCLUDE [bing-autosuggest-signup-requirements](../../../includes/bing-autosuggest-signup-requirements.md)]
 
 ## Create a new application
 

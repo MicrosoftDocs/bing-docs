@@ -23,7 +23,7 @@ Use the Bing Autosuggest client library for Go to get search suggestions based o
 
 Begin using the Bing Autosuggest client library by creating an Azure resource. Choose the resource type below that's right for you:
 
-[!INCLUDE [bing-autosuggest-signup-requirements](../../../includes/bing-autosuggest-signup-requirements.md)]
+[!INCLUDE [bing-autosuggest-signup-requirements](../../../../includes/bing-autosuggest-signup-requirements.md)]
 
 ## Create environment variables
 

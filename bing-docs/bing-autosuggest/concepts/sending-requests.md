@@ -71,7 +71,7 @@ npm install -g cors-proxy-server
 Next, change the Bing Autosuggest API endpoint in the HTML file to:
 
 ```http
-http://localhost:9090/https://api.cognitive.microsoft.com/bing/v7.0/Suggestions
+http://localhost:9090/https://api.bing.microsoft.com/bing/v7.0/Suggestions
 ```
 
 Finally, start the CORS proxy with the following command:
@@ -103,7 +103,7 @@ The `displayText` field contains the suggested query that you'd use to populate 
 
 If the user selects a query from the drop-down list, you can use it to call the one of the [Bing Search APIs](../../bing-web-search/bing-api-comparison.md) and display the results yourself, or send the user to the Bing results page using the returned `url` field.
 
-[!INCLUDE [bing-url-note](../../includes/bing-url-note.md)]
+[!INCLUDE [bing-url-note](../../../includes/bing-url-note.md)]
 
 ```json
 BingAPIs-TraceId: 76DD2C2549B94F9FB55B4BD6FEB6AC

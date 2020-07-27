@@ -21,7 +21,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
 * Any edition of [Visual Studio 2017 or later](https://www.visualstudio.com/downloads/).
 * If you're using Linux/MacOS, this application can be run using [Mono](https://www.mono-project.com/).
 
-[!INCLUDE [bing-autosuggest-signup-requirements](../../includes/bing-autosuggest-signup-requirements.md)]
+[!INCLUDE [bing-autosuggest-signup-requirements](../../../includes/bing-autosuggest-signup-requirements.md)]
 
 ## Create a Visual Search Solution
 

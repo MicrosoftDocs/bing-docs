@@ -22,7 +22,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
 
 * [Ruby 2.4](https://www.ruby-lang.org/en/downloads/) or later.
 
-[!INCLUDE [bing-autosuggest-signup-requirements](../../includes/bing-autosuggest-signup-requirements.md)]
+[!INCLUDE [bing-autosuggest-signup-requirements](../../../includes/bing-autosuggest-signup-requirements.md)]
 
 ## Create a new application
 
