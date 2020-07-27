@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Send a search request to the REST API using PHP - Bing Entity Search"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send a request to the Bing Entity Search REST API using PHP, and receive a JSON response.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: quickstart
-ms.date: 05/08/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Send a search request to the Bing Entity Search REST API using PHP
@@ -23,7 +23,7 @@ Although this application is written in PHP, the API is a RESTful Web service co
 
 * [PHP 5.6.x](https://php.net/downloads.php) or later
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](../../../../includes/cognitive-services-bing-entity-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../includes/bing-entity-search-signup-requirements.md)]
 
 ## Search entities
 
@@ -32,7 +32,6 @@ To run this application, follow these steps:
 1. Create a new PHP project in your favorite IDE.
 2. Add the code provided below.
 3. Replace the `key` value with an access key valid for your subscription.
-4. You can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
 5. Run the program.
 
 ```php
@@ -48,7 +47,7 @@ To run this application, follow these steps:
 // Replace the subscriptionKey string value with your valid subscription key.
 $subscriptionKey = 'ENTER KEY HERE';
 
-$host = "https://api.cognitive.microsoft.com";
+$host = "https://api.bing.microsoft.com";
 $path = "/bing/v7.0/entities";
 
 $mkt = "en-US";
@@ -147,7 +146,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../tutorial-bing-entities-search-single-page-app.md)
+> [Build a single-page web app](../tutorial/bing-entities-search-single-page-app.md)
 
 * [What is the Bing Entity Search API?](../overview.md )
-* [Bing Entity Search API reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-entities-api-v7-reference).
+* [Bing Entity Search API reference](../reference/endpoints.md).

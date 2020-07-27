@@ -1,17 +1,16 @@
 ---
 title: "Quickstart: Send a search request to the REST API using Python - Bing Entity Search"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send a request to the Bing Entity Search REST API using Python, and receive a JSON response.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: quickstart
-ms.date: 05/08/2020
-ms.author: aahi
-ms.custom: tracking-python
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Send a search request to the Bing Entity Search REST API using Python
@@ -24,18 +23,18 @@ Although this application is written in Python, the API is a RESTful Web service
 
 * [Python](https://www.python.org/downloads/) 2.x or 3.x
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](../../../../includes/cognitive-services-bing-entity-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../includes/bing-entity-search-signup-requirements.md)]
 
 ## Create and initialize the application
 
-1. Create a new Python file in your favorite IDE or editor, and add the following imports. Create variables for your subscription key, endpoint, market, and search query. You can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+1. Create a new Python file in your favorite IDE or editor, and add the following imports. Create variables for your subscription key, endpoint, market, and search query. 
 
     ```python
     import http.client, urllib.parse
     import json
     
     subscriptionKey = 'ENTER YOUR KEY HERE'
-    host = 'api.cognitive.microsoft.com'
+    host = 'api.bing.microsoft.com'
     path = '/bing/v7.0/entities'
     mkt = 'en-US'
     query = 'italian restaurants near me'
@@ -141,7 +140,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../tutorial-bing-entities-search-single-page-app.md)
+> [Build a single-page web app](../tutorial/bing-entities-search-single-page-app.md)
 
-* [What is the Bing Entity Search API?](../search-the-web.md)
-* [Bing Entity Search API reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-entities-api-v7-reference).
+* [What is the Bing Entity Search API?](../overview.md)
+* [Bing Entity Search API reference](../reference/endpoints.md).

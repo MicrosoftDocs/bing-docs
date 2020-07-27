@@ -1,13 +1,13 @@
 ---
 title: Bing Entity Search Java client library quickstart 
-titleSuffix: Azure Cognitive Services
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+titleSuffix: Bing Search Services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.topic: include
-ms.date: 03/06/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 Use this quickstart to begin searching for entities with the Bing Entity Search client library for Java. While Bing Entity Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples/tree/master/Search/BingEntitySearch).
@@ -28,7 +28,7 @@ Install the Bing Entity Search client library dependencies by using Maven, Gradl
 </dependency>
 ```
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](~/includes/cognitive-services-bing-entity-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-entity-search-signup-requirements.md)]
 
 
 ## Create and initialize a project
@@ -58,11 +58,11 @@ Install the Bing Entity Search client library dependencies by using Maven, Gradl
 
 ## Create a search client
 
-1. Implement the `dominantEntityLookup` client, which requires your API endpoint, and an instance of the `ServiceClientCredentials` class. You can use the global endpoint below, or the [custom subdomain](../../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+1. Implement the `dominantEntityLookup` client, which requires your API endpoint, and an instance of the `ServiceClientCredentials` class. 
 
     ```java
     public static EntitySearchAPIImpl getClient(final String subscriptionKey) {
-        return new EntitySearchAPIImpl("https://api.cognitive.microsoft.com/bing/v7.0/",
+        return new EntitySearchAPIImpl("https://api.bing.microsoft.com/bing/v7.0/",
                 new ServiceClientCredentials() {
                 //...
                 }
@@ -141,6 +141,6 @@ Install the Bing Entity Search client library dependencies by using Maven, Gradl
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../../tutorial-bing-entities-search-single-page-app.md)
+> [Build a single-page web app](../../tutorial/bing-entities-search-single-page-app.md)
 
 * [What is the Bing Entity Search API?](../../overview.md)

@@ -1,16 +1,16 @@
 ---
 title: The Bing Entity Search API endpoint
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: The Bing Entity Search API has one endpoint that returns entities from the Web based on a query. These search results are returned in JSON.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: conceptual
-ms.date: 02/01/2019
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Bing Entity Search API endpoint
@@ -20,10 +20,10 @@ The Bing Entity Search API has one endpoint that returns entities from the Web b
 
 ## Get entity results from the endpoint
 
-To get entity results using the **Bing API**, send a `GET` request to the following endpoint. Use [headers](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-entities-api-v7-reference#headers) and [query parameters](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-entities-api-v7-reference#query-parameters) to customize your search request. Search requests can be sent using the `?q=` parameter.
+To get entity results using the **Bing API**, send a `GET` request to the following endpoint. Use [headers](reference/headers.md) and [query parameters](reference/query-parameters.md) to customize your search request. Search requests can be sent using the `?q=` parameter.
 
 ```cURL
- GET https://api.cognitive.microsoft.com/bing/v7.0/entities
+ GET https://api.bing.microsoft.com/bing/v7.0/entities
 ```
 
 ## Next steps
@@ -31,6 +31,3 @@ To get entity results using the **Bing API**, send a `GET` request to the follow
 > [!div class="nextstepaction"]
 > [What is the Bing Entity Search API?](overview.md)
 
-## See also 
-
-For more information about headers, parameters, market codes, response objects, errors and more, see the [Bing Entity Search API v7](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-entities-api-v7-reference) reference article.

@@ -1,13 +1,13 @@
 ---
 title: Bing Entity Search Python client library quickstart 
-titleSuffix: Azure Cognitive Services
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+titleSuffix: Bing Search Services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.topic: include
-ms.date: 03/06/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 Use this quickstart to begin searching for entities with the Bing Entity Search client library for Python. While Bing Entity Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/blob/master/samples/search/entity_search_samples.py).
@@ -31,7 +31,7 @@ cd mytestenv
 python -m pip install azure-cognitiveservices-search-entitysearch
 ```
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](~/includes/cognitive-services-bing-entity-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../..//includes/bing-entity-search-signup-requirements.md)]
 
 ## Create and initialize the application
 
@@ -73,6 +73,6 @@ python -m pip install azure-cognitiveservices-search-entitysearch
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../../tutorial-bing-entities-search-single-page-app.md)
+> [Create a single-page web app](../../tutorial/bing-entities-search-single-page-app.md)
 
 * [What is the Bing Entity Search API?](../../overview.md )

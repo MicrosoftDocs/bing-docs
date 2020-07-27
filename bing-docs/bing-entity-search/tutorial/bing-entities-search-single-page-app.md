@@ -1,17 +1,18 @@
 ---
 title: "Tutorial: Bing Entity Search single-page web app"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Azure Services
 description: This tutorial shows how to use the Bing Entity Search API in a single-page Web application.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: tutorial
-ms.date: 03/05/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
+
 # Tutorial: Single-page web app
 
 The Bing Entity Search API lets you search the Web for information about *entities* and *places.* You may request either kind of result, or both, in a given query. The definitions of places and entities are provided below.
@@ -46,10 +47,10 @@ The tutorial app illustrates how to:
 
 The tutorial page is entirely self-contained; it does not use any external frameworks, style sheets, or even image files. It uses only widely supported JavaScript language features and works with current versions of all major Web browsers.
 
-In this tutorial, we discuss only selected portions of the source code. The full source code is available [on a separate page](tutorial-bing-entities-search-single-page-app-source.md). Copy and paste this code into a text editor and save it as `bing.html`.
+In this tutorial, we discuss only selected portions of the source code. Copy and paste this code into a text editor and save it as `bing.html`.
 
 > [!NOTE]
-> This tutorial is substantially similar to the [single-page Bing Web Search app tutorial](../Bing-Web-Search/tutorial-bing-web-search-single-page-app.md), but deals only with entity search results.
+> This tutorial is substantially similar to the [single-page Bing Web Search app tutorial](../../bing-web-search/tutorial/bing-web-search-single-page-app.md), but deals only with entity search results.
 
 ## Prerequisites
 
@@ -90,7 +91,7 @@ The HTML also contains the divisions (HTML `<div>` tags) where the search result
 
 To avoid having to include the Bing Search and Bing Maps API subscription keys in the code, we use the browser's persistent storage to store them. If either key has not been stored, we prompt for it and store it for later use. If the key is later rejected by the API, we invalidate the stored key so the user is asked for it upon their next search.
 
-We define `storeValue` and `retrieveValue` functions that use either the `localStorage` object (if the browser supports it) or a cookie. Our `getSubscriptionKey()` function uses these functions to store and retrieve the user's key. You can use the global endpoint below, or the [custom subdomain](../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+We define `storeValue` and `retrieveValue` functions that use either the `localStorage` object (if the browser supports it) or a cookie. Our `getSubscriptionKey()` function uses these functions to store and retrieve the user's key. 
 
 ```javascript
 // cookie names for data we store
@@ -99,7 +100,7 @@ MAPS_API_KEY_COOKIE   = "bing-maps-api-key";
 CLIENT_ID_COOKIE      = "bing-search-client-id";
 
 // API endpoints
-SEARCH_ENDPOINT = "https://api.cognitive.microsoft.com/bing/v7.0/entities";
+SEARCH_ENDPOINT = "https://api.bing.microsoft.com/bing/v7.0/entities";
 MAPS_ENDPOINT   = "https://dev.virtualearth.net/REST/v1/Locations";
 
 // ... omitted definitions of storeValue() and retrieveValue()
@@ -132,7 +133,7 @@ The HTML `<body>` tag includes an `onload` attribute that calls `getSearchSubscr
 
 ## Selecting search options
 
-![[Bing Entity Search form]](media/entity-search-spa-form.png)
+![[Bing Entity Search form]](../media/entity-search-spa-form.png)
 
 The HTML form includes the following controls:
 
@@ -167,7 +168,7 @@ The `mapquery` field isn't handled in `bingSearchOptions()` because it is used f
 
 ## Obtaining a location
 
-The Bing Maps API offers a [`locationQuery` method](//msdn.microsoft.com/library/ff701711.aspx), which we use to find the latitude and longitude of the location the user enters. These coordinates are then passed to the Bing Entity Search API with the user's request. The search results prioritize entities and places that are close to the specified location.
+The Bing Maps API offers a <a href="https://docs.microsoft.com/en-us/bingmaps/rest-services/locations/find-a-location-by-query" target="_blank">locationQuery method</a>, which we use to find the latitude and longitude of the location the user enters. These coordinates are then passed to the Bing Entity Search API with the user's request. The search results prioritize entities and places that are close to the specified location.
 
 We can't access the Bing Maps API using an ordinary `XMLHttpRequest` query in a Web app because the service does not support cross-origin queries. Fortunately, it supports JSONP (the "P" is for "padded"). A JSONP response is an ordinary JSON response wrapped in a function call. The request is made by inserting using a `<script>` tag into the document. (Loading scripts is not subject to browser security policies.)
 
@@ -540,7 +541,7 @@ npm install -g cors-proxy-server
 ```
 
 Next, change the Bing Web Search endpoint in the HTML file to:\
-`http://localhost:9090/https://api.cognitive.microsoft.com/bing/v7.0/search`
+`http://localhost:9090/https://api.bing.microsoft.com/bing/v7.0/search`
 
 Finally, start the CORS proxy with the following command:
 
@@ -553,7 +554,4 @@ Leave the command window open while you use the tutorial app; closing the window
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Entity Search API reference](//docs.microsoft.com/rest/api/cognitiveservices/bing-entities-api-v7-reference)
-
-> [!div class="nextstepaction"]
-> [Bing Maps API documentation](//msdn.microsoft.com/library/dd877180.aspx)
+> [Bing Entity Search API reference](../reference/endpoints.md)
