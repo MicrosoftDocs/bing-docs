@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Call your Bing Custom Search endpoint using Java | Microsoft Docs"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to begin requesting search results from your Bing Custom Search instance in Java. 
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: quickstart
-ms.date: 05/08/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Call your Bing Custom Search endpoint using Java
@@ -25,7 +25,7 @@ Use this quickstart to learn how to request search results from your Bing Custom
 
 - The [Gson library](https://github.com/google/gson).
 
-[!INCLUDE [cognitive-services-bing-custom-search-prerequisites](../../../includes/cognitive-services-bing-custom-search-signup-requirements.md)]
+[!INCLUDE [bing-custom-search-prerequisites](../../includes/bing-custom-search-signup-requirements.md)]
 
 ## Create and initialize the application
 
@@ -46,10 +46,11 @@ Use this quickstart to learn how to request search results from your Bing Custom
     import com.google.gson.JsonParser;
     ```
 
-2. Create a class named `CustomSrchJava`, and then create variables for your subscription key, custom search endpoint, and search instance's custom configuration ID. You can use the global endpoint in the following code, or use the [custom subdomain](../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. Create a class named `CustomSrchJava`, and then create variables for your subscription key, custom search endpoint, and search instance's custom configuration ID. 
+
     ```java
     public class CustomSrchJava {
-        static String host = "https://api.cognitive.microsoft.com";
+        static String host = "https://api.bing.microsoft.com";
         static String path = "/bingcustomsearch/v7.0/search";
         static String subscriptionKey = "YOUR-SUBSCRIPTION-KEY"; 
         static String customConfigId = "YOUR-CUSTOM-CONFIG-ID";
@@ -128,4 +129,4 @@ Use this quickstart to learn how to request search results from your Bing Custom
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a Custom Search web app](./tutorials/custom-search-web-page.md)
+> [Build a Custom Search web app](tutorial/custom-search-web-page.md)

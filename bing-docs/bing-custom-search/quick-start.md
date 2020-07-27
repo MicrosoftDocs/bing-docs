@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Create a first Bing Custom Search instance"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to create a custom Bing instance that can search domains and webpages that you define. 
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: quickstart
-ms.date: 03/24/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Create your first Bing Custom Search instance
@@ -23,7 +23,7 @@ To create the instance, use the [Bing Custom Search portal](https://customsearch
 
 ## Prerequisites
 
-[!INCLUDE [cognitive-services-bing-custom-search-prerequisites](../../../includes/cognitive-services-bing-custom-search-signup-requirements.md)]
+[!INCLUDE [bing-custom-search-prerequisites](../../includes/bing-custom-search-signup-requirements.md)]
 
 ## Create a custom search instance
 
@@ -48,4 +48,4 @@ To create a Bing Custom Search instance:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Quickstart: Call your Bing Custom Search endpoint](./call-endpoint-csharp.md)
+> [Quickstart: Call your Bing Custom Search endpoint](call-endpoint-csharp.md)

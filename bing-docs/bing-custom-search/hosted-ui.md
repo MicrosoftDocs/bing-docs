@@ -1,16 +1,16 @@
 ---
-title: Configure a hosted UI for Bing Custom Search | Microsoft Docs
-titleSuffix: Azure Cognitive Services
+title: Configure a hosted UI for Bing Custom Search
+titleSuffix: Bing Search Services
 description: Use this article to configure and integrate a hosted UI for Bing Custom Search.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: conceptual
-ms.date: 02/12/2019
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Configure your hosted UI experience
@@ -48,7 +48,7 @@ To configure a hosted UI for your web applications, follow these steps. As you m
 
 8. If you enabled autosuggest, enter the autosuggest subscription key or choose one from the dropdown list. The dropdown list is populated with keys from your Azure account's subscriptions. Custom Autosuggest requires a specific subscription tier, see the [pricing](https://azure.microsoft.com/pricing/details/cognitive-services/bing-custom-search/).
 
-[!INCLUDE [publish or revert](./includes/publish-revert.md)]
+[!INCLUDE [publish or revert](includes/publish-revert.md)]
 
 ## Consume custom UI
 
@@ -72,7 +72,7 @@ To consume the hosted UI, either:
   `https://ui.customsearch.ai/hosted?customConfig=YOUR-CUSTOM-CONFIG-ID`  
   
   > [!NOTE]
-  > Add the following query parameters to the URL as needed. For information about these parameters, see [Custom Search API](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-custom-search-api-v7-reference#query-parameters) reference.
+  > Add the following query parameters to the URL as needed. For information about these parameters, see [Custom Search API](reference/query-parameters.md) reference.
   >
   > - q
   > - mkt
@@ -140,7 +140,3 @@ The following configurations apply only if you consume the Hosted UI through the
 - Logo URL
 - Faviicon URL  
 
-## Next steps
-
-- [Use decoration markers to highlight text](../bing-web-search/hit-highlighting.md)
-- [Page webpages](./page-webpages.md)

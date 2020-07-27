@@ -1,16 +1,16 @@
 ---
 title: Share your custom search - Bing Custom Search
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Easily allow collaborative editing and testing of your instance by sharing it with members of your team.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: conceptual
-ms.date: 03/04/2019
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Share your Custom Search instance
@@ -32,4 +32,4 @@ To stop sharing an instance with someone, use the remove icon to remove their em
 
 ## Next steps
 
-- [Configure your Custom Autosuggest experience](define-custom-suggestions.md)
+- [Configure your Custom Autosuggest experience](../bing-custom-autosuggest/define-custom-suggestions.md)

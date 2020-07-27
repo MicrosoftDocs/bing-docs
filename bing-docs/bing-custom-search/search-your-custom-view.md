@@ -1,16 +1,16 @@
 ---
 title: Search a custom view - Bing Custom Search
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: After you've configured your custom search experience, you can test it from within the Bing Custom Search portal.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: conceptual
-ms.date: 02/03/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Call your Bing Custom Search instance from the Portal
@@ -22,7 +22,7 @@ After you've configured your custom search experience, you can test it from with
 
 After you've signed into the Bing Custom Search [portal](https://customsearch.ai), select your search instance and click the **Production** tab. Under **Endpoints**, select an API endpoint (for example, Web API). Your subscription determines what endpoints are shown.
 
-To create a search query, enter the parameter values for your endpoint. Note that the parameters displayed in the portal may change depending on the endpoint you choose. See the [Custom Search API reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-custom-search-api-v7-reference#query-parameters) for more information. To change the subscription your search instance uses, add the appropriate subscription key, and update the appropriate market and/or language parameters.
+To create a search query, enter the parameter values for your endpoint. Note that the parameters displayed in the portal may change depending on the endpoint you choose. See the [Custom Search API reference](reference/query-parameters.md) for more information. To change the subscription your search instance uses, add the appropriate subscription key, and update the appropriate market and/or language parameters.
 
 Some important parameters are below:
 
@@ -56,4 +56,4 @@ You can change the subscription associated with your Bing Custom Search instance
 - [Call your custom view with NodeJs](./call-endpoint-nodejs.md)
 - [Call your custom view with Python](./call-endpoint-python.md)
 
-- [Call your custom view with the C# SDK](./sdk-csharp-quick-start.md)
+- [Call your custom view with the C# SDK](includes/quickstarts/custom-search-client-library-csharp.md)

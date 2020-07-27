@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Call your Bing Custom Search endpoint using Node.js | Microsoft Docs"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to begin requesting search results from your Bing Custom Search instance using Node.js.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: quickstart
-ms.date: 05/08/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Call your Bing Custom Search endpoint using Node.js
@@ -25,7 +25,7 @@ Use this quickstart to learn how to request search results from your Bing Custom
 
 - The [JavaScript request library](https://github.com/request/request).
 
-[!INCLUDE [cognitive-services-bing-custom-search-prerequisites](../../../includes/cognitive-services-bing-custom-search-signup-requirements.md)]
+[!INCLUDE [bing-custom-search-prerequisites](../../includes/bing-custom-search-signup-requirements.md)]
 
 ## Create and initialize the application
 
@@ -41,11 +41,11 @@ Use this quickstart to learn how to request search results from your Bing Custom
 
 ## Send and receive a search request 
 
-1. Create a variable to store the information being sent in your request. Construct the request URL by appending your search term to the `q=` query parameter, and your search instance's custom configuration ID to the `customconfig=` parameter. Separate the parameters with an ampersand (`&`). You can use the global endpoint in the following code, or use the [custom subdomain](../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+1. Create a variable to store the information being sent in your request. Construct the request URL by appending your search term to the `q=` query parameter, and your search instance's custom configuration ID to the `customconfig=` parameter. Separate the parameters with an ampersand (`&`). 
 
     ```javascript
     var info = {
-        url: 'https://api.cognitive.microsoft.com/bingcustomsearch/v7.0/search?' + 
+        url: 'https://api.bing.microsoft.com/bingcustomsearch/v7.0/search?' + 
             'q=' + searchTerm + "&" +
             'customconfig=' + customConfigId,
         headers: {
@@ -73,4 +73,4 @@ Use this quickstart to learn how to request search results from your Bing Custom
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a Custom Search web app](./tutorials/custom-search-web-page.md)
+> [Build a Custom Search web app](tutorial/custom-search-web-page.md)

@@ -1,19 +1,19 @@
 ---
 title: "Quickstart: Use the Bing Custom Search client library"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bnig Search Services
 description: The Custom Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to start sending search requests, and get back results.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 zone_pivot_groups: programming-languages-set-eleven
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: quickstart
-ms.date: 02/27/2020
-ms.author: aahi
-ms.custom: tracking-python
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
+
 # Quickstart: Use the Bing Custom Search client library
 
 ::: zone pivot="programming-language-csharp"

@@ -1,16 +1,16 @@
 ---
-title: Configure your Bing Custom Search experience | Microsoft Docs
-titleSuffix: Azure Cognitive Services
+title: Configure your Bing Custom Search experience
+titleSuffix: Bing Search Services
 description: The portal lets you create a search instance that specifies the slices of the web; domains, subpages, and webpages.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: conceptual
-ms.date: 02/12/2019
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Configure your Bing Custom Search experience
@@ -21,11 +21,11 @@ The portal lets you create a search instance that specifies the slices of the we
 
 Use the following when defining your slices of the web:
 
-| Slice name | Description                                                                                                                                                                                                                                                                                                |
-|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Domain     | A domain slice includes all content found within an internet domain. For example, `www.microsoft.com`. Omitting `www.` causes Bing to also search the domain’s subdomains. For example, if you specify `microsoft.com`, Bing also returns results from `support.microsoft.com` or `technet.microsoft.com`. |
-| Subpage    | A subpage slice includes all content found in the subpage and paths below it. You may specify a maximum of two subpages in the path. For example, `www.microsoft.com/en-us/windows/`                                                                                                                       |
-| Webpage    | A webpage slice can include only that webpage in a custom search. You can optionally specify whether to include subpages.                                                                                                                                                                                  |
+|Slice name|Description
+|-|-
+|Domain|A domain slice includes all content found within an internet domain. For example, `www.microsoft.com`. Omitting `www.` causes Bing to also search the domain’s subdomains. For example, if you specify `microsoft.com`, Bing also returns results from `support.microsoft.com` or `technet.microsoft.com`.
+|Subpage|A subpage slice includes all content found in the subpage and paths below it. You may specify a maximum of two subpages in the path. For example, `www.microsoft.com/en-us/windows/`
+|Webpage|A webpage slice can include only that webpage in a custom search. You can optionally specify whether to include subpages.
 
 > [!IMPORTANT]
 > All domains, subpages, and webpages that you specify must be public and indexed by Bing. If you own a public site that you want to include in the search, and Bing hasn’t indexed it, see the Bing [webmaster documentation](https://www.bing.com/webmaster/help/webmaster-guidelines-30fba23a) for details about getting Bing to index it. Also, see the webmaster documentation for details about getting Bing to update your crawled site if the index is out of date.
@@ -43,7 +43,7 @@ If you’re not sure which slices to include, you can send search queries to Bin
 2. Click **Add site** next to the result you want to include. Then click OK.
 
 >[!NOTE]
-> [!INCLUDE[publish or revert](./includes/publish-revert.md)]
+> [!INCLUDE[publish or revert](includes/publish-revert.md)]
 
 <a name="active-and-blocked-lists"></a>
 
@@ -70,16 +70,14 @@ After adding web slices to the **Active** list, the Bing Custom Search portal wi
 
 ## Search for images and videos
 
-You can search for images and videos similarly to web content by using the [Bing Custom Image Search API](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-custom-images-api-v7-reference) or the [Bing Custom Video Search API](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-custom-videos-api-v7-reference). You can display these results with the [hosted UI](hosted-ui.md), or the APIs. 
-
-These APIs are similar to the non-custom [Bing Image Search](../Bing-Image-Search/overview.md) and [Bing Video Search](../Bing-Video-Search/search-the-web.md) APIs, but search the entire web, and do not require the `customConfig` query parameter. See these documentation sets for more information on working with images and videos. 
+You can search for images and videos similarly to web content by using the [Bing Custom Image Search API](../bing-custom-image-search/get-images-from-instance.md) or the [Bing Custom Video Search API](../bing-custom-video-search/get-videos-from-instance.md). You can display these results with the [hosted UI](hosted-ui.md) or the APIs. These APIs are similar to the non-custom [Bing Image Search](../bing-image-search/overview.md) and [Bing Video Search](../bing-video-search/overview.md) APIs, but they search the entire web and do not require the `customConfig` query parameter.  
 
 ## Test your search instance with the Preview pane
 
 You can test your search instance by using the preview pane on the portal's right side to submit search queries and view the results. 
 
 1. Below the search box, select **My Instance**. You can compare the results from your search experience to Bing, by selecting **Bing**. 
-2. Select a safe search filter and which market to search (see [Query Parameters](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-custom-search-api-v7-reference#query-parameters)).
+2. Select a safe search filter and which market to search (see [Query Parameters](reference/query-parameters.md)).
 3. Enter a query and press enter or click the search icon to view the results from the current configuration. You can change your search type you perform by clicking **Web**, **Image**, or **Video** to get corresponding results. 
 
 <a name="adjustrank"></a>
@@ -153,7 +151,6 @@ If you subscribed to Custom Search at the appropriate level (see the [pricing pa
 
 ## Next steps
 
-- [Call your custom search](./search-your-custom-view.md)
-- [Configure your hosted UI experience](./hosted-ui.md)
+- [Call your custom search](search-your-custom-view.md)
+- [Configure your hosted UI experience](hosted-ui.md)
 - [Use decoration markers to highlight text](../bing-web-search/hit-highlighting.md)
-- [Page webpages](./page-webpages.md)

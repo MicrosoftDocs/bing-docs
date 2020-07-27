@@ -1,13 +1,13 @@
 ---
 title: Bing Custom Search Java client library quickstart
-titleSuffix: Azure Cognitive Services
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+titleSuffix: Bing Search Services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.topic: include
-ms.date: 02/27/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 Get started with the Bing Custom Search client library for Java. Follow these steps to install the package and try out the example code for basic tasks. The Bing Custom Search API enables you to create tailored, ad-free search experiences for topics that you care about. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples/tree/master/Search/BingCustomSearch)
@@ -25,7 +25,7 @@ Use the Bing Custom Search client library for Java to:
 * The [Gradle build tool](https://gradle.org/install/), or another dependency manager.
 * A Bing Custom Search instance. See [Quickstart: Create your first Bing Custom Search instance](../../quick-start.md) for more information.
 
-[!INCLUDE [cognitive-services-bing-custom-search-prerequisites](~/includes/cognitive-services-bing-custom-search-signup-requirements.md)]
+[!INCLUDE [bing-custom-search-prerequisites](../../../../includes/bing-custom-search-signup-requirements.md)]
 
 After you get a key from your resource, [create an environment variable](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account#configure-an-environment-variable-for-authentication) for the key, named `AZURE_BING_CUSTOM_SEARCH_API_KEY`.
 
@@ -93,9 +93,9 @@ In the class, create a `main` method and a variable for your resource's key. If 
 
 ## Object model
 
-The Bing Custom Search client is a [BingCustomSearchAPI](https://docs.microsoft.com/java/api/com.microsoft.azure.cognitiveservices.search.customsearch.bingcustomsearchapi?view=azure-java-stable) object that's created from the [BingCustomSearchManager](https://docs.microsoft.com/java/api/com.microsoft.azure.cognitiveservices.search.customsearch.bingcustomsearchmanager?view=azure-java-stable) object's [authenticate()](https://docs.microsoft.com/java/api/com.microsoft.azure.cognitiveservices.search.customsearch.bingcustomsearchmanager.authenticate) method. You can send a search request using the client's [BingCustomInstances.search()](https://docs.microsoft.com/java/api/com.microsoft.azure.cognitiveservices.search.customsearch.bingcustominstances.search?view=azure-java-stable#com_microsoft_azure_cognitiveservices_search_customsearch_BingCustomInstances_search__) method.
+The Bing Custom Search client is a `BingCustomSearchAPI` object that's created from the `BingCustomSearchManager` object's `authenticate()` method. You can send a search request using the client's `BingCustomInstances.search()` method.
 
-The API response is a [SearchResponse](https://docs.microsoft.com/java/api/com.microsoft.azure.cognitiveservices.search.customsearch.models.searchresponse?view=azure-java-stable) object containing information on the search query, and search results.
+The API response is a `SearchResponse` object containing information on the search query, and search results.
 
 ## Code examples
 
@@ -132,14 +132,8 @@ Run the application with the `run` goal:
 gradle run
 ```
 
-## Clean up resources
-
-If you want to clean up and remove a Cognitive Services subscription, you can delete the resource or resource group. Deleting the resource group also deletes any other resources associated with it.
-
-* [Portal](../../../cognitive-services-apis-create-account.md#clean-up-resources)
-* [Azure CLI](../../../cognitive-services-apis-create-account-cli.md#clean-up-resources)
 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a Custom Search web app](../../tutorials/custom-search-web-page.md)
+> [Build a Custom Search web app](../../tutorial/custom-search-web-page.md)

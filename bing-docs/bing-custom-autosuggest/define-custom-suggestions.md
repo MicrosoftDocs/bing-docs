@@ -1,16 +1,16 @@
 ---
 title: Define Custom Autosuggest suggestions - Bing Custom Search
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Custom Autosuggest returns a list of suggested search query strings that are relevant to your search experience.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: conceptual
-ms.date: 02/12/2019
-ms.author: maheshb
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Configure your custom autosuggest experience
@@ -48,7 +48,7 @@ If you include Bing suggestions, you can add a list of search query strings you 
 
 
 
-[!INCLUDE [publish or revert](./includes/publish-revert.md)]
+[!INCLUDE [publish or revert](../bing-custom-search/includes/publish-revert.md)]
 
 >[!NOTE]  
 >It may take up to 24 hours for Custom Autosuggest configuration changes to take effect.
@@ -64,7 +64,7 @@ To enable query string suggestions for your hosted UI, click **Hosted UI**. Scro
 To get suggested query strings using the Bing Custom Search API, send a `GET` request to the following endpoint.
 
 ```
-GET https://api.cognitive.microsoft.com/bingcustomsearch/v7.0/Suggestions 
+GET https://api.bing.microsoft.com/bingcustomsearch/v7.0/Suggestions 
 ```
 
 The response contains a list of `SearchAction` objects that contain the suggested query strings.
@@ -79,11 +79,10 @@ The response contains a list of `SearchAction` objects that contain the suggeste
 
 Each suggestion includes a `displayText` and `query` field. The `displayText` field contains the suggested query string that you use to populate your search box's dropdown list.
 
-If the user selects a suggested query string from the dropdown list, use the query string in the `query` field when calling the [Bing Custom Search API](overview.md).
+If the user selects a suggested query string from the dropdown list, use the query string in the `query` field when calling the [Bing Custom Search API](../bing-custom-search/overview.md).
 
 
 ## Next steps
 
-- [Get custom suggestions](./get-custom-suggestions.md)
-- [Search your custom instance](./search-your-custom-view.md)
-- [Configure and consume custom hosted UI](./hosted-ui.md)
+- [Search your custom instance](../bing-custom-search/search-your-custom-view.md)
+- [Configure and consume custom hosted UI](../bing-custom-search/hosted-ui.md)
