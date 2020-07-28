@@ -24,7 +24,7 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 
 * The [Gson library](https://github.com/google/gson)
 
-[!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
+[!INCLUDE [bing-image-search-signup-requirements](../../../includes/bing-image-search-signup-requirements.md)]
 
 ## Create and initialize a project
 

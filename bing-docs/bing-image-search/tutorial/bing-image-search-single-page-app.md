@@ -31,7 +31,7 @@ The full source code for this tutorial is available on [GitHub](https://github.c
 * The latest version of [Node.js](https://nodejs.org/).
 * The [Express.js](https://expressjs.com/) framework for Node.js. Installation instructions for the source code are available in the GitHub sample readme file.
 
-[!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
+[!INCLUDE [bing-image-search-signup-requirements](../../../includes/bing-image-search-signup-requirements.md)]
 
 ## Manage and store user subscription keys
 

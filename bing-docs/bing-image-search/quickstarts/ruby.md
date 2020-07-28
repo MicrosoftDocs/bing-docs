@@ -24,7 +24,7 @@ The source code for this sample is available on [GitHub](https://github.com/Azur
 
 * [The latest version of Ruby](https://www.ruby-lang.org/en/downloads/).
 
-[!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
+[!INCLUDE [bing-image-search-signup-requirements](../../../includes/bing-image-search-signup-requirements.md)]
 
 For more information, see [Cognitive Services Pricing - Bing Search API](https://azure.microsoft.com/pricing/details/cognitive-services/search-api/).
 
