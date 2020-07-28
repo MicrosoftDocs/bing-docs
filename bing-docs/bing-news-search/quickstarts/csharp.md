@@ -27,7 +27,7 @@ The full code to this sample can be found on [GitHub](https://github.com/Azure-S
 * The [Json.NET](https://www.newtonsoft.com/json) framework, available as a NuGet package.
 * If you're using Linux/MacOS, you can run this application by using [Mono](https://www.mono-project.com/).
 
-[!INCLUDE [bing-news-search-signup-requirements](../../includes/bing-news-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../includes/bing-news-search-signup-requirements.md)]
 
 ## Create and initialize a project
 

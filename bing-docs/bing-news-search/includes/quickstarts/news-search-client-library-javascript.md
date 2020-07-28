@@ -21,7 +21,7 @@ To set up a console application using the Bing News Search client library:
 2. Run `npm install azure-cognitiveservices-newssearch` in your development environment.
 
 
-[!INCLUDE [bing-news-search-signup-requirements](../../../../includes/cognitive-services-bing-news-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-news-search-signup-requirements.md)]
 
 ## Create and initialize the application
 
