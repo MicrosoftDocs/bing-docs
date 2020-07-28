@@ -1,20 +1,20 @@
 ---
 title: "Tutorial: Create a single-page web app - Bing Image Search API"
-titleSuffix: Azure cognitive services
+titleSuffix: Bing Search services
 description: The Bing Image Search API enables you to search the web for high-quality, relevant images. Use this tutorial to build a single-page web application that can send search queries to the API, and display the results within the webpage.
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: tutorial
-ms.date: 03/05/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Tutorial: Create a single-page app using the Bing Image Search API
 
-The Bing Image Search API enables you to search the web for high-quality, relevant images. Use this tutorial to build a single-page web application that can send search queries to the API, and display the results within the webpage. This tutorial is similar to the [corresponding tutorial](../Bing-Web-Search/tutorial-bing-web-search-single-page-app.md) for Bing Web Search.
+The Bing Image Search API enables you to search the web for high-quality, relevant images. Use this tutorial to build a single-page web application that can send search queries to the API, and display the results within the webpage. This tutorial is similar to the [corresponding tutorial](../../bing-web-search/tutorial/bing-web-search-single-page-app.md) for Bing Web Search.
 
 The tutorial app illustrates how to:
 
@@ -31,11 +31,11 @@ The full source code for this tutorial is available on [GitHub](https://github.c
 * The latest version of [Node.js](https://nodejs.org/).
 * The [Express.js](https://expressjs.com/) framework for Node.js. Installation instructions for the source code are available in the GitHub sample readme file.
 
-[!INCLUDE [cognitive-services-bing-image-search-signup-requirements](../../../includes/cognitive-services-bing-image-search-signup-requirements.md)]
+[!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
 
 ## Manage and store user subscription keys
 
-This application uses web browsers' persistent storage to store API subscription keys. If no key is stored, the webpage will prompt the user for their key and store it for later use. If the key is later rejected by the API, The app will remove it from storage. This sample uses the global endpoint. You can also use the [custom subdomain](../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+This application uses web browsers' persistent storage to store API subscription keys. If no key is stored, the webpage will prompt the user for their key and store it for later use. If the key is later rejected by the API, The app will remove it from storage. 
 
 
 Define `storeValue` and `retrieveValue` functions to use either the `localStorage` object (if the browser supports it) or a cookie.
@@ -45,7 +45,7 @@ Define `storeValue` and `retrieveValue` functions to use either the `localStorag
 API_KEY_COOKIE   = "bing-search-api-key";
 CLIENT_ID_COOKIE = "bing-search-client-id";
 // The Bing Image Search API endpoint
-BING_ENDPOINT = "https://api.cognitive.microsoft.com/bing/v7.0/images/search";
+BING_ENDPOINT = "https://api.bing.microsoft.com/bing/v7.0/images/search";
 
 try { //Try to use localStorage first
     localStorage.getItem;   
@@ -390,7 +390,7 @@ npm install -g cors-proxy-server
 ```
 
 Next, change the Bing Web Search endpoint in the HTML file to:\
-`http://localhost:9090/https://api.cognitive.microsoft.com/bing/v7.0/search`
+`http://localhost:9090/https://api.bing.microsoft.com/bing/v7.0/search`
 
 Finally, start the CORS proxy with the following command:
 
@@ -403,8 +403,8 @@ Leave the command window open while you use the tutorial app; closing the window
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Extract Image details using the Bing Image Search API](tutorial-image-post.md)
+> [Extract Image details using the Bing Visual Search API](../../bing-visual-search/overview.md)
 
 ## See also
 
-* [Bing Image Search API reference](//docs.microsoft.com/rest/api/cognitiveservices/bing-images-api-v7-reference)
+* [Bing Image Search API reference](../reference/endpoints.md)

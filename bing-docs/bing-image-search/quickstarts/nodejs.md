@@ -1,17 +1,15 @@
 ---
 title: "Quickstart: Search for images using the Bing Image Search REST API and Node.js"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send image search requests to the Bing Image Search REST API using JavaScript, and JSON responses.
-services: cognitive-services
-documentationcenter: ''
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: quickstart
-ms.date: 05/08/2020
-ms.author: aahi
-ms.custom: seodec2018
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Search for images using the Bing Image Search REST API and Node.js
@@ -26,7 +24,7 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 
 * The [JavaScript Request Library](https://github.com/request/request).
 
-[!INCLUDE [cognitive-services-bing-image-search-signup-requirements](../../../../includes/cognitive-services-bing-image-search-signup-requirements.md)]
+[!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
 
 For more information, see [Cognitive Services Pricing - Bing Search API](https://azure.microsoft.com/pricing/details/cognitive-services/search-api/).
 
@@ -39,11 +37,11 @@ For more information, see [Cognitive Services Pricing - Bing Search API](https:/
     let https = require('https');
     ```
 
-2. Create variables for the API endpoint, image API search path, your subscription key, and search term. For `host`, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. Create variables for the API endpoint, image API search path, your subscription key, and search term. 
 
     ```javascript
     let subscriptionKey = 'enter key here';
-    let host = 'api.cognitive.microsoft.com';
+    let host = 'api.bing.microsoft.com';
     let path = '/bing/v7.0/images/search';
     let term = 'tropical ocean';
     ```
@@ -151,12 +149,9 @@ Responses from the Bing Image Search API are returned as JSON. This sample respo
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page app](../tutorial-bing-image-search-single-page-app.md)
+> [Bing Image Search single-page app tutorial](../../tutorial/bing-image-search-single-page-app)
 
 ## See also
 
-* [What is the Bing Image Search API?](https://docs.microsoft.com/azure/cognitive-services/bing-image-search/overview)  
-* [Try an online interactive demo](https://azure.microsoft.com/services/cognitive-services/bing-image-search-api/)
-* [Pricing details for the Bing Search APIs](https://azure.microsoft.com/pricing/details/cognitive-services/search-api/) 
-* [Azure Cognitive Services documentation](https://docs.microsoft.com/azure/cognitive-services)
-* [Bing Image Search API reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference)
+* [What is Bing Image Search?](../../overview.md)  
+* [Bing Image Search API reference](../../reference/endpoints.md)

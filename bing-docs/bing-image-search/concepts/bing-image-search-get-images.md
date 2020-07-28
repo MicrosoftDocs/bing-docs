@@ -1,16 +1,15 @@
 ---
 title: Get images from the web - Bing Image Search API
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use the Bing Image Search API to search for and get relevant images from the web.
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.assetid: AB1B9898-C94A-4B59-91A1-8623C94BA3D4
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: conceptual
-ms.date: 03/04/2019
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Get images from the web with the Bing Image Search API
@@ -18,7 +17,7 @@ ms.author: aahi
 When you use the Bing Image Search REST API, you can get images from the web that are related to your search term by sending the following GET request:
 
 ```http
-GET https://api.cognitive.microsoft.com/bing/v7.0/images/search?q=sailing+dinghies&mkt=en-us HTTP/1.1
+GET https://api.bing.microsoft.com/bing/v7.0/images/search?q=sailing+dinghies&mkt=en-us HTTP/1.1
 Ocp-Apim-Subscription-Key: 123456789ABCDE
 X-MSEdge-ClientIP: 999.999.999.999
 X-Search-Location: lat:47.60357;long:-122.3295;re:100
@@ -26,7 +25,7 @@ X-MSEdge-ClientID: <blobFromPriorResponseGoesHere>
 Host: api.cognitive.microsoft.com
 ```
 
-Use the [q](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#query) query parameter for your url-encoded search term. For example, if you enter *sailing dinghies*, set `q` to `sailing+dinghies` or `sailing%20dinghies`.
+Use the [q](../reference/query-parameters.md#query) query parameter for your url-encoded search term. For example, if you enter *sailing dinghies*, set `q` to `sailing+dinghies` or `sailing%20dinghies`.
 
 > [!IMPORTANT]
 > * All requests must be made from a server, and not from a client.
@@ -34,34 +33,34 @@ Use the [q](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bin
 
 ## Get images from a specific web domain
 
-To get images from a specific domain, use the [site:](https://msdn.microsoft.com/library/ff795613.aspx) query operator.
+To get images from a specific domain, use the [site:](https://help.bing.microsoft.com/#apex/18/en-US/10001/-1) query operator.
 
 ```http
-GET https://api.cognitive.microsoft.com/bing/v7.0/images/search?q=sailing+dinghies+site:contososailing.com&mkt=en-us HTTP/1.1
+GET https://api.bing.microsoft.com/bing/v7.0/images/search?q=sailing+dinghies+site:contososailing.com&mkt=en-us HTTP/1.1
 ```
 
 > [!NOTE]
-> Responses to queries using the `site:` operator might include adult content regardless of the [safeSearch](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#safesearch) setting. Only use `site:` if you're aware of the content on the domain.
+> Responses to queries using the `site:` operator might include adult content regardless of the [safeSearch](../reference/query-parameters.md#safesearch) setting. Only use `site:` if you're aware of the content on the domain.
 
 ## Filter images
 
  By default, the Image Search API returns all images that are relevant to the query. If you want to filter the images that Bing returns (for example, to return only images with a transparent background or specific size), use the following query parameters:
 
-* [aspect](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#aspect)—Filter images by aspect ratio (for example, standard or wide screen images).
-* [color](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#color)—Filter images by dominant color or black and white.
-* [freshness](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#freshness)—Filter images by age (for example, images discovered by Bing in the past week).
-* [height](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#height), [width](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#width)—Filter images by width and height.
-* [imageContent](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#imagecontent)—Filter images by content (for example, images that show only a person's face).
-* [imageType](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#imagetype)—Filter images by type (for example, clip art, animated GIFs, or transparent backgrounds).
-* [license](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#license)—Filter images by the type of license associated with the site.
-* [size](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#size)—Filter images by size, such as small images up to 200x200 pixels.
+* [aspect](../reference/query-parameters.md#aspect)—Filter images by aspect ratio (for example, standard or wide screen images).
+* [color](../reference/query-parameters.md#color)—Filter images by dominant color or black and white.
+* [freshness](../reference/query-parameters.md#freshness)—Filter images by age (for example, images discovered by Bing in the past week).
+* [height](../reference/query-parameters.md#height), [width](../reference/query-parameters.md#width)—Filter images by width and height.
+* [imageContent](../reference/query-parameters.md#imagecontent)—Filter images by content (for example, images that show only a person's face).
+* [imageType](../reference/query-parameters.md#imagetype)—Filter images by type (for example, clip art, animated GIFs, or transparent backgrounds).
+* [license](../reference/query-parameters.md#license)—Filter images by the type of license associated with the site.
+* [size](../reference/query-parameters.md#size)—Filter images by size, such as small images up to 200x200 pixels.
 
-To get images from a specific domain, use the [site:](https://msdn.microsoft.com/library/ff795613.aspx) query operator.
+To get images from a specific domain, use the [site:](https://help.bing.microsoft.com/#apex/18/en-US/10001/-1) query operator.
 
 The following example shows how to get small images from ContosoSailing.com that Bing discovered in the past week.  
 
 ```http
-GET https://api.cognitive.microsoft.com/bing/v7.0/images/search?q=sailing+dinghies+site:contososailing.com&size=small&freshness=week&mkt=en-us HTTP/1.1  
+GET https://api.bing.microsoft.com/bing/v7.0/images/search?q=sailing+dinghies+site:contososailing.com&size=small&freshness=week&mkt=en-us HTTP/1.1  
 Ocp-Apim-Subscription-Key: 123456789ABCDE  
 X-MSEdge-ClientIP: 999.999.999.999  
 X-Search-Location: lat:47.60357;long:-122.3295;re:100  
@@ -71,7 +70,7 @@ Host: api.cognitive.microsoft.com
 
 ## Bing Image Search response format
 
-The response message from Bing contains an [Images](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#images) answer that contains a list of images that Cognitive Services determined to be relevant to the query. Each [Image](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#image) object in the list includes the following information about the image: the URL, its size, its dimensions, its encoding format, a URL to a thumbnail of the image, and the thumbnail's dimensions.
+The response message from Bing contains an [Images](../reference/response-objects.md#images) answer that contains a list of images that Cognitive Services determined to be relevant to the query. Each [Image](../reference/response-objects.md#image) object in the list includes the following information about the image: the URL, its size, its dimensions, its encoding format, a URL to a thumbnail of the image, and the thumbnail's dimensions.
 
 > [!NOTE]
 > * Images must be displayed in the order provided in the response.
@@ -108,4 +107,4 @@ When you call the Bing Image Search API, Bing returns a list of results. The lis
 
 ## Next steps
 
-If you haven't tried the Bing Image Search API before, try a [quickstart](../quickstarts/csharp.md). If you're looking for something more complex, try the tutorial to create a [single-page web app](../tutorial-bing-image-search-single-page-app.md).
+If you haven't tried the Bing Image Search API before, try a [quickstart](../quickstarts/csharp.md). If you're looking for something more complex, try the tutorial to create a [single-page web app](../tutorial/bing-image-search-single-page-app.md).

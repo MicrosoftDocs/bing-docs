@@ -1,15 +1,14 @@
 ---
 title: Upgrade from Bing Image Search API v5 to v7
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: This upgrade guide describes changes between version 5 and version 7 of the Bing Image Search API. Use this guide to help you identify the parts of your application that you need to update to use version 7.
-services: cognitive-services
+services: bing-search-services
 author: swhite-msft
-manager: nitinme
-ms.assetid: 7F78B91F-F13B-40A4-B8A7-770FDB793F0F
-ms.service: cognitive-services
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: conceptual
-ms.date: 02/12/2019
+ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
@@ -21,7 +20,7 @@ This upgrade guide identifies the changes between version 5 and version 7 of the
 
 ### Endpoints
 
-- The endpoint's version number changed from v5 to v7. For example, https:\//api.cognitive.microsoft.com/bing/\*\*v7.0**/images/search.
+- The endpoint's version number changed from v5 to v7. For example, https:\//api.bing.microsoft.com/bing/\*\*v7.0**/images/search.
 
 ### Error response objects and error codes
 
@@ -66,86 +65,39 @@ InsufficientScope|InsufficientAuthorization
 Blocked|InvalidRequest.Blocked
 
 
+### Use Bing Visual Search API to get image insights
+
+Use [Bing Visual Search API](../bing-visual-search/overview.md) instead of the `/images/search` endpoint to get insights about images.
+
 
 ### Query parameters
 
-- Renamed the `modulesRequested` query parameter to [modules](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference).  
-
-- Renamed the Annotations to Tags. See [modules](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference) query parameter to Tags.  
-
-- Changed the list of supported markets of the ShoppingSources filter value to en-US only. See [imageType](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#imagetype).  
+- Changed the list of supported markets of the Shopping filter value to en-US only. See [imageType](reference/query-parameters.md#imagetype).  
 
 
-### Image insights changes
+### Response objects
 
-- Renamed the `annotations` field of [ImagesInsights](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#imageinsightsresponse) to `imageTags`.  
+- Renamed the `insightsSourcesSummary` field of the [Image](reference/response-objects.md#image) object to `insightsMetadata`.  
 
-- Renamed the `AnnotationModule` object to [ImageTagsModule](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#imagetagsmodule).  
+- Renamed the `InsightsSourcesSummary` object to [InsightsMetadata](reference/response-objects.md#insightsmetadata).  
 
-- Renamed the `Annotation` object to [Tag](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#tag), and removed the `confidence` field.  
+- Removed the `displayShoppingSourcesBadges` and `displayRecipeSourcesBadges` fields from [Images](reference/response-objects.md#images).  
 
-- Renamed the `insightsSourcesSummary` field of the [Image](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#image) object to `insightsMetadata`.  
-
-- Renamed the `InsightsSourcesSummary` object to [InsightsMetadata](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#insightsmetadata).  
-
-- Added the `https://api.cognitive.microsoft.com/bing/v7.0/images/details` endpoint. Use this endpoint to request image insights instead of the /images/search endpoint. See [Image Insights](./image-insights.md).
-
-- The following query parameters are now valid only with the `/images/details` endpoint.  
-
-    -   [insightsToken](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#insightstoken)  
-    -   [modules](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference)  
-    -   [imgUrl](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#imgurl)  
-    -   [cab](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#cab)  
-    -   [cal](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#cal)  
-    -   [car](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#car)  
-    -   [cat](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#cat)  
-    -   [ct](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#ct)  
-
-- Renamed the `ImageInsightsResponse` object to [ImageInsights](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#imageinsights).  
-
-- Changed the data types of the following fields in the [ImageInsights](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#imageinsights) object.  
-
-    -   Changed the type of the `relatedCollections` field from `ImageGallery[]` to [RelatedCollectionsModule](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#relatedcollectionsmodule).  
-
-    -   Changed the type of the `pagesIncluding` field from `Image[]` to [ImagesModule](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#imagesmodule).  
-
-    -   Changed the type of the `relatedSearches` field from `Query[]` to [RelatedSearchesModule](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#relatedsearchesmodule).  
-
-    -   Changed the type of the `recipes` field from `Recipe[]` to [RecipesModule](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#recipesmodule).  
-
-    -   Changed the type of the `visuallySimilarImages` field from `Image[]` to [ImagesModule](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#imagesmodule).  
-
-    -   Changed the type of the `visuallySimilarProducts` field from `ProductSummaryImage[]` to [ImagesModule](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#imagesmodule).  
-
-    -   Removed the `ProductSummaryImage` object and moved the product-related fields into the [Image](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#image) object. The `Image` object includes the product-related fields only when the image is included as part of visually similar products in an image insight response.  
-
-    -   Changed the type of the `recognizedEntityGroups` field from `RecognizedEntityGroup[]` to [RecognizedEntitiesModule](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#recognizedentitiesmodule).  
-
--   Renamed the `categoryClassification` field of [ImageInsights](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#imageinsightsresponse) to `annotations`, and changed its type to `AnnotationsModule`.  
-
-### Images answer
-
--   Removed the displayShoppingSourcesBadges and displayRecipeSourcesBadges fields from [Images](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#images).  
-
--   Renamed the `nextOffsetAddCount` field of [Images](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#images) to `nextOffset`. The way you use the offset has also changed. Previously, you set the [offset](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#offset) query parameter to the `nextOffsetAddCount` value plus the previous offset value plus the number of images in the result. Now, you set `offset` to the `nextOffset` value.  
+- Renamed the `nextOffsetAddCount` field of [Images](reference/response-objects.md#images) to `nextOffset`. The way you use the offset has also changed. Previously, you set the [offset](reference/query-parameters.md#offset) query parameter to the `nextOffsetAddCount` value plus the previous offset value plus the number of images in the result. Now, you set `offset` to the `nextOffset` value.  
 
 
 ## Non-breaking changes
 
 ### Query parameters
 
-- Added Transparent as a possible [imageType](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#imagetype) filter value. The Transparent filter returns only images with a transparent background.
+- Added Transparent as a possible [imageType](reference/query-parameters.md#imagetype) filter value. The Transparent filter returns only images with a transparent background.
 
-- Added the Any as a possible [license](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#license) filter value. The Any filter returns only images that are under license.
+- Added the Any as a possible [license](reference/query-parameters.md#license) filter value. The Any filter returns only images that are under license.
 
-- Added the [maxFileSize](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#maxfilesize) and [minFileSize](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#minfilesize) query parameters. Use these filters to return images within a range of file sizes.  
+- Added the [maxFileSize](reference/query-parameters.md#maxfilesize) and [minFileSize](reference/query-parameters.md#minfilesize) query parameters. Use these filters to return images within a range of file sizes.  
 
-- Added the [maxHeight](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#maxheight), [minHeight](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#minheight), [maxWidth](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#maxwidth), [minWidth](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#minwidth) query parameters. Use these filters to return images within a range of heights and widths.  
+- Added the [maxHeight](reference/query-parameters.md#maxheight), [minHeight](reference/query-parameters.md#minheight), [maxWidth](reference/query-parameters.md#maxwidth), [minWidth](reference/query-parameters.md#minwidth) query parameters. Use these filters to return images within a range of heights and widths.  
 
 ### Object changes
 
-- Added the `description` and `lastUpdated` fields to the [Offer](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#offer) object.  
-
-- Added the `name` field to the [ImageGallery](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#imagegallery) object.  
-
-- Added `similarTerms` to the [Images](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#images) object. This field contains a list of terms that are similar in meaning to the user's query string.  
+- Added `similarTerms` to the [Images](reference/response-objects.md#images) object. This field contains a list of terms that are similar in meaning to the user's query string.  

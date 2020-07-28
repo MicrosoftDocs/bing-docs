@@ -1,18 +1,17 @@
 ---
 title: "Quickstart: Search for images using the Bing Image Search REST API and Ruby"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send image search requests to the Bing Image Search REST API using Ruby, and receive JSON responses.
-services: cognitive-services
-documentationcenter: ''
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: quickstart
-ms.date: 05/08/2020
-ms.author: aahi
-ms.custom: seodec2018
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
+
 # Quickstart: Search for images using the Bing Image Search REST API and Ruby
 
 Use this quickstart to make your first call to the Bing Image Search API and receive a JSON response. This simple Ruby application sends a search query to the API and displays the raw results.
@@ -25,7 +24,7 @@ The source code for this sample is available on [GitHub](https://github.com/Azur
 
 * [The latest version of Ruby](https://www.ruby-lang.org/en/downloads/).
 
-[!INCLUDE [cognitive-services-bing-image-search-signup-requirements](../../../../includes/cognitive-services-bing-image-search-signup-requirements.md)]
+[!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
 
 For more information, see [Cognitive Services Pricing - Bing Search API](https://azure.microsoft.com/pricing/details/cognitive-services/search-api/).
 
@@ -39,10 +38,10 @@ For more information, see [Cognitive Services Pricing - Bing Search API](https:/
     require 'json'
     ```
 
-2. Create variables for the API endpoint, image API search path, your subscription key, and search term. For `uri`, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. Create variables for the API endpoint, image API search path, your subscription key, and search term. 
 
     ```ruby
-    uri  = "https://api.cognitive.microsoft.com"
+    uri  = "https://api.bing.microsoft.com"
     path = "/bing/v7.0/images/search"
     term = "puppies"
     ```
@@ -135,11 +134,9 @@ Responses from the Bing Image Search API are returned as JSON. This sample respo
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Image Search single-page app tutorial](../tutorial-bing-image-search-single-page-app.md)
+> [Bing Image Search single-page app tutorial](../../tutorial/bing-image-search-single-page-app)
 
 ## See also
 
-* [What is the Bing Image Search API?](https://docs.microsoft.com/azure/cognitive-services/bing-image-search/overview)  
-* [Try an online interactive demo](https://azure.microsoft.com/services/cognitive-services/bing-image-search-api/)   
-* [Azure Cognitive Services documentation](https://docs.microsoft.com/azure/cognitive-services)
-* [Bing Image Search API reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference)
+* [What is Bing Image Search?](../../overview.md)  
+* [Bing Image Search API reference](../../reference/endpoints.md)

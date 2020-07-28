@@ -1,16 +1,15 @@
 ---
 title: "Quickstart: Search for images using the Bing Image Search REST API and Python"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send image search requests to the Bing Image Search REST API using Python, and receive JSON responses.
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: quickstart
-ms.date: 05/08/2020
-ms.author: aahi
-ms.custom: seodec2018, tracking-python
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Search for images using the Bing Image Search REST API and Python
@@ -31,11 +30,11 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 * The [Python Imaging Library (PIL)](https://pillow.readthedocs.io/en/stable/index.html)
 * [matplotlib](https://matplotlib.org/) 
 
-[!INCLUDE [cognitive-services-bing-image-search-signup-requirements](../../../../includes/cognitive-services-bing-image-search-signup-requirements.md)]
+[!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
 
 ## Create and initialize the application
 
-1. Create a new Python file in your favorite IDE or editor, and import the following modules. Create a variable for your subscription key, search endpoint, and search term. For `search_url`, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+1. Create a new Python file in your favorite IDE or editor, and import the following modules. Create a variable for your subscription key, search endpoint, and search term. 
 
     ```python
     import requests
@@ -44,7 +43,7 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
     from io import BytesIO
     
     subscription_key = "your-subscription-key"
-    search_url = "https://api.cognitive.microsoft.com/bing/v7.0/images/search"
+    search_url = "https://api.bing.microsoft.com/bing/v7.0/images/search"
     search_term = "puppies"
     ```
 
@@ -143,9 +142,9 @@ Responses from the Bing Image Search API are returned as JSON. This sample respo
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Image Search single-page app tutorial](../tutorial-bing-image-search-single-page-app.md)
+> [Bing Image Search single-page app tutorial](../../tutorial/bing-image-search-single-page-app)
 
-* [What is the Bing Image Search API?](../overview.md)  
-* [Pricing details for the Bing Search APIs](https://azure.microsoft.com/pricing/details/cognitive-services/search-api/) 
-* [Azure Cognitive Services documentation](https://docs.microsoft.com/azure/cognitive-services)
-* [Bing Image Search API reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference)
+## See also
+
+* [What is Bing Image Search?](../../overview.md)  
+* [Bing Image Search API reference](../../reference/endpoints.md)

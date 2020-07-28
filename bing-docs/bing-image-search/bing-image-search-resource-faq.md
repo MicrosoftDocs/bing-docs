@@ -1,15 +1,15 @@
 ---
 title: Frequently asked questions (FAQ) - Bing Image Search API
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Find answers to commonly asked questions about concepts, code, and scenarios related to the Bing Image Search API.
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: conceptual
-ms.date: 03/04/2019
-ms.author: aahi
+ms.date: 07/15/2019
+ms.author: scottwhi
 ---
 
 # Frequently asked questions (FAQ) about the Bing Image Search API
@@ -32,14 +32,14 @@ However, when you call the Bing Image Search API from JavaScript, your browser's
 
 To gain access to the headers, you can make the Bing Image Search API request through a CORS proxy. The response from such a proxy has an `Access-Control-Expose-Headers` header that whitelists response headers and makes them available to JavaScript.
 
-It's easy to install a CORS proxy to allow our [tutorial app](tutorial-bing-image-search-single-page-app.md) to access the optional client headers. First, if you don't already have it, [install Node.js](https://nodejs.org/en/download/). Then enter the following command at a command prompt.
+It's easy to install a CORS proxy to allow our [tutorial app](tutorial/bing-image-search-single-page-app.md) to access the optional client headers. First, if you don't already have it, [install Node.js](https://nodejs.org/en/download/). Then enter the following command at a command prompt.
 
 ```console
 npm install -g cors-proxy-server
 ```
 
 Next, change the Bing Image Search API endpoint in the HTML file to:\
-`http://localhost:9090/https://api.cognitive.microsoft.com/bing/v7.0/search`
+`http://localhost:9090/https://api.bing.microsoft.com/bing/v7.0/search`
 
 Finally, start the CORS proxy with the following command:
 
@@ -57,9 +57,6 @@ In a production environment, however, you should host a server-side script on th
 
 This approach also protects your API key from exposure to the public, since only the server-side script needs it. The script can use another method (such as the HTTP referrer) to make sure the request is authorized.
 
-## Next steps
-
-Is your question about a missing feature or functionality? Consider requesting or voting for it on our [User Voice web site](https://cognitive.uservoice.com/forums/555907-bing-search).
 
 ## See also
 
