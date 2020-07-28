@@ -1,17 +1,16 @@
 ---
 title: "Quickstart: Perform a news search with Ruby and the Bing News Search REST API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send a request to the Bing News Search REST API using Ruby, and receive a JSON response.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
-ms.custom: seodec2018
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Perform a news search using Ruby and the Bing News Search REST API
@@ -26,7 +25,7 @@ The source code for this sample is available on [GitHub](https://github.com/Azur
 
 * Ruby [2.4 or later](https://www.ruby-lang.org/en/downloads/)
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](../../../includes/cognitive-services-bing-news-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../includes/bing-news-search-signup-requirements.md)]
 
 ## Create and initialize the application
 
@@ -38,11 +37,11 @@ The source code for this sample is available on [GitHub](https://github.com/Azur
     require 'json'
     ```
 
-2. Create variables for the API endpoint, news search URL, your subscription key, and search term. You can use the global endpoint in the following code, or use the [custom subdomain](../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. Create variables for the API endpoint, news search URL, your subscription key, and search term.
 
     ```ruby
     accessKey = "enter key here"
-    uri  = "https://api.cognitive.microsoft.com"
+    uri  = "https://api.bing.microsoft.com"
     path = "/bing/v7.0/news/search"
     term = "Microsoft"
     ```
@@ -175,4 +174,4 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](tutorial-bing-news-search-single-page-app.md)
+> [Create a single-page web app](../tutorial/bing-news-search-single-page-app.md)

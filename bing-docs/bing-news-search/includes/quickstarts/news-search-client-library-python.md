@@ -1,13 +1,13 @@
 ---
 title: Bing News Search Python client library quickstart 
-titleSuffix: Azure Cognitive Services
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+titleSuffix: Bing Search Services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.topic: include
-ms.date: 03/12/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 Use this quickstart to begin searching for news with the Bing News Search client library for Python. While Bing News Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/blob/master/samples/search/news_search_samples.py).
@@ -28,7 +28,7 @@ You can install the Bing News Search client library dependencies with this comma
 python -m pip install azure-cognitiveservices-search-newssearch
 ```
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](~/includes/cognitive-services-bing-news-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-news-search-signup-requirements.md)]
 
 ## Create and initialize the application
 
@@ -78,4 +78,4 @@ else:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../../tutorial-bing-news-search-single-page-app.md)
+> [Create a single-page web app](../../tutorial/bing-news-search-single-page-app.md)

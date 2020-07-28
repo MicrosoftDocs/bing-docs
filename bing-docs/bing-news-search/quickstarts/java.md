@@ -1,17 +1,16 @@
 ---
 title: "Quickstart: Perform a web search with Java - Bing Web Search REST API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send a request to the Bing News Search REST API using Java, and receive a JSON response.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
-ms.custom: seodec2018
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Perform a news search using Java and the Bing News Search REST API
@@ -28,7 +27,7 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 * The [Gson library](https://github.com/google/gson).
 
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](../../../includes/cognitive-services-bing-news-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../includes/bing-news-search-signup-requirements.md)]
 
 ## Create and initialize a project
 
@@ -45,12 +44,12 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
     import com.google.gson.JsonParser;
     ```
 
-2. Create a new class. Add variables for the API endpoint, your subscription key, and search term. You can use the global endpoint in the following code, or use the [custom subdomain](../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. Create a new class. Add variables for the API endpoint, your subscription key, and search term. 
 
     ```java
     public static SearchResults SearchNews (String searchQuery) throws Exception {
         static String subscriptionKey = "enter key here";
-        static String host = "https://api.cognitive.microsoft.com";
+        static String host = "https://api.bing.microsoft.com";
         static String path = "/bing/v7.0/news/search";
         static String searchTerm = "Microsoft";
     //...
@@ -223,4 +222,4 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](tutorial-bing-news-search-single-page-app.md)
+> [Create a single-page web app](../tutorial/bing-news-search-single-page-app.md)

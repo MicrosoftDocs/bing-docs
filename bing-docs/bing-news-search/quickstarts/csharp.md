@@ -1,14 +1,14 @@
 ---
 title: "Quickstart: Perform a news search with C# - Bing News Search REST API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send a request to the Bing News Search REST API using C#, and receive a JSON response.
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: quickstart
-ms.date: 05/22/2020
+ms.date: 07/15/2020
 ms.author: aahi
 ms.custom: seodec2018
 ---
@@ -27,7 +27,7 @@ The full code to this sample can be found on [GitHub](https://github.com/Azure-S
 * The [Json.NET](https://www.newtonsoft.com/json) framework, available as a NuGet package.
 * If you're using Linux/MacOS, you can run this application by using [Mono](https://www.mono-project.com/).
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](../../../includes/cognitive-services-bing-news-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../includes/bing-news-search-signup-requirements.md)]
 
 ## Create and initialize a project
 
@@ -41,11 +41,11 @@ The full code to this sample can be found on [GitHub](https://github.com/Azure-S
     using System.Collections.Generic;
     ```
 
-2. Create variables for the API endpoint, your subscription key, and search term. You can use the global endpoint in the following code, or use the [custom subdomain](../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. Create variables for the API endpoint, your subscription key, and search term. 
 
     ```csharp
     const string accessKey = "enter key here";
-    const string uriBase = "https://api.cognitive.microsoft.com/bing/v7.0/news/search";
+    const string uriBase = "https://api.bing.microsoft.com/bing/v7.0/news/search";
     const string searchTerm = "Microsoft";
     ```
    
@@ -213,4 +213,4 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](tutorial-bing-news-search-single-page-app.md)
+> [Create a single-page web app](../tutorial/bing-news-search-single-page-app.md)

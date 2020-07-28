@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Get news using Bing News Search REST API and Go"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: This quickstart uses the Go language to call the Bing News Search API. The results include names and URLs of news sources identified by the query string.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Get news results using the Bing News Search REST API and Go
@@ -21,7 +21,7 @@ This quickstart uses the Go language to call the Bing News Search API. The resul
 * Install the [Go binaries](https://golang.org/dl/).
 * Install the go-spew library to use a deep pretty printer to display the results. Use this command to install the library: `$ go get -u https://github.com/davecgh/go-spew`.
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](../../../includes/cognitive-services-bing-news-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../includes/bing-news-search-signup-requirements.md)]
 
 ## Create a project and import libraries
 
@@ -82,12 +82,12 @@ type NewsAnswer struct {
 
 ## Declare the main function and define variables  
 
-The following code declares the main function and assigns the required variables. Confirm that the endpoint is correct, and then replace the `token` value with a valid subscription key from your Azure account. You can use the global endpoint in the following code, or use the [custom subdomain](../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+The following code declares the main function and assigns the required variables. Confirm that the endpoint is correct, and then replace the `token` value with a valid subscription key from your Azure account. 
 
 ```go
 func main() {
     // Verify the endpoint URI and replace the token string with a valid subscription key.  
-    const endpoint = "https://api.cognitive.microsoft.com/bing/v7.0/news/search"
+    const endpoint = "https://api.bing.microsoft.com/bing/v7.0/news/search"
     token := "YOUR-ACCESS-KEY"
     searchTerm := "Microsoft Cognitive Services"
 
@@ -201,4 +201,4 @@ The following output contains the name and URL of each result:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [What is Bing News Search](search-the-web.md)
+> [Create a single-page web app](../tutorial/bing-news-search-single-page-app.md)

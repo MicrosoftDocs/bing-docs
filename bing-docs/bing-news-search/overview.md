@@ -1,23 +1,23 @@
 ---
 title: What is the Bing News Search API?
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Learn how to use the Bing News Search API to search the web for current headlines across categories, including headlines and trending topics.
-services: cognitive-services
+services: bing-search-services
 author: swhite-msft
-manager: nitinme
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: overview
-ms.date: 12/18/2019
+ms.date: 07/15/2020
 ms.author: scottwhi
-ms.custom: seodec2018
 ---
+
 # What is the Bing News Search API?
 
 The Bing News Search API makes it easy to integrate Bing's cognitive news searching capabilities into your applications. The API provides a similar experience to [Bing News](https://www.bing.com/news), letting you send search queries and receive relevant news articles.
 
-Be aware that the Bing News Search API provides news search results only. Use the [Bing Web Search API](../bing-web-search/search-the-web.md), [Video Search API](../bing-video-search/search-the-web.md) and [Image Search API](../bing-image-search/overview.md) for other types of web content.
+Be aware that the Bing News Search API provides news search results only. Use the [Bing Web Search API](../bing-web-search/overview.md), [Video Search API](../bing-video-search/overview.md) and [Image Search API](../bing-image-search/overview.md) for other types of web content.
 
 ## Bing News Search API features
 
@@ -25,7 +25,6 @@ While the Bing News Search API primarily finds and returns relevant news article
 
 |Feature  |Description  |
 |---------|---------|
-|[Suggesting and using search terms](concepts/search-for-news.md#suggest-and-use-search-terms)     | Improve your search experience by using the [Bing Autosuggest API](../bing-autosuggest/get-suggested-search-terms.md) to display suggested search terms as they're typed.         |
 |[Get general news](concepts/search-for-news.md#get-general-news)     | Find news by sending a search query to the Bing News Search API, and getting back a list of relevant news articles.           |
 |[Today's top news](concepts/search-for-news.md#get-todays-top-news)      | Get the top news stories for the day, across all categories.       |
 |[News by category](concepts/search-for-news.md)     | Search for news in specific categories.        | 
@@ -41,12 +40,9 @@ The Bing News Search API is a RESTful web service, making it easy to call from a
 
 ## Next steps
 
-First, try the [interactive demo](https://azure.microsoft.com/services/cognitive-services/bing-news-search-api/) for the Bing News Search API. This demo shows how you can quickly customize a search query and find news on the web.
-
-To quickly get started with your first API request, try a quickstart for the [REST API](quickstart.md) or one of the [SDKs](sdk.md).
+To quickly get started with your first API request, try a quickstart for the [REST API](quickstart/csharp.md) or one of the [SDKs](quickstarts/client-libraries.md).
 
 ## See also
 
-* The [Bing News Search API v7](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference) reference section contains definitions and information on the endpoints, headers, API responses, and query parameters that you can use to request image-based search results.
-* The [Bing Use and Display Requirements](./useanddisplayrequirements.md) specify acceptable uses of the content and information gained through the Bing search APIs.
-* Visit the [Bing Search API hub page](../bing-web-search/search-the-web.md) to explore the other available APIs.
+* The [Bing News Search API v7](reference/endpoints.md) reference section contains definitions and information on the endpoints, headers, API responses, and query parameters that you can use to request image-based search results.
+* The [Bing Use and Display Requirements](../bing-web-search/use-display-requirements.md) specify acceptable uses of the content and information gained through the Bing search APIs.

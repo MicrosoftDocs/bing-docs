@@ -1,17 +1,17 @@
 ---
 title: "Quickstart: Perform a news search with Node.js - Bing News Search REST API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send a request to the Bing News Search REST API using Node.js, and receive a JSON response.
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
-ms.custom: seodec2018
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
+
 # Quickstart: Perform a news search using Node.js and the Bing News Search REST API
 
 Use this quickstart to make your first call to the Bing News Search API. This simple JavaScript application sends a search query to the API and displays the JSON response.
@@ -25,7 +25,7 @@ The source code for this sample is available on [GitHub](https://github.com/Azur
 * The latest version of [Node.js](https://nodejs.org/en/download/).
 * The [JavaScript Request Library](https://github.com/request/request).
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](../../../includes/cognitive-services-bing-news-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../includes/bing-news-search-signup-requirements.md)]
 
 ## Create and initialize the application
 
@@ -36,11 +36,11 @@ The source code for this sample is available on [GitHub](https://github.com/Azur
     let https = require('https');
     ```
 
-2. Create variables for the API endpoint, news API search path, your subscription key, and search term. You can use the global endpoint in the following code, or use the [custom subdomain](../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource. 
+2. Create variables for the API endpoint, news API search path, your subscription key, and search term. 
 
     ```javascript
     let subscriptionKey = 'enter key here';
-    let host = 'api.cognitive.microsoft.com';
+    let host = 'api.bing.microsoft.com';
     let path = '/bing/v7.0/news/search';
     let term = 'Microsoft';
     ```
@@ -180,4 +180,4 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](tutorial-bing-news-search-single-page-app.md)
+> [Create a single-page web app](../tutorial/bing-news-search-single-page-app.md)

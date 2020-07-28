@@ -1,17 +1,17 @@
 ---
 title: "Tutorial: Create a single-page web app using the Bing News Search API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this tutorial to build a single-page web application that can send search queries to the Bing News API, and display the results within the webpage.
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: tutorial
-ms.date: 06/23/2020
-ms.author: aahi
-ms.custom: seodec2018
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
+
 # Tutorial: Create a single-page web app
 
 The Bing News Search API lets you search the Web and obtain results of the news type relevant to a search query. In this tutorial, we build a single-page Web application that uses the Bing News Search API to display search results on the page. The application includes HTML, CSS, and JavaScript components. The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/Tutorials/BingNewsSearchApp.html).
@@ -63,7 +63,7 @@ The HTML also contains the divisions (HTML `<div>` tags) where the search result
 
 To avoid having to include the Bing Search API subscription key in the code, we use the browser's persistent storage to store the key. Before the key is stored, we prompt for the user's key. If the key is later rejected by the API, we invalidate the stored key so the user will be prompted again.
 
-We define `storeValue` and `retrieveValue` functions that use either the `localStorage` object (not all browsers support it) or a cookie. The `getSubscriptionKey()` function uses these functions to store and retrieve the user's key. You can use the global endpoint below, or the [custom subdomain](../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+We define `storeValue` and `retrieveValue` functions that use either the `localStorage` object (not all browsers support it) or a cookie. The `getSubscriptionKey()` function uses these functions to store and retrieve the user's key. 
 
 ``` javascript
 // Cookie names for data we store
@@ -71,7 +71,7 @@ API_KEY_COOKIE   = "bing-search-api-key";
 CLIENT_ID_COOKIE = "bing-search-client-id";
 
 // Bing Search API endpoint
-BING_ENDPOINT = "https://api.cognitive.microsoft.com/bing/v7.0/news";
+BING_ENDPOINT = "https://api.bing.microsoft.com/bing/v7.0/news";
 
 // ... omitted definitions of storeValue() and retrieveValue()
 // Browsers differ in their support for persistent storage by 
@@ -99,7 +99,7 @@ The HTML `<form>` tag `onsubmit` calls the `bingWebSearch` function to return se
 ## Selecting search options
 The following figure shows the query text box and options that define a search for news about school funding.
 
-![Bing News Search options](media/news-search-categories.png)
+![Bing News Search options](../media/news-search-categories.png)
 
 The HTML form includes elements with the following names:
 
@@ -203,6 +203,7 @@ function bingNewsSearch(query, options, key) {
     return false;
 }
 ```
+
 Upon successful completion of the HTTP request, JavaScript calls the `load` event handler, the `handleBingResponse()` function, to handle a successful HTTP GET request to the API. 
 
 ```javascript
@@ -282,6 +283,7 @@ Much of the code in both of the preceding functions is dedicated to error handli
 Errors are handled by calling `renderErrorMessage()` with any details known about the error. If the response passes the full gauntlet of error tests, we call `renderSearchResults()` to display the search results in the page.
 
 ## Displaying search results
+
 The main function for displaying the search results is `renderSearchResults()`. This function takes the JSON returned by the Bing News Search service and renders the news results and the related searches, if any.
 
 ```javascript
@@ -298,6 +300,7 @@ The main function for displaying the search results is `renderSearchResults()`. 
         showDiv("sidebar", renderRelatedItems(results.relatedSearches));
 }
 ```
+
 The main search results are returned as the top-level `value` object in the JSON response. We pass them to our function `renderResults()`, which iterates through them and calls a separate function to render each item into HTML. The resulting HTML is returned to `renderSearchResults()`, where it is inserted into the `results` division in the page.
 
 ```javascript
@@ -315,6 +318,7 @@ function renderResults(items) {
     return html.join("\n\n");
 }
 ```
+
 The Bing News Search API returns up to four different kinds of related results, each in its own top-level object. They are:
 
 |Relation|Description|
@@ -338,6 +342,7 @@ searchItemRenderers = {
     relatedSearches: function(item) { ... }
 }
 ```
+
 A renderer function can accept the following parameters:
 
 |Parameter|Description|
@@ -349,6 +354,7 @@ A renderer function can accept the following parameters:
 The `index` and `count` parameters can be used to number results, to generate special HTML for the beginning or end of a collection, to insert line breaks after a certain number of items, and so on. If a renderer does not need this functionality, it does not need to accept these two parameters.
 
 The `news` renderer is shown in the following JavaScript excerpt:
+
 ```javascript
     // render news story
     news: function (item) {
@@ -375,7 +381,9 @@ The `news` renderer is shown in the following JavaScript excerpt:
         return html.join("");
     },
 ```
+
 The news renderer function:
+
 > [!div class="checklist"]
 > * Creates a paragraph tag, assigns it to the `news` class, and pushes it to the html array.
 > * Calculates image thumbnail size (width is fixed at 60 pixels, height calculated proportionately).
@@ -383,9 +391,10 @@ The news renderer function:
 > * Builds the HTML `<a>` tags that link to the image and the page that contains it.
 > * Builds the description that displays information about the image and the site it's on.
 
-The thumbnail size is used in both the `<img>` tag and the `h` and `w` fields in the thumbnail's URL. The [Bing thumbnail service](../bing-web-search/resize-and-crop-thumbnails.md) then delivers a thumbnail of exactly that size.
+The thumbnail size is used in both the `<img>` tag and the `h` and `w` fields in the thumbnail's URL. The [Bing thumbnail service](../../bing-web-search/resize-and-crop-thumbnails.md) then delivers a thumbnail of exactly that size.
 
 ## Persisting client ID
+
 Responses from the Bing search APIs may include an `X-MSEdge-ClientID` header that should be sent back to the API with successive requests. If multiple Bing Search APIs are being used, the same client ID should be used with all of them, if possible.
 
 Providing the `X-MSEdge-ClientID` header allows the Bing APIs to associate all of a user's searches, which has two important benefits.
@@ -408,7 +417,7 @@ npm install -g cors-proxy-server
 ```
 
 Next, change the Bing Web Search endpoint in the HTML file to:\
-`http://localhost:9090/https://api.cognitive.microsoft.com/bing/v7.0/search`
+`http://localhost:9090/https://api.bing.microsoft.com/bing/v7.0/search`
 
 Finally, start the CORS proxy with the following command:
 
@@ -420,4 +429,4 @@ Leave the command window open while you use the tutorial app; closing the window
 
 ## Next steps
 > [!div class="nextstepaction"]
-> [Bing News Search API reference](//docs.microsoft.com/rest/api/cognitiveservices/bing-news-api-v7-reference)
+> [Bing News Search API reference](../reference/endpoints.md)

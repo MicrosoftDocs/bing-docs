@@ -1,53 +1,53 @@
 ---
 title: "Sending queries to the Bing News Search API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: The Bing News Search API enables you to search the web for relevant news items. Use this article to learn more about sending search queries to the API.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: conceptual
-ms.date: 12/18/2019
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Sending queries to the Bing News Search API
 
 The Bing News Search API enables you to search the web for relevant news items. Use this article to learn more about sending search queries to the API.
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](../../../../includes/cognitive-services-bing-news-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../includes/bing-news-search-signup-requirements.md)]
 
 ## Sending a request
 
 To get news-only search results, you'd send a GET request to the following endpoint:
 
 ```http
-https://api.cognitive.microsoft.com/bing/v7.0/news/search
+https://api.bing.microsoft.com/bing/v7.0/news/search
 ```
 
 The request must use the HTTPS protocol.
 
 We recommend that all requests originate from a server. Distributing the key as part of a client application provides more opportunity for a malicious third party to access it. Also, making calls from a server provides a single upgrade point for future versions of the API.
 
-The request must specify the [q](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#query) query parameter, which contains the user's search term. Although it's optional, the request should also specify the [mkt](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#mkt) query parameter, which identifies the market where you want the results to come from. For a list of optional query parameters such as `freshness` and `textDecorations`, see [Query Parameters](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#query-parameters). All query parameter values must be URL encoded.
+The request must specify the [q](../reference/query-parameters.md#query) query parameter, which contains the user's search term. Although it's optional, the request should also specify the [mkt](../reference/query-parameters.md#mkt) query parameter, which identifies the market where you want the results to come from. For a list of optional query parameters such as `freshness` and `textDecorations`, see [Query Parameters](../reference/query-parameters.md). All query parameter values must be URL encoded.
 
-The request must specify the [Ocp-Apim-Subscription-Key](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#subscriptionkey) header. Although optional, you are encouraged to also specify the following headers:
+The request must specify the [Ocp-Apim-Subscription-Key](../reference/headers.md#subscriptionkey) header. Although optional, you are encouraged to also specify the following headers:
 
-- [User-Agent](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#useragent)
-- [X-MSEdge-ClientID](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#clientid)
-- [X-Search-ClientIP](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#clientip)
-- [X-Search-Location](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#location)
+- [User-Agent](../reference/headers.md#useragent)
+- [X-MSEdge-ClientID](../reference/headers.md#clientid)
+- [X-Search-ClientIP](../reference/headers.md#clientip)
+- [X-Search-Location](../reference/headers.md#location)
 
 The client IP and location headers are important for returning location aware content.
 
-For a list of all request and response headers, see [Headers](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#headers).
+For a list of all request and response headers, see [Headers](../reference/headers.md).
 
 The following shows a news request that includes all the suggested query parameters and headers. If it's your first time calling any of the Bing APIs, don't include the client ID header. Only include the client ID if you've previously called a Bing API and Bing returned a client ID for the user and device combination.
 
 ```http
-GET https://api.cognitive.microsoft.com/bing/v7.0/news/search?q=sailing+dinghies&mkt=en-us HTTP/1.1
+GET https://api.bing.microsoft.com/bing/v7.0/news/search?q=sailing+dinghies&mkt=en-us HTTP/1.1
 Ocp-Apim-Subscription-Key: 123456789ABCDE
 User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 822)
 X-Search-ClientIP: 999.999.999.999
@@ -60,7 +60,7 @@ Host: api.cognitive.microsoft.com
 
 The following shows the response to the previous request. The example also shows the response headers.
 
-[!INCLUDE [cognitive-services-bing-url-note](../../../../includes/cognitive-services-bing-url-note.md)]
+[!INCLUDE [bing-url-note](../../../includes/bing-url-note.md)]
 
 ```json
 BingAPIs-TraceId: 994974CC8D994C95A5C31387296A510A
@@ -280,7 +280,7 @@ BingAPIs-Market: en-US
 
 ## Next steps
 
-* [What is Bing News Search?](../search-the-web.md). 
+* [What is Bing News Search?](../overview.md). 
 * [Get today's top news](search-for-news.md#get-todays-top-news)
 * [Get news by category](search-for-news.md#get-news-by-category)
 * [Get trending news](search-for-news.md#get-trending-news)

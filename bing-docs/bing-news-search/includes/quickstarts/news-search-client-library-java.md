@@ -26,7 +26,7 @@ Install the Bing News Search client library dependencies using Maven, Gradle, or
     </dependencies>
 ```
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](~/includes/cognitive-services-bing-news-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-news-search-signup-requirements.md)]
 
 ## Create and initialize a project
 
@@ -51,7 +51,7 @@ import java.io.IOException;
 
     ```java
     public static NewsSearchAPIImpl getClient(final String subscriptionKey) {
-        return new NewsSearchAPIImpl("https://api.cognitive.microsoft.com/bing/v7.0/",
+        return new NewsSearchAPIImpl("https://api.bing.microsoft.com/bing/v7.0/",
                 new ServiceClientCredentials() {
                 });
     }
@@ -128,4 +128,4 @@ import java.io.IOException;
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../../tutorial-bing-news-search-single-page-app.md)
+> [Create a single-page web app](../../tutorial/bing-news-search-single-page-app.md)

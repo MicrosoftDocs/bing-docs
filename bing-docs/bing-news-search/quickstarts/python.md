@@ -1,17 +1,16 @@
 ---
 title: "Quickstart: Perform a news search with Python and the Bing News Search REST API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description:  Use this quickstart to send a request to the Bing News Search REST API using Python, and receive a JSON response.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: quickstart
-ms.date: 06/16/2020
-ms.author: aahi
-ms.custom: seodec2018, tracking-python
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Perform a news search using Python and the Bing News Search REST API
@@ -26,18 +25,18 @@ To run this code sample as a Jupyter notebook on [MyBinder](https://mybinder.org
 
 The source code for this sample is also available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/python/Search/BingNewsSearchv7.py).
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](../../../includes/cognitive-services-bing-news-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../includes/bing-news-search-signup-requirements.md)]
 
 ## Create and initialize the application
 
-Create a new Python file in your favorite IDE or editor, and import the request module. Create variables for your subscription key, endpoint, and search term. You can use the global endpoint in the following code, or use the [custom subdomain](../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+Create a new Python file in your favorite IDE or editor, and import the request module. Create variables for your subscription key, endpoint, and search term. 
 
 ```python
 import requests
 
 subscription_key = "your subscription key"
 search_term = "Microsoft"
-search_url = "https://api.cognitive.microsoft.com/bing/v7.0/news/search"
+search_url = "https://api.bing.microsoft.com/bing/v7.0/news/search"
 ```
 
 ## Create parameters for the request
@@ -79,4 +78,4 @@ HTML("<table>"+rows+"</table>")
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](tutorial-bing-news-search-single-page-app.md)
+> [Create a single-page web app](../tutorial/bing-news-search-single-page-app.md)

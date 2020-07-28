@@ -1,18 +1,18 @@
 ---
 title: "Quickstart: Perform a news search with PHP and the Bing News Search REST API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send a request to the Bing News Search REST API using PHP, and receive a JSON response.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
-ms.custom: seodec2018
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
+
 # Quickstart: Perform a news search using PHP and the Bing News Search REST API
 
 Use this quickstart to make your first call to the Bing News Search API. This simple PHP application sends a search query to the API and displays the JSON response.
@@ -23,7 +23,7 @@ Although this application is written in PHP, the API is a RESTful Web service co
 
 * PHP 5.6 or later
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](../../../includes/cognitive-services-bing-news-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../includes/bing-news-search-signup-requirements.md)]
 
 For more information, see [Cognitive Services Pricing - Bing Search API](https://azure.microsoft.com/pricing/details/cognitive-services/search-api/).
 
@@ -35,7 +35,6 @@ To run this application, follow these steps:
 2. Create a new PHP project in your favorite IDE or editor.
 3. Add the code provided below.
 4. Replace the `accessKey` value with an access key valid for your subscription.
-5. You can use the global endpoint in the following code, or use the [custom subdomain](../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
 6. Run the program.
 
 ```php
@@ -51,11 +50,7 @@ To run this application, follow these steps:
 // Replace the accessKey string value with your valid access key.
 $accessKey = 'enter key here';
 
-// Verify the endpoint URI.  At this writing, only one endpoint is used for Bing
-// search APIs.  In the future, regional endpoints may be available.  If you
-// encounter unexpected authorization errors, double-check this value against
-// the endpoint for your Bing Search instance in your Azure dashboard.
-$endpoint = 'https://api.cognitive.microsoft.com/bing/v7.0/news/search';
+$endpoint = 'https://api.bing.microsoft.com/bing/v7.0/news/search';
 
 $term = 'Microsoft';
 
@@ -196,4 +191,4 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](tutorial-bing-news-search-single-page-app.md)
+> [Create a single-page web app](../tutorial/bing-news-search-single-page-app.md)

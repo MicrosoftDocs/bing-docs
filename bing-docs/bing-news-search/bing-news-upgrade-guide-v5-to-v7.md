@@ -1,15 +1,15 @@
 ---
 title: Upgrade Bing News Search API v5 to v7
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Identifies the parts of your application that you need to update to use version 7.
-services: cognitive-services
+services: bing-search-services
 author: swhite-msft
-manager: nitinme
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: conceptual
-ms.date: 01/10/2019
+ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
@@ -21,7 +21,10 @@ This upgrade guide identifies the changes between version 5 and version 7 of the
 
 ### Endpoints
 
-- The endpoint's version number changed from v5 to v7. For example, `https://api.cognitive.microsoft.com/bing/v7.0/news/search`.
+- The `cognitive` subdomain changed to `bing`. 
+- The endpoint's version number changed from v5 to v7.
+
+New search endpoint: `https://api.bing.microsoft.com/bing/v7.0/news/search`
 
 ### Error response objects and error codes
 
@@ -66,24 +69,24 @@ Blocked|InvalidRequest.Blocked
 
 ### Object changes
 
-- Added the `contractualRules` field to the [NewsArticle](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#newsarticle) object. The `contractualRules` field contains a list of rules that you must follow (for example, article attribution). You must apply the attribution provided in `contractualRules` instead of using `provider`. The article includes `contractualRules` only when the [Web Search API](../bing-web-search/search-the-web.md) response contains a News answer.
+- Added the `contractualRules` field to the [NewsArticle](reference/response-objects.md#newsarticle) object. The `contractualRules` field contains a list of rules that you must follow (for example, article attribution). You must apply the attribution provided in `contractualRules` instead of using `provider`. The article includes `contractualRules` only when the [Web Search API](../bing-web-search/overview.md) response contains a News answer.
 
 ## Non-breaking Changes
 
 ### Query parameters
 
-- Added Products as a possible value that you may set the [category](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#category) query parameter to. See [Categories By Markets](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference).
+- Added Products as a possible value that you may set the [category](reference/query-parameters.md#category) query parameter to. See [Categories By Markets](reference/query-parameters.md#news-categories-by-market).
 
-- Added the [SortBy](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#sortby) query parameter, which returns trending topics sorted by date with the most recent first.
+- Added the [SortBy](reference/query-parameters.md#sortby) query parameter, which returns trending topics sorted by date with the most recent first.
 
-- Added the [Since](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#since) query parameter, which returns trending topics that were discovered by Bing on or after the specified Unix epoch timestamp.
+- Added the [Since](reference/query-parameters.md#since) query parameter, which returns trending topics that were discovered by Bing on or after the specified Unix epoch timestamp.
 
 ### Object changes
 
-- Added the `mentions` field to the [NewsArticle](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#newsarticle) object. The `mentions` field contains a list of entities (persons or places) that were found in the article.
+- Added the `mentions` field to the [NewsArticle](reference/response-objects.md#newsarticle) object. The `mentions` field contains a list of entities (persons or places) that were found in the article.
 
-- Added the `video` field to the [NewsArticle](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#newsarticle) object. The `video` field contains a video that's related to the news article. The video is either an \<iframe\> that you can embed or a motion thumbnail.
+- Added the `video` field to the [NewsArticle](reference/response-objects.md#newsarticle) object. The `video` field contains a video that's related to the news article. The video is either an \<iframe\> that you can embed or a motion thumbnail.
 
-- Added the `sort` field to the [News](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#news) object. The `sort` field shows the sort order of the articles. For example, the articles are sorted by relevance (default) or date.
+- Added the `sort` field to the [News](reference/response-objects.md#news) object. The `sort` field shows the sort order of the articles. For example, the articles are sorted by relevance (default) or date.
 
-- Added the [SortValue](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference#sortvalue) object, which defines a sort order. The `isSelected` field indicates whether the response used the sort order. If **true**, the response used the sort order. If `isSelected` is **false**, you can use the URL in the `url` field to request a different sort order.
+- Added the [SortValue](reference/response-objects.md#sortvalue) object, which defines a sort order. The `isSelected` field indicates whether the response used the sort order. If **true**, the response used the sort order. If `isSelected` is **false**, you can use the URL in the `url` field to request a different sort order.

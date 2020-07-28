@@ -1,13 +1,13 @@
 ---
 title: Bing News Search JavaScript client library quickstart 
-titleSuffix: Azure Cognitive Services
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+titleSuffix: Bing Search Services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.topic: include
-ms.date: 03/12/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 Use this quickstart to begin searching for news with the Bing News Search client library for JavaScript. While Bing News Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-node-sdk-samples/blob/master/Samples/newsSearch.js).
@@ -21,7 +21,7 @@ To set up a console application using the Bing News Search client library:
 2. Run `npm install azure-cognitiveservices-newssearch` in your development environment.
 
 
-[!INCLUDE [cognitive-services-bing-news-search-signup-requirements](~/includes/cognitive-services-bing-news-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../../includes/cognitive-services-bing-news-search-signup-requirements.md)]
 
 ## Create and initialize the application
 
@@ -62,4 +62,4 @@ The code prints `result.value` items to the console without parsing any text. Th
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../../tutorial-bing-news-search-single-page-app.md)
+> [Create a single-page web app](../../tutorial/bing-news-search-single-page-app.md)
