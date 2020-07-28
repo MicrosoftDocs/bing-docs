@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Check spelling with the REST API and Node.js - Bing Spell Check"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Get started using the Bing Spell Check REST API to check spelling and grammar with this quickstart.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: quickstart
-ms.date: 05/21/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Check spelling with the Bing Spell Check REST API and Node.js
@@ -23,18 +23,18 @@ Although this application is written in JavaScript, the API is a RESTful Web ser
 
 * [Node.js 6](https://nodejs.org/en/download/) or later.
 
-[!INCLUDE [cognitive-services-bing-spell-check-signup-requirements](../../../../includes/cognitive-services-bing-spell-check-signup-requirements.md)]
+[!INCLUDE [bing-spell-check-signup-requirements](../../../includes/bing-spell-check-signup-requirements.md)]
 
 
 ## Create and initialize a project
 
-1. Create a new JavaScript file in your favorite IDE or editor. Set the strictness, and require `https`. Then, create variables for your API endpoint's host, path, and your subscription key. You can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+1. Create a new JavaScript file in your favorite IDE or editor. Set the strictness, and require `https`. Then, create variables for your API endpoint's host, path, and your subscription key. 
 
     ```javascript
     'use strict';
     let https = require ('https');
 
-    let host = 'api.cognitive.microsoft.com';
+    let host = 'api.bing.microsoft.com';
     let path = '/bing/v7.0/spellcheck';
     let key = '<ENTER-KEY-HERE>';
     ```
@@ -156,7 +156,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../tutorials/spellcheck.md)
+> [Create a single-page web app](../tutorial/spellcheck.md)
 
 - [What is the Bing Spell Check API?](../overview.md)
-- [Bing Spell Check API v7 reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-spell-check-api-v7-reference)
+- [Bing Spell Check API v7 reference](../reference/endpoints.md)

@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Check spelling with the REST API and PHP - Bing Spell Check"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: This quickstart shows how a simple PHP application sends a request to the Bing Spell Check API and returns a list of suggested corrections.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: quickstart
-ms.date: 05/21/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 # Quickstart: Check spelling with the Bing Spell Check REST API and PHP
 
@@ -22,7 +22,7 @@ Although this application is written in PHP, the API is a RESTful Web service co
 
 * [PHP 5.6.x](https://php.net/downloads.php)
 
-[!INCLUDE [cognitive-services-bing-spell-check-signup-requirements](../../../../includes/cognitive-services-bing-spell-check-signup-requirements.md)]
+[!INCLUDE [bing-spell-check-signup-requirements](../../../includes/bing-spell-check-signup-requirements.md)]
 
 
 ## Get Bing Spell Check REST API results
@@ -30,8 +30,7 @@ Although this application is written in PHP, the API is a RESTful Web service co
 1. Create a new PHP project in your favorite IDE.
 2. Add the code provided below.
 3. Replace the `subscriptionKey` value with an access key valid for your subscription.
-4. You can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
-5. Run the program.
+1. Run the program.
     
     ```php
     <?php
@@ -44,7 +43,7 @@ Although this application is written in PHP, the API is a RESTful Web service co
     // define("CLIENT_IP", "999.999.999.999");
     // define("CLIENT_LOCATION", "+90.0000000000000;long: 00.0000000000000;re:100.000000000000");
     
-    $host = 'https://api.cognitive.microsoft.com';
+    $host = 'https://api.bing.microsoft.com';
     $path = '/bing/v7.0/spellcheck?';
     $params = 'mkt=en-us&mode=proof';
     
@@ -137,7 +136,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../tutorials/spellcheck.md)
+> [Create a single-page web app](../tutorial/spellcheck.md)
 
 - [What is the Bing Spell Check API?](../overview.md)
-- [Bing Spell Check API v7 reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-spell-check-api-v7-reference)
+- [Bing Spell Check API v7 reference](../reference/endpoints.md)

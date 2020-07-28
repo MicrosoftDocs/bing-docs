@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Check spelling with the REST API and Java - Bing Spell Check"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Get started using the Bing Spell Check REST API to check spelling and grammar.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: quickstart
-ms.date: 05/21/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Check spelling with the Bing Spell Check REST API and Java
@@ -25,7 +25,7 @@ Although this application is written in Java, the API is a RESTful web service c
 
 * Import the [gson-2.8.5.jar](https://libraries.io/maven/com.google.code.gson%3Agson) or the most current [Gson](https://github.com/google/gson) version. For command-line execution, add the `.jar` to your Java folder with the main class.
 
-[!INCLUDE [cognitive-services-bing-spell-check-signup-requirements](../../../../includes/cognitive-services-bing-spell-check-signup-requirements.md)]
+[!INCLUDE [bing-spell-check-signup-requirements](../../../includes/bing-spell-check-signup-requirements.md)]
 
 ## Create and initialize an application
 
@@ -38,10 +38,10 @@ Although this application is written in Java, the API is a RESTful web service c
     import javax.net.ssl.HttpsURLConnection;
     ```
 
-2. Create variables for the API endpoint's host, path, and your subscription key. Then, create variables for your market, the text you want to spell check, and a string for the spell check mode. You can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. Create variables for the API endpoint's host, path, and your subscription key. Then, create variables for your market, the text you want to spell check, and a string for the spell check mode. 
 
     ```java
-    static String host = "https://api.cognitive.microsoft.com";
+    static String host = "https://api.bing.microsoft.com";
     static String path = "/bing/v7.0/spellcheck";
 
     static String key = "<ENTER-KEY-HERE>";
@@ -192,7 +192,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../tutorials/spellcheck.md)
+> [Create a single-page web app](../tutorial/spellcheck.md)
 
 - [What is the Bing Spell Check API?](../overview.md)
-- [Bing Spell Check API v7 reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-spell-check-api-v7-reference)
+- [Bing Spell Check API v7 reference](../reference/endpoints.md)

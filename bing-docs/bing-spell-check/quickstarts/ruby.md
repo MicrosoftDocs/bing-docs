@@ -1,15 +1,15 @@
 ---
 title: "Quickstart: Check spelling with the REST API and Ruby - Bing Spell Check"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Get started using the Bing Spell Check REST API to check spelling and grammar with this quickstart.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: quickstart
-ms.date: 05/21/2020
+ms.date: 07/15/2020
 ms.author: aahi
 ---
 # Quickstart: Check spelling with the Bing Spell Check REST API and Ruby
@@ -22,7 +22,7 @@ Although this application is written in Ruby, the API is a RESTful Web service c
 
 * [Ruby 2.4](https://www.ruby-lang.org/en/downloads/) or later.
 
-[!INCLUDE [cognitive-services-bing-spell-check-signup-requirements](../../../../includes/cognitive-services-bing-spell-check-signup-requirements.md)]
+[!INCLUDE [bing-spell-check-signup-requirements](../../../includes/bing-spell-check-signup-requirements.md)]
 
 
 ## Create and initialize the application
@@ -35,7 +35,7 @@ Although this application is written in Ruby, the API is a RESTful Web service c
     require 'json'
     ```
 
-2. Create variables for your subscription key, endpoint URI, and path. You can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource. Create your request parameters:
+2. Create variables for your subscription key, endpoint URI, and path. Create your request parameters:
 
    1. Assign your market code to the `mkt` parameter with the `=` operator. The market code is the code of the country/region you make the request from. 
 
@@ -43,7 +43,7 @@ Although this application is written in Ruby, the API is a RESTful Web service c
 
     ```ruby
     key = 'ENTER YOUR KEY HERE'
-    uri = 'https://api.cognitive.microsoft.com'
+    uri = 'https://api.bing.microsoft.com'
     path = '/bing/v7.0/spellcheck?'
     params = 'mkt=en-us&mode=proof'
     ```
@@ -139,4 +139,4 @@ A successful response is returned in JSON, as shown in the following example:
 > [Create a single-page web app](../tutorials/spellcheck.md)
 
 - [What is the Bing Spell Check API?](../overview.md)
-- [Bing Spell Check API v7 reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-spell-check-api-v7-reference)
+- [Bing Spell Check API v7 reference](../reference/endpoints.md)

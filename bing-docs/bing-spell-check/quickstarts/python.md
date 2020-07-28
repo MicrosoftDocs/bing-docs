@@ -1,17 +1,16 @@
 ---
 title: "Quickstart: Check spelling with the REST API and Python - Bing Spell Check"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Get started using the Bing Spell Check REST API to check spelling and grammar with this quickstart.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: quickstart
-ms.date: 05/21/2020
-ms.author: aahi
-ms.custom: tracking-python
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 # Quickstart: Check spelling with the Bing Spell Check REST API and Python
 
@@ -23,7 +22,7 @@ Although this application is written in Python, the API is a RESTful Web service
 
 * Python [3.x](https://www.python.org)
 
-[!INCLUDE [cognitive-services-bing-spell-check-signup-requirements](../../../../includes/cognitive-services-bing-spell-check-signup-requirements.md)]
+[!INCLUDE [bing-spell-check-signup-requirements](../../../includes/bing-spell-check-signup-requirements.md)]
 
 ## Initialize the application
 
@@ -34,12 +33,12 @@ Although this application is written in Python, the API is a RESTful Web service
    import json
    ```
 
-2. Create variables for the text you want to spell check, your subscription key, and your Bing Spell Check endpoint. You can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. Create variables for the text you want to spell check, your subscription key, and your Bing Spell Check endpoint. 
 
     ```python
     api_key = "<ENTER-KEY-HERE>"
     example_text = "Hollo, wrld" # the text to be spell-checked
-    endpoint = "https://api.cognitive.microsoft.com/bing/v7.0/SpellCheck"
+    endpoint = "https://api.bing.microsoft.com/bing/v7.0/SpellCheck"
     ```
 
 ## Create the parameters for the request
@@ -144,4 +143,4 @@ A successful response is returned in JSON, as shown in the following example:
 > [Create a single-page web app](../tutorials/spellcheck.md)
 
 - [What is the Bing Spell Check API?](../overview.md)
-- [Bing Spell Check API v7 reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-spell-check-api-v7-reference)
+- [Bing Spell Check API v7 reference](../reference/endpoints.md)

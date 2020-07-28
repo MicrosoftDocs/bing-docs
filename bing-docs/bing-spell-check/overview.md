@@ -1,15 +1,15 @@
 ---
 title: What is the Bing Spell Check API?
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Learn about the Bing Spell Check API, which uses machine learning and statistical machine translation for contextual spell checking.
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: overview
-ms.date: 12/19/2019
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # What is the Bing Spell Check API?
@@ -33,10 +33,3 @@ The Bing Spell Check API is easy to call from any programming language that can 
 2. Send a request to the Bing Web Search API.
 3. Parse the JSON response
 
-## Next steps
-
-First, try the Bing Spell Check Search API [interactive demo](https://azure.microsoft.com/services/cognitive-services/spell-check/) to see how you can quickly check a variety of texts.
-
-When you are ready to call the API, create a [Cognitive services API account](../../cognitive-services/cognitive-services-apis-create-account.md). If you don't have an Azure subscription, you can [create an account](https://azure.microsoft.com/free/cognitive-services/) for free.
-
-You can also visit the [Bing Search API hub page](../bing-web-search/search-the-web.md) to explore the other available APIs.

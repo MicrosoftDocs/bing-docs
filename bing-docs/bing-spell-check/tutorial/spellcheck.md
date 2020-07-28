@@ -1,15 +1,15 @@
 ---
 title: "Tutorial: Getting Spell Check Results using Bing Spell Check API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this tutorial to build a web page that sends queries to the Bing Spell Check API, and displays the results.
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: tutorial
-ms.date: 03/05/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Tutorial: Build a Web page Spell Check client
@@ -196,7 +196,7 @@ Specify the Bing Spell Check API endpoint and declare an XMLHttpRequest object, 
 use to send requests to the endpoint.
 
 ```html
-    var endpoint = "https://api.cognitive.microsoft.com/bing/v7.0/spellcheck/";
+    var endpoint = "https://api.bing.microsoft.com/bing/v7.0/spellcheck/";
 
     var request = new XMLHttpRequest();
 
@@ -334,4 +334,7 @@ Open the Web page in your browser. At the prompt, enter your Bing Spell Check AP
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Use and display requirements](../UseAndDisplayRequirements.md)
+> [Create a single-page web app](../tutorials/spellcheck.md)
+
+- [What is the Bing Spell Check API?](../overview.md)
+- [Bing Spell Check API v7 reference](../reference/endpoints.md)
