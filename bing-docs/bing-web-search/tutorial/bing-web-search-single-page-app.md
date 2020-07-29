@@ -1,15 +1,15 @@
 ---
 title: "Tutorial: Create a single-page web app - Bing Web Search API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: This single-page app demonstrates how the Bing Web Search API can be used to retrieve, parse, and display relevant search results in a single-page app.
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: tutorial
-ms.date: 03/05/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Tutorial: Create a single-page app using the Bing Web Search API
@@ -75,7 +75,7 @@ The `index.html` includes a form that enables users to search and select search 
 
 ## Query options
 
-The HTML form includes options that map to query parameters in the [Bing Web Search API v7](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-web-api-v7-reference#query-parameters). This table provides a breakdown of how users can filter search results using the sample app:
+The HTML form includes options that map to query parameters in the [Bing Web Search API v7](../reference/query-parameters.md) reference. This table provides a breakdown of how users can filter search results using the sample app:
 
 | Parameter | Description |
 |-----------|-------------|
@@ -88,7 +88,7 @@ The HTML form includes options that map to query parameters in the [Bing Web Sea
 | `offset` | Hidden field. The offset of the first search result in the request, which is used for paging. It's reset to `0` with each new request. |
 
 > [!NOTE]
-> The Bing Web Search API offers additional query parameters to help refine search results. This sample only uses a few. For a complete list of available parameters, see [Bing Web Search API v7 reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-web-api-v7-reference#query-parameters).
+> The Bing Web Search API offers additional query parameters to help refine search results. This sample only uses a few. For a complete list of available parameters, see [Bing Web Search API v7](../reference/query-parameters.md) reference.
 
 The `bingSearchOptions()` function converts these options to match the format required by the Bing Search API.
 
@@ -125,7 +125,7 @@ function bingSearchOptions(form) {
 
 `SafeSearch` can be set to `strict`, `moderate`, or `off`, with `moderate` being the default setting for Bing Web Search. This form uses a checkbox, which has two states: `strict` or `moderate`.
 
-If any of the **Promote** checkboxes are selected, the `answerCount` parameter is added to the query. `answerCount` is required when using the `promote` parameter. In this snippet, the value is set to `9` to return all available result types.
+If any of the **Promote** check boxes are selected, the `answerCount` parameter is added to the query. `answerCount` is required when using the `promote` parameter. In this snippet, the value is set to `9` to return all available result types.
 > [!NOTE]
 > Promoting a result type doesn't *guarantee* that it will be included in the search results. Rather, promotion increases the ranking of those kinds of results relative to their usual ranking. To limit searches to particular kinds of results, use the `responseFilter` query parameter, or call a more specific endpoint such as Bing Image Search or Bing News Search.
 
@@ -142,7 +142,7 @@ The `getSubscriptionKey()` function uses the `storeValue` and `retrieveValue` fu
 API_KEY_COOKIE   = "bing-search-api-key";
 CLIENT_ID_COOKIE = "bing-search-client-id";
 
-BING_ENDPOINT = "https://api.cognitive.microsoft.com/bing/v7.0/search";
+BING_ENDPOINT = "https://api.bing.microsoft.com/bing/v7.0/search";
 
 // See source code for storeValue and retrieveValue definitions.
 
@@ -292,7 +292,7 @@ Errors are handled by calling `renderErrorMessage()`. If the response passes all
 
 ## Display search results
 
-There are [use and display requirements](useanddisplayrequirements.md) for results returned by the Bing Web Search API. Since a response may include various result types, it isn't enough to iterate through the top-level `WebPages` collection. Instead, the sample app uses `RankingResponse` to order the results to spec.
+There are [use and display requirements](../use-display-requirements.md) for results returned by the Bing Web Search API. Since a response may include various result types, it isn't enough to iterate through the top-level `WebPages` collection. Instead, the sample app uses `RankingResponse` to order the results to spec.
 
 > [!NOTE]
 > If you only want a single result type, use the `responseFilter` query parameter, or consider using one of the other Bing Search endpoints, such as Bing Image Search.
@@ -302,7 +302,7 @@ Each response has a `RankingResponse` object that may include up to three collec
 Each `RankingResponse` includes a `RankingItem` array that specifies how results must be ordered. Our sample app uses the `answerType` and `resultIndex` parameters to identify the result.
 
 > [!NOTE]
-> There are additional ways to identify and rank results. For more information, see [Using ranking to display results](rank-results.md).
+> There are additional ways to identify and rank results. For more information, see [Using ranking to display results](../rank-results.md).
 
 Let's take a look at the code:
 
@@ -424,7 +424,7 @@ The thumbnail size is used in both the `<img>` tag and the `h` and `w` fields in
 
 Here's an example of how images are displayed in the sample app:
 
-![[Bing image results]](media/cognitive-services-bing-web-api/web-search-spa-images.png)
+![[Bing image results]](../media/bing-we-api/web-search-spa-images.png)
 
 ## Persist the client ID
 
@@ -437,7 +437,7 @@ Browser security policies, such as Cross-Origin Resource Sharing (CORS), may pre
 > [!NOTE]
 > In a production Web application, you should perform the request server-side anyway. Otherwise, your Bing Search API subscription key must be included in the web page, where it's available to anyone who views source. You are billed for all usage under your API subscription key, even requests made by unauthorized parties, so it is important not to expose your key.
 
-For development purposes, you can make a request through a CORS proxy. The response from this type of proxy has an `Access-Control-Expose-Headers` header that whitelists response headers and makes them available to JavaScript.
+For development purposes, you can make a request through a CORS proxy. The response from this type of proxy has an `Access-Control-Expose-Headers` header that identify headers and makes them available to JavaScript.
 
 It's easy to install a CORS proxy to allow our sample app to access the client ID header. Run this command:
 
@@ -448,7 +448,7 @@ npm install -g cors-proxy-server
 Next, change the Bing Web Search endpoint in `script.js` to:
 
 ```javascript
-http://localhost:9090/https://api.cognitive.microsoft.com/bing/v7.0/search
+http://localhost:9090/https://api.bing.microsoft.com/bing/v7.0/search
 ```
 
 Start the CORS proxy with this command:
@@ -462,4 +462,4 @@ Leave the command window open while you use the sample app; closing the window s
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Web Search API v7 reference](//docs.microsoft.com/rest/api/cognitiveservices/bing-web-api-v7-reference)
+> [Bing Web Search API v7](../reference/endpoints.md) reference

@@ -1,17 +1,15 @@
 ---
 title: "Quickstart: Perform a web search with Ruby - Bing Web Search API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send requests to the Bing Web Search REST API using Ruby, and receive a JSON response
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
-ms.custom: seodec2018
-#Customer intent: As a new developer, I want to make my first call to the Bing Web Search API and receive a response using Ruby.
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Use Ruby to call the Bing Web Search API  
@@ -25,7 +23,7 @@ Here are a few things that you'll need before running this quickstart:
 * [Ruby 2.4 or later](https://www.ruby-lang.org/en/downloads/)
 * A subscription key
 
-[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
+[!INCLUDE [bing-web-search-quickstart-signup](../../../includes/bing-web-search-quickstart-signup.md)]
 
 ## Create a project and declare required modules
 
@@ -41,17 +39,15 @@ require 'json'
 
 A few variables must be set before we can continue:
 
-1. For the `uri` value, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource. 
-
 2. Confirm that the `uri` and `path` values are valid and replace the `accessKey` value with a subscription key from your Azure account. 
 
 3. Optionally, customize the search query by replacing the value for `term`.
 
 ```ruby
 accessKey = "YOUR_SUBSCRIPTION_KEY"
-uri  = "https://api.cognitive.microsoft.com"
+uri  = "https://api.bing.microsoft.com"
 path = "/bing/v7.0/search"
-term = "Microsoft Cognitive Services"
+term = "Microsoft Bing Search Services"
 
 if accessKey.length != 32 then
     puts "Invalid Bing Search API subscription key!"
@@ -106,9 +102,9 @@ require 'uri'
 require 'json'
 
 accessKey = "enter key here"
-uri  = "https://api.cognitive.microsoft.com"
+uri  = "https://api.bing.microsoft.com"
 path = "/bing/v7.0/search"
-term = "Microsoft Cognitive Services"
+term = "Microsoft Bing Search Services"
 
 if accessKey.length != 32 then
     puts "Invalid Bing Search API subscription key!"
@@ -266,6 +262,5 @@ Responses from the Bing Web Search API are returned as JSON. This sample respons
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Web Search API single-page app tutorial](../tutorial-bing-web-search-single-page-app.md)
+> [Bing Web Search API single-page app tutorial](../tutorial/bing-web-search-single-page-app.md)
 
-[!INCLUDE [bing-web-search-quickstart-see-also](../../../../includes/bing-web-search-quickstart-see-also.md)]

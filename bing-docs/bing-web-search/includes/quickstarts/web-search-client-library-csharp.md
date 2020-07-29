@@ -1,13 +1,13 @@
 ---
 title: Bing Web Search C# client library quickstart 
-titleSuffix: Azure Cognitive Services
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+titleSuffix: Bing Search Services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.topic: include
-ms.date: 03/05/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 The Bing Web Search client library makes it easy to integrate Bing Web Search into your C# application. In this quickstart, you'll learn how to instantiate a client, send a request, and print the response.
@@ -23,7 +23,7 @@ Here are a few things that you'll need before running this quickstart:
   * [NuGet Package Manager](https://github.com/jmrog/vscode-nuget-package-manager)
 * [.NET Core SDK](https://www.microsoft.com/net/download)
 
-[!INCLUDE [bing-web-search-quickstart-signup](~/includes/bing-web-search-quickstart-signup.md)]
+[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
 
 ## Create a project and install dependencies
 
@@ -416,5 +416,5 @@ When you're done with this project, make sure to remove your subscription key fr
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Cognitive Services Node.js SDK samples](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/)
+> [Cognitive Services .NET SDK samples](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/)
                                     

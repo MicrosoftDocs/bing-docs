@@ -1,23 +1,22 @@
 ---
 title: How to use rankings to display search results - Bing Web Search API
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Learn how to use ranking to display search results from the Bing Web Search API.
-services: cognitive-services
+services: bing-search-services
 author: swhite-msft
-manager: nitinme
-ms.assetid: BBF87972-B6C3-4910-BB52-DE90893F6C71
-ms.service: cognitive-services
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 03/17/2019
+ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
 # How to use ranking to display Bing Web Search API results  
 
-Each search response includes a [RankingResponse](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-web-api-v7-reference#rankingresponse) answer, that specifies how you must display the search results. The ranking response groups results by mainline content and sidebar content for a traditional search results page. If you do not display the results in a traditional mainline and sidebar format, you must provide the mainline content higher visibility than the sidebar content.  
+Each search response includes a [RankingResponse](reference/response-objects.md#rankingresponse) answer, that specifies how you must display the search results. The ranking response groups results by mainline content and sidebar content for a traditional search results page. If you do not display the results in a traditional mainline and sidebar format, you must provide the mainline content higher visibility than the sidebar content.  
 
-Within each group (mainline or sidebar), the [Items](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-web-api-v7-reference#rankinggroup-items) array identifies the order that the content must appear in. Each item provides the following two ways to identify the result within an answer.  
+Within each group (mainline or sidebar), the [Items](reference/response-objects.md#rankinggroup-items) array identifies the order that the content must appear in. Each item provides the following two ways to identify the result within an answer.  
 
 -   `answerType` and `resultIndex` — The `answerType` field identifies the answer (for example, Webpage or News) and `resultIndex` identifies a result within the answer (for example, a news article). The index is zero based.  
 
@@ -25,11 +24,11 @@ Within each group (mainline or sidebar), the [Items](https://docs.microsoft.com/
 
 Using the ID is simpler to use because you only need to match the ranking ID with the ID of an answer or one of its results. If an answer object includes an `id` field, display all the answer's results together. For example, if the `News` object includes the `id` field, display all the news articles together. If the `News` object does not include the `id` field, then each news article contains an `id` field and the ranking response mixes the news articles with the results from other answers.  
 
-Using the `answerType` and `resultIndex` is a little more complicated. You use `answerType` to identify the answer that contains the results to display. Then, you use `resultIndex` to index through the answer's results to get the result to display. (The `answerType` value is the name of the field in the [SearchResponse](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-web-api-v7-reference#searchresponse) object.) If you're supposed to display all the answer's results together, the ranking response item doesn't include the `resultIndex` field.  
+Using the `answerType` and `resultIndex` is a little more complicated. You use `answerType` to identify the answer that contains the results to display. Then, you use `resultIndex` to index through the answer's results to get the result to display. (The `answerType` value is the name of the field in the [SearchResponse](reference/response-objects.md#searchresponse) object.) If you're supposed to display all the answer's results together, the ranking response item doesn't include the `resultIndex` field.  
 
 ## Ranking response example
 
-The following shows an example [RankingResponse](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-web-api-v7-reference#rankingresponse). Because the Web answer does not include an `id` field, you'd display all webpages individually based on the ranking (each webpage includes an `id` field). And because the images, videos, and related searches answers do include the `id` field, you'd display the results of each of those answers together based on the ranking.
+The following shows an example [RankingResponse](reference/response-objects.md#rankingresponse). Because the Web answer does not include an `id` field, you'd display all webpages individually based on the ranking (each webpage includes an `id` field). And because the images, videos, and related searches answers do include the `id` field, you'd display the results of each of those answers together based on the ranking.
 
 ```json
 {  
@@ -202,21 +201,21 @@ The following shows an example [RankingResponse](https://docs.microsoft.com/rest
 
 Based on this ranking response, the mainline would display the following search results:  
 
--   The first webpage result
--   All the images  
--   The second and third webpage results  
--   All the videos  
--   The 4th, 5th, and 6th webpage results  
+- The first webpage result
+- All the images  
+- The second and third webpage results  
+- All the videos  
+- The 4th, 5th, and 6th webpage results  
 
 And the sidebar would display the following search results:  
 
--   All the related searches  
+- All the related searches  
 
 
 ## Next steps
 
-For information about promoting unranked results, see [Promoting answers that are not ranked](./filter-answers.md#promoting-answers-that-are-not-ranked).
+For information about promoting unranked results, see [Promoting answers that are not ranked](filter-answers.md#promoting-answers-that-are-not-ranked).
 
-For information about limiting the number of ranked answers in the response, see [Limiting the number of answers in the response](./filter-answers.md#limiting-the-number-of-answers-in-the-response).
+For information about limiting the number of ranked answers in the response, see [Limiting the number of answers in the response](filter-answers.md#limiting-the-number-of-answers-in-the-response).
 
-For a C# example that uses ranking to display results, see [C# ranking tutorial](./csharp-ranking-tutorial.md).
+For a C# example that uses ranking to display results, see [C# ranking tutorial](tutorial/csharp-ranking-tutorial.md).

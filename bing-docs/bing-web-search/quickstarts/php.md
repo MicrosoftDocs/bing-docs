@@ -1,17 +1,15 @@
 ---
 title: "Quickstart: Perform a search with PHP - Bing Web Search API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send requests to the Bing Web Search REST API using PHP, and receive a JSON response
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
-ms.custom: seodec2018
-#Customer intent: As a new developer, I want to make my first call to the Bing Web Search API and receive a response using PHP.
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Use PHP to call the Bing Web Search API  
@@ -25,7 +23,7 @@ Here are a few things that you'll need before running this quickstart:
 * [PHP 5.6.x](https://php.net/downloads.php) or later
 * A subscription key  
 
-[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
+[!INCLUDE [bing-web-search-quickstart-signup](../../../includes/bing-web-search-quickstart-signup.md)]
 
 ## Enable secure HTTP support
 
@@ -39,16 +37,14 @@ Before we get started, locate php.ini and uncomment this line:
 
 1. Create a new PHP project in your favorite IDE or editor. Add opening and closing tags: `<?php` and `?>`.
 
-2. For the `$endpoint` value, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource. 
-
 3. Confirm that the `$endpoint` value is correct and replace the `$accesskey` value with a valid subscription key from your Azure account. 
 
 4. Optionally, customize the search query by replacing the value for `$term`.
 
 ```php
 $accessKey = 'enter key here';
-$endpoint = 'https://api.cognitive.microsoft.com/bing/v7.0/search';
-$term = 'Microsoft Cognitive Services';
+$endpoint = 'https://api.bing.microsoft.com/bing/v7.0/search';
+$term = 'Microsoft Bing Search Services';
 ```
 
 ## Construct a request
@@ -118,8 +114,8 @@ The last step is to validate your code and run it. If you'd like to compare your
 ```php
 <?php
 $accessKey = 'enter key here';
-$endpoint = 'https://api.cognitive.microsoft.com/bing/v7.0/search';
-$term = 'Microsoft Cognitive Services';
+$endpoint = 'https://api.bing.microsoft.com/bing/v7.0/search';
+$term = 'Microsoft Bing Search Services';
 
 function BingWebSearch ($url, $key, $query) {
     $headers = "Ocp-Apim-Subscription-Key: $key\r\n";
@@ -284,6 +280,5 @@ Responses from the Bing Web Search API are returned as JSON. This sample respons
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Web Search API single-page app tutorial](../tutorial-bing-web-search-single-page-app.md)
+> [Bing Web Search API single-page app tutorial](../tutorial/bing-web-search-single-page-app.md)
 
-[!INCLUDE [bing-web-search-quickstart-see-also](../../../../includes/bing-web-search-quickstart-see-also.md)]

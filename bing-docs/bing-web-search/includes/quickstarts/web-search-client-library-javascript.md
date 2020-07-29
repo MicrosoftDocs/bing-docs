@@ -1,13 +1,13 @@
 ---
 title: Bing Web Search JavaScript client library quickstart 
-titleSuffix: Azure Cognitive Services
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+titleSuffix: Bing Search Services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.topic: include
-ms.date: 03/05/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 The Bing Web Search client library makes it easy to integrate Bing Web Search into your Node.js application. In this quickstart, you'll learn how to instantiate a client, send a request, and print the response.
@@ -20,7 +20,7 @@ Here are a few things that you'll need before running this quickstart:
 * [Node.js 6](https://nodejs.org/en/download/) or later
 * A subscription key  
 
-[!INCLUDE [bing-web-search-quickstart-signup](~/includes/bing-web-search-quickstart-signup.md)]
+[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
 
 
 ## Set up your development environment
@@ -98,7 +98,3 @@ When you're done with this project, make sure to remove your subscription key fr
 
 > [!div class="nextstepaction"]
 > [Cognitive Services Node.js SDK samples](https://github.com/Azure-Samples/cognitive-services-node-sdk-samples)
-
-## See also
-
-* [Azure Node SDK reference](https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-websearch/)

@@ -1,17 +1,15 @@
 ---
 title: "Quickstart: Use Java to call the Bing Web Search REST API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send requests to the Bing Web Search REST API using Java, and receive a JSON response
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
-ms.custom: seodec2018, seo-java-july2019, seo-java-august2019, seo-java-september2019
-#Customer intent: As a new developer, I want to make my first call to the Bing Web Search API and receive a response using Java.
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Use Java to search the web with the Bing Web Search REST API, an Azure cognitive service
@@ -26,7 +24,7 @@ Here are a few things that you'll need before running this quickstart:
 * [Gson library](https://github.com/google/gson)
 * A subscription key
 
-[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
+[!INCLUDE [bing-web-search-quickstart-signup](../../../includes/bing-web-search-quickstart-signup.md)]
 
 ## Create a project and import dependencies
 
@@ -71,8 +69,6 @@ public class BingWebSearch {
 
 The following code sets the `subscriptionKey`, `host`, `path`, and `searchTerm`. Add this code to the `BingWebSearch` class described in the previous section:
 
-1. For the `host` value, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource. 
-
 2. Replace the `subscriptionKey` value with a valid subscription key from your Azure account. 
 
 3. Optionally, customize the search query by replacing the value for `searchTerm`. 
@@ -86,9 +82,9 @@ static String subscriptionKey = "enter key here";
  * against the endpoint for your Bing Web search instance in your Azure
  * dashboard.
  */
-static String host = "https://api.cognitive.microsoft.com";
+static String host = "https://api.bing.microsoft.com";
 static String path = "/bing/v7.0/search";
-static String searchTerm = "Microsoft Cognitive Services";
+static String searchTerm = "Microsoft Bing Search Services";
 ```
 
 ## Construct a request
@@ -322,6 +318,4 @@ Responses from the Bing Web Search API are returned as JSON. This sample respons
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Web Search API single-page app tutorial](../tutorial-bing-web-search-single-page-app.md)
-
-[!INCLUDE [bing-web-search-quickstart-see-also](../../../../includes/bing-web-search-quickstart-see-also.md)]  
+> [Bing Web Search API single-page app tutorial](../tutorial/bing-web-search-single-page-app.md)

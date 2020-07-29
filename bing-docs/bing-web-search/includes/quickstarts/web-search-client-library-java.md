@@ -1,13 +1,13 @@
 ---
 title: Bing Web Search Java client library quickstart 
-titleSuffix: Azure Cognitive Services
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+titleSuffix: Bing Search Services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.topic: include
-ms.date: 03/05/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 The Bing Web Search client library makes it easy to integrate Bing Web Search into your Java application. In this quickstart, you'll learn how to send a request, receive a JSON response, and filter and parse the results.
@@ -22,7 +22,7 @@ Here are a few things that you'll need before running this quickstart:
 * [Apache Maven](https://maven.apache.org/download.cgi) or your favorite build automation tool
 * A subscription key
 
-[!INCLUDE [bing-web-search-quickstart-signup](~/includes/bing-web-search-quickstart-signup.md)]
+[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
 
 ## Create a project and set up your POM file
 
@@ -287,6 +287,3 @@ When you're done with this project, make sure to remove your subscription key fr
 > [!div class="nextstepaction"]
 > [Cognitive Services Java SDK samples](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples/tree/master/Search/BingWebSearch)
 
-## See also
-
-* [Azure Java SDK reference](https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingwebsearchapi?view=azure-java-stable)

@@ -1,15 +1,14 @@
 ---
 title: How to use decoration markers to highlight text - Bing Web Search API
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Learn how to use text decorations and hit highlighting in your search results using the Bing Web Search API.
-services: cognitive-services
+services: bing-search-services
 author: swhite-msft
-manager: nitinme
-ms.assetid: 5365B568-EA55-4D97-8FBE-0AF60158D4D5
-ms.service: cognitive-services
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 07/30/2019
+ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
@@ -23,13 +22,13 @@ By default, Bing doesn't include highlighting markers in display strings. To ena
 
 The following example shows a web result for `Sailing Dinghy`. Bing marked the beginning and end of the query term using the E000 and E001 Unicode characters.
   
-![Hit Highlighting](./media/cognitive-services-bing-web-api/bing-hit-highlighting.png) 
+![Hit Highlighting](media/bing-web-api/bing-hit-highlighting.png) 
 
 Before displaying the result in your user interface, replace the Unicode characters with ones that are appropriate for your display format.
 
 ## Marker formatting
 
-Bing provides the option of using either Unicode characters or HTML tags as markers. To specify which markers to use, include the [textFormat](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-web-api-v7-reference#textformat) query parameter: 
+Bing provides the option of using either Unicode characters or HTML tags as markers. To specify which markers to use, include the [textFormat](reference/query-parameters.md#textformat) query parameter: 
 
 | Value             | Marker                       |
 |-------------------|------------------------------|
@@ -40,7 +39,7 @@ Bing provides the option of using either Unicode characters or HTML tags as mark
 
 Bing can return several different text decorations. For example, a `Computation` answer can contain subscript markers for the query term `log(2)` in the `expression` field.
 
-![computation markers](./media/cognitive-services-bing-web-api/bing-markers-computation.png) 
+![computation markers](media/bing-web-api/bing-markers-computation.png) 
 
 If the request did not specify decorations, the `expression` field would contain `log10(2)`. 
 

@@ -1,16 +1,15 @@
 ---
 title: Resize and crop image thumbnails - Bing Web Search API
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Some answers from the Bing Search APIs include URLs to thumbnail images served by Bing, which you can resize and crop, and may contain query parameters.
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.assetid: 05A08B01-89FF-4781-AFE7-08DA92F25047
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 ms.service: cognitive-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 07/08/2019
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Resize and crop thumbnail images
@@ -42,11 +41,11 @@ For example, if you resize a 480x359 image to 200x200 without cropping, the full
 
 The following picture shows the original size of a thumbnail image (480x300).  
   
-![Original landscape image](./media/resize-crop/bing-resize-crop-landscape.png)  
+![Original landscape image](media/resize-crop/bing-resize-crop-landscape.png)  
   
 The following picture shows the image resized to 200x200. The aspect ratio is maintained and the top and bottom borders are padded with white (the black border here is included to show the padding).  
   
-![Resized landscape image](./media/resize-crop/bing-resize-crop-landscape-resized.png)  
+![Resized landscape image](media/resize-crop/bing-resize-crop-landscape-resized.png)  
 
 If you specify dimensions that are greater than the image’s original width and height, Bing will add white padding to the left and top borders.  
 
@@ -77,22 +76,22 @@ To crop an image, include the `c` (crop) query parameter. You can use the follow
 
 If you request Smart Ratio cropping (by setting the `c` parameter to `7`), Bing will crop an image from the center of its region of interest outward, while maintaining the image’s aspect ratio. The region of interest is the area of the image that Bing determines contains the most import parts. The following shows an example region of interest.  
   
-![Region of interest](./media/resize-crop/bing-resize-crop-regionofinterest.png)
+![Region of interest](media/resize-crop/bing-resize-crop-regionofinterest.png)
 
 If you resize an image and request Smart Ratio cropping, Bing reduces the image to the requested size while maintaining the aspect ratio. Bing then crops the image based on the resized dimensions. For example, if the resized width is less than or equal to the height, Bing will crop the image to the left and right of the center of the region of interest. Otherwise, Bing will crop it to the top and bottom of the center of the region of interest.  
   
  
 The following shows the image reduced to 200x200 using Smart Ratio cropping. Because Bing measures the image from the top-left corner, the bottom part of the image is cropped. 
   
-![Landscape image cropped to 200x200](./media/resize-crop/bing-resize-crop-landscape200x200c7.png) 
+![Landscape image cropped to 200x200](media/resize-crop/bing-resize-crop-landscape200x200c7.png) 
   
 The following shows the image reduced to 200x100 using Smart Ratio cropping. Because Bing measures the image from the top-left corner, the bottom part of the image is cropped. 
    
-![Landscape image cropped to 200x100](./media/resize-crop/bing-resize-crop-landscape200x100c7.png)
+![Landscape image cropped to 200x100](media/resize-crop/bing-resize-crop-landscape200x100c7.png)
   
 The following shows the image reduced to 100x200 using Smart Ratio cropping. Because Bing measures the image from the center, the left and right parts of the image are cropped.
   
-![Landscape image cropped to 100x200](./media/resize-crop/bing-resize-crop-landscape100x200c7.png) 
+![Landscape image cropped to 100x200](media/resize-crop/bing-resize-crop-landscape100x200c7.png) 
 
 If Bing cannot determine the image’s region of interest, the service will use Blind Ratio cropping.  
 
@@ -105,19 +104,19 @@ If you request Blind Ratio cropping (by setting the `c` parameter to `4`), Bing 
 
 The following shows a portrait image that’s 225x300.  
   
-![Original sunflower image](./media/resize-crop/bing-resize-crop-sunflower.png)
+![Original sunflower image](media/resize-crop/bing-resize-crop-sunflower.png)
   
 The following shows the image reduced to 200x200 using Blind Ratio cropping. The image is measured from the top-left corner resulting in the bottom part of the image being cropped.  
   
-![Sunflower image cropped to 200x200](./media/resize-crop/bing-resize-crop-sunflower200x200c4.png)
+![Sunflower image cropped to 200x200](media/resize-crop/bing-resize-crop-sunflower200x200c4.png)
   
 The following shows the image reduced to 200x100 using Blind Ratio cropping. The image is measured from the top-left corner resulting in the bottom part of the image being cropped.  
   
-![Sunflower image cropped to 200x100](./media/resize-crop/bing-resize-crop-sunflower200x100c4.png)
+![Sunflower image cropped to 200x100](media/resize-crop/bing-resize-crop-sunflower200x100c4.png)
   
 The following shows the image reduced to 100x200 using Blind Ratio cropping. The image is measured from the center resulting in the left and right parts of the image being cropped.  
   
-![Sunflower image cropped to 100x200](./media/resize-crop/bing-resize-crop-sunflower100x200c4.png)
+![Sunflower image cropped to 100x200](media/resize-crop/bing-resize-crop-sunflower100x200c4.png)
 
 ## Next steps
 

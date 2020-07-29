@@ -97,8 +97,6 @@
     href: web-search-endpoints.md
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
-  - name: Language support
-    href: language-support.md
   - name: Analytics for Bing Web Search API
     href: bing-web-stats.md
   - name: Compliance

@@ -1,16 +1,15 @@
 ---
 title: How to page through search results - Bing Search APIs
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Learn how to page through search results from the Bing Search APIs.
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.assetid: 26CA595B-0866-43E8-93A2-F2B5E09D1F3B
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 10/31/2019
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # How to page through results from the Bing Search APIs
@@ -47,7 +46,7 @@ To page through the available results, use the `count` and `offset` query parame
 As an example, if you want to display 15 results per page, you would set `count` to 15 and `offset` to 0 to get the first page of results. For each subsequent API call, you would increment `offset` by 15. The following example requests 15 webpages beginning at offset 45.
 
 ```  
-GET https://api.cognitive.microsoft.com/bing/v7.0/search?q=sailing+dinghies&count=15&offset=45&mkt=en-us HTTP/1.1  
+GET https://api.bing.microsoft.com/bing/v7.0/search?q=sailing+dinghies&count=15&offset=45&mkt=en-us HTTP/1.1  
 Ocp-Apim-Subscription-Key: 123456789ABCDE  
 Host: api.cognitive.microsoft.com  
 ```
@@ -55,7 +54,7 @@ Host: api.cognitive.microsoft.com
 If you use the default `count` value, you only need to specify the `offset` query parameter in your API calls.  
 
 ```  
-GET https://api.cognitive.microsoft.com/bing/v7.0/search?q=sailing+dinghies&offset=45&mkt=en-us HTTP/1.1  
+GET https://api.bing.microsoft.com/bing/v7.0/search?q=sailing+dinghies&offset=45&mkt=en-us HTTP/1.1  
 Ocp-Apim-Subscription-Key: 123456789ABCDE  
 Host: api.cognitive.microsoft.com  
 ```
@@ -63,15 +62,11 @@ Host: api.cognitive.microsoft.com
 When using the Bing Image and Video APIs, you can use the `nextOffset` value to avoid duplicate search results. Get the value from the `Images` or `Videos` response objects, and use it in your requests with the `offset` parameter.  
 
 > [!NOTE]
-> The Bing Web Search API returns search results that can include webpages, images, videos, and news. When you page through search results from the Bing Web Search API, you are paging only [WebPages](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-web-api-v7-reference#webpage), and not other answer types such as images or news. Search results in `WebPage` objects may include results that appear in other answer types as well.
+> The Bing Web Search API returns search results that can include webpages, images, videos, and news. When you page through search results from the Bing Web Search API, you are paging only [WebPages](reference/response-objects.md#webpage), and not other answer types such as images or news. Search results in `WebPage` objects may include results that appear in other answer types as well.
 >
 > If you use the `responseFilter` query parameter without specifying any filter values, don't use the `count` and `offset` parameters. 
 
 ## Next steps
 
 * [What are the Bing Web Search APIs?](bing-api-comparison.md)
-* [Bing Web Search API v7 reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-web-api-v7-reference)
-* [Bing Custom Search API v7 reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-custom-search-api-v7-reference)
-* [Bing News Search API v7 reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference)
-* [Bing Video Search API v7 reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference)
-* [Bing Image Search API v7 reference](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference)
+* [Bing Web Search API v7 reference](reference/endpoints.md)

@@ -1,17 +1,15 @@
 ---
 title: "Quickstart: Perform a web search with C# - Bing Web Search REST API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send requests to the Bing Web Search REST API using C#, and receive a JSON response.
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
-ms.custom: seodec2018
-#Customer intent: As a new developer, I want to make my first call to the Bing Web Search API and receive a response using C#.
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Search the web using the Bing Web Search REST API and C#
@@ -28,7 +26,7 @@ Here are a few things that you'll need before running this quickstart:
 * Linux/macOS: [Mono](https://www.mono-project.com/)  
 * A subscription key
 
-[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
+[!INCLUDE [bing-web-search-quickstart-signup](../../../includes/bing-web-search-quickstart-signup.md)]
 
 ## Create a project and declare dependencies
 
@@ -60,8 +58,6 @@ namespace BingSearchApisQuickstart
 
 A few variables must be set before we can continue. Add this code to the `Program` class you created in the previous section: 
 
-1. For the `uriBase` value, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource. 
-
 2. Confirm that `uriBase` is valid and replace the `accessKey` value with a subscription key from your Azure account. 
 
 3. Optionally, customize the search query by replacing the value for `searchTerm`. 
@@ -74,8 +70,8 @@ const string accessKey = "enter key here";
  * against the endpoint for your Bing Web search instance in your Azure
  * dashboard.
  */
-const string uriBase = "https://api.cognitive.microsoft.com/bing/v7.0/search";
-const string searchTerm = "Microsoft Cognitive Services";
+const string uriBase = "https://api.bing.microsoft.com/bing/v7.0/search";
+const string searchTerm = "Microsoft Bing Search Services";
 ```
 
 ## Declare the Main method
@@ -368,6 +364,5 @@ Responses from the Bing Web Search API are returned as JSON. This sample respons
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Web Search API single-page app tutorial](../tutorial-bing-web-search-single-page-app.md)
+> [Bing Web Search API single-page app tutorial](../tutorial/bing-web-search-single-page-app.md)
 
-[!INCLUDE [bing-web-search-quickstart-see-also](../../../../includes/bing-web-search-quickstart-see-also.md)]

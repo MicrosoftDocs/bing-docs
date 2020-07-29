@@ -1,17 +1,15 @@
 ---
 title: "Quickstart: Perform a search with Python - Bing Web Search API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send requests to the Bing Web Search REST API using Python, and receive a JSON response
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
-ms.custom: seodec2018, tracking-python
-#Customer intent: As a new developer, I want to make my first call to the Bing Web Search API and receive a response using Python.
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Use Python to call the Bing Web Search API  
@@ -26,7 +24,7 @@ This example is run as a Jupyter notebook on [MyBinder](https://mybinder.org). T
 
 * [Python 2.x or 3.x](https://www.python.org/)
 
-[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
+[!INCLUDE [bing-web-search-quickstart-signup](../../../includes/bing-web-search-quickstart-signup.md)]
 
 ## Define variables
 
@@ -37,23 +35,23 @@ This example is run as a Jupyter notebook on [MyBinder](https://mybinder.org). T
    assert subscription_key
    ```
 
-2. Declare the Bing Web Search API endpoint. You can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. Declare the Bing Web Search API endpoint. 
 
    ```python
-   search_url = "https://api.cognitive.microsoft.com/bing/v7.0/search"
+   search_url = "https://api.bing.microsoft.com/bing/v7.0/search"
    ```
 
 3. Optionally, customize the search query by replacing the value for `search_term`.
 
    ```python
-   search_term = "Azure Cognitive Services"
+   search_term = "Microsoft Bing Search Services"
    ```
 
 ## Make a request
 
 This code uses the `requests` library to call the Bing Web Search API and return the results as a JSON object. The API key is passed in the `headers` dictionary, and the search term and query parameters are passed in the `params` dictionary. 
 
-For a complete list of options and parameters, see [Bing Web Search API v7](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-web-api-v7-reference).
+For a complete list of options and parameters, see [Bing Web Search API v7](../reference/query-parameters.md).
 
 ```python
 import requests
@@ -87,6 +85,5 @@ To run this code locally, see the complete [sample available on GitHub](https://
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Web Search API single-page app tutorial](../tutorial-bing-web-search-single-page-app.md)
+> [Bing Web Search API single-page app tutorial](../tutorial/bing-web-search-single-page-app.md)
 
-[!INCLUDE [bing-web-search-quickstart-see-also](../../../../includes/bing-web-search-quickstart-see-also.md)]

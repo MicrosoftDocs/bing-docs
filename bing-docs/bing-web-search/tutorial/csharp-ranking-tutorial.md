@@ -1,16 +1,15 @@
 ---
 title: Using rank to display search results
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Shows how to use the Bing RankingResponse answer to display search results in rank order.
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.assetid: 2575A80C-FC74-4631-AE5D-8101CF2591D3
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: tutorial
-ms.date: 06/24/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Build a console app search client in C#
@@ -105,7 +104,7 @@ static void RunQueryAndDisplayResults(string userQuery)
         client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "<YOUR_SUBSCRIPTION_KEY_GOES_HERE>");
         var queryString = HttpUtility.ParseQueryString(string.Empty);
         queryString["q"] = userQuery;
-        var query = "https://api.cognitive.microsoft.com/bing/v7.0/search?" + queryString;
+        var query = "https://api.bing.microsoft.com/bing/v7.0/search?" + queryString;
 
         // Run the query
         HttpResponseMessage httpResponseMessage = client.GetAsync(query).Result;
@@ -217,7 +216,7 @@ Before showing how to display the results in ranked order, take a look at a samp
 }
 ```
 
-The `rankingResponse` JSON object ([documentation](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-web-api-v7-reference#rankingresponse)) describes the appropriate display order for search results. It includes one or more of the following, prioritized groups:
+The [rankingResponse](../reference/response-objects.md#rankingresponse)) describes the appropriate display order for search results. It includes one or more of the following, prioritized groups:
 
 - `pole`: The search results to get the most visible treatment (for example, displayed above the mainline and sidebar).
 - `mainline`: The search results to display in the mainline.
@@ -327,4 +326,4 @@ WebPage:
 
 ## Next steps
 
-Read more about [using ranking to display results](rank-results.md).
+Read more about [using ranking to display results](../rank-results.md).

@@ -1,18 +1,15 @@
 ---
 title: "Quickstart: Perform a web search with Go - Bing Web Search REST API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send requests to the Bing Web Search REST API using Go, and receive a JSON response
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
-ms.reviewer: nhoyadx@gmail.com, v-gedod, erhopf
-ms.custom: seodec2018
-#Customer intent: As a new developer, I want to make my first call to the Bing Web Search API and receive a response using Go.
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Search the web using the Bing Web Search REST API and Go
@@ -27,7 +24,7 @@ Here are a few things that you'll need before running this quickstart:
 * [Go binaries](https://golang.org/dl/)
 * A subscription key
 
-[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]  
+[!INCLUDE [bing-web-search-quickstart-signup](../../../includes/bing-web-search-quickstart-signup.md)]  
 
 ## Create a project and import core libraries
 
@@ -109,8 +106,6 @@ type BingAnswer struct {
 
 This code declares the main function and sets the required variables: 
 
-1. For the `endpoint` value, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource. 
-
 2. Confirm that the endpoint is correct and replace the `token` value with a valid subscription key from your Azure account. 
  
 3. Optionally, customize the search query by replacing the value for `searchTerm`.
@@ -118,10 +113,10 @@ This code declares the main function and sets the required variables:
 ```go
 // Declare the main function. This is required for all Go programs.
 func main() {
-// Verify the endpoint URI and replace the token string with a valid subscription key.  
-    const endpoint = "https://api.cognitive.microsoft.com/bing/v7.0/search"
+// Replace the token string with a valid subscription key.  
+    const endpoint = "https://api.bing.microsoft.com/bing/v7.0/search"
     token := "YOUR-ACCESS-KEY"
-    searchTerm := "Microsoft Cognitive Services"
+    searchTerm := "Microsoft Bing Search Services"
 
 // The remaining code in this quickstart goes in the main function.
 
@@ -256,9 +251,9 @@ type BingAnswer struct {
         } `json:"rankingResponse"`
 }
 
-// Verify the endpoint URI and replace the token string with a valid subscription key.  
+// Replace the token string with a valid subscription key.  
 func main() {
-    const endpoint = "https://api.cognitive.microsoft.com/bing/v7.0/search"
+    const endpoint = "https://api.bing.microsoft.com/bing/v7.0/search"
     token := "YOUR-ACCESS-KEY"
     searchTerm := "Microsoft Cognitive Services"
 
@@ -325,6 +320,4 @@ Cognitive Services - msdn.microsoft.com || https://msdn.microsoft.com/magazine/m
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Web Search API single-page app tutorial](../tutorial-bing-web-search-single-page-app.md)
-
-[!INCLUDE [bing-web-search-quickstart-see-also](../../../../includes/bing-web-search-quickstart-see-also.md)]
+> [Bing Web Search API single-page app tutorial](../tutorial/bing-web-search-single-page-app.md)

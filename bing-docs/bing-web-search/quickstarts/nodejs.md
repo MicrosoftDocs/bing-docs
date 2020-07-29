@@ -1,17 +1,15 @@
 ---
 title: "Quickstart: Perform a web search with Node.js - Bing Web Search REST API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send requests to the Bing Web Search REST API using Node.js, and receive a JSON response
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
-ms.custom: seodec2018
-#Customer intent: As a new developer, I want to make my first call to the Bing Web Search API and receive a response using Node.js.
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Search the web using the Bing Web Search REST API and Node.js
@@ -25,7 +23,7 @@ Here are a few things that you'll need before running this quickstart:
 * [Node.js 6](https://nodejs.org/en/download/) or later
 * A subscription key
 
-[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
+[!INCLUDE [bing-web-search-quickstart-signup](../../../includes/bing-web-search-quickstart-signup.md)]
 
 ## Create a project and declare required modules
 
@@ -54,8 +52,6 @@ if (!SUBSCRIPTION_KEY) {
 
 This function makes a secure GET request and saves the search query as a query parameter in the path. 
 
-1. For the `hostname` value, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.  
-
 2. Use `encodeURIComponent` to escape invalid characters. The subscription key is passed in a header. 
 
 3. The callback receives a [response](https://nodejs.org/dist/latest-v10.x/docs/api/http.html#http_class_http_serverresponse) that subscribes to the `data` event to aggregate the JSON body, the `error` event to log any issues, and the `end` event to know when the message should be considered complete. 
@@ -65,7 +61,7 @@ This function makes a secure GET request and saves the search query as a query p
 ```javascript
 function bingWebSearch(query) {
   https.get({
-    hostname: 'api.cognitive.microsoft.com',
+    hostname: 'api.bing.microsoft.com',
     path:     '/bing/v7.0/search?q=' + encodeURIComponent(query),
     headers:  { 'Ocp-Apim-Subscription-Key': SUBSCRIPTION_KEY },
   }, res => {
@@ -93,7 +89,7 @@ function bingWebSearch(query) {
 Let's look at the program's arguments to find the query. The first argument is the path to the node, the second is our filename, and the third is your query. If the query is absent, a default query of "Microsoft Cognitive Services" is used.
 
 ```javascript
-const query = process.argv[2] || 'Microsoft Cognitive Services'
+const query = process.argv[2] || 'Microsoft Bing Search Services'
 ```
 
 ## Make a request and print the response
@@ -118,7 +114,7 @@ if (!SUBSCRIPTION_KEY) {
 }
 function bingWebSearch(query) {
   https.get({
-    hostname: 'api.cognitive.microsoft.com',
+    hostname: 'api.bing.microsoft.com',
     path:     '/bing/v7.0/search?q=' + encodeURIComponent(query),
     headers:  { 'Ocp-Apim-Subscription-Key': SUBSCRIPTION_KEY },
   }, res => {
@@ -139,7 +135,7 @@ function bingWebSearch(query) {
     })
   })
 }
-const query = process.argv[2] || 'Microsoft Cognitive Services'
+const query = process.argv[2] || 'Microsoft Bing Search Services'
 bingWebSearch(query)
 ```
 
@@ -272,6 +268,4 @@ Responses from the Bing Web Search API are returned as JSON. This sample respons
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Web Search API single-page app tutorial](../tutorial-bing-web-search-single-page-app.md)
-
-[!INCLUDE [bing-web-search-quickstart-see-also](../../../../includes/bing-web-search-quickstart-see-also.md)]
+> [Bing Web Search API single-page app tutorial](../tutorial/bing-web-search-single-page-app.md)

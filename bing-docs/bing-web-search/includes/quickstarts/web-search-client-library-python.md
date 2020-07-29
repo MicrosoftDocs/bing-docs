@@ -1,13 +1,13 @@
 ---
 title: Bing Web Search Python client library quickstart 
-titleSuffix: Azure Cognitive Services
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+titleSuffix: Bing Search Services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.topic: include
-ms.date: 03/05/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 The Bing Web Search client library makes it easy to integrate Bing Web Search into your Python application. In this quickstart, you'll learn how to send a request, receive a JSON response, and filter and parse the results.
@@ -22,7 +22,7 @@ The Bing Web Search SDK is compatible with Python 2.7, 3.3, 3.4, 3.5, and 3.6. W
 * [virtualenv](https://docs.python.org/3/tutorial/venv.html) for Python 2.7
 * [venv](https://pypi.python.org/pypi/virtualenv) for Python 3.x
 
-[!INCLUDE [bing-web-search-quickstart-signup](~/includes/bing-web-search-quickstart-signup.md)]
+[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
 
 ## Create and configure your virtual environment
 
@@ -78,7 +78,7 @@ If the response contains web pages, images, news, or videos, the first result fo
 
 1. Create a new Python project using your favorite IDE or editor.
 
-1. Copy this sample code into your project. `endpoint` can be the global endpoint below, or the [custom subdomain](~/articles/cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.:  
+1. Copy this sample code into your project.   
 
     ```python
     # Import required modules.
@@ -312,7 +312,3 @@ When you're done with this project, make sure to remove your subscription key fr
 
 > [!div class="nextstepaction"]
 > [Cognitive Services Python SDK samples](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples)
-
-## See also
-
-* [Azure Python SDK reference](https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/websearch)
