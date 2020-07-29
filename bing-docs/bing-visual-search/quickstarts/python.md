@@ -1,17 +1,16 @@
 ---
 title: "Quickstart: Get image insights using the REST API and Python - Bing Visual Search"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Learn how to upload an image to the Bing Visual Search API and get insights about it.
-services: cognitive-services
+services: bing-search-services
 author: swhite-msft
-manager: nitinme
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: quickstart
-ms.date: 05/22/2020
+ms.date: 07/15/2020
 ms.author: scottwhi
-ms.custom: tracking-python
 ---
 
 # Quickstart: Get image insights using the Bing Visual Search REST API and Python
@@ -22,7 +21,7 @@ Use this quickstart to make your first call to the Bing Visual Search API. This 
 
 * [Python 3.x](https://www.python.org/)
 
-[!INCLUDE [cognitive-services-bing-visual-search-signup-requirements](../../../../includes/cognitive-services-bing-visual-search-signup-requirements.md)]
+[!INCLUDE [bing-visual-search-signup-requirements](../../../includes/bing-visual-search-signup-requirements.md)]
 
 ## Initialize the application
 
@@ -32,11 +31,11 @@ Use this quickstart to make your first call to the Bing Visual Search API. This 
     import requests, json
     ```
 
-2. Create variables for your subscription key, endpoint, and the path to the image you're uploading. For the value of `BASE_URI`, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. Create variables for your subscription key, endpoint, and the path to the image you're uploading. 
 
     ```python
 
-    BASE_URI = 'https://api.cognitive.microsoft.com/bing/v7.0/images/visualsearch'
+    BASE_URI = 'https://api.bing.microsoft.com/bing/v7.0/images/visualsearch'
     SUBSCRIPTION_KEY = 'your-subscription-key'
     imagePath = 'your-image-path'
     ```
@@ -91,4 +90,4 @@ except Exception as ex:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a Visual Search single-page web app](../tutorial-bing-visual-search-single-page-app.md)
+> [Create a Visual Search single-page web app](../tutorial/bing-visual-search-single-page-app.md)

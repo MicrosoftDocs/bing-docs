@@ -1,15 +1,15 @@
 ---
 title: What is the Bing Visual Search API?
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Bing Visual Search provides details or insights about an image such as similar images or shopping sources.
-services: cognitive-services
+services: bing-search-services
 author: swhite-msft
-manager: nitinme
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: overview
-ms.date: 12/19/2019
+ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
@@ -50,9 +50,6 @@ The Bing Visual Search API is a RESTful web service, making it easy to call from
 
 ## Next steps
 
-First, try the Bing Visual Search API [interactive demo](https://azure.microsoft.com/services/cognitive-services/bing-visual-search/).
-The demo shows how you can quickly customize a search query and scour the web for images.
-
 To get started quickly with your first request, see the quickstarts:
 
 * [C#](quickstarts/csharp.md)
@@ -65,8 +62,7 @@ To get started quickly with your first request, see the quickstarts:
 
 ## See also
 
-* The [Images - Visual Search](https://docs.microsoft.com/rest/api/cognitiveservices/bingvisualsearch/images/visualsearch) reference describes definitions and information on the endpoints, request headers, responses, and query parameters that you can use to request image-based search results.
+* The [Images - Visual Search](reference/endpoints.md) reference describes definitions and information on the endpoints, request headers, responses, and query parameters that you can use to request image-based search results.
 
 * The [Bing Search API use and display requirements](../bing-web-search/use-display-requirements.md) specify acceptable uses of the content and information gained through the Bing search APIs.
 
-* Visit the [Bing Search API hub page](../bing-web-search/search-the-web.md) to explore the other available APIs.

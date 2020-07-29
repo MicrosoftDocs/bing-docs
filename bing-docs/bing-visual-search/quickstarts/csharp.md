@@ -1,15 +1,15 @@
 ---
 title: "Quickstart: Get image insights using the REST API and C# - Bing Visual Search"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Learn how to upload an image to the Bing Visual Search API and get insights about it.
-services: cognitive-services
+services: bing-search-services
 author: swhite-msft
-manager: nitinme
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: quickstart
-ms.date: 05/22/2020
+ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
@@ -23,7 +23,7 @@ This quickstart demonstrates how to upload an image to the Bing Visual Search AP
 * The [Json.NET framework](https://www.newtonsoft.com/json), available as a NuGet package.
 * If you're using Linux/MacOS, you can run this application using [Mono](https://www.mono-project.com/).
 
-[!INCLUDE [cognitive-services-bing-visual-search-signup-requirements](../../../../includes/cognitive-services-bing-visual-search-signup-requirements.md)]
+[!INCLUDE [bing-visual-search-signup-requirements](../../../includes/bing-visual-search-signup-requirements.md)]
 
 ## Create and initialize a project
 
@@ -37,11 +37,11 @@ This quickstart demonstrates how to upload an image to the Bing Visual Search AP
     using System.Collections.Generic;
     ```
 
-2. Add variables for your subscription key, endpoint, and path to the image you want to upload. For the `uriBase` value, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. Add variables for your subscription key, endpoint, and path to the image you want to upload. 
 
     ```csharp
         const string accessKey = "<my_subscription_key>";
-        const string uriBase = "https://api.cognitive.microsoft.com/bing/v7.0/images/visualsearch";
+        const string uriBase = "https://api.bing.microsoft.com/bing/v7.0/images/visualsearch";
         static string imagePath = @"<path_to_image>";
     ```
 
@@ -266,4 +266,4 @@ If you use `HttpClient`, you can use the `MultipartFormDataContent` class to bui
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a Visual Search single-page web app](../tutorial-bing-visual-search-single-page-app.md)
+> [Create a Visual Search single-page web app](../tutorial/bing-visual-search-single-page-app.md)

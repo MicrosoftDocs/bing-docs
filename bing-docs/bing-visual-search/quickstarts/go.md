@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Get image insights using the REST API and Go - Bing Visual Search"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Learn how to upload an image to the Bing Visual Search API and get insights about it.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Get image insights using the Bing Visual Search REST API and Go
@@ -22,7 +22,7 @@ Use this quickstart to make your first call to the Bing Visual Search API using 
 * Install the [Go binaries](https://golang.org/dl/).
 * Install the go-spew deep pretty printer, which is used to display results. To install go-spew, use the `$ go get -u https://github.com/davecgh/go-spew` command.
 
-[!INCLUDE [cognitive-services-bing-visual-search-signup-requirements](../../../../includes/cognitive-services-bing-visual-search-signup-requirements.md)]
+[!INCLUDE [bing-visual-search-signup-requirements](../../../includes/bing-visual-search-signup-requirements.md)]
 
 ## Project and libraries
 
@@ -110,12 +110,11 @@ The following code declares the main function and assigns the required variables
 1. Confirm that the endpoint is correct and replace the `token` value with a valid subscription key from your Azure account. 
 2. For `batchNumber`, assign a GUID, which is required for the leading and trailing boundaries of the POST data. 
 3. For `fileName`, assign the image file to use for the POST. 
-4. For `endpoint`, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
 
 ```go
 func main() {
 	// Verify the endpoint URI and replace the token string with a valid subscription key.se
-	endpoint := "https://api.cognitive.microsoft.com/bing/v7.0/images/visualsearch"
+	endpoint := "https://api.bing.microsoft.com/bing/v7.0/images/visualsearch"
 	token := "YOUR-ACCESS-KEY"
 	client := &http.Client{}
 	batchNumber := "d7ecc447-912f-413e-961d-a83021f1775f"
@@ -293,5 +292,4 @@ The results identify images similar to the image contained in the POST body. The
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [What is the Bing Visual Search API?](../overview.md)
-> [Bing Web Search quickstart in Go](../../Bing-Web-Search/quickstarts/go.md)
+> [Create a Visual Search single-page web app](../tutorial/bing-visual-search-single-page-app.md)

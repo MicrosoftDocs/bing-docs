@@ -1,15 +1,15 @@
 ---
 title: "Tutorial: Crop an image with the Bing Visual Search SDK"
+titleSuffix: Bing Search Services
 description: Use the Bing Visual Search SDK to get insights from specific ares on an image.
-services: cognitive-services
-titleSuffix: Azure Cognitive Services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: tutorial
-ms.date: 03/31/2019
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Tutorial: Crop an image with the Bing Visual Search SDK for C#
@@ -36,13 +36,13 @@ This tutorial illustrates how to:
         - Microsoft.Rest.ClientRuntime.Azure
         - Newtonsoft.Json
 
-[!INCLUDE [cognitive-services-bing-image-search-signup-requirements](../../../includes/cognitive-services-bing-visual-search-signup-requirements.md)]
+[!INCLUDE [bing-image-search-signup-requirements](../../../includes/bing-visual-search-signup-requirements.md)]
 
 ## Specify the image crop area
 
 This application crops an area of this image of the Microsoft senior leadership team. This crop area is defined using upper-left and lower-right coordinates, represented as a percentage of the whole image:  
 
-![Microsoft Senior Leadership Team](./media/MS_SrLeaders.jpg)
+![Microsoft Senior Leadership Team](../media/MS_SrLeaders.jpg)
 
 This image is cropped by creating an `ImageInfo` object from the crop area, and loading the `ImageInfo` object into a `VisualSearchRequest`. The `ImageInfo` object also includes the URL of the image:
 
@@ -105,7 +105,7 @@ Getting the actual image URLs requires a cast that reads an `ActionType` as `Ima
 
 ## Next steps
 > [!div class="nextstepaction"]
-> [Create a Visual Search single-page web app](tutorial-bing-visual-search-single-page-app.md)
+> [Create a Visual Search single-page web app](bing-visual-search-single-page-app.md)
 
 ## See also
-> [What is the Bing Visual Search API?](https://docs.microsoft.com/azure/cognitive-services/bing-visual-search/overview)
+> [What is the Bing Visual Search API?](../overview)

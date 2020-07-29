@@ -1,15 +1,15 @@
 ---
 title: "Quickstart: Get image insights using the REST API and Java - Bing Visual Search"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Learn how to upload an image to the Bing Visual Search API and get insights about it.
-services: cognitive-services
+services: bing-search-services
 author: swhite-msft
-manager: nitinme
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: quickstart
-ms.date: 05/22/2020
+ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
@@ -23,7 +23,7 @@ Use this quickstart to make your first call to the Bing Visual Search API. This 
 * The [Gson Java library](https://github.com/google/gson)
 * [Apache HttpComponents](https://hc.apache.org/downloads.cgi)
 
-[!INCLUDE [cognitive-services-bing-visual-search-signup-requirements](../../../../includes/cognitive-services-bing-visual-search-signup-requirements.md)]
+[!INCLUDE [bing-visual-search-signup-requirements](../../../includes/bing-visual-search-signup-requirements.md)]
 
 ## Create and initialize a project
 
@@ -48,10 +48,10 @@ Use this quickstart to make your first call to the Bing Visual Search API. This 
     import org.apache.http.impl.client.HttpClientBuilder;
     ```
 
-2. Create variables for your API endpoint, subscription key, and the path to your image. For the `endpoint` value, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. Create variables for your API endpoint, subscription key, and the path to your image. 
 
     ```java
-    static String endpoint = "https://api.cognitive.microsoft.com/bing/v7.0/images/visualsearch";
+    static String endpoint = "https://api.bing.microsoft.com/bing/v7.0/images/visualsearch";
     static String subscriptionKey = "your-key-here";
     static String imagePath = "path-to-your-image";
     ```
@@ -126,4 +126,4 @@ public static String prettify(String json_text) {
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a Visual Search single-page web app](../tutorial-bing-visual-search-single-page-app.md)
+> [Build a Visual Search single-page web app](../tutorial/bing-visual-search-single-page-app.md)

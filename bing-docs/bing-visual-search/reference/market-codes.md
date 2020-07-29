@@ -16,6 +16,14 @@ ms.author: scottwhi
 The following table lists the market code values that you may use to specify the [mkt](query-parameters.md#mkt) query parameter. Bing returns content for only these markets. The list is subject to change.  
 
 For a list of country codes that you may specify in the [cc](query-parameters.md#cc) query parameter, see [Country codes](#country-codes).  
+
+
+> [!NOTE]
+> The following market restrictions apply:
+>
+> - Image recognition annotations are available in English only.
+> - Recipe, shopping, and pages-including insights are available in the en-US market only.
+
   
 |Country/Region|Language|Market code 
 |-|-|- 

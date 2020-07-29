@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Get image insights using the REST API and Ruby - Bing Visual Search"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Learn how to upload an image to the Bing Visual Search API and get insights about it.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Get image insights using the Bing Visual Search REST API and Ruby
@@ -22,7 +22,7 @@ Use this quickstart to make your first call to the Bing Visual Search API using 
 * Install [Ruby 2.4 or later](https://www.ruby-lang.org/en/downloads/).
 * Get a subscription key.
 
-[!INCLUDE [cognitive-services-bing-visual-search-signup-requirements](../../../../includes/cognitive-services-bing-visual-search-signup-requirements.md)]
+[!INCLUDE [bing-visual-search-signup-requirements](../../../includes/bing-visual-search-signup-requirements.md)]
 
 ## Project and required modules
 
@@ -46,7 +46,7 @@ The following code declares the main function and assigns the required variables
 
 ```ruby
 accessKey = "ACCESS-KEY"
-uri  = "https://api.cognitive.microsoft.com"
+uri  = "https://api.bing.microsoft.com"
 path = "/bing/v7.0/images/visualsearch"
 batchNumber = "dc05c75a-6b5e-4059-b556-0b7c079819a5"
 fileName = "red-dress.jpg"
@@ -282,5 +282,4 @@ JSON Response:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [What is the Bing Visual Search API?](../overview.md)
-> [Build a Visual Search single-page web app](../tutorial-bing-visual-search-single-page-app.md)
+> [Build a Visual Search single-page web app](../tutorial/bing-visual-search-single-page-app.md)

@@ -1,17 +1,16 @@
 ---
 title: Using insights token - Bing Visual Search
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Shows how to use an image's insight token with Bing Visual Search API to get insights about an image.
-services: cognitive-services
+services: bing-search-services
 author: swhite-msft
-manager: nitinme
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: conceptual
-ms.date: 4/26/2019
+ms.date: 7/15/2020
 ms.author: scottwhi
-ms.custom: tracking-python
 ---
 
 # Use an insights token to get insights for an image
@@ -109,7 +108,7 @@ namespace VisualSearchInsightsToken
         // Replace the accessKey string value with your valid subscription key.
         const string accessKey = "<yoursubscriptionkeygoeshere>";
 
-        const string uriBase = "https://api.cognitive.microsoft.com/bing/v7.0/images/visualsearch";
+        const string uriBase = "https://api.bing.microsoft.com/bing/v7.0/images/visualsearch";
 
         // Update with an insights token from an image object that the /images/search API endpoint returns.
         static string insightsToken = @"ccid_tmaGQ2eU*mid_D12339146CFEDF3D409CC7A66D2C98D0D71904D4*simid_608022145667564759*thid_OIP.tmaGQ2eUI1yq3yll!_jn9kwHaFZ";
@@ -308,7 +307,7 @@ import org.apache.http.impl.client.HttpClientBuilder;
 public class InsightsToken {
 
     
-    static String endpoint = "https://api.cognitive.microsoft.com/bing/v7.0/images/visualsearch";
+    static String endpoint = "https://api.bing.microsoft.com/bing/v7.0/images/visualsearch";
     static String subscriptionKey = "<yoursubscriptionkeygoeshere>";
 
     // To get an insights, call the /images/search endpoint. Get the token from
@@ -397,7 +396,7 @@ To run this application, follow these steps:
 var request = require('request');
 var FormData = require('form-data');
 
-var baseUri = 'https://api.cognitive.microsoft.com/bing/v7.0/images/visualsearch';
+var baseUri = 'https://api.bing.microsoft.com/bing/v7.0/images/visualsearch';
 var subscriptionKey = '<yoursubscriptionkeygoeshere>';
 
 // To get an insights, call the /images/search endpoint. Get the token from
@@ -455,7 +454,7 @@ To run this application, follow these steps:
 import requests
 import json
 
-BASE_URI = 'https://api.cognitive.microsoft.com/bing/v7.0/images/visualsearch'
+BASE_URI = 'https://api.bing.microsoft.com/bing/v7.0/images/visualsearch'
 
 SUBSCRIPTION_KEY = '<yoursubscriptionkeygoeshere>'
 
@@ -494,7 +493,6 @@ if __name__ == '__main__':
 
 ## Next steps
 
-[Create a Visual Search single-page web app](tutorial-bing-visual-search-single-page-app.md)  
+[Create a Visual Search single-page web app](tutorial/bing-visual-search-single-page-app.md)  
 [What is the Bing Visual Search API?](overview.md)  
-[Try Cognitive Services](https://aka.ms/bingvisualsearchtryforfree)  
-[Images - Visual Search](https://aka.ms/bingvisualsearchreferencedoc)
+[Images - Visual Search reference](reference/endpoints.md)

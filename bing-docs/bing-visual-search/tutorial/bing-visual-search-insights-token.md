@@ -1,16 +1,16 @@
 ---
 title: "Find similar images from previous searches using image insights tokens and the Bing Visual Search API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use the Bing Visual Search client library to get URLs of images from previous searches. 
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: tutorial
-ms.date: 03/31/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 # Tutorial: Find similar images from previous searches using an image insights token
 
@@ -29,11 +29,11 @@ The full source code for this tutorial can be found with additional error handli
         - Newtonsoft.Json
 
 
-[!INCLUDE [cognitive-services-bing-visual-search-signup-requirements](../../../includes/cognitive-services-bing-visual-search-signup-requirements.md)]
+[!INCLUDE [bing-visual-search-signup-requirements](../../../includes/bing-visual-search-signup-requirements.md)]
 
 ## Get the ImageInsightsToken from the Bing Image Search client library
 
-This application uses an `ImageInsightsToken` obtained through the [Bing Image Search client library](https://docs.microsoft.com/azure/cognitive-services/bing-image-search/image-search-sdk-quickstart). In a new C# console application, create a client to call the API using `ImageSearchClient()`. Then use `SearchAsync()` with your query:
+This application uses an `ImageInsightsToken` obtained through the [Bing Image Search client library](../../bing-image-search/quickstarts/client-libraries.md). In a new C# console application, create a client to call the API using `ImageSearchClient()`. Then use `SearchAsync()` with your query:
 
 ```csharp
 var client = new ImageSearchClient(new Microsoft.Azure.CognitiveServices.Search.ImageSearch.ApiKeyServiceClientCredentials(subKey));
@@ -118,7 +118,7 @@ Getting the actual image URLs from action types requires a cast that reads an `A
     }
 ```
 
-For more information about these data types, see [Images - Visual Search](https://docs.microsoft.com/rest/api/cognitiveservices/bingvisualsearch/images/visualsearch).
+For more information about these data types, see [Images - Visual Search](../reference/response-objects.md).
 
 ## Returned URLs
 
@@ -139,4 +139,4 @@ As shown above, the `TopicResults` and `ImageResults` types contain queries for 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a Visual Search single-page web app](tutorial-bing-visual-search-single-page-app.md)
+> [Create a Visual Search single-page web app](bing-visual-search-single-page-app.md)

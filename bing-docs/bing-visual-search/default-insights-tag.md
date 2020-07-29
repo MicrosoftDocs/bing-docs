@@ -1,15 +1,15 @@
 ---
 title: Default insights tag - Bing Visual Search
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Provides details about the default insights that Bing Visual Search returns about an image.
-services: cognitive-services
+services: bing-search-services
 author: swhite-msft
-manager: nitinme
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: conceptual
-ms.date: 04/04/2019
+ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
@@ -96,7 +96,7 @@ The default insights tag is the one with the `displayName` field set to an empty
 
 ## PagesIncluding insight
 
-The PagesIncluding insight provides a list of webpages that include this image. It's actually a list of `Image` objects, and the `hostPageUrl` field contains the URL to the webpage that includes the image. For example usage, see [PagesIncluding insight example](./bing-insights-usage.md#pagesincluding-insight-example).
+The PagesIncluding insight provides a list of webpages that include this image. It's actually a list of `Image` objects, and the `hostPageUrl` field contains the URL to the webpage that includes the image. For example usage, see [PagesIncluding insight example](bing-insights-usage.md#pagesincluding-insight-example).
 
 ```json
       {
@@ -135,7 +135,7 @@ The PagesIncluding insight provides a list of webpages that include this image. 
 
 ## ShoppingSources insight
 
-The ShoppingSources insight provides a list of websites where the user can buy the item shown in the image. The list of offers includes the URL of the webpage where the user can buy the item, the price of the item, and rating or review details. For example usage, see [ShoppingSources example](./bing-insights-usage.md#shoppingsources-insight-example).
+The ShoppingSources insight provides a list of websites where the user can buy the item shown in the image. The list of offers includes the URL of the webpage where the user can buy the item, the price of the item, and rating or review details. For example usage, see [ShoppingSources example](bing-insights-usage.md#shoppingsources-insight-example).
 
 ```json
       {
@@ -199,7 +199,7 @@ The MoreSizes insight identifies the number of sizes (larger or smaller) of the 
 
 ## VisualSearch insight
 
-The VisualSearch insight provides a list of images that are visually similar to the original image (contains content that's similar to the content shown in the original image). For example usage, see [VisualSearch insight example](./bing-insights-usage.md#visualsearch-insight-example).
+The VisualSearch insight provides a list of images that are visually similar to the original image (contains content that's similar to the content shown in the original image). For example usage, see [VisualSearch insight example](bing-insights-usage.md#visualsearch-insight-example).
 
 ```json
       {
@@ -239,7 +239,7 @@ The VisualSearch insight provides a list of images that are visually similar to 
 
 ## Recipes insight
 
-The Recipes insight provides a list of webpages that include a recipe for making the food shown in the image. For example usage, see [Recipes insight example](./bing-insights-usage.md#recipes-insight-example).
+The Recipes insight provides a list of webpages that include a recipe for making the food shown in the image. For example usage, see [Recipes insight example](bing-insights-usage.md#recipes-insight-example).
 
 ```json
       {
@@ -373,7 +373,7 @@ The ProductVisualSearch insight provides a list of images of products that are v
 
 ## RelatedSearches insight
 
-The RelatedSearches insight provides a list of related searches made by others (based on other users' search terms). For example usage, see [RelatedSearches insight example](./bing-insights-usage.md#relatedsearches-insight-example).
+The RelatedSearches insight provides a list of related searches made by others (based on other users' search terms). For example usage, see [RelatedSearches insight example](bing-insights-usage.md#relatedsearches-insight-example).
 
 ```json
       {

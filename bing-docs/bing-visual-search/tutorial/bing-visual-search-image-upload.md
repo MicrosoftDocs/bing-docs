@@ -1,15 +1,15 @@
 ---
 title:  "Tutorial: How to upload image using the Bing Visual Search API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Learn how to upload an image to Bing, get insights about it, display the response.
-services: cognitive-services
+services: bing-search-services
 author: swhite-msft
-manager: nitinme
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: tutorial
-ms.date: 03/31/2020
+ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
@@ -28,7 +28,7 @@ The tutorial app illustrates how to:
 
 ## Prerequisites
 
-[!INCLUDE [cognitive-services-bing-image-search-signup-requirements](../../../includes/cognitive-services-bing-visual-search-signup-requirements.md)]
+[!INCLUDE [bing-image-search-signup-requirements](../../../includes/bing-visual-search-signup-requirements.md)]
 
 ## Create and structure the webpage
 
@@ -467,7 +467,7 @@ function addDivContent(div, tag, json) {
 
 ## Display insights for different actions
 
-The following functions display insights for different actions. The functions either provide a clickable image or clickable link that sends you to a webpage with more information about the image. This page is either hosted by Bing.com or the image's original website. Not all of the insights' data is displayed in this application. To see all the fields available for an insight, see the [Images - Visual Search](https://aka.ms/bingvisualsearchreferencedoc) reference.
+The following functions display insights for different actions. The functions either provide a clickable image or clickable link that sends you to a webpage with more information about the image. This page is either hosted by Bing.com or the image's original website. Not all of the insights' data is displayed in this application. To see all the fields available for an insight, see the [Images - Visual Search](../reference/response-objects.md) reference.
 
 > [!NOTE]
 > There's a minimum amount of insight information you must display in the page. See the [Bing Search API use and display requirements](../bing-web-search/use-display-requirements.md) for more.
@@ -769,4 +769,4 @@ Add the following `<style>` section to the `<head>` tag to organize the layout o
 ## Next steps
 
 >[!div class="nextstepaction"]
-> [Tutorial: Find similar images from previous searches using ImageInsightsToken](./tutorial-visual-search-insights-token.md)
+> [Tutorial: Find similar images from previous searches using ImageInsightsToken](bing-visual-search-insights-token.md)
