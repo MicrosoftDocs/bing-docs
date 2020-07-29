@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Search for videos using the REST API and Ruby - Bing Video Search"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send video search requests to the Bing Video Search REST API using Ruby.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Search for videos using the Bing Video Search REST API and Ruby
@@ -23,7 +23,7 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 
 * Ruby 2.4 or later
 
-[!INCLUDE [cognitive-services-bing-video-search-signup-requirements](../../../../includes/cognitive-services-bing-video-search-signup-requirements.md)]
+[!INCLUDE [bing-video-search-signup-requirements](../../../includes/bing-video-search-signup-requirements.md)]
 
 ## Create and initialize the application
 
@@ -35,10 +35,10 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
     require 'json'
     ```
 
-2. Create variables for the API endpoint, video API search path, your subscription key, and search term. For the `url` value, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. Create variables for the API endpoint, video API search path, your subscription key, and search term. 
 
     ```ruby
-    uri  = "https://api.cognitive.microsoft.com"
+    uri  = "https://api.bing.microsoft.com"
     path = "/bing/v7.0/videos/search"
     term = "kittens"
     accessKey = "your-subscription-key" 
@@ -189,7 +189,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../tutorial-bing-video-search-single-page-app.md)
+> [Create a single-page web app](../tutorial/bing-video-search-single-page-app.md)
 
 ## See also 
 

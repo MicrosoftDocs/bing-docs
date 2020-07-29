@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Search for videos using the REST API and C# - Bing Video Search"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send video search requests to the Bing Video Search REST API using C#.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Search for videos using the Bing Video Search REST API and C#
@@ -24,7 +24,7 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 * The [Json.NET](https://www.newtonsoft.com/json) framework, available as a NuGet package.
 * If you're using Linux/MacOS, you can run this application by using [Mono](https://www.mono-project.com/).
 
-[!INCLUDE [cognitive-services-bing-video-search-signup-requirements](../../../../includes/cognitive-services-bing-video-search-signup-requirements.md)]
+[!INCLUDE [bing-video-search-signup-requirements](../../../includes/bing-video-search-signup-requirements.md)]
 
 ## Create and initialize a project
 
@@ -38,11 +38,11 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
     using System.Collections.Generic;
     ```
 
-2. Add variables for your subscription key, endpoint, and search term. For the `uriBase` value, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+2. Add variables for your subscription key, endpoint, and search term. 
 
     ```csharp
     const string accessKey = "enter your key here";
-    const string uriBase = "https://api.cognitive.microsoft.com/bing/v7.0/videos/search";
+    const string uriBase = "https://api.bing.microsoft.com/bing/v7.0/videos/search";
     const string searchTerm = "kittens";
     ```
 
@@ -221,7 +221,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../tutorial-bing-video-search-single-page-app.md)
+> [Build a single-page web app](../tutorial/bing-video-search-single-page-app.md)
 
 ## See also 
 

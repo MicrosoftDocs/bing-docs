@@ -1,13 +1,13 @@
 ---
 title: Bing Video Search C# client library quickstart 
-titleSuffix: Azure Cognitive Services
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+titleSuffix: Bing Search Services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.topic: include
-ms.date: 03/19/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 Use this quickstart to begin searching for news with the Bing Video Search client library for C#. While Bing Video Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7/BingVideoSearch) with additional annotations, and features.
@@ -25,7 +25,7 @@ Installing the [[NuGet Video Search SDK package]](https://www.nuget.org/packages
 * Microsoft.Rest.ClientRuntime.Azure
 * Newtonsoft.Json
 
-[!INCLUDE [cognitive-services-bing-video-search-signup-requirements](~/includes/cognitive-services-bing-video-search-signup-requirements.md)]
+[!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
 
 
 ## Create and initialize a project
@@ -75,7 +75,7 @@ Installing the [[NuGet Video Search SDK package]](https://www.nuget.org/packages
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single page web app](../../tutorial-bing-video-search-single-page-app.md)
+> [Create a single page web app](../../tutorial/bing-video-search-single-page-app.md)
 
 ## See also 
 

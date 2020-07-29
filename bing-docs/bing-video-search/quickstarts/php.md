@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Search for videos using the REST API and PHP - Bing Video Search"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send video search requests to the Bing Video Search REST API using PHP
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Quickstart: Search for videos using the Bing Video Search REST API and PHP
@@ -23,7 +23,7 @@ Although this application is written in PHP, the API is a RESTful Web service co
 
 * PHP 5.6 or later
 
-[!INCLUDE [cognitive-services-bing-video-search-signup-requirements](../../../../includes/cognitive-services-bing-video-search-signup-requirements.md)]
+[!INCLUDE [bing-video-search-signup-requirements](../../../includes/bing-video-search-signup-requirements.md)]
 
 ## Running the application
 
@@ -32,7 +32,7 @@ The [Bing Video Search API](https://docs.microsoft.com/rest/api/cognitiveservice
 1. Enable secure HTTP support in your `php.ini` file by uncommenting the `;extension=php_openssl.dll` line, as described in the following code.
 2. Create a new PHP project in your favorite IDE or editor.
 3. Add the code provided below.
-4. Replace the `$accessKey` value with an access key valid for your subscription. For the `$endpoint` value, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+4. Replace the `$accessKey` value with an access key valid for your subscription. 
 5. Run the program.
 
 ```php
@@ -48,11 +48,7 @@ The [Bing Video Search API](https://docs.microsoft.com/rest/api/cognitiveservice
 // Replace the accessKey string value with your valid access key.
 $accessKey = 'enter key here';
 
-// Verify the endpoint URI.  At this writing, only one endpoint is used for Bing
-// search APIs.  In the future, regional endpoints may be available.  If you
-// encounter unexpected authorization errors, double-check this value against
-// the endpoint for your Bing Search instance in your Azure dashboard.
-$endpoint = 'https://api.cognitive.microsoft.com/bing/v7.0/videos/search';
+$endpoint = 'https://api.bing.microsoft.com/bing/v7.0/videos/search';
 
 $term = 'kittens';
 
@@ -208,7 +204,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../tutorial-bing-video-search-single-page-app.md)
+> [Build a single-page web app](../tutorial/bing-video-search-single-page-app.md)
 
 ## See also 
 

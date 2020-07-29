@@ -1,16 +1,16 @@
 ---
 title: "Tutorial: Build a single-page Bing Video Search app"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: This tutorial explains how to use the Bing Video Search API in a single-page Web application.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: tutorial
-ms.date: 02/03/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 # Tutorial: Single-page Video Search app
 The Bing Video Search API lets you search the Web and get video results relevant to a search query. In this tutorial, we build a single-page Web application that uses the Bing search API to display search results on the page. The application includes HTML, CSS, and JavaScript components.
@@ -22,7 +22,7 @@ The Bing Video Search API lets you search the Web and get video results relevant
 > [!NOTE]
 > The JSON and HTTP headings at the bottom of the page when clicked show the JSON response and HTTP request information. These details can be useful when exploring the service.
 
-![JSON, HTTP raw results](./media/json-http-raw-results.png)
+![JSON, HTTP raw results](../media/json-http-raw-results.png)
 
 This tutorial app illustrates how to:
 > [!div class="checklist"]
@@ -36,7 +36,6 @@ This tutorial app illustrates how to:
 
 The tutorial page is entirely self-contained; it does not use any external frameworks, style sheets, or image files. It uses only widely supported JavaScript language features and works with current versions of all major Web browsers.
 
-In this tutorial, we discuss selected portions of the source code. The complete [source code](tutorial-bing-video-search-single-page-app-source.md) is available. To run the example, copy and paste the source code into a text editor and save it as `bing.html`.
 
 ## App components
 Like any single-page Web app, this tutorial application includes three parts:
@@ -91,7 +90,7 @@ The HTML `<form>` tag `onsubmit` calls the `bingWebSearch` function to return se
 ## Selecting search options
 The following figure shows the query text box and options that define a search.
 
-![Bing News Search options](media/video-search-options.png)
+![Bing News Search options](../media/video-search-options.png)
 
 The HTML form includes elements with the following names:
 
@@ -136,7 +135,7 @@ function bingSearchOptions(form) {
 For example, the `SafeSearch` parameter in an actual API call can be `strict`, or `moderate`, with `moderate` being the default.
 
 ## Performing the request
-Given the query, the options string, and the API key, the `BingWebSearch` function uses an `XMLHttpRequest` object to make the request to the Bing Search endpoint. You can use the global endpoint below, or the [custom subdomain](../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+Given the query, the options string, and the API key, the `BingWebSearch` function uses an `XMLHttpRequest` object to make the request to the Bing Search endpoint. 
 
 ```javascript
 // Search on the query, using search options, authenticated by the key.
@@ -149,7 +148,7 @@ function bingWebSearch(query, options, key) {
     showDiv("noresults", "Working. Please wait.");
     hideDivs("pole", "mainline", "sidebar", "_json", "_headers", "paging1", "paging2", "error");
 
-    var endpoint = "https://api.cognitive.microsoft.com/bing/v7.0/videos/search";
+    var endpoint = "https://api.bing.microsoft.com/bing/v7.0/videos/search";
     var request = new XMLHttpRequest();
     var queryurl = endpoint + "?q=" + encodeURIComponent(query) + "&" + options;
 
@@ -394,7 +393,7 @@ npm install -g cors-proxy-server
 ```
 
 Next, change the Bing Web Search endpoint in the HTML file to:\
-`http://localhost:9090/https://api.cognitive.microsoft.com/bing/v7.0/search`
+`http://localhost:9090/https://api.bing.microsoft.com/bing/v7.0/search`
 
 Finally, start the CORS proxy with the following command:
 
@@ -406,4 +405,4 @@ Leave the command window open while you use the tutorial app; closing the window
 
 ## Next steps
 > [!div class="nextstepaction"]
-> [Bing Video Search API reference](//docs.microsoft.com/rest/api/cognitiveservices/bing-video-api-v7-reference)
+> [Bing Video Search API reference](../reference/endpoints.md)

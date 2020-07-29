@@ -1,35 +1,30 @@
 ---
 title: "Send search requests to the Bing Video Search API"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: This article describes the parameters and attributes of requests sent to the Bing Video Search API, as well as the JSON response object it returns.
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: conceptual
-ms.date: 12/03/2019
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 # Sending search requests to the Bing Video Search API
 
 This article describes the parameters and attributes of requests sent to the Bing Video Search API, as well as the JSON response object it returns. 
 
-[!INCLUDE [cognitive-services-bing-video-search-signup-requirements](../../../../includes/cognitive-services-bing-video-search-signup-requirements.md)]
+[!INCLUDE [bing-video-search-signup-requirements](../../../includes/bing-video-search-signup-requirements.md)]
 
-## Suggest search terms with the Bing Autosuggest API
-
-If you provide a search box where the user enters their search term, use the [Bing Autosuggest API](../../bing-autosuggest/get-suggested-search-terms.md) to improve the experience. The API returns suggested query strings based on partial search terms as the user types.
-
-After the user enters their search term, URL-encode it before setting the [q](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference#query) query parameter. For example, if the user enters *sailing dinghies*, set `q` to `sailing+dinghies` or `sailing%20dinghies`.
 
 ## Sending a request
 
 To get Video search results, you'd send a GET request to the following endpoint:  
   
 ```
-https://api.cognitive.microsoft.com/bing/v7.0/videos/search
+https://api.bing.microsoft.com/bing/v7.0/videos/search
 ```
    
 The request must use the HTTPS protocol.
@@ -37,25 +32,25 @@ The request must use the HTTPS protocol.
 We recommend that all requests originate from a server. Distributing the key as part of a client application provides more opportunity for a malicious third party to access it. Making calls from a server also provides a single upgrade point for future versions of the API.
 
   
-The request must specify the [q](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference#query) query parameter, which contains the user's search term. Although it's optional, the request should also specify the [mkt](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference#mkt) query parameter, which identifies the market where you want the results to come from. For a list of optional query parameters such as `pricing`, see [Query Parameters](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference#query-parameters). All query parameter values must be URL encoded.  
+The request must specify the [q](../reference/query-parameters.md#query) query parameter, which contains the user's search term. Although it's optional, the request should also specify the [mkt](../reference/query-parameters.md#mkt) query parameter, which identifies the market where you want the results to come from. For a list of optional query parameters such as `pricing`, see [Query Parameters](../reference/query-parameters.md). All query parameter values must be URL encoded.  
   
-The request must specify the [Ocp-Apim-Subscription-Key](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference#subscriptionkey) header. Although optional, you are encouraged to also specify the following headers:  
+The request must specify the [Ocp-Apim-Subscription-Key](../reference/headers.md#subscriptionkey) header. Although optional, you are encouraged to also specify the following headers:  
   
--   [User-Agent](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference#useragent)  
--   [X-MSEdge-ClientID](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference#clientid)  
--   [X-Search-ClientIP](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference#clientip)  
--   [X-Search-Location](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference#location)  
+-   [User-Agent](../reference/headers.md#useragent)  
+-   [X-MSEdge-ClientID](../reference/headers.md#clientid)  
+-   [X-Search-ClientIP](../reference/headers.md#clientip)  
+-   [X-Search-Location](../reference/headers.md#location)  
 
 The client IP and location headers are important for returning location aware content.  
 
-For a list of all request and response headers, see [Headers](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference#headers).
+For a list of all request and response headers, see [Headers](../reference/headers.md).
 
 ## Example search request
 
 The following shows a search request that includes all the suggested query parameters and headers. If it's your first time calling any of the Bing APIs, don't include the client ID header. Only include the client ID if you've previously called a Bing API and Bing returned a client ID for the user and device combination. 
   
 ```  
-GET https://api.cognitive.microsoft.com/bing/v7.0/videos/search?q=sailing+dinghies&mkt=en-us HTTP/1.1  
+GET https://api.bing.microsoft.com/bing/v7.0/videos/search?q=sailing+dinghies&mkt=en-us HTTP/1.1  
 Ocp-Apim-Subscription-Key: 123456789ABCDE  
 User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 822)  
 X-Search-ClientIP: 999.999.999.999  
@@ -68,7 +63,7 @@ Host: api.cognitive.microsoft.com
 
 The following shows the response to the previous request. The example also shows the Bing-specific response headers.
 
-[!INCLUDE [cognitive-services-bing-url-note](../../../../includes/cognitive-services-bing-url-note.md)]
+[!INCLUDE [bing-url-note](../../../includes/bing-url-note.md)]
 
 ```json
 BingAPIs-TraceId: 76DD2C2549B94F9FB55B4BD6FEB6AC
@@ -142,9 +137,7 @@ BingAPIs-Market: en-US
 
 ## Next steps
 
-Try out the API. Go to [Video Search API Testing Console](https://dev.cognitive.microsoft.com/docs/services/56b43f3ccf5ff8098cef3809/operations/58113fe5e31dac0a1ce6b0a8). 
-
-For details about consuming the response objects, see [Searching the Web for Videos](../search-the-web.md).
+For details about consuming the response objects, see [Searching the Web for Videos](get-videos.md).
 
 For details about getting insights about a video such as related searches, see [Video Insights](../video-insights.md).  
   

@@ -1,13 +1,13 @@
 ---
 title: Bing Video Search Java client library quickstart 
-titleSuffix: Azure Cognitive Services
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+titleSuffix: Bing Sesarch Services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.topic: include
-ms.date: 03/19/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 Use this quickstart to begin searching for news with the Bing Video Search client library for Java. While Bing Video Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples/tree/master/Search/BingVideoSearch), with additional annotations, and features.
@@ -18,7 +18,7 @@ Use this quickstart to begin searching for news with the Bing Video Search clien
 
 * The [Gson library](https://github.com/google/gson)
 
-[!INCLUDE [cognitive-services-bing-video-search-signup-requirements](~/includes/cognitive-services-bing-video-search-signup-requirements.md)]
+[!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
 
 Install the Bing Video Search client library dependencies by using Maven, Gradle, or another dependency management system. The Maven POM file requires the following declaration:
 
@@ -56,7 +56,7 @@ Create a new Java project in your favorite IDE or editor, and import the followi
 
     ```java
     public static VideoSearchAPIImpl getClient(final String subscriptionKey) {
-        return new VideoSearchAPIImpl("https://api.cognitive.microsoft.com/bing/v7.0/",
+        return new VideoSearchAPIImpl("https://api.bing.microsoft.com/bing/v7.0/",
                 new ServiceClientCredentials() {
                 //...
                 }
@@ -150,7 +150,7 @@ Create a new Java project in your favorite IDE or editor, and import the followi
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single page web app](../../tutorial-bing-video-search-single-page-app.md)
+> [Create a single page web app](../../tutorial/bing-video-search-single-page-app.md)
 
 ## See also 
 

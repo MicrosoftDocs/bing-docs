@@ -87,8 +87,6 @@
     href: https://azure.microsoft.com/try/cognitive-services/?api=bing-web-search-api
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
-  - name: Language support
-    href: language-support.md
   - name: Analytics for Bing Video Search API
     href: ../bing-web-search/bing-web-stats.md
     maintainContext: true

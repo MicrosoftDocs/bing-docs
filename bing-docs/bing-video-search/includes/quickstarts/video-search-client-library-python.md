@@ -1,18 +1,18 @@
 ---
 title: Bing Video Search Python client library quickstart 
-titleSuffix: Azure Cognitive Services
-services: cognitive-services
-author: aahill
-manager: nitinme
-ms.service: cognitive-services
+titleSuffix: Bing Search Services
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
+ms.service: bing-search-services
 ms.topic: include
-ms.date: 03/19/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 
 Use this quickstart to begin searching for news with the Bing Video Search client library for Python. While Bing Video Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/blob/master/samples/search/video_search_samples.py) with additional annotations, and features.
 
-[!INCLUDE [cognitive-services-bing-video-search-signup-requirements](~/includes/cognitive-services-bing-video-search-signup-requirements.md)]
+[!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
 
 ## Prerequisites
 
@@ -81,7 +81,7 @@ client = VideoSearchAPI(endpoint, CognitiveServicesCredentials(subscription_key)
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single page web app](../../tutorial-bing-video-search-single-page-app.md)
+> [Create a single page web app](../../tutorial/bing-video-search-single-page-app.md)
 
 ## See also 
 

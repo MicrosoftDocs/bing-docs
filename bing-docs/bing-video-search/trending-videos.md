@@ -1,14 +1,14 @@
 ---
 title: Search the web for trending videos using the Bing Video Search API
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Learn how to use the Bing Video Search API to search the web for trending videos.
-services: cognitive-services
+services: bing-search-services
 author: swhite-msft
-manager: nitinme
-ms.service: cognitive-services
+manager: ehansen
+ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: conceptual
-ms.date: 01/31/2019
+ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
@@ -21,7 +21,7 @@ The Bing Video Search API enables you to find today's trending videos from acros
 To get today's trending videos from the Bing Video Search API, send the following GET request:  
   
 ```cURL
-GET https://api.cognitive.microsoft.com/bing/v7.0/videos/trending?mkt=en-us HTTP/1.1
+GET https://api.bing.microsoft.com/bing/v7.0/videos/trending?mkt=en-us HTTP/1.1
 Ocp-Apim-Subscription-Key: 123456789ABCDE  
 User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 822)  
 X-MSEdge-ClientIP: 999.999.999.999  
@@ -32,21 +32,7 @@ Host: api.cognitive.microsoft.com
 
 ## Market support
 
-The following markets support trending videos.  
- 
--   en-AU (English, Australia)  
--   en-CA (English, Canada)  
--   en-GB (English, Great Britain)  
--   en-ID (English, Indonesia)  
--   en-IE (English, Ireland)  
--   en-IN (English, India)  
--   en-NZ (English, New Zealand)  
--   en-PH (English, Philippines)  
--   en-SG (English, Singapore)  
--   en-US (English, United States)  
--   en-WW (English, Worldwide aggregate code)  
--   en-ZA (English, South Africa)  
--   zh-CN (Chinese, China)
+For a list of supported markets where you can use this API, see [Market codes](reference/market-codes.md#trending-video-api-markets
 
 ## Example JSON response  
 

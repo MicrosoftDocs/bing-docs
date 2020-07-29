@@ -1,15 +1,15 @@
 ---
 title: Upgrade Bing Video Search API v5 to v7
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Identifies the parts of your application that you need to update to use version 7.
-services: cognitive-services
+services: bing-search-services
 author: swhite-msft
-manager: nitinme
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: conceptual
-ms.date: 01/31/2019
+ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
@@ -21,7 +21,11 @@ This upgrade guide identifies the changes between version 5 and version 7 of the
 
 ### Endpoints
 
-- The endpoint's version number changed from v5 to v7. For example, `https://api.cognitive.microsoft.com/bing/v7.0/videos/search`.
+- The `cognitive` subdomain changed to `bing`. 
+- The endpoint's version number changed from v5 to v7.
+
+New search endpoint: `https://api.bing.microsoft.com/bing/v7.0/videos/search`
+
 
 ### Error response objects and error codes
 
@@ -67,11 +71,11 @@ Blocked|InvalidRequest.Blocked
 
 ### Query parameters
 
-- Renamed the `modulesRequested` query parameter to [modules](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference#modulesrequested).  
+- Renamed the `modulesRequested` query parameter to [modules](reference/query-parameters.md#modulesrequested).  
 
 ### Object changes
 
-- Renamed the `nextOffsetAddCount` field of [Videos](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference#videos) to `nextOffset`. The way you use the offset has also changed. Previously, you would set the [offset](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference#offset) query parameter to the `nextOffset` value plus the previous offset value plus the number of videos in the result. Now, you simply set the `offset` query parameter to the `nextOffset` value.  
+- Renamed the `nextOffsetAddCount` field of [Videos](reference/response-objects.md#videos) to `nextOffset`. The way you use the offset has also changed. Previously, you would set the [offset](reference/query-parameters.md#offset) query parameter to the `nextOffset` value plus the previous offset value plus the number of videos in the result. Now, you simply set the `offset` query parameter to the `nextOffset` value.  
   
-- Changed the data type of the `relatedVideos` field from `Video[]` to [VideosModule](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference#videosmodule) (see [VideoDetails](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference#videodetails)).
+- Changed the data type of the `relatedVideos` field from `Video[]` to `VideosModule` (see [VideoDetails](reference/response-objects.md#videodetails)).
 

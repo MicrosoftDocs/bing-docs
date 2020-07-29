@@ -1,16 +1,16 @@
 ---
 title: "Quickstart: Search for videos using the REST API and Java - Bing Video Search"
-titleSuffix: Azure Cognitive Services
+titleSuffix: Bing Search Services
 description: Use this quickstart to send video search requests to the Bing Video Search REST API using Java.
-services: cognitive-services
-author: aahill
-manager: nitinme
+services: bing-search-services
+author: swhite-msft
+manager: ehansen
 
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: quickstart
-ms.date: 05/22/2020
-ms.author: aahi
+ms.date: 07/15/2020
+ms.author: scottwhi
 ---
 # Quickstart: Search for videos using the Bing Video Search REST API and Java
 
@@ -24,7 +24,7 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 
 * The [Gson library](https://github.com/google/gson)
 
-[!INCLUDE [cognitive-services-bing-video-search-signup-requirements](../../../../includes/cognitive-services-bing-video-search-signup-requirements.md)]
+[!INCLUDE [bing-video-search-signup-requirements](../../../includes/bing-video-search-signup-requirements.md)]
 
 
 ## Create and initialize a project
@@ -56,12 +56,12 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
     }
     ```
 
-3. Create a new method named `SearchVideos()` with variables for your API endpoint host and path, your subscription key, and search term. This method returns a `SearchResults` object. For the `host` value, you can use the global endpoint in the following code, or use the [custom subdomain](../../../cognitive-services/cognitive-services-custom-subdomains.md) endpoint displayed in the Azure portal for your resource.
+3. Create a new method named `SearchVideos()` with variables for your API endpoint host and path, your subscription key, and search term. This method returns a `SearchResults` object. 
 
     ```java
     public static SearchResults SearchVideos (String searchQuery) throws Exception {
         static String subscriptionKey = "enter your key here";
-        static String host = "https://api.cognitive.microsoft.com";
+        static String host = "https://api.bing.microsoft.com";
         static String path = "/bing/v7.0/videos/search";
         static String searchTerm = "kittens";
     }
@@ -243,7 +243,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../tutorial-bing-video-search-single-page-app.md)
+> [Build a single-page web app](../tutorial/bing-video-search-single-page-app.md)
 
 ## See also 
 
