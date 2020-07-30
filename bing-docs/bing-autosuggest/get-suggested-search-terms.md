@@ -45,6 +45,6 @@ To get started quickly with your first request, see [Making Your First Query](qu
 
 Familiarize yourself with the [Bing Autosuggest API v7](reference/endpoints.md) reference. The reference contains the list of endpoints, headers, and query parameters that you'd use to request suggested query terms, and the definitions of the response objects.
 
-Learn how to search the web by using the [Bing Web Search API](../bing-web-search/search-the-web.md) and explore the other [Bing Search APIs](../bing-web-search/bing-api-comparison.md).
+Learn how to search the web by using the [Bing Web Search API](../bing-web-search/overview.md) and explore the other [Bing Search APIs](../bing-web-search/bing-api-comparison.md).
 
 Be sure to read [Bing Use and Display Requirements](../bing-web-search/use-display-requirements.md) so you don't break any of the rules about using the search results.

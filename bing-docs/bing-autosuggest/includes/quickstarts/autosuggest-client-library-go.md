@@ -204,7 +204,7 @@ go run sample-app.go
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Autosuggest tutorial](../../tutorials/autosuggest.md)
+> [Bing Autosuggest tutorial](../../tutorial/autosuggest.md)
 
 ## See also
 

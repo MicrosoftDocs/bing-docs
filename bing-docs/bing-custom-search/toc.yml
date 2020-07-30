@@ -30,7 +30,7 @@
 - name: Tutorials
   items:
     - name: Build a Custom Search web page
-      href: ./tutorials/custom-search-web-page.md
+      href: ./tutorial/custom-search-web-page.md
 - name: Samples
   items:
     - name: Code samples
@@ -46,10 +46,10 @@
     - name: Share your custom search instance
       href: share-your-custom-search.md
     - name: Handle hit highlighting
-      href: ../Bing-Web-Search/hit-highlighting.md
+      href: ../bing-web-search/hit-highlighting.md
       maintainContext: true
     - name: Page through search results
-      href: ../Bing-Web-Search/paging-search-results.md
+      href: ../bing-web-search/page-results.md
       maintainContext: true
 - name: Reference
   items:
@@ -85,8 +85,6 @@
     href: endpoint-custom.md
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
-  - name: Language support
-    href: language-support.md
   - name: Analytics for Bing News Search API
     href: ../bing-web-search/bing-web-stats.md
     maintainContext: true

@@ -21,6 +21,27 @@ For a list of possible objects, see **In this article** in the right pane.
 The top-level object in the response depends on the endpoint you call. If you call `/images/search`, the top-level object in the response is the [Images](#images) object; and for `/images/trending`, it's [TrendingImages](#trendingimages). If the request fails, the top-level object is the [ErrorResponse](#errorresponse) object.
 
 
+## AggregateOffer  
+
+Defines a list of offers from merchants that are related to the image.  
+  
+|Element|Description|Type
+|-|-|-
+|<a name="offers"></a>offers|A list of offers from merchants that have offerings related to the image.|[Offer](#offer)[] 
+  
+
+## AggregateRating  
+
+Defines the metrics that indicate how well an item was rated by others.  
+  
+|Name|Value|Type
+|-|-|-
+|<a name="bestrating"></a>bestRating|The highest rated review. The possible values are 1.0 through 5.0.|float 
+|<a name="ratingvalue"></a>ratingValue|The mean (average) rating. The possible values are 1.0 through 5.0.|float
+|<a name="reviewcount"></a>reviewCount|The number of times the recipe has been rated or reviewed.|Unsigned Integer
+|<a name="rating-text"></a>text|The mean (average) rating, in string form.|String
+
+
 ## Category  
 
 Defines the category of trending images.  
@@ -79,6 +100,33 @@ Defines an image that is relevant to the query.
 |webSearchUrl|A URL to the Bing search results for this image.|String  
 |<a name="image-width"></a>width|The width of the source image, in pixels.|Unsigned Short 
 
+  
+## ImageCaption  
+
+Defines an image's caption.  
+  
+|Name|Value|Type
+|-|-|-
+|<a name="caption"></a>caption|A caption about the image.|String 
+|<a name="caption-datasourceurl"></a>dataSourceUrl|The URL to the website where the caption was found. You must attribute the caption to the source. For example, by displaying the domain name from the URL next to the caption and using the URL to link to the source website.|String
+|<a name="caption-relatedsearches"></a>relatedSearches|A list of entities found in the caption. Use the contents of the `Query` object to find the entity in the caption and create a link. The link takes the user to images of the entity.|[Query](#query)
+ 
+  
+## ImageGallery  
+
+Defines a link to a webpage that contains a collection of related images.  
+  
+|Name|Value|Type
+|-|-|-
+|<a name="gallery-creator"></a>creator|The person that owns the collection. You must attribute the collection to the creator.|[Person](#person)
+|<a name="gallery-description"></a>description|A description of the collection. The description may be empty.|String 
+|<a name="gallery-followerscount"></a>followersCount|The number of users on the social network that follow the creator.|Unsigned Integer 
+|<a name="gallery-imagescount"></a>imagesCount|The number of related images found in the collection.|Unsigned Integer  
+|<a name="gallery-name"></a>name|The name of the gallery.|String
+|<a name="gallery-source"></a>source|The publisher or social network where the images were found. You must attribute the publisher as the source where the collection was found.|String 
+|<a name="gallery-thumbnailurl"></a>thumbnailUrl|The URL to a thumbnail of one of the images found in the collection.|String
+|<a name="gallery-url"></a>url|The URL to the webpage that contains the collection of related images.|String
+
 
 ## Images  
 
@@ -98,12 +146,57 @@ The top-level object that the response includes when an image request succeeds.
 |<a name="images-value">value|A list of images that are relevant to the query. If there are no results, the array is empty.|[Image](#image)[]
 |webSearchUrl|A URL to the Bing search results for the requested images.|String 
 
+
+## ImageInsightsResponse
+  
+The top-level object that the response includes when an image insights request succeeds.  
+  
+For information about requesting image insights, see the [insightsToken](query-parameters.md#insightstoken) query parameter.  
+  
+The [modules](query-parameters.md#modulesrequested) query parameter affects the fields that Bing includes in the response. If you set `modules` to only Caption, then this object includes only the `imageCaption` field.  
+  
+|Name|Value|Type
+|-|-|-  
+|_type|A type hint, which is set to ImageInsights.|String  
+|<a name="insights-bestrepresentativequery"></a>bestRepresentativeQuery|The query term that best represents the image. Clicking the link in the `Query` object, takes the user to a webpage with more pictures of the image.|[Query](#query)  
+|<a name="insights-imagecaption"></a>imageCaption|The caption to use for the image.|[ImageCaption](#imagecaption) 
+|<a name="insights-imageinsightstoken"></a>imageInsightsToken|A token that you use in a subsequent call to the Image Search API to get more information about the image. For information about using this token, see the [insightsToken](#insightstoken) query parameter.<br /><br /> This token has the same usage as the token in the [Image](#image) object. |String|  
+|<a name="insights-imagetags"></a>imageTags|A list of characteristics of the content found in the image. For example, if the image is of a person, the tags might indicate the person's gender and the type of clothes they're wearing.|[ImageTagsModule](#imagetagsmodule)|  
+|<a name="insights-pagesincluding"></a>pagesIncluding|A list of webpages that contain the image. To access the webpage, use the URL in the image's `hostPageUrl` field.|[ImagesModule](#imagesmodule)|  
+|<a name="insights-recipes"></a>recipes|A list of recipes related to the image. For example, if the image is of an apple pie, the list contains recipes for making an apple pie.|[RecipesModule](#recipesmodule)|  
+|<a name="insights-recognizedentitygroups"></a>recognizedEntityGroups|A list of groups that contain images of entities that match the entity found in the specified image. For example, the response might include images from the general celebrity group if the entity was recognized in that group.|[RecognizedEntitiesModule](#recognizedentitiesmodule)|  
+|<a name="insights-relatedcollections"></a>relatedCollections|A list of links to webpages that contain related images.|[RelatedCollectionsModule](#relatedcollectionsmodule)|  
+|<a name="insights-relatedsearches"></a>relatedSearches|A list of related queries made by others.|[RelatedSearchesModule](#relatedsearchesmodule)|  
+|<a name="insights-shoppingsources"></a>shoppingSources|A list of merchants that offer items related to the image. For example, if the image is of an apple pie, the list contains merchants that are selling apple pies.|[AggregateOffer](#aggregateoffer)|  
+|<a name="insights-visuallysimilarimages"></a>visuallySimilarImages|A list of images that are visually similar to the original image. For example, if the specified image is of a sunset over a body of water, the list of similar images are of a sunset over a body of water.<br /><br /> If the specified image is of a person, similar images might be of the same person or they might be of persons dressed similarly or in a similar setting.<br /><br /> The criteria for similarity continues to evolve.|[ImagesModule](#imagesmodule)|  
+|<a name="insights-visuallysimilarproducts"></a>visuallySimilarProducts|A list of images that contain products that are visually similar to products found in the original image. For example, if the specified image contains a dress, the list of similar images contain a dress.<br /><br /> The image provides summary information about offers that Bing found online for the product.|[ImagesModule](#imagesmodule)|  
+
+
+## ImagesModule  
+
+Defines a list of images.  
+  
+|Element|Description|Type
+|-|-|-  
+|value|A list of images.|[Image](#image)[]
+  
+
+## ImageTagsModule  
+
+Defines the characteristics of content found in an image.  
+  
+|Element|Description|Type
+|-|-|-
+|value|A list of tags that describe the characteristics of the content found in the image. For example, if the image is of a musical artist, the list might include Female, Dress, and Music to indicate the person is female music artist that's wearing a dress.|[Tag](#tag)[]  
+
+
 ## InsightsMetadata  
 
 Defines a count of the number of websites where you can shop or perform other actions related to the image.  
   
 |Name|Value|Type
 |-|-|-
+|<a name="insightsmetadata-aggregateoffer"></a>aggregateOffer|A summary of the online offers of products found in the image. For example, if the image is of a dress, the offer might identify the lowest price and the number of offers found.<br /><br /> Only visually similar products insights include this field.<br /><br /> The offer includes the following fields: `Name`, `AggregateRating`, `OfferCount`, and `LowPrice`.|[Offer](#offer)  
 |<a name="availablesizescount"></a>availableSizesCount|The number of different sizes of the image that Bing found on one or more websites.|Unsigned Integer  
 |<a name="pagesincludingcount"></a>pagesIncludingCount|The number of webpages that include the image.|Unsigned Integer  
 |<a name="recipesourcecount"></a>recipeSourcesCount|The number of websites that offer recipes of the food seen in the image.|Unsigned Integer  
@@ -118,6 +211,66 @@ Defines the size of the media content.
 |-|-|-
 |height|The height of the media content, in pixels.|Integer
 |width|The width of the media content, in pixels.|Integer 
+
+
+## NormalizedRectangle  
+
+Defines a region of an image. The region is defined by the coordinates of the top, left corner and bottom, right corner of the region. The coordinates are fractional values of the original image's width and height in the range 0.0 through 1.0.  
+  
+|Name|Value|Type
+|-|-|-
+|bottom|The bottom coordinate.|Float
+|left|The left coordinate.|Float
+|right|The right coordinate|Float
+|top|The top coordinate|Float
+
+  
+## Offer  
+
+Defines a merchant's offer.  
+  
+The ShoppingSources insights and SimilarProducts insights both use this object. To determine the insight that the field applies to, see the field's description.  
+  
+|Element|Description|Type
+|-|-|-
+|aggregateRating|An aggregated rating that indicates how well the product has been rated by others.<br /><br /> Used by SimilarProducts.|[AggregateRating](#aggregaterating)
+|availability|The item's availability. The following are the possible values.<br /><ul><li>Discontinued</li><li>InStock</li><li>InStoreOnly</li><li>LimitedAvailability</li><li>OnlineOnly</li><li>OutOfStock</li><li>PreOrder</li><li>SoldOut</li></ul><br /> Used by ShoppingSources.|String
+|description|A description of the item.|String  
+|lastUpdated|The last date that the offer was updated. The date is in the form YYYY-MM-DD.|Sting
+|lowPrice|The lowest price of the item that Bing found online.<br /><br /> Used by SimilarProducts.|Float
+|name|The name of the product.|String
+|offerCount|The number of offers that Bing found online.<br /><br /> Used by SimilarProducts.|Unsigned Integer
+|price|The item's price.<br /><br /> Used by ShoppingSources.|Float
+|priceCurrency|The monetary currency. For example, USD.|String
+|seller|The merchant's name.<br /><br /> Used by ShoppingSources.|[Organization](#organization)
+|url|The URL to the offer on the merchant's website.<br /><br /> Used by ShoppingSources.|String
+
+  
+## Organization  
+
+Defines information about a merchant.  
+  
+|Element|Description|Type
+|-|-|-
+|image|The merchant's logo. The `Image` object includes only the `url` field.|[Image](#image)
+|name|The merchant's name.|String
+
+  
+## Person  
+
+Defines a person.  
+  
+|Name|Value|Type
+|-|-|-
+|_type|Type hint.|String
+|description|A short description of the person.|String
+|image|An image of the person.|[Image](#image)
+|jobTitle|The person's job title.|String
+|name|The person's name.|String
+|twitterProfile|The URL of the person's twitter profile.|String
+|url|The URL to the person's social network home page, if applicable.|String
+|webSearchUrl|The URL to the Bing search results page that contains information about this person.|String
+
 
 ## Pivot  
 
@@ -140,6 +293,97 @@ Defines a search query.
 |<a name="query-text"></a>text|The query string. Use this string as the query term in a new search request.|String  
 |<a name="query-thumbnail"></a>thumbnail|The URL to a thumbnail of a related image.<br/><br/>The object includes this field only for pivot suggestions and related searches.|[Thumbnail](#thumbnail) 
 |<a name="query-websearchurl"></a>webSearchUrl|The URL that takes the user to the Bing search results page for the query.|String
+
+  
+## Recipe  
+
+Defines a cooking recipe.  
+  
+|Element|Description|Type
+|-|-|-
+|aggregateRating|Aggregated ratings that indicate how well the recipe has been rated by others.|[AggregateRating](#aggregaterating)
+|cookTime|The amount of time the food takes to cook. For example, PT25M. For information about the time format, see [https://en.wikipedia.org/wiki/ISO_8601#Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations).|String
+|creator|The recipe's author.|[Person](#person)
+|name|The name of the recipe.|String
+|prepTime|The amount of time required to prepare the ingredients. For example, PT15M. For information about the time format, see [https://en.wikipedia.org/wiki/ISO_8601#Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations).|String
+|thumbnailUrl|The URL to a thumbnail image of the prepared food.|String
+|totalTime|The total amount of time it takes to prepare and cook the recipe. For example, PT45M. For information about the time format, see [https://en.wikipedia.org/wiki/ISO_8601#Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations).|String
+|url|The URL that takes the user to the webpage that contains the recipe.|String
+
+  
+## RecipesModule  
+
+Defines a list of recipes.  
+  
+|Element|Description|Type
+|-|-|-
+|value|A list of recipes.|[Recipe](#recipe)[]
+
+  
+## RecognizedEntitiesModule  
+
+Defines a list of previously recognized entities.  
+  
+|Element|Description|Type
+|-|-|-
+|value|A list of recognized entities.|[RecognizedEnityGroup](#recognizedentitygroup)[]
+
+  
+## RecognizedEntity  
+
+Defines a recognized entity.  
+  
+|Element|Description|Type
+|-|-|-
+|entity|The entity that was recognized.<br/><br/>The following are the possible entity objects.<ul><li>[Person](#person)</li></ul>|Object
+|matchConfidence|The confidence that Bing has that the entity in the image matches this entity. The confidence ranges from 0.0 through 1.0 with 1.0 being very confident.|Float  
+
+  
+## RecognizedEntityGroup  
+
+Defines a group of previously recognized entities.  
+  
+|Element|Description|Type
+|-|-|-
+|name|The name of the group where images of the entity were also found.<br/><br/>The following are possible groups.<ul><li>CelebRecognitionAnnotations &mdash; Similar to CelebrityAnnotations but provides a higher probability of an accurate match.</li><li>CelebrityAnnotations &mdash; Contains celebrities such as actors, politicians, athletes, and historical figures.</li></ul>|String
+|recognizedEntityRegions|The regions of the image that contain entities.|[RecognizedEntityRegion](#recognizedentityregion)[]
+  
+
+## RecognizedEntityRegion  
+
+Defines a region of the image where an entity was found and a list of entities that might match it.  
+  
+|Element|Description|Type
+|-|-|-
+|matchingEntities|A list of entities that Bing believes match the entity found in the region. The entities are in descending order of confidence (see the `matchConfidence` field of RecognizedEntity).|[RecognizedEntity](#recognizedentity)[]
+|region|A region of the image that contains an entity.<br /><br /> The values of the rectangle are relative to the width and height of the original image and are in the range 0.0 through 1.0.<br /><br /> For example, if the image is 300x200 and the region's top, left corner is at point (10, 20) and the bottom, right corner is at point (290, 150), then the normalized rectangle is:<br /><br /> Left = 0.0333333333333333<br /><br /> Top = 0.1<br /><br /> Right = 0.9666666666666667<br /><br /> Bottom = 0.75<br /><br /> For people, the region represents the person's face.|[NormalizedRectangle](#normalizedrectangle)  
+
+  
+## RelatedCollectionsModule  
+
+Defines a list of webpages that contain related images.  
+  
+|Element|Description|Type
+|-|-|-
+|value|A list of webpages that contain related images.|[ImageGallery](#imagegallery)[]
+
+  
+## RelatedSearchesModule  
+
+Defines a list of related searches made by others.  
+  
+|Element|Description|Type
+|-|-|-
+|value|A list of related searches made by others.|[Query](#query)[]
+
+  
+## Tag  
+
+Defines a characteristic of the content found in the image.  
+  
+|Element|Description|Type
+|-|-|-
+|name|The name of the characteristic. For example, cat, kitty, calico cat.|String
   
   
 ## Thumbnail  

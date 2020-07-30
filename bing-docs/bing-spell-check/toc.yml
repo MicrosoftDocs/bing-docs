@@ -4,7 +4,7 @@
   - name: What is the Bing Spell Check API?
     href: overview.md
   - name: Compare the Bing Search APIs
-    href: ../Bing-Web-Search/bing-api-comparison.md
+    href: ../bing-web-search/bing-api-comparison.md
     maintainContext: true
 - name: Quickstarts
   items:
@@ -30,7 +30,7 @@
 - name: Tutorials
   items:
   - name: Build a spell check web app
-    href: tutorials/spellcheck.md
+    href: tutorial/spellcheck.md
 - name: How-to guides
   items:
   - name: Upgrade from v5 to v7
@@ -77,8 +77,6 @@
     href: https://azure.microsoft.com/try/cognitive-services/?api=bing-web-search-api
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
-  - name: Language support
-    href: language-support.md
   - name: Analytics for Bing Spell Check API
     href: ../bing-web-search/bing-web-stats.md
     maintainContext: true
@@ -93,7 +91,7 @@
     - name: Knowledge Base
       href: https://cognitive.uservoice.com/knowledgebase/topics/127875-bing-search-web-image-video-news-autosuggest
 - name: Use and display requirements
-  href: ../Bing-Web-Search/use-display-requirements.md
+  href: ../bing-web-search/use-display-requirements.md
   maintainContext: true
 - name: Release notes
   href: release-notes.md

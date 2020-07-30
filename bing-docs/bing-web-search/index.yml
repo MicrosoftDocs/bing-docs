@@ -25,7 +25,7 @@ highlightedContent:
       url: bing-api-comparison.md
     - title: Page through search results
       itemType: how-to-guide
-      url: paging-search-results.md
+      url: page-results.md
     - title: Use and display requirements
       itemType: reference
       url: use-display-requirements.md
@@ -52,7 +52,7 @@ conceptualContent:
         - url: ./quickstarts/client-libraries.md?pivots=programming-language-python
           itemType: quickstart
           text: Use Python
-        - url: tutorial-bing-web-search-single-page-app.md
+        - url: tutorial/bing-web-search-single-page-app.md
           itemType: tutorial
           text: Create a single-page web-app
       footerLink:
@@ -75,7 +75,7 @@ conceptualContent:
           url: ../bing-custom-search/quickstarts/client-libraries.md?pivots=programming-language-python
         - text: Create a single page web-app
           itemType: tutorial
-          url: ../bing-custom-search/tutorials/custom-search-web-page.md
+          url: ../bing-custom-search/tutorial/custom-search-web-page.md
       footerLink:
         url: ../bing-custom-search/overview.md
         text: See more
@@ -96,7 +96,7 @@ conceptualContent:
           url: ../bing-image-search/quickstarts/client-libraries.md?pivots=programming-language-python
         - text: Create a single page web-app
           itemType: tutorial
-          url: ../bing-image-search/tutorial-bing-image-search-single-page-app.md
+          url: ../bing-image-search/tutorial/bing-image-search-single-page-app.md
       footerLink:
         url: ../bing-image-search/overview.md
         text: See more
@@ -106,21 +106,21 @@ conceptualContent:
       links:
         - text: Use C#
           itemType: quickstart
-          url: ../bing-entities-search/quickstarts/client-libraries.md?pivots=programming-language-csharp
+          url: ../bing-entity-search/quickstarts/client-libraries.md?pivots=programming-language-csharp
         - text: Use Java
           itemType: quickstart
-          url: ../bing-entities-search/quickstarts/client-libraries.md?pivots=programming-language-java
+          url: ../bing-entity-search/quickstarts/client-libraries.md?pivots=programming-language-java
         - text: Use JavaScript
           itemType: quickstart
-          url: ../bing-entities-search/quickstarts/client-libraries.md?pivots=programming-language-javascript
+          url: ../bing-entity-search/quickstarts/client-libraries.md?pivots=programming-language-javascript
         - text: Use Python
           itemType: quickstart
-          url: ../bing-entities-search/quickstarts/client-libraries.md?pivots=programming-language-python
+          url: ../bing-entity-search/quickstarts/client-libraries.md?pivots=programming-language-python
         - text: Create a single page web-app
           itemType: tutorial
-          url: ../bing-entities-search/tutorial-bing-entities-search-single-page-app.md
+          url: ../bing-entity-search/tutorial/bing-entities-search-single-page-app.md
       footerLink:
-        url: ../bing-entities-search/overview.md
+        url: ../bing-entity-search/overview.md
         text: See more
 
     - title: Bing News Search API
@@ -139,9 +139,9 @@ conceptualContent:
           url: ../bing-news-search/quickstarts/client-libraries.md?pivots=programming-language-python
         - text: Create a single page web-app
           itemType: tutorial
-          url: ../bing-news-search/tutorial-bing-news-search-single-page-app.md
+          url: ../bing-news-search/tutorial/bing-news-search-single-page-app.md
       footerLink:
-        url: ../bing-news-search/search-the-web.md
+        url: ../bing-news-search/overview.md
         text: See more
 
     - title: Bing Video Search API
@@ -160,7 +160,7 @@ conceptualContent:
           url: ../bing-video-search/quickstarts/client-libraries.md?pivots=programming-language-python
         - text: Create a single page web-app
           itemType: tutorial
-          url: ../Bing-Video-Search/tutorial-bing-video-search-single-page-app.md
+          url: ../Bing-Video-Search/tutorial/bing-video-search-single-page-app.md
       footerLink:
         url: ../Bing-Video-Search/overview.md
         text: See more
@@ -181,7 +181,7 @@ conceptualContent:
           url: ../bing-visual-search/quickstarts/client-libraries.md?pivots=programming-language-python
         - text: Crop and search an area of an image
           itemType: tutorial
-          url: ../bing-visual-search/tutorial-visual-search-crop-area-results.md
+          url: ../bing-visual-search/tutorial/visual-search-crop-area-results.md
       footerLink:
         url: ../bing-visual-search/overview.md
         text: See more
@@ -205,7 +205,7 @@ conceptualContent:
           url: ../Bing-Autosuggest/quickstarts/python.md
         - text: Create a single page web-app
           itemType: quickstart
-          url: ../Bing-Autosuggest/tutorials/autosuggest.md
+          url: ../Bing-Autosuggest/tutorial/autosuggest.md
       footerLink:
         url: ../Bing-Autosuggest/get-suggested-search-terms.md
         text: See more
@@ -226,28 +226,28 @@ conceptualContent:
           url: ../bing-spell-check/quickstarts/python.md
         - text: Create a single page web-app
           itemType: tutorial
-          url: ../bing-spell-check/tutorials/spellcheck.md
+          url: ../bing-spell-check/tutorial/spellcheck.md
       footerLink:
         url: ../bing-spell-check/overview.md
         text: See more
         
-    - title: Local Business Search API
-      links:
-        - text: Use C#
-          itemType: quickstart
-          url: ../bing-local-business-search/quickstarts/local-quickstart.md
-        - text: Use Java
-          itemType: quickstart
-          url: ../bing-local-business-search/quickstarts/local-search-java-quickstart.md
-        - text: Use Node.js
-          itemType: quickstart
-          url: ../bing-local-business-search/quickstarts/local-search-node-quickstart.md
-        - text: Use Python
-          itemType: quickstart
-          url: ../bing-local-business-search/quickstarts/local-search-python-quickstart.md
-      footerLink:
-        url: ../bing-local-business-search/overview.md
-        text: See more
+#    - title: Local Business Search API
+#      links:
+#        - text: Use C#
+#          itemType: quickstart
+#          url: ../bing-local-business-search/quickstarts/local-quickstart.md
+#        - text: Use Java
+#          itemType: quickstart
+#          url: ../bing-local-business-search/quickstarts/local-search-java-quickstart.md
+#        - text: Use Node.js
+#          itemType: quickstart
+#          url: ../bing-local-business-search/quickstarts/local-search-node-quickstart.md
+#        - text: Use Python
+#          itemType: quickstart
+#          url: ../bing-local-business-search/quickstarts/local-search-python-quickstart.md
+#      footerLink:
+#        url: ../bing-local-business-search/overview.md
+#        text: See more
 
 additionalContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -258,25 +258,25 @@ additionalContent:
       - title: REST API v7
         links:
           - text: Bing Web Search 
-            url: https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-web-api-v7-reference
+            url: reference/endpoints.md
           - text: Bing Custom Search 
-            url: https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-custom-search-api-v7-reference
+            url: ../bing-custom-search/reference/endpoints.md
           - text: Bing Image Search 
-            url: https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference
+            url: ../bing-image-search/reference/endpoints.md
           - text: Bing Entity Search 
-            url: https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-entities-api-v7-reference
+            url: ../bing-entity-search/reference/endpoints.md
           - text: Bing News Search 
-            url: https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-news-api-v7-reference
+            url: ../bing-news-search/reference/endpoints.md
           - text: Bing Video Search 
-            url: https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-video-api-v7-reference
+            url: ../bing-video-search/reference/endpoints.md
           - text: Bing Visual Search 
-            url: https://docs.microsoft.com/rest/api/cognitiveservices/bingvisualsearch/images
+            url: ../bing-visual-search/reference/endpoints.md
           - text: Bing Autosuggest 
-            url: https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-autosuggest-api-v7-reference
+            url: ../bing-autosuggest/reference/endpoints.md
           - text: Bing Spell Check
-            url: https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-spell-check-api-v7-reference
-          - text: Bing Local Business Search
-            url: ../bing-local-business-search/local-search-reference.md
+            url: ../bing-spell-check/reference/endpoints.md
+#          - text: Bing Local Business Search
+#            url: ../bing-local-business-search/local-search-reference.md
       - title: .NET SDK
         links:
           - text: Bing Web Search
@@ -373,9 +373,3 @@ additionalContent:
             url: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/spellcheck
           - text: Bing Autosuggest
             url: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/autosuggest
-      - title: Other
-        links:
-          - text: Azure Powershell
-            url: https://docs.microsoft.com/powershell/module/azurerm.cognitiveservices/?view=azurermps-4.4.1#cognitive_services
-          - text: Azure CLI
-            url: https://docs.microsoft.com/cli/azure/cognitiveservices?view=azure-cli-latest#az-cognitiveservices-list

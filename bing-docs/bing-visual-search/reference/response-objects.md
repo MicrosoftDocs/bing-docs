@@ -75,7 +75,7 @@ The top-level object that the response includes when the request fails.
 Defines an image.  
   
 > [!NOTE]
-> Because URL formats and parameters are subject to change without notice, all image URLs should be used as-is; you should not take dependencies on the URL format or parameters. The exception is those parameters and values discussed by [Resize and crop thumbnail images](../resize-and-crop-thumbnails.md).  
+> Because URL formats and parameters are subject to change without notice, all image URLs should be used as-is; you should not take dependencies on the URL format or parameters. The exception is those parameters and values discussed by [Resize and crop thumbnail images](../../bing-web-search/resize-and-crop-thumbnails.md).  
   
 |Name|Value|Type
 |-|-|- 

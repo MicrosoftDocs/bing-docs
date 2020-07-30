@@ -31,6 +31,15 @@ Defines an entity such as a person, place, or thing.
 |image|An image of the entity.|[Image](#image)
 |name|The entity's name.|String
 |webSearchUrl|The URL that takes the user to the Bing search results page for this entity.|String
+
+
+## EntityAnswer
+
+Defines an entity answer that contains the list of entities.
+
+|Name|Value|Type 
+|-|-|-  
+|value|A list of entities.|[Entity](#entity)[]
   
 
 ## EntityPresentationInfo  
@@ -139,6 +148,16 @@ Defines a contractual rule for link attribution.
 |text|The attribution text.|String 
 |url|The URL to the provider's website. Use `text` and URL to create of hyperlink.|String
 
+
+## LocalEntityAnswer
+
+Defines an local entity answer that contains the list of places.
+
+|Name|Value|Type 
+|-|-|-  
+|value|A list of places.|[Place](#place)[]
+
+
 ## MediaAttribution  
 
 Defines a contractual rule for media attribution.  
@@ -246,8 +265,10 @@ If the service suspects a denial of service attack, the request succeeds (HTTP s
 |Name|Value|Type 
 |-|-|-
 |_type|Type hint, which is set to SearchResponse.|String
-|<a name="searchresponse-entities"></a>entities|A list of entities that are relevant to the search query.|[Entity](#entity)[]
+|<a name="searchresponse-entities"></a>entities|A list of entities that are relevant to the search query.|[EntityAnswer](#entityanswer)
+|<a name="searchresponse-place"></a>places|A list of places that are relevant to the search query.|[LocalEntityAnswer](#localentityanswer)[]
 |<a name="searchresponse-querycontext"></a>queryContext|The query string that Bing used for the request.|[QueryContext](#querycontext)
+|<a name="searchresponse-ranking"></a>rankingResponse|The order that Bing suggests that you display the search results in.|[RankingResponse](#rankingresponse)
 
 
 ## TextAttribution  

@@ -30,7 +30,7 @@
 - name: Tutorials
   items:
   - name: Single-page web app
-    href: tutorials/autosuggest.md
+    href: tutorial/autosuggest.md
 - name: How-to guides
   items:
   - name: Upgrade from v5 to v7
@@ -69,8 +69,8 @@
   items:
   - name: Get API key
     href: https://azure.microsoft.com/try/cognitive-services/?api=bing-web-search-api
-  - name: Bing Image Search endpoints
-    href: image-search-endpoint.md
+  - name: Bing Autosuggest endpoints
+    href: reference/endpoints.md
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
   - name: Analytics for Bing Autosuggest API

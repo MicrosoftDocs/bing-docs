@@ -2,15 +2,15 @@
   expanded: true
   items:
     - name: What is the Bing Custom Search API?
-      href: overview.md
+      href: ../bing-custom-search/overview.md
     - name: Compare the Bing Search APIs
-      href: ../Bing-Web-Search/bing-api-comparison.md
+      href: ../bing-web-search/bing-api-comparison.md
       maintainContext: true
-- name: How-to guides
+- name: Concepts
   items:
     - name: Configure your custom search experience
-      href: define-your-custom-view.md
-    - name: Configure a custom autosuggest experience
+      href: ../bing-custom-search/define-your-custom-view.md
+    - name: Define your custom suggestions
       href: define-custom-suggestions.md
 - name: Reference
   items:
@@ -22,8 +22,6 @@
     href: reference/query-parameters.md
   - name: Headers
     href: reference/headers.md
-  - name: Market and language codes
-    href: reference/market-codes.md
   - name: Error codes
     href: reference/error-codes.md
 - name: Resources
@@ -31,11 +29,9 @@
   - name: Get API key
     href: https://azure.microsoft.com/try/cognitive-services/?api=bing-custom-search-api
   - name: Bing Custom Search endpoints
-    href: endpoint-custom.md
+    href: ../bing-custom-sesarch/endpoint-custom.md
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
-  - name: Language support
-    href: language-support.md
   - name: Analytics for Bing News Search API
     href: ../bing-web-search/bing-web-stats.md
     maintainContext: true
@@ -50,7 +46,7 @@
     - name: Knowledge Base
       href: https://cognitive.uservoice.com/knowledgebase/topics/127875-bing-search-web-image-video-news-autosuggest
 - name: Use and display requirements
-  href: ../Bing-Web-Search/use-display-requirements.md
+  href: ../bing-web-search/use-display-requirements.md
   maintainContext: true
 - name: Release notes
   href: release-notes.md

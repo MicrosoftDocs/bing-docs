@@ -109,7 +109,7 @@ By default, the `onsubmit` handler returns `false`, keeping the form from being 
 
 ## Select search options
 
-![[Bing Image Search form]](media/cognitive-services-bing-images-api/image-search-spa-form.png)
+![[Bing Image Search form]](../media/bing-images-api/image-search-spa-form.png)
 
 The Bing Image Search API offers several [filter query parameters](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#filter-query-parameters) to narrow and filter search results. The HTML form in this application uses and displays the following parameter options:
 
@@ -364,7 +364,7 @@ The `index` and `count` parameters are used to number results, generate HTML for
     }, // relatedSearches renderer omitted
 ```
 
-The thumbnail image's `height` and `width` are used in both the `<img>` tag and the `h` and `w` fields in the thumbnail's URL. This enables Bing to return [a thumbnail](../bing-web-search/resize-and-crop-thumbnails.md) of exactly that size.
+The thumbnail image's `height` and `width` are used in both the `<img>` tag and the `h` and `w` fields in the thumbnail's URL. This enables Bing to return [a thumbnail](../../bing-web-search/resize-and-crop-thumbnails.md) of exactly that size.
 
 ## Persisting client ID
 

@@ -126,7 +126,7 @@ X-MSEdge-ClientID: <blobFromPriorResponseGoesHere>
 Host: api.cognitive.microsoft.com
 ```
 
-Use the [category](../reference/response-objects.md#category) query parameter to specify the category of articles to get. For a list of possible news categories that you may specify, see [News Categories by Market](../reference/response-objects.md#news-categories-by-market).
+Use the [category](../reference/query-parameters.md#category) query parameter to specify the category of articles to get. For a list of possible news categories that you may specify, see [News Categories by Market](../reference/query-parameters.md#news-categories-by-market).
 
 The response for getting news by category is almost the same as getting general news. However, the articles are all from the specified category.
 

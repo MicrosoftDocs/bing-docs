@@ -2,28 +2,28 @@
   expanded: true
   items:
     - name: What is the Bing News Search API?
-      href: search-the-web.md
+      href: overview.md
     - name: Compare the Bing Search APIs
-      href: ../Bing-Web-Search/bing-api-comparison.md
+      href: ../bing-web-search/bing-api-comparison.md
       maintainContext: true
 - name: Quickstarts
   items:
   - name: REST API
     items:
     - name: Using C#
-      href: csharp.md
+      href: quickstarts/csharp.md
     - name: Using Java
-      href: java.md
+      href: quickstarts/java.md
     - name: Using Node.js
-      href: nodejs.md
+      href: quickstarts/nodejs.md
     - name: Using PHP
-      href: php.md
+      href: quickstarts/php.md
     - name: Using Python
-      href: python.md
+      href: quickstarts/python.md
     - name: Using Ruby
-      href: ruby.md
+      href: quickstarts/ruby.md
     - name: Using Go
-      href: go.md
+      href: quickstarts/go.md
   - name: SDK
     items:
     - name: Bing News Search client libraries
@@ -31,7 +31,7 @@
 - name: Tutorials
   items:
   - name: Create a single-page web app
-    href: tutorial-bing-news-search-single-page-app.md
+    href: tutorial/bing-news-search-single-page-app.md
 - name: Samples
   items:
     - name: Code samples
@@ -39,10 +39,10 @@
 - name: How-to guides
   items:
   - name: Handle hit highlighting
-    href: ../Bing-Web-Search/hit-highlighting.md
+    href: ../bing-web-search/hit-highlighting.md
     maintainContext: true
   - name: Page through search results
-    href: ../Bing-Web-Search/paging-search-results.md
+    href: ../bing-web-search/page-results.md
   - name: Resize and crop thumbnails
     maintainContext: true
     href: ../bing-web-search/resize-and-crop-thumbnails.md

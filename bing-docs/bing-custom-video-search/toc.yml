@@ -2,14 +2,14 @@
   expanded: true
   items:
     - name: What is the Bing Custom Search API?
-      href: overview.md
+      href: ../bing-custom-search/overview.md
     - name: Compare the Bing Search APIs
-      href: ../Bing-Web-Search/bing-api-comparison.md
+      href: ../bing-web-search/bing-api-comparison.md
       maintainContext: true
 - name: How-to guides
   items:
     - name: Configure your custom search experience
-      href: define-your-custom-view.md
+      href: ../bing-custom-search/define-your-custom-view.md
     - name: Get videos from your search instance
       href: get-videos-from-instance.md
 - name: Reference
@@ -31,11 +31,9 @@
   - name: Get API key
     href: https://azure.microsoft.com/try/cognitive-services/?api=bing-custom-search-api
   - name: Bing Custom Search endpoints
-    href: endpoint-custom.md
+    href: ../bing-custom-search/endpoint-custom.md
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
-  - name: Language support
-    href: language-support.md
   - name: Analytics for Bing News Search API
     href: ../bing-web-search/bing-web-stats.md
     maintainContext: true

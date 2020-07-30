@@ -139,4 +139,4 @@ As shown above, the `TopicResults` and `ImageResults` types contain queries for 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a Visual Search single-page web app](bing-visual-search-single-page-app.md)
+> [Create a Visual Search single-page web app](visual-search-single-page-app.md)

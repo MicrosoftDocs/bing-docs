@@ -4,7 +4,7 @@
     - name: What is the Bing Video Search API?
       href: overview.md
     - name: Compare the Bing Search APIs
-      href: ../Bing-Web-Search/bing-api-comparison.md
+      href: ../bing-web-search/bing-api-comparison.md
       maintainContext: true
 - name: Quickstarts
   expanded: true
@@ -30,7 +30,7 @@
 - name: Tutorials
   items:
   - name: Build a single-page web app
-    href: tutorial-bing-video-search-single-page-app.md
+    href: tutorial/bing-video-search-single-page-app.md
 - name: Samples
   items:
     - name: Code samples
@@ -43,7 +43,7 @@
     href: trending-videos.md
   - name: Page videos
     maintainContext: true
-    href: ../Bing-Web-Search/paging-search-results.md
+    href: ../bing-web-search/page-results.md
   - name: Resize and crop thumbnails
     maintainContext: true
     href: ../bing-web-search/resize-and-crop-thumbnails.md

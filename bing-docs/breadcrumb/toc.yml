@@ -1,11 +1,7 @@
-- name: Bing
+- name: Bing Search APIs
   tocHref: /bing/
-  topicHref: /bing/index
+  topicHref: /bing/
   items:
-    - name: Bing Search APIs
-    tocHref: /bing/bing-web-search
-    topicHref: /bing/bing-web-search
-    items:
     - name: Bing Autosuggest
       tocHref: /bing/Bing-Autosuggest
       topicHref: /bing/Bing-Autosuggest/overview

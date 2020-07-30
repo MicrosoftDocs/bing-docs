@@ -24,7 +24,7 @@ Endpoint: Returns search suggestions as JSON results that are relevant to the us
  GET https://api.bing.microsoft.com/bingcustomsearch/v7.0/search  
 ```
 
-For examples that describe how to set up Custom Search sources, see the [tutorial](tutorial/custom-search-web-page). For details about headers, parameters, market codes, response objects, errors, etc., see the [Bing Custom Search API v7](reference/endpoints.md) reference.
+For examples that describe how to set up Custom Search sources, see the [tutorial](tutorial/custom-search-web-page.md). For details about headers, parameters, market codes, response objects, errors, etc., see the [Bing Custom Search API v7](reference/endpoints.md) reference.
 
 ## Custom Search Response JSON
 A custom search request returns results as JSON objects, see [Response objects](reference/response-objects.md). 

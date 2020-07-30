@@ -13,9 +13,9 @@ ms.author: scottwhi
 
 # Image Search APIs v7 reference
 
-The Image Search APIs let you search for images that are relevant to the user's search query and also get trending videos. This section provides technical details about the query parameters and headers that you use to request images and the JSON response objects that contain them. For examples that show how to make requests, see [Bing Image Search overview](../index.md). 
+The Image Search APIs let you search for images that are relevant to the user's search query and also get trending videos. This section provides technical details about the query parameters and headers that you use to request images and the JSON response objects that contain them. For examples that show how to make requests, see [Bing Image Search overview](../overview.md). 
   
-For information about permitted use and display of the results, see [Use and display requirements](../useanddisplayrequirements.md).
+For information about permitted use and display of the results, see [Use and display requirements](../../bing-web-search/use-display-requirements.md).
 
 > [!NOTE]
 > Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
@@ -26,10 +26,10 @@ To request image search results, send a GET request to one of the following endp
   
 |Endpoint|Description 
 |-|-
-|https://api.cognitive.microsoft.com/bing/v7.0/images/search|Returns images that are relevant to the users search query.
-|https://api.cognitive.microsoft.com/bing/v7.0/images/trending|Returns images that are trending based on search requests made by others. The images are broken out into different categories. For example, Popular People Searches.<br/><br/>For a list of markets that support trending images, see [Supported trending images markets](market-codes.md#trending-image-api-markets).
+|https://api.bing.microsoft.com/bing/v7.0/images/search|Returns images that are relevant to the users search query.
+|https://api.bing.microsoft.com/bing/v7.0/images/trending|Returns images that are trending based on search requests made by others. The images are broken out into different categories. For example, Popular People Searches.<br/><br/>For a list of markets that support trending images, see [Supported trending images markets](market-codes.md#trending-image-api-markets).
+|https://api.bing.microsoft.com/bing/v7.0/images/search/details|Returns insights about an image. Do not use this API. Instead, use the [Visual Search API](../../bing-visual-search/index.md).
 
-To get insights about an image, see the [Visual Search API](../../bing-visual-search/index.md).
 
 The request must use the HTTPS protocol. 
 

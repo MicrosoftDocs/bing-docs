@@ -118,4 +118,4 @@ With all the new JavaScript code and HTML elements in place, search results are 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Tutorial: Crop an image with the Bing Visual Search SDK for C#](bing-visual-search-crop-area-results.md)
+> [Tutorial: Crop an image with the Bing Visual Search SDK for C#](visual-search-crop-area-results.md)

@@ -4,7 +4,7 @@
     - name: What is Bing Visual Search API?
       href: overview.md
     - name: Compare the Bing Search APIs
-      href: ../Bing-Web-Search/bing-api-comparison.md
+      href: ../bing-web-search/bing-api-comparison.md
       maintainContext: true
 - name: Quickstarts
   items:
@@ -31,13 +31,13 @@
 - name: Tutorials
   items:
   - name: Uploading an image
-    href: tutorial-visual-search-image-upload.md
+    href: visual-search-image-upload.md
   - name: Crop and search an area of an image
-    href: tutorial-visual-search-crop-area-results.md
+    href: visual-search-crop-area-results.md
   - name: Find similar images from previous searches
-    href: tutorial-visual-search-insights-token.md
+    href: visual-search-insights-token.md
   - name: Create a Single-page Web app
-    href: tutorial-bing-visual-search-single-page-app.md
+    href: bing-visual-search-single-page-app.md
 - name: Samples
   items:
     - name: Code samples
@@ -74,8 +74,6 @@
     href: reference/market-codes.md
   - name: Error codes
     href: reference/error-codes.md
-  - name: Entity types
-    href: reference/entity-types.md
 - name: SDKs
   items:
     - name: .NET

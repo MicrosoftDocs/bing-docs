@@ -48,7 +48,7 @@ The top-level object that the response includes when the request fails.
 Defines a thumbnail image.  
   
 > [!NOTE]
-> Because URL formats and parameters are subject to change without notice, all image URLs should be used as-is; you should not take dependencies on the URL format or parameters. The exception is those parameters and values discussed by [Resize and crop thumbnail images](../resize-and-crop-thumbnails.md).  
+> Because URL formats and parameters are subject to change without notice, all image URLs should be used as-is; you should not take dependencies on the URL format or parameters. The exception is those parameters and values discussed by [Resize and crop thumbnail images](../../bing-web-search/resize-and-crop-thumbnails.md).  
   
 |Name|Value|Type
 |-|-|- 
@@ -75,7 +75,7 @@ If the service suspects a denial of service attack, the request succeeds (HTTP s
 |Name|Value|Type
 |-|-|-
 |_type|Type hint.|String
-|id|An ID that uniquely identifies the news answer.<br/><br/>For information about how to use this field, see [Using Ranking to Display Results](../bing-web-search/rank-results) in the Web Search API guide.|String
+|id|An ID that uniquely identifies the news answer.<br/><br/>For information about how to use this field, see [Using Ranking to Display Results](../../bing-web-search/rank-results.md) in the Web Search API guide.|String
 |readLink|The URL that returns this answer. To use the URL, append query parameters.<br/><br/>The object includes this field only in a Web Search API response. Typically, you'd use the URL if you want to query the News Search API directly.|String
 |<a name="news-relatedtopics"></a>relatedTopics|A list of news articles that are related to the search term.|[RelatedTopic](#relatedtopic)[]
 |<a name="news-sort"></a>sort|A list of options for sorting the news articles. For example, sort by relevance (default) or date. To determine which sort order the request used, see the `isSelected` field.|[SortValue](#sortvalue)[]
@@ -94,7 +94,7 @@ Defines a news article.
 |<a name="newsarticle-datepublished"></a>datePublished|The date and time that Bing discovered the article. The date is in the format, YYYY-MM-DDTHH:MM:SS.|String
 |<a name="newsarticle-description"></a>description|A short description of the news article.|String
 |<a name="newsarticle-headline"></a>headline|A Boolean value that indicates whether the news article is a headline. If **true**, the article is a headline.<br/><br/>**NOTE:** The article includes this field only for news categories requests that do not specify the [category](query-parameters.md#category) query parameter.|Boolean
-|id|An ID that uniquely identifies this article in the list of articles.<br/><br/>For information about how to use this field, see [Using Ranking to Display Results](../../bing-web-search/rank-results) in the Web Search API guide.|String
+|id|An ID that uniquely identifies this article in the list of articles.<br/><br/>For information about how to use this field, see [Using Ranking to Display Results](../../bing-web-search/rank-results.md) in the Web Search API guide.|String
 |<a name="newsarticle-image"></a>image|An image related to the new article.<br/><br/>The `Image` object in this context contains only the `thumbnail` field.|[Image](#image)
 |<a name="newsarticle-mentions"></a>mentions|A list of entities (places or persons) mentioned in the article.|[Thing](#thing)[]
 |<a name="newsarticle-name"></a>name|The name of the article.<br/><br/>Use this name along with the URL to create a hyperlink that when clicked takes the user to the news article.|String  
@@ -203,4 +203,4 @@ Defines a video that's related to the news article.
 |<a name="video-motion"></a>motionThumbnailUrl|A URL to an animated thumbnail that shows a preview of the video. Typically, you use this URL to play a preview of the video when the user mouses over the thumbnail of the video on your results page.|String 
 |<a name="video-name"></a>name|The name of the video.|String
 |<a name="video-thumbnail"></a>thumbnail|The width and height of the thumbnail image or motion thumbnail.|[MediaSize](#mediasize)
-|<a name="video-thumbnailurl"></a>thumbnailUrl|A URL to a thumbnail image of the video. For information about resizing the image, see [Resize and crop thumbnail images](../../bing-web-search/resize-and-crop-thumbnails).|String
+|<a name="video-thumbnailurl"></a>thumbnailUrl|A URL to a thumbnail image of the video. For information about resizing the image, see [Resize and crop thumbnail images](../../bing-web-search/resize-and-crop-thumbnails.md).|String

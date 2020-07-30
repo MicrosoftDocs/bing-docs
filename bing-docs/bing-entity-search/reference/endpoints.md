@@ -13,13 +13,13 @@ ms.author: scottwhi
 
 # Entity Search API v7 reference
 
-The Web Search API lets you send a search query to Bing and get back search results that include entities and places. Place results include restaurants, hotel, or other local businesses. For places, the query can specify the name of the local business or it can ask for a list (for example, restaurants near me). Entity results include persons, places (tourist attractions, states, countries, etc.), or things. For examples that show how to make requests, see [Bing Entity Search overview](../index.md). 
+The Web Search API lets you send a search query to Bing and get back search results that include entities and places. Place results include restaurants, hotel, or other local businesses. For places, the query can specify the name of the local business or it can ask for a list (for example, restaurants near me). Entity results include persons, places (tourist attractions, states, countries, etc.), or things. For examples that show how to make requests, see [Bing Entity Search overview](../overview.md). 
 
 > [!NOTE]
 > The Entity Search API supports only US business locations for Place answers. 
 
   
-For information about permitted use and display of the results, see [Use and display requirements](../useanddisplayrequirements.md).
+For information about permitted use and display of the results, see [Use and display requirements](../../bing-web-search/use-display-requirements.md).
 
 > [!NOTE]
 > Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
@@ -29,7 +29,7 @@ For information about permitted use and display of the results, see [Use and dis
 To request web search results, send a GET request to:  
   
 ```
-https://api.cognitive.microsoft.com/bing/v7.0/entities
+https://api.bing.microsoft.com/bing/v7.0/entities
 ```
 
 The request must use the HTTPS protocol. 

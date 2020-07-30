@@ -13,9 +13,9 @@ ms.author: scottwhi
 
 # News Search APIs v7 reference
 
-The News Search APIs let you get a list of relevant news articles to a user's query, get top news articles, and get trending news. This section provides technical details about the query parameters and headers that you use to request news articles and the JSON response objects that contain them. For examples that show how to make requests, see [Bing News Search overview](../index.md). 
+The News Search APIs let you get a list of relevant news articles to a user's query, get top news articles, and get trending news. This section provides technical details about the query parameters and headers that you use to request news articles and the JSON response objects that contain them. For examples that show how to make requests, see [Bing News Search overview](../overview.md). 
   
-For information about permitted use and display of the results, see [Use and display requirements](../useanddisplayrequirements.md).
+For information about permitted use and display of the results, see [Use and display requirements](../../bing-web-search/use-display-requirements.md).
 
 > [!NOTE]
 > Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
@@ -26,7 +26,7 @@ To request news search results, send a GET request to one of the following endpo
   
 |Endpoint|Description 
 |-|-
-|`https://api.cognitive.microsoft.com/bing/v7.0/news`|Returns the top news articles by category. For example, you can request the top sports or entertainment articles. For information about specifying categories, see the [category](query-parametersmd#category) query parameter. 
+|`https://api.cognitive.microsoft.com/bing/v7.0/news`|Returns the top news articles by category. For example, you can request the top sports or entertainment articles. For information about specifying categories, see the [category](query-parameters.md#category) query parameter. 
 |`https://api.cognitive.microsoft.com/bing/v7.0/news/search`|Returns news articles based on the user's search query. If the search query is empty, the call returns the top news articles. 
 |`https://api.cognitive.microsoft.com/bing/v7.0/news/trendingtopics`|Returns trending news topics that are currently trending on social networks.<br/><br/>For a list of markets that support trending news, see [Supported Trending News markets](market-codes.md#trending-news-api-markets). 
 

@@ -20,7 +20,7 @@ For a list of possible objects, see **In this article** in the right pane.
 
 If the request succeeds, the top-level object in the response is the [SearchResponse](#searchresponse) object. And if the request fails, the top-level object in the response is the [ErrorResponse](#errorresponse) object.
 
-The JSON objects in this section are specific to the web answer. For details about the JSON objects for other answer types that the search results may include, see the API-specific reference documentation. For example, if the search results contain the images and news answers, see the <a href="https://docs.microsoft.com/bing/bing-image-search/reference/response-objects" target="_blank">Image Search API reference</a> and <a href="https://docs.microsoft.com/bing/bing-news-search/reference/response-objects" target="_blank">News Search API reference</a>.
+The JSON objects in this section are specific to the web answer. For details about the JSON objects for other answer types that the search results may include, see the API-specific reference documentation. For example, if the search results contain the images and news answers, see the [Image Search API reference](../../bing-image-search/reference/endpoints.md) and [News Search API reference](../../bing-news-search/reference/endpoints.md).
 
 
 
@@ -177,7 +177,7 @@ The [SpellSuggestions](#spellsuggestions) object uses this object to suggest a q
   
 |Name|Value|Type
 |-|-|-
-|<a name="query-displaytext"></a>displayText|The display version of the query term. This version of the query term may contain special characters that highlight the search term found in the query string. The string contains the highlighting characters only if the query enabled hit highlighting (see the [textDecorations](query-parameters.md#textdecorations) query parameter). For details about hit highlighting, see [Hit highlighting](../hit-highlighting).|String
+|<a name="query-displaytext"></a>displayText|The display version of the query term. This version of the query term may contain special characters that highlight the search term found in the query string. The string contains the highlighting characters only if the query enabled hit highlighting (see the [textDecorations](query-parameters.md#textdecorations) query parameter). For details about hit highlighting, see [Hit highlighting](../hit-highlighting.md).|String
 |<a name="query-text"></a>text|The query string. Use this string as the query term in a new search request.|String  
 |<a name="query-websearchurl"></a>webSearchUrl|The URL that takes the user to the Bing search results page for the query.<br/><br/>Only related search results include this field.|String
   
@@ -227,7 +227,7 @@ Defines a list of related queries made by others.
   
 |Name|Value|Type
 |-|-|- 
-|id|An ID that uniquely identifies the related search answer.<br/><br/>The object includes this field only if the Ranking answer specifies that you should display all related searches in a group. For more information about how to use the ID, see [Ranking results](.../rank-results.md).|String
+|id|An ID that uniquely identifies the related search answer.<br/><br/>The object includes this field only if the Ranking answer specifies that you should display all related searches in a group. For more information about how to use the ID, see [Ranking results](../rank-results.md).|String
 |<a name="relatedsearch-value"></a>value|A list of related queries that were made by others.|[Query](#query)[]  
   
 ## SearchResponse  
@@ -247,14 +247,14 @@ If the service suspects a denial of service attack, the request succeeds (HTTP s
 |_type|Type hint, which is set to SearchResponse.|String
 |<a name="searchresponse-computation"></a>computation|The answer to a math expression or unit conversion expression.|[Computation](#computation)
 |<a name="searchresponse-entities"></a>entities|A list of entities that are relevant to the search query.|[EntityAnswer](#entityanswer)
-|<a name="searchresponse-images"></a>images|A list of images that are relevant to the search query.|[Images](bing-image-search/reference/response-objects.md#images)
-|<a name="searchresponse-news"></a>news|A list of news articles that are relevant to the search query.|[News](bing-news-search/reference/response-objects.md#news) 
+|<a name="searchresponse-images"></a>images|A list of images that are relevant to the search query.|[Images](../../bing-image-search/reference/response-objects.md#images)
+|<a name="searchresponse-news"></a>news|A list of news articles that are relevant to the search query.|[News](../../bing-news-search/reference/response-objects.md#news) 
 |<a name="searchresponse-querycontext"></a>queryContext|The query string that Bing used for the request.|[QueryContext](#querycontext)
 |<a name="searchresponse-ranking"></a>rankingResponse|The order that Bing suggests that you display the search results in.|[RankingResponse](#rankingresponse)
 |<a name="searchresponse-relatedsearches"></a>relatedSearches|A list of related queries made by others.|[RelatedSearchAnswer](#relatedsearchanswer)
 |<a name="searchresponse-spellsuggestions"></a>spellSuggestions|The query string that likely represents the user's intent.|[SpellSuggestions](#spellsuggestions)  
 |<a name="searchresponse-timezone"></a>timeZone|The date and time of one or more geographic locations.|[TimeZone](#timezone)
-|<a name="searchresponse-videos"></a>videos|A list of videos that are relevant to the search query.|[Videos](bing-video-search/reference/response-objects.md#videos)
+|<a name="searchresponse-videos"></a>videos|A list of videos that are relevant to the search query.|[Videos](../../bing-video-search/reference/response-objects.md#videos)
 |<a name="search-response-webpages"></a>webPages|A list of webpages that are relevant to the search query.|[WebAnswer](#webanswer)
   
 ## SpellSuggestions  

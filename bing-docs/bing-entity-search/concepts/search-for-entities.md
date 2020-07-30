@@ -24,7 +24,7 @@ The API response contains a [SearchResponse](../reference/response-objects.md#se
 > [!NOTE]
 > Entity responses support multiple markets, but the Places response supports only US Business locations. 
 
-The `entities` field is an [EntityAnswer](../reference/response-objects.md#entityanswer) object that contains a list of [Entity](../reference/response-objects.md#entity) objects (see the `value` field). The list may contain a single dominant entity, multiple disambiguation entities, or both. 
+The `entities` field is an [EntityAnswer](../reference/response-objects.md#entityanswer) object that contains a list of [Entity](../reference/response-objects.md#entity) objects. The list may contain a single dominant entity, multiple disambiguation entities, or both. 
 
 A dominant entity is returned when Bing believes it to be the only entity that satisfies the request (there is no ambiguity as to which entity satisfies the request). If multiple entities could satisfy the request, the list contains more than one disambiguation entity. For example, if the request uses the generic title of a movie franchise, the list likely contains disambiguation entities. But, if the request specifies a specific title from the franchise, the list likely contains a single dominant entity.
 
@@ -156,7 +156,7 @@ When you display the entity information (name, description, and image), you must
 
 ## Find places
 
-The `places` field is a [LocalEntityAnswer](../reference/response-objects.md#localentityanswer) object that contains a list of [Place](../reference/response-objects.md##place) objects (see the [Entity Types](../reference/entity-types.md) for more information). The list contains one or more local entities that satisfy the request.
+The `places` field is a [LocalEntityAnswer](../reference/response-objects.md#localentityanswer) object that contains a list of [Place](../reference/response-objects.md#place) objects (see the [Entity Types](../reference/entity-types.md) for more information). The list contains one or more local entities that satisfy the request.
 
 Places include restaurant, hotels, or local businesses. The [entityPresentationInfo](../reference/response-objects.md#entitypresentationinfo) field contains hints that identify the local entity's type. The list contains a list of hints such as Place, LocalBusiness, Restaurant. Each successive hint in the array narrows the entity's type. For a list of possible types, see [Entity Types](../reference/entity-types.md)
 

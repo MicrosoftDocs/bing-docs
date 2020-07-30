@@ -56,7 +56,7 @@ X-MSEdge-ClientID: <blobFromPriorResponseGoesHere>
 Host: api.cognitive.microsoft.com  
 ```  
 
-The response to this request will have a top-level [VideoDetails](reference/response-objects.md#videodetails) object instead of a [Videos](reference/response-objects#videos) object.  
+The response to this request will have a top-level [VideoDetails](reference/response-objects.md#videodetails) object instead of a [Videos](reference/response-objects.md#videos) object.  
   
 ```json
 {

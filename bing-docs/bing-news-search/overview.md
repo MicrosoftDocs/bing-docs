@@ -40,7 +40,7 @@ The Bing News Search API is a RESTful web service, making it easy to call from a
 
 ## Next steps
 
-To quickly get started with your first API request, try a quickstart for the [REST API](quickstart/csharp.md) or one of the [SDKs](quickstarts/client-libraries.md).
+To quickly get started with your first API request, try a quickstart for the [REST API](quickstarts/csharp.md) or one of the [SDKs](quickstarts/client-libraries.md).
 
 ## See also
 

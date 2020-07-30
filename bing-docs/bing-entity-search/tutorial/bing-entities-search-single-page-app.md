@@ -395,7 +395,7 @@ Errors are handled by calling `renderErrorMessage()` with any details known abou
 
 ## Displaying search results
 
-The Bing Entity Search API [requires you to display results in a specified order](use-display-requirements.md). Since the API may return two different kinds of responses, it is not enough to iterate through the top level `Entities` or `Places` collection in the JSON response and display those results. (If you want only one type of result, use the `responseFilter` query parameter.)
+The Bing Entity Search API [requires you to display results in a specified order](../../bing-web-search/use-display-requirements.md). Since the API may return two different kinds of responses, it is not enough to iterate through the top level `Entities` or `Places` collection in the JSON response and display those results. (If you want only one type of result, use the `responseFilter` query parameter.)
 
 Instead, we use the `rankingResponse` collection in the search results to order the results for display. This object refers to items in the `Entitiess` and/or `Places` collections.
 
@@ -413,7 +413,7 @@ Each item in a `rankingResponse` collection refers to the actual search result i
 |`answerType`<br>`resultIndex`|The `answerType` refers to the top-level answer collection that contains the result (for example, `Entities`). The `resultIndex` refers to the result's index within that collection. If `resultIndex` is omitted, the ranking result refers to the entire collection.
 
 > [!NOTE]
-> For more information on this part of the search response, see [Rank Results](rank-results.md).
+> For more information on this part of the search response, see [Rank Results](../../bing-web-search/rank-results.md).
 
 You may use whichever method of locating the referenced search result item is most convenient for your application. In our tutorial code, we use the `answerType` and `resultIndex` to locate each search result.
 

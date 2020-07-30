@@ -15,7 +15,7 @@ ms.author: scottwhi
 
 The Spell Check API lets you check a text string for spelling and grammar errors. This section provides technical details about the query parameters and headers that you use to request spell checking, and the JSON response objects that contain the results. For examples that show how to make requests, see [Bing Spell Check overview](../index.md). 
   
-For information about permitted use and display of the results, see [Use and display requirements](../useanddisplayrequirements.md).
+For information about permitted use and display of the results, see [Use and display requirements](../../bing-web-search/use-display-requirements.md).
 
 > [!NOTE]
 > Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
@@ -25,7 +25,7 @@ For information about permitted use and display of the results, see [Use and dis
 To check the spelling and grammar of a block of text, send a GET or POST request to:  
   
 ```
-https://api.cognitive.microsoft.com/bing/v7.0/SpellCheck
+https://api.bing.microsoft.com/bing/v7.0/spellcheck
 ```  
   
 The request must use the HTTPS protocol.  

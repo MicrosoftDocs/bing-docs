@@ -86,7 +86,7 @@ else {
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Image Search single-page app tutorial](../../tutorial/bing-image-search-single-page-app)
+> [Bing Image Search single-page app tutorial](../../tutorial/bing-image-search-single-page-app.md)
 
 ## See also
 

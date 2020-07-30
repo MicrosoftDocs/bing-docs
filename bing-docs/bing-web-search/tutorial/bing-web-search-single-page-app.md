@@ -424,7 +424,7 @@ The thumbnail size is used in both the `<img>` tag and the `h` and `w` fields in
 
 Here's an example of how images are displayed in the sample app:
 
-![[Bing image results]](../media/bing-we-api/web-search-spa-images.png)
+![[Bing image results]](../media/bing-web-api/web-search-spa-images.png)
 
 ## Persist the client ID
 

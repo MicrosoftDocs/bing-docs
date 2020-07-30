@@ -333,8 +333,5 @@ Open the Web page in your browser. At the prompt, enter your Bing Spell Check AP
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Create a single-page web app](../tutorials/spellcheck.md)
-
 - [What is the Bing Spell Check API?](../overview.md)
 - [Bing Spell Check API v7 reference](../reference/endpoints.md)

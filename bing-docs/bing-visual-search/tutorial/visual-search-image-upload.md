@@ -15,7 +15,7 @@ ms.author: scottwhi
 
 # Tutorial: Upload images to the Bing Visual Search API
 
-The Bing Visual Search API enables you to search the web for images similar to ones you upload. Use this tutorial to create a web application that can send an image to the API, and display the insights it returns within the webpage. Note that this application does not adhere to all [Bing Use and Display Requirements](../bing-web-search/use-display-requirements.md) for using the API.
+The Bing Visual Search API enables you to search the web for images similar to ones you upload. Use this tutorial to create a web application that can send an image to the API, and display the insights it returns within the webpage. Note that this application does not adhere to all [Bing Use and Display Requirements](../../bing-web-search/use-display-requirements.md) for using the API.
 
 You can find the full source code for this sample with additional error handling and annotations on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/Tutorials/Bing-Visual-Search/BingVisualSearchUploadImage.html).
 
@@ -469,8 +469,6 @@ function addDivContent(div, tag, json) {
 
 The following functions display insights for different actions. The functions either provide a clickable image or clickable link that sends you to a webpage with more information about the image. This page is either hosted by Bing.com or the image's original website. Not all of the insights' data is displayed in this application. To see all the fields available for an insight, see the [Images - Visual Search](../reference/response-objects.md) reference.
 
-> [!NOTE]
-> There's a minimum amount of insight information you must display in the page. See the [Bing Search API use and display requirements](../bing-web-search/use-display-requirements.md) for more.
 
 ### RelatedImages insights
 
@@ -769,4 +767,4 @@ Add the following `<style>` section to the `<head>` tag to organize the layout o
 ## Next steps
 
 >[!div class="nextstepaction"]
-> [Tutorial: Find similar images from previous searches using ImageInsightsToken](bing-visual-search-insights-token.md)
+> [Tutorial: Find similar images from previous searches using ImageInsightsToken](visual-search-insights-token.md)
