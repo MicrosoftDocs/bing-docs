@@ -31,13 +31,13 @@
 - name: Tutorials
   items:
   - name: Uploading an image
-    href: visual-search-image-upload.md
+    href: tutorial/visual-search-image-upload.md
   - name: Crop and search an area of an image
-    href: visual-search-crop-area-results.md
+    href: tutorial/visual-search-crop-area-results.md
   - name: Find similar images from previous searches
-    href: visual-search-insights-token.md
+    href: tutorial/visual-search-insights-token.md
   - name: Create a Single-page Web app
-    href: bing-visual-search-single-page-app.md
+    href: tutorial/visual-search-single-page-app.md
 - name: Samples
   items:
     - name: Code samples

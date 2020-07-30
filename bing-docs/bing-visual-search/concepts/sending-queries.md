@@ -434,4 +434,4 @@ If the image contains a recognized entity such as a culturally well-known/popula
 ## See also
 
 - [What is the Bing Visual Search API?](../overview.md)
-- [Tutorial: Create a Visual Search single-page web app](../tutorial/bing-visual-search-single-page-app.md)
+- [Tutorial: Create a Visual Search single-page web app](../tutorial/visual-search-single-page-app.md)

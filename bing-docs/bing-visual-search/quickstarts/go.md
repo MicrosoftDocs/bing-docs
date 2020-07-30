@@ -292,4 +292,4 @@ The results identify images similar to the image contained in the POST body. The
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a Visual Search single-page web app](../tutorial/bing-visual-search-single-page-app.md)
+> [Create a Visual Search single-page web app](../tutorial/visual-search-single-page-app.md)

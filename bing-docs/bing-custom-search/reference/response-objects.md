@@ -71,7 +71,7 @@ Defines a search query.
   
 |Name|Value|Type
 |-|-|-
-|<a name="query-displaytext"></a>displayText|The display version of the query term. This version of the query term may contain special characters that highlight the search term found in the query string. The string contains the highlighting characters only if the query enabled hit highlighting (see the [textDecorations](query-parameters.md#textdecorations) query parameter). For details about hit highlighting, see [Hit highlighting](../../bing-web-search/hit-highlighting).|String
+|<a name="query-displaytext"></a>displayText|The display version of the query term. This version of the query term may contain special characters that highlight the search term found in the query string. The string contains the highlighting characters only if the query enabled hit highlighting (see the [textDecorations](query-parameters.md#textdecorations) query parameter). For details about hit highlighting, see [Hit highlighting](../../bing-web-search/hit-highlighting.md).|String
 |<a name="query-text"></a>text|The query string. Use this string as the query term in a new search request.|String  
 
   

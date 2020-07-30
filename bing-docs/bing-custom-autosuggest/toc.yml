@@ -29,7 +29,7 @@
   - name: Get API key
     href: https://azure.microsoft.com/try/cognitive-services/?api=bing-custom-search-api
   - name: Bing Custom Search endpoints
-    href: ../bing-custom-sesarch/endpoint-custom.md
+    href: ../bing-custom-search/endpoint-custom.md
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
   - name: Analytics for Bing News Search API

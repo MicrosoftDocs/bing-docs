@@ -282,4 +282,4 @@ JSON Response:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a Visual Search single-page web app](../tutorial/bing-visual-search-single-page-app.md)
+> [Build a Visual Search single-page web app](../tutorial/visual-search-single-page-app.md)

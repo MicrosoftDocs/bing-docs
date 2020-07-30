@@ -15,9 +15,9 @@ ms.author: scottwhi
 
 The Custom Autosuggest API lets you send a partial search query term to Bing and get back a list of suggested queries that other users have searched on or that are based on user intent. Typically, you use this API to support a richer search box experience. For example, you'd call this API for each character the user enters and populate the search box's drop-down list with the suggested query strings.  
 
-For information about configuring custom suggestions, see [Configure your Custom Autosuggest experience](define-custom-suggestions). 
+For information about configuring custom suggestions, see [Configure your Custom Autosuggest experience](../define-custom-suggestions.md). 
   
-For information about permitted use and display of the results, see [Use and display requirements](../bing-web-search/use-display-requirements.md).
+For information about permitted use and display of the results, see [Use and display requirements](../../bing-web-search/use-display-requirements.md).
 
 > [!NOTE]
 > Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.

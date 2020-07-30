@@ -142,7 +142,7 @@ Responses from the Bing Image Search API are returned as JSON. This sample respo
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Image Search single-page app tutorial](../../tutorial/bing-image-search-single-page-app.md)
+> [Bing Image Search single-page app tutorial](../tutorial/bing-image-search-single-page-app.md)
 
 ## See also
 

@@ -30,7 +30,7 @@ Things current Cognitive Services users must do prior to their subscription endi
 
 1. Update your application to use your Bing Search Services subscription key. Current Cognitive Services users that want to maintain continuity of service should sign up [here](???) for a Bing Search Services subscription before their Azure Cognitive Services subscription ends. 
   
-2. Update your app to use the new endpoints. For the new endpoints, see [Custom Video Search API](reference/index.md) reference.
+2. Update your app to use the new endpoints. For the new endpoints, see [Custom Video Search API](reference/endpoints.md) reference.
 
 Unfortunately, if you use <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/bing-web-search/bing-web-stats" target="_blank">Web Search Analytics</a>, your Cognitive Services metrics will not be used to seed Bing Search Services analytics.
 
