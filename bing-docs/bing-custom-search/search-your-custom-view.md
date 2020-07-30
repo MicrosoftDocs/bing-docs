@@ -56,4 +56,3 @@ You can change the subscription associated with your Bing Custom Search instance
 - [Call your custom view with NodeJs](./call-endpoint-nodejs.md)
 - [Call your custom view with Python](./call-endpoint-python.md)
 
-- [Call your custom view with the C# SDK](includes/quickstarts/custom-search-client-library-csharp.md)

@@ -79,7 +79,25 @@ mkdir -p src/main/resources
 
 Navigate to the new folder and create a file called *BingVisualSearchSample.java*. Open it in your preferred editor or IDE and add the following `import` statements:
 
+<!--
 [!code-java[Import statements](~/cognitive-services-java-sdk-samples/Search/BingVisualSearch/src/main/java/BingVisualSearchSample.java?name=imports)]
+-->
+
+```java
+package main.java;
+
+import com.google.common.io.ByteStreams;
+import com.google.gson.Gson;
+import com.microsoft.azure.cognitiveservices.search.visualsearch.BingVisualSearchAPI;
+import com.microsoft.azure.cognitiveservices.search.visualsearch.BingVisualSearchManager;
+import com.microsoft.azure.cognitiveservices.search.visualsearch.models.CropArea;
+import com.microsoft.azure.cognitiveservices.search.visualsearch.models.ErrorResponseException;
+import com.microsoft.azure.cognitiveservices.search.visualsearch.models.Filters;
+import com.microsoft.azure.cognitiveservices.search.visualsearch.models.ImageInfo;
+import com.microsoft.azure.cognitiveservices.search.visualsearch.models.ImageKnowledge;
+import com.microsoft.azure.cognitiveservices.search.visualsearch.models.ImageTag;
+import com.microsoft.azure.cognitiveservices.search.visualsearch.models.KnowledgeRequest;
+import com.microsoft.azure.cognitiveservices.search.visualsearch.models.VisualSearchRequest;```
 
 Then create a new class.
 
@@ -90,8 +108,42 @@ public class BingVisualSearchSample {
 
 In the application's `main` method, create variables for your resource's Azure endpoint and key. If you created the environment variable after you launched the application, you will need to close and reopen the editor, IDE, or shell running it to access the variable. Then create a `byte[]` for the image you'll be uploading. Create a `try` block for the methods you'll define  later, and load the image and convert it to bytes using `toByteArray()`.
 
+<!--
 [!code-java[Main method](~/cognitive-services-java-sdk-samples/Search/BingVisualSearch/src/main/java/BingVisualSearchSample.java?name=main)]
+-->
 
+```java
+    public static void main(String[] args) {
+
+        // Set the BING_SEARCH_V7_SUBSCRIPTION_KEY environment variable with your subscription key,
+        // then reopen your command prompt or IDE. If not, you may get an API key not found exception.
+        final String subscriptionKey = System.getenv("BING_SEARCH_V7_SUBSCRIPTION_KEY");
+
+        BingVisualSearchAPI client = BingVisualSearchManager.authenticate(subscriptionKey);
+
+        //runSample(client);
+        byte[] imageBytes;
+
+        try {
+            imageBytes = ByteStreams.toByteArray(ClassLoader.getSystemClassLoader().getResourceAsStream("image.jpg"));
+            visualSearch(client, imageBytes);
+            searchWithCropArea(client, imageBytes);
+            // wait 1 second to avoid rate limiting
+            Thread.sleep(1000);
+            searchWithFilter(client);
+            searchUsingCropArea(client);
+            searchUsingInsightToken(client);
+        }
+        catch (java.io.IOException f) {
+            System.out.println(f.getMessage());
+            f.printStackTrace();
+        }
+        catch (java.lang.InterruptedException f){
+            f.printStackTrace();
+        }
+
+    }
+```
 
 ### Install the client library
 
@@ -131,13 +183,60 @@ BingVisualSearchAPI client = BingVisualSearchManager.authenticate(subscriptionKe
 
 In a new method, send the image byte array (which was created in the `main()` method) using the client's [bingImages().visualSearch()](https://docs.microsoft.com/java/api/com.microsoft.azure.cognitiveservices.search.visualsearch.bingimages.visualsearch?view=azure-java-stable#com_microsoft_azure_cognitiveservices_search_visualsearch_BingImages_visualSearch__) method. 
 
+<!--
 [!code-java[visualSearch() method](~/cognitive-services-java-sdk-samples/Search/BingVisualSearch/src/main/java/BingVisualSearchSample.java?name=visualSearch)]
+-->
+
+```java
+    public static void visualSearch(BingVisualSearchAPI client, byte[] imageBytes){
+        System.out.println("Calling Bing Visual Search with image binary");
+        ImageKnowledge visualSearchResults = client.bingImages().visualSearch()
+                .withImage(imageBytes)
+                .execute();
+        PrintVisualSearchResults(visualSearchResults);
+
+    }
+```
 
 ## Print the image insight token and visual search tags
 
 Check if the [ImageKnowledge](https://docs.microsoft.com/java/api/com.microsoft.azure.cognitiveservices.search.visualsearch.models.imageknowledge?view=azure-java-stable) object is null. If not, print the image insights token, the number of tags, the number of actions, and the first action type.
 
+<!--
 [!code-java[Print token and tags](~/cognitive-services-java-sdk-samples/Search/BingVisualSearch/src/main/java/BingVisualSearchSample.java?name=printVisualSearchResults)]
+-->
+
+```java
+    static void PrintVisualSearchResults(ImageKnowledge visualSearchResults) {
+        if (visualSearchResults == null) {
+            System.out.println("No visual search result data.");
+        } else {
+            // Print token
+
+            if (visualSearchResults.image() != null && visualSearchResults.image().imageInsightsToken() != null) {
+                System.out.println("Found uploaded image insights token: " + visualSearchResults.image().imageInsightsToken());
+            } else {
+                System.out.println("Couldn't find image insights token!");
+            }
+
+            // List tags
+
+            if (visualSearchResults.tags() != null && visualSearchResults.tags().size() > 0) {
+                System.out.format("Found visual search tag count: %d\n", visualSearchResults.tags().size());
+                ImageTag firstTagResult = visualSearchResults.tags().get(0);
+
+                // List of actions in first tag
+
+                if (firstTagResult.actions() != null && firstTagResult.actions().size() > 0) {
+                    System.out.format("Found first tag action count: %d\n", firstTagResult.actions().size());
+                    System.out.println("Found first tag action type: " + firstTagResult.actions().get(0).actionType());
+                }
+            } else {
+                System.out.println("Couldn't find image tags!");
+            }
+        }
+    }
+```
 
 ## Run the application
 
