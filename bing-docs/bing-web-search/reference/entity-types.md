@@ -13,7 +13,7 @@ ms.author: scottwhi
 
 # Entity types used by Bing Web Search API
 
-This section contains the list possible entity hints. The hints are grouped by category of entities.  
+This section contains the list entity hints that the [EntityPresentationInfo](response-objects.md#entitypresentationinfo) object's `entityTypeHint` field can be set to. The hints are grouped by category of entities.  
   
 ## Base entity types 
   

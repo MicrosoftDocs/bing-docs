@@ -23,6 +23,9 @@ If the request succeeds, the top-level object in the response is the [SearchResp
 The JSON objects in this section are specific to the web answer. For details about the JSON objects for other answer types that the search results may include, see the API-specific reference documentation. For example, if the search results contain the images and news answers, see the [Image Search API reference](../../bing-image-search/reference/endpoints.md) and [News Search API reference](../../bing-news-search/reference/endpoints.md).
 
 
+> [!NOTE]
+> Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
+
 
 ## Computation  
 
@@ -32,40 +35,6 @@ Defines an expression and its answer.
 |-|-|-
 |<a name="computation-expression"></a>expression|The math or conversion expression.<br/><br/>If the query contains a request to convert units of measure (for example, meters to feet), this field contains the *from* units and `value` contains the *to* units.<br/><br/>If the query contains a mathematical expression such as 2+2, this field contains the expression and `value` contains the answer.<br/><br/>Note that mathematical expressions may be normalized. For example, if the query was sqrt(4^2+8^2), the normalized expression may be sqrt((4^2)+(8^2)).<br/><br/>If the user's query is a math question and the [textDecorations](query-parameters.md#textdecorations) query parameter is set to **true**, the expression string may include formatting markers. For example, if the user's query is *log(2)*, the normalized expression includes the subscript markers. For more information, see [Hit highlighting](../hit-highlighting.md).|String
 |<a name="computation-value"></a>value|The expression's answer.|String  
-
-
-## Entity  
-
-Defines an entity such as a person, place, or thing.  
-  
-|Name|Value|Type
-|-|-|-
-|bingId|An ID that uniquely identifies this entity.|String  
-|contractualRules|A list of rules that you must adhere to if you display the entity. For example, the rules may govern attribution of the entity's description.<br/><br/>The following contractual rules may apply:<ul><li>[LicenseAttribution](#licenseattribution)</li><li>[LinkAttribution](#linkattribution)</li><li>[MediaAttribution](#mediaattribution)</li><li>[TextAttribution](#textattribution)</li></ul>Not all entities include rules. If the entity provides contractual rules, you must abide by them. For more information about using contractual rules, see [Attributing Data](/bing/bing-entities-search/concepts/data-attribution).|Object[]
-|description|A short description of the entity.|String  
-|entityPresentationInfo|Additional information about the entity such as hints that you can use to determine the entity's type. To determine the entity's type, use the `entityScenario` and `entityTypeHint` fields. For example, the fields help you determine whether the entity is a dominant or disambiguation entity and whether it's a person or movie.<br/><br/>The entity is a dominant entity if Bing believes that only one entity satisfies the request. If multiple entities could satisfy the request, the entity is a disambiguation entity and the user needs to select the entity they're interested in.|[EntityPresentationInfo](#entitypresentationinfo)  
-|image|An image of the entity.|[Image](#image)
-|name|The entity's name.|String
-|webSearchUrl|The URL that takes the user to the Bing search results page for this entity.|String
-  
-## EntityAnswer  
-
-Defines an entity answer.
-  
-|Name|Value|Type
-|-|-|-  
-|queryScenario|The supported query scenario. This field is set to DominantEntity or DisambiguationItem. The field is set to DominantEntity if Bing determines that only a single entity satisfies the request. For example, a book, movie, person, or attraction.<br/><br/>If multiple entities could satisfy the request, the field is set to DisambiguationItem. For example, if the request uses the generic title of a movie franchise, the entity's type would likely be DisambiguationItem. But, if the request specifies a specific title from the franchise, the entity's type would likely be DominantEntity.|String
-|value|A list of entities.|[Entity](#entity)[]   
-
-## EntityPresentationInfo  
-
-Defines additional information about an entity such as type hints. 
-  
-|Name|Value|Type 
-|-|-|-  
-|entityScenario|The supported scenario.|String
-|entityTypeDisplayHint|A display version of the entity hint. For example, if  `entityTypeHints` is Artist, this field may be set to *American Singer*.|String 
-|entityTypeHint|A list of hints that indicate the entity's type. The list could contain a single hint such as Movie or a list of hints such as Place, LocalBusiness, Restaurant. Each successive hint in the array narrows the entity's type.<br/><br/>For a list of possible types, see [Entity Types](entity-types.md). If the object does not include this field, Generic is assumed.|String[]  
 
   
 ## Error  
@@ -246,7 +215,7 @@ If the service suspects a denial of service attack, the request succeeds (HTTP s
 |-|-|-
 |_type|Type hint, which is set to SearchResponse.|String
 |<a name="searchresponse-computation"></a>computation|The answer to a math expression or unit conversion expression.|[Computation](#computation)
-|<a name="searchresponse-entities"></a>entities|A list of entities that are relevant to the search query.|[EntityAnswer](#entityanswer)
+|<a name="searchresponse-entities"></a>entities|A list of entities that are relevant to the search query.|[EntityAnswer](../../bing-entity-search/reference/response-objects.md#entityanswer)
 |<a name="searchresponse-images"></a>images|A list of images that are relevant to the search query.|[Images](../../bing-image-search/reference/response-objects.md#images)
 |<a name="searchresponse-news"></a>news|A list of news articles that are relevant to the search query.|[News](../../bing-news-search/reference/response-objects.md#news) 
 |<a name="searchresponse-querycontext"></a>queryContext|The query string that Bing used for the request.|[QueryContext](#querycontext)

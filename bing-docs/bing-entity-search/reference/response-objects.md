@@ -39,6 +39,7 @@ Defines an entity answer that contains the list of entities.
 
 |Name|Value|Type 
 |-|-|-  
+|queryScenario|The supported query scenario. This field is set to DominantEntity or DisambiguationItem. The field is set to DominantEntity if Bing determines that only a single entity satisfies the request. For example, a book, movie, person, or attraction.<br/><br/>If multiple entities could satisfy the request, the field is set to DisambiguationItem. For example, if the request uses the generic title of a movie franchise, the entity's type would likely be DisambiguationItem. But, if the request specifies a specific title from the franchise, the entity's type would likely be DominantEntity.|String
 |value|A list of entities.|[Entity](#entity)[]
   
 

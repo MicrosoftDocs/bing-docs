@@ -49,17 +49,13 @@ By default, the charts and graphs display all metrics and data that you have acc
   - **Past 24 hours**: Includes analytics from the last 24 hours  
   - **Past week**: Includes analytics from the previous 7 days  
   - **Past month**: Includes analytics from the previous 30 days  
-  - **A custom date range**: Includes analytics from the specified date range, if available  
+  - **A custom date range**: Includes analytics from the specified date range, if available. 
 
 ## Charts and graphs
 
-The dashboard shows charts and graphs of the metrics available for the selected endpoint. Not all metrics are available for all endpoints. The charts and graphs for each endpoint are static (you may not select the charts and graphs to display). The dashboard shows only charts and graphs for which there's data.
+The dashboard shows charts and graphs of the metrics available for the selected endpoint. Not all metrics are available for all endpoints. The charts and graphs for each endpoint are static (you may not select which charts and graphs to display). The dashboard shows only charts and graphs for which there's data.
 
-<!--
-For example, if you don't include the User-Agent header in your calls, the dashboard will not include device-related graphs.
--->
-
-The following are possible metrics and endpoint restrictions.
+The following are the metrics that the dashboard may include.
 
 - **Call Volume**: Shows the number of calls made during the reporting period. If the reporting period is for a day, the chart shows the number of calls made per hour. Otherwise, the chart shows the number of calls made per day of the reporting period.  
   
@@ -94,7 +90,3 @@ The following are possible metrics and endpoint restrictions.
 
 - **Response Server Distribution**: The application server that served your API requests. The possible values are Bing.com (for traffic served from desktop and laptop devices) and Bing.com-mobile (for traffic served from mobile devices). The server is determined using the request's User-Agent header value. If the request doesn't include the User-Agent header, Bing tries to derive the server from other signals.
 
-## Next steps
-
-* [What are the Bing Search APIs?](bing-api-comparison.md)
-* [Bing Search API use and display requirements](use-display-requirements.md)

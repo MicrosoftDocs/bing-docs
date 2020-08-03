@@ -13,9 +13,9 @@ ms.author: scottwhi
 
 # Market and language codes used by Bing Web Search API
 
-The following table lists the market code values that you may use to specify the [mkt](query-parameters.md#mkt) query parameter. Bing returns content for only these markets. The list is subject to change.  
+The following table lists the market code values that you set the [mkt](query-parameters.md#mkt) query parameter to. Bing returns content for only these markets. The list is subject to change.  
 
-For a list of country codes that you may specify in the [cc](query-parameters.md#cc) query parameter, see [Country codes](#country-codes).  
+For a list of country codes that you may set the [cc](query-parameters.md#cc) query parameter to, see [Country codes](#country-codes).  
   
 |Country/Region|Language|Market code 
 |-|-|- 
@@ -60,7 +60,7 @@ For a list of country codes that you may specify in the [cc](query-parameters.md
   
 ## Country codes  
 
-The following are the country codes that you may specify in the [cc](query-parameters.md#cc) query parameter. The list is subject to change.  
+The following table lists the country codes that you may set the [cc](query-parameters.md#cc) query parameter to. The list is subject to change.  
   
 |Country/Region|Country Code 
 |-|-
@@ -103,7 +103,7 @@ The following are the country codes that you may specify in the [cc](query-param
 
 ## Bing supported language codes
 
-The following are the Bing supported languages that you may specify in the [setLang](query-parameters.md#setlang) query parameter. The list is subject to change.  
+The following table lists the Bing supported languages that you may set the [setLang](query-parameters.md#setlang) query parameter to. The list is subject to change.  
   
 |Supported Languages|Language Code
 |-|-  

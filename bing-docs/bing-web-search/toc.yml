@@ -6,7 +6,7 @@
     href: overview.md
     expanded: true
   - name: Compare the Bing Search APIs
-    href: ../bing-web-search/bing-api-comparison.md
+    href: bing-api-comparison.md
 - name: Quickstarts
   items:
   - name: REST APIs
@@ -25,18 +25,26 @@
       href: quickstarts/python.md
     - name: Ruby
       href: quickstarts/ruby.md
-  - name: SDKs
+  - name: SDKs (client libraries)
     items:
-    - name: Bing Web Search client libraries
-      href: ./quickstarts/client-libraries.md
+    - name: C#
+      href: quickstarts/web-search-client-library-csharp.md
+    - name: Java
+      href: quickstarts/web-search-client-library-java.md
+    - name: Node.js
+      href: quickstarts/web-search-client-library-javascript.md
+    - name: Python
+      href: quickstarts/web-search-client-library-python.md
 - name: Tutorials
   items:
   - name: Build a single-page web app
     href: tutorial/bing-web-search-single-page-app.md
+  - name: Using rank to display search results - C#
+    href: tutorial/csharp-ranking-tutorial.md
 - name: Samples
   items:
   - name: REST samples
-    href: https://github.com/Azure-Samples/cognitive-services-REST-api-samples
+    href: rest-samples.md
   - name: SDK samples
     href: sdk-samples.md
 - name: How-to guides
@@ -55,46 +63,45 @@
     href: bing-web-upgrade-guide-v5-to-v7.md
 - name: Concepts
   items:
-  - name: Autosuggest search terms
-    href: autosuggest-bing-search-terms.md
   - name: Search responses
     href: search-responses.md
+  - name: Autosuggest search terms
+    href: autosuggest-bing-search-terms.md
   - name: Throttling requests
     href: throttling-requests.md
 - name: Reference
-  items:
-  - name: Endpoints
-    href: reference/endpoints.md
-  - name: Response objects
-    href: reference/response-objects.md
-  - name: Query parameters
-    href: reference/query-parameters.md
-  - name: Headers
-    href: reference/headers.md
-  - name: Market and language codes
-    href: reference/market-codes.md
-  - name: Error codes
-    href: reference/error-codes.md
-  - name: Entity types
-    href: reference/entity-types.md
-- name: SDKs
-  items:
-  - name: .NET
-    href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingwebsearchapi?view=azure-dotnet
-  - name: Java
-    href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingwebsearchapi?view=azure-java-stable
-  - name: Python
-    href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/websearch?view=azure-python
-  - name: Node.js
-    href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-websearch/?view=azure-node-latest
-  - name: Go
-    href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/websearch
+  -name: REST
+    items:
+    - name: Endpoints
+      href: reference/endpoints.md
+    - name: Response objects
+      href: reference/response-objects.md
+    - name: Query parameters
+      href: reference/query-parameters.md
+    - name: Headers
+      href: reference/headers.md
+    - name: Market and language codes
+      href: reference/market-codes.md
+    - name: Error codes
+      href: reference/error-codes.md
+    - name: Entity types
+      href: reference/entity-types.md
+  - name: SDKs (client libraries)
+    items:
+    - name: .NET
+      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingwebsearchapi?view=azure-dotnet
+    - name: Java
+      href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingwebsearchapi?view=azure-java-stable
+    - name: Python
+      href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/websearch?view=azure-python
+    - name: Node.js
+      href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-websearch/?view=azure-node-latest
+    - name: Go
+      href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/websearch
 - name: Resources
   items:
   - name: Get API key
     href: https://azure.microsoft.com/try/cognitive-services/?api=bing-web-search-api
-  - name: Bing Web Search endpoint
-    href: web-search-endpoints.md
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
   - name: Analytics for Bing Web Search API
