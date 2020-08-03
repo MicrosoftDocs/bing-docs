@@ -5,10 +5,12 @@ services: bing-search-services
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
-ms.topic: include
+ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
+
+# Quickstart: Use a Bing Web Search .NET client library
 
 The Bing Web Search client library makes it easy to integrate Bing Web Search into your C# application. In this quickstart, you'll learn how to instantiate a client, send a request, and print the response.
 

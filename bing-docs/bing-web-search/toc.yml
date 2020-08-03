@@ -70,7 +70,7 @@
   - name: Throttling requests
     href: throttling-requests.md
 - name: Reference
-  -name: REST
+  - name: REST
     items:
     - name: Endpoints
       href: reference/endpoints.md

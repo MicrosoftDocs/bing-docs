@@ -24,7 +24,7 @@ Here are a few things that you'll need before running this quickstart:
 * [Gson library](https://github.com/google/gson)
 * A subscription key
 
-[!INCLUDE [bing-web-search-quickstart-signup](../../../includes/bing-web-search-quickstart-signup.md)]
+[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
 
 ## Create a project and import dependencies
 
@@ -318,4 +318,4 @@ Responses from the Bing Web Search API are returned as JSON. This sample respons
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Web Search API single-page app tutorial](../tutorial/bing-web-search-single-page-app.md)
+> [Bing Web Search API single-page app tutorial](../../tutorial/bing-web-search-single-page-app.md)

@@ -24,7 +24,7 @@ This example is run as a Jupyter notebook on [MyBinder](https://mybinder.org). T
 
 * [Python 2.x or 3.x](https://www.python.org/)
 
-[!INCLUDE [bing-web-search-quickstart-signup](../../../includes/bing-web-search-quickstart-signup.md)]
+[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
 
 ## Define variables
 
@@ -85,5 +85,5 @@ To run this code locally, see the complete [sample available on GitHub](https://
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Web Search API single-page app tutorial](../tutorial/bing-web-search-single-page-app.md)
+> [Bing Web Search API single-page app tutorial](../../tutorial/bing-web-search-single-page-app.md)
 

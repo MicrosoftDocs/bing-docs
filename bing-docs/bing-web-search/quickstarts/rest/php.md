@@ -23,7 +23,7 @@ Here are a few things that you'll need before running this quickstart:
 * [PHP 5.6.x](https://php.net/downloads.php) or later
 * A subscription key  
 
-[!INCLUDE [bing-web-search-quickstart-signup](../../../includes/bing-web-search-quickstart-signup.md)]
+[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
 
 ## Enable secure HTTP support
 
@@ -280,5 +280,5 @@ Responses from the Bing Web Search API are returned as JSON. This sample respons
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Web Search API single-page app tutorial](../tutorial/bing-web-search-single-page-app.md)
+> [Bing Web Search API single-page app tutorial](../../tutorial/bing-web-search-single-page-app.md)
 

@@ -23,7 +23,7 @@ Here are a few things that you'll need before running this quickstart:
 * [Ruby 2.4 or later](https://www.ruby-lang.org/en/downloads/)
 * A subscription key
 
-[!INCLUDE [bing-web-search-quickstart-signup](../../../includes/bing-web-search-quickstart-signup.md)]
+[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
 
 ## Create a project and declare required modules
 
@@ -262,5 +262,5 @@ Responses from the Bing Web Search API are returned as JSON. This sample respons
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Web Search API single-page app tutorial](../tutorial/bing-web-search-single-page-app.md)
+> [Bing Web Search API single-page app tutorial](../../tutorial/bing-web-search-single-page-app.md)
 

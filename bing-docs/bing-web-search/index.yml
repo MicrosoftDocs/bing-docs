@@ -1,21 +1,21 @@
 ### YamlMime:Hub
 
 title: Bing Search API documentation
-summary: The Bing Search APIs let you build web-connected apps and services that find webpages, images, news, locations, and more without advertisements.
-brand: azure
+summary: The Bing Search APIs let you build web-connected apps and services that find webpages, images, news and more without advertisements.
+brand: m365
 
 metadata:
   title: Bing Search API documentation
-  titleSuffix: Azure Cognitive Services
-  description: The Bing Search APIs let you build web-connected apps and services that find webpages, images, news, locations, and more without advertisements.
-  services: cognitive-services
-  ms.service: cognitive-services
+  titleSuffix: Bing Search Services
+  description: The Bing Search APIs let you build web-connected apps and services that find webpages, images, news and more without advertisements.
+  services: bing-search-services
+  ms.service: bing-search-services
   ms.subservice: bing-web-search
   ms.topic: hub-page
   ms.collection: collection
-  author: aahill
-  ms.author: aahi
-  ms.date: 11/06/2019
+  author: swhite-msft
+  ms.author: scottwhi
+  ms.date: 07/15/2020
 
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -36,20 +36,20 @@ highlightedContent:
 conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
   title: Get started
-  summary: Start getting search results from the web by choosing one of the available APIs below. 
+  summary: Get started quickly searching the web using one of the following quickstarts. 
   items:
     - title: Bing Web Search
       links:      
-        - url: ./quickstarts/client-libraries.md?pivots=programming-language-csharp
+        - url: ./quickstarts/sdk/web-search-client-library-csharp.md
           itemType: quickstart
           text: Use C#
-        - url: ./quickstarts/client-libraries.md?pivots=programming-language-java
+        - url: ./quickstarts/sdk/web-search-client-library-java
           itemType: quickstart
           text: Use Java
-        - url: ./quickstarts/client-libraries.md?pivots=programming-language-javascript
+        - url: ./quickstarts/sdk/web-search-client-library-javascript
           itemType: quickstart
           text: Use JavaScript
-        - url: ./quickstarts/client-libraries.md?pivots=programming-language-python
+        - url: ./quickstarts/sdk/web-search-client-library-python
           itemType: quickstart
           text: Use Python
         - url: tutorial/bing-web-search-single-page-app.md

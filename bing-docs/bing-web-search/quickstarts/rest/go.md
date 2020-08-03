@@ -24,7 +24,7 @@ Here are a few things that you'll need before running this quickstart:
 * [Go binaries](https://golang.org/dl/)
 * A subscription key
 
-[!INCLUDE [bing-web-search-quickstart-signup](../../../includes/bing-web-search-quickstart-signup.md)]  
+[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]  
 
 ## Create a project and import core libraries
 
@@ -320,4 +320,4 @@ Cognitive Services - msdn.microsoft.com || https://msdn.microsoft.com/magazine/m
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Web Search API single-page app tutorial](../tutorial/bing-web-search-single-page-app.md)
+> [Bing Web Search API single-page app tutorial](../../tutorial/bing-web-search-single-page-app.md)
