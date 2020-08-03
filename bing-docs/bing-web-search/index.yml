@@ -40,16 +40,16 @@ conceptualContent:
   items:
     - title: Bing Web Search
       links:      
-        - url: ./quickstarts/sdk/web-search-client-library-csharp.md
+        - url: quickstarts/sdk/web-search-client-library-csharp.md
           itemType: quickstart
           text: Use C#
-        - url: ./quickstarts/sdk/web-search-client-library-java
+        - url: quickstarts/sdk/web-search-client-library-java.md
           itemType: quickstart
           text: Use Java
-        - url: ./quickstarts/sdk/web-search-client-library-javascript
+        - url: quickstarts/sdk/web-search-client-library-javascript.md
           itemType: quickstart
           text: Use JavaScript
-        - url: ./quickstarts/sdk/web-search-client-library-python
+        - url: quickstarts/sdk/web-search-client-library-python.md
           itemType: quickstart
           text: Use Python
         - url: tutorial/bing-web-search-single-page-app.md

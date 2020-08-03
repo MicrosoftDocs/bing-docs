@@ -39,7 +39,7 @@
   items:
   - name: Build a single-page web app
     href: tutorial/bing-web-search-single-page-app.md
-  - name: Using rank to display search results - C#
+  - name: Display search results in rank order - C#
     href: tutorial/csharp-ranking-tutorial.md
 - name: Samples
   items:
@@ -70,6 +70,7 @@
   - name: Throttling requests
     href: throttling-requests.md
 - name: Reference
+  items:
   - name: REST
     items:
     - name: Endpoints
