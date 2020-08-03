@@ -12,29 +12,29 @@
   - name: REST APIs
     items:
     - name: C#
-      href: quickstarts/csharp.md
+      href: quickstarts/rest/csharp.md
     - name: Go
-      href: quickstarts/go.md
+      href: quickstarts/rest/go.md
     - name: Java
-      href: quickstarts/java.md
+      href: quickstarts/rest/java.md
     - name: Node.js
-      href: quickstarts/nodejs.md
+      href: quickstarts/rest/nodejs.md
     - name: PHP
-      href: quickstarts/php.md
+      href: quickstarts/rest/php.md
     - name: Python
-      href: quickstarts/python.md
+      href: quickstarts/rest/python.md
     - name: Ruby
-      href: quickstarts/ruby.md
+      href: quickstarts/rest/ruby.md
   - name: SDKs (client libraries)
     items:
     - name: C#
-      href: quickstarts/web-search-client-library-csharp.md
+      href: quickstarts/sdk/web-search-client-library-csharp.md
     - name: Java
-      href: quickstarts/web-search-client-library-java.md
+      href: quickstarts/sdk/web-search-client-library-java.md
     - name: Node.js
-      href: quickstarts/web-search-client-library-javascript.md
+      href: quickstarts/sdk/web-search-client-library-javascript.md
     - name: Python
-      href: quickstarts/web-search-client-library-python.md
+      href: quickstarts/sdk/web-search-client-library-python.md
 - name: Tutorials
   items:
   - name: Build a single-page web app
