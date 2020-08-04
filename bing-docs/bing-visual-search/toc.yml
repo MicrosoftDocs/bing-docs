@@ -73,17 +73,17 @@
   - name: REST
     items:
     - name: Endpoints
-      href: reference/rest/endpoints.md
+      href: reference/endpoints.md
     - name: Response objects
-      href: reference/rest/response-objects.md
+      href: reference/response-objects.md
     - name: Query parameters
-      href: reference/rest/query-parameters.md
+      href: reference/query-parameters.md
     - name: Headers
-      href: reference/rest/headers.md
+      href: reference/headers.md
     - name: Market and language codes
-      href: reference/rest/market-codes.md
+      href: reference/market-codes.md
     - name: Error codes
-      href: reference/rest/error-codes.md
+      href: reference/error-codes.md
   - name: SDKs (client libraries)
     items:
       - name: .NET

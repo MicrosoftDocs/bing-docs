@@ -167,16 +167,16 @@ conceptualContent:
 
     - title: Bing Visual Search API
       links:
-        - url: quickstarts/sdk/visual-search-client-library-csharp.md
+        - url: ../bing-visual-search/quickstarts/sdk/visual-search-client-library-csharp.md
           itemType: quickstart
           text: Use C#
-        - url: quickstarts/sdk/visual-search-client-library-java.md
+        - url: ../bing-visual-search/quickstarts/sdk/visual-search-client-library-java.md
           itemType: quickstart
           text: Use Java
-        - url: quickstarts/sdk/visual-search-client-library-javascript.md
+        - url: ../bing-visual-search/quickstarts/sdk/visual-search-client-library-javascript.md
           itemType: quickstart
           text: Use JavaScript
-        - url: quickstarts/sdk/visual-search-client-library-python.md
+        - url: ../bing-visual-search/quickstarts/sdk/visual-search-client-library-python.md
           itemType: quickstart
           text: Use Python
         - text: Visual Search tutorial
