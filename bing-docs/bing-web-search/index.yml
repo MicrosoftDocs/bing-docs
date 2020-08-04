@@ -54,7 +54,7 @@ conceptualContent:
           text: Use Python
         - url: tutorial/bing-web-search-single-page-app.md
           itemType: tutorial
-          text: Create a single-page web-app
+          text: Web Search tutorial
       footerLink:
         url: overview.md
         text: See more
@@ -167,21 +167,21 @@ conceptualContent:
 
     - title: Bing Visual Search API
       links:
-        - text: Use C#
+        - url: quickstarts/sdk/visual-search-client-library-csharp.md
           itemType: quickstart
-          url: ../bing-visual-search/quickstarts/client-libraries.md?pivots=programming-language-csharp
-        - text: Use Java
+          text: Use C#
+        - url: quickstarts/sdk/visual-search-client-library-java.md
           itemType: quickstart
-          url: ../bing-visual-search/quickstarts/client-libraries.md?pivots=programming-language-java
-        - text: Use JavaScript
+          text: Use Java
+        - url: quickstarts/sdk/visual-search-client-library-javascript.md
           itemType: quickstart
-          url: ../bing-visual-search/quickstarts/client-libraries.md?pivots=programming-language-javascript
-        - text: Use Python
+          text: Use JavaScript
+        - url: quickstarts/sdk/visual-search-client-library-python.md
           itemType: quickstart
-          url: ../bing-visual-search/quickstarts/client-libraries.md?pivots=programming-language-python
-        - text: Crop and search an area of an image
+          text: Use Python
+        - text: Visual Search tutorial
           itemType: tutorial
-          url: ../bing-visual-search/tutorial/visual-search-crop-area-results.md
+          url: ../bing-visual-search/tutorial/visual-search-single-page-app.md
       footerLink:
         url: ../bing-visual-search/overview.md
         text: See more

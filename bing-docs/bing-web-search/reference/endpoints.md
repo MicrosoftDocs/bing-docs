@@ -13,7 +13,7 @@ ms.author: scottwhi
 
 # Web Search API v7 reference
 
-The Web Search API lets you send a search query to Bing and get back search results that include links to webpages, images, and more. This section provides details about the response objects, query parameters, and headers used by the API. For examples that show how to make requests, see [Bing Web Search overview](../overview.md). 
+The Web Search API lets you send a search query to Bing and get back search results that include links to webpages, images, and more. This section provides technical details about the query parameters and headers that you use to request web search results and the JSON response objects that contain them. For examples that show how to make requests, see [Bing Web Search overview](../overview.md). 
   
 For information about what you can do with the search results, see [Use and display requirements](../use-display-requirements.md).
 

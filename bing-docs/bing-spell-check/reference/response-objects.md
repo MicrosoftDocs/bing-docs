@@ -13,10 +13,12 @@ ms.author: scottwhi
 
 # Spell Check API v7 response objects
 
-This section contains the JSON objects that the response may include. If the request is successful, the top-level object in the response is the [SpellCheck](#spellcheck) object. If the request fails, the top-level object is [ErrorResponse](#errorresponse). 
-
 For a list of possible objects, see **In this article** in the right pane.
 
+If the request is successful, the top-level object in the response is the [SpellCheck](#spellcheck) object. If the request fails, the top-level object is [ErrorResponse](#errorresponse). 
+
+> [!NOTE]
+> Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
   
 ## Error  
 

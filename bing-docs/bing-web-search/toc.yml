@@ -9,7 +9,7 @@
     href: bing-api-comparison.md
 - name: Quickstarts
   items:
-  - name: REST APIs
+  - name: REST API
     items:
     - name: C#
       href: quickstarts/rest/csharp.md
@@ -25,7 +25,7 @@
       href: quickstarts/rest/python.md
     - name: Ruby
       href: quickstarts/rest/ruby.md
-  - name: SDKs (client libraries)
+  - name: SDKs (client library)
     items:
     - name: C#
       href: quickstarts/sdk/web-search-client-library-csharp.md

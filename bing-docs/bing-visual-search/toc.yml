@@ -11,23 +11,29 @@
     - name: REST API
       expanded: true
       items:
-      - name: Using C#
-        href: quickstarts/csharp.md
-      - name: Using Java
-        href: quickstarts/java.md
-      - name: Using Node.js
-        href: quickstarts/nodejs.md
-      - name: Using Python
-        href: quickstarts/python.md
-      - name: Using Ruby
-        href: quickstarts/ruby.md
-      - name: Using Go
-        href: quickstarts/go.md
-    - name: Client library
+      - name: C#
+        href: quickstarts/rest/csharp.md
+      - name: Java
+        href: quickstarts/rest/java.md
+      - name: Node.js
+        href: quickstarts/rest/nodejs.md
+      - name: Python
+        href: quickstarts/rest/python.md
+      - name: Ruby
+        href: quickstarts/rest/ruby.md
+      - name: Go
+        href: quickstarts/rest/go.md
+    - name: SDK (client library)
       expanded: true
       items:
-      - name: Bing Visual Search client libraries
-        href: ./quickstarts/client-libraries.md
+      - name: C#
+        href: quickstarts/sdk/visual-search-client-library-csharp.md
+      - name: Java
+        href: quickstarts/sdk/visual-search-client-library-java.md
+      - name: Node.js
+        href: quickstarts/sdk/visual-search-client-library-javascript.md
+      - name: Python
+        href: quickstarts/sdk/visual-search-client-library-python.md
 - name: Tutorials
   items:
   - name: Uploading an image
@@ -40,50 +46,54 @@
     href: tutorial/visual-search-single-page-app.md
 - name: Samples
   items:
-    - name: Code samples
-      href: https://azure.microsoft.com/resources/samples/?sort=0&service=cognitive-services&term=Bing+Visual+Search
+  - name: REST samples
+    href: rest-samples.md
+  - name: SDK samples
+    href: sdk-samples.md
 - name: Concepts
   items:
-    - name: Sending queries
-      href: concepts/sending-queries.md
     - name: Default image insights
-      href: default-insights-tag.md
-    - name: Bing insights usage
-      href: bing-insights-usage.md
+      href: concepts/default-insights-tag.md
+    - name: Bing insights examples
+      href: concepts/bing-insights-usage.md
     - name: Analytics for Visual Search API
       maintainContext: true
       href: ../bing-web-search/bing-web-stats.md
 - name: How-to guides
   items:
+  - name: Sending queries
+    href: how-to/sending-queries.md
   - name: Get insights using token
-    href: use-insights-token.md
+    href: how-to/use-insights-token.md
   - name: Resize and crop thumbnails
     maintainContext: true
     href: ../bing-web-search/resize-and-crop-thumbnails.md
 - name: Reference
   items:
-  - name: Endpoints
-    href: reference/endpoints.md
-  - name: Response objects
-    href: reference/response-objects.md
-  - name: Query parameters
-    href: reference/query-parameters.md
-  - name: Headers
-    href: reference/headers.md
-  - name: Market and language codes
-    href: reference/market-codes.md
-  - name: Error codes
-    href: reference/error-codes.md
-- name: SDKs
-  items:
-    - name: .NET
-      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingvisualsearch?view=azure-dotnet
-    - name: Java
-      href:  https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingvisualsearch?view=azure-java-stable
-    - name: Python
-      href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/visualsearch?view=azure-python
-    - name: Node.js
-      href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-visualsearch/?view=azure-node-latest
+  - name: REST
+    items:
+    - name: Endpoints
+      href: reference/rest/endpoints.md
+    - name: Response objects
+      href: reference/rest/response-objects.md
+    - name: Query parameters
+      href: reference/rest/query-parameters.md
+    - name: Headers
+      href: reference/rest/headers.md
+    - name: Market and language codes
+      href: reference/rest/market-codes.md
+    - name: Error codes
+      href: reference/rest/error-codes.md
+  - name: SDKs (client libraries)
+    items:
+      - name: .NET
+        href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingvisualsearch?view=azure-dotnet
+      - name: Java
+        href:  https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingvisualsearch?view=azure-java-stable
+      - name: Python
+        href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/visualsearch?view=azure-python
+      - name: Node.js
+        href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-visualsearch/?view=azure-node-latest
 - name: Resources
   items:
   - name: Get API key
@@ -104,7 +114,7 @@
     - name: Knowledge Base
       href: https://cognitive.uservoice.com/knowledgebase/topics/127875-bing-search-web-image-video-news-autosuggest
 - name: Use and display requirements
-  href: ../Bing-Web-Search/use-display-requirements.md
+  href: ../bing-web-search/use-display-requirements.md
   maintainContext: true
 - name: Release notes
   href: release-notes.md

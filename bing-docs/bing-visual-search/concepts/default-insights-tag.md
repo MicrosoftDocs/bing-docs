@@ -423,10 +423,10 @@ Check out [Examples of Bing insights usage](bing-insights-usage.md) to see how B
 
 To get started quickly with your first request, see the quickstarts:
 
-* [C#](quickstarts/csharp.md)
+* [C#](../quickstarts/rest/csharp.md)
 
-* [Java](quickstarts/java.md)
+* [Java](../quickstarts/rest/java.md)
 
-* [node.js](quickstarts/nodejs.md)
+* [node.js](../quickstarts/rest/nodejs.md)
 
-* [Python](quickstarts/python.md).
+* [Python](../quickstarts/rest/python.md).

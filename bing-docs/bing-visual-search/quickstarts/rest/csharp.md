@@ -23,7 +23,7 @@ This quickstart demonstrates how to upload an image to the Bing Visual Search AP
 * The [Json.NET framework](https://www.newtonsoft.com/json), available as a NuGet package.
 * If you're using Linux/MacOS, you can run this application using [Mono](https://www.mono-project.com/).
 
-[!INCLUDE [bing-visual-search-signup-requirements](../../../includes/bing-visual-search-signup-requirements.md)]
+[!INCLUDE [bing-visual-search-signup-requirements](../../../../includes/bing-visual-search-signup-requirements.md)]
 
 ## Create and initialize a project
 
@@ -266,4 +266,4 @@ If you use `HttpClient`, you can use the `MultipartFormDataContent` class to bui
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a Visual Search single-page web app](../tutorial/visual-search-single-page-app.md)
+> [Create a Visual Search single-page web app](../../tutorial/visual-search-single-page-app.md)

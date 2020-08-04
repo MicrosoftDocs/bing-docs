@@ -23,7 +23,7 @@ Use this quickstart to make your first call to the Bing Visual Search API. This 
 * The [Gson Java library](https://github.com/google/gson)
 * [Apache HttpComponents](https://hc.apache.org/downloads.cgi)
 
-[!INCLUDE [bing-visual-search-signup-requirements](../../../includes/bing-visual-search-signup-requirements.md)]
+[!INCLUDE [bing-visual-search-signup-requirements](../../../../includes/bing-visual-search-signup-requirements.md)]
 
 ## Create and initialize a project
 
@@ -126,4 +126,4 @@ public static String prettify(String json_text) {
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a Visual Search single-page web app](../tutorial/visual-search-single-page-app.md)
+> [Build a Visual Search single-page web app](../../tutorial/visual-search-single-page-app.md)

@@ -226,7 +226,7 @@ The `tags` field contains a display name and list of actions (insights). One of 
 }
 ```
 
-For a list of the default insights, see [Default insights tag](../default-insights-tag.md).
+For a list of the default insights, see [Default insights tag](../concepts/default-insights-tag.md).
 
 The remaining tags contain other insights that may be of interest to the user. For example, if the image contains text, one of the tags may include a TextResults insight, which contains the recognized text. Or, if Bing recognizes an entity (that is, a culturally well-known/popular person, place, or thing) in the image, one of the tags may identify the entity. Visual Search also returns a diverse set of terms (tags) derived from the input image. These tags enable users to explore concepts found in the image. For example, if the input image is of a famous athlete, one of the tags might be Sports, which contains links to images of sports.
 

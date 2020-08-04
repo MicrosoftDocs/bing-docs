@@ -20,6 +20,9 @@ For a list of possible objects, see **In this article** in the right pane.
 
 The top-level object in the response depends on the endpoint you call. If you call `/images/search`, the top-level object in the response is the [Images](#images) object; and for `/images/trending`, it's [TrendingImages](#trendingimages). If the request fails, the top-level object is the [ErrorResponse](#errorresponse) object.
 
+> [!NOTE]
+> Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
+
 
 ## AggregateOffer  
 

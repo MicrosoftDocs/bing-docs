@@ -52,13 +52,13 @@ The Bing Visual Search API is a RESTful web service, making it easy to call from
 
 To get started quickly with your first request, see the quickstarts:
 
-* [C#](quickstarts/csharp.md)
+* [C#](quickstarts/rest/csharp.md)
 
-* [Java](quickstarts/java.md)
+* [Java](quickstarts/rest/java.md)
 
-* [node.js](quickstarts/nodejs.md)
+* [node.js](quickstarts/rest/nodejs.md)
 
-* [Python](quickstarts/python.md)
+* [Python](quickstarts/rest/python.md)
 
 ## See also
 

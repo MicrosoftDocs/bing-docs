@@ -20,6 +20,9 @@ For a list of possible objects, see **In this article** in the right pane.
 
 If the request succeeds, the top-level object in the response is the [Videos](#videos) object. And if the request fails, the top-level object is the [ErrorResponse](#errorresponse) object.
 
+> [!NOTE]
+> Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
+
 
 ## Error  
 

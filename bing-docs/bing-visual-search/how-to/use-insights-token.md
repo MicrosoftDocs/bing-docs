@@ -15,15 +15,15 @@ ms.author: scottwhi
 
 # Use an insights token to get insights for an image
 
-Bing Visual Search API returns information about an image that you provide. You can provide the image by using the URL of the image, an insights token, or by uploading an image. For information about these options, see [What is Bing Visual Search API?](overview.md). This article demonstrates using an insights token. For examples that demonstrate how to upload an image to get insights, see the quickstarts:
+Bing Visual Search API returns information about an image that you provide. You can provide the image by using the URL of the image, an insights token, or by uploading an image. For information about these options, see [What is Bing Visual Search API?](overview.md). This article demonstrates using an insights token. For examples that demonstrate how to upload an image to get insights, see these quickstarts:
 
-* ([C#](quickstarts/csharp.md)
+* [C#](quickstarts/csharp.md)
 
 * [Java](quickstarts/java.md)
 
 * [Node.js](quickstarts/nodejs.md)
 
-* [Python](quickstarts/python.md)).
+* [Python](quickstarts/python.md)
 
 If you send Bing Visual Search an image token or URL, the following shows the form data you must include in the body of the POST. The form data must include the `Content-Disposition` header, and you must set its `name` parameter to "knowledgeRequest". For details about the `imageInfo` object, see the request:
 
@@ -47,7 +47,7 @@ If you send Bing Visual Search an image token or URL, the following shows the fo
 }
 ```
 
-The examples in this article show how to use the insights token. You get the insights token from an `Image` object in an /images/search API response. For information about getting the insights token, see [What is the Bing Image Search API?](../Bing-Image-Search/overview.md).
+The examples in this article show how to use the insights token. You get the insights token from an `Image` object in an /images/search API response. For information about getting the insights token, see [What is the Bing Image Search API?](../../bing-image-search/overview.md).
 
 ```
 --boundary_1234-abcd
@@ -493,6 +493,6 @@ if __name__ == '__main__':
 
 ## Next steps
 
-[Create a Visual Search single-page web app](tutorial/visual-search-single-page-app.md)  
-[What is the Bing Visual Search API?](overview.md)  
-[Images - Visual Search reference](reference/endpoints.md)
+[Create a Visual Search single-page web app](../tutorial/visual-search-single-page-app.md)  
+[What is the Bing Visual Search API?](../overview.md)  
+[Images - Visual Search reference](../reference/endpoints.md)
