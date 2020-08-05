@@ -19,8 +19,8 @@ The Bing Entity Search API sends a search query to Bing and gets results that in
 
 |Feature  |Description  |
 |---------|---------|
-| [Entity disambiguation](concepts/search-for-entities.md#the-bing-entity-search-api-response)  | Get multiple entities for queries with multiple possible meanings. |
-| [Find places](concepts/search-for-entities.md#find-places) | Search for and return information on local businesses and entities  |
+| [Entity disambiguation](how-to/search-for-entities.md#the-bing-entity-search-api-response)  | Get multiple entities for queries with multiple possible meanings. |
+| [Find places](how-to/search-for-entities.md#find-places) | Search for and return information on local businesses and entities  |
 
 ## Workflow
 
@@ -32,6 +32,6 @@ The Bing Entity Search API is a RESTful web service, making it easy to call from
 
 ## Next steps
 
-* To get started quickly with your first request, try a [Quickstart](quickstarts/csharp.md).
+* To get started quickly with your first request, try a [Quickstart](quickstarts/rest/csharp.md).
 * The [Bing Entity Search API v7](reference/endpoints.md) reference.
 * The [Bing Use and Display Requirements](../bing-web-search/use-display-requirements.md) specify acceptable uses of the content and information gained through the Bing search APIs.

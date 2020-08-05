@@ -33,7 +33,7 @@ The full source code for this tutorial can be found with additional error handli
 
 ## Get the ImageInsightsToken from the Bing Image Search client library
 
-This application uses an `ImageInsightsToken` obtained through the [Bing Image Search client library](../../bing-image-search/quickstarts/client-libraries.md). In a new C# console application, create a client to call the API using `ImageSearchClient()`. Then use `SearchAsync()` with your query:
+This application uses an `ImageInsightsToken` obtained through the [Bing Image Search client library](../../bing-image-search/quickstarts/sdk/image-search-client-library-csharp.md). In a new C# console application, create a client to call the API using `ImageSearchClient()`. Then use `SearchAsync()` with your query:
 
 ```csharp
 var client = new ImageSearchClient(new Microsoft.Azure.CognitiveServices.Search.ImageSearch.ApiKeyServiceClientCredentials(subKey));

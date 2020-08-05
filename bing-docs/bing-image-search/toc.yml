@@ -45,15 +45,15 @@
 - name: How-to guides
   items:
   - name: Getting images from the web
-    href: concepts/bing-image-search-get-images.md
+    href: how-to/bing-image-search-get-images.md
   - name: Sending and working with search queries
-    href: concepts/bing-image-search-sending-queries.md
+    href: how-to/bing-image-search-sending-queries.md
   - name: Get image insights
-    href: image-insights.md
+    href: how-to/image-insights.md
   - name: Get .gif images
-    href: gif-images.md
+    href: how-to/gif-images.md
   - name: Get trending images
-    href: trending-images.md
+    href: how-to/trending-images.md
   - name: Page through search results
     maintainContext: true
     href: ../bing-web-search/page-results.md

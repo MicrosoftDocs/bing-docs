@@ -45,7 +45,7 @@ For details about headers, parameters, market codes, response objects, errors, e
 
 ## Response JSON
 
-The response to an image search request includes results as JSON objects. For examples of parsing the results see the [tutorial](tutorial/bing-image-search-single-page-app).
+The response to an image search request includes results as JSON objects. For examples of parsing the results see the [tutorial](tutorial/bing-image-search-single-page-app.md).
 
 ## Next steps
 

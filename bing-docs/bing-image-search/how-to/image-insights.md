@@ -15,7 +15,7 @@ ms.author: scottwhi
 # Get image insights with the Bing Image Search API
 
 > [!IMPORTANT]
-> Instead of using the `/images/details` endpoint to get image insights, you should use [Bing Visual Search](../bing-visual-search/overview.md) since it provides more comprehensive insights.
+> Instead of using the `/images/details` endpoint to get image insights, you should use [Bing Visual Search](../../bing-visual-search/overview.md) since it provides more comprehensive insights.
 
 Each image includes an insights token that you can use to get information about the image. For example, you can get a collection of related images, web pages that include the image, or a list of merchants where you can buy the product shown in the image.  
 

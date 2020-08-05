@@ -106,16 +106,16 @@ conceptualContent:
       links:
         - text: Use C#
           itemType: quickstart
-          url: ../bing-entity-search/quickstarts/client-libraries.md?pivots=programming-language-csharp
+          url: ../bing-entity-search/quickstarts/sdk/entity-search-client-library-csharp.md
         - text: Use Java
           itemType: quickstart
-          url: ../bing-entity-search/quickstarts/client-libraries.md?pivots=programming-language-java
+          url: ../bing-entity-search/quickstarts/sdk/entity-search-client-library-java.md
         - text: Use JavaScript
           itemType: quickstart
-          url: ../bing-entity-search/quickstarts/client-libraries.md?pivots=programming-language-javascript
+          url: ../bing-entity-search/quickstarts/sdk/entity-search-client-library-javascript.md
         - text: Use Python
           itemType: quickstart
-          url: ../bing-entity-search/quickstarts/client-libraries.md?pivots=programming-language-python
+          url: ../bing-entity-search/quickstarts/sdk/entity-search-client-library-python.md
         - text: Create a single page web-app
           itemType: tutorial
           url: ../bing-entity-search/tutorial/bing-entities-search-single-page-app.md
@@ -160,7 +160,7 @@ conceptualContent:
           url: ../bing-video-search/quickstarts/sdk/video-search-client-library-python.md
         - text: Create a single page web-app
           itemType: tutorial
-          url: ../bing-video-search/tutorial/bing-video-search-single-page-app.md.md
+          url: ../bing-video-search/tutorial/bing-video-search-single-page-app.md
       footerLink:
         url: ../bing-video-search/overview.md
         text: See more

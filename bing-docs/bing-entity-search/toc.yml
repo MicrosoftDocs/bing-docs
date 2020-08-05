@@ -11,69 +11,79 @@
   items:
     - name: REST API
       items:
-      - name: Using C#
-        href: quickstarts/csharp.md
-      - name: Using Java
-        href: quickstarts/java.md
-      - name: Using Node.js
-        href: quickstarts/nodejs.md
-      - name: Using PHP
-        href: quickstarts/php.md
-      - name: Using Python
-        href: quickstarts/python.md
-      - name: Using Ruby
-        href: quickstarts/ruby.md
-    - name: SDK
+      - name: C#
+        href: quickstarts/rest/csharp.md
+      - name: Java
+        href: quickstarts/rest/java.md
+      - name: Node.js
+        href: quickstarts/rest/nodejs.md
+      - name: PHP
+        href: quickstarts/rest/php.md
+      - name: Python
+        href: quickstarts/rest/python.md
+      - name: Ruby
+        href: quickstarts/rest/ruby.md
+    - name: SDK (client library)
       items:
-      - name: Bing Entity Search client libraries
-        href: ./quickstarts/client-libraries.md
+      - name: C#
+        href: quickstarts/sdk/entity-search-client-library-csharp.md
+      - name: Java
+        href: quickstarts/sdk/entity-search-client-library-java.md
+      - name: Node.js
+        href: quickstarts/sdk/entity-search-client-library-javascript.md
+      - name: Python
+        href: quickstarts/sdk/entity-search-client-library-python.md
 - name: Tutorials
   items:
   - name: Build a single-page web app
     href: tutorial/bing-entities-search-single-page-app.md
 - name: Samples
   items:
-    - name: Code samples
-      href: https://azure.microsoft.com/resources/samples/?sort=0&service=cognitive-services&term=Bing+Entity+Search
+  - name: REST samples
+    href: rest-samples.md
+  - name: SDK samples
+    href: sdk-samples.md
 - name: How-to guides
   items:
-  - name: Resize and crop thumbnails
-    maintainContext: true
-    href: ../bing-web-search/resize-and-crop-thumbnails.md
-- name: Concepts
-  items:
     - name: Searching for entities
-      href: concepts/search-for-entities.md
+      href: how-to/search-for-entities.md
     - name: Sending search requests
-      href: concepts/sending-requests.md
+      href: how-to/sending-requests.md
+    - name: Rank results
+      href: how-to/rank-results.md
+    - name: Resize and crop thumbnails
+      maintainContext: true
+      href: ../bing-web-search/resize-and-crop-thumbnails.md
 - name: Reference
   items:
-  - name: Endpoints
-    href: reference/endpoints.md
-  - name: Response objects
-    href: reference/response-objects.md
-  - name: Query parameters
-    href: reference/query-parameters.md
-  - name: Headers
-    href: reference/headers.md
-  - name: Market and language codes
-    href: reference/market-codes.md
-  - name: Error codes
-    href: reference/error-codes.md
-  - name: Entity types
-    href: reference/entity-types.md
+  - name: REST
+    items:
+    - name: Endpoints
+      href: reference/endpoints.md
+    - name: Response objects
+      href: reference/response-objects.md
+    - name: Query parameters
+      href: reference/query-parameters.md
+    - name: Headers
+      href: reference/headers.md
+    - name: Market and language codes
+      href: reference/market-codes.md
+    - name: Error codes
+      href: reference/error-codes.md
+    - name: Entity types
+      href: reference/entity-types.md
 - name: SDKs
   items:
-    - name: .NET
-      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingentitysearchapi?view=azure-dotnet
-    - name: Java
-      href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingentitysearchapi?view=azure-java-stable
-    - name: Python
-      href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/entitysearch?view=azure-python
-    - name: Node.js
-      href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-entitysearch/?view=azure-node-latest
-    - name: Go
-      href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/entitysearch  
+  - name: .NET
+    href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingentitysearchapi?view=azure-dotnet
+  - name: Java
+    href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingentitysearchapi?view=azure-java-stable
+  - name: Python
+    href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/entitysearch?view=azure-python
+  - name: Node.js
+    href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-entitysearch/?view=azure-node-latest
+  - name: Go
+    href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/entitysearch  
 - name: Resources
   items:
   - name: Get API key
@@ -96,7 +106,7 @@
     - name: Knowledge Base
       href: https://cognitive.uservoice.com/knowledgebase/topics/127875-bing-search-web-image-video-news-autosuggest
 - name: Use and display requirements
-  href: ../Bing-Web-Search/use-display-requirements.md
+  href: ../bing-web-search/use-display-requirements.md
   maintainContext: true
 - name: Release notes
   href: release-notes.md

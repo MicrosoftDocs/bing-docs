@@ -23,7 +23,7 @@ Although this application is written in Python, the API is a RESTful Web service
 
 * [Python](https://www.python.org/downloads/) 2.x or 3.x
 
-[!INCLUDE [bing-news-search-signup-requirements](../../../includes/bing-entity-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-entity-search-signup-requirements.md)]
 
 ## Create and initialize the application
 
@@ -140,7 +140,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../tutorial/bing-entities-search-single-page-app.md)
+> [Build a single-page web app](../../tutorial/bing-entities-search-single-page-app.md)
 
-* [What is the Bing Entity Search API?](../overview.md)
-* [Bing Entity Search API reference](../reference/endpoints.md).
+* [What is the Bing Entity Search API?](../../overview.md)
+* [Bing Entity Search API reference](../../reference/endpoints.md).

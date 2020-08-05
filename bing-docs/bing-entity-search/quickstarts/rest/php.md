@@ -23,7 +23,7 @@ Although this application is written in PHP, the API is a RESTful Web service co
 
 * [PHP 5.6.x](https://php.net/downloads.php) or later
 
-[!INCLUDE [bing-news-search-signup-requirements](../../../includes/bing-entity-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-entity-search-signup-requirements.md)]
 
 ## Search entities
 
@@ -146,7 +146,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../tutorial/bing-entities-search-single-page-app.md)
+> [Build a single-page web app](../../tutorial/bing-entities-search-single-page-app.md)
 
-* [What is the Bing Entity Search API?](../overview.md )
-* [Bing Entity Search API reference](../reference/endpoints.md).
+* [What is the Bing Entity Search API?](../../overview.md )
+* [Bing Entity Search API reference](../../reference/endpoints.md).

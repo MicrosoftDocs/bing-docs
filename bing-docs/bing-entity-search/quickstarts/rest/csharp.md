@@ -33,7 +33,7 @@ Although this application is written in C#, the API is a RESTful Web service com
 - If you're using Linux/MacOS, this application can be run by using [Mono](https://www.mono-project.com/).
 
 
-[!INCLUDE [bing-news-search-signup-requirements](../../../includes/bing-entity-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-entity-search-signup-requirements.md)]
 
 ## Create and initialize a project
 
@@ -173,7 +173,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../tutorial/bing-entities-search-single-page-app.md)
+> [Build a single-page web app](../../tutorial/bing-entities-search-single-page-app.md)
 
-* [What is the Bing Entity Search API?](../overview.md )
-* [Bing Entity Search API reference](../reference/endpoints.md).
+* [What is the Bing Entity Search API?](../../overview.md )
+* [Bing Entity Search API reference](../../reference/endpoints.md).

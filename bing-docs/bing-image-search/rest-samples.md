@@ -6,7 +6,7 @@ services: bing-search-services
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
-ms.subservice: bing-news-search
+ms.subservice: bing-image-search
 ms.topic: sample
 ms.date: 07/15/2020
 ms.author: scottwhi
