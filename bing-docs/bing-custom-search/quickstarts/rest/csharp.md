@@ -35,7 +35,7 @@ Use this quickstart to learn how to request search results from your Bing Custom
      - **Newtonsoft.Json**
 
 
-[!INCLUDE [bing-custom-search-prerequisites](../../../includes/bing-custom-search-signup-requirements.md)]
+[!INCLUDE [bing-custom-search-prerequisites](../../../../includes/bing-custom-search-signup-requirements.md)]
 
 ## Create and initialize the application
 
@@ -126,4 +126,4 @@ Use this quickstart to learn how to request search results from your Bing Custom
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a Custom Search web app](../tutorial/custom-search-web-page.md)
+> [Build a Custom Search web app](../../tutorial/custom-search-web-page.md)

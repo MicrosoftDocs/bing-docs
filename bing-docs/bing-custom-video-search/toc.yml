@@ -9,7 +9,7 @@
 - name: How-to guides
   items:
     - name: Configure your custom search experience
-      href: ../bing-custom-search/define-your-custom-view.md
+      href: ../bing-custom-search/how-to/define-your-custom-view.md
     - name: Get videos from your search instance
       href: get-videos-from-instance.md
 - name: Reference

@@ -84,5 +84,5 @@ If the user selects a suggested query string from the dropdown list, use the que
 
 ## Next steps
 
-- [Search your custom instance](../bing-custom-search/search-your-custom-view.md)
-- [Configure and consume custom hosted UI](../bing-custom-search/hosted-ui.md)
+- [Search your custom instance](../bing-custom-search/how-to/search-your-custom-view.md)
+- [Configure and consume custom hosted UI](../bing-custom-search/how-to/hosted-ui.md)

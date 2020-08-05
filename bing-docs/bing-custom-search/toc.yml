@@ -10,7 +10,7 @@
   expanded: true
   items:
     - name: Create a custom search instance
-      href: quick-start.md
+      href: how-to/quick-start.md
     - name: Get search results from your instance
       items:
       - name: REST API
