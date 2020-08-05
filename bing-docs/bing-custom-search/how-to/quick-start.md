@@ -19,11 +19,11 @@ To use Bing Custom Search, you need to create a custom search instance that defi
 
 To create the instance, use the [Bing Custom Search portal](https://customsearch.ai). 
 
-![A picture of the Bing Custom Search portal](media/blockedCustomSrch.png)
+![A picture of the Bing Custom Search portal](../media/blockedCustomSrch.png)
 
 ## Prerequisites
 
-[!INCLUDE [bing-custom-search-prerequisites](../../includes/bing-custom-search-signup-requirements.md)]
+[!INCLUDE [bing-custom-search-prerequisites](../../../includes/bing-custom-search-signup-requirements.md)]
 
 ## Create a custom search instance
 
@@ -48,4 +48,4 @@ To create a Bing Custom Search instance:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Quickstart: Call your Bing Custom Search endpoint](call-endpoint-csharp.md)
+> [Quickstart: Call your Bing Custom Search endpoint](../quickstarts/rest/csharp.md)

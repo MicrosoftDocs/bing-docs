@@ -19,13 +19,13 @@ Use this quickstart to learn how to request search results from your Bing Custom
 
 ## Prerequisites
 
-- A Bing Custom Search instance. For more information, see [Quickstart: Create your first Bing Custom Search instance](quick-start.md).
+- A Bing Custom Search instance. For more information, see [Quickstart: Create your first Bing Custom Search instance](../../how-to/quick-start.md).
 
 - [The Node.js JavaScript runtime](https://www.nodejs.org/).
 
 - The [JavaScript request library](https://github.com/request/request).
 
-[!INCLUDE [bing-custom-search-prerequisites](../../includes/bing-custom-search-signup-requirements.md)]
+[!INCLUDE [bing-custom-search-prerequisites](../../../includes/bing-custom-search-signup-requirements.md)]
 
 ## Create and initialize the application
 

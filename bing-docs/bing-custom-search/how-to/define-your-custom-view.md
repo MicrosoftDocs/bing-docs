@@ -43,7 +43,7 @@ If you’re not sure which slices to include, you can send search queries to Bin
 2. Click **Add site** next to the result you want to include. Then click OK.
 
 >[!NOTE]
-> [!INCLUDE[publish or revert](includes/publish-revert.md)]
+> [!INCLUDE[publish or revert](../includes/publish-revert.md)]
 
 <a name="active-and-blocked-lists"></a>
 
@@ -55,7 +55,7 @@ To specify the slices of the web you want Bing to search, click the **Active** t
 
 When adding URLs to the **Active** list you can add single URLs, or multiple URLs at once by uploading a text file using the upload icon.
 
-![The Bing Custom Search Active tab](media/file-upload-icon.png)
+![The Bing Custom Search Active tab](../media/file-upload-icon.png)
 
 To upload a file, create a text file and specify a single domain, subpage, or webpage per line. Your file will be rejected if it isn't formatted correctly.
 
@@ -70,14 +70,14 @@ After adding web slices to the **Active** list, the Bing Custom Search portal wi
 
 ## Search for images and videos
 
-You can search for images and videos similarly to web content by using the [Bing Custom Image Search API](../bing-custom-image-search/get-images-from-instance.md) or the [Bing Custom Video Search API](../bing-custom-video-search/get-videos-from-instance.md). You can display these results with the [hosted UI](hosted-ui.md) or the APIs. These APIs are similar to the non-custom [Bing Image Search](../bing-image-search/overview.md) and [Bing Video Search](../bing-video-search/overview.md) APIs, but they search the entire web and do not require the `customConfig` query parameter.  
+You can search for images and videos similarly to web content by using the [Bing Custom Image Search API](../../bing-custom-image-search/get-images-from-instance.md) or the [Bing Custom Video Search API](../../bing-custom-video-search/get-videos-from-instance.md). You can display these results with the [hosted UI](hosted-ui.md) or the APIs. These APIs are similar to the non-custom [Bing Image Search](../../bing-image-search/overview.md) and [Bing Video Search](../../bing-video-search/overview.md) APIs, but they search the entire web and do not require the `customConfig` query parameter.  
 
 ## Test your search instance with the Preview pane
 
 You can test your search instance by using the preview pane on the portal's right side to submit search queries and view the results. 
 
 1. Below the search box, select **My Instance**. You can compare the results from your search experience to Bing, by selecting **Bing**. 
-2. Select a safe search filter and which market to search (see [Query Parameters](reference/query-parameters.md)).
+2. Select a safe search filter and which market to search (see [Query Parameters](../reference/query-parameters.md)).
 3. Enter a query and press enter or click the search icon to view the results from the current configuration. You can change your search type you perform by clicking **Web**, **Image**, or **Video** to get corresponding results. 
 
 <a name="adjustrank"></a>
@@ -153,4 +153,4 @@ If you subscribed to Custom Search at the appropriate level (see the [pricing pa
 
 - [Call your custom search](search-your-custom-view.md)
 - [Configure your hosted UI experience](hosted-ui.md)
-- [Use decoration markers to highlight text](../bing-web-search/hit-highlighting.md)
+- [Use decoration markers to highlight text](../../bing-web-search/hit-highlighting.md)

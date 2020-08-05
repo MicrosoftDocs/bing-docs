@@ -63,16 +63,16 @@ conceptualContent:
       links:
         - text: Create a custom search instance
           itemType: quickstart
-          url: ../bing-custom-search/quick-start.md
+          url: ../bing-custom-search/how-to/quick-start.md
         - text: Use C#
           itemType: quickstart
-          url: ../bing-custom-search/quickstarts/client-libraries.md?pivots=programming-language-csharp
+          url: ../bing-custom-search/quickstarts/sdk/custom-search-client-library-csharp.md
         - text: Use Java
           itemType: quickstart
-          url: ../bing-custom-search/quickstarts/client-libraries.md?pivots=programming-language-java
+          url: ../bing-custom-search/quickstarts/sdk/custom-search-client-library-java.md
         - text: Use Python
           itemType: quickstart
-          url: ../bing-custom-search/quickstarts/client-libraries.md?pivots=programming-language-python
+          url: ../bing-custom-search/quickstarts/sdk/custom-search-client-library-python.md
         - text: Create a single page web-app
           itemType: tutorial
           url: ../bing-custom-search/tutorial/custom-search-web-page.md

@@ -24,8 +24,8 @@ The Bing Custom Search API enables you to create tailored ad-free search experie
 |[Custom real-time search suggestions](../bing-custom-autosuggest/define-custom-suggestions.md)     | Provide search suggestions that can be displayed as a dropdown list as your users type.       | 
 |[Custom image search experiences](../bing-custom-image-search/get-images-from-instance.md)     | Enable your users to search for images from the domains and websites specified in your custom search instance.        |        
 |[Custom video search experiences](../bing-custom-video-search/get-videos-from-instance.md)     | Enable your users to search for videos from the domains and sites specified in your custom search instance.        |    
-|[Share your custom search instance](share-your-custom-search.md)     | Collaboratively edit and test your search instance by sharing it with members of your team.        | 
-|[Configure a UI for your applications and websites](hosted-ui.md)     | Provides a hosted UI that you can easily integrate into your webpages and web applications as a JavaScript code snippet.        | 
+|[Share your custom search instance](how-to/share-your-custom-search.md)     | Collaboratively edit and test your search instance by sharing it with members of your team.        | 
+|[Configure a UI for your applications and websites](how-to/hosted-ui.md)     | Provides a hosted UI that you can easily integrate into your webpages and web applications as a JavaScript code snippet.        | 
 
 ## Workflow
 
@@ -38,9 +38,9 @@ After creating your search instance, you can integrate it (and optionally, a use
 
 ## Next steps
 
-To get started quickly, see [Create your first Bing Custom Search instance](quick-start.md).
+To get started quickly, see [Create your first Bing Custom Search instance](how-to/quick-start.md).
 
-For details about customizing your search instance, see [Define a custom search instance](define-your-custom-view.md).
+For details about customizing your search instance, see [Define a custom search instance](how-to/define-your-custom-view.md).
 
 Be sure to read [Bing Use and Display Requirements](../bing-web-search/use-display-requirements.md) for using search results in your services and applications.
 

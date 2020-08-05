@@ -17,12 +17,12 @@ ms.author: scottwhi
 
 After you've configured your custom search experience, you can test it from within the Bing Custom Search [portal](https://customsearch.ai). 
 
-![a screenshot of the Bing custom search portal](media/portal-search-screen.png)
+![a screenshot of the Bing custom search portal](../media/portal-search-screen.png)
 ## Create a search query 
 
 After you've signed into the Bing Custom Search [portal](https://customsearch.ai), select your search instance and click the **Production** tab. Under **Endpoints**, select an API endpoint (for example, Web API). Your subscription determines what endpoints are shown.
 
-To create a search query, enter the parameter values for your endpoint. Note that the parameters displayed in the portal may change depending on the endpoint you choose. See the [Custom Search API reference](reference/query-parameters.md) for more information. To change the subscription your search instance uses, add the appropriate subscription key, and update the appropriate market and/or language parameters.
+To create a search query, enter the parameter values for your endpoint. Note that the parameters displayed in the portal may change depending on the endpoint you choose. See the [Custom Search API reference](../reference/query-parameters.md) for more information. To change the subscription your search instance uses, add the appropriate subscription key, and update the appropriate market and/or language parameters.
 
 Some important parameters are below:
 
@@ -51,8 +51,8 @@ You can change the subscription associated with your Bing Custom Search instance
 
 ## Next steps
 
-- [Call your custom view with C#](./call-endpoint-csharp.md)
-- [Call your custom view with Java](./call-endpoint-java.md)
-- [Call your custom view with NodeJs](./call-endpoint-nodejs.md)
-- [Call your custom view with Python](./call-endpoint-python.md)
+- [Call your custom view with C#](../quickstarts/rest/csharp.md)
+- [Call your custom view with Java](../quickstarts/rest/java.md)
+- [Call your custom view with NodeJs](../quickstarts/rest/nodejs.md)
+- [Call your custom view with Python](../quickstarts/rest/python.md)
 

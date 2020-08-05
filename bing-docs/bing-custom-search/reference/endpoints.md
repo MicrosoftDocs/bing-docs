@@ -13,7 +13,7 @@ ms.author: scottwhi
 
 # Custom Web Search API v7 reference
 
-The Web Search API lets you send a search query to Bing and get back web pages from the slice of Web that your Custom Search instance defines. This section provides technical details about the query parameters and headers that you use to request web results and the JSON response objects that contain them. For information about configuring a Custom Search instance, see [Configure your custom search experience](../define-your-custom-view.md). 
+The Web Search API lets you send a search query to Bing and get back web pages from the slice of Web that your Custom Search instance defines. This section provides technical details about the query parameters and headers that you use to request web results and the JSON response objects that contain them. For information about configuring a Custom Search instance, see [Configure your custom search experience](../overview.md). 
   
 For information about permitted use and display of the results, see [Use and display requirements](../../bing-web-search/use-display-requirements.md).
 

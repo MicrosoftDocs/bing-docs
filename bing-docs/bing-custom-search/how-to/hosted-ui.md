@@ -48,7 +48,7 @@ To configure a hosted UI for your web applications, follow these steps. As you m
 
 8. If you enabled autosuggest, enter the autosuggest subscription key or choose one from the dropdown list. The dropdown list is populated with keys from your Azure account's subscriptions. Custom Autosuggest requires a specific subscription tier, see the [pricing](https://azure.microsoft.com/pricing/details/cognitive-services/bing-custom-search/).
 
-[!INCLUDE [publish or revert](includes/publish-revert.md)]
+[!INCLUDE [publish or revert](../includes/publish-revert.md)]
 
 ## Consume custom UI
 
@@ -72,7 +72,7 @@ To consume the hosted UI, either:
   `https://ui.customsearch.ai/hosted?customConfig=YOUR-CUSTOM-CONFIG-ID`  
   
   > [!NOTE]
-  > Add the following query parameters to the URL as needed. For information about these parameters, see [Custom Search API](reference/query-parameters.md) reference.
+  > Add the following query parameters to the URL as needed. For information about these parameters, see [Custom Search API](../reference/query-parameters.md) reference.
   >
   > - q
   > - mkt

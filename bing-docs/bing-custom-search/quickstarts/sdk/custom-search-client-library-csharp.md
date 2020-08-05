@@ -1,14 +1,18 @@
 ---
 title: Bing Custom Search C# client library quickstart 
 titleSuffix: Bing Search Services
+description: The Custom Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results from your instance.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
-ms.topic: include
+ms.subservice: bing-custom-search
+ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
+
+# Quickstart: Use the Bing Custom Search .NET client library
 
 Get started with the Bing Custom Search client library for C#. Follow these steps to install the package and try out the example code for basic tasks. The Bing Custom Search API enables you to create tailored, ad-free search experiences for topics that you care about. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7/BingCustomWebSearch).
 
@@ -20,7 +24,7 @@ Use the Bing Custom Search client library for C# to:
 
 ## Prerequisites
 
-- A Bing Custom Search instance. See [Quickstart: Create your first Bing Custom Search instance](../../quick-start.md) for more information.
+- A Bing Custom Search instance. See [Quickstart: Create your first Bing Custom Search instance](../../how-to/quick-start.md) for more information.
 - Microsoft [.NET Core](https://www.microsoft.com/net/download/core)
 - Any edition of [Visual Studio 2017 or later](https://www.visualstudio.com/downloads/)
 - If you are using Linux/MacOS, this application can be run using [Mono](https://www.mono-project.com/).

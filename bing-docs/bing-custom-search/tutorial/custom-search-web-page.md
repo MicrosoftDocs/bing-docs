@@ -75,7 +75,7 @@ To exclude results from specific websites or URLs, add them to the **Blocked** t
 
 ## Add pinned entries
 
-To pin a specific webpage to the top of the search results, add the webpage and query term to the **Pinned** tab. The **Pinned** tab contains a list of webpage and query term pairs that specify the webpage that appears as the top result for a specific query. The webpage is pinned only if the user's query string matches the pin's query string based on pin's match condition. Only indexed webpages will be displayed in searches. For more information, see [Define your custom view](../define-your-custom-view.md#pin-slices-to-the-top-of-search-results).
+To pin a specific webpage to the top of the search results, add the webpage and query term to the **Pinned** tab. The **Pinned** tab contains a list of webpage and query term pairs that specify the webpage that appears as the top result for a specific query. The webpage is pinned only if the user's query string matches the pin's query string based on pin's match condition. Only indexed webpages will be displayed in searches. For more information, see [Define your custom view](../how-to/define-your-custom-view.md#pin-slices-to-the-top-of-search-results).
 
 1. On the **Configuration** page, click the **Pinned** tab and enter the webpage and query term of the webpage that you want returned as the top result.  
   
@@ -188,7 +188,7 @@ The remainder of this tutorial illustrates **Option 1: JavaScript snippet**.
    <div id="customSearch">
       <script type="text/javascript" 
           id="bcs_js_snippet"
-          src="https://ui.customsearch.ai /api/ux/rendering-js?customConfig=<YOUR-CUSTOM-CONFIG-ID>&market=en-US&safeSearch=Moderate&version=latest&q=">
+          src="https://ui.customsearch.ai/api/ux/rendering-js?customConfig=<YOUR-CUSTOM-CONFIG-ID>&market=en-US&safeSearch=Moderate&version=latest&q=">
       </script>
    </div>
    ```  
@@ -208,4 +208,4 @@ Performing a search renders results like this:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Call Bing Custom Search endpoint (C#)](../call-endpoint-csharp.md)
+> [Call Bing Custom Search endpoint (C#)](../quickstarts/rest/csharp.md)

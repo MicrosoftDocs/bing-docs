@@ -51,7 +51,7 @@ To request images from your Custom Search instance, send a GET request to the fo
 https://api.bing.microsoft.com/bingcustomsearch/v7.0/images/search
 ```
 
-For information about configuring a Custom Search instance, see [Configure your custom search experience](define-your-custom-view.md).
+For information about configuring a Custom Search instance, see [Configure your custom search experience](how-to/define-your-custom-view.md).
 
 ## Next steps
 The **Bing** APIs support search actions that return results according to their type. All search endpoints return results as JSON response objects.  All endpoints support queries that return a specific language and/or location by longitude, latitude, and search radius.
