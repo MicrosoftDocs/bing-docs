@@ -1,7 +1,7 @@
 ---
-title: "Quickstart: Search for videos using the REST API and Node.js - Bing Video Search"
+title: "Quickstart: Search for videos using the REST API and Python - Bing Video Search"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send video search requests to the Bing Video Search REST API using JavaScript.
+description: Use this quickstart to send video search requests to the Bing Video Search REST API using Python.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -12,85 +12,69 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-# Quickstart: Search for videos using the Bing Video Search REST API and Node.js
 
-Use this quickstart to make your first call to the Bing Video Search API. This simple JavaScript application sends an HTTP video search query to the API, and displays the JSON response. Although this application is written in JavaScript and uses Node.js, the API is a RESTful Web service compatible with most programming languages. 
+# Quickstart: Search for videos using the Bing Video Search REST API and Python
 
-The source code for this sample is available [on GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/nodejs/Search/BingVideoSearchv7.js) with additional error handling, and code annotations.
+Use this quickstart to make your first call to the Bing Video Search API. This simple Python application sends an HTTP video search query to the API, and displays the JSON response. Although this application is written in Python, the API is a RESTful Web service compatible with most programming languages. 
+
+The source code for this sample is available [on GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/python/Search/BingVideoSearchv7.py) with additional error handling, and code annotations.
+
+You can run this example as a Jupyter notebook on [MyBinder](https://mybinder.org) by selecting the **launch binder** badge: 
+
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/Microsoft/cognitive-services-notebooks/master?filepath=BingVideoSearchAPI.ipynb)
+
 
 ## Prerequisites
 
-* [Node.js](https://nodejs.org/en/download/).
+* Python [2.x or 3.x](https://python.org)
 
-* The Request module for JavaScript. Install this module by using `npm install request`.
-
-[!INCLUDE [bing-video-search-signup-requirements](../../../includes/bing-video-search-signup-requirements.md)]
+[!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
 
 ## Initialize the application
 
-1. Create a new JavaScript file in your favorite IDE or editor. Set the strictness and add the following requirement:
+1. Create a new Python file in your favorite IDE or editor, and import the following libraries:
 
-    ```javascript
-    'use strict';
-    let https = require('https');
+    ```python
+    import requests
+    from IPython.display import HTML
     ```
-
-2. Create variables for your API endpoint, subscription key, and search term. 
-
-    ```javascript
-    let subscriptionKey = 'enter key here';
-    let host = 'api.bing.microsoft.com';
-    let path = '/bing/v7.0/videos/search';
-    let term = 'kittens';
-    ```
-
-## Create a response handler
-
-1. Create a function called `response_handler` to take a JSON response from the API. Create a variable for the response body. Append the response when a `data` flag is received by using `response.on()`.
-
-    ```javascript
-    let response_handler = function (response) {
-        let body = '';
-        response.on('data', function (d) {
-            body += d;
-        });
-    };
-    ```
+2.  Create variables for your subscription key, search endpoint, and search term. 
     
-1. In this function, use `response.on()` when `end` is signaled to store the bing-related headers (starting with `bingapis` or `x-msedge-`). Parse the JSON using `JSON.parse()`, convert it to a string with `JSON.stringify()`, and print it.
-
-    ```javascript
-    response.on('end', function () {
-        for (var header in response.headers)
-            // header keys are lower-cased by Node.js
-            if (header.startsWith("bingapis-") || header.startsWith("x-msedge-"))
-                 console.log(header + ": " + response.headers[header]);
-        body = JSON.stringify(JSON.parse(body), null, '  ');
-        //JSON Response body
-        console.log(body);
-    });
+    ```python
+    subscription_key = None
+    assert subscription_key
+    search_url = "https://api.bing.microsoft.com/bing/v7.0/videos/search"
+    search_term = "kittens"
     ```
 
-## Create and send the search request
+3. Add your subscription key to a `Ocp-Apim-Subscription-Key` header by creating a new dictionary to associate the header string to your key.
 
-Create a function called `bing_video_search()`. Add the parameters for your request including your host name, and headers. Encode your search term and append it to your path parameter with the `?q=` parameter. Then, send the request with `req.end()`.
+    ```python
+    headers = {"Ocp-Apim-Subscription-Key" : subscription_key}
+    ```
 
-```javascript
-let bing_video_search = function (search_term) {
-  console.log('Searching videos for: ' + term);
-let request_params = {
-    method : 'GET',
-    hostname : host,
-    path : path + '?q=' + encodeURIComponent(search_term),
-    headers : {
-        'Ocp-Apim-Subscription-Key' : subscriptionKey,
-        }
-    };
-    let req = https.request(request_params,
-      response_handler);
-    req.end();
-}
-```
+## Send your request
+
+1. Add the parameters to your request by creating a dictionary named `params`. Add your search terms to the `q` parameter: a video count of 5, `free` for the pricing of returned videos, and `short` for the video length.
+
+    ```python
+    params  = {"q": search_term, "count":5, "pricing": "free", "videoLength":"short"}
+    ```
+
+2. Use the `requests` library in Python to call the Bing Video Search API. Pass the API key and search parameters by using the `headers` and `params` dictionary.
+    
+    ```python
+    response = requests.get(search_url, headers=headers, params=params)
+    response.raise_for_status()
+    search_results = response.json()
+    ```
+
+3. To view one of the returned videos, get a search result from the `search_results` object. Insert the result's `embedHtml` property into an `IFrame`.  
+    
+    ```python
+    HTML(search_results["value"][0]["embedHtml"].replace("autoplay=1","autoplay=0"))
+    ```
+
 
 ## JSON response
 
@@ -205,8 +189,8 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../tutorial/bing-video-search-single-page-app.md)
+> [Build a single-page web app](../../tutorial/bing-video-search-single-page-app.md)
 
 ## See also 
 
- [What is the Bing Video Search API?](../overview.md)
+ [What is the Bing Video Search API?](../../overview.md)

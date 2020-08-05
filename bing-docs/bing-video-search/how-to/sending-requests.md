@@ -139,6 +139,6 @@ BingAPIs-Market: en-US
 
 For details about consuming the response objects, see [Searching the Web for Videos](get-videos.md).
 
-For details about getting insights about a video such as related searches, see [Video Insights](../video-insights.md).  
+For details about getting insights about a video such as related searches, see [Video Insights](video-insights.md).  
   
-For details about videos that are trending on social media, see [Trending Videos](../trending-videos.md).  
+For details about videos that are trending on social media, see [Trending Videos](trending-videos.md).  

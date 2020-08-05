@@ -15,7 +15,7 @@ ms.author: scottwhi
 
 # Use an insights token to get insights for an image
 
-Bing Visual Search API returns information about an image that you provide. You can provide the image by using the URL of the image, an insights token, or by uploading an image. For information about these options, see [What is Bing Visual Search API?](../overview.md). This article demonstrates using an insights token. For examples that demonstrate how to upload an image to get insights, see these quickstarts:
+Bing Visual Search API returns information about an image that you provide. You can provide the image by using the URL of the image, an insights token, or by uploading an image. For information about these options, see [What is Bing Visual Search API?](../overview.md) This article demonstrates using an insights token. For examples that demonstrate how to upload an image to get insights, see these quickstarts:
 
 * [C#](../quickstarts/rest/csharp.md)
 

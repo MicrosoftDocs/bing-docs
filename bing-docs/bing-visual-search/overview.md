@@ -20,7 +20,7 @@ The Bing Visual Search API returns insights for an image. You can either upload 
 If you use the [Bing Image Search API](../bing-image-search/overview.md), you can use insight tokens from that API's search results for your Bing Visual Search instead of uploading an image.
 
 > [!IMPORTANT]
-> If you get image insights using the Bing Image Search API, consider switching to the Bing Visual Search API, which provides more comprehensive insights.
+> Because Bing Visual Search API provides more comprehensive image insights, it's the preferred method for getting  insights. If you use the [Image Details API](../bing-image-search/image-insights.md) to get image insights, consider switching to Bing Visual Search API.
 
 ## Insights
 

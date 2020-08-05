@@ -15,7 +15,7 @@ ms.author: scottwhi
 
 # Get insights about a video
 
-Each video returned by the Bing Video Search API includes a video ID that you can use to get more information about it, such as related videos. To get insights about a video, get its [videoId](reference/response-objects.md#video-videoid) token in the API response. 
+Each video returned by the Bing Video Search API includes a video ID that you can use to get more information about it, such as related videos. To get insights about a video, get its [videoId](../reference/response-objects.md#video-videoid) token in the API response. 
 
 ```json
     "value" : [
@@ -30,7 +30,7 @@ Each video returned by the Bing Video Search API includes a video ID that you ca
     ],
 ```
 
-Afterwards, send a GET request to the Video details endpoint with the ID. Set the [id](reference/query-parameters.md#id) query parameter to the `videoId` token. To specify the insights that you want to get, set the [modules](reference/query-parameters.md#modulesrequested) query parameter. To get all insights, set `modules` to All. The response includes all the insights that you requested, if available.
+Afterwards, send a GET request to the Video details endpoint with the ID. Set the [id](../reference/query-parameters.md#id) query parameter to the `videoId` token. To specify the insights that you want to get, set the [modules](../reference/query-parameters.md#modulesrequested) query parameter. To get all insights, set `modules` to All. The response includes all the insights that you requested, if available.
 
 ```cURL
 GET https://api.bing.microsoft.com/bing/v7.0/videos/details?q=sailiing+dinghies&id=6DB795E11A6E3CBAAD636DB795E11A6E3CBAAD63&modules=All&mkt=en-us HTTP/1.1  
@@ -44,7 +44,7 @@ Host: api.cognitive.microsoft.com
 
 ## Getting related videos insights  
 
-To get videos that are related to the specified video, set the [modules](reference/query-parameters.md#modulesrequested) query parameter to `RelatedVideos`.
+To get videos that are related to the specified video, set the [modules](../reference/query-parameters.md#modulesrequested) query parameter to `RelatedVideos`.
   
 ```cURL  
 GET https://api.bing.microsoft.com/bing/v7.0/videos/details?q=sailiing+dinghies&id=6DB795E11A6E3CBAAD636DB795E11A6E3CBAAD63&modules=RelatedVideos&mkt=en-us HTTP/1.1  
@@ -56,7 +56,7 @@ X-MSEdge-ClientID: <blobFromPriorResponseGoesHere>
 Host: api.cognitive.microsoft.com  
 ```  
 
-The response to this request will have a top-level [VideoDetails](reference/response-objects.md#videodetails) object instead of a [Videos](reference/response-objects.md#videos) object.  
+The response to this request will have a top-level [VideoDetails]../(reference/response-objects.md#videodetails) object instead of a [Videos](../reference/response-objects.md#videos) object.  
   
 ```json
 {

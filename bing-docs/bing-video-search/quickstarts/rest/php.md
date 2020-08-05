@@ -1,7 +1,7 @@
 ---
-title: "Quickstart: Search for videos using the REST API and C# - Bing Video Search"
+title: "Quickstart: Search for videos using the REST API and PHP - Bing Video Search"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send video search requests to the Bing Video Search REST API using C#.
+description: Use this quickstart to send video search requests to the Bing Video Search REST API using PHP
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -13,104 +13,87 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Search for videos using the Bing Video Search REST API and C#
+# Quickstart: Search for videos using the Bing Video Search REST API and PHP
 
-Use this quickstart to make your first call to the Bing Video Search API. This simple C# application sends an HTTP video search query to the API, and displays the JSON response. Although this application is written in C#, the API is a RESTful Web service compatible with most programming languages.
+Use this quickstart to make your first call to the Bing Video Search API. This simple PHP application sends an HTTP video search query to the API, and displays the JSON response. The example code is written to work under PHP 5.6.
 
-The source code for this sample is available [on GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/dotnet/Search/BingVideoSearchv7.cs) with additional error handling, features, and code annotations.
+Although this application is written in PHP, the API is a RESTful Web service compatible with most programming languages.
 
 ## Prerequisites
-* Any edition of [Visual Studio 2017 or later](https://www.visualstudio.com/downloads/).
-* The [Json.NET](https://www.newtonsoft.com/json) framework, available as a NuGet package.
-* If you're using Linux/MacOS, you can run this application by using [Mono](https://www.mono-project.com/).
 
-[!INCLUDE [bing-video-search-signup-requirements](../../../includes/bing-video-search-signup-requirements.md)]
+* PHP 5.6 or later
 
-## Create and initialize a project
+[!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
 
-1. Create a new console solution in Visual Studio. Then, add the following namespaces to the main code file:
+## Running the application
 
-    ```csharp
-    using System;
-    using System.Text;
-    using System.Net;
-    using System.IO;
-    using System.Collections.Generic;
-    ```
+The Bing Video Search API returns video results from the Bing search engine.
 
-2. Add variables for your subscription key, endpoint, and search term. 
+1. Enable secure HTTP support in your `php.ini` file by uncommenting the `;extension=php_openssl.dll` line, as described in the following code.
+2. Create a new PHP project in your favorite IDE or editor.
+3. Add the code provided below.
+4. Replace the `$accessKey` value with an access key valid for your subscription. 
+5. Run the program.
 
-    ```csharp
-    const string accessKey = "enter your key here";
-    const string uriBase = "https://api.bing.microsoft.com/bing/v7.0/videos/search";
-    const string searchTerm = "kittens";
-    ```
+```php
+<?php
 
-## Create a struct to format the Bing Video Search API response
+// NOTE: Be sure to uncomment the following line in your php.ini file.
+// ;extension=php_openssl.dll
 
-Define a `SearchResult` struct to contain the image search results, and JSON header information.
+// **********************************************
+// *** Update or verify the following values. ***
+// **********************************************
 
-```csharp
-struct SearchResult
-    {
-        public String jsonResult;
-        public Dictionary<String, String> relevantHeaders;
-    }
-```
+// Replace the accessKey string value with your valid access key.
+$accessKey = 'enter key here';
 
-## Create and handle a video search request
+$endpoint = 'https://api.bing.microsoft.com/bing/v7.0/videos/search';
 
-1. Create a method named `BingVideoSearch` to perform the call to the API, and set the return type to the `SearchResult` struct created previously. 
+$term = 'kittens';
 
-   Add code to this method in the steps that follow.
+function BingVideoSearch ($url, $key, $query) {
+    // Prepare HTTP request
+    // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
+    // https://php.net/manual/en/function.stream-context-create.php
+    $headers = "Ocp-Apim-Subscription-Key: $key\r\n";
+    $options = array ('http' => array (
+			'header' => $headers,
+			'method' => 'GET' ));
 
-1. Construct the URI for the search request. Format the search term `toSearch` before you append it to the string.
-
-    ```csharp    
-    static SearchResult BingVideoSearch(string toSearch){
-    
-        var uriQuery = uriBase + "?q=" + Uri.EscapeDataString(toSearch);
-    //...
-    ```
-
-2. Perform the web request by adding your key to the `Ocp-Acpim-Subscription-Key` header, and using a `HttpWebResponse` object to store the API response. Then, use a `StreamReader` to get the JSON string.
-
-    ```csharp
-    //...
-    WebRequest request = HttpWebRequest.Create(uriQuery);
-    request.Headers["Ocp-Apim-Subscription-Key"] = accessKey;
-    HttpWebResponse response = (HttpWebResponse)request.GetResponseAsync().Result;
-    string json = new StreamReader(response.GetResponseStream()).ReadToEnd();
-    //...
-    ```
-
-## Process the result
-
-1. Create the search result object, and extract the Bing HTTP headers. Then, return the `searchResult` object. 
-
-    ```csharp
-    var searchResult = new SearchResult();
-    searchResult.jsonResult = json;
-    searchResult.relevantHeaders = new Dictionary<String, String>();
+    // Perform the Web request and get the JSON response
+    $context = stream_context_create($options);
+    $result = file_get_contents($url . "?q=" . urlencode($query), false, $context);
 
     // Extract Bing HTTP headers
-    foreach (String header in response.Headers)
-    {
-        if (header.StartsWith("BingAPIs-") || header.StartsWith("X-MSEdge-"))
-            searchResult.relevantHeaders[header] = response.Headers[header];
+    $headers = array();
+    foreach ($http_response_header as $k => $v) {
+        $h = explode(":", $v, 2);
+        if (isset($h[1]))
+            if (preg_match("/^BingAPIs-/", $h[0]) || preg_match("/^X-MSEdge-/", $h[0]))
+                $headers[trim($h[0])] = trim($h[1]);
     }
-    return searchResult;
-    ```
 
-2. Print the response.
+    return array($headers, $result);
+}
 
-    ```csharp
-    Console.WriteLine(result.jsonResult);
-    ```
+print "Searching videos for: " . $term . "\n";
 
-## Example JSON response 
+list($headers, $json) = BingVideoSearch($endpoint, $accessKey, $term);
 
-A successful response is returned in JSON, as shown in the following example:
+print "\nRelevant Headers:\n\n";
+foreach ($headers as $k => $v) {
+    print $k . ": " . $v . "\n";
+}
+
+print "\nJSON Response:\n\n";
+echo json_encode(json_decode($json), JSON_PRETTY_PRINT);
+?>
+```
+
+## JSON response
+
+A successful response is returned in JSON, as shown in the following example: 
 
 ```json
 {
@@ -221,8 +204,8 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../tutorial/bing-video-search-single-page-app.md)
+> [Build a single-page web app](../../tutorial/bing-video-search-single-page-app.md)
 
 ## See also 
 
- [What is the Bing Video Search API?](../overview.md)
+ [What is the Bing Video Search API?](../../overview.md)

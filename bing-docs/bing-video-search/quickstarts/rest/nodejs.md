@@ -1,7 +1,7 @@
 ---
-title: "Quickstart: Search for videos using the REST API and Ruby - Bing Video Search"
+title: "Quickstart: Search for videos using the REST API and Node.js - Bing Video Search"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send video search requests to the Bing Video Search REST API using Ruby.
+description: Use this quickstart to send video search requests to the Bing Video Search REST API using JavaScript.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -12,72 +12,89 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
+# Quickstart: Search for videos using the Bing Video Search REST API and Node.js
 
-# Quickstart: Search for videos using the Bing Video Search REST API and Ruby
+Use this quickstart to make your first call to the Bing Video Search API. This simple JavaScript application sends an HTTP video search query to the API, and displays the JSON response. Although this application is written in JavaScript and uses Node.js, the API is a RESTful Web service compatible with most programming languages. 
 
-Use this quickstart to make your first call to the Bing Video Search API. This simple Ruby application sends an HTTP video search query to the API, and displays the JSON response. Although this application is written in Python, the API is a RESTful Web service compatible with most programming languages. 
-
-The source code for this sample is available [on GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/ruby/Search/BingVideoSearchv7.rb) with additional error handling, and code annotations.
+The source code for this sample is available [on GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/nodejs/Search/BingVideoSearchv7.js) with additional error handling, and code annotations.
 
 ## Prerequisites
 
-* Ruby 2.4 or later
+* [Node.js](https://nodejs.org/en/download/).
 
-[!INCLUDE [bing-video-search-signup-requirements](../../../includes/bing-video-search-signup-requirements.md)]
+* The Request module for JavaScript. Install this module by using `npm install request`.
 
-## Create and initialize the application
+[!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
 
-1. Import the following packages into your code file:
+## Initialize the application
 
-    ```ruby
-    require 'net/https'
-    require 'uri'
-    require 'json'
+1. Create a new JavaScript file in your favorite IDE or editor. Set the strictness and add the following requirement:
+
+    ```javascript
+    'use strict';
+    let https = require('https');
     ```
 
-2. Create variables for the API endpoint, video API search path, your subscription key, and search term. 
+2. Create variables for your API endpoint, subscription key, and search term. 
 
-    ```ruby
-    uri  = "https://api.bing.microsoft.com"
-    path = "/bing/v7.0/videos/search"
-    term = "kittens"
-    accessKey = "your-subscription-key" 
+    ```javascript
+    let subscriptionKey = 'enter key here';
+    let host = 'api.bing.microsoft.com';
+    let path = '/bing/v7.0/videos/search';
+    let term = 'kittens';
     ```
 
-## Create and send an API request
+## Create a response handler
 
-1. Use the variables from the previous step to format a search URL for the request. Combine your uri and path, and then url-encode your search term before appending it to the `?q=` parameter.
+1. Create a function called `response_handler` to take a JSON response from the API. Create a variable for the response body. Append the response when a `data` flag is received by using `response.on()`.
 
-    ```ruby
-    uri = URI(uri + path + "?q=" + URI.escape(term))
+    ```javascript
+    let response_handler = function (response) {
+        let body = '';
+        response.on('data', function (d) {
+            body += d;
+        });
+    };
     ```
-
-2. Add the complete search URL to the request and add your subscription key to the `Ocp-Apim-Subscription-Key` header.
     
-    ``` ruby
-    request = Net::HTTP::Get.new(uri)
-    request['Ocp-Apim-Subscription-Key'] = accessKey
+1. In this function, use `response.on()` when `end` is signaled to store the bing-related headers (starting with `bingapis` or `x-msedge-`). Parse the JSON using `JSON.parse()`, convert it to a string with `JSON.stringify()`, and print it.
+
+    ```javascript
+    response.on('end', function () {
+        for (var header in response.headers)
+            // header keys are lower-cased by Node.js
+            if (header.startsWith("bingapis-") || header.startsWith("x-msedge-"))
+                 console.log(header + ": " + response.headers[header]);
+        body = JSON.stringify(JSON.parse(body), null, '  ');
+        //JSON Response body
+        console.log(body);
+    });
     ```
 
-3. Send the request, and then save the response.
-    
-    ```ruby
-    response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
-        http.request(request)
-    end
-    ```
+## Create and send the search request
 
-## Process and view the response
+Create a function called `bing_video_search()`. Add the parameters for your request including your host name, and headers. Encode your search term and append it to your path parameter with the `?q=` parameter. Then, send the request with `req.end()`.
 
-After the response is received, print the JSON response.
-
-```ruby
-puts JSON::pretty_generate(JSON(response.body))
+```javascript
+let bing_video_search = function (search_term) {
+  console.log('Searching videos for: ' + term);
+let request_params = {
+    method : 'GET',
+    hostname : host,
+    path : path + '?q=' + encodeURIComponent(search_term),
+    headers : {
+        'Ocp-Apim-Subscription-Key' : subscriptionKey,
+        }
+    };
+    let req = https.request(request_params,
+      response_handler);
+    req.end();
+}
 ```
 
 ## JSON response
 
-A successful response is returned in JSON, as shown in the following example:
+A successful response is returned in JSON, as shown in the following example: 
 
 ```json
 {
@@ -185,13 +202,11 @@ A successful response is returned in JSON, as shown in the following example:
 }
 ```
 
-
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../tutorial/bing-video-search-single-page-app.md)
+> [Build a single-page web app](../../tutorial/bing-video-search-single-page-app.md)
 
 ## See also 
 
- [What is the Bing Video Search API?](../overview.md)
-
+ [What is the Bing Video Search API?](../../overview.md)

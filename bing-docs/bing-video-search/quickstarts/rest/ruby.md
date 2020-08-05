@@ -1,7 +1,7 @@
 ---
-title: "Quickstart: Search for videos using the REST API and PHP - Bing Video Search"
+title: "Quickstart: Search for videos using the REST API and Ruby - Bing Video Search"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send video search requests to the Bing Video Search REST API using PHP
+description: Use this quickstart to send video search requests to the Bing Video Search REST API using Ruby.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -13,87 +13,71 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Search for videos using the Bing Video Search REST API and PHP
+# Quickstart: Search for videos using the Bing Video Search REST API and Ruby
 
-Use this quickstart to make your first call to the Bing Video Search API. This simple PHP application sends an HTTP video search query to the API, and displays the JSON response. The example code is written to work under PHP 5.6.
+Use this quickstart to make your first call to the Bing Video Search API. This simple Ruby application sends an HTTP video search query to the API, and displays the JSON response. Although this application is written in Python, the API is a RESTful Web service compatible with most programming languages. 
 
-Although this application is written in PHP, the API is a RESTful Web service compatible with most programming languages.
+The source code for this sample is available [on GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/ruby/Search/BingVideoSearchv7.rb) with additional error handling, and code annotations.
 
 ## Prerequisites
 
-* PHP 5.6 or later
+* Ruby 2.4 or later
 
-[!INCLUDE [bing-video-search-signup-requirements](../../../includes/bing-video-search-signup-requirements.md)]
+[!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
 
-## Running the application
+## Create and initialize the application
 
-The [Bing Video Search API](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-web-api-v7-reference) returns video results from the Bing search engine.
+1. Import the following packages into your code file:
 
-1. Enable secure HTTP support in your `php.ini` file by uncommenting the `;extension=php_openssl.dll` line, as described in the following code.
-2. Create a new PHP project in your favorite IDE or editor.
-3. Add the code provided below.
-4. Replace the `$accessKey` value with an access key valid for your subscription. 
-5. Run the program.
+    ```ruby
+    require 'net/https'
+    require 'uri'
+    require 'json'
+    ```
 
-```php
-<?php
+2. Create variables for the API endpoint, video API search path, your subscription key, and search term. 
 
-// NOTE: Be sure to uncomment the following line in your php.ini file.
-// ;extension=php_openssl.dll
+    ```ruby
+    uri  = "https://api.bing.microsoft.com"
+    path = "/bing/v7.0/videos/search"
+    term = "kittens"
+    accessKey = "your-subscription-key" 
+    ```
 
-// **********************************************
-// *** Update or verify the following values. ***
-// **********************************************
+## Create and send an API request
 
-// Replace the accessKey string value with your valid access key.
-$accessKey = 'enter key here';
+1. Use the variables from the previous step to format a search URL for the request. Combine your uri and path, and then url-encode your search term before appending it to the `?q=` parameter.
 
-$endpoint = 'https://api.bing.microsoft.com/bing/v7.0/videos/search';
+    ```ruby
+    uri = URI(uri + path + "?q=" + URI.escape(term))
+    ```
 
-$term = 'kittens';
+2. Add the complete search URL to the request and add your subscription key to the `Ocp-Apim-Subscription-Key` header.
+    
+    ``` ruby
+    request = Net::HTTP::Get.new(uri)
+    request['Ocp-Apim-Subscription-Key'] = accessKey
+    ```
 
-function BingVideoSearch ($url, $key, $query) {
-    // Prepare HTTP request
-    // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
-    // https://php.net/manual/en/function.stream-context-create.php
-    $headers = "Ocp-Apim-Subscription-Key: $key\r\n";
-    $options = array ('http' => array (
-			'header' => $headers,
-			'method' => 'GET' ));
+3. Send the request, and then save the response.
+    
+    ```ruby
+    response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
+        http.request(request)
+    end
+    ```
 
-    // Perform the Web request and get the JSON response
-    $context = stream_context_create($options);
-    $result = file_get_contents($url . "?q=" . urlencode($query), false, $context);
+## Process and view the response
 
-    // Extract Bing HTTP headers
-    $headers = array();
-    foreach ($http_response_header as $k => $v) {
-        $h = explode(":", $v, 2);
-        if (isset($h[1]))
-            if (preg_match("/^BingAPIs-/", $h[0]) || preg_match("/^X-MSEdge-/", $h[0]))
-                $headers[trim($h[0])] = trim($h[1]);
-    }
+After the response is received, print the JSON response.
 
-    return array($headers, $result);
-}
-
-print "Searching videos for: " . $term . "\n";
-
-list($headers, $json) = BingVideoSearch($endpoint, $accessKey, $term);
-
-print "\nRelevant Headers:\n\n";
-foreach ($headers as $k => $v) {
-    print $k . ": " . $v . "\n";
-}
-
-print "\nJSON Response:\n\n";
-echo json_encode(json_decode($json), JSON_PRETTY_PRINT);
-?>
+```ruby
+puts JSON::pretty_generate(JSON(response.body))
 ```
 
 ## JSON response
 
-A successful response is returned in JSON, as shown in the following example: 
+A successful response is returned in JSON, as shown in the following example:
 
 ```json
 {
@@ -201,11 +185,13 @@ A successful response is returned in JSON, as shown in the following example:
 }
 ```
 
+
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../tutorial/bing-video-search-single-page-app.md)
+> [Create a single-page web app](../../tutorial/bing-video-search-single-page-app.md)
 
 ## See also 
 
- [What is the Bing Video Search API?](../overview.md)
+ [What is the Bing Video Search API?](../../overview.md)
+

@@ -11,36 +11,49 @@
   items:
     - name: REST API
       items:
-      - name: Using C#
-        href: quickstarts/csharp.md
-      - name: Using Java
-        href: quickstarts/java.md
-      - name: Using Node.js
-        href: quickstarts/nodejs.md
-      - name: Using PHP
-        href: quickstarts/php.md
-      - name: Using Python
-        href: quickstarts/python.md
-      - name: Using Ruby
-        href: quickstarts/ruby.md
-    - name: SDK
+      - name: C#
+        href: quickstarts/rest/csharp.md
+      - name: Java
+        href: quickstarts/rest/java.md
+      - name: Node.js
+        href: quickstarts/rest/nodejs.md
+      - name: PHP
+        href: quickstarts/rest/php.md
+      - name: Python
+        href: quickstarts/rest/python.md
+      - name: Ruby
+        href: quickstarts/rest/ruby.md
+    - name: SDK (client library)
+      expanded: true
       items:
-      - name: Bing Video Search client libraries
-        href: ./quickstarts/client-libraries.md
+      - name: C#
+        href: quickstarts/sdk/video-search-client-library-csharp.md
+      - name: Java
+        href: quickstarts/sdk/video-search-client-library-java.md
+      - name: Node.js
+        href: quickstarts/sdk/video-search-client-library-javascript.md
+      - name: Python
+        href: quickstarts/sdk/video-search-client-library-python.md
 - name: Tutorials
   items:
   - name: Build a single-page web app
     href: tutorial/bing-video-search-single-page-app.md
 - name: Samples
   items:
-    - name: Code samples
-      href: https://azure.microsoft.com/resources/samples/?sort=0&service=cognitive-services&term=Bing+Video+Search
+  - name: REST samples
+    href: rest-samples.md
+  - name: SDK samples
+    href: sdk-samples.md
 - name: How-to guides
   items:
+  - name: Getting videos from the web
+    href: how-to/get-videos.md
+  - name: Sending search requests
+    href: how-to/sending-requests.md 
   - name: Get video insights
-    href: video-insights.md
+    href: how-to/video-insights.md
   - name: Get trending videos
-    href: trending-videos.md
+    href: how-to/trending-videos.md
   - name: Page videos
     maintainContext: true
     href: ../bing-web-search/page-results.md
@@ -49,38 +62,34 @@
     href: ../bing-web-search/resize-and-crop-thumbnails.md
   - name: Upgrade from v5 to v7
     href: bing-video-upgrade-guide-v5-to-v7.md
-- name: Concepts
-  items:
-    - name: Getting videos from the web
-      href: concepts/get-videos.md
-    - name: Sending search requests
-      href: concepts/sending-requests.md 
 - name: Reference
   items:
-  - name: Endpoints
-    href: reference/endpoints.md
-  - name: Response objects
-    href: reference/response-objects.md
-  - name: Query parameters
-    href: reference/query-parameters.md
-  - name: Headers
-    href: reference/headers.md
-  - name: Market and language codes
-    href: reference/market-codes.md
-  - name: Error codes
-    href: reference/error-codes.md
-- name: SDKs
-  items:
-  - name: .NET
-    href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingvideosearch?view=azure-dotnet
-  - name: Java
-    href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingvideosearch?view=azure-java-stable
-  - name: Python 
-    href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/videosearch?view=azure-python
-  - name: Node.js 
-    href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-videosearch/?view=azure-node-latest
-  - name: Go
-    href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/videosearch
+  - name: REST
+    items:
+    - name: Endpoints
+      href: reference/endpoints.md
+    - name: Response objects
+      href: reference/response-objects.md
+    - name: Query parameters
+      href: reference/query-parameters.md
+    - name: Headers
+      href: reference/headers.md
+    - name: Market and language codes
+      href: reference/market-codes.md
+    - name: Error codes
+      href: reference/error-codes.md
+  - name: SDKs (client libraries)
+    items:
+    - name: .NET
+      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingvideosearch?view=azure-dotnet
+    - name: Java
+      href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingvideosearch?view=azure-java-stable
+    - name: Python 
+      href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/videosearch?view=azure-python
+    - name: Node.js 
+      href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-videosearch/?view=azure-node-latest
+    - name: Go
+      href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/videosearch
 - name: Resources
   items:
   - name: Get API key
@@ -101,7 +110,7 @@
     - name: Knowledge Base
       href: https://cognitive.uservoice.com/knowledgebase/topics/127875-bing-search-web-image-video-news-autosuggest
 - name: Use and display requirements
-  href: ../Bing-Web-Search/use-display-requirements.md
+  href: ../bing-web-search/use-display-requirements.md
   maintainContext: true
 - name: Release notes
   href: release-notes.md

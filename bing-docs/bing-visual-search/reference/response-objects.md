@@ -28,7 +28,7 @@ Defines a list of offers from merchants that are related to the image.
 |Name|Value|Type 
 |-|-|-  
 |aggregateRating|An aggregated rating that indicates how well the product has been rated by others.|[AggregateRating](#aggregaterating)
-|availability|The item's availability. The following are the possible values:<ul><li>Discontinued</li><li>InStock</li><liInStoreOnly</li><li>LimitedAvailability</li><li>OnlineOnly</li><li>OutOfStock</li><li>PreOrder</li><li>SoldOut</li></ul>|String
+|availability|The item's availability. The following are the possible values:<ul><li>Discontinued</li><li>InStock</li><li>InStoreOnly</li><li>LimitedAvailability</li><li>OnlineOnly</li><li>OutOfStock</li><li>PreOrder</li><li>SoldOut</li></ul>|String
 |lastUpdated|The last date that the offer was updated. The date is in the form YYYY-MM-DD.|String
 |offers|A list of offers from merchants that have offerings related to the image.|[Offer](#offer)
 |price|The item's price.|Double
@@ -302,7 +302,7 @@ Defines a merchant's offer.
 |-|-|-
 |aggregateRating|An aggregated rating that indicates how well the product has been rated by others.|[AggregateRating](#aggregaterating)
 |alternateName|An alias for the item.|String
-|availability|The item's availability. The following are the possible values:<ul><li>Discontinued</li><li>InStock</li><liInStoreOnly</li><li>LimitedAvailability</li><li>OnlineOnly</li><li>OutOfStock</li><li>PreOrder</li><li>SoldOut</li></ul>|String
+|availability|The item's availability. The following are the possible values:<ul><li>Discontinued</li><li>InStock</li><li>InStoreOnly</li><li>LimitedAvailability</li><li>OnlineOnly</li><li>OutOfStock</li><li>PreOrder</li><li>SoldOut</li></ul>|String
 |bingId|An ID that uniquely identifies this item.|String
 |description|A short description of the item.|String
 |id|A String identifier.|String

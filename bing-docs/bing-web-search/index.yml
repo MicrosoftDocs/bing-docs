@@ -148,21 +148,21 @@ conceptualContent:
       links:
         - text: Use C#
           itemType: quickstart
-          url: ../bing-video-search/quickstarts/client-libraries.md?pivots=programming-language-csharp
+          url: ../bing-video-search/quickstarts/sdk/video-search-client-library-csharp
         - text: Use Java
           itemType: quickstart
-          url: ../bing-video-search/quickstarts/client-libraries.md?pivots=programming-language-java
+          url: ../bing-video-search/quickstarts/sdk/video-search-client-library-java
         - text: Use JavaScript
           itemType: quickstart
-          url: ../bing-video-search/quickstarts/client-libraries.md?pivots=programming-language-javascript
+          url: ../bing-video-search/quickstarts/sdk/video-search-client-library-javascript
         - text: Use Python
           itemType: quickstart
-          url: ../bing-video-search/quickstarts/client-libraries.md?pivots=programming-language-python
+          url: ../bing-video-search/quickstarts/sdk/video-search-client-library-python
         - text: Create a single page web-app
           itemType: tutorial
-          url: ../Bing-Video-Search/tutorial/bing-video-search-single-page-app.md
+          url: ../bing-video-search/tutorial/bing-video-search-single-page-app.md
       footerLink:
-        url: ../Bing-Video-Search/overview.md
+        url: ../bing-video-search/overview.md
         text: See more
 
     - title: Bing Visual Search API

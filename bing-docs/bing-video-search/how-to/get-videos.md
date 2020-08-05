@@ -1,7 +1,7 @@
 ---
 title: "Search for videos using the Bing Video Search API"
 titleSuffix: Bing Search Services
-description: The Bing Video Search APIfinds and returns relevant videos from the web, it provides several features for intelligent and focused video retrieval on the web.
+description: The Bing Video Search API finds and returns relevant videos from the web.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -14,7 +14,7 @@ ms.author: scottwhi
 
 # Search for videos with the Bing Video Search API
 
-The Bing Video Search API makes it easy to integrate Bing's cognitive news searching capabilities into your applications. While the API primarily finds and returns relevant videos from the web, it provides several features for intelligent and focused video retrieval on the web.
+The Bing Video Search API makes it easy to integrate Bing's cognitive news searching capabilities into your applications. 
 
 ## Getting videos
 
@@ -109,7 +109,7 @@ When a thumbnail is clicked, there are three options for viewing the video:
 
 Be sure to use the publisher and creator to attribute the video when you play it.
 
-For details about using [videoId](../reference/response-objects.md#video-videoid) to get insights about the video, see [Video Insights](../video-insights.md).
+For details about using [videoId](../reference/response-objects.md#video-videoid) to get insights about the video, see [Video Insights](video-insights.md).
 
 ## Filtering videos
 
