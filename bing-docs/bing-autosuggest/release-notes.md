@@ -21,7 +21,7 @@ Initial release of this version of Bing Autosuggest API. This API replaces the s
 
 ### New to Bing Search?
 
-Go here to get a subscription key for the package that includes this API. Then, get familiar with the [Autosuggest API](get-suggested-search-terms.md) documentation, and be sure to check out the quickstarts to get up and running quickly.
+Go here to get a subscription key for the package that includes this API. Then, get familiar with the [Autosuggest API](overview.md) documentation, and be sure to check out the quickstarts to get up and running quickly.
 
 
 ### Current Cognitive Services user?

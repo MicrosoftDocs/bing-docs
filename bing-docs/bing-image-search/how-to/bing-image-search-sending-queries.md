@@ -155,4 +155,4 @@ The following shows an example Bing implementation that uses expanded queries. I
 If you haven't tried the Bing Image Search API before, try a [quickstart](../quickstarts/rest/csharp.md). If you're looking for something more complex, try the tutorial to create a [single-page web app](../tutorial/bing-image-search-single-page-app.md).
 
 
-If your app has a search box where search terms are entered, you can use the [Bing Autosuggest API](../../bing-autosuggest/get-suggested-search-terms.md) to improve the experience. The API can display suggested search terms in real time. The API returns suggested query strings based on partial search terms and Cognitive Services.
+If your app has a search box where search terms are entered, you can use the [Bing Autosuggest API](../../bing-autosuggest/overview.md) to improve the experience. The API can display suggested search terms in real time. The API returns suggested query strings based on partial search terms and Cognitive Services.

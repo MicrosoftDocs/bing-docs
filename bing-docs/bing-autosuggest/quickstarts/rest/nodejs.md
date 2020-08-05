@@ -33,7 +33,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
     let https = require ('https');
     ```
 
-2. Create variables for the API endpoint host and path, your subscription key, [market code](../reference/market-codes.md), and a search term. 
+2. Create variables for the API endpoint host and path, your subscription key, [market code](../../reference/market-codes.md), and a search term. 
 
     ```javascript
     // Replace the subscriptionKey string value with your valid subscription key.

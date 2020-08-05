@@ -25,7 +25,7 @@ Bing Web Search doesn't only give you access to instant answers. It also provide
 
 | Feature | Description |
 |---------|-------------|
-| [Suggest search terms in real time](../bing-autosuggest/get-suggested-search-terms.md) | Improve your application experience by using the Bing Autosuggest API to display suggested search terms as they're typed. |
+| [Suggest search terms in real time](../bing-autosuggest/overview.md) | Improve your application experience by using the Bing Autosuggest API to display suggested search terms as they're typed. |
 | [Filter and restrict results by content type](filter-answers.md) | Customize and refine search results with filters and query parameters for web pages, images, videos, safe search, and more. |
 | [Hit highlighting for unicode characters](hit-highlighting.md) | Identify and remove unwanted unicode characters from search results before displaying them to users with  hit highlighting. |
 | [Analyze search metrics with Bing Statistics](bing-web-stats.md) | Bing Statistics is a paid subscription that provides analytics on call volume, top query strings, geographic distribution, and more. |

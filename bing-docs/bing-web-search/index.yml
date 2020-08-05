@@ -207,7 +207,7 @@ conceptualContent:
           itemType: quickstart
           url: ../bing-autosuggest/tutorial/autosuggest.md
       footerLink:
-        url: ..bBing-autosuggest/overview.md
+        url: ../bing-autosuggest/overview.md
         text: See more
 
     - title: Bing Spell Check API

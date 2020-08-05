@@ -39,7 +39,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
     import com.google.gson.JsonParser;
     ```
 
-2. Create variables for your subscription key, the API host and path, your [market code](../reference/market-codes.md), and a search query.
+2. Create variables for your subscription key, the API host and path, your [market code](../../reference/market-codes.md), and a search query.
     
     ```java
     static String subscriptionKey = "enter key here";

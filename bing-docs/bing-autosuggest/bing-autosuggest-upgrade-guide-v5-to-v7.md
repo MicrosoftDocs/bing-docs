@@ -67,4 +67,4 @@ Blocked|InvalidRequest.Blocked
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [What is Bing Autosuggest?](get-suggested-search-terms.md)
+> [What is Bing Autosuggest?](overview.md)

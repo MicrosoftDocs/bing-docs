@@ -44,7 +44,7 @@ The following Bing Search APIs let you improve your search experience by combini
 
 | API | Description |
 | -- | -- |
-| [Bing Autosuggest](../bing-autosuggest/get-suggested-search-terms.md) | Improve your application's search experience with the Bing Autosuggest API by returning suggested searches in real time.  |
+| [Bing Autosuggest](../bing-autosuggest/overview.md) | Improve your application's search experience with the Bing Autosuggest API by returning suggested searches in real time.  |
 | [Bing Statistics](bing-web-stats.md) | Bing Statistics provides analytics for the Bing Search APIs your application uses. Some of the available analytics include call volume, top query strings, and geographic distribution. |
 
 ## Next steps

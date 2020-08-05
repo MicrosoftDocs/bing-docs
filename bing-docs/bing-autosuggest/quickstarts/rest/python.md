@@ -31,7 +31,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
     import http.client, urllib.parse, json
     ```
 
-2. Create variables for your API host and path, [market code](../reference/market-codes.md), and partial search query. 
+2. Create variables for your API host and path, [market code](../../reference/market-codes.md), and partial search query. 
 
     ```python
     subscriptionKey = 'enter key here'

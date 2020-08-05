@@ -14,7 +14,7 @@ ms.author: scottwhi
 
 # Autosuggest Bing search terms in your application
 
-If you provide a search box where the user enters their search term, use the [Bing Autosuggest API](../bing-autosuggest/get-suggested-search-terms.md) to improve the experience. The API returns suggested query strings based on partial search terms as the user types.
+If you provide a search box where the user enters their search term, use the [Bing Autosuggest API](../bing-autosuggest/overview.md) to improve the experience. The API returns suggested query strings based on partial search terms as the user types.
 
 After the user enters a search term, it must be URL encoded before the [q](reference/query-parameters.md#query) query parameter is set. For example, if the user enters *sailing dinghies*, set `q` to `sailing+dinghies` or `sailing%20dinghies`.
 

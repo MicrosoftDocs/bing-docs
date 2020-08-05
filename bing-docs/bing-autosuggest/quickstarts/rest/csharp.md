@@ -35,7 +35,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
     using System.Text;
     ```
 
-2. In a new class, create variables for your API host and path, [market code](../reference/query-parameters.md#mkt), and a partial search query. 
+2. In a new class, create variables for your API host and path, [market code](../../reference/query-parameters.md#mkt), and a partial search query. 
 
     ```csharp
     static string host = "https://api.bing.microsoft.com";
