@@ -70,7 +70,7 @@ After adding web slices to the **Active** list, the Bing Custom Search portal wi
 
 ## Search for images and videos
 
-You can search for images and videos similarly to web content by using the [Bing Custom Image Search API](../../bing-custom-image-search/get-images-from-instance.md) or the [Bing Custom Video Search API](../../bing-custom-video-search/get-videos-from-instance.md). You can display these results with the [hosted UI](hosted-ui.md) or the APIs. These APIs are similar to the non-custom [Bing Image Search](../../bing-image-search/overview.md) and [Bing Video Search](../../bing-video-search/overview.md) APIs, but they search the entire web and do not require the `customConfig` query parameter.  
+You can search for images and videos similarly to web content by using the [Bing Custom Image Search API](../../bing-custom-image-search/overview.md) or the [Bing Custom Video Search API](../../bing-custom-video-search/overview.md). You can display these results with the [hosted UI](hosted-ui.md) or the APIs. These APIs are similar to the non-custom [Bing Image Search](../../bing-image-search/overview.md) and [Bing Video Search](../../bing-video-search/overview.md) APIs, but they search the entire web and do not require the `customConfig` query parameter.  
 
 ## Test your search instance with the Preview pane
 

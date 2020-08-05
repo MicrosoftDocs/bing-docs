@@ -32,4 +32,4 @@ To stop sharing an instance with someone, use the remove icon to remove their em
 
 ## Next steps
 
-- [Configure your Custom Autosuggest experience](../../bing-custom-autosuggest/define-custom-suggestions.md)
+- [Configure your Custom Autosuggest experience](../../bing-custom-autosuggest/overview.md)

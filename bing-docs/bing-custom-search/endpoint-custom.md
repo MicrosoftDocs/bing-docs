@@ -39,7 +39,7 @@ To request custom query suggestions, send a GET request to:
 https://api.bing.microsoft.com/bingcustomsearch/v7.0/Suggestions
 ```  
 
-For information about defining custom suggestions, see [Define custom search suggestions](../bing-custom-autosuggest/define-custom-suggestions.md).
+For information about defining custom suggestions, see [Define custom search suggestions](../bing-custom-autosuggest/overview.md).
 
 ## Custom Image Search
 The Custom Image Search API lets you send a search query to Bing and get back a list of relevant images from your Custom Search instance.
