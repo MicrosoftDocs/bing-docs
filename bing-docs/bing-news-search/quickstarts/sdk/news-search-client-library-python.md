@@ -12,7 +12,7 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Use the Bing Video Search Python client library
+# Quickstart: Use the Bing News Search Python client library
 
 Use this quickstart to begin searching for news with the Bing News Search client library for Python. While Bing News Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/blob/master/samples/search/news_search_samples.py).
 

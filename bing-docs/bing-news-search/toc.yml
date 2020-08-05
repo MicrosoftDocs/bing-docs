@@ -26,14 +26,14 @@
       href: quickstarts/rest/go.md
   - name: SDK (client library)
     items:
-      - name: C#
-        href: quickstarts/sdk/video-search-client-library-csharp.md
-      - name: Java
-        href: quickstarts/sdk/video-search-client-library-java.md
-      - name: Node.js
-        href: quickstarts/sdk/video-search-client-library-javascript.md
-      - name: Python
-        href: quickstarts/sdk/video-search-client-library-python.md
+    - name: C#
+      href: quickstarts/sdk/news-search-client-library-csharp.md
+    - name: Java
+      href: quickstarts/sdk/news-search-client-library-java.md
+    - name: Node.js
+      href: quickstarts/sdk/news-search-client-library-javascript.md
+    - name: Python
+      href: quickstarts/sdk/news-search-client-library-python.md
 - name: Tutorials
   items:
   - name: Create a single-page web app
@@ -47,9 +47,9 @@
 - name: How-to guides
   items:
   - name: Sending search queries
-    href: concepts/send-search-queries.md
+    href: how-to/send-search-queries.md
   - name: Searching for news
-    href: concepts/search-for-news.md
+    href: how-to/search-for-news.md
   - name: Handle hit highlighting
     href: ../bing-web-search/hit-highlighting.md
     maintainContext: true

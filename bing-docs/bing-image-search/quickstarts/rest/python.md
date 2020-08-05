@@ -30,7 +30,7 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 * The [Python Imaging Library (PIL)](https://pillow.readthedocs.io/en/stable/index.html)
 * [matplotlib](https://matplotlib.org/) 
 
-[!INCLUDE [bing-image-search-signup-requirements](../../../includes/bing-image-search-signup-requirements.md)]
+[!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
 
 ## Create and initialize the application
 
@@ -142,9 +142,9 @@ Responses from the Bing Image Search API are returned as JSON. This sample respo
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Image Search single-page app tutorial](../tutorial/bing-image-search-single-page-app.md)
+> [Bing Image Search single-page app tutorial](../../tutorial/bing-image-search-single-page-app.md)
 
 ## See also
 
-* [What is Bing Image Search?](../overview.md)  
-* [Bing Image Search API reference](../reference/endpoints.md)
+* [What is Bing Image Search?](../../overview.md)  
+* [Bing Image Search API reference](../../reference/endpoints.md)

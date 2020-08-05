@@ -1,14 +1,18 @@
 ---
 title: Bing Image Search Python client library quickstart 
 titleSuffix: Bing Search Services
+description: The Image Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
-ms.topic: include
+ms.subservice: bing-image-search
+ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
+
+# Quickstart: Use the Bing Image Search Python client library
 
 Use this quickstart to make your first image search using the Bing Image Search client library, which is a wrapper for the API and contains the same features. This simple Python application sends an image search query, parses the JSON response, and displays the URL of the first image returned.
 

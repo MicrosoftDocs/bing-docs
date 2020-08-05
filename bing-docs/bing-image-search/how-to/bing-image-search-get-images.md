@@ -107,4 +107,4 @@ When you call the Bing Image Search API, Bing returns a list of results. The lis
 
 ## Next steps
 
-If you haven't tried the Bing Image Search API before, try a [quickstart](../quickstarts/csharp.md). If you're looking for something more complex, try the tutorial to create a [single-page web app](../tutorial/bing-image-search-single-page-app.md).
+If you haven't tried the Bing Image Search API before, try a [quickstart](../quickstarts/rest/csharp.md). If you're looking for something more complex, try the tutorial to create a [single-page web app](../tutorial/bing-image-search-single-page-app.md).

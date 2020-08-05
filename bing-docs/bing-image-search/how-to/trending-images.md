@@ -25,10 +25,10 @@ X-MSEdge-ClientID: <blobFromPriorResponseGoesHere>
 Host: api.cognitive.microsoft.com  
 ```  
 
-For a list of markets that support Trending Images, see [Market codes](reference/market-codes.md#trending-image-api-markets).  
+For a list of markets that support Trending Images, see [Market codes](../reference/market-codes.md#trending-image-api-markets).  
 
 
-The response contains a [TrendingImages](reference/response-objects.md#trendingimages) object that lists images by category. Use the category's `title` to group the images in your user experience. The categories may change daily.  
+The response contains a [TrendingImages](../reference/response-objects.md#trendingimages) object that lists images by category. Use the category's `title` to group the images in your user experience. The categories may change daily.  
 
 ```json
 {
@@ -79,7 +79,7 @@ The response contains a [TrendingImages](reference/response-objects.md#trendingi
 
 Each tile contains an image and options for getting related images. To get the related images, you can use the query string in the `text` field when calling the Image Search API and display the related images yourself. Or, you can use the URL in `webSearchUrl` to take the user to Bing's images search results page, which contains the related images.
 
-If you call the Image Search API to get the related images, set the [id](reference/query-parameters.md#id) query parameter to the ID in the `id` field. Specifying the ID ensures that the response contains the image (it is the first image in the response) and its related images. Also, set the [q](reference/query-parameters.md#query) query parameter to the text in the `query` object's `text` field.
+If you call the Image Search API to get the related images, set the [id](../reference/query-parameters.md#id) query parameter to the ID in the `id` field. Specifying the ID ensures that the response contains the image (it is the first image in the response) and its related images. Also, set the [q](../reference/query-parameters.md#query) query parameter to the text in the `query` object's `text` field.
 
 The following example shows how to use the image ID to get related images of Mr. Smith in the preceding Trending Images API response.
 

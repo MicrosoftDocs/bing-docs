@@ -84,16 +84,16 @@ conceptualContent:
       links:      
         - text: Use C#
           itemType: quickstart
-          url: ../bing-image-search/quickstarts/client-libraries.md?pivots=programming-language-csharp
+          url: ../bing-image-search/quickstarts/sdk/image-search-client-library-csharp.md
         - text: Use Java
           itemType: quickstart
-          url: ../bing-image-search/quickstarts/client-libraries.md?pivots=programming-language-java
+          url: ../bing-image-search/quickstarts/sdk/image-search-client-library-java.md
         - text: Use JavaScript
           itemType: quickstart
-          url: ../bing-image-search/quickstarts/client-libraries.md?pivots=programming-language-javascript
+          url: ../bing-image-search/quickstarts/sdk/image-search-client-library-javascript.md
         - text: Use Python
           itemType: quickstart
-          url: ../bing-image-search/quickstarts/client-libraries.md?pivots=programming-language-python
+          url: ../bing-image-search/quickstarts/sdk/image-search-client-library-python.md
         - text: Create a single page web-app
           itemType: tutorial
           url: ../bing-image-search/tutorial/bing-image-search-single-page-app.md
@@ -127,16 +127,16 @@ conceptualContent:
       links:
         - text: Use C#
           itemType: quickstart
-          url: ../bing-news-search/quickstarts/sdk/news-search-client-library-csharp
+          url: ../bing-news-search/quickstarts/sdk/news-search-client-library-csharp.md
         - text: Use Java
           itemType: quickstart
-          url: ../bing-news-search/quickstarts/sdk/news-search-client-library-java
+          url: ../bing-news-search/quickstarts/sdk/news-search-client-library-java.md
         - text: Use JavaScript
           itemType: quickstart
-          url: ../bing-news-search/quickstarts/sdk/news-search-client-library-javascript
+          url: ../bing-news-search/quickstarts/sdk/news-search-client-library-javascript.md
         - text: Use Python
           itemType: quickstart
-          url: ../bing-news-search/quickstarts/sdk/news-search-client-library-python
+          url: ../bing-news-search/quickstarts/sdk/news-search-client-library-python.md
         - text: Create a single page web-app
           itemType: tutorial
           url: ../bing-news-search/tutorial/bing-news-search-single-page-app.md
@@ -148,19 +148,19 @@ conceptualContent:
       links:
         - text: Use C#
           itemType: quickstart
-          url: ../bing-video-search/quickstarts/sdk/video-search-client-library-csharp
+          url: ../bing-video-search/quickstarts/sdk/video-search-client-library-csharp.md
         - text: Use Java
           itemType: quickstart
-          url: ../bing-video-search/quickstarts/sdk/video-search-client-library-java
+          url: ../bing-video-search/quickstarts/sdk/video-search-client-library-java.md
         - text: Use JavaScript
           itemType: quickstart
-          url: ../bing-video-search/quickstarts/sdk/video-search-client-library-javascript
+          url: ../bing-video-search/quickstarts/sdk/video-search-client-library-javascript.md
         - text: Use Python
           itemType: quickstart
-          url: ../bing-video-search/quickstarts/sdk/video-search-client-library-python
+          url: ../bing-video-search/quickstarts/sdk/video-search-client-library-python.md
         - text: Create a single page web-app
           itemType: tutorial
-          url: ../bing-video-search/tutorial/bing-video-search-single-page-app.md
+          url: ../bing-video-search/tutorial/bing-video-search-single-page-app.md.md
       footerLink:
         url: ../bing-video-search/overview.md
         text: See more

@@ -10,32 +10,44 @@
   items:
   - name: REST API
     items:
-    - name: "Using C#"
-      href: quickstarts/csharp.md
-    - name: "Using Java"
-      href: quickstarts/java.md
-    - name: "Using Node.js"
-      href: quickstarts/nodejs.md
-    - name: "Using PHP"
-      href: quickstarts/php.md
-    - name: "Using Python"
-      href: quickstarts/python.md
-    - name: "Using Ruby"
-      href: quickstarts/ruby.md
-  - name: SDK
+    - name: C#
+      href: quickstarts/rest/csharp.md
+    - name: Java
+      href: quickstarts/rest/java.md
+    - name: Node.js
+      href: quickstarts/rest/nodejs.md
+    - name: PHP
+      href: quickstarts/rest/php.md
+    - name: Python
+      href: quickstarts/rest/python.md
+    - name: Ruby
+      href: quickstarts/rest/ruby.md
+  - name: SDK (client library)
     items:
-    - name: "Bing Image Search client libraries"
-      href: ./quickstarts/client-libraries.md
+    - name: C#
+      href: quickstarts/sdk/image-search-client-library-csharp.md
+    - name: Java
+      href: quickstarts/sdk/image-search-client-library-java.md
+    - name: Node.js
+      href: quickstarts/sdk/image-search-client-library-javascript.md
+    - name: Python
+      href: quickstarts/sdk/image-search-client-library-python.md
 - name: Tutorials
   items:
   - name: Build an image search web application
     href: tutorial/bing-image-search-single-page-app.md
 - name: Samples
   items:
-    - name: Code samples
-      href: https://azure.microsoft.com/resources/samples/?sort=0&service=cognitive-services&term=Bing+Image+Search
+  - name: REST samples
+    href: rest-samples.md
+  - name: SDK samples
+    href: sdk-samples.md
 - name: How-to guides
   items:
+  - name: Getting images from the web
+    href: concepts/bing-image-search-get-images.md
+  - name: Sending and working with search queries
+    href: concepts/bing-image-search-sending-queries.md
   - name: Get image insights
     href: image-insights.md
   - name: Get .gif images
@@ -50,28 +62,24 @@
     href: ../bing-web-search/resize-and-crop-thumbnails.md
   - name: Upgrade from v5 to v7
     href: bing-image-upgrade-guide-v5-to-v7.md
-- name: Concepts
-  items:
-  - name: Getting images from the web
-    href: concepts/bing-image-search-get-images.md
-  - name: Sending and working with search queries
-    href: concepts/bing-image-search-sending-queries.md
 - name: Reference
   items:
-  - name: Endpoints
-    href: reference/endpoints.md
-  - name: Response objects
-    href: reference/response-objects.md
-  - name: Query parameters
-    href: reference/query-parameters.md
-  - name: Headers
-    href: reference/headers.md
-  - name: Market and language codes
-    href: reference/market-codes.md
-  - name: Error codes
-    href: reference/error-codes.md
-- name: SDKs
-  items:
+  - name: REST
+    items:
+    - name: Endpoints
+      href: reference/endpoints.md
+    - name: Response objects
+      href: reference/response-objects.md
+    - name: Query parameters
+      href: reference/query-parameters.md
+    - name: Headers
+      href: reference/headers.md
+    - name: Market and language codes
+      href: reference/market-codes.md
+    - name: Error codes
+      href: reference/error-codes.md
+  - name: SDKs (client libraries)
+    items:
     - name: .NET
       href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingimagesearch?view=azure-dotnet
     - name: Java
@@ -106,7 +114,7 @@
     - name: Knowledge Base
       href: https://cognitive.uservoice.com/knowledgebase/topics/127875-bing-search-web-image-video-news-autosuggest
 - name: Bing use and display requirements
-  href: ../Bing-Web-Search/use-display-requirements.md
+  href: ../bing-web-search/use-display-requirements.md
   maintainContext: true
 - name: Release notes
   href: release-notes.md

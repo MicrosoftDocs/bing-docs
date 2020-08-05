@@ -22,25 +22,25 @@ While the Bing Image Search API provides image-only search results, you can comb
 
 | Feature                                                                                                                                                                                 | Description                                                                                                                                                            |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Filter and restrict image results](concepts/bing-image-search-get-images.md)                       | Filter the images that Bing returns by editing query parameters.                                                                                                       |
+| [Filter and restrict image results](how-to/bing-image-search-get-images.md)                       | Filter the images that Bing returns by editing query parameters.                                                                                                       |
 | [Crop, resize, and display thumbnails](../bing-web-search/resize-and-crop-thumbnails.md)                                                | Edit and display thumbnail previews for the images returned by Bing Image Search.                                                                                      |
-| [Pivot & expand user search queries](concepts/bing-image-search-sending-queries.md)               | Expand your search capabilities by including and displaying Bing-suggested search terms to queries.                                                                    |
-| [Get trending images](trending-images.md)                                                                     | Customize a search for trending images from around the world.                                                                                                          |
+| [Pivot & expand user search queries](how-to/bing-image-search-sending-queries.md)               | Expand your search capabilities by including and displaying Bing-suggested search terms to queries.                                                                    |
+| [Get trending images](how-to/trending-images.md)                                                                     | Customize a search for trending images from around the world.                                                                                                          |
 
 ## Workflow
 
-The Bing Image Search API is a RESTful web service, making it easy to call from any programming language that can make HTTP requests and parse JSON. You can use the service using either the [REST API](quickstarts/csharp.md), or the [SDK](quickstarts/client-libraries.md).
+The Bing Image Search API is a RESTful web service, making it easy to call from any programming language that can make HTTP requests and parse JSON. You can use the service using either the [REST API](quickstarts/rest/csharp.md), or the [SDK](quickstarts/sdk/image-search-client-library-csharp.md).
 
 1. Create a [Cognitive Services API account](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account) with access to the Bing Search APIs. If you don't have an Azure subscription, you can [create an account](https://azure.microsoft.com/free/cognitive-services/) for free.
-2. Send a request to the API, with a valid [search query](concepts/bing-image-search-sending-queries.md).
+2. Send a request to the API, with a valid [search query](how-to/bing-image-search-sending-queries.md).
 3. Process the API response by parsing the returned JSON message.
 
 ## Next steps
 
 To quickly get started with your first API request, you can learn to:
 
-* [Send search queries to Bing](quickstarts/csharp.md) using the REST API, or
-* [Request and filter](quickstarts/client-libraries.md) the images Bing returns using the SDK.
+* [Send search queries to Bing](quickstarts/rest/csharp.md) using the REST API, or
+* [Request and filter](quickstarts/sdk/image-search-client-library-csharp.md) the images Bing returns using the SDK.
 
 ## See also
 
@@ -50,7 +50,7 @@ To quickly get started with your first API request, you can learn to:
 
 * The [Bing Use and Display Requirements](../bing-web-search/use-display-requirements.md) specify acceptable uses of the content and information gained through the Bing search APIs.
 
-* The [Getting images from the web with the Bing Image Search API](concepts/bing-image-search-get-images.md) article describes how to search and get images from the web.
+* The [Getting images from the web with the Bing Image Search API](how-to/bing-image-search-get-images.md) article describes how to search and get images from the web.
 
-* The [Sending and working with search queries](concepts/bing-image-search-sending-queries.md) article describes how to make, customize, and pivot search queries.
+* The [Sending and working with search queries](how-to/bing-image-search-sending-queries.md) article describes how to make, customize, and pivot search queries.
 

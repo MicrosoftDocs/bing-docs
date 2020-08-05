@@ -24,7 +24,7 @@ The source code for this sample is available on [GitHub](https://github.com/Azur
 
 * [The latest version of Ruby](https://www.ruby-lang.org/en/downloads/).
 
-[!INCLUDE [bing-image-search-signup-requirements](../../../includes/bing-image-search-signup-requirements.md)]
+[!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
 
 For more information, see [Cognitive Services Pricing - Bing Search API](https://azure.microsoft.com/pricing/details/cognitive-services/search-api/).
 
@@ -134,9 +134,9 @@ Responses from the Bing Image Search API are returned as JSON. This sample respo
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Image Search single-page app tutorial](../tutorial/bing-image-search-single-page-app.md)
+> [Bing Image Search single-page app tutorial](../../tutorial/bing-image-search-single-page-app.md)
 
 ## See also
 
-* [What is Bing Image Search?](../overview.md)  
-* [Bing Image Search API reference](../reference/endpoints.md)
+* [What is Bing Image Search?](../../overview.md)  
+* [Bing Image Search API reference](../../reference/endpoints.md)
