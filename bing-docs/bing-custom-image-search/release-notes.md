@@ -21,7 +21,7 @@ Initial release of this version of Bing Custom Image Search API. This API replac
 
 ### New to Bing Search?
 
-Go here to get a subscription key for the package that includes this API. Then, get familiar with the [Custom Image Search API](get-images-from-instance.md) documentation, and be sure to check out the quickstarts to get up and running quickly.
+Go here to get a subscription key for the package that includes this API. Then, get familiar with the [Custom Image Search API](overview.md) documentation, and be sure to check out the quickstarts to get up and running quickly.
 
 
 ### Current Cognitive Services user?

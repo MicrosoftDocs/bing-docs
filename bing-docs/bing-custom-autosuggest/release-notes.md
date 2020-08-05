@@ -21,7 +21,7 @@ Initial release of this version of Bing Custom Autosuggest API. This API replace
 
 ### New to Bing Search?
 
-Go here to get a subscription key for the package that includes this API. Then, get familiar with the [Custom Autosuggest API](define-custom-suggestions.md) documentation, and be sure to check out the quickstarts to get up and running quickly.
+Go here to get a subscription key for the package that includes this API. Then, get familiar with the [Custom Autosuggest API](overview.md) documentation, and be sure to check out the quickstarts to get up and running quickly.
 
 
 ### Current Cognitive Services user?

@@ -13,7 +13,7 @@ ms.author: scottwhi
 
 # Custom Image Search API v7 reference
 
-The Custom Image Search API lets you send a search query to Bing and get back a list of relevant images from the slice of Web that your Custom Search instance defines. For information about configuring a Custom Search instance, see [Configure your custom search experience](../../bing-custom-search/how-to/define-your-custom-view.md). 
+The Custom Image Search API lets you send a search query to Bing and get back a list of relevant images from the slice of Web that your Custom Search instance defines. For information about getting images from your custom search instance, see [Getting images from a custom instance](../overview.md). 
   
 For information about permitted use and display of the results, see [Use and display requirements](../../bing-web-search/use-display-requirements.md).
 

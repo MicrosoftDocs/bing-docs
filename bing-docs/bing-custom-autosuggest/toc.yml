@@ -1,29 +1,41 @@
 - name: Bing Custom Autosuggest documentation
   expanded: true
   items:
-    - name: What is the Bing Custom Search API?
-      href: ../bing-custom-search/overview.md
+    - name: What is the Bing Custom Autosuggest API?
+      href: overview.md
     - name: Compare the Bing Search APIs
       href: ../bing-web-search/bing-api-comparison.md
       maintainContext: true
-- name: Concepts
+- name: How-to
   items:
     - name: Configure your custom search experience
       href: ../bing-custom-search/how-to/define-your-custom-view.md
-    - name: Define your custom suggestions
-      href: define-custom-suggestions.md
 - name: Reference
   items:
-  - name: Endpoints
-    href: reference/endpoints.md
-  - name: Response objects
-    href: reference/response-objects.md
-  - name: Query parameters
-    href: reference/query-parameters.md
-  - name: Headers
-    href: reference/headers.md
-  - name: Error codes
-    href: reference/error-codes.md
+  - name: REST
+    items:
+    - name: Endpoints
+      href: reference/endpoints.md
+    - name: Response objects
+      href: reference/response-objects.md
+    - name: Query parameters
+      href: reference/query-parameters.md
+    - name: Headers
+      href: reference/headers.md
+    - name: Error codes
+      href: reference/error-codes.md
+  - name: SDKs (client libraries)
+    items:
+    - name: .NET
+      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingcustomsearch?view=azure-dotnet
+    - name: Java
+      href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingcustomsearch?view=azure-java-stable
+    - name: Python
+      href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/customsearch?view=azure-python
+    - name: Node.js
+      href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-customsearch/?view=azure-node-latest
+    - name: Go
+      href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/customsearch
 - name: Resources
   items:
   - name: Get API key
