@@ -1,14 +1,18 @@
 ---
 title: Bing Autosuggest C# client library quickstart 
 titleSuffix: Bing Search Services
+description: The Autosuggest API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send a partial search term and get back suggested terms.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
-ms.topic: include
+ms.subservice: bing-autosuggest
+ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
+
+# Quickstart: Use the Bing Autosuggest .NET client library
 
 Get started with the Bing Autosuggest client library for .NET. Follow these steps to install the package and try out the example code for basic tasks.
 
@@ -204,5 +208,5 @@ dotnet run
 
 ## See also
 
-- [What is Bing Autosuggest?](../../get-suggested-search-terms.md)
-- [Bing Autosuggest dotnet reference](https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-dotnet)
+- [What is Bing Autosuggest?](../../overview.md)
+- [Bing Autosuggest .NET reference](https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-dotnet)

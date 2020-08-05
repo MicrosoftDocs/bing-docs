@@ -35,7 +35,7 @@ The **Bing** APIs support search actions that return results according to their 
 All endpoints support queries that return a specific language and/or location by longitude, latitude, and search radius.
 
 For complete information about the parameters supported by each endpoint, see the reference pages for each type.
-For examples of basic requests using the Autosuggest API, see [Autosuggest Quickstarts](../quickstarts/client-libraries.md).
+For examples of basic requests using the Autosuggest API, see [Autosuggest Quickstarts](../quickstarts/rest/csharp.md).
 
 ## Bing Autosuggest API requests
 
@@ -171,6 +171,6 @@ BingAPIs-Market: en-US
 
 ## Next steps
 
-- [What is Bing Autosuggest?](../get-suggested-search-terms.md)
+- [What is Bing Autosuggest?](../overview.md)
 - [Bing Autosuggest API v7 reference](../reference/endpoints.md)
 - [Getting suggested search terms from Bing Autosuggest API](get-suggestions.md)

@@ -22,7 +22,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
 * The [Java Development Kit(JDK)](https://www.oracle.com/technetwork/java/javase/downloads/)
 * The [Gson library](https://github.com/google/gson)
 
-[!INCLUDE [bing-autosuggest-signup-requirements](../../../includes/bing-autosuggest-signup-requirements.md)]
+[!INCLUDE [bing-autosuggest-signup-requirements](../../../../includes/bing-autosuggest-signup-requirements.md)]
 
 ## Create and initialize a project
 
@@ -199,7 +199,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../tutorial/autosuggest.md)
+> [Create a single-page web app](../../tutorial/autosuggest.md)
 
-- [What is Bing Autosuggest?](../get-suggested-search-terms.md)
-- [Bing Autosuggest API v7 reference](../reference/endpoints.md)
+- [What is Bing Autosuggest?](../../overview.md)
+- [Bing Autosuggest API v7 reference](../../reference/endpoints.md)

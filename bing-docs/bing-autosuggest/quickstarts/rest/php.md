@@ -1,5 +1,5 @@
 ---
-title: "Quickstart: Suggest search queries with the Bing Autosuggest REST API and C#"
+title: "Quickstart: Suggest search queries with the Bing Autosuggest REST API and PHP"
 titleSuffix: Bing Search Services
 description: Learn how to quickly start suggesting search terms in real time with the Bing Autosuggest API.
 services: bing-search-services
@@ -12,78 +12,68 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-# Quickstart: Suggest search queries with the Bing Autosuggest REST API and C#
 
-Follow this quickstart to learn how to make calls to the Bing Autosuggest API and read the JSON response. This simple C# application sends a partial search query to the API, and returns suggestions for searches. While this application is written in C#, the API is a RESTful Web service compatible with most programming languages. The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/dotnet/Search/BingAutosuggestv7.cs).
+# Quickstart: Suggest search queries with the Bing Autosuggest REST API and PHP
+
+Follow this quickstart to learn how to make calls to the Bing Autosuggest API and read the JSON response. This simple PHP application sends a partial search query to the API, and returns suggestions for searches. While this application is written in PHP, the API is a RESTful Web service compatible with most programming languages.
 
 ## Prerequisites
 
-* Any edition of [Visual Studio 2017 or later](https://www.visualstudio.com/downloads/).
-* If you're using Linux/MacOS, this application can be run using [Mono](https://www.mono-project.com/).
+* [PHP 5.6.x](https://php.net/downloads.php) or later
 
-[!INCLUDE [bing-autosuggest-signup-requirements](../../../includes/bing-autosuggest-signup-requirements.md)]
+[!INCLUDE [bing-autosuggest-signup-requirements](../../../../includes/bing-autosuggest-signup-requirements.md)]
 
-## Create a Visual Search Solution
+## Get Autosuggest results
 
-1. Create a new console solution in Visual Studio. Then, add the following namespaces into the main code file.
+1. Create a new PHP project in your favorite IDE.
+2. Add the code provided below.
+3. Replace the `subscriptionKey` value with an access key that's valid for your subscription.
+1. Run the program.
 
-    ```csharp
-    using System;
-    using System.Collections.Generic;
-    using System.Net.Http;
-    using System.Net.Http.Headers;
-    using System.Text;
-    ```
+```php
+<?php
 
-2. In a new class, create variables for your API host and path, [market code](../reference/query-parameters.md#mkt), and a partial search query. 
+// NOTE: Be sure to uncomment the following line in your php.ini file.
+// ;extension=php_openssl.dll
 
-    ```csharp
-    static string host = "https://api.bing.microsoft.com";
-    static string path = "/bing/v7.0/Suggestions";
-    static string market = "en-US";
-    static string key = "your-api-key";
-    
-    static string query = "sail";
-    ```
+// **********************************************
+// *** Update or verify the following values. ***
+// **********************************************
 
+// Replace the subscriptionKey string value with your valid subscription key.
+$subscriptionKey = 'enter key here';
 
-## Create and send an API request
+$host = "https://api.bing.microsoft.com";
+$path = "/bing/v7.0/Suggestions";
 
-1. Create a function called `Autosuggest()` to send a request to the API. Create a new `HttpClient()`, and add your subscription key to the `Ocp-Apim-Subscription-Key` header.
+$mkt = "en-US";
+$query = "sail";
 
-    ```csharp
-    async static void Autosuggest()
-    {
-        HttpClient client = new HttpClient();
-        client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", key);
-        //..
-    }
-    ```
+function get_suggestions ($host, $path, $key, $mkt, $query) {
 
-2. In the same function above, create a request URI by combining your API host and path. Append your market to the `mkt=` parameter, and your query to the `query=` parameter. Be sure to URL-encode your query. 
+  $params = '?mkt=' . $mkt . '&q=' . $query;
 
-    ```csharp
-    string uri = host + path + "?mkt=" + market + "&query=" + System.Net.WebUtility.UrlEncode (query);
-    ```
+  $headers = "Content-type: text/json\r\n" .
+    "Ocp-Apim-Subscription-Key: $key\r\n";
 
-3. Send the request to the uri constructed above, and print the response.
+  // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
+  // https://php.net/manual/en/function.stream-context-create.php
+  $options = array (
+    'http' => array (
+      'header' => $headers,
+      'method' => 'GET'
+    )
+  );
+  $context  = stream_context_create ($options);
+  $result = file_get_contents ($host . $path . $params, false, $context);
+  return $result;
+}
 
-    ```csharp
-    HttpResponseMessage response = await client.GetAsync(uri);
+$result = get_suggestions ($host, $path, $subscriptionKey, $mkt, $query);
 
-    string contentString = await response.Content.ReadAsStringAsync();
-    Console.WriteLine(contentString);
-    ```
-
-4. In the main method of your program, call `Autosuggest()`.
-
-    ```csharp
-    static void Main(string[] args)
-    {
-        Autosuggest();
-        Console.ReadLine();
-    }
-    ```
+echo json_encode (json_decode ($result), JSON_PRETTY_PRINT);
+?>
+```
 
 ## Example JSON response
 
@@ -156,9 +146,9 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Autosuggest tutorial](../tutorial/autosuggest.md)
+> [Bing Autosuggest tutorial](../../tutorial/autosuggest.md)
 
 ## See also
 
-- [What is Bing Autosuggest?](../get-suggested-search-terms.md)
-- [Bing Autosuggest API v7 reference](../reference/endpoints.md)
+- [What is Bing Autosuggest?](../../overview.md)
+- [Bing Autosuggest API v7 reference](../../reference/endpoints.md)

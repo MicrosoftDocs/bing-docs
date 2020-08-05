@@ -21,7 +21,7 @@ If your application sends queries to any of the Bing Search APIs, you can use th
 
 |Feature|Description
 |-|-
-|[Suggest search terms in real-time](concepts/get-suggestions.md)|Improve your app experience by using the Autosuggest API to display suggested search terms as they're typed.
+|[Suggest search terms in real-time](how-to/get-suggestions.md)|Improve your app experience by using the Autosuggest API to display suggested search terms as they're typed.
 
 ## Workflow
 
@@ -41,7 +41,7 @@ When a user selects a suggestion from the drop-down list, you can use it to begi
 
 ## Next steps
 
-To get started quickly with your first request, see [Making Your First Query](quickstarts/csharp.md).
+To get started quickly with your first request, see [Making Your First Query](quickstarts/rest/csharp.md).
 
 Familiarize yourself with the [Bing Autosuggest API v7](reference/endpoints.md) reference. The reference contains the list of endpoints, headers, and query parameters that you'd use to request suggested query terms, and the definitions of the response objects.
 

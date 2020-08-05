@@ -52,4 +52,4 @@ If the user selects a suggested query from the drop-down list, you'd use the que
 
 ## Next steps
 
-* [What is the Bing Autosuggest API?](../get-suggested-search-terms.md)
+* [What is the Bing Autosuggest API?](../overview.md)

@@ -15,7 +15,7 @@ ms.author: scottwhi
 
 The Autosuggest API lets you send a partial search query term to Bing and get back a list of suggested queries that other users have searched on or that are based on user intent. Typically, you use this API to support a richer search box experience. For example, you'd call this API for each character the user enters and populate the search box's drop-down list with the suggested query strings.  
 
-For examples that show how to make requests, see [Getting suggested search terms](../index.md). 
+For examples that show how to make requests, see [Getting suggested search terms](../overview.md). 
   
 For information about permitted use and display of the results, see [Use and display requirements](../../bing-web-search/use-display-requirements.md).
 

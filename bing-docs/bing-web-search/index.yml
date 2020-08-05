@@ -190,24 +190,24 @@ conceptualContent:
       links:
         - text: Use C#
           itemType: quickstart
-          url: ../bing-autosuggest/quickstarts/client-libraries.md?pivots=programming-language-csharp
+          url: ../bing-autosuggest/quickstarts/sdk/autosuggest-client-library-csharp.md
         - text: Use Go
           itemType: quickstart
-          url: ../Bing-Autosuggest/quickstarts/client-libraries.md?pivots=programming-language-go
+          url: ../bing-autosuggest/quickstarts/sdk/autosuggest-client-library-go.md
         - text: Use Java
           itemType: quickstart
-          url: ../Bing-Autosuggest/quickstarts/java.md
+          url: ../bing-autosuggest/quickstarts/rest/java.md
         - text: Use Node.js
           itemType: quickstart
-          url: ../Bing-Autosuggest/quickstarts/nodejs.md
+          url: ../bing-autosuggest/quickstarts/rest/nodejs.md
         - text: Use Python
           itemType: quickstart
-          url: ../Bing-Autosuggest/quickstarts/python.md
+          url: ../bing-autosuggest/quickstarts/rest/python.md
         - text: Create a single page web-app
           itemType: quickstart
-          url: ../Bing-Autosuggest/tutorial/autosuggest.md
+          url: ../bing-autosuggest/tutorial/autosuggest.md
       footerLink:
-        url: ../Bing-Autosuggest/get-suggested-search-terms.md
+        url: ..bBing-autosuggest/overview.md
         text: See more
 
     - title: Bing Spell Check API

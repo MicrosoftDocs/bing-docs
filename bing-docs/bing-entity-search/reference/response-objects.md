@@ -240,7 +240,7 @@ Defines a search results group, such as mainline.
   
 ## RankingItem  
 
-Defines a search result item to display. For more information about how to use the IDs, see [Ranking results](../rank-results.md).  
+Defines a search result item to display. For more information about how to use the IDs, see [Ranking results](../how-to/rank-results.md).  
   
 |Name|Value|Type
 |-|-|-

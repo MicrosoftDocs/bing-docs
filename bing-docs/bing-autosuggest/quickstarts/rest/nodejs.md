@@ -21,7 +21,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
 
 * [Node.js 6](https://nodejs.org/en/download/) or later
 
-[!INCLUDE [bing-autosuggest-signup-requirements](../../../includes/bing-autosuggest-signup-requirements.md)]
+[!INCLUDE [bing-autosuggest-signup-requirements](../../../../includes/bing-autosuggest-signup-requirements.md)]
 
 ## Create a new application
 
@@ -185,7 +185,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../tutorial/autosuggest.md)
+> [Create a single-page web app](../../tutorial/autosuggest.md)
 
-- [What is Bing Autosuggest?](../get-suggested-search-terms.md)
-- [Bing Autosuggest API v7 reference](../reference/endpoints.md)
+- [What is Bing Autosuggest?](../../overview.md)
+- [Bing Autosuggest API v7 reference](../../reference/endpoints.md)
