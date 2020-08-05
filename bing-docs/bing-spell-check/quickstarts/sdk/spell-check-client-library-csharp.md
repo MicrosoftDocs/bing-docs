@@ -28,7 +28,7 @@ To add the Bing Spell Check SDK to your project, select **Manage NuGet Packages*
 * Microsoft.Rest.ClientRuntime.Azure
 * Newtonsoft.Json
 
-[!INCLUDE [bing-spell-check-signup-requirements](../../includes/bing-spell-check-signup-requirements.md)]
+[!INCLUDE [bing-spell-check-signup-requirements](../../../../includes/bing-spell-check-signup-requirements.md)]
 
 ## Create and initialize the application
 
@@ -97,7 +97,7 @@ Build and run your project. If you're using Visual Studio, press **F5** to debug
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single page web-app](tutorial/spellcheck.md)
+> [Create a single page web-app](../../tutorial/spellcheck.md)
 
-- [What is the Bing Spell Check API?](overview.md)
+- [What is the Bing Spell Check API?](../../overview.md)
 - [Bing Spell Check C# SDK reference guide](https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingspellcheck?view=azure-dotnet)

@@ -22,7 +22,7 @@ Although this application is written in PHP, the API is a RESTful Web service co
 
 * [PHP 5.6.x](https://php.net/downloads.php)
 
-[!INCLUDE [bing-spell-check-signup-requirements](../../../includes/bing-spell-check-signup-requirements.md)]
+[!INCLUDE [bing-spell-check-signup-requirements](../../../../includes/bing-spell-check-signup-requirements.md)]
 
 
 ## Get Bing Spell Check REST API results
@@ -136,7 +136,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../tutorial/spellcheck.md)
+> [Create a single-page web app](../../tutorial/spellcheck.md)
 
-- [What is the Bing Spell Check API?](../overview.md)
-- [Bing Spell Check API v7 reference](../reference/endpoints.md)
+- [What is the Bing Spell Check API?](../../overview.md)
+- [Bing Spell Check API v7 reference](../../reference/endpoints.md)

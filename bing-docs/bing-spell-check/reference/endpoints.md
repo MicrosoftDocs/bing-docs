@@ -13,7 +13,7 @@ ms.author: scottwhi
 
 # Spell Check API v7 reference
 
-The Spell Check API lets you check a text string for spelling and grammar errors. This section provides technical details about the query parameters and headers that you use to request spell checking, and the JSON response objects that contain the results. For examples that show how to make requests, see [Bing Spell Check overview](../index.md). 
+The Spell Check API lets you check a text string for spelling and grammar errors. This section provides technical details about the query parameters and headers that you use to request spell checking, and the JSON response objects that contain the results. For examples that show how to make requests, see [Bing Spell Check overview](../overview.md). 
   
 For information about permitted use and display of the results, see [Use and display requirements](../../bing-web-search/use-display-requirements.md).
 

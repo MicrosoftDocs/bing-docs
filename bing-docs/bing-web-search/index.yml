@@ -214,16 +214,16 @@ conceptualContent:
       links:
         - text: Use C#
           itemType: quickstart
-          url: ../bing-spell-check/sdk-quickstart-spell-check.md
+          url: ../bing-spell-check/quickstarts/sdk/spell-check-client-library-csharp.md
         - text: Use Java
           itemType: quickstart
-          url: ../bing-spell-check/quickstarts/java.md
+          url: ../bing-spell-check/quickstarts/rest/java.md
         - text: Use Node.js
           itemType: quickstart
-          url: ../bing-spell-check/quickstarts/nodejs.md
+          url: ../bing-spell-check/quickstarts/rest/nodejs.md
         - text: Use Python
           itemType: quickstart
-          url: ../bing-spell-check/quickstarts/python.md
+          url: ../bing-spell-check/quickstarts/rest/python.md
         - text: Create a single page web-app
           itemType: tutorial
           url: ../bing-spell-check/tutorial/spellcheck.md
