@@ -1,10 +1,11 @@
 ---
-title: "Quickstart: Perform a news search with Node.js - Bing News Search REST API"
+title: "Quickstart: Perform a news search with Ruby and the Bing News Search REST API"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send a request to the Bing News Search REST API using Node.js, and receive a JSON response.
+description: Use this quickstart to send a request to the Bing News Search REST API using Ruby, and receive a JSON response.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
+
 ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: quickstart
@@ -12,79 +13,71 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Perform a news search using Node.js and the Bing News Search REST API
+# Quickstart: Perform a news search using Ruby and the Bing News Search REST API
 
-Use this quickstart to make your first call to the Bing News Search API. This simple JavaScript application sends a search query to the API and displays the JSON response.
+Use this quickstart to make your first call to the Bing News Search API. This simple Ruby application sends a search query to the API and processes the JSON response.
 
-Although this application is written in JavaScript and runs in Node.js, the API is a RESTful Web service compatible with most programming languages.
+Although this application is written in Ruby, the API is a RESTful Web service compatible with most programming languages. 
 
-The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/nodejs/Search/BingNewsSearchv7.js).
+The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/ruby/Search/BingNewsSearchv7.rb).
 
 ## Prerequisites
 
-* The latest version of [Node.js](https://nodejs.org/en/download/).
-* The [JavaScript Request Library](https://github.com/request/request).
+* Ruby [2.4 or later](https://www.ruby-lang.org/en/downloads/)
 
-[!INCLUDE [bing-news-search-signup-requirements](../../../includes/bing-news-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-news-search-signup-requirements.md)]
 
 ## Create and initialize the application
 
-1. Create a new JavaScript file in your favorite IDE or editor, and set the strictness and HTTPS requirements.
+1. Import the following packages into your code file:
 
-    ```javascript
-    'use strict';
-    let https = require('https');
+    ```ruby
+    require 'net/https'
+    require 'uri'
+    require 'json'
     ```
 
-2. Create variables for the API endpoint, news API search path, your subscription key, and search term. 
+2. Create variables for the API endpoint, news search URL, your subscription key, and search term.
 
-    ```javascript
-    let subscriptionKey = 'enter key here';
-    let host = 'api.bing.microsoft.com';
-    let path = '/bing/v7.0/news/search';
-    let term = 'Microsoft';
+    ```ruby
+    accessKey = "enter key here"
+    uri  = "https://api.bing.microsoft.com"
+    path = "/bing/v7.0/news/search"
+    term = "Microsoft"
     ```
 
-## Handle and parse the response
+## Format and make an API request
 
-1. Define a function named `response_handler` that takes an HTTP call, `response`, as a parameter. 
+Use the variables from the previous step to format a search URL for the API request. Then, send the request.
 
-   Add code to this function in the steps that follow.
+```ruby
+uri = URI(uri + path + "?q=" + URI.escape(term))
+request = Net::HTTP::Get.new(uri)
+request['Ocp-Apim-Subscription-Key'] = accessKey
+response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
+   http.request(request)
+end
+```
 
-2. Define a variable to contain the body of the JSON response.  
+## Process and print the JSON response
 
-    ```javascript
-    let response_handler = function (response) {
-        let body = '';
-    };
-    ```
+After the response is received, parse the JSON, and then print both the response body and its headers.
 
-3. Store the body of the response when the `data` flag is called.
-
-    ```javascript
-    response.on('data', function (d) {
-        body += d;
-    });
-    ```
-
-3. When an `end` flag is signaled, the JSON and headers can be viewed.
-
-    ```javascript
-    response.on('end', function () {
-        console.log('\nRelevant Headers:\n');
-        for (var header in response.headers)
-            // header keys are lower-cased by Node.js
-            if (header.startsWith("bingapis-") || header.startsWith("x-msedge-"))
-                 console.log(header + ": " + response.headers[header]);
-        body = JSON.stringify(JSON.parse(body), null, '  ');
-        console.log('\nJSON Response:\n');
-        console.log(body);
-     });
-    ```
+```ruby
+puts "\nRelevant Headers:\n\n"
+response.each_header do |key, value|
+   # header names are coerced to lowercase
+   if key.start_with?("bingapis-") or key.start_with?("x-msedge-") then
+      puts key + ": " + value
+   end
+end
+puts "\nJSON Response:\n\n"
+puts JSON::pretty_generate(JSON(response.body))
+```
 
 ## Example JSON response
 
-A successful response is returned in JSON, as shown in the following example: 
+A successful response is returned in JSON, as shown in the following example:
 
 ```json
 {
@@ -177,7 +170,8 @@ A successful response is returned in JSON, as shown in the following example:
 }
 ```
 
+ 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../tutorial/bing-news-search-single-page-app.md)
+> [Create a single-page web app](../../tutorial/bing-news-search-single-page-app.md)

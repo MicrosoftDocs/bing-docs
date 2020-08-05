@@ -127,16 +127,16 @@ conceptualContent:
       links:
         - text: Use C#
           itemType: quickstart
-          url: ../bing-news-search/quickstarts/client-libraries.md?pivots=programming-language-csharp
+          url: ../bing-news-search/quickstarts/sdk/news-search-client-library-csharp
         - text: Use Java
           itemType: quickstart
-          url: ../bing-news-search/quickstarts/client-libraries.md?pivots=programming-language-java
+          url: ../bing-news-search/quickstarts/sdk/news-search-client-library-java
         - text: Use JavaScript
           itemType: quickstart
-          url: ../bing-news-search/quickstarts/client-libraries.md?pivots=programming-language-javascript
+          url: ../bing-news-search/quickstarts/sdk/news-search-client-library-javascript
         - text: Use Python
           itemType: quickstart
-          url: ../bing-news-search/quickstarts/client-libraries.md?pivots=programming-language-python
+          url: ../bing-news-search/quickstarts/sdk/news-search-client-library-python
         - text: Create a single page web-app
           itemType: tutorial
           url: ../bing-news-search/tutorial/bing-news-search-single-page-app.md

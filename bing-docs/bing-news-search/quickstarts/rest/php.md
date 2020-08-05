@@ -1,7 +1,7 @@
 ---
-title: "Quickstart: Perform a news search with Ruby and the Bing News Search REST API"
+title: "Quickstart: Perform a news search with PHP and the Bing News Search REST API"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send a request to the Bing News Search REST API using Ruby, and receive a JSON response.
+description: Use this quickstart to send a request to the Bing News Search REST API using PHP, and receive a JSON response.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -13,71 +13,89 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Perform a news search using Ruby and the Bing News Search REST API
+# Quickstart: Perform a news search using PHP and the Bing News Search REST API
 
-Use this quickstart to make your first call to the Bing News Search API. This simple Ruby application sends a search query to the API and processes the JSON response.
+Use this quickstart to make your first call to the Bing News Search API. This simple PHP application sends a search query to the API and displays the JSON response.
 
-Although this application is written in Ruby, the API is a RESTful Web service compatible with most programming languages. 
-
-The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/ruby/Search/BingNewsSearchv7.rb).
+Although this application is written in PHP, the API is a RESTful Web service compatible with most programming languages.
 
 ## Prerequisites
 
-* Ruby [2.4 or later](https://www.ruby-lang.org/en/downloads/)
+* PHP 5.6 or later
 
-[!INCLUDE [bing-news-search-signup-requirements](../../../includes/bing-news-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-news-search-signup-requirements.md)]
 
-## Create and initialize the application
+For more information, see [Cognitive Services Pricing - Bing Search API](https://azure.microsoft.com/pricing/details/cognitive-services/search-api/).
 
-1. Import the following packages into your code file:
+## Run the application
 
-    ```ruby
-    require 'net/https'
-    require 'uri'
-    require 'json'
-    ```
+To run this application, follow these steps:
 
-2. Create variables for the API endpoint, news search URL, your subscription key, and search term.
+1. Enable secure HTTP support in your `php.ini` file by uncommenting the `;extension=php_openssl.dll` line, as described in the code comment.
+2. Create a new PHP project in your favorite IDE or editor.
+3. Add the code provided below.
+4. Replace the `accessKey` value with an access key valid for your subscription.
+6. Run the program.
 
-    ```ruby
-    accessKey = "enter key here"
-    uri  = "https://api.bing.microsoft.com"
-    path = "/bing/v7.0/news/search"
-    term = "Microsoft"
-    ```
+```php
+<?php
 
-## Format and make an API request
+// NOTE: Be sure to uncomment the following line in your php.ini file.
+// ;extension=php_openssl.dll
 
-Use the variables from the previous step to format a search URL for the API request. Then, send the request.
+// **********************************************
+// *** Update or verify the following values. ***
+// **********************************************
 
-```ruby
-uri = URI(uri + path + "?q=" + URI.escape(term))
-request = Net::HTTP::Get.new(uri)
-request['Ocp-Apim-Subscription-Key'] = accessKey
-response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
-   http.request(request)
-end
-```
+// Replace the accessKey string value with your valid access key.
+$accessKey = 'enter key here';
 
-## Process and print the JSON response
+$endpoint = 'https://api.bing.microsoft.com/bing/v7.0/news/search';
 
-After the response is received, parse the JSON, and then print both the response body and its headers.
+$term = 'Microsoft';
 
-```ruby
-puts "\nRelevant Headers:\n\n"
-response.each_header do |key, value|
-   # header names are coerced to lowercase
-   if key.start_with?("bingapis-") or key.start_with?("x-msedge-") then
-      puts key + ": " + value
-   end
-end
-puts "\nJSON Response:\n\n"
-puts JSON::pretty_generate(JSON(response.body))
+function BingNewsSearch ($url, $key, $query) {
+    // Prepare HTTP request
+    // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
+    // https://php.net/manual/en/function.stream-context-create.php
+    $headers = "Ocp-Apim-Subscription-Key: $key\r\n";
+    $options = array ('http' => array (
+                          'header' => $headers,
+                          'method' => 'GET' ));
+
+    // Perform the Web request and get the JSON response
+    $context = stream_context_create($options);
+    $result = file_get_contents($url . "?q=" . urlencode($query), false, $context);
+
+    // Extract Bing HTTP headers
+    $headers = array();
+    foreach ($http_response_header as $k => $v) {
+        $h = explode(":", $v, 2);
+        if (isset($h[1]))
+            if (preg_match("/^BingAPIs-/", $h[0]) || preg_match("/^X-MSEdge-/", $h[0]))
+                $headers[trim($h[0])] = trim($h[1]);
+    }
+
+    return array($headers, $result);
+}
+
+print "Searching news for: " . $term . "\n";
+
+list($headers, $json) = BingNewsSearch($endpoint, $accessKey, $term);
+
+print "\nRelevant Headers:\n\n";
+foreach ($headers as $k => $v) {
+    print $k . ": " . $v . "\n";
+}
+
+print "\nJSON Response:\n\n";
+echo json_encode(json_decode($json), JSON_PRETTY_PRINT);
+?>
 ```
 
 ## Example JSON response
 
-A successful response is returned in JSON, as shown in the following example:
+A successful response is returned in JSON, as shown in the following example: 
 
 ```json
 {
@@ -170,8 +188,7 @@ A successful response is returned in JSON, as shown in the following example:
 }
 ```
 
- 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../tutorial/bing-news-search-single-page-app.md)
+> [Create a single-page web app](../../tutorial/bing-news-search-single-page-app.md)

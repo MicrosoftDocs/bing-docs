@@ -47,4 +47,4 @@ Returns news topics that are currently trending on social networks. When the `/t
 For details about headers, parameters, market codes, response objects, errors, etc., see the [Bing News search API v7](reference/endpoints.md) reference.
 
 For complete information about the parameters supported by each endpoint, see the reference pages for each type.
-For examples of basic requests using the News search API, see [Bing News Search Quick-starts](quickstarts/csharp.md).
+For examples of basic requests using the News search API, see [Bing News Search Quick-starts](quickstarts/rest/csharp.md).

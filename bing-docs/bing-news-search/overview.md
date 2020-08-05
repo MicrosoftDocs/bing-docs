@@ -25,10 +25,10 @@ While the Bing News Search API primarily finds and returns relevant news article
 
 |Feature  |Description  |
 |---------|---------|
-|[Get general news](concepts/search-for-news.md#get-general-news)     | Find news by sending a search query to the Bing News Search API, and getting back a list of relevant news articles.           |
-|[Today's top news](concepts/search-for-news.md#get-todays-top-news)      | Get the top news stories for the day, across all categories.       |
-|[News by category](concepts/search-for-news.md)     | Search for news in specific categories.        | 
-|[Headline news](concepts/search-for-news.md)     | Search for top headlines across all categories.         |
+|[Get general news](how-to/search-for-news.md#get-general-news)     | Find news by sending a search query to the Bing News Search API, and getting back a list of relevant news articles.           |
+|[Today's top news](how-to/search-for-news.md#get-todays-top-news)      | Get the top news stories for the day, across all categories.       |
+|[News by category](how-to/search-for-news.md#get-news-by-category)     | Search for news in specific categories.        | 
+|[Headline news](how-to/search-for-news.md#get-headline-news)     | Search for top headlines across all categories.         |
 
 ## Workflow
 
@@ -40,7 +40,7 @@ The Bing News Search API is a RESTful web service, making it easy to call from a
 
 ## Next steps
 
-To quickly get started with your first API request, try a quickstart for the [REST API](quickstarts/csharp.md) or one of the [SDKs](quickstarts/client-libraries.md).
+To quickly get started with your first API request, try a quickstart for the [REST API](quickstarts/rest/csharp.md) or one of the [SDKs](quickstarts/sdk/news-search-client-library-csharp.md).
 
 ## See also
 

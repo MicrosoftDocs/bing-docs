@@ -1,11 +1,10 @@
 ---
-title: "Quickstart: Perform a news search with PHP and the Bing News Search REST API"
+title: "Quickstart: Perform a news search with Node.js - Bing News Search REST API"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send a request to the Bing News Search REST API using PHP, and receive a JSON response.
+description: Use this quickstart to send a request to the Bing News Search REST API using Node.js, and receive a JSON response.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: quickstart
@@ -13,85 +12,75 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Perform a news search using PHP and the Bing News Search REST API
+# Quickstart: Perform a news search using Node.js and the Bing News Search REST API
 
-Use this quickstart to make your first call to the Bing News Search API. This simple PHP application sends a search query to the API and displays the JSON response.
+Use this quickstart to make your first call to the Bing News Search API. This simple JavaScript application sends a search query to the API and displays the JSON response.
 
-Although this application is written in PHP, the API is a RESTful Web service compatible with most programming languages.
+Although this application is written in JavaScript and runs in Node.js, the API is a RESTful Web service compatible with most programming languages.
+
+The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/nodejs/Search/BingNewsSearchv7.js).
 
 ## Prerequisites
 
-* PHP 5.6 or later
+* The latest version of [Node.js](https://nodejs.org/en/download/).
+* The [JavaScript Request Library](https://github.com/request/request).
 
-[!INCLUDE [bing-news-search-signup-requirements](../../../includes/bing-news-search-signup-requirements.md)]
+[!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-news-search-signup-requirements.md)]
 
-For more information, see [Cognitive Services Pricing - Bing Search API](https://azure.microsoft.com/pricing/details/cognitive-services/search-api/).
+## Create and initialize the application
 
-## Run the application
+1. Create a new JavaScript file in your favorite IDE or editor, and set the strictness and HTTPS requirements.
 
-To run this application, follow these steps:
+    ```javascript
+    'use strict';
+    let https = require('https');
+    ```
 
-1. Enable secure HTTP support in your `php.ini` file by uncommenting the `;extension=php_openssl.dll` line, as described in the code comment.
-2. Create a new PHP project in your favorite IDE or editor.
-3. Add the code provided below.
-4. Replace the `accessKey` value with an access key valid for your subscription.
-6. Run the program.
+2. Create variables for the API endpoint, news API search path, your subscription key, and search term. 
 
-```php
-<?php
+    ```javascript
+    let subscriptionKey = 'enter key here';
+    let host = 'api.bing.microsoft.com';
+    let path = '/bing/v7.0/news/search';
+    let term = 'Microsoft';
+    ```
 
-// NOTE: Be sure to uncomment the following line in your php.ini file.
-// ;extension=php_openssl.dll
+## Handle and parse the response
 
-// **********************************************
-// *** Update or verify the following values. ***
-// **********************************************
+1. Define a function named `response_handler` that takes an HTTP call, `response`, as a parameter. 
 
-// Replace the accessKey string value with your valid access key.
-$accessKey = 'enter key here';
+   Add code to this function in the steps that follow.
 
-$endpoint = 'https://api.bing.microsoft.com/bing/v7.0/news/search';
+2. Define a variable to contain the body of the JSON response.  
 
-$term = 'Microsoft';
+    ```javascript
+    let response_handler = function (response) {
+        let body = '';
+    };
+    ```
 
-function BingNewsSearch ($url, $key, $query) {
-    // Prepare HTTP request
-    // NOTE: Use the key 'http' even if you are making an HTTPS request. See:
-    // https://php.net/manual/en/function.stream-context-create.php
-    $headers = "Ocp-Apim-Subscription-Key: $key\r\n";
-    $options = array ('http' => array (
-                          'header' => $headers,
-                          'method' => 'GET' ));
+3. Store the body of the response when the `data` flag is called.
 
-    // Perform the Web request and get the JSON response
-    $context = stream_context_create($options);
-    $result = file_get_contents($url . "?q=" . urlencode($query), false, $context);
+    ```javascript
+    response.on('data', function (d) {
+        body += d;
+    });
+    ```
 
-    // Extract Bing HTTP headers
-    $headers = array();
-    foreach ($http_response_header as $k => $v) {
-        $h = explode(":", $v, 2);
-        if (isset($h[1]))
-            if (preg_match("/^BingAPIs-/", $h[0]) || preg_match("/^X-MSEdge-/", $h[0]))
-                $headers[trim($h[0])] = trim($h[1]);
-    }
+3. When an `end` flag is signaled, the JSON and headers can be viewed.
 
-    return array($headers, $result);
-}
-
-print "Searching news for: " . $term . "\n";
-
-list($headers, $json) = BingNewsSearch($endpoint, $accessKey, $term);
-
-print "\nRelevant Headers:\n\n";
-foreach ($headers as $k => $v) {
-    print $k . ": " . $v . "\n";
-}
-
-print "\nJSON Response:\n\n";
-echo json_encode(json_decode($json), JSON_PRETTY_PRINT);
-?>
-```
+    ```javascript
+    response.on('end', function () {
+        console.log('\nRelevant Headers:\n');
+        for (var header in response.headers)
+            // header keys are lower-cased by Node.js
+            if (header.startsWith("bingapis-") || header.startsWith("x-msedge-"))
+                 console.log(header + ": " + response.headers[header]);
+        body = JSON.stringify(JSON.parse(body), null, '  ');
+        console.log('\nJSON Response:\n');
+        console.log(body);
+     });
+    ```
 
 ## Example JSON response
 
@@ -191,4 +180,4 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../tutorial/bing-news-search-single-page-app.md)
+> [Create a single-page web app](../../tutorial/bing-news-search-single-page-app.md)
