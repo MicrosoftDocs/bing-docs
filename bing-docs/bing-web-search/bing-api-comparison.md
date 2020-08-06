@@ -1,7 +1,7 @@
 ---
-title: What are the Bing Search APIs?
+title: Bing family of search APIs
 titleSuffix: Bing Search Services
-description: Use this article to learn about the Bing Search APIs, and how you can enable cognitive internet searches in your apps and services.  
+description: Learn about the Bing family of search APIs and how you can enable internet searches in your apps and services.  
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -12,42 +12,31 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# What are the Bing Search APIs?
+# Bing family of search APIs
 
-The Bing Search APIs let you build web-connected apps and services that find webpages, images, news, locations, and more without advertisements. By sending search requests using the Bing Search REST APIs or SDKs, you can get relevant information and content for web searches. Use this article to learn about the different Bing search APIs and how you can integrate cognitive searches into your applications and services. Pricing and rate limits may vary between APIs.
+Bing provides a family of search APIs that let your users comb billions of web documents and get back safe, ad-free, location-aware search results. Depending on the API, you can get back all relevant web results or only relevant news, images, or videos.
 
-## The Bing Web Search API
+The following table provides a summary of all APIs in the family of Bing Search APIs. For pricing and subscription details, see <a href="https://www.microsoft.com/en-us/bing/apis/pricing" target="_blank">Bing API Pricing</a>.
 
-The [Bing Web Search API](overview.md) returns webpages, images, video, news, and more. You can filter the search queries sent to this API to include or exclude certain content types.
+|Bing API|Description
+|-|-
+|[Autosuggest](../bing-autosuggest/overview.md)|Improves your users' search box experience by providing a list of suggested queries with each character they type. 
+|[Custom search](../bing-custom-search/overview.md)|Enables you to create tailored, ad-free search experiences for topics that your users care about. You specify the domains and webpages that Bing searches.
+|[Entity search](../bing-entity-search/overview.md)|Finds information about a well-known person, place, or thing. Bing identifies the most relevant entity based on your searched term, spanning multiple entity types such as famous people, places, movies, TV shows, video games, books, and even local businesses near you.
+|[Image search](../bing-image-search/overview.md)|Scours the web for images and trending images. Results include thumbnails, full image URLs, publisher, image metadata, and more. You can also filter images by size, color, license, freshness, and more.   
+|[News search](../bing-news-search/overview.md)|Finds news articles, trending news, headline news, and today's top stories.
+|[Spell check](../bing-spell-check/overview.md)|Helps users identify and fix spelling, grammar, slang, names, homonyms, and brands. Bing spell-checker leverages machine learning and statistical machine translation to provide accurate and contextual corrections.
+|[Video search](../bing-video-search/overview.md)|Scours the web for videos and trending videos. Results include creator, encoding format, video length, view count, and more. You can also filter videos by pricing, video length, freshness, and more.
+|[Visual search](../bing-visual-search/overview.md)|Provides insights about an image such as getting visually similar products, images, and related searches.
+|[Web search](overview.md)|Enables safe, ad-free, location-aware search results, surfacing relevant information from billions of web documents. Results include webpages, images, videos, news, and more.
 
-Consider using the Bing Web Search API in applications that may need to search for all types of relevant web content. If your application searches for a specific type of online content, consider one of the search APIs below:
 
-## Content-specific Bing search APIs
+## Getting API metrics
 
-The following Bing search APIs return specific content from the web like images, news, local businesses, and videos.
+Bing provides API metrics, which you can use to inform your strategic decisions. Quickly retrieve statistics such as your top queries, call volume, market distribution, response code summary, and many more. For details, see [Bing Web Statistics](bing-web-stats.md).
 
-| Bing API | Description |
-| -- | -- |
-| [Entity Search](../bing-entity-search/overview.md) | The Bing Entity Search API returns search results containing entities, which can be people, places, or things. Depending on the query, the API will return one or more entities that satisfy the search query. The search query can include noteworthy individuals, local businesses, landmarks, destinations, and more. |
-| [Image Search](../bing-image-search/overview.md) | The Bing Image Search API lets you search for and find high-quality static and animated images similar to [Bing.com/images](https://www.Bing.com/images). You can refine searches to include or exclude images by attribute, including size, color, license, and freshness. You can also search for trending images, upload images to gain insights about them, and display thumbnail previews. |
-| [News Search](../bing-news-search/overview.md) | The Bing News Search API lets you find news stories similar to [Bing.com/news](https://www.Bing.com/news). The API returns news articles from either multiple sources or specific domains. You can search across categories to get trending articles, top stories, and headlines. |
-| [Video Search](../bing-video-search/overview.md) | The Bing Video Search API lets you find videos across the web. Get trending videos, related content, and thumbnail previews. |
-| [Visual Search](../bing-visual-search/overview.md) | Upload an image or use a URL to get insightful information about it, like visually similar products, images, and related searches. |
-
-## The Bing Custom Search API
-
-Creating a custom search instance with the [Bing Custom Search](../bing-custom-search/overview.md) API lets you create a search experience focused only on content and topics you care about. For example, after you specify the domains, websites, and specific webpages that Bing will search, Bing Custom Search will tailor the results to that specific content. You can incorporate the Bing Custom Autosuggest, Image, and Video Search APIs to further customize your search experience.
-
-## Additional Bing Search APIs
-
-The following Bing Search APIs let you improve your search experience by combining them with other Bing search APIs.
-
-| API | Description |
-| -- | -- |
-| [Bing Autosuggest](../bing-autosuggest/overview.md) | Improve your application's search experience with the Bing Autosuggest API by returning suggested searches in real time.  |
-| [Bing Statistics](bing-web-stats.md) | Bing Statistics provides analytics for the Bing Search APIs your application uses. Some of the available analytics include call volume, top query strings, and geographic distribution. |
 
 ## Next steps
 
-* Bing Search API [pricing details](https://azure.microsoft.com/pricing/details/cognitive-services/search-api/)
-* The [Bing Use and Display Requirements](use-display-requirements.md) specify acceptable uses of the content and information gained through the Bing search APIs.
+- Learn about [use and display requirements](use-display-requirements.md) for Bing search results.  
+- Learn about <a href="https://www.microsoft.com/en-us/bing/apis/pricing" target="_blank">pricing and subscription options</a>.

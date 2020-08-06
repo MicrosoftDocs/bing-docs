@@ -15,7 +15,7 @@ ms.author: scottwhi
 
 # What is the Bing Custom Search API?
 
-The Bing Custom Search API enables you to create tailored ad-free search experiences for topics that you care about. You can specify the domains and webpages for Bing to search, as well as pin, boost, or demote specific content to create a custom view of the web and help your users quickly find relevant search results. 
+The Bing Custom Search API enables you to create a tailored, ad-free search experiences for topics that your users care about. You specify the domains and webpages that Bing searches. You can also pin, boost, and demote specific content to create a custom view of the web that helps your users quickly find relevant content. 
 
 ## Features
 

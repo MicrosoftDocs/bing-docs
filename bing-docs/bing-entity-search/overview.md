@@ -15,7 +15,9 @@ ms.author: scottwhi
 
 # What is Bing Entity Search API?
 
-The Bing Entity Search API sends a search query to Bing and gets results that include entities and places. Place results include restaurants, hotel, or other local businesses. Bing returns places if the query specifies the name of the local business or asks for a type of business (for example, restaurants near me). Bing returns entities if the query specifies well-known people, places (tourist attractions, states, countries/regions, etc.), or things.
+Use Bing Entity Search API to get information about a well-known person, place (tourist attractions, states, countries/regions, etc.), or thing. Bing identifies the most relevant entity based on your searched term, spanning multiple entity types such as famous people, places, movies, TV shows, video games, books, and even local businesses near you. 
+
+Local businesses include restaurants, hotel, or other local businesses. Bing returns a local business if the query specifies the name of the local business or asks for a type of business (for example, restaurants near me). 
 
 |Feature  |Description  |
 |---------|---------|

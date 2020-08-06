@@ -15,7 +15,11 @@ ms.author: scottwhi
 
 # What is Bing Autosuggest?
 
-If your application sends queries to any of the Bing Search APIs, you can use the Bing Autosuggest API to improve your users' search experience. The Bing Autosuggest API returns a list of suggested queries based on the partial query string in the search box. As characters are entered into the search box, you can display suggestions in a drop-down list.
+Use Bing Autosuggest API to improve your users' search box experience by providing a list of suggested queries with each character they type.
+
+As the user types their search query, send Bing the partial query string and get back suggestions. The more complete the user’s query string is, the more relevant the list of suggested query terms will be. For example, the suggestions that Bing might return for *m* are likely to be less relevant than the suggestions Bing returns for *micro*. 
+
+The suggestions are based on user intent and past searches made by the user and others.
 
 ## Bing Autosuggest API features
 
