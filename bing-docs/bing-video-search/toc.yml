@@ -9,7 +9,7 @@
 - name: Quickstarts
   expanded: true
   items:
-    - name: REST API
+    - name: REST
       items:
       - name: C#
         href: quickstarts/rest/csharp.md

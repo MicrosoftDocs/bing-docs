@@ -45,9 +45,9 @@
 - name: How-to guides
   items:
   - name: Getting images from the web
-    href: how-to/bing-image-search-get-images.md
+    href: how-to/get-images.md
   - name: Sending and working with search queries
-    href: how-to/bing-image-search-sending-queries.md
+    href: how-to/sending-queries.md
   - name: Get image insights
     href: how-to/image-insights.md
   - name: Get .gif images
