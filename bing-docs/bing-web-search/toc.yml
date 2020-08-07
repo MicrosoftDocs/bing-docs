@@ -8,35 +8,36 @@
   - name: Compare the Bing Search APIs
     href: bing-api-comparison.md
 - name: Quickstarts
-  - name: C#
-    href: quickstarts.md
+  expanded: true
   items:
-  - name: REST
-    items:
-    - name: C#
-      href: quickstarts/rest/csharp.md
-    - name: Go
-      href: quickstarts/rest/go.md
-    - name: Java
-      href: quickstarts/rest/java.md
-    - name: Node.js
-      href: quickstarts/rest/nodejs.md
-    - name: PHP
-      href: quickstarts/rest/php.md
-    - name: Python
-      href: quickstarts/rest/python.md
-    - name: Ruby
-      href: quickstarts/rest/ruby.md
-  - name: SDKs (client library)
-    items:
-    - name: C#
-      href: quickstarts/sdk/web-search-client-library-csharp.md
-    - name: Java
-      href: quickstarts/sdk/web-search-client-library-java.md
-    - name: Node.js
-      href: quickstarts/sdk/web-search-client-library-javascript.md
-    - name: Python
-      href: quickstarts/sdk/web-search-client-library-python.md
+    - name: Quickstarts
+      href: quickstarts.md
+    - name: REST
+      items:
+      - name: C#
+        href: quickstarts/rest/csharp.md
+      - name: Go
+        href: quickstarts/rest/go.md
+      - name: Java
+        href: quickstarts/rest/java.md
+      - name: Node.js
+        href: quickstarts/rest/nodejs.md
+      - name: PHP
+        href: quickstarts/rest/php.md
+      - name: Python
+        href: quickstarts/rest/python.md
+      - name: Ruby
+        href: quickstarts/rest/ruby.md
+    - name: SDKs (client library)
+      items:
+      - name: C#
+        href: quickstarts/sdk/web-search-client-library-csharp.md
+      - name: Java
+        href: quickstarts/sdk/web-search-client-library-java.md
+      - name: Node.js
+        href: quickstarts/sdk/web-search-client-library-javascript.md
+      - name: Python
+        href: quickstarts/sdk/web-search-client-library-python.md
 - name: Tutorials
   items:
   - name: Build a single-page web app
