@@ -11,7 +11,7 @@
   expanded: true
   items:
     - name: Quickstarts
-      href: quickstarts.md
+      href: quickstarts/quickstarts.md
     - name: REST
       items:
       - name: C#

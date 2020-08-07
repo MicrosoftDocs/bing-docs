@@ -117,9 +117,9 @@ You can also use the *count* and *offset* query parameters together to page thro
 
 The [safeSearch](reference/query-parameters.md#safesearch) query parameter lets you filter out webpages, images, and videos with adult content. You may set this parameter to one of the following values:
 
-•	Off &mdash; Returns content with adult text and images but not adult videos.
-•	Moderate &mdash; Returns content with adult text but not adult images or videos.
-•	Strict &mdash; Does not return content with adult text, images, or videos.
+- Off &mdash; Returns content with adult text and images but not adult videos.
+- Moderate &mdash; Returns content with adult text but not adult images or videos.
+- Strict &mdash; Does not return content with adult text, images, or videos.
 
 The default is Moderate.
 
