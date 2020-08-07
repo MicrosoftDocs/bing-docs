@@ -50,7 +50,7 @@ To quickly get started with your first API request, you can learn to:
 
 * The [Bing Use and Display Requirements](../bing-web-search/use-display-requirements.md) specify acceptable uses of the content and information gained through the Bing search APIs.
 
-* The [Getting images from the web with the Bing Image Search API](how-to/bing-image-search-get-images.md) article describes how to search and get images from the web.
+* The [Getting images from the web with the Bing Image Search API](how-to/get-images.md) article describes how to search and get images from the web.
 
-* The [Sending and working with search queries](how-to/bing-image-search-sending-queries.md) article describes how to make, customize, and pivot search queries.
+* The [Sending and working with search queries](how-to/sending-queries.md) article describes how to make, customize, and pivot search queries.
 

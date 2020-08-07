@@ -21,7 +21,7 @@ Bing Web Search API enables safe, ad-free, location-aware search results, surfac
 
 To get started using the API, pick the subscription you want from <a href="https://www.microsoft.com/en-us/bing/apis/pricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call. 
 
-You can easily call the API by sending a native HTTP GET request or by using the Web Search SDK. For examples to help you get up and running quickly for either option, see the [REST quickstart example](quicstartes/rest/csharp.md) or [SDK quickstart example](quickstarts/sdk/web-search-client-library-csharp.md).
+You can easily call the API by sending a native HTTP GET request or by using the Web Search SDK. For examples to help you get up and running quickly for either option, see the [REST quickstart example](quickstarts/rest/csharp.md) or [SDK quickstart example](quickstarts/sdk/web-search-client-library-csharp.md).
 
 
 ## Features  
@@ -41,6 +41,6 @@ Bing also provides API metrics, which you can use to inform your strategic decis
 
 - Learn about other APIs in the [family of Bing Search APIs](bing-api-comparison.md).
 - Learn about [use and display requirements](use-display-requirements.md) for Bing Web Search.  
-- Learn about [calling the API](search-the-web).
+- Learn about [calling the API](search-the-web.md).
 - Learn about what's in the [JSON response](search-responses.md).
 - Review [Web Search API v7 reference](reference/endpoints.md) documentation.  
