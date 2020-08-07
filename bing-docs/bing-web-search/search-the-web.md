@@ -14,6 +14,8 @@ ms.author: scottwhi
 
 # Search the web
 
+CRAPPERS!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 Use Bing Web Search API to search billions of web documents for content that's relevant to the user's search string.
 
 It's easy. If you have your subscription key, just send an HTTP get request to the following endpoint:
