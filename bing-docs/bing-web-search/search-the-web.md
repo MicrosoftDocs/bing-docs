@@ -14,8 +14,6 @@ ms.author: scottwhi
 
 # Search the web
 
-CRAPPERS!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 Use Bing Web Search API to search billions of web documents for content that's relevant to the user's search string.
 
 It's easy. If you have your subscription key, just send an HTTP get request to the following endpoint:
@@ -67,12 +65,12 @@ The only query parameter that you must pass is the *q* parameter, which you set 
 
 The API supports a number of query parameters that you can pass in your request. Here's a list of the ones you're most likely to pass.
 
-- *count* and *offset* &mdash; Used to page webpage results.
+- *count* and *offset* &mdash; Used to page webpage results. [Read more](page-results.md)
 - *mkt* &mdash; Used to specify the market where the results come from, which is typically the market where the user is making the request from.
 - *safeSearch* &mdash; Used to specify the user's safe search preference.
-- *textDecorations* and *textFormat* &mdash; Used to turn on hit highlighting.
+- *textDecorations* and *textFormat* &mdash; Used to turn on hit highlighting. [Read more](hit-highlighting.md)
 
-To learn more about these parameters and other parameters that you can specify, see [Query parameters](reference/query-parameters.md).
+To learn more about these parameters and other parameters that you may specify, see [Query parameters](reference/query-parameters.md).
 
 Here's a cURL example that includes these query parameters.
 
@@ -80,8 +78,11 @@ Here's a cURL example that includes these query parameters.
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/search?q=microsoft+devices&mkt=en-us&safeSearch=moderate&textdecorations=true&textformat=raw&count=10&offset=0
 ```
 
+For information about query parameters that you can use to filter the search results, see [Filtering search results](filter-answers.md).
+
 ## Next steps
 
-- Learn about the [response](search-responses.md) that Bing returns that contains all the search results to the user's query.
-- Learn what happens if you don't stay within your queries per second (QPS) limit. Hint: you'll get [throttled](throttling-requests.md).
+- Learn about the [response](search-responses.md) that Bing returns for the user's query.
+- Learn how to [get the next page](page-results.md) of search results.
+- Learn what happens if you don't stay within your queries per second (QPS) limit. Hint: your requests get [throttled](throttling-requests.md).
 - Learn about the [quickstarts](quickstarts.md) and [samples](samples.md) that are available to help you get up and running fast.

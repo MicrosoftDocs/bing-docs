@@ -13,10 +13,7 @@ ms.date: 07/15/2019
 ms.author: scottwhi
 ---
 
-# Throttling requests to the Bing Web Search API
+# Throttling requests
 
 [!INCLUDE [cognitive-services-bing-throttling-requests](../../includes/bing-throttling-requests.md)]
 
-## Next steps
-
-* [Bing Web Search API reference](reference/endpoints.md)
