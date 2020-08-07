@@ -33,7 +33,7 @@ The following table provides a summary of all APIs in the family of Bing Search 
 
 ## Getting API metrics
 
-Bing provides API metrics, which you can use to inform your strategic decisions. Quickly retrieve statistics such as your top queries, call volume, market distribution, response code summary, and many more. For details, see [Bing Web Statistics](bing-web-stats.md).
+Bing provides API metrics such as your top queries, call volume, market distribution, response code summary, and many more, which you can use to inform your strategic decisions. For details, see [Bing Web Statistics](bing-web-stats.md).
 
 
 ## Next steps

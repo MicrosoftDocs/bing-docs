@@ -8,8 +8,10 @@
   - name: Compare the Bing Search APIs
     href: bing-api-comparison.md
 - name: Quickstarts
+  - name: C#
+    href: quickstarts.md
   items:
-  - name: REST API
+  - name: REST
     items:
     - name: C#
       href: quickstarts/rest/csharp.md
@@ -43,10 +45,8 @@
     href: tutorial/csharp-ranking-tutorial.md
 - name: Samples
   items:
-  - name: REST samples
-    href: rest-samples.md
-  - name: SDK samples
-    href: sdk-samples.md
+  - name: REST and SDK samples
+    href: samples.md
 - name: How-to guides
   items:
   - name: Search the web
@@ -103,7 +103,7 @@
       href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/websearch
 - name: Resources
   items:
-  - name: Get API key
+  - name: Get subscription key
     href: https://azure.microsoft.com/try/cognitive-services/?api=bing-web-search-api
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
