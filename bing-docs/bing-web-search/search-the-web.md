@@ -53,7 +53,7 @@ Bing returns a couple of headers you should capture.
 
 To learn more about these headers, see [Response headers](reference/headers.md#response-headers).
 
-Here's a cURL call that returns the response headers.
+Here's a cURL call that returns the response headers. If you want to remove the response data so you can see only the headers, include the `-o nul` parameter.
 
 ```curl
 curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/search?q=microsoft+devices

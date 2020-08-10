@@ -77,10 +77,10 @@ If the service suspects a denial of service attack, the request succeeds (HTTP s
 |Name|Value|Type
 |-|-|-
 |_type|Type hint.|String
-|id|An ID that uniquely identifies the news answer.<br/><br/>For information about how to use this field, see [Using Ranking to Display Results](../../bing-web-search/rank-results.md) in the Web Search API guide.|String
-|readLink|The URL that returns this answer. To use the URL, append query parameters.<br/><br/>The object includes this field only in a Web Search API response. Typically, you'd use the URL if you want to query the News Search API directly.|String
-|<a name="news-relatedtopics"></a>relatedTopics|A list of news articles that are related to the search term.|[RelatedTopic](#relatedtopic)[]
-|<a name="news-sort"></a>sort|A list of options for sorting the news articles. For example, sort by relevance (default) or date. To determine which sort order the request used, see the `isSelected` field.|[SortValue](#sortvalue)[]
+|id|An ID that uniquely identifies the news answer. Only Web Search API responses include this field. For information about how to use this field, see [Ranking results](../../bing-web-search/rank-results.md) in the Web Search API guide.|String
+|readLink|A URL that you'd use to request news from News Search API. Include other query parameters as needed. Only Web Search API responses include this field.|String
+|<a name="news-relatedtopics"></a>relatedTopics|A list of news articles that are related to the search term.<br/><br/>Only the News Search API includes this field.|[RelatedTopic](#relatedtopic)[]
+|<a name="news-sort"></a>sort|A list of options for sorting the news articles. For example, sort by relevance (default) or date. To determine which sort order the request used, see the `isSelected` field.<br/><br/>Only the News Search API includes this field.|[SortValue](#sortvalue)[]
 |<a name="news-totalmatches"></a>totalEstimatedMatches|The estimated number of news articles that are relevant to the query. Use this number along with the [count](query-parameters.md#count) and [offset](query-parameters.md#offset) query parameters to page the results.<br/><br/>Only the News Search API includes this field.|Long
 |<a name="news-value"></a>value|A list of news articles that are relevant to the query term.<br/><br/>If there are no results to return for the request, the array is empty.|[NewsArticle](#newsarticle)[]  
   
@@ -90,6 +90,7 @@ Defines a news article.
   
 |Name|Value|Type
 |-|-|-
+|about|For internal use only.|Object[]
 |<a name="newsarticle-category"></a>category|The news category that the article belongs to. For example, Sports. If the news category cannot be determined, the article does not include this field.<br/><br/>For a list of possible categories, see [News Categories by Market](query-parameters.md#news-categories-by-market).<br/><br/>If your request specifies the Sports-Tennis category, the `category` property may contain Sports-Tennis or Sports.|String  
 |<a name="newsarticle-clusteredarticles"></a>clusteredArticles|A list of related news articles.|NewsArticle[]
 |<a name="newsarticle-contractualrules"></a>contractualRules|A list of rules that you must adhere to if you display the article.<br/><br/>The following contractual rules may apply:<ul><li>[TextAttribution](#textattribution)</li></ul>If the article provides contractual rules, you must abide by them.<br/><br/>**NOTE:** Only articles returned by Web Search API include contractual rules. Articles returned by the News endpoints do not include contractual rules.|Object[]
@@ -153,6 +154,7 @@ Defines a contractual rule for plain text attribution.
 |_type|A type hint, which is set to TextAttribution.|String
 |<a name="textattribution-text"></a>text|The attribution text.<br/><br/>Text attribution applies to the news article as a whole and should be displayed immediately following the article's presentation. If there are multiple text or link attribution rules that do not specify a target field, you should concatenate them and display them using a "Data from: " label.|String 
   
+
 ## Thing  
 
 Defines an entity that the article mentions.  
@@ -160,6 +162,7 @@ Defines an entity that the article mentions.
 |Name|Value|Type
 |-|-|-
 |name|The name of the entity that the article mentions.|String
+
   
 ## Thumbnail  
 

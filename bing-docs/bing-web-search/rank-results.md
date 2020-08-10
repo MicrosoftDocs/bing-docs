@@ -12,7 +12,7 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# How to use ranking to display Bing Web Search API results  
+# Using ranking to display search results  
 
 Each search response includes a [RankingResponse](reference/response-objects.md#rankingresponse) answer, that specifies how you must display the search results. The ranking response groups results by mainline content and sidebar content for a traditional search results page. If you do not display the results in a traditional mainline and sidebar format, you must provide the mainline content higher visibility than the sidebar content.  
 

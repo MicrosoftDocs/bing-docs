@@ -52,24 +52,20 @@
     href: search-the-web.md
   - name: Filter answers
     href: filter-answers.md
+  - name: Handle the response
+    href: search-responses.md
   - name: Rank results
     href: rank-results.md
-  - name: Handle hit highlighting
+  - name: Highlighting query terms
     href: hit-highlighting.md
   - name: Page through results
     href: page-results.md
   - name: Resize and crop thumbnails
     href: resize-and-crop-thumbnails.md
-  - name: Upgrade from v5 to v7
-    href: bing-web-upgrade-guide-v5-to-v7.md
-- name: Concepts
-  items:
-  - name: Search responses
-    href: search-responses.md
-  - name: Autosuggest search terms
-    href: autosuggest-bing-search-terms.md
   - name: Throttling requests
     href: throttling-requests.md
+  - name: Upgrade from v5 to v7
+    href: bing-web-upgrade-guide-v5-to-v7.md
 - name: Reference
   items:
   - name: REST

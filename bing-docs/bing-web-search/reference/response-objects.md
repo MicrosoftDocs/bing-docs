@@ -27,6 +27,16 @@ The JSON objects in this section are specific to the web answer. For details abo
 > Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
 
 
+## Attribution
+
+Defines the publisher that the content is attributed to. 
+  
+|Name|Value|Type
+|-|-|-
+|providerDisplayName|The publisher's name that you use to attribute the content to.|String
+|seeMoreUrl|The URL to the publisher's website. Use `providerDisplayName` and this URL to create a hyperlink that you display in the UX following the translation.|String
+
+
 ## Computation  
 
 Defines an expression and its answer.  
@@ -83,6 +93,17 @@ Defines an image.
 |thumbnailUrl|The URL to a thumbnail of the image. For information about resizing the image, see [Resize and crop thumbnail images](../resize-and-crop-thumbnails.md).|String
 |width|The width of the source image, in pixels.|Unsigned Short 
 
+
+## License
+
+Defines the license under which you may use the content.  
+  
+|Name|Value|Type  
+|-|-|-
+|name|The name of the license.|String
+|url|A URL to the website that describes the license. Use `name` and `url` to create a hyperlink.|String
+
+
 ## LicenseAttribution  
 
 Defines a contractual rule for license attribution.  
@@ -90,7 +111,7 @@ Defines a contractual rule for license attribution.
 |Name|Value|Type  
 |-|-|-
 |_type|A type hint, which is set to LicenseAttribution.|String
-|license|The license under which the content may be used.|License
+|license|The license under which the content may be used.|[License](#license)
 |licenseNotice|The license to display next to the targeted field. For example, "Text under CC-BY-SA license".<br/><br/>Use the license's name and URL in the `license` field to create a hyperlink to the website that describes the details of the license. Then, replace the license name in the `licenseNotice` string (for example, CC-BY-SA) with the hyperlink you just created.|String
 |mustBeCloseToContent|A Boolean value that determines whether the contents of the rule must be placed in close proximity to the field that the rule applies to. If **true**, the contents must be placed in close proximity. If **false**, or this field does not exist, the contents may be placed at the caller's discretion.|Boolean
 |targetPropertyName|The name of the field that the rule applies to.|String
@@ -106,6 +127,19 @@ Defines a contractual rule for link attribution.
 |targetPropertyName|The name of the field that the rule applies to.<br/><br/>If a target is not specified, the attribution applies to the entity as a whole and should be displayed immediately following the entity presentation. If there are multiple text and link attribution rules that do not specify a target, you should concatenate them and display them using a "Data from: " label. For example, “Data from <provider name1\> &#124; <provider name2\>".|String 
 |text|The attribution text.|String 
 |url|The URL to the provider's website. Use `text` and URL to create of hyperlink.|String
+
+
+## Malware  
+
+Defines a notice that the webpage may cause a potential issue if the user clicks the `url` link.  
+  
+|Name|Value|Type 
+|-|-|- 
+|beSafeRxUrl|A URL to a webpage where the user may get more information about safely buying prescription medicine online.|String
+|malwareWarningType|The type of malware notice. Possible values are:<ul><li>NABP &mdash; Warns that the National Association of Boards of Pharmacy includes this pharmacy on its Not Recommended list.</li><li>Malware &mdash; Warns that the site may download malicious software that may harm the user’s device.</li><li>MaliciousPageLink &mdash; Warns that the site may contain links that could download malicious software that may harm the user’s device.</li><li>Phishing &mdash; Warns that the site could trick the user into disclosing financial, personal, or other sensitive information.</li></ul>|String
+|warningExplanationUrl|A URL to a webpage where the user can get an explanation of the issue. For NABP notices, users can use this link to verify a pharmacy.|String
+|warningLetterUrl|A URL to a webpage where the user can get more information about the notice. For NABP notices, users can use this link to see the list of online sites that the board doesn’t recommend.|String
+
 
 ## MediaAttribution  
 
@@ -205,9 +239,9 @@ The response's top-level object for search requests that succeed.
   
 By default, the Search API includes all relevant answers unless:  
   
--   The query specifies the [responseFilter](query-parameters.md#responsefilter) query parameter to limit the answers it returns 
--   One or more of the search components does not return results (for example, no news results are relevant to the query)  
--   The subscription key does not have access to the search component.  
+- The query specifies the [responseFilter](query-parameters.md#responsefilter) query parameter to limit the answers it returns 
+- One or more of the search components does not return results (for example, no news results are relevant to the query)  
+- The subscription key does not have access to the search component.  
   
 If the service suspects a denial of service attack, the request succeeds (HTTP status code is 200 OK), but the body of the response is empty.  
   
@@ -218,11 +252,13 @@ If the service suspects a denial of service attack, the request succeeds (HTTP s
 |<a name="searchresponse-entities"></a>entities|A list of entities that are relevant to the search query.|[EntityAnswer](../../bing-entity-search/reference/response-objects.md#entityanswer)
 |<a name="searchresponse-images"></a>images|A list of images that are relevant to the search query.|[Images](../../bing-image-search/reference/response-objects.md#images)
 |<a name="searchresponse-news"></a>news|A list of news articles that are relevant to the search query.|[News](../../bing-news-search/reference/response-objects.md#news) 
+|<a name="searchresponse-places"></a>places|A list of places that are relevant to the search query|[LocalEntityAnswer](../../bing-entity-search/reference/response-objects.md#localentityanswer)
 |<a name="searchresponse-querycontext"></a>queryContext|The query string that Bing used for the request.|[QueryContext](#querycontext)
 |<a name="searchresponse-ranking"></a>rankingResponse|The order that Bing suggests that you display the search results in.|[RankingResponse](#rankingresponse)
 |<a name="searchresponse-relatedsearches"></a>relatedSearches|A list of related queries made by others.|[RelatedSearchAnswer](#relatedsearchanswer)
 |<a name="searchresponse-spellsuggestions"></a>spellSuggestions|The query string that likely represents the user's intent.|[SpellSuggestions](#spellsuggestions)  
 |<a name="searchresponse-timezone"></a>timeZone|The date and time of one or more geographic locations.|[TimeZone](#timezone)
+|<a name="searchresponse-translations"></a>translations|The translation of a word or phrase in the query string to another language.|[TranslationAnswer](#translationanswer)
 |<a name="searchresponse-videos"></a>videos|A list of videos that are relevant to the search query.|[Videos](../../bing-video-search/reference/response-objects.md#videos)
 |<a name="search-response-webpages"></a>webPages|A list of webpages that are relevant to the search query.|[WebAnswer](#webanswer)
   
@@ -237,6 +273,7 @@ The search results include this response if Bing determines that the user may ha
 |id|An ID that uniquely identifies the spelling suggestion answer.<br><br>You use this field when you use [ranking response](#rankingresponse) to display the spelling suggestions. For more information about how to use the ID, see [Ranking results](../rank-results.md).|String
 |<a name="spell-value"></a>value|A list of suggested query strings that may represent the user's intention.<br><br>The list contains only one `Query` object.|[Query](#query)[]
 
+
 ## TextAttribution  
 
 Defines a contractual rule for plain text attribution.  
@@ -246,24 +283,61 @@ Defines a contractual rule for plain text attribution.
 |_type|A type hint, which is set to TextAttribution.|String
 |text|The attribution text.<br/><br/>Text attribution applies to the entity as a whole and should be displayed immediately following the entity presentation. If there are multiple text or link attribution rules that do not specify a target, you should concatenate them and display them using a "Data from: " label.|String    
 
+
 ## TimeZone  
 
 Defines the date and time of one or more geographic locations.  
   
 |Name|Value|Type
 |-|-|-
-|<a name="othercitytimes"></a>otherCityTimes|A list of dates and times of nearby time zones.|[TimeZoneInformation](#timezoneinformation)[]
-|<a name="primarycitytime"></a>primaryCityTime|The data and time, in UTC, of the geographic location specified in the query.<br/><br/>If the query specified a specific geographic location (for example, a city), this object contains the name of the geographic location and the current date and time of the location, in UTC.<br/><br/>If the query specified a general geographic location, such as a state or country, this object contains the date and time of the primary city or state found within the specified state or country. If the location contains additional time zones, the `otherCityTimes` field contains the date and time of cities or states located in the other time zones.|[TimeZoneInformation](#timezoneinformation)
+|date|A date in string form. For example, Thursday, June 5, 2019. The answer may include this field if the user’s query asks Bing to compute a date. For example, *90 days from today*.|String
+|description|A description of the response. The answer may include this field if the query asks Bing how many days or weeks in a period (for example, *weeks in a year* or *days in a month*), or converts time to a different time zone (for example, *pst to est*.|String
+|<a name="othercitytimes"></a>otherCityTimes|A list of dates and times in a geographical location. The answer includes this field for queries like *US time zones* or *Arizona time zones*. The list is ordered by UTC offset.|[TimeZoneInformation](#timezoneinformation)[]
+|<a name="primarycitytime"></a>primaryCityTime|The data and time, in UTC, of the geographic location specified in the query.<br/><br/>If the query specified a specific geographic location (for example, a city), this object contains the name of the geographic location and the current date and time of the location.<br/><br/>If the query specified a general geographic location, such as a state or country, this object contains the date and time of the primary city or state found within the specified state or country. If the location contains additional time zones, the `otherCityTimes` field contains the date and time of cities or states located in the other time zones.|[TimeZoneInformation](#timezoneinformation)
+|primaryResponse|The primary data that satisfies the request. If the query string is *how many weeks in 2019*, this field contains, **52 weeks and 1 day**. Other query examples: *how many days in this month* and *what’s the date*.|String
+|primaryTimeZone|The object contains the primary time zone in a geographical location. If a location contains more than one time zone, Bing determines which time zone is the primary time zone. The answer includes this field for queries like, time zone, time zones in Arizona, us time zones.|[TimeZoneInformation](#timezoneinformation)
+|timeZoneDifference|The difference in time, in hours, between time zones. For example, there's a three hour difference between PST and EST.|[TimeZoneDifference](#timezonedifference)
   
+
+## TimeZoneDifference  
+
+Defines the difference in time, in hours, between time zone 1 and time zone 2.  
+  
+|Name|Value|Type
+|-|-|-
+|location1|the date and time of the first time zone. For example, if the query is, *pst to est*, this field contains the date and time of the Pacific time zone.|[TimeZoneInformation](#timezoneinformation)
+|location2|the date and time of the second time zone. For example, if the query is, *pst to est*, this field contains the date and time of the Eastern time zone.|[TimeZoneInformation](#timezoneinformation)
+|text|A string that represents the difference in time between time zones.|String  
+
+
 ## TimeZoneInformation  
 
 Defines a date and time for a geographical location.  
   
 |Name|Value|Type
 |-|-|-
-|<a name="tzinfo-location"></a>location|The name of the geographical location.<br/><br/>For example, County; City; City, State; City, State, Country; or Time Zone.|String  
-|<a name="tzinfo-time"></a>time|The date and time specified in the form, YYYY-MM-DDThh;mm:ss.ssssssZ.|String 
+|<a name="tzinfo-location"></a>location|The type of the geographical location.<br/><br/>For example, County; City; City, State; City, State, Country; or Time Zone.|String  
+|<a name="tzinfo-time"></a>time|The UTC date and time specified in the form, YYYY-MM-DDThh;mm:ss.ssssssZ.|String 
+|timeZoneName|The name of the time zone that the location is in. This string may be empty if the query is not related to time zones.|String
 |<a name="tzinfo-utcoffset"></a>utcOffset|The offset from UTC. For example, UTC-7.|String
+
+
+## TranslationAnswer
+
+Defines the translation of a word or phrase in the query string to another language.  
+  
+|Name|Value|Type
+|-|-|-
+|attributions|A list of publishers that you must attribute the information to when you render the answer.<br/><br/>You must display the names of all publishers in the list as the source of the data. Typically, you display the providers in a single line after the translation. For example, “Data from: <provider> | <provider> | …", where <provider> is the name of the provider in providerDisplayName.<br/><br/>**Note**: If the answer includes contractualRules, you must apply them instead of applying attributions from this field.|[Attribution](#attribution)[]
+|contractualRules|A list of rules that you must adhere to if you display the answer. The following contractual rules may apply.<ul><li>[LinkAttribution](#linkattribution)</li><ul>For information about displaying contractual rules, see [Data Attribution](data-attribution.md).
+|Object[]
+|id|An ID that uniquely identifies this answer.<br/><br/>The [RankingResponse](#rankingresponse) answer uses the ID to indicate where in the rendered response you should display this answer. For information about how to use this field, see [How to use ranking to display search results](rank-results.md).
+|String
+|inLanguage|The language that the text was translated from. An ISO 639-1 two-letter language code identifies the language. For example, es for Spanish.|String
+|originalText|The text to translate.|String
+|translatedLanguageName|The language that the text was translated to. An ISO 639-1 two-letter language code identifies the language. For example, en for English.|String
+|translatedText|The translated text.|String
+
   
 ## WebAnswer  
 
@@ -283,11 +357,17 @@ Defines a webpage that is relevant to the query.
   
 |Name|Value|Type
 |-|-|-
-|about|For internal use only.|Object
+|about|For internal use only.|Object[]
 |<a name="datelastcrawled"></a>dateLastCrawled|The last time that Bing crawled the webpage. The date is in the form, YYYY-MM-DDTHH:MM:SS. For example, 2015-04-13T05:23:39.|String
-|<a name="deeplinks"></a>deepLinks|A list of links to related content that Bing found in the website that contains this webpage.<br/><br/>The `Webpage` object in this context includes only the `name`, `url`, `urlPingSuffix`, and `snippet` fields.|[Webpage](#webpage)[]
+|contractualRules|A list of rules that you must adhere to if you display the answer. The following contractual rules may apply.<ul><li>[LicenseAttribution](#licenseattribution)</li><ul>For information about displaying contractual rules, see [Data Attribution](data-attribution.md).
+|Object[]
+|<a name="deeplinks"></a>deepLinks|A list of links to related content that Bing found in the website that contains this webpage.<br/><br/>The `Webpage` object in this context includes only the `name` and `url` fields and optionally the `snippet` field.|[Webpage](#webpage)[]
 |<a name="displayurl"></a>displayUrl|The display URL of the webpage. The URL is meant for display purposes only and is not well formed.|String
 |id|An ID that uniquely identifies this webpage in the list of web results.<br/><br/>The object includes this field only if the Ranking answer specifies that you mix the webpages with the other search results. Each webpage contains an ID that matches an ID in the Ranking answer. For more information, see [Ranking results](../rank-results.md).|String
+|isFamilyFriendly|A Boolean value that indicates whether the webpage contains adult content. If the webpage doesn't contain adult content, `isFamilyFriendly` is set to **true**.|Boolean
+|isNavigational|A Boolean value that indicates whether the user’s query is frequently used for navigation to different parts of the webpage’s domain. Is **true** if users navigate from this page to other parts of the website.|Boolean
+|language|A two-letter language code that identifies the language used by the webpage. For example, the language code is *en* for English.|String
+|<a name="webpage_malware"></a>malware|A notice that Bing provides if it thinks the webpage may cause a potential issue if the user clicks the `url` link. You should display the notice with high visibility next to the webpage link.|[Malware](#malware)
 |<a name="name"></a>name|The name of the webpage.<br/><br/>Use this name along with `url` to create a hyperlink that when clicked takes the user to the webpage.|String  
 |mentions|For internal use only.|Object
 |<a name="searchtags"></a>searchTags|A list of search tags that the webpage owner specified on the webpage. The API returns only indexed search tags.<br/><br/>The `name` field of the `MetaTag` object contains the indexed search tag. Search tags begin with search.* (for example, search.assetId). The `content` field contains the tag's value.|[MetaTag](#metatag)[]
