@@ -331,7 +331,7 @@ Defines the translation of a word or phrase in the query string to another langu
 |attributions|A list of publishers that you must attribute the information to when you render the answer.<br/><br/>You must display the names of all publishers in the list as the source of the data. Typically, you display the providers in a single line after the translation. For example, “Data from: <provider> | <provider> | …", where <provider> is the name of the provider in providerDisplayName.<br/><br/>**Note**: If the answer includes contractualRules, you must apply them instead of applying attributions from this field.|[Attribution](#attribution)[]
 |contractualRules|A list of rules that you must adhere to if you display the answer. The following contractual rules may apply.<ul><li>[LinkAttribution](#linkattribution)</li><ul>For information about displaying contractual rules, see [Data Attribution](data-attribution.md).
 |Object[]
-|id|An ID that uniquely identifies this answer.<br/><br/>The [RankingResponse](#rankingresponse) answer uses the ID to indicate where in the rendered response you should display this answer. For information about how to use this field, see [How to use ranking to display search results](rank-results.md).
+|id|An ID that uniquely identifies this answer.<br/><br/>The [RankingResponse](#rankingresponse) answer uses the ID to indicate where in the rendered response you should display this answer. For information about how to use this field, see [How to use ranking to display search results](../rank-results.md).
 |String
 |inLanguage|The language that the text was translated from. An ISO 639-1 two-letter language code identifies the language. For example, es for Spanish.|String
 |originalText|The text to translate.|String

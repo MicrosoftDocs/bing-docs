@@ -37,5 +37,5 @@ Use these quickstarts to make your first Web Search API call in a matter of minu
 
 ## Next steps
 
-- For a more in depth web app example, see the [Web Search tutorial](../tutorial/bing-web-search=single-page-app.md).
+- For a more in depth web app example, see the [Web Search tutorial](../tutorial/bing-web-search-single-page-app.md).
 - For other REST and SDK samples, see [Samples](../samples.md)

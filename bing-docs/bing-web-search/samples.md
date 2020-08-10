@@ -45,4 +45,4 @@ Here's a list of SDK samples by language. The list is subject to change. For the
 
 ## Next steps
 
-- For a more in depth web app example, see the [Web Search tutorial](tutorial/bing-web-search=single-page-app.md).
+- For a more in depth web app example, see the [Web Search tutorial](tutorial/bing-web-search-single-page-app.md).

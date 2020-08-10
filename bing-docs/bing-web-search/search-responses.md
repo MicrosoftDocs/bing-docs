@@ -735,7 +735,7 @@ If the user’s query has adult intent, the context includes the `adultIntent` f
 
 ## RankingResponse answer
 
-Each Bing response contains a [RankingResponse](reference/response-objects.md/rankingresponse) object that suggests the order in which you should display the Bing answers and the results within each answer. For information about how to use the **RankingResponse** object, see [Using ranking to display search results](rank-results.md).
+Each Bing response contains a [RankingResponse](reference/response-objects.md/rankingresponse.md) object that suggests the order in which you should display the Bing answers and the results within each answer. For information about how to use the **RankingResponse** object, see [Using ranking to display search results](rank-results.md).
 
 The following example shows parts of the ranking response answer for brevity.
 
@@ -829,7 +829,7 @@ Be sure to use `contractualRules` to attribute the article. For information abou
 
 ## Entities answer
 
-The [entities](../bing-entities-search/reference/response-objects.md#entityanswer) answer contains a list of entity objects that Bing thought were relevant to the query. Each [entity](../bing-entity-search/reference/response-objects.md#entity) in the list identifies a person, place, or thing. Bing returns well-known entities only. Well-known people may include singers, actors, athletes, models, and others. Places refers to well-known tourist attractions, organizations, and localities such as a cities, states, countries, and regions. Things cover everything else not covered by places and people, such as animals, foods, drinks, books, songs, movies, and more. For information about places such as restaurants, hotels, or other local businesses, see the [Places answer](#places-answer). 
+The [entities](../bing-entity-search/reference/response-objects.md#entityanswer) answer contains a list of entity objects that Bing thought were relevant to the query. Each [entity](../bing-entity-search/reference/response-objects.md#entity) in the list identifies a person, place, or thing. Bing returns well-known entities only. Well-known people may include singers, actors, athletes, models, and others. Places refers to well-known tourist attractions, organizations, and localities such as a cities, states, countries, and regions. Things cover everything else not covered by places and people, such as animals, foods, drinks, books, songs, movies, and more. For information about places such as restaurants, hotels, or other local businesses, see the [Places answer](#places-answer). 
 
 ### Dominant entity versus disambiguation entities
 
@@ -1037,7 +1037,7 @@ For information about applying attribution, see [Data Attribution](data-attribut
 
 ## Places answer
 
-The [places](../bing-entities-search/reference/response-objects.md#localentityanswer) answer contains a list of local business entity objects that Bing thought were relevant to the query. Bing returns this answer only when the query specifies the name of a local business or asks for a type of business (for example, *restaurants near me* or *microsoft store gas near me*). Each [place](../bing-entity-search/reference/response-objects.md#entity) in the list identifies a restaurant, hotel, or other local business.
+The [places](../bing-entity-search/reference/response-objects.md#localentityanswer) answer contains a list of local business entity objects that Bing thought were relevant to the query. Bing returns this answer only when the query specifies the name of a local business or asks for a type of business (for example, *restaurants near me* or *microsoft store gas near me*). Each [place](../bing-entity-search/reference/response-objects.md#entity) in the list identifies a restaurant, hotel, or other local business.
 
 > [!NOTE]
 > The Places answer supports only US Business locations. 

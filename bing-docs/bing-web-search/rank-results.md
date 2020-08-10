@@ -18,9 +18,9 @@ Each search response includes a [RankingResponse](reference/response-objects.md#
 
 Within each group (mainline or sidebar), the [Items](reference/response-objects.md#rankinggroup-items) array identifies the order that the content must appear in. Each item provides the following two ways to identify the result within an answer.  
 
--   `answerType` and `resultIndex` — The `answerType` field identifies the answer (for example, Webpage or News) and `resultIndex` identifies a result within the answer (for example, a news article). The index is zero based.  
+- `answerType` and `resultIndex` — The `answerType` field identifies the answer (for example, Webpage or News) and `resultIndex` identifies a result within the answer (for example, a news article). The index is zero based.  
 
--   `value` — The `value` field contains an ID that matches the ID of either an answer or a result within the answer. Either the answer or the results contain the ID but not both.  
+- `value` — The `value` field contains an ID that matches the ID of either an answer or a result within the answer. Either the answer or the results contain the ID but not both.  
 
 Using the ID is simpler to use because you only need to match the ranking ID with the ID of an answer or one of its results. If an answer object includes an `id` field, display all the answer's results together. For example, if the `News` object includes the `id` field, display all the news articles together. If the `News` object does not include the `id` field, then each news article contains an `id` field and the ranking response mixes the news articles with the results from other answers.  
 
@@ -216,6 +216,6 @@ And the sidebar would display the following search results:
 
 For information about promoting unranked results, see [Promoting answers that are not ranked](filter-answers.md#promoting-answers-that-are-not-ranked).
 
-For information about limiting the number of ranked answers in the response, see [Limiting the number of answers in the response](filter-answers.md#limiting-the-number-of-answers-in-the-response).
+For information about limiting the number of ranked answers in the response, see [Returning the top n answers](filter-answers.md#returning-the-top-n-answers).
 
 For a C# example that uses ranking to display results, see [C# ranking tutorial](tutorial/csharp-ranking-tutorial.md).

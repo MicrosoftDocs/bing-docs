@@ -32,7 +32,7 @@ Bing includes the answers you request only if it finds relevant content that ran
 
 To exclude specific answers from the response, prefix a minus sign (-) to the answer's name. For example, "-images." 
 
-In theory, you could use *responseFilter* to filter for a single answer like only images or news but you're strongly discouraged from doing so. Instead, you should use the answer-specific endpoint to get richer results and better performance. For example, to receive only images, send the request using [Image Search API](../bing-image-search/overview). The Image Search API offers filters that are not available to the Web Search API.  
+In theory, you could use *responseFilter* to filter for a single answer like only images or news but you're strongly discouraged from doing so. Instead, you should use the answer-specific endpoint to get richer results and better performance. For example, to receive only images, send the request using [Image Search API](../bing-image-search/overview.md). The Image Search API offers filters that are not available to the Web Search API.  
 
 
 ## Getting results from a specific site
@@ -128,4 +128,4 @@ The default is Moderate.
 
 - Learn about the [response](search-responses.md) that Bing returns for the user's query.
 - Learn how to [highlight the user's search terms](hit-highlighting.md) in the results that Bing returns.
-- Learn about the [quickstarts](quickstarts.md) and [samples](samples.md) that are available to help you get up and running fast.
+- Learn about the [quickstarts](quickstarts/quickstarts.md) and [samples](samples.md) that are available to help you get up and running fast.
