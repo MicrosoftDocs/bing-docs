@@ -329,7 +329,7 @@ Defines the translation of a word or phrase in the query string to another langu
 |Name|Value|Type
 |-|-|-
 |attributions|A list of publishers that you must attribute the information to when you render the answer.<br/><br/>You must display the names of all publishers in the list as the source of the data. Typically, you display the providers in a single line after the translation. For example, “Data from: <provider> | <provider> | …", where <provider> is the name of the provider in providerDisplayName.<br/><br/>**Note**: If the answer includes contractualRules, you must apply them instead of applying attributions from this field.|[Attribution](#attribution)[]
-|contractualRules|A list of rules that you must adhere to if you display the answer. The following contractual rules may apply.<ul><li>[LinkAttribution](#linkattribution)</li><ul>For information about displaying contractual rules, see [Data Attribution](data-attribution.md).
+|contractualRules|A list of rules that you must adhere to if you display the answer. The following contractual rules may apply.<ul><li>[LinkAttribution](#linkattribution)</li><ul>For information about displaying contractual rules, see [Data Attribution](../data-attribution.md).
 |Object[]
 |id|An ID that uniquely identifies this answer.<br/><br/>The [RankingResponse](#rankingresponse) answer uses the ID to indicate where in the rendered response you should display this answer. For information about how to use this field, see [How to use ranking to display search results](../rank-results.md).
 |String
@@ -359,7 +359,7 @@ Defines a webpage that is relevant to the query.
 |-|-|-
 |about|For internal use only.|Object[]
 |<a name="datelastcrawled"></a>dateLastCrawled|The last time that Bing crawled the webpage. The date is in the form, YYYY-MM-DDTHH:MM:SS. For example, 2015-04-13T05:23:39.|String
-|contractualRules|A list of rules that you must adhere to if you display the answer. The following contractual rules may apply.<ul><li>[LicenseAttribution](#licenseattribution)</li><ul>For information about displaying contractual rules, see [Data Attribution](data-attribution.md).
+|contractualRules|A list of rules that you must adhere to if you display the answer. The following contractual rules may apply.<ul><li>[LicenseAttribution](#licenseattribution)</li><ul>For information about displaying contractual rules, see [Data Attribution](../data-attribution.md).
 |Object[]
 |<a name="deeplinks"></a>deepLinks|A list of links to related content that Bing found in the website that contains this webpage.<br/><br/>The `Webpage` object in this context includes only the `name` and `url` fields and optionally the `snippet` field.|[Webpage](#webpage)[]
 |<a name="displayurl"></a>displayUrl|The display URL of the webpage. The URL is meant for display purposes only and is not well formed.|String
