@@ -1,7 +1,7 @@
 ---
-title: How to use decoration markers to highlight text - Bing Web Search API
+title: How to use decoration markers to highlight text
 titleSuffix: Bing Search Services
-description: Learn how to use text decorations and hit highlighting in your search results using the Bing Web Search API.
+description: Learn how to use text decorations and hit highlighting in your search results.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -14,9 +14,18 @@ ms.author: scottwhi
 
 # Using decoration markers to highlight text
 
-Bing supports hit highlighting, which marks query terms (or other terms that Bing finds relevant) in the display strings of some answers. For example, a webpage result's `name`, `displayUrl`, and `snippet` fields might contain marked query terms. 
+Hit highlighting is when Bing highlights words or phrases from the user’s search string that were found in search result strings. Bing uses either Unicode characters or HTML tags to mark the words or phrases in the webpage’s name, display URL, and snippet text. Bing may mark other terms that Bing finds relevant.
 
-By default, Bing doesn't include highlighting markers in display strings. To enable the markers, include the `textDecorations` query parameter in your request and set it to `true`.
+By default, Bing doesn't highlight words or phrases in display strings. To enable hit highlighting, set the `textDecorations` query parameter in your request to **true**.
+
+To specify whether you want Bing to use Unicode characters or HTML tags to mark the words or phrases, set the `textFormat` query parameter one off the following possible values.
+
+- Raw &mdash; Uses Unicode characters to mark content that needs special formatting. The Unicode characters are in the range E000 through E019. For example, Bing uses E000 and E001 to mark the beginning and end of words or phrases for hit highlighting.
+
+- HTML &mdash; Uses HTML tags to mark content that needs special formatting. For example, Bing uses <b> tags to mark the beginning and end of words or phrases for hit highlight.
+
+The default is Raw.
+
 
 ## Hit highlighting example
 
@@ -26,14 +35,6 @@ The following example shows a web result for `Sailing Dinghy`. Bing marked the b
 
 Before displaying the result in your user interface, replace the Unicode characters with ones that are appropriate for your display format.
 
-## Marker formatting
-
-Bing provides the option of using either Unicode characters or HTML tags as markers. To specify which markers to use, include the [textFormat](reference/query-parameters.md#textformat) query parameter: 
-
-| Value             | Marker                       |
-|-------------------|------------------------------|
-| `textFormat=Raw`  | Unicode characters (default) |
-| `textFormat=HTML` | HTML characters              |
 
 ## Additional text decorations
 
@@ -70,7 +71,3 @@ If `textDecorations` is `true`, Bing may include the following markers in the di
 |U+E018|\<sup>|Marks the beginning of superscript content
 |U+E019|\</sup>|Marks the end of superscript content
 
-## Next steps
-
-* [What is the Bing Web Search API?](overview.md) 
-* [Resize and crop thumbnails](resize-and-crop-thumbnails.md)

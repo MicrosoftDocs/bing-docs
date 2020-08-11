@@ -75,14 +75,14 @@ The [webPages](reference/response-objects.md#webanswer) answer contains a list o
 
 ```json
   "webPages": {
-    "webSearchUrl": "https:\/\/www.bing.com\/search?q=mt+rainier",
+    "webSearchUrl": "https://www.bing.com/search?q=mt+rainier",
     "totalEstimatedMatches": 594000,
     "value": [
       {
-        "id": "https:\/\/api.cognitive.microsoft.com\/api\/v7\/#WebPages.0",
+        "id": "https://api.bing.microsoft.com/api/v7/#WebPages.0",
         "name": "Dinghy sailing",
-        "url": "https:\/\/www.bing.com\/cr?IG=3A43CA5...",
-        "displayUrl": "https:\/\/en.contoso.com\/wiki\/Dinghy_sailing",
+        "url": "https://www.bing.com/cr?IG=3A43CA5...",
+        "displayUrl": "https://en.contoso.com/wiki/Dinghy_sailing",
         "snippet": "Dinghy sailing is the activity of sailing small boats...",
         "dateLastCrawled": "2017-04-05T16:25:00"
       },
@@ -104,15 +104,15 @@ Deep links are related webpages that Bing found on the webpage’s website. The 
         "deepLinks": [
           {
             "name": "Drug Product Database Online Query",
-            "url": "https:\/\/health-products.canada.ca\/dpd-bdpp\/index-eng.jsp"
+            "url": "https://health-products.canada.ca/dpd-bdpp/index-eng.jsp"
           },
           {
             "name": "Access The Extracts",
-            "url": "https:\/\/www.canada.ca\/en\/health-canada\/services\/drugs-health-products\/drug-products\/drug-product-database\/extracts.html"
+            "url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/drug-product-database/extracts.html"
           },
           {
             "name": "Product Monograph Brand Safety Updates",
-            "url": "https:\/\/www.canada.ca\/en\/health-canada\/services\/drugs-health-products\/drug-products\/drug-product-database\/label-safety-assessment-update\/product-monograph-brand-safety-updates.html"
+            "url": "https://www.canada.ca/en/health-canada/services/drugs-health-products/drug-products/drug-product-database/label-safety-assessment-update/product-monograph-brand-safety-updates.html"
           }
         ],
 ```
@@ -123,24 +123,24 @@ Deep links can also have nested deep links.
         "deepLinks": [
           {
             "name": "Webcams",
-            "url": "https:\/\/www.nps.gov\/mora\/learn\/photosmultimedia\/webcams.htm",
+            "url": "https://www.nps.gov/mora/learn/photosmultimedia/webcams.htm",
             "snippet": "See the view from the clouds! Camp Muir perches on the side of Mount Rainier at an elevation of over 10,000 feet (3,000 meters). Updates every 5 minutes. NOTE: Down for repairs for the 2020 season. Thanks for your patience. View Webcam",
             "deepLinks": [
               {
                 "name": "Road Status",
-                "url": "https:\/\/www.nps.gov\/mora\/planyourvisit\/road-status.htm"
+                "url": "https://www.nps.gov/mora/planyourvisit/road-status.htm"
               },
               {
                 "name": "Maps",
-                "url": "https:\/\/www.nps.gov\/mora\/planyourvisit\/maps.htm"
+                "url": "https://www.nps.gov/mora/planyourvisit/maps.htm"
               },
               {
                 "name": "Operating Hours & Seasons",
-                "url": "https:\/\/www.nps.gov\/mora\/planyourvisit\/hours.htm"
+                "url": "https://www.nps.gov/mora/planyourvisit/hours.htm"
               },
               {
                 "name": "Weather",
-                "url": "https:\/\/www.nps.gov\/mora\/planyourvisit\/weather.htm"
+                "url": "https://www.nps.gov/mora/planyourvisit/weather.htm"
               }
             ]
           },
@@ -178,13 +178,13 @@ If a webpage requires attribution, the **Webpage** object includes the `contract
 ```JSON
         "contractualRules": [
           {
-            "_type": "ContractualRules\/LicenseAttribution",
+            "_type": "ContractualRules/LicenseAttribution",
             "targetPropertyName": "snippet",
             "targetPropertyIndex": 7,
             "mustBeCloseToContent": true,
             "license": {
               "name": "CC-BY-SA",
-              "url": "http:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/"
+              "url": "http://creativecommons.org/licenses/by-sa/3.0/"
             },
             "licenseNotice": "Text under CC-BY-SA license"
           }
@@ -200,21 +200,21 @@ The [images](../bing-image-search/reference/response-objects.md#images) answer c
 
 ```json
   "images": {
-    "id": "https:\/\/api.cognitive.microsoft.com\/api\/v7\/#Images",
-    "readLink": "https:\/\/api.cognitive.microsoft.com\/api\/v7\/images\/search?q=dinghy+sailing&qpvt=dinghy+sailing",
-    "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=dinghy+sailing&qpvt=lady+gaga",
+    "id": "https://api.bing.microsoft.com/api/v7/#Images",
+    "readLink": "https://api.bing.microsoft.com/api/v7/images/search?q=dinghy+sailing&qpvt=dinghy+sailing",
+    "webSearchUrl": "https://www.bing.com/images/search?q=dinghy+sailing&qpvt=lady+gaga",
     "isFamilyFriendly": true,
     "value": [
       {
         "name": "Rich Passage Sailing Dinghy",
-        "webSearchUrl": "https:\/\/www.bing.com\/cr?IG=3A43CA5CA64...",
-        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP....",
+        "webSearchUrl": "https://www.bing.com/cr?IG=3A43CA5CA64...",
+        "thumbnailUrl": "https://tse1.mm.bing.net/th?id=OIP....",
         "datePublished": "2011-10-29T11:26:00",
-        "contentUrl": "http:\/\/upload.contoso.com\/sailing\/...",
-        "hostPageUrl": "http:\/\/www.bing.com\/cr?IG=3A43CA5CA6464....",
+        "contentUrl": "http://upload.contoso.com/sailing/...",
+        "hostPageUrl": "http://www.bing.com/cr?IG=3A43CA5CA6464....",
         "contentSize": "79239 B",
         "encodingFormat": "jpeg",
-        "hostPageDisplayUrl": "http:\/\/en.contoso.com\/wiki\/File...",
+        "hostPageDisplayUrl": "http://en.contoso.com/wiki/File...",
         "width": 526,
         "height": 688,
         "thumbnail": {
@@ -249,29 +249,29 @@ The [videos](../bing-video-search/reference/response-objects.md#videos) answer c
 
 ```json
   "videos": {
-    "id": "https:\/\/api.cognitive.microsoft.com\/api\/v7\/#Videos",
-    "readLink": "https:\/\/api.cognitive.microsoft.com\/api\/v7\/videos\/search?q=dinghy+sailing",
-    "webSearchUrl": "https:\/\/www.bing.com\/videos\/search?q=dinghy+sailing",
+    "id": "https://api.bing.microsoft.com/api/v7/#Videos",
+    "readLink": "https://api.bing.microsoft.com/api/v7/videos/search?q=dinghy+sailing",
+    "webSearchUrl": "https://www.bing.com/videos/search?q=dinghy+sailing",
     "isFamilyFriendly": true,
     "value": [
       {
         "name": "Sailing dinghy",
         "description": "Northwind Traders is a 12 foot gunter rigged...",
-        "webSearchUrl": "https:\/\/www.bing.com\/cr?IG=1CAE739681D84...",
-        "thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?id=OVP.wsKiL...",
+        "webSearchUrl": "https://www.bing.com/cr?IG=1CAE739681D84...",
+        "thumbnailUrl": "https://tse2.mm.bing.net/th?id=OVP.wsKiL...",
         "datePublished": "2013-11-06T01:56:28",
         "publisher": [{
             "name": "Fabrikam"
         }],
-        "contentUrl": "https:\/\/www.fabrikam.com\/watch?v=MrVBWZpJjX",
-        "hostPageUrl": "https:\/\/www.bing.com\/cr?IG=1CAE739681D8400DB...",
+        "contentUrl": "https://www.fabrikam.com/watch?v=MrVBWZpJjX",
+        "hostPageUrl": "https://www.bing.com/cr?IG=1CAE739681D8400DB...",
         "encodingFormat": "mp4",
-        "hostPageDisplayUrl": "https:\/\/www.fabrikam.com\/watch?v=MrBWZpJjXo",
+        "hostPageDisplayUrl": "https://www.fabrikam.com/watch?v=MrBWZpJjXo",
         "width": 1280,
         "height": 720,
         "duration": "PT3M47S",
-        "motionThumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?id=OM.oa...",
-        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http:\/\/www....><\/iframe>",
+        "motionThumbnailUrl": "https://tse2.mm.bing.net/th?id=OM.oa...",
+        "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"http://www....></iframe>",
         "allowHttpsEmbed": true,
         "viewCount": 19089,
         "thumbnail": {
@@ -306,22 +306,22 @@ The [news](../bing-news-search/reference/response-objects.md#news) answer contai
 
 ```json
   "news": {
-    "id": "https:\/\/api.cognitive.microsoft.com\/api\/v7\/#News",
-    "readLink": "https:\/\/api.cognitive.microsoft.com\/api\/v7\/news\/search?q=dinghy+sailing",
+    "id": "https://api.bing.microsoft.com/api/v7/#News",
+    "readLink": "https://api.bing.microsoft.com/api/v7/news/search?q=dinghy+sailing",
     "value": [
       {
         "contractualRules": [
           {
-            "_type": "ContractualRules\/TextAttribution",
+            "_type": "ContractualRules/TextAttribution",
             "text": "contoso.com"
           }
         ],
         "name": "WC Sailing Qualifies for America Trophy with...",
-        "url": "http:\/\/www.bing.com\/cr?IG=3445EEF15DAF4FFFBF7...",
+        "url": "http://www.bing.com/cr?IG=3445EEF15DAF4FFFBF7...",
         "image": {
-          "contentUrl": "http:\/\/www.contoso.com\/sports\/sail...",
+          "contentUrl": "http://www.contoso.com/sports/sail...",
           "thumbnail": {
-            "contentUrl": "https:\/\/www.bing.com\/th?id=ON.1...",
+            "contentUrl": "https://www.bing.com/th?id=ON.1...",
             "width": 400,
             "height": 272
           }
@@ -333,7 +333,7 @@ The [news](../bing-news-search/reference/response-objects.md#news) answer contai
             "name": "contoso.com",
             "image": {
               "thumbnail": {
-                "contentUrl": "https:\/\/www.bing.com\/th?id=AR_85d7ddac409e7624f6b911ce58ac&pid=news"
+                "contentUrl": "https://www.bing.com/th?id=AR_85d7ddac409e7624f6b911ce58ac&pid=news"
               }
             }
           }
@@ -352,7 +352,7 @@ If Bing finds a video that's related to the article, it includes the video's URL
 ```json
         "video": {
           "name": "America Trophy qualifiers",
-          "motionThumbnailUrl": "https:\/\/wus-streaming-video-msn-com.fabrikam.net\/34572c32-1a0f-4576-...mp4",
+          "motionThumbnailUrl": "https://wus-streaming-video-msn-com.fabrikam.net/34572c32-1a0f-4576-...mp4",
           "thumbnail": {
             "width": 640,
             "height": 360
@@ -375,7 +375,7 @@ The [relatedSearches](reference/response-objects.md#searchresponse-relatedsearch
 {
     "text": "dinghy racing teams",
     "displayText": "dinghy racing teams",
-    "webSearchUrl": "https:\/\/www.bing.com\/cr?IG=96C4CF214A0..."
+    "webSearchUrl": "https://www.bing.com/cr?IG=96C4CF214A0..."
 }, ...
 ```
 
@@ -400,7 +400,7 @@ The following shows the `computation` answer for *How many feet in 10 meters?*
 
 ```json
   "computation": {
-    "id": "https:\/\/www.bing.com\/api\/v7\/#Computation",
+    "id": "https://www.bing.com/api/v7/#Computation",
     "expression": "10 meters",
     "value": "32.808399 feet"
   }
@@ -414,8 +414,8 @@ Expression: (5+3)(10/2)+8
 
 ```json
 "computation": {
-    "id": "https:\/\/www.bing.com\/api\/v7\/#Computation",
-    "expression": "((5+3)*(10\/2))+8",
+    "id": "https://www.bing.com/api/v7/#Computation",
+    "expression": "((5+3)*(10/2))+8",
     "value": "48"
 }
 ```
@@ -424,7 +424,7 @@ Expression: sqrt(4^2+8^2)
 
 ```json
 "computation": {
-    "id": "https:\/\/www.bing.com\/api\/v7\/#Computation",
+    "id": "https://www.bing.com/api/v7/#Computation",
     "expression": "sqrt((4^2)+(8^2))",
     "value": "8.94427191"
 }
@@ -434,8 +434,8 @@ Expression: 30 6/8 - 18 8/16
 
 ```json
 "computation": {
-    "id": "https:\/\/www.bing.com\/api\/v7\/#WolframAlpha",
-    "expression": "30 6\/8-18 8\/16",
+    "id": "https://www.bing.com/api/v7/#WolframAlpha",
+    "expression": "30 6/8-18 8/16",
     "value": "12.25"
 }
 ```
@@ -444,7 +444,7 @@ Expression: 8^2+11^2-2*8*11*cos(37)
 
 ```json
 "computation": {
-        "id": "https:\/\/www.bing.com\/api\/v7\/#Computation",
+        "id": "https://www.bing.com/api/v7/#Computation",
         "expression": "(8^2)+(11^2)-(2*8*11*cos(37))",
         "value": "44.4401502"
 }
@@ -512,7 +512,7 @@ Query: What time is it?
 
 ```json
   "timeZone": {
-    "id": "https:\/\/www.bing.com\/api\/v7\/#TimeZone",
+    "id": "https://www.bing.com/api/v7/#TimeZone",
     "primaryCityTime": {
       "location": "Redmond, Washington, United States",
       "time": "2015-10-27T08:38:12.1189231Z",
@@ -525,7 +525,7 @@ Query: What time is it in the Pacific time zone?
 
 ```json
   "timeZone": {
-    "id": "https:\/\/www.bing.com\/api\/v7\/#TimeZone",
+    "id": "https://www.bing.com/api/v7/#TimeZone",
     "primaryCityTime": {
       "location": "Pacific Time Zone",
       "time": "2015-10-23T12:33:19.0728146Z",
@@ -538,7 +538,7 @@ Query: Time in Florida?
 
 ```json
   "timeZone": {
-    "id": "https:\/\/www.bing.com\/api\/v7\/#TimeZone",
+    "id": "https://www.bing.com/api/v7/#TimeZone",
     "primaryCityTime": {
       "location": "Tallahassee, Florida, United States",
       "time": "2015-10-23T13:04:56.6774389Z",
@@ -558,7 +558,7 @@ Query: What time is it in the U.S.
 
 ```json
   "timeZone": {
-    "id": "https:\/\/www.bing.com\/api\/v7\/#TimeZone",
+    "id": "https://www.bing.com/api/v7/#TimeZone",
     "primaryCityTime": {
       "location": "Washington, D.C., United States",
       "time": "2015-10-23T15:27:59.8892745Z",
@@ -675,7 +675,7 @@ If Bing determines that the user may have intended to search for something diffe
 
 ```json
   "spellSuggestions": {
-    "id": "https:\/\/www.bing.com\/api\/v7\/#SpellSuggestions",
+    "id": "https://www.bing.com/api/v7/#SpellSuggestions",
     "value": [
       {
         "text": "carlos pena",
@@ -735,7 +735,7 @@ If the user’s query has adult intent, the context includes the `adultIntent` f
 
 ## RankingResponse answer
 
-Each Bing response contains a [RankingResponse](reference/response-objects.md/rankingresponse.md) object that suggests the order in which you should display the Bing answers and the results within each answer. For information about how to use the **RankingResponse** object, see [Using ranking to display search results](rank-results.md).
+Each Bing response contains a [RankingResponse](reference/response-objects.md#rankingresponse) object that suggests the order in which you should display the Bing answers and the results within each answer. For information about how to use the **RankingResponse** object, see [Using ranking to display search results](rank-results.md).
 
 The following example shows parts of the ranking response answer for brevity.
 
@@ -746,20 +746,20 @@ The following example shows parts of the ranking response answer for brevity.
         {
           "answerType": "Videos",
           "value": {
-            "id": "https:\/\/<host>\/api\/v7\/#Videos"
+            "id": "https://<host>/api/v7/#Videos"
           }
         },
         {
           "answerType": "News",
           "value": {
-            "id": "https:\/\/<host>\/api\/v7\/#News"
+            "id": "https://<host>/api/v7/#News"
           }
         },
         {
           "answerType": "WebPages",
           "resultIndex": 0,
           "value": {
-            "id": "https:\/\/<host>\/api\/v7\/#WebPages.0"
+            "id": "https://<host>/api/v7/#WebPages.0"
           }
         },
 
@@ -768,7 +768,7 @@ The following example shows parts of the ranking response answer for brevity.
         {
           "answerType": "RelatedSearches",
           "value": {
-            "id": "https:\/\/<host>\/api\/v7\/#RelatedSearches"
+            "id": "https://<host>/api/v7/#RelatedSearches"
           }
         }
       ]
@@ -778,14 +778,14 @@ The following example shows parts of the ranking response answer for brevity.
         {
           "answerType": "Images",
           "value": {
-            "id": "https:\/\/<host>\/api\/v7\/#Images"
+            "id": "https://<host>/api/v7/#Images"
           }
         },
         {
           "answerType": "Entities",
           "resultIndex": 0,
           "value": {
-            "id": "https:\/\/<host>\/api\/v7\/#Entities.0"
+            "id": "https://<host>/api/v7/#Entities.0"
           }
         }
       ]
@@ -803,18 +803,18 @@ The `originalText` field contains the word or phrase to translate and `translate
 
 ```json
   "translations": {
-    "id": "https:\/\/<host\/api\/v7\/#Translations",
+    "id": "https://<host/api/v7/#Translations",
     "contractualRules": [
       {
-        "_type": "ContractualRules\/LinkAttribution",
+        "_type": "ContractualRules/LinkAttribution",
         "text": "Microsoft Translator",
-        "url": "http:\/\/www.bing.com\/translator\/?ref=TThis&text=hello&from=en&to=es"
+        "url": "http://www.bing.com/translator/?ref=TThis&text=hello&from=en&to=es"
       }
     ],
     "attributions": [
       {
         "providerDisplayName": "Microsoft Translator",
-        "seeMoreUrl": "http:\/\/www.bing.com\/translator\/?ref=TThis&text=hello&from=en&to=es"
+        "seeMoreUrl": "http://www.bing.com/translator/?ref=TThis&text=hello&from=en&to=es"
       }
     ],
     "originalText": "hello",

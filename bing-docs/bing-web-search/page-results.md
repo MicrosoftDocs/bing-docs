@@ -12,61 +12,99 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# How to page through results from the Bing Search APIs
+# Paging search results
 
-When you send a call to the Bing Web, Custom, Image, News or Video Search APIs, Bing returns a subset of the total number of results that may be relevant to the query. To get the estimated total number of available results, access the answer object's `totalEstimatedMatches` field. 
+When you call any of the Bing APIs (for example, the Web Search API or Image Search API), the API returns a list of results. The list is a subset of the total number of results that may be relevant to the query. To get the estimated total number of available results, access the answer object's `totalEstimatedMatches` field.
 
-For example: 
+The following example shows the `totalEstimatedMatches` field for News Search API.
 
 ```json
 {
-    "_type" : "SearchResponse",
-    "webPages" : {
-        "webSearchUrl" : "https:\/\/www.bing.com\/cr?IG=3A43CA...",
-        "totalEstimatedMatches" : 262000,
-        "value" : [...]
-    }
-}  
+  "_type": "News",
+  "readLink": "https://<host>/api/v7.0/news/search?q=Sports",
+  "queryContext": {
+    "originalQuery": "Sports"
+  },
+  "totalEstimatedMatches": 118000,
+  "value": [. . .]
+}
 ```
+
+The estimated number of matches **is only an estimate** and may likely change from request to request.
+
 
 ## Paging through search results
 
-To page through the available results, use the `count` and `offset` query parameters when sending your request.  
+To page through the results, use the *count* and *offset* query parameters.
 
-> [!NOTE]
->
-> * Paging with the Bing Video, Image, and News APIs applies only to general video (`/video/search`), news (`/news/search`) and image (`/image/search`) searches. Paging through trending topics and categories is not supported.  
-> * The `TotalEstimatedMatches` field is an estimate of the total number of search results for the current query. When you set the `count` and `offset` parameters, this estimate may change.
+The *count* parameter specifies the number of results to return in the response. The maximum number of results that you may request in the response is API specific (see [Count values by API](#count-values-by-api)). For example, the maximum count value that you may specify for the Image Search API is 150.
 
-| Parameter | Description                                                                                                                                                                |
-|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `count`   | Specifies the number of results to return in the response. Note that the default value of `count`, and the maximum number of results that you may request varies by API. You can find these values in the reference documentation under [Next steps](#next-steps). |
-| `offset`  | Specifies the number of results to skip. The `offset` is zero-based and should be less than (`totalEstimatedMatches` - `count`).                                           |
+The *offset* parameter specifies the number of results to skip. The offset is zero-based and should be less than (`totalEstimatedMatches` - *count*).
 
-As an example, if you want to display 15 results per page, you would set `count` to 15 and `offset` to 0 to get the first page of results. For each subsequent API call, you would increment `offset` by 15. The following example requests 15 webpages beginning at offset 45.
+If your user interface presents 20 news articles per page, set *count* to 20 and *offset* to 0 to get the first page of results. For each subsequent page, increment *offset* by 20 (for example, 20, 40).
 
-```  
-GET https://api.bing.microsoft.com/bing/v7.0/search?q=sailing+dinghies&count=15&offset=45&mkt=en-us HTTP/1.1  
-Ocp-Apim-Subscription-Key: 123456789ABCDE  
-Host: api.cognitive.microsoft.com  
+The following shows an example that requests 20 news articles beginning at offset 40.
+
+```
+https://<host>/api/v7.0/news/search?q=sailing&count=20&offset=40&mkt=en-us
 ```
 
-If you use the default `count` value, you only need to specify the `offset` query parameter in your API calls.  
+Because each API sets a default value for *count*, you may specify only *offset*. For example, if the News Search API’s default count is 20, you only need to include the *offset* query parameter.
 
-```  
-GET https://api.bing.microsoft.com/bing/v7.0/search?q=sailing+dinghies&offset=45&mkt=en-us HTTP/1.1  
-Ocp-Apim-Subscription-Key: 123456789ABCDE  
-Host: api.cognitive.microsoft.com  
+```
+https://<host>/api/v7.0/news/search?q=sailing&offset=40&mkt=en-us
 ```
 
-When using the Bing Image and Video APIs, you can use the `nextOffset` value to avoid duplicate search results. Get the value from the `Images` or `Videos` response objects, and use it in your requests with the `offset` parameter.  
+### Count values by API
 
-> [!NOTE]
-> The Bing Web Search API returns search results that can include webpages, images, videos, and news. When you page through search results from the Bing Web Search API, you are paging only [WebPages](reference/response-objects.md#webpage), and not other answer types such as images or news. Search results in `WebPage` objects may include results that appear in other answer types as well.
->
-> If you use the `responseFilter` query parameter without specifying any filter values, don't use the `count` and `offset` parameters. 
+The following table list the default and maximum count value per API.
+
+|API|Default|Maximum
+|-|-|-
+|Web Search|10|50
+|Image Search|35|150
+|News Search|10|100
+|Video Search|35|105
+
+For the Image, News, and Video APIs, paging applies to only the general search endpoint. For example, you may not use paging with the trending endpoints.
+
+
+## Paging web search results
+
+The Web Search API returns results that include webpages and may include other answers like images, videos, and news. When you page the search results, you are paging the webpage results and not the other answers. For example, if you set count to 15, Bing returns 15 webpage results, but may return 35 images and 4 news articles.
+
+The answers that Bing returns from page to page is unknown. For example, Bing may include news on the first page but not the second page, or vise-versa.
+
+Note that if you specify the *responseFilter* query parameter and do not include Webpages in the list of filters, you should not use the *count* and *offset* parameters.
+
+
+## Paging images and video results
+
+Typically, if you page 30 images at a time, you set the *offset* query parameter to 0 on your first request, and increment *offset* by 30 on each subsequent request. However, some results in the subsequent response may be duplicates of the previous response. For example, the first two images in the response may be the same as the last two images from the previous response.
+
+To eliminate duplicate results, set the *offset* query parameter to the value in the `nextOffset` field of the [Images](../bing-image-search/reference/response-objects.md#images) object. The `nextOffset` value adjusts for duplicates.
+
+```json
+{
+  "_type": "Images",
+  "readLink": "images/search?q=nurburgring",
+  "webSearchUrl": "https://www.bing.com/images/search?q=nurburgring&FORM=OIIARP",
+  "queryContext": {. . .},
+  "totalEstimatedMatches": 933,
+  "pivotSuggestions": [. . .],
+  "queryExpansion": [. . .],
+  "relatedSearches": [. . .],
+  "nextOffset": 65,
+  "currentOffset": 0,
+  "value": [. . .]
+}
+```
+
+For example, if you want to page 30 images at a time, you'd set *count* to 30 and *offset* to 0 in your first request. In your next request, you'd set *count* to 30 and *offset* to the value of `nextOffset`. The value of `nextOffset` will be 30 if there are no duplicates or it may be 32 if there are 2 duplicates.
+
+Use the same technique when paging videos.
+
 
 ## Next steps
 
-* [What are the Bing Web Search APIs?](bing-api-comparison.md)
-* [Bing Web Search API v7 reference](reference/endpoints.md)
+- Learn about [using rank](rank-results.md) to display search results.
