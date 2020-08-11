@@ -22,7 +22,7 @@ To specify whether you want Bing to use Unicode characters or HTML tags to mark 
 
 - Raw &mdash; Uses Unicode characters to mark content that needs special formatting. The Unicode characters are in the range E000 through E019. For example, Bing uses E000 and E001 to mark the beginning and end of words or phrases for hit highlighting.
 
-- HTML &mdash; Uses HTML tags to mark content that needs special formatting. For example, Bing uses <b> tags to mark the beginning and end of words or phrases for hit highlight.
+- HTML &mdash; Uses HTML tags to mark content that needs special formatting. For example, Bing uses \<b> tags to mark the beginning and end of words or phrases for hit highlight.
 
 The default is Raw.
 
@@ -44,7 +44,7 @@ Bing can return several different text decorations. For example, a `Computation`
 
 If the request did not specify decorations, the `expression` field would contain `log10(2)`. 
 
-If `textDecorations` is `true`, Bing may include the following markers in the display strings of answers. If there is no equivalent HTML tag, the table cell is empty.
+If `textDecorations` is **true**, Bing may include the following markers in the display strings of answers. If there is no equivalent HTML tag, the table cell is empty.
 
 |Unicode|HTML|Description
 |-|-|-

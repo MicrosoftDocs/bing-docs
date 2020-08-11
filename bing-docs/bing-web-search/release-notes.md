@@ -15,7 +15,7 @@ ms.date: 07/15/2020
 
 See the following sections for information about changes that were included with each release.
 
-## September 1, 2020
+## October 1, 2020
 
 Initial release of this version of Bing Web Search API. This API replaces the same API hosted by <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/bing-web-search/" target="_blank">Azure Cognitive Services</a>, which is being phased out. 
 

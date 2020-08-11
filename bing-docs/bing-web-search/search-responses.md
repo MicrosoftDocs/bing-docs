@@ -385,8 +385,6 @@ For information about how to handle the highlighting markers in `displayText`, s
 
 The following shows an example of the related queries usage in Bing.com.
 
-![Related searches example on Bing](media/bing-web-api/bing-web-rendered-relatedsearches.GIF)
-
 
 ## Computation answer
 
