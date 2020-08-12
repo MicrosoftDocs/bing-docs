@@ -144,6 +144,7 @@ The top-level object that the response includes when an image request succeeds.
 |<a name="pivotsuggestions"></a>pivotSuggestions|A list of segments in the original query. For example, if the query was *Red Flowers*, Bing might segment the query into *Red* and *Flowers*.<br/><br/>The Flowers pivot may contain query suggestions such as Red Peonies and Red Daisies, and the Red pivot may contain query suggestions such as Green Flowers and Yellow Flowers.<br/><br/>Only the Image Search API includes this field.|[Pivot](#pivot)  
 |<a name="queryexpansions"></a>queryExpansions|A list of expanded queries that narrows the original query. For example, if the query was *Microsoft Surface*, the expanded queries might be: Microsoft Surface **Pro 3**, Microsoft Surface **RT**, Microsoft Surface **Phone**, and Microsoft Surface **Hub**.<br/><br/>Only the Image Search API includes this field.|[Query](#query)  
 |readLink|A URL that you'd use to request images from Image Search API. Include other query parameters as needed. Only Web Search API responses include this field.|String 
+|relatedSearches|A list of related search queries made by others.|[Query](#query)[][]
 |<a name="similarterms">similarTerms|A list of terms that are similar in meaning to the user's query term.|[Query](#query)
 |<a name="totalestimatedmatches"></a>totalEstimatedMatches|The estimated number of images that are relevant to the query. Use this number along with the [count](query-parameters.md#count) and [offset](query-parameters.md#offset) query parameters to page the results.<br/><br/>Only the Image Search API includes this field.|Long
 |<a name="images-value">value|A list of images that are relevant to the query. If there are no results, the array is empty.|[Image](#image)[]
@@ -291,10 +292,10 @@ Defines a search query.
   
 |Name|Value|Type
 |-|-|-
-|<a name="query-displaytext"></a>displayText|The display version of the query term.|String
-|<a name="query-searchurl"></a>searchUrl|The URL that you use to get the results of the related search. Before using the URL, append query parameters as appropriate.<br/><br/>Use this URL if you're displaying the results in your own user interface. Otherwise, use the URL in `webSearchUrl`.|String
+|<a name="query-displaytext"></a>displayText|The display version of the search query string.|String
+|<a name="query-searchurl"></a>searchLink|The Image Search API URL that you use to get image search results. The URL includes the *q* query parameter that's set the search string in `text`. Before using the URL, append other query parameters as appropriate.<br/><br/>Use this URL if you're displaying the results in your own user interface. Otherwise, use the URL in `webSearchUrl`.|String
 |<a name="query-text"></a>text|The query string. Use this string as the query term in a new search request.|String  
-|<a name="query-thumbnail"></a>thumbnail|The URL to a thumbnail of a related image.<br/><br/>The object includes this field only for pivot suggestions and related searches.|[Thumbnail](#thumbnail) 
+|<a name="query-thumbnail"></a>thumbnail|A URL to a thumbnail image that represents the search string.|[Thumbnail](#thumbnail) 
 |<a name="query-websearchurl"></a>webSearchUrl|The URL that takes the user to the Bing search results page for the query.|String
 
   
