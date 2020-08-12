@@ -12,7 +12,7 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Using ranking to display search results  
+# Use ranking to display search results  
 
 Each search response includes a [RankingResponse](reference/response-objects.md#rankingresponse) answer tells you how to display the search results. The ranking response groups results by mainline content and sidebar content for a traditional search results page. If you don't display the results in a traditional mainline and sidebar format, you must provide the mainline content higher visibility than the sidebar content.  
 

@@ -12,307 +12,86 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Searching for entities with the Bing Entity API
+# Search the web for entities
 
-The Bing Entity Search API sends a search query to Bing and gets results that include entities and places. Place results include restaurants, hotel, or other local businesses. For places, the query can specify the name of the local business or it can ask for a list (for example, restaurants near me). Entity results include persons, places, or things. Place in this context is tourist attractions, states, countries/regions, etc.
+Bing Entity Search API returns entities and local business entities.
 
+Entities include people, places, or things. The API returns entity information for well-known entities only. Well-known people may include singers, actors, athletes, models, and others. *Places* refers to well-known tourist attractions, organizations, and localities such as a cities, states, countries, and regions. *Things* cover everything else not covered by places and people, such as animals, foods, drinks, books, songs, movies, and more. 
 
-## The Bing Entity Search API response
-
-The API response contains a [SearchResponse](../reference/response-objects.md#searchresponse) object. If Bing finds an entity or place that's relevant, the object includes the `entities` field, `places` field, or both. Otherwise, the response object does not include either field.
-
-> [!NOTE]
-> Entity responses support multiple markets, but the Places response supports only US Business locations. 
-
-The `entities` field is an [EntityAnswer](../reference/response-objects.md#entityanswer) object that contains a list of [Entity](../reference/response-objects.md#entity) objects. The list may contain a single dominant entity, multiple disambiguation entities, or both. 
-
-A dominant entity is returned when Bing believes it to be the only entity that satisfies the request (there is no ambiguity as to which entity satisfies the request). If multiple entities could satisfy the request, the list contains more than one disambiguation entity. For example, if the request uses the generic title of a movie franchise, the list likely contains disambiguation entities. But, if the request specifies a specific title from the franchise, the list likely contains a single dominant entity.
-
-Entities include well-known personalities such as singers, actors, athletes, models, etc.; places and landmarks such as Mount Rainier or Lincoln Memorial; and things such as a banana, goldendoodle, book, or movie title. The [entityPresentationInfo](../reference/response-objects.md#entitypresentationinfo) field contains hints that identify the entity's type. For example, if it's a person, movie, animal, or attraction. For a list of possible types, see [Entity Types](../reference/entity-types.md)
-
-```json
-"entityPresentationInfo": {
-    "entityScenario": "DominantEntity",
-    "entityTypeHints": ["Attraction"],
-    "entityTypeDisplayHint": "Mountain"
-}, ...
-```
-
-The following shows a response that includes a dominant and disambiguation entity.
-
-```json
-{
-    "_type": "SearchResponse",
-    "queryContext": {
-        "originalQuery": "Mount Rainier"
-    },
-    "entities": {
-        "value": [{
-            "contractualRules": [{
-                "_type": "ContractualRules/LicenseAttribution",
-                "targetPropertyName": "description",
-                "mustBeCloseToContent": true,
-                "license": {
-                    "name": "CC-BY-SA",
-                    "url": "https://creativecommons.org/licenses/by-sa/3.0/"
-                },
-                "licenseNotice": "Text under CC-BY-SA license"
-            },
-            {
-                "_type": "ContractualRules/LinkAttribution",
-                "targetPropertyName": "description",
-                "mustBeCloseToContent": true,
-                "text": "contoso.com",
-                "url": "http://contoso.com/mount_rainier"
-            },
-            {
-                "_type": "ContractualRules/MediaAttribution",
-                "targetPropertyName": "image",
-                "mustBeCloseToContent": true,
-                "url": "http://contoso.com/mount-rainier"
-            }],
-            "webSearchUrl": "https://www.bing.com/search?q=Mount%20Rainier...",
-            "name": "Mount Rainier",
-            "url": "http://www.northwindtraders.com/",
-            "image": {
-                "name": "Mount Rainier",
-                "thumbnailUrl": "https://www.bing.com/th?id=A4ae343983daa4...",
-                "provider": [{
-                    "_type": "Organization",
-                    "url": "http://contoso.com/mount_rainier"
-                }],
-                "hostPageUrl": "http://contoso.com/commons/7/72/mount_rain...",
-                "width": 110,
-                "height": 110
-            },
-            "description": "Mount Rainier is 14,411 ft tall and the highest mountain...",
-            "entityPresentationInfo": {
-                "entityScenario": "DominantEntity",
-                "entityTypeHints": ["Attraction"]
-            },
-            "bingId": "38b9431e-cf91-93be-0584-c42a3ecbfdc7"
-        },
-        {
-            "contractualRules": [{
-                "_type": "ContractualRules/MediaAttribution",
-                "targetPropertyName": "image",
-                "mustBeCloseToContent": true,
-                "url": "http://contoso.com/mount_rainier_national_park"
-            }],
-            "webSearchUrl": "https://www.bing.com/search?q=Mount%20Rainier%20National...",
-            "name": "Mount Rainier National Park",
-            "url": "http://worldwideimporters.com/",
-            "image": {
-                "name": "Mount Rainier National Park",
-                "thumbnailUrl": "https://www.bing.com/th?id=A91bdc5a1b648a695a39...",
-                "provider": [{
-                    "_type": "Organization",
-                    "url": "http://contoso.com/mount_rainier_national_park"
-                }],
-                "hostPageUrl": "http://contoso.com/en/7/7a...",
-                "width": 50,
-                "height": 50
-            },
-            "description": "Mount Rainier National Park is a United States National Park...",
-            "entityPresentationInfo": {
-                "entityScenario": "DisambiguationItem",
-                "entityTypeHints": ["Organization"]
-            },
-            "bingId": "29d4b681-227a-3924-7bb1-8a54e8666b8c"
-        }]
-    }
-}
-```
-
-The entity includes a `name`, `description`, and `image` field. When you display these fields in your user experience, you must attribute them. The `contractualRules` field contains a list of attributions that you must apply. The contractual rule identifies the field that the attribution applies to. For information about applying attribution, see [Attribution](#data-attribution).
-
-```json
-"contractualRules": [{
-    "_type": "ContractualRules/LicenseAttribution",
-    "targetPropertyName": "description",
-    "mustBeCloseToContent": true,
-    "license": {
-        "name": "CC-BY-SA",
-        "url": "https://creativecommons.org/licenses/by-sa/3.0/"
-    },
-    "licenseNotice": "Text under CC-BY-SA license"
-},
-{
-    "_type": "ContractualRules/LinkAttribution",
-    "targetPropertyName": "description",
-    "mustBeCloseToContent": true,
-    "text": "contoso.com",
-    "url": "http://contoso.com/wiki/Mount_Rainier"
-},
-{
-    "_type": "ContractualRules/MediaAttribution",
-    "targetPropertyName": "image",
-    "mustBeCloseToContent": true,
-    "url": "http://contoso.com/wiki/Mount_Rainier"
-}], ...
-```
-
-When you display the entity information (name, description, and image), you must also use the URL in the `webSearchUrl` field to link to the Bing search results page that contains the entity.
-
-## Find places
-
-The `places` field is a [LocalEntityAnswer](../reference/response-objects.md#localentityanswer) object that contains a list of [Place](../reference/response-objects.md#place) objects (see the [Entity Types](../reference/entity-types.md) for more information). The list contains one or more local entities that satisfy the request.
-
-Places include restaurant, hotels, or local businesses. The [entityPresentationInfo](../reference/response-objects.md#entitypresentationinfo) field contains hints that identify the local entity's type. The list contains a list of hints such as Place, LocalBusiness, Restaurant. Each successive hint in the array narrows the entity's type. For a list of possible types, see [Entity Types](../reference/entity-types.md)
-
-```json
-"entityPresentationInfo": {
-    "entityScenario": "ListItem",
-    "entityTypeHints": ["Place",
-    "LocalBusiness",
-    "Restaurant"]
-}, ...
-```
-> [!NOTE]
-> Entity responses support multiple markets, but the Places response supports only US Business locations. 
-
-Local aware entity queries such as *restaurant near me* require the user's location to provide accurate results. Your requests should always use the X-Search-Location and X-MSEdge-ClientIP headers to specify the user's location. If Bing thinks the query would benefit from the user's location, it sets the `askUserForLocation` field of [QueryContext](../reference/response-objects.md#querycontext) to **true**. 
-
-```json
-{
-    "_type": "SearchResponse",
-    "queryContext": {
-        "originalQuery": "Sinful Bakery and Cafe",
-        "askUserForLocation": true
-    },
-    ...
-}
-```
-
-A place result includes the place's name, address, telephone number, and URL to the entity's website. When you display the entity information, you must also use the URL in the `webSearchUrl` field to link to the Bing search results page that contains the entity.
-
-```json
-"places": {
-    "value": [{
-        "_type": "Restaurant",
-        "webSearchUrl": "https://www.bing.com/search?q=Sinful%20Bakery...",
-        "name": "Liberty's Delightful Sinful Bakery & Cafe",
-        "url": "http://libertysdelightfulsinfulbakeryandcafe.com/",
-        "entityPresentationInfo": {
-            "entityScenario": "ListItem",
-            "entityTypeHints": ["Place",
-            "LocalBusiness",
-            "Restaurant"]
-        },
-        "address": {
-            "addressLocality": "Seattle",
-            "addressRegion": "WA",
-            "postalCode": "98112",
-            "addressCountry": "US",
-            "neighborhood": "Madison Park"
-        },
-        "telephone": "(800) 555-1212"
-    }]
-}
-```
+Local business entities include restaurants, hotels, or other local businesses. The local business entities only when the query specifies the name of a local business or asks for a type of business. For example, *microsoft store* and *restaurants near me*. 
 
 > [!NOTE]
-> You, or a third party on your behalf, may not use, retain, store, cache, share, or distribute any data from the Entities API for the purpose of testing, developing, training, distributing or making available any non-Microsoft service or feature.  
+> The API supports only U.S. businesses for local business entities. 
 
-## Data attribution
+## The request
 
-Bing Entity API responses contain information owned by third parties. You are responsible to ensure your use is appropriate, for example by complying with any creative commons license your user experience may rely on.
+Making a request is easy if you have your subscription key. Just send an HTTP get request to the following endpoint:
 
-If an answer or result includes the `contractualRules`, `attributions`, or `provider` fields, you must attribute the data. If the answer does not include any of these fields, no attribution is required. If the answer includes the `contractualRules` field and the `attributions` and/or `provider` fields, you must use the contractual rules to attribute the data.
-
-The following example shows an entity that includes a MediaAttribution contractual rule and an Image that includes a `provider` field. The MediaAttribution rule identifies the image as the target of the rule, so you'd ignore the image's `provider` field and instead use the MediaAttribution rule to provide attribution.  
-
-```json
-"value": [{
-    "contractualRules": [
-        ...
-        {
-            "_type": "ContractualRules/MediaAttribution",
-            "targetPropertyName": "image",
-            "mustBeCloseToContent": true,
-            "url": "http://contoso.com/mount_rainier"
-        }
-    ],
-    ...
-    "image": {
-        "name": "Mount Rainier",
-        "thumbnailUrl": "https://www.bing.com/th?id=A46378861201...",
-        "provider": [{
-            "_type": "Organization",
-            "url": "http://contoso.com/mount_rainier"
-        }],
-        "hostPageUrl": "http://www.graphicdesigninstitute.com/Uploaded...",
-        "width": 110,
-        "height": 110
-    },
-    ...
-}]
+```
+https://api.bing.microsoft.com/bing/v7.0/entities
 ```
 
-If a contractual rule includes the `targetPropertyName` field, the rule applies only to the targeted field. Otherwise, the rule applies to the parent object that contains the `contractualRules` field.
+Here's a cURL example that shows you how to call the endpoint using your subscription key. Change the *q* query parameter to search for whatever you'd like.
 
-In the following example, the `LinkAttribution` rule includes the `targetPropertyName` field, so the rule applies to the `description` field. For rules that apply to specific fields, you must include a line immediately following the targeted data that contains a hyperlink to the provider's website. For example, to attribute the description, include a line immediately following the description text that contains a hyperlink to the data on the provider's website, in this case create a link to contoso.com.
-
-```json
-"entities": {
-    "value": [{
-            ...
-            "description": "Marcus Appel is a former American....",
-            ...
-            "contractualRules": [{
-                    "_type": "ContractualRules/LinkAttribution",
-                    "targetPropertyName": "description",
-                    "mustBeCloseToContent": true,
-                    "text": "contoso.com",
-                    "url": "http://contoso.com/cr?IG=B8AD73..."
-                 },
-            ...
-  
+```curl
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/entities?q=mt+rainier
 ```
 
-### License attribution
 
-If the list of contractual rules includes a [LicenseAttribution](../reference/response-objects.md#licenseattribution) rule, you must display the notice on the line immediately following the content that the license applies to. The `LicenseAttribution` rule uses the `targetPropertyName` field to identify the property that the license applies to.
+## Request and response headers
 
-The following shows an example that includes a `LicenseAttribution` rule.
+Although that's all the more you need to do to search the web, Bing does suggest you include a couple of other headers to provide a better search experience for your user. Those headers include:
 
-![License attribution](../media/licenseattribution.png)
+- User-Agent &mdash; Lets Bing know whether needs a mobile or desktop experience.
+- X-MSEdge-ClientID &mdash; Provides continuity of experience.
+- X-MSEdge-ClientIP &mdash; Provides the user's location for location aware queries.
+- X-Search-Location &mdash; Provides the user's location for location aware queries.
 
-The license notice that you display must include a hyperlink to the website that contains information about the license. Typically, you make the name of the license a hyperlink. For example, if the notice is **Text under CC-BY-SA license** and CC-BY-SA is the name of the license, you would make CC-BY-SA a hyperlink.
+The more information you can provide Bing, the better the search experience will be for your users. To learn more about these headers, see [Request headers](reference/headers.md#request-headers).
 
-### Link and text attribution
+Here's a cURL example that includes these headers.
 
-The [LinkAttribution](../reference/response-objects.md#linkattribution) and [TextAttribution](../reference/response-objects.md#textattribution) rules are typically used to identify the provider of the data. The `targetPropertyName` field identifies the field that the rule applies to.
+```curl
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/bing/v7.0/entities?q=mt+rainier
+```
 
-To attribute the providers, include a line immediately following the content that the attributions apply to (for example, the targeted field). The line should be clearly labeled to indicate that the providers are the source of the data. For example, "Data from: contoso.com". For `LinkAttribution` rules, you must create a hyperlink to the provider's website.
+Bing returns a couple of headers you should capture. 
 
-The following shows an example that includes `LinkAttribution` and `TextAttribution` rules.
+- BingAPIs-TraceId &mdash; ID that identifies the request in the log file.
+- X-MSEdge-ClientID &mdash; The ID that you need to pass in subsequent request to provide continuity of experience.
+- BingAPIs-Market &mdash; The market used by Bing for the request.
 
-![Link text attribution](../media/linktextattribution.png)
+To learn more about these headers, see [Response headers](reference/headers.md#response-headers).
 
-### Media attribution
+Here's a cURL call that returns the response headers. If you want to remove the response data so you can see only the headers, include the `-o nul` parameter.
 
-If the entity includes an image and you display it, you must provide a click-through link to the provider's website. If the entity includes a [MediaAttribution](../reference/response-objects.md#mediaattribution) rule, use the rule's URL to create the click-through link. Otherwise, use the URL included in the image's `provider` field to create the click-through link.
+```curl
+curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/entities?q=mt+rainier
+```
 
-The following shows an example that includes an image's `provider` field and contractual rules. Because the example includes the contractual rule, you ignore the image's `provider` field and apply the `MediaAttribution` rule.
 
-![Media attribution](../media/mediaattribution.png)
+## Query parameters
 
-### Search or search-like experience
+The only query parameter that you must pass is the *q* parameter, which you set to the user's query string. You must URL encode the user's query string and all query parameter values that you pass.
 
-Just like with Bing Web Search API, the Bing Entity Search API may only be used as a result of a direct user query or search, or as a result of an action within an app or experience that logically can be interpreted as a user’s search request. For illustration purposes, the following are some examples of acceptable search or search-like experiences.
+The API supports a number of query parameters that you can pass in your request. Here's a list of the ones you're most likely to pass.
 
-- User enters a query directly into a search box in an app
-- User selects specific text or image and requests “more information” or “additional information”
-- User asks a search bot about a particular topic
-- User dwells on a particular object or entity in a visual search type scenario
+- *mkt* &mdash; Used to specify the market where the results come from, which is typically the market where the user is making the request from.
+- *safeSearch* &mdash; Used to specify the user's safe search preference.
+- *responseFilter* &mdash; Used to limit the results to a specific answer. For example, if you want only entities or only local business entities.
 
-If you are not sure if your experience can be considered a search-like experience, it is recommended that you check with Microsoft.
+To learn more about these parameters and other parameters that you may specify, see [Query parameters](reference/query-parameters.md).
 
-## Throttling requests
+Here's a cURL example that includes these query parameters.
 
-[!INCLUDE [bing-throttling-requests](../../../includes/bing-throttling-requests.md)]
+```curl
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/entities?q=mt_rainier&mkt=en-us&safeSearch=moderate&responseFilter=entities
+```
+
 
 ## Next steps
 
-* Try a [Quickstart](../quickstarts/rest/csharp.md) to get started searching for entities with the Bing Entity Search API.
+- Learn about the [response](search-responses.md) that Bing returns for the user's query.
+- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
+
+

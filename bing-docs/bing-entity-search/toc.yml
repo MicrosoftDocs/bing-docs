@@ -7,8 +7,10 @@
       href: ../Bing-Web-Search/bing-api-comparison.md
       maintainContext: true
 - name: Quickstarts
-  expanded: true
+  # expanded: true
   items:
+    - name: Quickstarts
+      href: quickstarts/quickstarts.md
     - name: REST API
       items:
       - name: C#
@@ -38,22 +40,18 @@
   - name: Build a single-page web app
     href: tutorial/bing-entities-search-single-page-app.md
 - name: Samples
-  items:
-  - name: REST samples
-    href: rest-samples.md
-  - name: SDK samples
-    href: sdk-samples.md
+  href: samples.md
 - name: How-to guides
   items:
-    - name: Searching for entities
+    - name: Search for entities
       href: how-to/search-for-entities.md
-    - name: Sending search requests
-      href: how-to/sending-requests.md
+    - name: Handle the response
+      href: how-to/search-responses.md
     - name: Rank results
       href: how-to/rank-results.md
     - name: Resize and crop thumbnails
-      maintainContext: true
       href: ../bing-web-search/resize-and-crop-thumbnails.md
+      maintainContext: true
 - name: Reference
   items:
   - name: REST
@@ -90,11 +88,9 @@
     href: https://azure.microsoft.com/try/cognitive-services/?api=bing-web-search-api
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
-  - name: Bing Entity Search endpoint
-    href: entity-search-endpoint.md
   - name: Analytics for Bing Entity Search API
-    maintainContext: true
     href: ../bing-web-search/bing-web-stats.md
+    maintainContext: true
   - name: Compliance
     href: https://azure.microsoft.com/support/legal/cognitive-services-compliance-and-privacy/
   - name: Support

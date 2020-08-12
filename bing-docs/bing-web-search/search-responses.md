@@ -39,7 +39,7 @@ When you send a request to Web Search API, it returns a [SearchResponse](referen
 }
 ```
 
-Basically, Bing returns any answer it finds relevant to the user's query, which is typically a subset of the possible answers. But Bing always returns the following answers in each response:
+Basically, Bing returns any answer it finds that's relevant to the user's query, which is typically a subset of the possible answers. But Bing always returns the following answers in each response:
 
 ```json
 {
@@ -927,7 +927,6 @@ The following answer shows what the JSON response looks like for the query, *mt 
 ```json
 {
   "_type": "SearchResponse",
-  "instrumentation": {...},
   "queryContext": {
     "originalQuery": "mt rainier"
   },
@@ -1026,7 +1025,7 @@ The following answer shows what the JSON response looks like for the query, *mt 
 
 ### Entity attribution
 
-Entities may include the `contractualRules` field, which contains one or more attributions that you must apply to the entity. Not all entities include rules. If the entity provides contractual rules, you must abide by them. The following show what the rules look like in the JSON response. (The example does not show the TextAttribution rule.)
+Entities may include the `contractualRules` field, which contains one or more attributions that you must apply when you display the entity. Not all entities include rules. If the entity provides contractual rules, you must abide by them. 
 
 Entity information typically comes from third parties. You are responsible for ensuring that your use is appropriate; for example, by complying with any creative commons license your user experience relies on.
 
@@ -1035,10 +1034,10 @@ For information about applying attribution, see [Data Attribution](data-attribut
 
 ## Places answer
 
-The [places](../bing-entity-search/reference/response-objects.md#localentityanswer) answer contains a list of local business entity objects that Bing thought were relevant to the query. Bing returns this answer only when the query specifies the name of a local business or asks for a type of business (for example, *restaurants near me* or *microsoft store gas near me*). Each [place](../bing-entity-search/reference/response-objects.md#entity) in the list identifies a restaurant, hotel, or other local business.
+The [places](../bing-entity-search/reference/response-objects.md#localentityanswer) answer contains a list of local business entity objects that Bing thought were relevant to the query. Bing returns this answer only when the query specifies the name of a local business or asks for a type of business. For example, *microsoft store* and *restaurants near me*. Each [place](../bing-entity-search/reference/response-objects.md#entity) in the list identifies a restaurant, hotel, or other local business.
 
 > [!NOTE]
-> The Places answer supports only US Business locations. 
+> The Places answer supports only U.S. business locations. 
  
 > [!NOTE]
 > You, or a third party on your behalf, may not use, retain, store, cache, share, or distribute any data from the Places answer for the purpose of testing, developing, training, distributing or making available any non-Microsoft service or feature.
@@ -1071,7 +1070,7 @@ The [EntityPresentationInfo](../bing-entity-search/reference/response-objects.md
         },
 ```
 
-The local entity includes the place's name, address, and telephone number. If the URL to the place’s website is known, the entity includes it, too. When you display the entity information, use the URL in the `webSearchUrl` field to create link that takes the user to Bing’s search results page for the entity.
+The local entity includes the place's name, address, and telephone number. If the URL to the place’s website is known, the entity includes it, too. When you display the entity information, use the URL in the `url` field to create link that takes the user to the business' website; otherwise, use the URL in `webSearchUrl` to take the user to Bing’s search results page for the entity.
 
 The following example shows what the JSON response looks like for the query, *coffee near me*. 
 

@@ -1,7 +1,7 @@
 ---
 title: Bing Autosuggest API quickstarts
 titleSuffix: Bing Search Services
-description: Use these quickstarts to make your first Web Search API call in a matter of minutes.
+description: Use these quickstarts to make your first Autosuggest API call in a matter of minutes.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen

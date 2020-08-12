@@ -29,11 +29,16 @@ To get started using the API, pick the subscription you want from <a href="https
 You can easily call the API by sending a native HTTP GET request or by using the Autosuggest SDK. For examples to help you get up and running quickly for either option, see [Quickstarts](quickstarts/quickstarts.md).
 
 
+## View API metrics
+
+Bing provides API metrics, which you can use to inform your strategic decisions. Quickly retrieve statistics such as your top queries, call volume, market distribution, response code summary, and many more. For details, see [Bing Web Statistics](../bing-web-search/bing-web-stats.md).
+
+
 ## Next steps
 
 - Learn about other APIs in the [family of Bing Search APIs](../bing-web-search/bing-api-comparison.md).
-- Learn about [use and display requirements](use-display-requirements.md) for Bing Search APIs.  
-- Learn about [calling the API](get-suggestions.md).
+- Learn about [use and display requirements](../bing-web-search/use-display-requirements.md) for Bing Search APIs.  
+- Learn about [calling the API](how-to/get-suggestions.md).
 - Review [Autosuggest API v7 reference](reference/endpoints.md) documentation.  
 
 

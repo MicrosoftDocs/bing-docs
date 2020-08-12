@@ -13,25 +13,14 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Using ranking to display entity search results  
+# Use ranking to display entity search results  
 
-Each entity search response includes a [RankingResponse](../reference/response-objects.md#rankingresponse) answer that specifies how you must display search results returned by the Bing Entity Search API. The ranking response groups results into pole, mainline, and sidebar content. The pole result is the most important or prominent result and should be displayed first. If you do not display the remaining results in a traditional mainline and sidebar format, you must provide the mainline content higher visibility than the sidebar content. 
-  
-Within each group, the [Items](../reference/response-objects.md#rankinggroup-items) array identifies the order that the content must appear in. Each item provides two ways to identify the result within an answer.  
- 
+Each entity search response includes a [RankingResponse](../reference/response-objects.md#rankingresponse) answer that tells you how to display the search results. For details about using the ranking response, see [Web Search API](../../bing-web-search/rank-results.md).
 
-|Field | Description  |
-|---------|---------|
-|`answerType` and `resultIndex` | `answerType` identifies the answer (either Entity or Place) and `resultIndex` identifies a result within that answer (for example, an entity). The index starts at 0.|
-|`value`    | `value` Contains an ID that matches the ID of either an answer or a result within the answer. Either the answer or the results contain the ID but not both. |
-  
-Using the `answerType` and `resultIndex` is a two-step process. First, use `answerType` to identify the answer that contains the results to display. Then use `resultIndex` to index into that answer's results to get the result to display. (The `answerType` value is the name of the field in the [SearchResponse](../reference/response-objects.md#searchresponse) object.) If you're supposed to display all the answer's results together, the ranking response item doesn't include the `resultIndex` field.
 
-Using the ID requires you to match the ranking ID with the ID of an answer or one of its results. If an answer object includes an `id` field, display all the answer's results together. For example, if the `Entities` object includes the `id` field, display all the entities articles together. If the `Entities` object does not include the `id` field, then each entity contains an `id` field and the ranking response mixes the entities with the Places results.  
-  
-## Ranking response example
+## Ranking response examples
 
-The following shows an example `RankingResponse` object.
+The following shows an example **RankingResponse** object for entities.
   
 ```json
 {
@@ -63,9 +52,67 @@ The following shows an example `RankingResponse` object.
 }
 ```
 
-Based on this ranking response, the sidebar would display the two entity results related to Jimi Hendrix.
+Based on this ranking response, you'd display both entities in the sidebar.
+
+And this example shows what the ranking response looks like for local business entities.
+
+```json
+{
+  "_type": "SearchResponse",
+  "queryContext": {
+    "originalQuery": "hilton near me",
+    "askUserForLocation": true
+  },
+  "places": { ... },
+  "rankingResponse": {
+    "mainline": {
+      "items": [
+        {
+          "answerType": "Places"
+        },
+        {
+          "answerType": "Places",
+          "resultIndex": 0,
+          "value": {
+            "id": "https://www.bingapis.com/api/v7/#Places.0"
+          }
+        },
+        {
+          "answerType": "Places",
+          "resultIndex": 1,
+          "value": {
+            "id": "https://www.bingapis.com/api/v7/#Places.1"
+          }
+        },
+        {
+          "answerType": "Places",
+          "resultIndex": 2,
+          "value": {
+            "id": "https://www.bingapis.com/api/v7/#Places.2"
+          }
+        },
+        {
+          "answerType": "Places",
+          "resultIndex": 3,
+          "value": {
+            "id": "https://www.bingapis.com/api/v7/#Places.3"
+          }
+        },
+        {
+          "answerType": "Places",
+          "resultIndex": 4,
+          "value": {
+            "id": "https://www.bingapis.com/api/v7/#Places.4"
+          }
+        }
+      ]
+    }
+  }
+}
+```
+
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Create a single-page web app](../tutorial/bing-entities-search-single-page-app.md)
+- Learn about [sending entity search requests](search-for-entities.md)
+- Learn about the [quickstarts](quickstarts/quickstarts.md) and [samples](samples.md) that are available to help you get up and running fast.
