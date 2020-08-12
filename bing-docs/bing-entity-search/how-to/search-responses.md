@@ -14,7 +14,7 @@ ms.author: scottwhi
 
 # # Handling the response 
 
-When you send a request to Entity Search API, it returns a [SearchResponse](reference/response-objects.md#searchresponse) object in the response body. The object may include one or more of the following answer types:
+When you send a request to Entity Search API, it returns a [SearchResponse](../reference/response-objects.md#searchresponse) object in the response body. The object may include one or more of the following answer types:
 
 ```json
 {
@@ -36,7 +36,7 @@ Basically, Bing returns any answer it finds that's relevant to the user's query,
 }
 ```
 
-But if an error occurs, the response body contains an [ErrorResponse](reference/response-objects.md#errorresponse) object. Bing returns an error response for all 400 level HTTP status codes. [Read more](reference/error-codes.md)
+But if an error occurs, the response body contains an [ErrorResponse](../reference/response-objects.md#errorresponse) object. Bing returns an error response for all 400 level HTTP status codes. [Read more](../reference/error-codes.md)
 
 ```json
 {
@@ -54,7 +54,7 @@ But if an error occurs, the response body contains an [ErrorResponse](reference/
 
 The rest of this topic provides details about each of the answer types in the **SearchResponse** object.
 
-[!INCLUDE [bing-url-note](../../includes/bing-url-note.md)]
+[!INCLUDE [bing-url-note](../../../includes/bing-url-note.md)]
 
 
 ## Entities answer
@@ -261,14 +261,14 @@ Entities may include the `contractualRules` field, which contains one or more at
 
 Entity information typically comes from third parties. You are responsible for ensuring that your use is appropriate; for example, by complying with any creative commons license your user experience relies on.
 
-For information about applying attribution, see [Data Attribution](../../bing-web-search-api/data-attribution.md).
+For information about applying attribution, see [Data Attribution](../../bing-web-search/data-attribution.md).
 
 
 
 
 ## Places answer
 
-The [places](../bing-entity-search/reference/response-objects.md#localentityanswer) answer contains a list of local business entity objects that Bing thought were relevant to the query. Bing returns this answer only when the query specifies the name of a local business or asks for a type of business. For example, *microsoft store* and *restaurants near me*. Each [place](../bing-entity-search/reference/response-objects.md#entity) in the list identifies a restaurant, hotel, or other local business.
+The [places](../reference/response-objects.md#localentityanswer) answer contains a list of local business entity objects that Bing thought were relevant to the query. Bing returns this answer only when the query specifies the name of a local business or asks for a type of business. For example, *microsoft store* and *restaurants near me*. Each [place](../reference/response-objects.md#entity) in the list identifies a restaurant, hotel, or other local business.
 
 > [!NOTE]
 > The Places answer supports only U.S. business locations. 
@@ -276,13 +276,13 @@ The [places](../bing-entity-search/reference/response-objects.md#localentityansw
 > [!NOTE]
 > You, or a third party on your behalf, may not use, retain, store, cache, share, or distribute any data from the Places answer for the purpose of testing, developing, training, distributing or making available any non-Microsoft service or feature.
 
-Local aware queries such as *restaurant near me* require the user's location to provide accurate results. Although optional, you should always provide the user’s location using the X-Search-Location and X-MSEdge-ClientIP [headers](reference/headers.md). The X-Search-Location header uses the user’s geographical coordinates (latitude and longitude). 
+Local aware queries such as *restaurant near me* require the user's location to provide accurate results. Although optional, you should always provide the user’s location using the X-Search-Location and X-MSEdge-ClientIP [headers](../reference/headers.md). The X-Search-Location header uses the user’s geographical coordinates (latitude and longitude). 
 
 ```
 X-Search-Location: lat:47.806897;long:-122.221304;re:30
 ```
 
-If you don’t provide the user’s location and Bing thinks the query would benefit from the user's location, it sets the `askUserForLocation` field of [QueryContext](reference/response-objects.md#querycontext) to **true**.
+If you don’t provide the user’s location and Bing thinks the query would benefit from the user's location, it sets the `askUserForLocation` field of [QueryContext](../reference/response-objects.md#querycontext) to **true**.
 
 ```json
   "queryContext": {
@@ -291,7 +291,7 @@ If you don’t provide the user’s location and Bing thinks the query would ben
   },
 ```
 
-The [EntityPresentationInfo](../bing-entity-search/reference/response-objects.md#entitypresentationinfo) object contains hints that identify the local entity's type. The list contains a list of hints such as Place, LocalBusiness, Restaurant. Each successive hint in the array narrows the entity's type. 
+The [EntityPresentationInfo](../reference/response-objects.md#entitypresentationinfo) object contains hints that identify the local entity's type. The list contains a list of hints such as Place, LocalBusiness, Restaurant. Each successive hint in the array narrows the entity's type. 
 
 ```json
         "entityPresentationInfo": {

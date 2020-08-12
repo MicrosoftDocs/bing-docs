@@ -115,4 +115,4 @@ And this example shows what the ranking response looks like for local business e
 ## Next steps
 
 - Learn about [sending entity search requests](search-for-entities.md)
-- Learn about the [quickstarts](quickstarts/quickstarts.md) and [samples](samples.md) that are available to help you get up and running fast.
+- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.

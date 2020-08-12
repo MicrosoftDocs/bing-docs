@@ -47,7 +47,7 @@ Although that's all the more you need to do to search the web, Bing does suggest
 - X-MSEdge-ClientIP &mdash; Provides the user's location for location aware queries.
 - X-Search-Location &mdash; Provides the user's location for location aware queries.
 
-The more information you can provide Bing, the better the search experience will be for your users. To learn more about these headers, see [Request headers](reference/headers.md#request-headers).
+The more information you can provide Bing, the better the search experience will be for your users. To learn more about these headers, see [Request headers](../reference/headers.md#request-headers).
 
 Here's a cURL example that includes these headers.
 
@@ -61,7 +61,7 @@ Bing returns a couple of headers you should capture.
 - X-MSEdge-ClientID &mdash; The ID that you need to pass in subsequent request to provide continuity of experience.
 - BingAPIs-Market &mdash; The market used by Bing for the request.
 
-To learn more about these headers, see [Response headers](reference/headers.md#response-headers).
+To learn more about these headers, see [Response headers](../reference/headers.md#response-headers).
 
 Here's a cURL call that returns the response headers. If you want to remove the response data so you can see only the headers, include the `-o nul` parameter.
 
@@ -80,7 +80,7 @@ The API supports a number of query parameters that you can pass in your request.
 - *safeSearch* &mdash; Used to specify the user's safe search preference.
 - *responseFilter* &mdash; Used to limit the results to a specific answer. For example, if you want only entities or only local business entities.
 
-To learn more about these parameters and other parameters that you may specify, see [Query parameters](reference/query-parameters.md).
+To learn more about these parameters and other parameters that you may specify, see [Query parameters](../reference/query-parameters.md).
 
 Here's a cURL example that includes these query parameters.
 
