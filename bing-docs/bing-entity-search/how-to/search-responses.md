@@ -12,7 +12,7 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Handling the response 
+# Handling the entity search response 
 
 When you send a request to Entity Search API, it returns a [SearchResponse](../reference/response-objects.md#searchresponse) object in the response body. The object may include one or more of the following answer types:
 

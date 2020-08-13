@@ -1,5 +1,5 @@
 - name: Bing Spell Check documentation
-  expanded: true
+  # expanded: true
   items:
   - name: What is the Bing Spell Check API?
     href: overview.md
@@ -9,9 +9,9 @@
 - name: Quickstarts
   items:
   - name: Quickstarts
-      href: quickstarts/quickstarts.md
+    href: quickstarts/quickstarts.md
   - name: REST API
-    expanded: true
+    # expanded: true
     items:
     - name: Using C#
       href: quickstarts/rest/csharp.md
@@ -35,10 +35,10 @@
     href: tutorial/spellcheck.md
 - name: How-to guides
   items:
-  - name: Sending requests to the Bing Spell Check API
+  - name: Check text for spelling and grammar mistakes
     href: how-to/sending-requests.md
-  - name: Using the Bing Spell Check API
-    href: how-to/using-spell-check.md
+  - name: Handling the response
+    href: how-to/search-response.md
   - name: Upgrade from v5 to v7
     href: bing-spell-check-upgrade-guide-v5-to-v7.md
 - name: Samples

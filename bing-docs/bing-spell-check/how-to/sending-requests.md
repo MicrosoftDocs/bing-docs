@@ -95,6 +95,6 @@ curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Ocp-Apim-S
 
 ## Next steps
 
-- Learn about the [spell check response](search-responses.md) that Bing returns.
+- Learn about the [spell check response](search-response.md) that Bing returns.
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
 

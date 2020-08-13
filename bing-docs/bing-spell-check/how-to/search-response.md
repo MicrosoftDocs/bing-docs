@@ -13,7 +13,7 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Handling the response
+# Handling the spell check response
 
 When you send a request to Spell Check API, it returns a [SpellCheck](../reference/response-objects.md#spellcheck) object in the response body. The `flaggedTokens` list contains a [FlaggedToken](../reference/response-objects.md#flaggedtoken) object for each word that Bing flagged for spelling and grammar issues. If the API didn't find an error, or the specified market is not supported, the list is empty.
 
@@ -79,72 +79,7 @@ Based on the text string, *when its your turn turn, john, come runing*, the foll
 
 |Proof mode|Spell mode
 |-|-
-|```json
-{
-  "_type": "SpellCheck",
-  "flaggedTokens": [
-    {
-      "offset": 5,
-      "token": "its",
-      "type": "UnknownToken",
-      "suggestions": [
-        {
-          "suggestion": "it's",
-          "score": 0.8048868675051712
-        }
-      ]
-    },
-    {
-      "offset": 19,
-      "token": "turn",
-      "type": "RepeatedToken",
-      "suggestions": [
-        {
-          "suggestion": "",
-          "score": 0
-        }
-      ]
-    },
-    {
-      "offset": 36,
-      "token": "runing",
-      "type": "UnknownToken",
-      "suggestions": [
-        {
-          "suggestion": "running",
-          "score": 0.8048868675051712
-        }
-      ]
-    }
-  ]
-}```|{
-  "_type": "SpellCheck",
-  "flaggedTokens": [
-    {
-      "offset": 5,
-      "token": "its",
-      "type": "UnknownToken",
-      "suggestions": [
-        {
-          "suggestion": "it's",
-          "score": 1
-        }
-      ]
-    },
-    {
-      "offset": 36,
-      "token": "runing",
-      "type": "UnknownToken",
-      "suggestions": [
-        {
-          "suggestion": "running",
-          "score": 1
-        }
-      ]
-    }
-  ],
-  "correctionType": "High"
-}
+|{<br/>  "_type": "SpellCheck",<br/>  "flaggedTokens": [<br/>    {<br/>      "offset": 5,<br/>      "token": "its",<br/>      "type": "UnknownToken",<br/>      "suggestions": [<br/>        {<br/>          "suggestion": "it's",<br/>          "score": 0.8048868675051712<br/>        }<br/>      ]<br/>    },<br/>    {<br/>      "offset": 19,<br/>      "token": "turn",<br/>      "type": "RepeatedToken",<br/>      "suggestions": [<br/>        {<br/>          "suggestion": "",<br/>          "score": 0<br/>        }<br/>      ]<br/>    },<br/>    {<br/>      "offset": 36,<br/>      "token": "runing",<br/>      "type": "UnknownToken",<br/>      "suggestions": [<br/>        {<br/>          "suggestion": "running",<br/>          "score": 0.8048868675051712<br/>        }<br/>      ]<br/>    }<br/>  ]<br/>}|{<br/>  "_type": "SpellCheck",<br/>  "flaggedTokens": [<br/>    {<br/>      "offset": 5,<br/>      "token": "its",<br/>      "type": "UnknownToken",<br/>      "suggestions": [<br/>        {<br/>          "suggestion": "it's",<br/>          "score": 1<br/>        }<br/>      ]<br/>    },<br/>    {<br/>      "offset": 36,<br/>      "token": "runing",<br/>      "type": "UnknownToken",<br/>      "suggestions": [<br/>        {<br/>          "suggestion": "running",<br/>          "score": 1<br/>        }<br/>      ]<br/>    }<br/>  ],<br/>  "correctionType": "High"<br/>}
 
 
 ## Next steps  
