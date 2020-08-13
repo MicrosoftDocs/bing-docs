@@ -41,14 +41,14 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 ## Request and response headers
 
-Besides the required subscription key header, Bing does suggest you include a couple of other headers to provide a better search experience for your user. Those headers include:
+Besides the required subscription key header, Bing does suggest you include a couple of other headers to provide a better experience for your user. Those headers include:
 
 - User-Agent &mdash; Lets Bing know whether needs a mobile or desktop experience.
 - X-MSEdge-ClientID &mdash; Provides continuity of experience.
 - X-MSEdge-ClientIP &mdash; Provides the user's location for location aware queries.
 - X-Search-Location &mdash; Provides the user's location for location aware queries.
 
-The more information you can provide Bing, the better the search experience will be for your users. To learn more about these headers, see [Request headers](../reference/headers.md#request-headers).
+The more information you can provide Bing, the better the experience will be for your users. To learn more about these headers, see [Request headers](../reference/headers.md#request-headers).
 
 Here's a cURL example that includes these headers.
 

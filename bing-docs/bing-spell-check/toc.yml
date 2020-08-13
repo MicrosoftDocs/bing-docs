@@ -8,6 +8,8 @@
     maintainContext: true
 - name: Quickstarts
   items:
+  - name: Quickstarts
+      href: quickstarts/quickstarts.md
   - name: REST API
     expanded: true
     items:
@@ -40,11 +42,7 @@
   - name: Upgrade from v5 to v7
     href: bing-spell-check-upgrade-guide-v5-to-v7.md
 - name: Samples
-  items:
-  - name: REST samples
-    href: rest-samples.md
-  - name: SDK samples
-    href: sdk-samples.md
+  href: samples.md
 - name: Reference
   items:
   - name: REST

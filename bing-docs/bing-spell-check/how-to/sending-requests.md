@@ -13,114 +13,88 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Sending requests to the Bing Spell Check API
+# Check text for spelling and grammar mistakes
 
-To check a text string for spelling and grammar errors, you'd send a GET request to the following endpoint:  
+Checking a text string for spelling and grammar mistakes is easy if you have your subscription key. Just send an HTTP get request to the following endpoint:
 
 ```
 https://api.bing.microsoft.com/bing/v7.0/spellcheck
-```  
-  
-The request must use the HTTPS protocol.
-
-We recommend that all requests originate from a server. Distributing the key as part of a client application provides more opportunity for a malicious third-party to access it. A server also provides a single upgrade point for future versions of the API.
-
-The request must specify the [text](../reference/query-parameters.md#text) query parameter, which contains the text string to proof. Although optional, the request should also specify the [mkt](../reference/query-parameters.md#mkt) query parameter, which identifies the market where you want the results to come from. For a list of optional query parameters such as `mode`, see [Query Parameters](../reference/query-parameters.md). All query parameter values must be URL encoded.  
-  
-The request must specify the [Ocp-Apim-Subscription-Key](../reference/headers.md#subscriptionkey) header. Although optional, you are encouraged to also specify the following headers. These headers help the Bing Spell Check API return more accurate results:  
-  
--   [User-Agent](../reference/headers.md#useragent)  
--   [X-MSEdge-ClientID](../reference/headers.md#clientid)  
--   [X-Search-ClientIP](../reference/headers.md#clientip)  
--   [X-Search-Location](../reference/headers.md#location)  
-
-For a list of all request and response headers, see [Headers](../reference/headers.md).
-
-When calling the Bing Spell Check API using JavaScript, your browser's built-in security features might prevent you from accessing the values of these headers.
-
-To resolve this issue, you can make the Bing Spell Check API request through a CORS proxy. The response from such a proxy has a `Access-Control-Expose-Headers` header that identifies response headers and makes them available to JavaScript.
-
-It's easy to install a CORS proxy to allow the [tutorial app](../tutorial/spellcheck.md) to access the optional client headers. First, if you don't already have it, [install Node.js](https://nodejs.org/en/download/). Then enter the following command at a command prompt.
-
-```console
-npm install -g cors-proxy-server
 ```
 
-Next, change the Bing Spell Check API endpoint in the HTML file to:
-`http://localhost:9090/https://api.bing.microsoft.com/bing/v7.0/spellcheck/`
+Here's a cURL example that shows you how to call the endpoint using your subscription key. Set the [text](../reference/query-parameters.md#text) query parameter to the string to proof.
 
-Finally, start the CORS proxy with the following command:
-
-```console
-cors-proxy-server
+```curl
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/spellcheck?text=when+its+your+turn+turn,+john,+come+runing
 ```
 
-Leave the command window open while you use the tutorial app; closing the window stops the proxy. In the expandable HTTP Headers section below the search results, you can now see the `X-MSEdge-ClientID` header (among others) and verify that it's the same for each request.
 
-## Example API request
+## Request and response headers
 
-The following shows a request that includes all the suggested query parameters and headers. If it's your first time calling any of the Bing APIs, don't include the client ID header. Only include the client ID if you've previously called a Bing API and Bing returned a client ID for the user and device combination. 
+Although that's all the more you need to do to spell check a text string, Bing does suggest you include a couple of other headers to provide a better experience for your user. Those headers include:
+
+- User-Agent &mdash; Lets Bing know whether needs a mobile or desktop experience.
+- X-MSEdge-ClientID &mdash; Provides continuity of experience.
+- X-MSEdge-ClientIP &mdash; Provides the user's location for location aware queries.
+- X-Search-Location &mdash; Provides the user's location for location aware queries.
+
+The more information you can provide Bing, the better the experience will be for your users. To learn more about these headers, see [Request headers](../reference/headers.md#request-headers).
+
+Here's a cURL example that includes these headers.
+
+```curl
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/bing/v7.0/spellcheck?text=when+its+your+turn+turn,+john,+come+runing
+```
+
+Bing returns a couple of headers you should capture. 
+
+- BingAPIs-TraceId &mdash; ID that identifies the request in the log file.
+- X-MSEdge-ClientID &mdash; The ID that you need to pass in subsequent request to provide continuity of experience.
+- BingAPIs-Market &mdash; The market used by Bing for the request.
+
+To learn more about these headers, see [Response headers](../reference/headers.md#response-headers).
+
+Here's a cURL call that returns the response headers. If you want to remove the response data so you can see only the headers, include the `-o nul` parameter.
+
+```curl
+curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/spellcheck?text=when+its+your+turn+turn,+john,+come+runing
+```
+
+
+## Query parameters
+
+The only query parameter that you must pass is the *text* parameter, which you set to the text string to proof. You must URL encode the text string and all query parameter values that you pass.
+
+The API supports a number of query parameters that you can pass in your request. Here's a list of the ones you're most likely to pass.
+
+- *mkt* &mdash; Used to specify the market where the results come from, which is typically the market where the user is making the request from.
+- *mode* &mdash; Used to specify the type of spelling and grammar checks to perform. Possible values are Proof (default) and Spell.  
   
-```http
-GET https://api.bing.microsoft.com/bing/v7.0/spellcheck?text=when+its+your+turn+turn,+john,+come+runing&mkt=en-us HTTP/1.1
-Ocp-Apim-Subscription-Key: 123456789ABCDE  
-X-MSEdge-ClientIP: 999.999.999.999  
-X-Search-Location: lat:47.60357;long:-122.3295;re:100  
-X-MSEdge-ClientID: <blobFromPriorResponseGoesHere>  
-Host: api.cognitive.microsoft.com  
+  Use Proof mode for document scenarios. Proof mode provides the most comprehensive checks, adding capitalization, basic punctuation, and other features to aid document creation, but it's available only in the en-US (English-United States), es-ES (Spanish-Spain), pt-BR (Portuguese-Brazil) markets. In this mode, the text string is limited to 4,096 characters.  
+  
+  Use Spell mode for search scenarios. Spell mode is more aggressive in order to return better search results. Spell mode finds most spelling mistakes but doesn't find some of the grammar errors that Proof catches; for example, capitalization and repeated words. In this mode, the text string is limited to 130 characters for these languages: en, de, es, fr, pl, pt, sv, ru, nl, nb, tr-tr, it, zh, ko; and 65 characters for all others.
+
+To learn more about these parameters and other parameters that you may specify, see [Query parameters](../reference/query-parameters.md).
+
+Here's a cURL example that includes these query parameters.
+
+```curl
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/spellcheck?text=when+its+your+turn+turn,+john,+come+runing&mkt=en-us&mode=proof
 ```
 
-The following shows the response to the previous request. The example also shows the Bing-specific response headers.
 
-[!INCLUDE [bing-url-note](../../../includes/bing-url-note.md)]
+## Should I use POST and GET?
 
-```json
-BingAPIs-TraceId: 76DD2C2549B94F9FB55B4BD6FEB6AC
-X-MSEdge-ClientID: 1C3352B306E669780D58D607B96869
-BingAPIs-Market: en-US
+The API supports both POST and GET requests. Which you use depends on the length of text you plan to proof. If the strings are always less than 1,500 characters, go ahead and use a GET. But for documentation scenarios where the text could be longer, use POST. 
 
-{  
-    "_type" : "SpellCheck",  
-    "flaggedTokens" : [{  
-        "offset" : 5,  
-        "token" : "its",  
-        "type" : "UnknownToken",  
-        "suggestions" : [{  
-            "suggestion" : "it's",  
-            "score" : 1  
-        }]  
-    },  
-    {  
-        "offset" : 25,  
-        "token" : "john",  
-        "type" : "UnknownToken",  
-        "suggestions" : [{  
-            "suggestion" : "John",  
-            "score" : 1  
-        }]  
-    },  
-    {  
-        "offset" : 19,  
-        "token" : "turn",  
-        "type" : "RepeatedToken",  
-        "suggestions" : [{  
-            "suggestion" : "",  
-            "score" : 1  
-        }]  
-    },  
-    {  
-        "offset" : 35,  
-        "token" : "runing",  
-        "type" : "UnknownToken",  
-        "suggestions" : [{  
-            "suggestion" : "running",  
-            "score" : 1  
-        }]  
-    }]  
-}  
-```  
+Here's a cURL example that uses a POST request to send the text string in the body of the request.
+
+```curl
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -d "text=when+its+your+turn+turn,+john,+come+runing&mkt=en-us&mode=proof" https://api.cognitive.microsoft.com/bing/v7.0/spellcheck
+```
+
 
 ## Next steps
 
-- [What is the Bing Spell Check API?](../overview.md)
-- [Bing Spell Check API v7 Reference](../reference/endpoints.md)
+- Learn about the [spell check response](search-responses.md) that Bing returns.
+- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
+

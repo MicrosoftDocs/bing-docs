@@ -1,7 +1,7 @@
 ---
 title: "Handling a Bing Entity Search API response"
 titleSuffix: Bing Search Services
-description: The Bing Entity Search API returns entities and places. This topics shows you what the JSON responses look like and how to process them.
+description: The Bing Entity Search API returns entities and places. This topics shows you what the JSON response looks like and how to process it.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -12,7 +12,7 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# # Handling the response 
+# Handling the response 
 
 When you send a request to Entity Search API, it returns a [SearchResponse](../reference/response-objects.md#searchresponse) object in the response body. The object may include one or more of the following answer types:
 
@@ -348,6 +348,6 @@ Note that the `_type` field identifies the local entity object's type. The above
 
 ## Next steps  
 
-- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for displaying Bing Web Search results.  
+- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for displaying Bing Entity Search results.  
 - Learn about how to use the `RankingResponse` object to [order the search results](../../bing-web-search/rank-results.md) in your UX.
 - Learn about the [JSON objects](../reference/response-objects.md) found in the response.  
