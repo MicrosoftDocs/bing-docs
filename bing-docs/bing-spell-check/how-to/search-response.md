@@ -75,7 +75,7 @@ If an error occurs, the response body contains an [ErrorResponse](../reference/r
 }
 ```
 
-Based on the text string, *when its your turn turn, john, come runing*, the following table shows the spelling and grammar errors that Bing found using both modes.
+Based on the text string, *when its your turn turn, john, come runing*, the following table shows a side-by-side comparison of the spelling and grammar errors that Bing found using both modes.
 
 |Proof mode|Spell mode
 |-|-
