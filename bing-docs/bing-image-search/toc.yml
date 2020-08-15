@@ -1,5 +1,5 @@
 - name: Bing Image Search documentation
-  expanded: true
+  # expanded: true
   items:
     - name: What is Bing Image Search?
       href: overview.md
@@ -8,6 +8,8 @@
       maintainContext: true
 - name: Quickstarts
   items:
+  - name: Quickstarts
+    href: quickstarts/quickstarts.md
   - name: REST API
     items:
     - name: C#
@@ -37,16 +39,12 @@
   - name: Build an image search web application
     href: tutorial/bing-image-search-single-page-app.md
 - name: Samples
-  items:
-  - name: REST samples
-    href: rest-samples.md
-  - name: SDK samples
-    href: sdk-samples.md
+  href: samples.md
 - name: How-to guides
   items:
-  - name: Getting images from the web
+  - name: Get images from the web
     href: how-to/get-images.md
-  - name: Sending and working with search queries
+  - name: Handle the response
     href: how-to/sending-queries.md
   - name: Get image insights
     href: how-to/image-insights.md
@@ -92,12 +90,8 @@
       href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/imagesearch
 - name: Resources
   items:
-  - name: FAQ
-    href: bing-image-search-resource-faq.md
   - name: Get API key
     href: https://azure.microsoft.com/try/cognitive-services/?api=bing-web-search-api
-  - name: Bing Image Search endpoints
-    href: image-search-endpoint.md
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
   - name: Analytics for Bing Image Search API
@@ -113,7 +107,7 @@
       href: https://stackoverflow.com/search?q=bing+web+search
     - name: Knowledge Base
       href: https://cognitive.uservoice.com/knowledgebase/topics/127875-bing-search-web-image-video-news-autosuggest
-- name: Bing use and display requirements
+- name: Use and display requirements
   href: ../bing-web-search/use-display-requirements.md
   maintainContext: true
 - name: Release notes

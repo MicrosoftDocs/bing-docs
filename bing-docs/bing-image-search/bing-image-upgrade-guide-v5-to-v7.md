@@ -20,7 +20,11 @@ This upgrade guide identifies the changes between version 5 and version 7 of the
 
 ### Endpoints
 
-- The endpoint's version number changed from v5 to v7. For example, https:\//api.bing.microsoft.com/bing/\*\*v7.0**/images/search.
+- The `cognitive` subdomain changed to `bing`. 
+- The endpoint's version number changed from v5.0 to v7.0.
+
+New search endpoint: `https://api.bing.microsoft.com/bing/v7.0/images/search`
+
 
 ### Error response objects and error codes
 

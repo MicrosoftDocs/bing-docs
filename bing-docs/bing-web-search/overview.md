@@ -16,6 +16,9 @@ ms.author: scottwhi
 
 Bing Web Search API enables safe, ad-free, location-aware search results, surfacing relevant information from billions of web documents. Help your users find what they're looking for from the world-wide-web by harnessing Bing's ability to comb billions of webpages, images, videos, and news with a single API call.
 
+> [!NOTE]
+> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
+
 
 ## Get started
 
@@ -31,7 +34,7 @@ By default, the API returns and ranks whatever content is relevant to the user's
 |Feature|Description
 |-|-
 |[Filter the answers that bing returns](filter-answers.md)|Filter the response to include or exclude specific answers such as news or images, return webpages that Bing discovered within the last week, and more.
-|[Page results](page-results.md)|Page through multiple pages webpage results.
+|[Page results](page-results.md)|Page through multiple pages of webpage results.
 |[Hit highlighting](hit-highlighting.md)|Add highlighting characters to words and phrases in the results' titles and descriptions that identify the words or phrases from the user's search query.
 
 Bing also provides API metrics, which you can use to inform your strategic decisions. Quickly retrieve statistics such as your top queries, call volume, market distribution, response code summary, and many more. For details, see [Bing Web Statistics](bing-web-stats.md).

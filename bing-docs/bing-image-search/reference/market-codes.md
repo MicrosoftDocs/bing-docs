@@ -169,5 +169,7 @@ The following table lists the market code values that you may use to specify the
 |-|-|- 
 |Australia|English|en-AU
 |Canada|English|en-CA
+|India|English|en-IN
 |People's republic of China|Chinese|zh-CN
+|United Kingdom|English|en-GB  
 |United States|English|en-US  

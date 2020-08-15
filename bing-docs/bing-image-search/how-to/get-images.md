@@ -1,5 +1,5 @@
 ---
-title: Get images from the web - Bing Image Search API
+title: Get images from the web
 titleSuffix: Bing Search Services
 description: Use the Bing Image Search API to search for and get relevant images from the web.
 services: bing-search-services
@@ -12,99 +12,126 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Get images from the web with the Bing Image Search API
+# Search the web for images
 
-When you use the Bing Image Search REST API, you can get images from the web that are related to your search term by sending the following GET request:
+Use Bing Image Search API to search the Web for image's that matches the user's request.
 
-```http
-GET https://api.bing.microsoft.com/bing/v7.0/images/search?q=sailing+dinghies&mkt=en-us HTTP/1.1
-Ocp-Apim-Subscription-Key: 123456789ABCDE
-X-MSEdge-ClientIP: 999.999.999.999
-X-Search-Location: lat:47.60357;long:-122.3295;re:100
-X-MSEdge-ClientID: <blobFromPriorResponseGoesHere>
-Host: api.cognitive.microsoft.com
+It's easy. If you have your subscription key, just send an HTTP get request to the following endpoint:
+
+```
+https://api.bing.microsoft.com/bing/v7.0/images/search
 ```
 
-Use the [q](../reference/query-parameters.md#query) query parameter for your url-encoded search term. For example, if you enter *sailing dinghies*, set `q` to `sailing+dinghies` or `sailing%20dinghies`.
+Here's a cURL example that shows you how to call the endpoint using your subscription key. Change the *q* query parameter to search for whatever images you'd like.
 
-> [!IMPORTANT]
-> * All requests must be made from a server, and not from a client.
-> * If it's your first time calling any of the Bing search APIs, don't include the client ID header. Only include the client ID if you've previously called a Bing API that returned a client ID for the user and device combination.
+```curl
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/search?q=mt+rainier
+```
 
-## Get images from a specific web domain
 
-To get images from a specific domain, use the [site:](https://help.bing.microsoft.com/#apex/18/en-US/10001/-1) query operator.
+## Request and response headers
+
+Although that's all the more you need to do to search the Web, Bing does suggest you include a couple of other headers to provide a better search experience for your user. Those headers include:
+
+- User-Agent &mdash; Lets Bing know whether needs a mobile or desktop experience.
+- X-MSEdge-ClientID &mdash; Provides continuity of experience.
+- X-MSEdge-ClientIP &mdash; Provides the user's location for location aware queries.
+- X-Search-Location &mdash; Provides the user's location for location aware queries.
+
+The more information you can provide Bing, the better the search experience will be for your users. To learn more about these headers, see [Request headers](reference/headers.md#request-headers).
+
+Here's a cURL example that includes these headers.
+
+```curl
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/bing/v7.0/images/search?q=mt+rainier
+```
+
+Bing returns a couple of headers you should capture. 
+
+- BingAPIs-TraceId &mdash; ID that identifies the request in the log file.
+- X-MSEdge-ClientID &mdash; The ID that you need to pass in subsequent request to provide continuity of experience.
+- BingAPIs-Market &mdash; The market used by Bing for the request.
+
+To learn more about these headers, see [Response headers](reference/headers.md#response-headers).
+
+Here's a cURL call that returns the response headers. If you want to remove the response data so you can see only the headers, include the `-o nul` parameter.
+
+```curl
+curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/search?q=mt+rainier
+```
+
+
+## Query parameters
+
+The only query parameter that you must pass is the *q* parameter, which you set to the user's query string. You must URL encode the user's query string and all query parameter values that you pass.
+
+The API supports a number of query parameters that you can pass in your request. Here's a list of the ones you're most likely to use.
+
+- *count* and *offset* &mdash; Used to page image results. [Read more](../../bing-web-search/page-results.md)
+- *mkt* &mdash; Used to specify the market where the results come from, which is typically the market where the user is making the request from.
+- *safeSearch* &mdash; Used to specify the user's safe search preference.
+
+To learn more about these parameters and other parameters that you may specify, see [Query parameters](reference/query-parameters.md).
+
+Here's a cURL example that includes these query parameters.
+
+```curl
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/search?q=mt+rainier&mkt=en-us&safeSearch=moderate&count=10&offset=0
+```
+
+For information about query parameters that you can use to filter the search results, see [Filtering search results](filter-answers.md).
+
+
+## Filter the images that Bing returns
+
+When you query the Web, Bing returns all relevant images that it finds. But what if you're only interested in animated GIFs, images that Bing found in the last week, or images found on a specific site? Simple, use one or more of the following query parameters to filter the images that you want. For more details about these parameters and others, see [Filter query parameters](../../reference/query-parameters.md#filter-query-parameters).
+
+- [aspect](../reference/query-parameters.md#aspect) &mdash; Filter images by aspect ratio (for example, standard or wide screen images).
+- [color](../reference/query-parameters.md#color) &mdash; Filter images by dominant color or black and white.
+- [freshness](../reference/query-parameters.md#freshness) &mdash; Filter images by age (for example, images that Bing discovered in the past week).
+- [height](../reference/query-parameters.md#height), [width](../reference/query-parameters.md#width) &mdash; Filter images by width and height.
+- [imageType](../reference/query-parameters.md#imagetype) &mdash; Filter images by type (for example, clip art, animated GIFs, or transparent backgrounds).
+- [license](../reference/query-parameters.md#license) &mdash; Filter images by the type of license associated with the site.
+- [size](../reference/query-parameters.md#size) &mdash; Filter images by size, such as small images up to 200x200 pixels.
+
+
+The following example shows how to get animated GIFs that Bing discovered in the past week.  
 
 ```http
-GET https://api.bing.microsoft.com/bing/v7.0/images/search?q=sailing+dinghies+site:contososailing.com&mkt=en-us HTTP/1.1
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/search?q=sailing&imageType=AnimatedGif&freshness=week&mkt=en-us 
+```
+
+### Filter images by website
+
+To get images from a specific domain, use the [site:](https://help.bing.microsoft.com/#apex/18/en-US/10001/-1) query operator in the query string. The response may contain results from other sites depending on the number of relevant results found on the specified site.
+
+The following example get sailing images found on contososailing.com.
+
+```http
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/search?q=sailing+dinghies+site%3Acontososailing.com&mkt=en-us
 ```
 
 > [!NOTE]
-> Responses to queries using the `site:` operator might include adult content regardless of the [safeSearch](../reference/query-parameters.md#safesearch) setting. Only use `site:` if you're aware of the content on the domain.
+> Because the `site:` operator might include adult content regardless of the [safeSearch](../reference/query-parameters.md#safesearch) setting, only use `site:` if you're aware of the content on the domain.
 
-## Filter images
+### Filter by SafeSearch Setting
 
- By default, the Image Search API returns all images that are relevant to the query. If you want to filter the images that Bing returns (for example, to return only images with a transparent background or specific size), use the following query parameters:
+The [safeSearch](../reference/query-parameters.md#safesearch) query parameter lets you filter images for adult content. 
 
-* [aspect](../reference/query-parameters.md#aspect)—Filter images by aspect ratio (for example, standard or wide screen images).
-* [color](../reference/query-parameters.md#color)—Filter images by dominant color or black and white.
-* [freshness](../reference/query-parameters.md#freshness)—Filter images by age (for example, images discovered by Bing in the past week).
-* [height](../reference/query-parameters.md#height), [width](../reference/query-parameters.md#width)—Filter images by width and height.
-* [imageContent](../reference/query-parameters.md#imagecontent)—Filter images by content (for example, images that show only a person's face).
-* [imageType](../reference/query-parameters.md#imagetype)—Filter images by type (for example, clip art, animated GIFs, or transparent backgrounds).
-* [license](../reference/query-parameters.md#license)—Filter images by the type of license associated with the site.
-* [size](../reference/query-parameters.md#size)—Filter images by size, such as small images up to 200x200 pixels.
+You may set the *safeSearch* parameter to one of the following values:
 
-To get images from a specific domain, use the [site:](https://help.bing.microsoft.com/#apex/18/en-US/10001/-1) query operator.
+- Off &mdash; Returns images with adult content. The thumbnail images that are clear (non-fuzzy).
+- Moderate &mdash; Does not return images with adult content. 
+- Strict &mdash; Does not return images with adult content.
 
-The following example shows how to get small images from ContosoSailing.com that Bing discovered in the past week.  
+The default is Moderate.
 
-```http
-GET https://api.bing.microsoft.com/bing/v7.0/images/search?q=sailing+dinghies+site:contososailing.com&size=small&freshness=week&mkt=en-us HTTP/1.1  
-Ocp-Apim-Subscription-Key: 123456789ABCDE  
-X-MSEdge-ClientIP: 999.999.999.999  
-X-Search-Location: lat:47.60357;long:-122.3295;re:100  
-X-MSEdge-ClientID: <blobFromPriorResponseGoesHere>  
-Host: api.cognitive.microsoft.com  
-```
-
-## Bing Image Search response format
-
-The response message from Bing contains an [Images](../reference/response-objects.md#images) answer that contains a list of images that Cognitive Services determined to be relevant to the query. Each [Image](../reference/response-objects.md#image) object in the list includes the following information about the image: the URL, its size, its dimensions, its encoding format, a URL to a thumbnail of the image, and the thumbnail's dimensions.
-
-> [!NOTE]
-> * Images must be displayed in the order provided in the response.
-> * Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
-
-```json
-{
-    "name": "Rich Passage Sailing Dinghy",
-    "webSearchUrl": "https:\/\/www.bing.com\/cr?IG=73118C8B4E3...",
-    "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OIP.GNarK7m...",
-    "datePublished": "2011-10-29T11:26:00",
-    "contentUrl": "http:\/\/www.bing.com\/cr?IG=73118C8B4E3D4C3...",
-    "hostPageUrl": "http:\/\/www.bing.com\/cr?IG=73118C8B4E3D4C3687...",
-    "contentSize": "79239 B",
-    "encodingFormat": "jpeg",
-    "hostPageDisplayUrl": "en.contoso.org\/wiki\/File:Rich_Passage...",
-    "width": 526,
-    "height": 688,
-    "thumbnail": {
-        "width": 229,
-        "height": 300
-    },
-    "imageInsightsToken": "ccid_GNarK7ma*mid_CCF85447ADA6...",
-    "insightsSourcesSummary": {
-        "shoppingSourcesCount": 0,
-        "recipeSourcesCount": 0
-    },
-    "imageId": "CCF85447ADA6FFF9E96E7DF0B796F7A86E34593",
-    "accentColor": "376094"
-},
-```
-
-When you call the Bing Image Search API, Bing returns a list of results. The list is a subset of the total number of results that are relevant to the query. The response's `totalEstimatedMatches` field contains an estimate of the number of images that are available to view. For details about how to page through the rest of the images, see [Paging Images](../../bing-web-search/page-results.md).
 
 ## Next steps
 
-If you haven't tried the Bing Image Search API before, try a [quickstart](../quickstarts/rest/csharp.md). If you're looking for something more complex, try the tutorial to create a [single-page web app](../tutorial/bing-image-search-single-page-app.md).
+- Learn about the [response](search-responses.md) that Bing returns.
+- Learn how to [get the next page](../../bing/web-search/page-results.md) of search results.
+- Learn how to [get trending images](trending-images.md).
+- Learn how to [get insights about an image](image-insights.md) such as shopping sources or related images.
+- Learn what happens if you don't stay within your queries per second (QPS) limit. Hint: your requests get [throttled](../../bing/web-search/throttling-requests.md).
+- Learn about the [quickstarts](../../quickstarts/quickstarts.md) and [samples](../../samples.md) that are available to help you get up and running fast.

@@ -14,7 +14,7 @@ ms.author: scottwhi
 
 # Filter the answers that Bing returns
 
-When you query the web, Bing returns all relevant content that it finds. This could include webpages, images, news, videos, and more. But lets say that you're only interested in webpages and news. How can you tell Bing you're not interested in any other answers? You use the [responseFilter](reference/query-parameters.md#responsefilter) query parameter.
+When you query the Web, Bing returns all relevant content that it finds. This could include webpages, images, news, videos, and more. But what if you're only interested in webpages and news; how can you tell Bing you're not interested in any other answers? You use the [responseFilter](reference/query-parameters.md#responsefilter) query parameter.
 
 You can specify the answers to include in the response or those that you want to exclude from the response, or not both. To include only the webpage and news answers, specify *responseFilter* as:
 
@@ -37,13 +37,12 @@ In theory, you could use *responseFilter* to filter for a single answer like onl
 
 ## Getting results from a specific site
 
-To get search results from a specific domain, use Bing's [site:](https://help.bing.microsoft.com/#apex/18/en-US/10001/-1) operator in the query string.  
+To get search results from a specific domain, use Bing's [site:](https://help.bing.microsoft.com/#apex/18/en-US/10001/-1) operator in the query string. The response may contain results from other sites depending on the number of relevant results found on the specified site.
+ 
 
 ```
-q=sailing+dinghies+site:contososailing.com
+q=sailing+dinghies+site%3Acontososailing.com
 ```
-
-Note that the response may contain results from other sites depending on the number of relevant results found on the specified site.
 
 > [!NOTE]
 > Depending on the query, if you use the `site:` query operator, there is the chance that the response may contain adult content regardless of the [safeSearch](reference/query-parameters.md#safesearch) setting. You should use `site:` only if you are aware of the content on the site and your scenario supports the possibility of adult content.

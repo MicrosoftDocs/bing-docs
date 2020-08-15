@@ -18,7 +18,7 @@ ms.author: scottwhi
 
 For a list of possible objects, see **In this article** in the right pane.
 
-The top-level object in the response depends on the endpoint you call. If you call `/images/search`, the top-level object in the response is the [Images](#images) object; and for `/images/trending`, it's [TrendingImages](#trendingimages). If the request fails, the top-level object is the [ErrorResponse](#errorresponse) object.
+The top-level object in the response depends on the endpoint you call. If you call `/images/search`, the top-level object in the response is the [ImageAnswer](#imageanswer) object; and for `/images/trending`, it's [TrendingImages](#trendingimages). If the request fails, the top-level object is the [ErrorResponse](#errorresponse) object.
 
 > [!NOTE]
 > Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
@@ -104,6 +104,28 @@ Defines an image that is relevant to the query.
 |<a name="image-width"></a>width|The width of the source image, in pixels.|Unsigned Short 
 
   
+## ImageAnswer  
+
+The top-level object that the response includes when an image request succeeds.  
+  
+|Name|Value|Type
+|-|-|-
+|_type|A type hint, which is set to Images.|String 
+|currentOffset|The offset that represents where the first image in `value` is relative to all images that Bing might return for this query. Also see `nextOffset`.
+|id|An ID that uniquely identifies the image answer. Only Web Search API responses include this field. For information about how to use this field, see [Ranking results](../../bing-web-search/rank-results.md) in the Web Search API guide.|String
+|<a name="isfamilyfriendly"></a>isFamilyFriendly|A Boolean value that determines whether one or more of the images contain adult content. If one or more of the images contain adult content, `isFamilyFriendly` is set to **false**; otherwise, **true**.<br/><br/>If **false**, the thumbnail images are pixelated (fuzzy).<br/><br/>**NOTE:** This field is included only in a Web Search API response.|Boolean
+|<a name="nextoffset"></a>nextOffset|The offset that you set the [offset](query-parameters.md#offset) query parameter to.<br/><br/>If you set `offset` to 0 and `count` to 30 in your first request, and then set `offset` to 30 in your second request, some of the results in the second response may be duplicates of the first response. To prevent duplicates, set `offset` to the value of `nextOffset`.<br/><br/>Only the Image Search API includes this field.|Integer
+|<a name="pivotsuggestions"></a>pivotSuggestions|A list of segments in the original query. For example, if the query was *Red Flowers*, Bing might segment the query into *Red* and *Flowers*.<br/><br/>The Flowers pivot may contain query suggestions such as Red Peonies and Red Daisies, and the Red pivot may contain query suggestions such as Green Flowers and Yellow Flowers.<br/><br/>Only the Image Search API includes this field.|[Pivot](#pivot)  
+|<a name="queryexpansions"></a>queryExpansions|A list of expanded queries that narrows the original query. For example, if the query was *Microsoft Surface*, the expanded queries might be: Microsoft Surface **Pro 3**, Microsoft Surface **RT**, Microsoft Surface **Phone**, and Microsoft Surface **Hub**.<br/><br/>Only the Image Search API includes this field.|[Query](#query)  
+|<a name="querycontext"></a>queryContext|The query string that Bing used for the request.|[QueryContext](#querycontext)
+|readLink|A URL that you'd use to request images from Image Search API. The URL is not well formed; you need to prefix the URL with `https://api.bing.microsoft.com/bing/v7.0` to create a well-formed URL. Include other query parameters as needed.|String 
+|relatedSearches|A list of related search queries made by others.|[Query](#query)[][]
+|<a name="similarterms">similarTerms|A list of terms that are similar in meaning to the user's query term.|[Query](#query)
+|<a name="totalestimatedmatches"></a>totalEstimatedMatches|The estimated number of images that are relevant to the query. Use this number along with the [count](query-parameters.md#count) and [offset](query-parameters.md#offset) query parameters to page the results.<br/><br/>Only the Image Search API includes this field.|Long
+|<a name="images-value">value|A list of images that are relevant to the query. If there are no results, the array is empty.|[Image](#image)[]
+|webSearchUrl|A URL to the Bing search results for the requested images.|String 
+
+
 ## ImageCaption  
 
 Defines an image's caption.  
@@ -129,26 +151,6 @@ Defines a link to a webpage that contains a collection of related images.
 |<a name="gallery-source"></a>source|The publisher or social network where the images were found. You must attribute the publisher as the source where the collection was found.|String 
 |<a name="gallery-thumbnailurl"></a>thumbnailUrl|The URL to a thumbnail of one of the images found in the collection.|String
 |<a name="gallery-url"></a>url|The URL to the webpage that contains the collection of related images.|String
-
-
-## Images  
-
-The top-level object that the response includes when an image request succeeds.  
-  
-|Name|Value|Type
-|-|-|-
-|_type|A type hint, which is set to Images.|String 
-|id|An ID that uniquely identifies the image answer. Only Web Search API responses include this field. For information about how to use this field, see [Ranking results](../../bing-web-search/rank-results.md) in the Web Search API guide.|String
-|<a name="isfamilyfriendly"></a>isFamilyFriendly|A Boolean value that determines whether one or more of the images contain adult content. If one or more of the images contain adult content, `isFamilyFriendly` is set to **false**; otherwise, **true**.<br/><br/>If **false**, the thumbnail images are pixelated (fuzzy).<br/><br/>**NOTE:** This field is included only in a Web Search API response.|Boolean
-|<a name="nextoffset"></a>nextOffset|The offset value that you set the [offset](query-parameters.md#offset) query parameter to.<br/><br/>If you set `offset` to 0 and `count` to 30 in your first request, and then set `offset` to 30 in your second request, some of the results in the second response may be duplicates of the first response. To prevent duplicates, set `offset` to the value of `nextOffset`.<br/><br/>Only the Image Search API includes this field.|Integer
-|<a name="pivotsuggestions"></a>pivotSuggestions|A list of segments in the original query. For example, if the query was *Red Flowers*, Bing might segment the query into *Red* and *Flowers*.<br/><br/>The Flowers pivot may contain query suggestions such as Red Peonies and Red Daisies, and the Red pivot may contain query suggestions such as Green Flowers and Yellow Flowers.<br/><br/>Only the Image Search API includes this field.|[Pivot](#pivot)  
-|<a name="queryexpansions"></a>queryExpansions|A list of expanded queries that narrows the original query. For example, if the query was *Microsoft Surface*, the expanded queries might be: Microsoft Surface **Pro 3**, Microsoft Surface **RT**, Microsoft Surface **Phone**, and Microsoft Surface **Hub**.<br/><br/>Only the Image Search API includes this field.|[Query](#query)  
-|readLink|A URL that you'd use to request images from Image Search API. Include other query parameters as needed. Only Web Search API responses include this field.|String 
-|relatedSearches|A list of related search queries made by others.|[Query](#query)[][]
-|<a name="similarterms">similarTerms|A list of terms that are similar in meaning to the user's query term.|[Query](#query)
-|<a name="totalestimatedmatches"></a>totalEstimatedMatches|The estimated number of images that are relevant to the query. Use this number along with the [count](query-parameters.md#count) and [offset](query-parameters.md#offset) query parameters to page the results.<br/><br/>Only the Image Search API includes this field.|Long
-|<a name="images-value">value|A list of images that are relevant to the query. If there are no results, the array is empty.|[Image](#image)[]
-|webSearchUrl|A URL to the Bing search results for the requested images.|String 
 
 
 ## ImageInsightsResponse
@@ -297,6 +299,20 @@ Defines a search query.
 |<a name="query-text"></a>text|The query string. Use this string as the query term in a new search request.|String  
 |<a name="query-thumbnail"></a>thumbnail|A URL to a thumbnail image that represents the search string.|[Thumbnail](#thumbnail) 
 |<a name="query-websearchurl"></a>webSearchUrl|The URL that takes the user to the Bing search results page for the query.|String
+
+
+  
+## QueryContext  
+
+Defines the query string that Bing used for the request.   
+  
+|Name|Value|Type 
+|-|-|-
+|<a name="adultintent"></a>adultIntent|A Boolean value that indicates whether the specified query has adult intent. The value is **true** if the query has adult intent.<br/><br/>If **true**, and the request's [safeSearch](query-parameters.md#safesearch) query parameter is set to Strict, the response contains only news results, if applicable.|Boolean
+|<a name="alterationoverridequery"></a>alterationOverrideQuery|The query string to use to force Bing to use the original string. For example, if the query string is *saling downwind*, the override query string is *+saling downwind*. Remember to encode the query string, which results in *%2Bsaling+downwind*.<br/><br/>The object includes this field only if the original query string contains a spelling mistake.|String 
+|<a name="alteredquery"></a>alteredQuery|The query string that Bing used to perform the query. Bing uses the altered query string if the original query string contained spelling mistakes. For example, if the query string is *saling downwind*, the altered query string is *sailing downwind*.<br/><br/>The object includes this field only if the original query string contains a spelling mistake.|String 
+|askUserForLocation|A Boolean value that indicates whether Bing requires the user's location to provide accurate results. If you specified the user's location by using the [X-MSEdge-ClientIP](headers.md#clientip) and [X-Search-Location](headers.md#location) headers, you can ignore this field.<br/><br/>For location aware queries, such as "today's weather" or "restaurants near me" that need the user's location to provide accurate results, this field is set to **true**.<br/><br/>For location aware queries that include the location (for example, "Seattle weather"), this field is set to **false**. This field is also set to **false** for queries that are not location aware, such as "best sellers."|Boolean
+|<a name="originalquery"></a>originalQuery|The query string as specified in the request.|String  
 
   
 ## Recipe  

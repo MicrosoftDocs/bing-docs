@@ -12,53 +12,31 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Search for GIF images 
+# Search for animated GIF images 
 
-The Bing Image Search API enables you to also search across the entire Web for the most relevant .gif images.  Developers can integrate engaging gifs in various conversation scenarios. 
+Bing Image Search API lets you search across the entire Web for the most relevant animated GIF images. To get only GIF images, set the [imageType](../reference/query-parameters.md#imagetype) query parameter to AnimatedGif
 
-The following URL is a query for animated .gif images.
+The following cURL example shows how to use the API to get animated GIF images.
 
-```
-https://api.bing.microsoft.com/bing/v7.0/images/search?q=interesting&imageType=AnimatedGif&mkt=en-us
-```
-
-The [q](../reference/query-parameters.md#query) parameter specifies the search terms.  The previous query also specifies `animatedGif` using the [imageType](../reference/query-parameters.md#imagetype) filter parameter.
-
-To see examples of results, use the following URL to search bing.com.
-
-```
-https://www.bing.com/images/search?q=interesting&qft=%20filterui%3Aphoto-animatedgif
+```curl
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/search?q=interesting&imageType=AnimatedGif&mkt=en-us
 ```
 
-## Query parameters
-
-For more information about query parameters and options, see the [Image Search API reference](../reference/query-parameters.md). An example follows under the heading [Example search for animated gif using Java](#gifExample).
 
 ## Tips and suggestions
 
-- You can specify [maxFileSize](../reference/query-parameters.md#maxfilesize) and [minFileSize](../reference/query-parameters.md#minfilesize) parameters. We recommend setting the maxFileSize=2000000 as majority of gifs in our index are under 2MB.  This also helps to control the data size if bandwidth is a concern, such as in mobile cellular scenarios.
-
-- To help improve perceived performance, load the thumbnail first before loading the source url.  
-- For first-run or landing page experience where you don't have a user query yet, try using our trending gif searches to help from the [trending images API](trending-images.md).
-- There are three settings for the [safeSearch](../reference/query-parameters.md#safesearch) parameter.  The `strict` option blocks adult content.
-- See [mkt](../reference/query-parameters.md#mkt) for full list of languages and locations supported.
-- *AnimatedGifHttps* only returns animated gif images that are from an https address. For security, many applications require connection to external web links over https. For example, the Apple App Store requires connection to web services over HTTPS, which encrypts user data secure while in transit.
+- Specify the [maxFileSize](../reference/query-parameters.md#maxfilesize) and [minFileSize](../reference/query-parameters.md#minfilesize) query parameters. Because most GIFs in our index are under 2 MB, set *maxFileSize* to 2000000. This also helps to control the data size if bandwidth is a concern, such as in mobile cellular scenarios.
+- Help improve perceived performance by loading the thumbnail first and then loading the source URL.  
+- Use the [safeSearch](../reference/query-parameters.md#safesearch) query parameter to block adult content. Set to `strict` to block adult content.
+- Use the *AnimatedGifHttps* image type to return get only animated GIF images that are from an HTTPS address. For security, many applications require connection to external Web links over HTTPS.
+- 
 
 <a name="gifExample"></a>
 
-## Example search for animated gif using Java
+## Getting animated GIFs using Java
 
-The following URL searches for animated .gif images: `q=interesting`.
 
-```
-https://api.bing.microsoft.com/bing/v7.0/images/search?q=interesting&imageType=AnimatedGif&mkt=en-us
-```
-
-As shown in the following example, the URL query requires [Ocp-Apim-Subscription-Key](../reference/headers.md#subscriptionkey) header.
-
-The following Java example builds and sends the request.
-
-```
+```java
 package gifSearch;
 import java.net.*;
 import java.util.*;
@@ -169,43 +147,8 @@ class SearchResults{
 
 ```
 
-## Results
-The code gets the following results as JSON objects:
-
-```json
-    {
-      "webSearchUrl": "https://www.bing.com/images/search?view\u003ddetai...",
-      "name": "Very Interesting GIF - Thats Very Interesting - ...",
-      "thumbnailUrl": "https://tse1.mm.bing.net/th?id\u003dOIP.yJX6Vz345JPK...",
-      "datePublished": "2017-03-12T01:35:00.0000000Z",
-      "contentUrl": "https://media.contoso.co/images/c895fa573df8e493ca8d0dec7d93b/raw",
-      "hostPageUrl": "https://www.contoso.co/view/thats-very-interesting-christi...",
-      "contentSize": "1295633 B",
-      "encodingFormat": "animatedgif",
-      "hostPageDisplayUrl": "https://www.contoso.co/view/thats-very-christian...",
-      "width": 440,
-      "height": 186,
-      "thumbnail": {
-        "width": 474,
-        "height": 200
-      },
-      "imageInsightsToken": "ccid_yJX6Vz34*mid_9FF0FFA42AADA1357F042443D2103B40EA...",
-      "insightsMetadata": {
-        "recipeSourcesCount": 0,
-        "bestRepresentativeQuery": {
-          "text": "That\u0027s Very Interesting",
-          "displayText": "That\u0027s Very Interesting",
-          "webSearchUrl": "https://www.bing.com/images/search?q\u003dThat..."
-        },
-        "pagesIncludingCount": 19,
-        "availableSizesCount": 2
-      },
-      "imageId": "9FF0FFA42AADA1357F042443D21030EAAA225F",
-      "accentColor": "62452D"
-    },
-
-```
 
 ## Next steps
-- [C# quickstart](../quickstarts/rest/csharp.md)
-- [Tutorial Image Search single-page application](../tutorial/bing-image-search-single-page-app.md)
+
+- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
+- Learn about the [Image search tutorial](../tutorial/bing-image-search-single-page-app.md)
