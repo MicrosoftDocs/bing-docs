@@ -45,7 +45,7 @@
   - name: Get images from the web
     href: how-to/get-images.md
   - name: Handle the response
-    href: how-to/sending-queries.md
+    href: how-to/search-response.md
   - name: Get image insights
     href: how-to/image-insights.md
   - name: Get .gif images

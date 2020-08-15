@@ -40,7 +40,7 @@ Although that's all the more you need to do to get trending images, Bing does su
 - X-MSEdge-ClientIP &mdash; Provides the user's location for location aware queries.
 - X-Search-Location &mdash; Provides the user's location for location aware queries.
 
-The more information you can provide Bing, the better the experience will be for your users. To learn more about these headers, see [Request headers](reference/headers.md#request-headers).
+The more information you can provide Bing, the better the experience will be for your users. To learn more about these headers, see [Request headers](../reference/headers.md#request-headers).
 
 Here's a cURL example that includes these headers.
 
@@ -54,7 +54,7 @@ Bing returns a couple of headers you should capture.
 - X-MSEdge-ClientID &mdash; The ID that you need to pass in subsequent request to provide continuity of experience.
 - BingAPIs-Market &mdash; The market used by Bing for the request.
 
-To learn more about these headers, see [Response headers](reference/headers.md#response-headers).
+To learn more about these headers, see [Response headers](../reference/headers.md#response-headers).
 
 Here's a cURL call that returns the response headers. If you want to remove the response data so you can see only the headers, include the `-o nul` parameter.
 
@@ -67,7 +67,7 @@ curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.mic
 
 The only query parameter that you should pass is the *mkt* parameter, which you set to the market where the results come from. Typically, this is the market where the user is making the request from.
 
-You can ignore all other parameters listed in [Query parameters](reference/query-parameters.md).
+You can ignore all other parameters listed in [Query parameters](../reference/query-parameters.md).
 
 Here's a cURL example that includes the *mkt* query parameter.
 
@@ -78,7 +78,7 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 ## Handling the response
 
-When you send a request to Trending Images API, it returns a [TrendingImages](reference/response-objects.md#trendingimages) object in the response body. The **TrendingImages** object contains the lists of trending images by category. Use the category's `title` to group the images in your user experience. The categories may change daily.
+When you send a request to Trending Images API, it returns a [TrendingImages](../reference/response-objects.md#trendingimages) object in the response body. The **TrendingImages** object contains the lists of trending images by category. Use the category's `title` to group the images in your user experience. The categories may change daily.
 
 ```json
 {
@@ -108,10 +108,10 @@ When you send a request to Trending Images API, it returns a [TrendingImages](re
 }
 ```
 
-Each [Category](reference/response-objects.md#category) object includes the following fields:
+Each [Category](../reference/response-objects.md#category) object includes the following fields:
 
 - `title` &mdash; The name of the category. Use the name to group the images in your UX.
-- `tiles` &mdash; A list of [Tile](reference/response-objects.md#tile) objects. 
+- `tiles` &mdash; A list of [Tile](../reference/response-objects.md#tile) objects. 
 
 Each tile contains a trending image and options for getting related images. The following example shows what a tile looks like in the JSON response.
 
@@ -154,6 +154,6 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 - Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing Web Search.  
 - Learn about [resizing and cropping thumbnails](../../bing-web-search/resize-and-crop-thumbnails.md).  
 - Learn about [searching the web for images](get-images.md).
-- Review [Image Search API v7 reference](reference/endpoints.md) documentation.  
-- Learn about the [quickstarts](quickstarts/quickstarts.md) and [samples](samples.md) that are available to help you get up and running fast.
+- Review [Image Search API v7 reference](../reference/endpoints.md) documentation.  
+- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
 

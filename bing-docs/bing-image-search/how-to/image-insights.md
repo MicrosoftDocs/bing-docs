@@ -78,7 +78,7 @@ To request all insights of an image, set the [modules](../reference/query-parame
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/details?q=sailing+dinghy&insightsToken=mid_68364D764J...&modules=All&mkt=en-us
 ```
 
-The top-level object is an [ImageInsightsResponse](../reference/response-objects.md#imageinsightsresponse) object instead of an [Images](../reference/response-objects.md#images) object.  
+The top-level object is an [ImageInsightsResponse](../reference/response-objects.md#imageinsightsresponse) object instead of an [ImageAnswer](../reference/response-objects.md#imageanswer) object.  
 
 ```json
 {

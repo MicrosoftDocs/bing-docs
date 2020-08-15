@@ -196,7 +196,7 @@ To learn more about attribution, see [Data attribution](data-attribution.md).
 
 ## Images answer
 
-The [images](../bing-image-search/reference/response-objects.md#images) answer contains a list of images that Bing thought were relevant to the query. Each [image](../bing-image-search/reference/response-objects.md#image) in the list includes the image's URL, its size, its dimensions, and its encoding format. The **Image** object also includes a thumbnail URL and the thumbnail's dimensions.
+The [images](../bing-image-search/reference/response-objects.md#imageanswer) answer contains a list of images that Bing thought were relevant to the query. Each [image](../bing-image-search/reference/response-objects.md#image) in the list includes the image's URL, its size, its dimensions, and its encoding format. The **Image** object also includes a thumbnail URL and the thumbnail's dimensions.
 
 ```json
   "images": {

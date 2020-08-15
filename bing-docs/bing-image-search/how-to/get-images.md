@@ -38,7 +38,7 @@ Although that's all the more you need to do to search the Web, Bing does suggest
 - X-MSEdge-ClientIP &mdash; Provides the user's location for location aware queries.
 - X-Search-Location &mdash; Provides the user's location for location aware queries.
 
-The more information you can provide Bing, the better the search experience will be for your users. To learn more about these headers, see [Request headers](reference/headers.md#request-headers).
+The more information you can provide Bing, the better the search experience will be for your users. To learn more about these headers, see [Request headers](../reference/headers.md#request-headers).
 
 Here's a cURL example that includes these headers.
 
@@ -52,7 +52,7 @@ Bing returns a couple of headers you should capture.
 - X-MSEdge-ClientID &mdash; The ID that you need to pass in subsequent request to provide continuity of experience.
 - BingAPIs-Market &mdash; The market used by Bing for the request.
 
-To learn more about these headers, see [Response headers](reference/headers.md#response-headers).
+To learn more about these headers, see [Response headers](../reference/headers.md#response-headers).
 
 Here's a cURL call that returns the response headers. If you want to remove the response data so you can see only the headers, include the `-o nul` parameter.
 
@@ -71,7 +71,7 @@ The API supports a number of query parameters that you can pass in your request.
 - *mkt* &mdash; Used to specify the market where the results come from, which is typically the market where the user is making the request from.
 - *safeSearch* &mdash; Used to specify the user's safe search preference.
 
-To learn more about these parameters and other parameters that you may specify, see [Query parameters](reference/query-parameters.md).
+To learn more about these parameters and other parameters that you may specify, see [Query parameters](../reference/query-parameters.md).
 
 Here's a cURL example that includes these query parameters.
 
@@ -79,12 +79,12 @@ Here's a cURL example that includes these query parameters.
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/search?q=mt+rainier&mkt=en-us&safeSearch=moderate&count=10&offset=0
 ```
 
-For information about query parameters that you can use to filter the search results, see [Filtering search results](filter-answers.md).
+For information about query parameters that you can use to filter the search results, see [Filter the images that Bing returns](#filter-the-images-that-bing-returns).
 
 
 ## Filter the images that Bing returns
 
-When you query the Web, Bing returns all relevant images that it finds. But what if you're only interested in animated GIFs, images that Bing found in the last week, or images found on a specific site? Simple, use one or more of the following query parameters to filter the images that you want. For more details about these parameters and others, see [Filter query parameters](../../reference/query-parameters.md#filter-query-parameters).
+When you query the Web, Bing returns all relevant images that it finds. But what if you're only interested in animated GIFs, images that Bing found in the last week, or images found on a specific site? Simple, use one or more of the following query parameters to filter the images that you want. For more details about these parameters and others, see [Filter query parameters](../reference/query-parameters.md#filter-query-parameters).
 
 - [aspect](../reference/query-parameters.md#aspect) &mdash; Filter images by aspect ratio (for example, standard or wide screen images).
 - [color](../reference/query-parameters.md#color) &mdash; Filter images by dominant color or black and white.
@@ -129,9 +129,9 @@ The default is Moderate.
 
 ## Next steps
 
-- Learn about the [response](search-responses.md) that Bing returns.
-- Learn how to [get the next page](../../bing/web-search/page-results.md) of search results.
+- Learn about the [response](search-response.md) that Bing returns.
+- Learn how to [get the next page](../../bing-web-search/page-results.md) of search results.
 - Learn how to [get trending images](trending-images.md).
 - Learn how to [get insights about an image](image-insights.md) such as shopping sources or related images.
-- Learn what happens if you don't stay within your queries per second (QPS) limit. Hint: your requests get [throttled](../../bing/web-search/throttling-requests.md).
-- Learn about the [quickstarts](../../quickstarts/quickstarts.md) and [samples](../../samples.md) that are available to help you get up and running fast.
+- Learn what happens if you don't stay within your queries per second (QPS) limit. Hint: your requests get [throttled](../../bing-web-search/throttling-requests.md).
+- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.

@@ -82,7 +82,7 @@ Note that if you specify the *responseFilter* query parameter and do not include
 
 Typically, if you page 30 images at a time, you set the *offset* query parameter to 0 on your first request, and increment *offset* by 30 on each subsequent request. However, some results in the subsequent response may be duplicates of the previous response. For example, the first two images in the response may be the same as the last two images from the previous response.
 
-To eliminate duplicate results, set the *offset* query parameter to the value in the `nextOffset` field of the [Images](../bing-image-search/reference/response-objects.md#images) object. The `nextOffset` value adjusts for duplicates.
+To eliminate duplicate results, set the *offset* query parameter to the value in the `nextOffset` field of the [ImageAnswer](../bing-image-search/reference/response-objects.md#imageanswer) object. The `nextOffset` value adjusts for duplicates.
 
 ```json
 {

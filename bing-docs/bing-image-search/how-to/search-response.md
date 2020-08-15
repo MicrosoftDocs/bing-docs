@@ -18,7 +18,7 @@ ms.author: scottwhi
 > To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
 
 
-When you send a request to Image Search API, it returns an [ImageAnswer](reference/response-objects.md#imageanswer) object in the response body. The object may include one or more of the following fields:
+When you send a request to Image Search API, it returns an [ImageAnswer](../reference/response-objects.md#imageanswer) object in the response body. The object may include one or more of the following fields:
 
 
 ```json
@@ -37,7 +37,7 @@ When you send a request to Image Search API, it returns an [ImageAnswer](referen
 }
 ```
 
-But if an error occurs, the response body contains an [ErrorResponse](reference/response-objects.md#errorresponse) object. Bing returns an error response for all 400 level HTTP status codes. [Read more](reference/error-codes.md)
+But if an error occurs, the response body contains an [ErrorResponse](../reference/response-objects.md#errorresponse) object. Bing returns an error response for all 400 level HTTP status codes. [Read more](../reference/error-codes.md)
 
 ```json
 {
@@ -269,5 +269,5 @@ Make `text` clickable by using the URL in `webSearchUrl` or `searchLink`. Use `w
 
 - Learn how to [get trending images](trending-images.md).
 - Learn how to [get insights about an image](image-insights.md) such as shopping sources or related images.
-- Learn about the [quickstarts](../../quickstarts/quickstarts.md) and [samples](../../samples.md) that are available to help you get up and running fast.
+- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
 

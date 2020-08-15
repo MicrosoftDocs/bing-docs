@@ -85,9 +85,9 @@ Use [Bing Visual Search API](../bing-visual-search/overview.md) instead of the `
 
 - Renamed the `InsightsSourcesSummary` object to [InsightsMetadata](reference/response-objects.md#insightsmetadata).  
 
-- Removed the `displayShoppingSourcesBadges` and `displayRecipeSourcesBadges` fields from [Images](reference/response-objects.md#images).  
+- Removed the `displayShoppingSourcesBadges` and `displayRecipeSourcesBadges` fields from [ImageAnswer](reference/response-objects.md#imageanswer).  
 
-- Renamed the `nextOffsetAddCount` field of [Images](reference/response-objects.md#images) to `nextOffset`. The way you use the offset has also changed. Previously, you set the [offset](reference/query-parameters.md#offset) query parameter to the `nextOffsetAddCount` value plus the previous offset value plus the number of images in the result. Now, you set `offset` to the `nextOffset` value.  
+- Renamed the `nextOffsetAddCount` field of [ImageAnswer](reference/response-objects.md#imageanswer) to `nextOffset`. The way you use the offset has also changed. Previously, you set the [offset](reference/query-parameters.md#offset) query parameter to the `nextOffsetAddCount` value plus the previous offset value plus the number of images in the result. Now, you set `offset` to the `nextOffset` value.  
 
 
 ## Non-breaking changes
@@ -104,4 +104,4 @@ Use [Bing Visual Search API](../bing-visual-search/overview.md) instead of the `
 
 ### Object changes
 
-- Added `similarTerms` to the [Images](reference/response-objects.md#images) object. This field contains a list of terms that are similar in meaning to the user's query string.  
+- Added `similarTerms` to the [ImageAnswer](reference/response-objects.md#imageanswer) object. This field contains a list of terms that are similar in meaning to the user's query string.  
