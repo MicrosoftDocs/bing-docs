@@ -42,8 +42,8 @@ By default, Image Search API returns images that the user requested. But if you 
 
 |Feature|Description
 |-|-
-|[Filter the images that bing returns](how-to/get-images.md#filter-the-images-that-bing-returns.md)|Filter images by when Bing discovered them, by image type such as animated GIFs, by their license type, and more.
-|[Pivot user search queries](how-to/search-response.md#using-pivot-queries.md)|Get search strings that pivot on the user's search string.
+|[Filter the images that bing returns](how-to/get-images.md#filter-the-images-that-bing-returns)|Filter images by when Bing discovered them, by image type such as animated GIFs, by their license type, and more.
+|[Pivot user search queries](how-to/search-response.md#using-pivot-queries)|Get search strings that pivot on the user's search string.
 |[Expand user search queries](how-to/search-response.md#using-expanded-queries)|Get search strings that expand on the user's search string.
 |[Page results](../bing-web-search/page-results.md)|Page through multiple pages of image results.
 |[Resize and crop thumbnails](../bing-web-search/resize-and-crop-thumbnails.md)|Resize or crop thumbnail images in the response to fit your experience.
@@ -68,6 +68,6 @@ If you are not sure if your experience can be considered a search-like experienc
 - Learn about other APIs in the [family of Bing Search APIs](../bing-web-search/bing-api-comparison.md).
 - Learn about [use and display requirements](../bing-web-search/use-display-requirements.md) for Bing Web Search.  
 - Learn about [searching the web for images](how-to/get-images.md).
-- Learn about what's in the [JSON response](how-to/search-responses.md).
+- Learn about what's in the [JSON response](how-to/search-response.md).
 - Review [Image Search API v7 reference](reference/endpoints.md) documentation.  
 
