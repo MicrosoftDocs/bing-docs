@@ -1,7 +1,7 @@
 ---
 title: Get image insights
 titleSuffix: Bing Search Services
-description: Learn how to use the Bing Image Details API to get more information about an image.
+description: Learn how to use the Bing Image Insights API to get more information about an image.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -12,10 +12,10 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Get image insights with Bing Image Details API
+# Get image insights with Bing Image Insights API
 
 > [!IMPORTANT]
-> Because [Bing Visual Search API](../../bing-visual-search/overview.md) provides more comprehensive image insights, use it instead of Bing Image Details API.
+> Because [Bing Visual Search API](../../bing-visual-search/overview.md) provides more comprehensive image insights, use it instead of Bing Image Insights API.
 
 Each image includes an insights token that you can use to get information about the image. For example, you can get a collection of related images, web pages that include the image, or a list of merchants where you can buy the product shown in the image.  
 
@@ -36,7 +36,7 @@ To get insights about an image, get the image's [imageInsightsToken](../referenc
   ],
 ```
 
-Next, call Image Details API and set the [insightsToken](../reference/query-parameters.md#insightstoken) query parameter to the token in the `imageInsightsToken` field.  
+Next, call Image Insights API and set the [insightsToken](../reference/query-parameters.md#insightstoken) query parameter to the token in the `imageInsightsToken` field.  
 
 To specify the insights that you want to get, set the [modules](../reference/query-parameters.md#modulesrequested) query parameter. To get all insights, set *modules* to `All`. To get only the caption and collection insights, set *modules* to `Caption%2CCollection`. 
 

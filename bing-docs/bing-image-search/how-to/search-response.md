@@ -53,6 +53,7 @@ But if an error occurs, the response body contains an [ErrorResponse](../referen
 }
 ```
 
+For information about the `nextOffset` and `totalEstimatedMatches` fields, see [Paging image and video results](../../bing-web-search/page-results.md#paging-image-and-video-results).
 
 The **ImageAnswer** object's `value` field contains the list of [Image](../reference/response-objects.md#image) objects. 
 
@@ -259,10 +260,26 @@ If Bing can segment the user’s query, the response includes the `pivotSuggesti
   ]
 ```
 
-
 The `pivotSuggestions` field contains the list of segments (pivots) that the original query was broken into. For each pivot, the response contains a list of [Query](../reference/response-objects.md#query) objects that contain suggested queries. The `text` field contains the suggested query. The `displayText` field contains the term that replaces the pivot in the original query. 
 
 Make `text` clickable by using the URL in `webSearchUrl` or `searchLink`. Use `webSearchUrl` to send the user to the Bing search results. If you provide your own results page experience, use `searchLink` to get new image search results using the pivot query string.
+
+
+## Related searches answer
+
+The `relatedSearches` field contains a list of the most popular related queries made by other users. Each [query](reference/response-objects.md#query) in the list includes a query string (`text`), a query string with hit highlighting characters (`displayText`), and a URL (`webSearchUrl`) to Bing's search results page for that query.
+
+```json
+{
+    "text": "dinghy racing teams",
+    "displayText": "dinghy racing teams",
+    "webSearchUrl": "https://www.bing.com/cr?IG=96C4CF214A0..."
+}, ...
+```
+
+Use the `displayText` query string and the `webSearchUrl` URL to create a hyperlink that takes the user to the Bing search results page for the related query. You could also use the `text` query string in your own Web Search API query and display the results yourself.
+
+For information about how to handle the highlighting markers in `displayText`, see [Hit Highlighting](../../bing-web-search/hit-highlighting.md).
 
 
 ## Next steps

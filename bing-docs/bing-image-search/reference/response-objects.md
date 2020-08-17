@@ -376,7 +376,7 @@ Defines a region of the image where an entity was found and a list of entities t
 |Element|Description|Type
 |-|-|-
 |matchingEntities|A list of entities that Bing believes match the entity found in the region. The entities are in descending order of confidence (see the `matchConfidence` field of RecognizedEntity).|[RecognizedEntity](#recognizedentity)[]
-|region|A region of the image that contains an entity.<br /><br /> The values of the rectangle are relative to the width and height of the original image and are in the range 0.0 through 1.0.<br /><br /> For example, if the image is 300x200 and the region's top, left corner is at point (10, 20) and the bottom, right corner is at point (290, 150), then the normalized rectangle is:<br /><br /> Left = 0.0333333333333333<br /><br /> Top = 0.1<br /><br /> Right = 0.9666666666666667<br /><br /> Bottom = 0.75<br /><br /> For people, the region represents the person's face.|[NormalizedRectangle](#normalizedrectangle)  
+|region|A region of the image that contains an entity.<br/><br/> The values of the rectangle are relative to the width and height of the original image and are in the range 0.0 through 1.0.<br/><br/> For example, if the image is 300x200 and the region's top, left corner is at point (10, 20) and the bottom, right corner is at point (290, 150), then the normalized rectangle is:<br/><br/>Left = 0.0333333333333333<br/>Top = 0.1<br/>Right = 0.9666666666666667<br/>Bottom = 0.75<br/><br/>For people, the region represents the person's face.|[NormalizedRectangle](#normalizedrectangle)  
 
   
 ## RelatedCollectionsModule  

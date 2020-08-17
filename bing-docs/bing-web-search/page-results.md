@@ -78,7 +78,7 @@ The answers that Bing returns from page to page is unknown. For example, Bing ma
 Note that if you specify the *responseFilter* query parameter and do not include Webpages in the list of filters, you should not use the *count* and *offset* parameters.
 
 
-## Paging images and video results
+## Paging image and video results
 
 Typically, if you page 30 images at a time, you set the *offset* query parameter to 0 on your first request, and increment *offset* by 30 on each subsequent request. However, some results in the subsequent response may be duplicates of the previous response. For example, the first two images in the response may be the same as the last two images from the previous response.
 

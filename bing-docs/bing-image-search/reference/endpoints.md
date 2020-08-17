@@ -28,7 +28,7 @@ To request image search results, send a GET request to one of the following endp
 |-|-
 |https://api.bing.microsoft.com/bing/v7.0/images/search|Returns images that are relevant to the users search query.
 |https://api.bing.microsoft.com/bing/v7.0/images/trending|Returns images that are trending based on search requests made by others. The images are broken out into different categories. For example, Popular People Searches.<br/><br/>For a list of markets that support trending images, see [Supported trending images markets](market-codes.md#trending-image-api-markets).
-|https://api.bing.microsoft.com/bing/v7.0/images/search/details|Returns insights about an image. Do not use this API. Instead, use the [Visual Search API](../../bing-visual-search/overview.md).
+|https://api.bing.microsoft.com/bing/v7.0/images/search/details|Returns insights about an image. Do not use this API. Instead, use [Visual Search API](../../bing-visual-search/overview.md).
 
 
 The request must use the HTTPS protocol. 

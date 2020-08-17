@@ -29,7 +29,7 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 - Help improve perceived performance by loading the thumbnail first and then loading the source URL.  
 - Use the [safeSearch](../reference/query-parameters.md#safesearch) query parameter to block adult content. Set to `strict` to block adult content.
 - Use the *AnimatedGifHttps* image type to return get only animated GIF images that are from an HTTPS address. For security, many applications require connection to external Web links over HTTPS.
-- 
+
 
 <a name="gifExample"></a>
 

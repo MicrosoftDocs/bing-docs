@@ -383,8 +383,6 @@ Use the `displayText` query string and the `webSearchUrl` URL to create a hyperl
 
 For information about how to handle the highlighting markers in `displayText`, see [Hit Highlighting](hit-highlighting.md).
 
-The following shows an example of the related queries usage in Bing.com.
-
 
 ## Computation answer
 
