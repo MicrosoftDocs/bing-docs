@@ -123,7 +123,7 @@ The response that News Category API returns is similar to what News Search API r
 }
 ```
 
-Notice that the [NewsAnswer](../reference/response-objects.md#newsanswer) object includes only the list of news articles (see the `value` field). And the [news articles](../reference/response-objects.md#newsarticles) don't include the `category` or `headline` fields.
+Notice that the [NewsAnswer](../reference/response-objects.md#newsanswer) object includes only the list of news articles (see the `value` field). And the [news articles](../reference/response-objects.md#newsarticle) don't include the `category` or `headline` fields.
 
 [!INCLUDE [bing-url-note](../../../includes/bing-url-note.md)]
 
