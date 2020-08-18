@@ -16,7 +16,7 @@ ms.author: scottwhi
 
 To get images that are trending on social media today, use Bing Trending Images API. This API offers an experience similar to bing.com/images/trending.
 
-Calling the API is easy. If you have your subscription key, just send an HTTP get request to the following endpoint:
+Calling the API is easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 
 ```
 https://api.bing.microsoft.com/bing/v7.0/images/trending

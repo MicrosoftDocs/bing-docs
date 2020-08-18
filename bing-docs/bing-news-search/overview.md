@@ -15,34 +15,50 @@ ms.author: scottwhi
 
 # What is the Bing News Search API?
 
-The Bing News Search API makes it easy to integrate Bing's cognitive news searching capabilities into your applications. The API provides a similar experience to [Bing News](https://www.bing.com/news), letting you send search queries and receive relevant news articles.
+Bing News Search API lets your users find headline news, news by category, and trending articles. If you're looking to build an experience similar to [bing.com/news](https://www.bing.com/news), this is the API to use.
 
-Be aware that the Bing News Search API provides news search results only. Use the [Bing Web Search API](../bing-web-search/overview.md), [Video Search API](../bing-video-search/overview.md) and [Image Search API](../bing-image-search/overview.md) for other types of web content.
+> [!NOTE]
+> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
 
-## Bing News Search API features
 
-While the Bing News Search API primarily finds and returns relevant news articles, it provides several features for intelligent, and focused news retrieval on the web.
+## Get started
 
-|Feature  |Description  |
-|---------|---------|
-|[Get general news](how-to/search-for-news.md#get-general-news)     | Find news by sending a search query to the Bing News Search API, and getting back a list of relevant news articles.           |
-|[Today's top news](how-to/search-for-news.md#get-todays-top-news)      | Get the top news stories for the day, across all categories.       |
-|[News by category](how-to/search-for-news.md#get-news-by-category)     | Search for news in specific categories.        | 
-|[Headline news](how-to/search-for-news.md#get-headline-news)     | Search for top headlines across all categories.         |
+To get started using the API, pick the subscription you want from <a href="https://www.microsoft.com/en-us/bing/apis/pricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call. 
 
-## Workflow
+You can easily call the API by sending a native HTTP GET request or by using the Web Search SDK. For examples to help you get up and running quickly for either option, see [Quickstarts](quickstarts/quickstarts.md).
 
-The Bing News Search API is a RESTful web service, making it easy to call from any programming language that can make HTTP requests and parse JSON. You can use the service using either the REST API, or the SDK.
 
-1. Create a [Cognitive Services API account](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account) with access to the Bing Search APIs. If you don't have an Azure subscription, you can [create an account](https://azure.microsoft.com/free/cognitive-services/) for free.
-2. Send a request to the API, with a valid search query.
-3. Process the API response by parsing the returned JSON message.
+
+## Features
+
+While Bing News Search API primarily focuses on finding relevant news articles, it also provides several features for intelligent and focused news retrieval on the web.
+
+|Feature|Description
+|-|-
+|[Get general news](how-to/search-for-news.md#get-general-news)|Gets general news articles based on the user's search query. If the search query is empty, the API returns top news articles from different categories.
+|[Today's top news](how-to/search-for-news.md#get-todays-top-news)|Gets news stories that are trending on social networks.
+|[News by category](how-to/search-for-news.md#get-news-by-category)|Search for news in specific news categories like business, sports, or entertainment.        | 
+|[Headline news](how-to/search-for-news.md#get-headline-news)|Search for top headlines across all news categories.
+
+Bing also provides API metrics, which you can use to inform your strategic decisions. Quickly retrieve statistics such as your top queries, call volume, market distribution, response code summary, and many more. For details, see [Bing Web Statistics](../bing-web-search/bing-web-stats.md).
+
+
+### Search or search-like experience
+
+Bing News Search API may only be used as a result of a direct user query or search, or as a result of an action within an app or experience that logically can be interpreted as a user’s search request. For illustration purposes, the following are some examples of acceptable search or search-like experiences.
+
+- User enters a query directly into a search box in an app
+- User selects specific text or image and requests “more information” or “additional information”
+- User asks a search bot about a particular topic
+- User dwells on a particular object or entity in a visual search type scenario
+
+If you are not sure if your experience can be considered a search-like experience, check with Microsoft.
+
 
 ## Next steps
 
-To quickly get started with your first API request, try a quickstart for the [REST API](quickstarts/rest/csharp.md) or one of the [SDKs](quickstarts/sdk/news-search-client-library-csharp.md).
-
-## See also
-
-* The [Bing News Search API v7](reference/endpoints.md) reference section contains definitions and information on the endpoints, headers, API responses, and query parameters that you can use to request image-based search results.
-* The [Bing Use and Display Requirements](../bing-web-search/use-display-requirements.md) specify acceptable uses of the content and information gained through the Bing search APIs.
+- Learn about other APIs in the [family of Bing Search APIs](../bing-web-search/bing-api-comparison.md).
+- Learn about [use and display requirements](../bing-web-search/use-display-requirements.md) for Bing Web Search.  
+- Learn about [searching the web for news](how-to/search-for-news.md).
+- Learn about what's in the [JSON response](how-to/search-response.md).
+- Review [News Search API v7 reference](reference/endpoints.md) documentation.  

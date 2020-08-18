@@ -18,7 +18,7 @@ ms.author: scottwhi
 
 For a list of possible objects, see **In this article** in the right pane.
 
-The top-level object in the response depends on the endpoint you call. If you call `/news/search` or `/news`, the top-level object in the response is the [News](#news) object; and for `/news/trendingtopics`, it's [TrendingTopicAnswer](#trendingtopics). If the request fails, the top-level object is the [ErrorResponse](#errorresponse) object.
+The top-level object in the response depends on the endpoint you call. If you call `/news/search` or `/news`, the top-level object in the response is the [NewsAnswer](#newsanswer) object; and for `/news/trendingtopics`, it's [TrendingTopicAnswer](#trendingtopics). If the request fails, the top-level object is the [ErrorResponse](#errorresponse) object.
 
 > [!NOTE]
 > Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
@@ -68,7 +68,7 @@ Defines the size of the media content.
 |width|The width of the media content, in pixels.|Integer 
 
   
-## News  
+## NewsAnswer  
 
 Defines the top-level object that the response includes when the news request succeeds.  
   
@@ -83,6 +83,8 @@ If the service suspects a denial of service attack, the request succeeds (HTTP s
 |<a name="news-sort"></a>sort|A list of options for sorting the news articles. For example, sort by relevance (default) or date. To determine which sort order the request used, see the `isSelected` field.<br/><br/>Only the News Search API includes this field.|[SortValue](#sortvalue)[]
 |<a name="news-totalmatches"></a>totalEstimatedMatches|The estimated number of news articles that are relevant to the query. Use this number along with the [count](query-parameters.md#count) and [offset](query-parameters.md#offset) query parameters to page the results.<br/><br/>Only the News Search API includes this field.|Long
 |<a name="news-value"></a>value|A list of news articles that are relevant to the query term.<br/><br/>If there are no results to return for the request, the array is empty.|[NewsArticle](#newsarticle)[]  
+|webSearchUrl|A URL to the top news stories on Bing. Included only for `/news` requests.|String 
+
   
 ## NewsArticle  
 
@@ -180,7 +182,7 @@ Defines a trending news topic.
   
 |Name|Value|Type
 |-|-|-
-|<a name="topic-image"></a>image|A link to a related image.<br/><br/>The `Image` object in this context contains only the `url` and `provider` field. The `provider` field is an array of [Organization](#organization) objects that identify the image providers.|Image
+|<a name="topic-image"></a>image|A link to a related image.<br/><br/>The `Image` object in this context contains only the `url` and `provider` fields. The `provider` field is an array of [Organization](#organization) objects that identify the image providers.|Image
 |<a name="topic-isbreakingnews"></a>isBreakingNews|A Boolean value that indicates whether the topic is considered breaking news. If the topic is considered breaking news, the value is **true**.|Boolean 
 |<a name="topic-name"></a>name|The title of the trending topic.|String  
 |newsSearchUrl|A URL to the Bing News search results for the search query term (see the `query` field).|String  

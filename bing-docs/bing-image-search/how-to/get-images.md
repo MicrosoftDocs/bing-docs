@@ -14,9 +14,9 @@ ms.author: scottwhi
 
 # Search the web for images
 
-Use Bing Image Search API to search the Web for image's that matches the user's request.
+Use Bing Image Search API to search the Web for images that matches the user's request.
 
-It's easy. If you have your subscription key, just send an HTTP get request to the following endpoint:
+It's easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 
 ```
 https://api.bing.microsoft.com/bing/v7.0/images/search
@@ -25,7 +25,7 @@ https://api.bing.microsoft.com/bing/v7.0/images/search
 Here's a cURL example that shows you how to call the endpoint using your subscription key. Change the *q* query parameter to search for whatever images you'd like.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/search?q=mt+rainier
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/search?q=mt+rainier
 ```
 
 

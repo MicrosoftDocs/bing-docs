@@ -55,13 +55,11 @@ But if an error occurs, the response body contains an [ErrorResponse](../referen
 
 For information about the `nextOffset` and `totalEstimatedMatches` fields, see [Paging image and video results](../../bing-web-search/page-results.md#paging-image-and-video-results).
 
-The **ImageAnswer** object's `value` field contains the list of [Image](../reference/response-objects.md#image) objects. 
-
 > [!NOTE]
 > - Images must be displayed in the order provided in the response.
 > - Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
 
-Here's what the image object looks like in the response.
+The **ImageAnswer** object's `value` field contains a list of [Image](../reference/response-objects.md#image) objects. Here's what the image object looks like in the response.
 
 ```json
 {
@@ -267,7 +265,7 @@ Make `text` clickable by using the URL in `webSearchUrl` or `searchLink`. Use `w
 
 ## Related searches answer
 
-The `relatedSearches` field contains a list of the most popular related queries made by other users. Each [query](reference/response-objects.md#query) in the list includes a query string (`text`), a query string with hit highlighting characters (`displayText`), and a URL (`webSearchUrl`) to Bing's search results page for that query.
+The `relatedSearches` field contains a list of the most popular related queries made by other users. Each [query](../reference/response-objects.md#query) in the list includes a query string (`text`), a query string with hit highlighting characters (`displayText`), and a URL (`webSearchUrl`) to Bing's search results page for that query.
 
 ```json
 {
