@@ -251,7 +251,7 @@ If the service suspects a denial of service attack, the request succeeds (HTTP s
 |<a name="searchresponse-computation"></a>computation|The answer to a math expression or unit conversion expression.|[Computation](#computation)
 |<a name="searchresponse-entities"></a>entities|A list of entities that are relevant to the search query.|[EntityAnswer](../../bing-entity-search/reference/response-objects.md#entityanswer)
 |<a name="searchresponse-images"></a>images|A list of images that are relevant to the search query.|[ImageAnswer](../../bing-image-search/reference/response-objects.md#imageanswer)
-|<a name="searchresponse-news"></a>news|A list of news articles that are relevant to the search query.|[News](../../bing-news-search/reference/response-objects.md#news) 
+|<a name="searchresponse-news"></a>news|A list of news articles that are relevant to the search query.|[NewsAnswer](../../bing-news-search/reference/response-objects.md#newsanswer) 
 |<a name="searchresponse-places"></a>places|A list of places that are relevant to the search query|[LocalEntityAnswer](../../bing-entity-search/reference/response-objects.md#localentityanswer)
 |<a name="searchresponse-querycontext"></a>queryContext|The query string that Bing used for the request.|[QueryContext](#querycontext)
 |<a name="searchresponse-ranking"></a>rankingResponse|The order that Bing suggests that you display the search results in.|[RankingResponse](#rankingresponse)

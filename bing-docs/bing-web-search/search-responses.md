@@ -302,7 +302,7 @@ For details about the video answer and videos, see [Video Search API](../bing-vi
 
 ## News answer
 
-The [news](../bing-news-search/reference/response-objects.md#news) answer contains a list of news articles that Bing thought were relevant to the query. Each [news article](../bing-news-search/reference/response-objects.md#newsarticle) in the list includes the article's name, description, and URL to the article on the host's website. If the article contains an image, the object includes a thumbnail of the image.
+The [news](../bing-news-search/reference/response-objects.md#newsanswer) answer contains a list of news articles that Bing thought were relevant to the query. Each [news article](../bing-news-search/reference/response-objects.md#newsarticle) in the list includes the article's name, description, and URL to the article on the host's website. If the article contains an image, the object includes a thumbnail of the image.
 
 ```json
   "news": {

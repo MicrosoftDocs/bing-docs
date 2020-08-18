@@ -125,6 +125,6 @@ The following JSON fragment shows what the Trending News response looks like. Us
 
 - Learn how to [get news by news category](category-news.md).
 - Learn how to [get search for news](search-for-news.md) on the Web.
-- Learn about [use and display requirements](../bing-web-search/use-display-requirements.md) for Bing News Search.  
+- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing News Search.  
 - Learn what happens if you don't stay within your queries per second (QPS) limit. Hint: your requests get [throttled](../../bing-web-search/throttling-requests.md).
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.

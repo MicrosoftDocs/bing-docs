@@ -35,10 +35,9 @@ While Bing News Search API primarily focuses on finding relevant news articles, 
 
 |Feature|Description
 |-|-
-|[Get general news](how-to/search-for-news.md#get-general-news)|Gets general news articles based on the user's search query. If the search query is empty, the API returns top news articles from different categories.
-|[Today's top news](how-to/search-for-news.md#get-todays-top-news)|Gets news stories that are trending on social networks.
-|[News by category](how-to/search-for-news.md#get-news-by-category)|Search for news in specific news categories like business, sports, or entertainment.        | 
-|[Headline news](how-to/search-for-news.md#get-headline-news)|Search for top headlines across all news categories.
+|[Get general news](how-to/search-for-news.md)|Gets general news stories based on the user's search query. If the search query is empty, the API returns top news articles from different categories.
+|[Today's trending news stories](how-to/trending-news)|Gets news stories that are trending on social networks.
+|[News by category](how-to/category-news.md)|Search for news in specific news categories like business, sports, or entertainment.        | 
 
 Bing also provides API metrics, which you can use to inform your strategic decisions. Quickly retrieve statistics such as your top queries, call volume, market distribution, response code summary, and many more. For details, see [Bing Web Statistics](../bing-web-search/bing-web-stats.md).
 

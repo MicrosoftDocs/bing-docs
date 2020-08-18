@@ -102,7 +102,7 @@ Some articles include the `video` field, which contains a video that's relevant 
       },
 ```
 
-Note that in some cases, the [Video](..reference/response-objects.md#video) object includes only a thumbnail and not the embedded video.
+Note that in some cases, the [Video](../reference/response-objects.md#video) object includes only a thumbnail and not the embedded video.
 
 ```json
       "video": {
@@ -120,6 +120,6 @@ Note that in some cases, the [Video](..reference/response-objects.md#video) obje
 
 - Learn how to [get trending news](trending-news.md).
 - Learn how to [get news by news category](category-news.md).
-- Learn about [use and display requirements](../bing-web-search/use-display-requirements.md) for Bing News Search.  
+- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing News Search.  
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
 

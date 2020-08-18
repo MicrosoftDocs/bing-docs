@@ -74,7 +74,7 @@ The API supports a number of query parameters that you can pass in your request.
 - *count* and *offset* &mdash; Used to page image results. [Read more](../../bing-web-search/page-results.md)
 - *mkt* &mdash; Used to specify the market where the results come from, which is typically the market where the user is making the request from.
 - *safeSearch* &mdash; Used to specify the user's safe search preference.
-- *textDecorations* and *textFormat* &mdash; Used to turn on hit highlighting. [Read more](../../bing-web-searchhit-highlighting.md)
+- *textDecorations* and *textFormat* &mdash; Used to turn on hit highlighting. [Read more](../../bing-web-search/hit-highlighting.md)
 
 To learn more about these parameters and other parameters that you may specify, see [Query parameters](../reference/query-parameters.md).
 

@@ -44,10 +44,12 @@
   href: samples.md
 - name: How-to guides
   items:
-  - name: Sending search queries
-    href: how-to/send-search-queries.md
-  - name: Searching for news
+  - name: Search for news
     href: how-to/search-for-news.md
+  - name: Get trending news
+    href: how-to/trending-news.md
+  - name: Get news by category
+    href: how-to/category-news.md
   - name: Handle hit highlighting
     href: ../bing-web-search/hit-highlighting.md
     maintainContext: true

@@ -123,7 +123,7 @@ The response that News Category API returns is similar to what News Search API r
 }
 ```
 
-Notice that the [NewsAnswer](../reference/response-object.md#newsanswer) object includes only the list of news articles (see the `value` field). And the [news articles](../reference/response-object.md#newsarticles) don't include the `category` or `headline` fields.
+Notice that the [NewsAnswer](../reference/response-objects.md#newsanswer) object includes only the list of news articles (see the `value` field). And the [news articles](../reference/response-objects.md#newsarticles) don't include the `category` or `headline` fields.
 
 [!INCLUDE [bing-url-note](../../../includes/bing-url-note.md)]
 
@@ -133,7 +133,7 @@ Notice that the [NewsAnswer](../reference/response-object.md#newsanswer) object 
 - Learn about the [response](search-response.md) that Bing returns.
 - Learn how to [get trending news](trending-news.md).
 - Learn how to [get search for news](search-for-news.md) on the Web.
-- Learn about [use and display requirements](../bing-web-search/use-display-requirements.md) for Bing News Search.  
+- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing News Search.  
 - Learn what happens if you don't stay within your queries per second (QPS) limit. Hint: your requests get [throttled](../../bing-web-search/throttling-requests.md).
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
 

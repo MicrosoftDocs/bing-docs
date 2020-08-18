@@ -87,6 +87,6 @@ Blocked|InvalidRequest.Blocked
 
 - Added the `video` field to the [NewsArticle](reference/response-objects.md#newsarticle) object. The `video` field contains a video that's related to the news article. The video is either an \<iframe\> that you can embed or a motion thumbnail.
 
-- Added the `sort` field to the [News](reference/response-objects.md#news) object. The `sort` field shows the sort order of the articles. For example, the articles are sorted by relevance (default) or date.
+- Added the `sort` field to the [NewsAnswer](reference/response-objects.md#newsanswer) object. The `sort` field shows the sort order of the articles. For example, the articles are sorted by relevance (default) or date.
 
 - Added the [SortValue](reference/response-objects.md#sortvalue) object, which defines a sort order. The `isSelected` field indicates whether the response used the sort order. If **true**, the response used the sort order. If `isSelected` is **false**, you can use the URL in the `url` field to request a different sort order.
