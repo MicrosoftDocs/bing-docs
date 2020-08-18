@@ -44,7 +44,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
     ```java
     static String subscriptionKey = "enter key here";
     static String host = "https://api.bing.microsoft.com";
-    static String path = "/bing/v7.0/Suggestions";
+    static String path = "/v7.0/Suggestions";
     static String mkt = "en-US";
     static String query = "sail";
     ```

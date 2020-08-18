@@ -48,7 +48,7 @@ To run this application, follow these steps:
 $subscriptionKey = 'ENTER KEY HERE';
 
 $host = "https://api.bing.microsoft.com";
-$path = "/bing/v7.0/entities";
+$path = "/v7.0/entities";
 
 $mkt = "en-US";
 $query = "italian restaurants near me";

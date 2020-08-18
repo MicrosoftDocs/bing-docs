@@ -50,7 +50,7 @@ To run this application, follow these steps:
 // Replace the accessKey string value with your valid access key.
 $accessKey = 'enter key here';
 
-$endpoint = 'https://api.bing.microsoft.com/bing/v7.0/news/search';
+$endpoint = 'https://api.bing.microsoft.com/v7.0/news/search';
 
 $term = 'Microsoft';
 

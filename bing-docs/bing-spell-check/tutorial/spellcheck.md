@@ -196,7 +196,7 @@ Specify the Bing Spell Check API endpoint and declare an XMLHttpRequest object, 
 use to send requests to the endpoint.
 
 ```html
-    var endpoint = "https://api.bing.microsoft.com/bing/v7.0/spellcheck/";
+    var endpoint = "https://api.bing.microsoft.com/v7.0/spellcheck/";
 
     var request = new XMLHttpRequest();
 

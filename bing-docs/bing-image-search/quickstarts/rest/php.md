@@ -37,7 +37,7 @@ To run this application, follow these steps:
 3. Define the API endpoint, your subscription key, and search term. 
 
     ```php
-    $endpoint = 'https://api.bing.microsoft.com/bing/v7.0/images/search';
+    $endpoint = 'https://api.bing.microsoft.com/v7.0/images/search';
     // Replace the accessKey string value with your valid access key.
     $accessKey = 'enter key here';
     $term = 'tropical ocean';

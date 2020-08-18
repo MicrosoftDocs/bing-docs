@@ -35,7 +35,7 @@ Although this application is written in JavaScript, the API is a RESTful Web ser
     let https = require ('https');
 
     let host = 'api.bing.microsoft.com';
-    let path = '/bing/v7.0/spellcheck';
+    let path = '/v7.0/spellcheck';
     let key = '<ENTER-KEY-HERE>';
     ```
 

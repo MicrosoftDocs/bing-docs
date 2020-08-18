@@ -42,7 +42,7 @@ For more information, see [Cognitive Services Pricing - Bing Search API](https:/
 
     ```ruby
     uri  = "https://api.bing.microsoft.com"
-    path = "/bing/v7.0/images/search"
+    path = "/v7.0/images/search"
     term = "puppies"
     ```
 

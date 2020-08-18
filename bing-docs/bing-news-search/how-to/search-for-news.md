@@ -23,7 +23,7 @@ Use Bing News Search API to search the Web for news that's relevant to the user'
 It's easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 
 ```
-https://api.bing.microsoft.com/bing/v7.0/news/search
+https://api.bing.microsoft.com/v7.0/news/search
 ```
 
 Here's a cURL example that shows you how to call the endpoint using your subscription key. Change the *q* query parameter to search for whatever news you'd like.
@@ -81,7 +81,7 @@ To learn more about these parameters and other parameters that you may specify, 
 Here's a cURL example that includes these query parameters.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/news/search?q=mt+rainier&mkt=en-us&safeSearch=moderate&textdecorations=true&textformat=raw&count=10&offset=0
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news/search?q=mt+rainier&mkt=en-us&safeSearch=moderate&textdecorations=true&textformat=raw&count=10&offset=0
 ```
 
 ### Control the freshness of the articles
@@ -94,7 +94,7 @@ If you want to limit the age of the articles are that Bing returns, check out th
 To get news from a specific domain, add the [site](https://help.bing.microsoft.com/#apex/18/en-US/10001/-1)) query operator to the user's query string.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/news/search?q=sailing+dinghies+site%3Acontososailing.com&mkt=en-us
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news/search?q=sailing+dinghies+site%3Acontososailing.com&mkt=en-us
 ```
 
 ### Get today's top news
@@ -102,7 +102,7 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 To get today's top news articles, simply leave the `q` query parameter unset.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/news/search?q=&mkt=en-us
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news/search?q=&mkt=en-us
 ```
 
 The number of top news articles may vary depending on the news cycle.
@@ -116,7 +116,7 @@ The **NewsAnswer** also doesn't include the `sort` field.
 By default, the API orders the list of news articles by relevance with the most relevant articles listed first. If you want to order the articles by most recent, include the *sortBy* query parameter in your request and set it to date.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/news/search?q=sailing&mkt=en-us&sortBy=date
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news/search?q=sailing&mkt=en-us&sortBy=date
 ```
 
 The response’s `sort` field lists the sort options and indicates which option the request used (see the `isSelected` field). In the following example, the request used relevance to sort the articles. 
@@ -156,7 +156,7 @@ To include the original image in the response, in addition to the thumbnail, inc
 
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/news/search?q=sailing&mkt=en-us&originalImg=true
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news/search?q=sailing&mkt=en-us&originalImg=true
 ```
 
 Now the response includes both the `contentUrl` (link to the original image) and `thumbnail` fields.

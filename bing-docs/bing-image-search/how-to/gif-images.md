@@ -19,7 +19,7 @@ Bing Image Search API lets you search across the entire Web for the most relevan
 The following cURL example shows how to use the API to get animated GIF images.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/search?q=interesting&imageType=AnimatedGif&mkt=en-us
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/search?q=interesting&imageType=AnimatedGif&mkt=en-us
 ```
 
 
@@ -70,7 +70,7 @@ public class GIFsearch {
     static String subscriptionKey = "YOUR-ACCESS-KEY";
 
     static String host = "https://api.bing.microsoft.com";
-    static String path = "/bing/v7.0/images/search";
+    static String path = "/v7.0/images/search";
 
     static String searchTerm = "interesting";
 

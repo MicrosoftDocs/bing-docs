@@ -39,7 +39,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
 
     ```csharp
     static string host = "https://api.bing.microsoft.com";
-    static string path = "/bing/v7.0/Suggestions";
+    static string path = "/v7.0/Suggestions";
     static string market = "en-US";
     static string key = "your-api-key";
     

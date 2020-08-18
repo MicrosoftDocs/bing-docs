@@ -41,7 +41,7 @@ The source code for this sample is available on [GitHub](https://github.com/Azur
     ```javascript
     let subscriptionKey = 'enter key here';
     let host = 'api.bing.microsoft.com';
-    let path = '/bing/v7.0/news/search';
+    let path = '/v7.0/news/search';
     let term = 'Microsoft';
     ```
 

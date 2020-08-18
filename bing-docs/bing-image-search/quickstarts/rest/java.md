@@ -46,7 +46,7 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
     ```java
     static String subscriptionKey = "enter key here";
     static String host = "https://api.bing.microsoft.com";
-    static String path = "/bing/v7.0/images/search";
+    static String path = "/v7.0/images/search";
     static String searchTerm = "tropical ocean";
     ```
 

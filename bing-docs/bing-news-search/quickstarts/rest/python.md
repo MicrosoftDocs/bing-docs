@@ -36,7 +36,7 @@ import requests
 
 subscription_key = "your subscription key"
 search_term = "Microsoft"
-search_url = "https://api.bing.microsoft.com/bing/v7.0/news/search"
+search_url = "https://api.bing.microsoft.com/v7.0/news/search"
 ```
 
 ## Create parameters for the request

@@ -193,7 +193,7 @@ Specify the Bing Autosuggest API endpoint and declare an XMLHttpRequest object, 
 use to send requests. 
 
 ```html
-    var endpoint = "https://api.bing.microsoft.com/bing/v7.0/Suggestions";
+    var endpoint = "https://api.bing.microsoft.com/v7.0/suggestions";
 
     var request = new XMLHttpRequest();
 

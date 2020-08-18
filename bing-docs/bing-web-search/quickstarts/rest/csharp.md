@@ -70,7 +70,7 @@ const string accessKey = "enter key here";
  * against the endpoint for your Bing Web search instance in your Azure
  * dashboard.
  */
-const string uriBase = "https://api.bing.microsoft.com/bing/v7.0/search";
+const string uriBase = "https://api.bing.microsoft.com/v7.0/search";
 const string searchTerm = "Microsoft Bing Search Services";
 ```
 

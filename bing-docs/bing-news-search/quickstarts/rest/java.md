@@ -50,7 +50,7 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
     public static SearchResults SearchNews (String searchQuery) throws Exception {
         static String subscriptionKey = "enter key here";
         static String host = "https://api.bing.microsoft.com";
-        static String path = "/bing/v7.0/news/search";
+        static String path = "/v7.0/news/search";
         static String searchTerm = "Microsoft";
     //...
     }

@@ -104,7 +104,7 @@ static void RunQueryAndDisplayResults(string userQuery)
         client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", "<YOUR_SUBSCRIPTION_KEY_GOES_HERE>");
         var queryString = HttpUtility.ParseQueryString(string.Empty);
         queryString["q"] = userQuery;
-        var query = "https://api.bing.microsoft.com/bing/v7.0/search?" + queryString;
+        var query = "https://api.bing.microsoft.com/v7.0/search?" + queryString;
 
         // Run the query
         HttpResponseMessage httpResponseMessage = client.GetAsync(query).Result;

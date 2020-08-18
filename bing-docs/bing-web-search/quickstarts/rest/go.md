@@ -114,7 +114,7 @@ This code declares the main function and sets the required variables:
 // Declare the main function. This is required for all Go programs.
 func main() {
 // Replace the token string with a valid subscription key.  
-    const endpoint = "https://api.bing.microsoft.com/bing/v7.0/search"
+    const endpoint = "https://api.bing.microsoft.com/v7.0/search"
     token := "YOUR-ACCESS-KEY"
     searchTerm := "Microsoft Bing Search Services"
 
@@ -253,7 +253,7 @@ type BingAnswer struct {
 
 // Replace the token string with a valid subscription key.  
 func main() {
-    const endpoint = "https://api.bing.microsoft.com/bing/v7.0/search"
+    const endpoint = "https://api.bing.microsoft.com/v7.0/search"
     token := "YOUR-ACCESS-KEY"
     searchTerm := "Microsoft Cognitive Services"
 

@@ -27,16 +27,16 @@ When the user selects a suggestion from the drop-down list, you can use it to se
 
 ## Sending a request
 
-Sending a request is easy. If you have your subscription key, just send an HTTP get request to the following endpoint:
+Sending a request is easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 
 ```
-https://api.bing.microsoft.com/bing/v7.0/suggestions
+https://api.bing.microsoft.com/v7.0/suggestions
 ```
 
 Here's a cURL example that shows you how to call the endpoint using your subscription key. Change the *q* query parameter to get query string suggestions for whatever you'd like.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/suggestions?q=sail
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/suggestions?q=sail
 ```
 
 ## Request and response headers
@@ -53,7 +53,7 @@ The more information you can provide Bing, the better the experience will be for
 Here's a cURL example that includes these headers.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/bing/v7.0/suggestions?q=sail
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/v7.0/suggestions?q=sail
 ```
 
 Bing returns a couple of headers you should capture. 
@@ -67,7 +67,7 @@ To learn more about these headers, see [Response headers](../reference/headers.m
 Here's a cURL call that returns the response headers. If you want to remove the response data so you can see only the headers, include the `-o nul` parameter.
 
 ```curl
-curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/suggestions?q=sail
+curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/suggestions?q=sail
 ```
 
 
@@ -82,7 +82,7 @@ To learn more about these parameters and other parameters that you may specify, 
 Here's a cURL example that includes these query parameters.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/suggestions?q=sail&mkt=en-us
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/suggestions?q=sail&mkt=en-us
 ```
 
 ## Handling the response

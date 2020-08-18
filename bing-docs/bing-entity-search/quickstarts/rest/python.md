@@ -35,7 +35,7 @@ Although this application is written in Python, the API is a RESTful Web service
     
     subscriptionKey = 'ENTER YOUR KEY HERE'
     host = 'api.bing.microsoft.com'
-    path = '/bing/v7.0/entities'
+    path = '/v7.0/entities'
     mkt = 'en-US'
     query = 'italian restaurants near me'
     ```

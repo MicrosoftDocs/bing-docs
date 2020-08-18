@@ -42,7 +42,7 @@ The source code for this sample is available on [GitHub](https://github.com/Azur
     ```ruby
     accessKey = "enter key here"
     uri  = "https://api.bing.microsoft.com"
-    path = "/bing/v7.0/news/search"
+    path = "/v7.0/news/search"
     term = "Microsoft"
     ```
 

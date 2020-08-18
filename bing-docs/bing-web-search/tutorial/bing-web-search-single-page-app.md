@@ -142,7 +142,7 @@ The `getSubscriptionKey()` function uses the `storeValue` and `retrieveValue` fu
 API_KEY_COOKIE   = "bing-search-api-key";
 CLIENT_ID_COOKIE = "bing-search-client-id";
 
-BING_ENDPOINT = "https://api.bing.microsoft.com/bing/v7.0/search";
+BING_ENDPOINT = "https://api.bing.microsoft.com/v7.0/search";
 
 // See source code for storeValue and retrieveValue definitions.
 
@@ -448,7 +448,7 @@ npm install -g cors-proxy-server
 Next, change the Bing Web Search endpoint in `script.js` to:
 
 ```javascript
-http://localhost:9090/https://api.bing.microsoft.com/bing/v7.0/search
+http://localhost:9090/https://api.bing.microsoft.com/v7.0/search
 ```
 
 Start the CORS proxy with this command:

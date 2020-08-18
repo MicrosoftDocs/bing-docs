@@ -42,7 +42,7 @@ For more information, see [Cognitive Services Pricing - Bing Search API](https:/
     ```javascript
     let subscriptionKey = 'enter key here';
     let host = 'api.bing.microsoft.com';
-    let path = '/bing/v7.0/images/search';
+    let path = '/v7.0/images/search';
     let term = 'tropical ocean';
     ```
 

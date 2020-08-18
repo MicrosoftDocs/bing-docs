@@ -19,13 +19,13 @@ Use Bing Web Search API to search billions of web documents for content that's r
 It's easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 
 ```
-https://api.bing.microsoft.com/bing/v7.0/search
+https://api.bing.microsoft.com/v7.0/search
 ```
 
 Here's a cURL example that shows you how to call the endpoint using your subscription key. Change the *q* query parameter to search for whatever you'd like.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/search?q=microsoft+devices
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/search?q=microsoft+devices
 ```
 
 ## Request and response headers
@@ -42,7 +42,7 @@ The more information you can provide Bing, the better the search experience will
 Here's a cURL example that includes these headers.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/bing/v7.0/search?q=microsoft+devices
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/v7.0/search?q=microsoft+devices
 ```
 
 Bing returns a couple of headers you should capture. 
@@ -56,7 +56,7 @@ To learn more about these headers, see [Response headers](reference/headers.md#r
 Here's a cURL call that returns the response headers. If you want to remove the response data so you can see only the headers, include the `-o nul` parameter.
 
 ```curl
-curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/search?q=microsoft+devices
+curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/search?q=microsoft+devices
 ```
 
 ## Query parameters
@@ -75,7 +75,7 @@ To learn more about these parameters and other parameters that you may specify, 
 Here's a cURL example that includes these query parameters.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/search?q=microsoft+devices&mkt=en-us&safeSearch=moderate&textdecorations=true&textformat=raw&count=10&offset=0
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/search?q=microsoft+devices&mkt=en-us&safeSearch=moderate&textdecorations=true&textformat=raw&count=10&offset=0
 ```
 
 For information about query parameters that you can use to filter the search results, see [Filtering search results](filter-answers.md).

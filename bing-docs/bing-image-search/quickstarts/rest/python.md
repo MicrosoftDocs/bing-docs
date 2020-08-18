@@ -43,7 +43,7 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
     from io import BytesIO
     
     subscription_key = "your-subscription-key"
-    search_url = "https://api.bing.microsoft.com/bing/v7.0/images/search"
+    search_url = "https://api.bing.microsoft.com/v7.0/images/search"
     search_term = "puppies"
     ```
 

@@ -21,10 +21,11 @@ This upgrade guide identifies the changes between version 5 and version 7 of the
 
 ### Endpoints
 
-- The `cognitive` subdomain changed to `bing`. 
-- The endpoint's version number changed from v5 to v7.
+- Changed the `cognitive` subdomain to `bing`. 
+- Changed the endpoint's version number from v5 to v7.
+- Removed the `/bing` folder.
 
-New search endpoint: `https://api.bing.microsoft.com/bing/v7.0/news/search`
+New search endpoint: `https://api.bing.microsoft.com/v7.0/news/search`
 
 ### Error response objects and error codes
 

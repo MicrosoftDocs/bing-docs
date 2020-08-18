@@ -44,7 +44,7 @@ Although this application is written in PHP, the API is a RESTful Web service co
     // define("CLIENT_LOCATION", "+90.0000000000000;long: 00.0000000000000;re:100.000000000000");
     
     $host = 'https://api.bing.microsoft.com';
-    $path = '/bing/v7.0/spellcheck?';
+    $path = '/v7.0/spellcheck?';
     $params = 'mkt=en-us&mode=proof';
     
     $input = "Hollo, wrld!";

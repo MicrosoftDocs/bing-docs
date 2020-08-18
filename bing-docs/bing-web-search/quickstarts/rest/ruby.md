@@ -46,7 +46,7 @@ A few variables must be set before we can continue:
 ```ruby
 accessKey = "YOUR_SUBSCRIPTION_KEY"
 uri  = "https://api.bing.microsoft.com"
-path = "/bing/v7.0/search"
+path = "/v7.0/search"
 term = "Microsoft Bing Search Services"
 
 if accessKey.length != 32 then
@@ -103,7 +103,7 @@ require 'json'
 
 accessKey = "enter key here"
 uri  = "https://api.bing.microsoft.com"
-path = "/bing/v7.0/search"
+path = "/v7.0/search"
 term = "Microsoft Bing Search Services"
 
 if accessKey.length != 32 then

@@ -42,7 +42,7 @@ Although this application is written in Java, the API is a RESTful web service c
 
     ```java
     static String host = "https://api.bing.microsoft.com";
-    static String path = "/bing/v7.0/spellcheck";
+    static String path = "/v7.0/spellcheck";
 
     static String key = "<ENTER-KEY-HERE>";
 

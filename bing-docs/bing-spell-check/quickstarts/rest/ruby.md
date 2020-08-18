@@ -44,7 +44,7 @@ Although this application is written in Ruby, the API is a RESTful Web service c
     ```ruby
     key = 'ENTER YOUR KEY HERE'
     uri = 'https://api.bing.microsoft.com'
-    path = '/bing/v7.0/spellcheck?'
+    path = '/v7.0/spellcheck?'
     params = 'mkt=en-us&mode=proof'
     ```
 

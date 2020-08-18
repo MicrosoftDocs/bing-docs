@@ -62,7 +62,7 @@ This function makes a secure GET request and saves the search query as a query p
 function bingWebSearch(query) {
   https.get({
     hostname: 'api.bing.microsoft.com',
-    path:     '/bing/v7.0/search?q=' + encodeURIComponent(query),
+    path:     '/v7.0/search?q=' + encodeURIComponent(query),
     headers:  { 'Ocp-Apim-Subscription-Key': SUBSCRIPTION_KEY },
   }, res => {
     let body = ''
@@ -115,7 +115,7 @@ if (!SUBSCRIPTION_KEY) {
 function bingWebSearch(query) {
   https.get({
     hostname: 'api.bing.microsoft.com',
-    path:     '/bing/v7.0/search?q=' + encodeURIComponent(query),
+    path:     '/v7.0/search?q=' + encodeURIComponent(query),
     headers:  { 'Ocp-Apim-Subscription-Key': SUBSCRIPTION_KEY },
   }, res => {
     let body = ''

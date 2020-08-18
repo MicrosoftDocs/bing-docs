@@ -87,7 +87,7 @@ The following code declares the main function and assigns the required variables
 ```go
 func main() {
     // Verify the endpoint URI and replace the token string with a valid subscription key.  
-    const endpoint = "https://api.bing.microsoft.com/bing/v7.0/news/search"
+    const endpoint = "https://api.bing.microsoft.com/v7.0/news/search"
     token := "YOUR-ACCESS-KEY"
     searchTerm := "Microsoft Cognitive Services"
 

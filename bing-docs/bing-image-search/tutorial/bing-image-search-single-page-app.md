@@ -45,7 +45,7 @@ Define `storeValue` and `retrieveValue` functions to use either the `localStorag
 API_KEY_COOKIE   = "bing-search-api-key";
 CLIENT_ID_COOKIE = "bing-search-client-id";
 // The Bing Image Search API endpoint
-BING_ENDPOINT = "https://api.bing.microsoft.com/bing/v7.0/images/search";
+BING_ENDPOINT = "https://api.bing.microsoft.com/v7.0/images/search";
 
 try { //Try to use localStorage first
     localStorage.getItem;   
@@ -390,7 +390,7 @@ npm install -g cors-proxy-server
 ```
 
 Next, change the Bing Web Search endpoint in the HTML file to:\
-`http://localhost:9090/https://api.bing.microsoft.com/bing/v7.0/search`
+`http://localhost:9090/https://api.bing.microsoft.com/v7.0/search`
 
 Finally, start the CORS proxy with the following command:
 

@@ -44,7 +44,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
 $subscriptionKey = 'enter key here';
 
 $host = "https://api.bing.microsoft.com";
-$path = "/bing/v7.0/Suggestions";
+$path = "/v7.0/Suggestions";
 
 $mkt = "en-US";
 $query = "sail";

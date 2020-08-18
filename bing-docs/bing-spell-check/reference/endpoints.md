@@ -25,7 +25,7 @@ For information about permitted use and display of the results, see [Use and dis
 To check the spelling and grammar of a block of text, send a GET or POST request to:  
   
 ```
-https://api.bing.microsoft.com/bing/v7.0/spellcheck
+https://api.bing.microsoft.com/v7.0/spellcheck
 ```  
   
 The request must use the HTTPS protocol.  

@@ -45,7 +45,7 @@ The full code to this sample can be found on [GitHub](https://github.com/Azure-S
 
     ```csharp
     const string accessKey = "enter key here";
-    const string uriBase = "https://api.bing.microsoft.com/bing/v7.0/news/search";
+    const string uriBase = "https://api.bing.microsoft.com/v7.0/news/search";
     const string searchTerm = "Microsoft";
     ```
    

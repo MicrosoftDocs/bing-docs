@@ -25,7 +25,7 @@ For information about what you can do with the search results, see [Use and disp
 To request web search results, send a GET request to:  
   
 ```
-https://api.bing.microsoft.com/bing/v7.0/search
+https://api.bing.microsoft.com/v7.0/search
 ```
 
 The request must use the HTTPS protocol. 

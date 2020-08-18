@@ -19,13 +19,13 @@ To get images that are trending on social media today, use Bing Trending Images 
 Calling the API is easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 
 ```
-https://api.bing.microsoft.com/bing/v7.0/images/trending
+https://api.bing.microsoft.com/v7.0/images/trending
 ```
 
 Here's a cURL example that shows you how to call the endpoint using your subscription key. 
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/trending
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/trending
 ```
 
 For a list of markets that support Trending Images, see [Market codes](../reference/market-codes.md#trending-image-api-markets).  
@@ -45,7 +45,7 @@ The more information you can provide Bing, the better the experience will be for
 Here's a cURL example that includes these headers.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/bing/v7.0/images/trending
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/v7.0/images/trending
 ```
 
 Bing returns a couple of headers you should capture. 
@@ -59,7 +59,7 @@ To learn more about these headers, see [Response headers](../reference/headers.m
 Here's a cURL call that returns the response headers. If you want to remove the response data so you can see only the headers, include the `-o nul` parameter.
 
 ```curl
-curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/trending
+curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/trending
 ```
 
 
@@ -72,7 +72,7 @@ You can ignore all other parameters listed in [Query parameters](../reference/qu
 Here's a cURL example that includes the *mkt* query parameter.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/trending?mkt=en-us
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/trending?mkt=en-us
 ```
 
 
@@ -145,7 +145,7 @@ If you call Image Search API to get the related images, set the [id](../referenc
 The following cURL example shows how to call Image Search API to get the related images.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/search?q=Red-knobbed+hornbill&id=467A365F7E182F8875EB3379B3B1E8DB4FB2C464&mkt=en-us
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/search?q=Red-knobbed+hornbill&id=467A365F7E182F8875EB3379B3B1E8DB4FB2C464&mkt=en-us
 ```
 
 

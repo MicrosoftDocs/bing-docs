@@ -23,13 +23,13 @@ If you’re building a news page and want to get headline news or category-speci
 To get headline news, call the API without including the [cateogry](../reference/query-parameters.md#category) query parameter.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/news?mkt=en-us
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news?mkt=en-us
 ```
 
 And if you want news for a specify news category, include the *category* parameter. The following example shows how to get sports news.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/news?mkt=en-us&category=sports
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news?mkt=en-us&category=sports
 ```
 
 For a list of possible news categories that you may specify, see [News categories by market](../reference/query-parameters.md#news-categories-by-market).
@@ -49,7 +49,7 @@ The more information you can provide Bing, the better the search experience will
 Here's a cURL example that includes these headers.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/bing/v7.0/news?mkt=en-us
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/v7.0/news?mkt=en-us
 ```
 
 Bing returns a couple of headers you should capture. 
@@ -63,7 +63,7 @@ To learn more about these headers, see [Response headers](../reference/headers.m
 Here's a cURL call that returns the response headers. If you want to remove the response data so you can see only the headers, include the `-o nul` parameter.
 
 ```curl
-curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/news?mkt=en-us
+curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news?mkt=en-us
 ```
 
 
@@ -79,7 +79,7 @@ To learn more about these parameters, see [Query parameters](../reference/query-
 Here's a cURL example that includes these query parameters.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/news?mkt=en-us&category=sports
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news?mkt=en-us&category=sports
 ```
 
 

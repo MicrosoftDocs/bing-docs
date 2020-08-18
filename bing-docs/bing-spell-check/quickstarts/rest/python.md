@@ -38,7 +38,7 @@ Although this application is written in Python, the API is a RESTful Web service
     ```python
     api_key = "<ENTER-KEY-HERE>"
     example_text = "Hollo, wrld" # the text to be spell-checked
-    endpoint = "https://api.bing.microsoft.com/bing/v7.0/SpellCheck"
+    endpoint = "https://api.bing.microsoft.com/v7.0/SpellCheck"
     ```
 
 ## Create the parameters for the request

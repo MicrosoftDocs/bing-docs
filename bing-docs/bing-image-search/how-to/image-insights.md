@@ -43,7 +43,7 @@ To specify the insights that you want to get, set the [modules](../reference/que
 The following cURL example requests all available insights using the token from the above example.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/details?q=mt+rainier&insightsToken=mid_D6426898706EC7...&modules=All&mkt=en-us  
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/details?q=mt+rainier&insightsToken=mid_D6426898706EC7...&modules=All&mkt=en-us  
 ```
 
 As you can see from the response, not all images return all insights. The response includes all insights that you requested, only if available.
@@ -66,7 +66,7 @@ If you have the URL to an image that you want to get insights of, use the [imgUr
 The following example shows how to request insights of an image using the *imgUrl* parameter.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/details?q=sun+flower&&imgUrl=https%3A%2F%2Fwww.mydomain.com%2Fimages%2Fsunflower.png&modules=All&mkt=en-us  
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/details?q=sun+flower&&imgUrl=https%3A%2F%2Fwww.mydomain.com%2Fimages%2Fsunflower.png&modules=All&mkt=en-us  
 ```
 
 
@@ -75,7 +75,7 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 To request all insights of an image, set the [modules](../reference/query-parameters.md#modulesrequested) query parameter to `All`. To get related searches, the request must include the user's query string. This example shows using the [insightsToken](../reference/query-parameters.md#insightstoken) to specify the image.  
 
 ```
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/details?q=sailing+dinghy&insightsToken=mid_68364D764J...&modules=All&mkt=en-us
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/details?q=sailing+dinghy&insightsToken=mid_68364D764J...&modules=All&mkt=en-us
 ```
 
 The top-level object is an [ImageInsightsResponse](../reference/response-objects.md#imageinsightsresponse) object instead of an [ImageAnswer](../reference/response-objects.md#imageanswer) object.  
@@ -174,7 +174,7 @@ The entity recognition feature identifies well-known people in an image. To iden
 The following shows how to specify the image by using the [imgUrl](../reference/query-parameters.md#imgurl) parameter. Remember to URL encode the query parameters.  
 
 ```
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/details?q=bill+gates&insightsToken=mid_68364D764J...&modules=RecognizedEntities&mkt=en-us
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/details?q=bill+gates&insightsToken=mid_68364D764J...&modules=RecognizedEntities&mkt=en-us
 ```  
 
 The following shows the response to the previous request. Because the image contains two people, the response identifies a region for each person. In this case, the people were recognized in the CelebrityAnnotations and CelebRecognitionAnnotations groups. Bing lists the people in each group based on the likelihood that they match the person in the original image. The list is in descending order of confidence. The CelebRecognitionAnnotations group provides the highest level of confidence that the match is correct.  
@@ -222,7 +222,7 @@ To find images that are visually similar to the original image, set the [modules
 The following request shows how to get visually similar images. The request uses the [insightsToken](../reference/query-parameters.md#insightstoken) query parameter to identify the original image. To improve relevance, include the user's query string.  
 
 ```
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/details?insightsToken=mid_68364D764J...&modules=SimilarImages&mkt=en-us&hawaiian+sunset
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/details?insightsToken=mid_68364D764J...&modules=SimilarImages&mkt=en-us&hawaiian+sunset
 ```
 
 The following shows what the response to the previous request looks like.  
@@ -253,7 +253,7 @@ The parameters specify the top, left corner and bottom, right corner of the regi
 The following sequence of calls shows the effect of specifying the cropping region. The first call does not include cropping and Bing recognizes two people standing side by side in the middle of the image.  
 
 ```  
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/details?modules=RecognizedEntities&imgurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.M0cbee6fadb43f35b2344e53da7a23ec1o0%26pid%3DApi&mkt=en-us
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/details?modules=RecognizedEntities&imgurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.M0cbee6fadb43f35b2344e53da7a23ec1o0%26pid%3DApi&mkt=en-us
 ```
 
 The response shows two recognized entities.  
@@ -306,7 +306,7 @@ The response shows two recognized entities.
 The second call crops the image vertically down the middle and Bing recognized a single person on the right side of the image.  
 
 ```
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/details?cal=0.5&cat=0.0&car=1.0&cab=1.0&modules=RecognizedEntities&imgurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.M0cbee6fadb43f35b2344e53da7a23ec1o0%26pid%3DApi&mkt=en-us
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/details?cal=0.5&cat=0.0&car=1.0&cab=1.0&modules=RecognizedEntities&imgurl=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.M0cbee6fadb43f35b2344e53da7a23ec1o0%26pid%3DApi&mkt=en-us
 ```
 
 The response shows one recognized entity.  
@@ -348,7 +348,7 @@ To find images that contain products that are visually similar to the products f
 The following request shows how to get images of visually similar products. The request uses the [insightsToken](../reference/query-parameters.md#insightstoken) query parameter to identify the original image that was returned in a previous request. To improve relevance, you should include the user's query string.  
 
 ```
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/details?q=black+cocktail+dresses&modules=SimilarProducts&insightsToken=ccid_WOeyfoSp*mid_4B0A357...&mkt=en-us
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/details?q=black+cocktail+dresses&modules=SimilarProducts&insightsToken=ccid_WOeyfoSp*mid_4B0A357...&mkt=en-us
 ```
 
 The following example shows what to the visually similar response looks like. The response contains an image of a similar product and indicates how many merchants offer the product online, whether there are product ratings, and the lowest price found (see the `aggregateOffer` field).  
@@ -402,7 +402,7 @@ The following example shows what to the visually similar response looks like. Th
 To get a list of the merchants that offer the product online, call the API again and set `modules` to ShoppingSources and `insightsToken` to the token found in the similar product image above.  
 
 ```
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/details?modules=ShoppingSources&insightsToken=ccid_VFnOfyyp*cp_088F3195...&mkt=en-us 
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/details?modules=ShoppingSources&insightsToken=ccid_VFnOfyyp*cp_088F3195...&mkt=en-us 
 ```
 
 The following example shows what the shopping sources insight looks like in the response.  

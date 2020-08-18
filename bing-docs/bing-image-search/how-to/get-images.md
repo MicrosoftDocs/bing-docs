@@ -19,13 +19,13 @@ Use Bing Image Search API to search the Web for images that matches the user's r
 It's easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 
 ```
-https://api.bing.microsoft.com/bing/v7.0/images/search
+https://api.bing.microsoft.com/v7.0/images/search
 ```
 
 Here's a cURL example that shows you how to call the endpoint using your subscription key. Change the *q* query parameter to search for whatever images you'd like.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/search?q=mt+rainier
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/search?q=mt+rainier
 ```
 
 
@@ -43,7 +43,7 @@ The more information you can provide Bing, the better the search experience will
 Here's a cURL example that includes these headers.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/bing/v7.0/images/search?q=mt+rainier
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/v7.0/images/search?q=mt+rainier
 ```
 
 Bing returns a couple of headers you should capture. 
@@ -57,7 +57,7 @@ To learn more about these headers, see [Response headers](../reference/headers.m
 Here's a cURL call that returns the response headers. If you want to remove the response data so you can see only the headers, include the `-o nul` parameter.
 
 ```curl
-curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/search?q=mt+rainier
+curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/search?q=mt+rainier
 ```
 
 
@@ -76,7 +76,7 @@ To learn more about these parameters and other parameters that you may specify, 
 Here's a cURL example that includes these query parameters.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/search?q=mt+rainier&mkt=en-us&safeSearch=moderate&count=10&offset=0
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/search?q=mt+rainier&mkt=en-us&safeSearch=moderate&count=10&offset=0
 ```
 
 For information about query parameters that you can use to filter the search results, see [Filter the images that Bing returns](#filter-the-images-that-bing-returns).
@@ -98,7 +98,7 @@ When you query the Web, Bing returns all relevant images that it finds. But what
 The following example shows how to get animated GIFs that Bing discovered in the past week.  
 
 ```http
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/search?q=sailing&imageType=AnimatedGif&freshness=week&mkt=en-us 
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/search?q=sailing&imageType=AnimatedGif&freshness=week&mkt=en-us 
 ```
 
 ### Filter images by website
@@ -108,7 +108,7 @@ To get images from a specific domain, use the [site:](https://help.bing.microsof
 The following example get sailing images found on contososailing.com.
 
 ```http
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bing/v7.0/images/search?q=sailing+dinghies+site%3Acontososailing.com&mkt=en-us
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/search?q=sailing+dinghies+site%3Acontososailing.com&mkt=en-us
 ```
 
 > [!NOTE]

@@ -83,7 +83,7 @@ static String subscriptionKey = "enter key here";
  * dashboard.
  */
 static String host = "https://api.bing.microsoft.com";
-static String path = "/bing/v7.0/search";
+static String path = "/v7.0/search";
 static String searchTerm = "Microsoft Bing Search Services";
 ```
 

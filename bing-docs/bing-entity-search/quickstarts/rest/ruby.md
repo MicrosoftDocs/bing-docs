@@ -39,7 +39,7 @@ Although this application is written in Ruby, the API is a RESTful Web service c
     
     ```ruby
     host = 'https://api.bing.microsoft.com'
-    path = '/bing/v7.0/entities'
+    path = '/v7.0/entities'
     
     mkt = 'en-US'
     query = 'italian restaurants near me'

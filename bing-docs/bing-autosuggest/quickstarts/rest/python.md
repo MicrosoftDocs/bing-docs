@@ -36,7 +36,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
     ```python
     subscriptionKey = 'enter key here'
     host = 'api.bing.microsoft.com'
-    path = '/bing/v7.0/Suggestions'
+    path = '/v7.0/Suggestions'
     mkt = 'en-US'
     query = 'sail'
     ```

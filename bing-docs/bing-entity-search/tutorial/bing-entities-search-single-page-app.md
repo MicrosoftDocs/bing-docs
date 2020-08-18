@@ -100,7 +100,7 @@ MAPS_API_KEY_COOKIE   = "bing-maps-api-key";
 CLIENT_ID_COOKIE      = "bing-search-client-id";
 
 // API endpoints
-SEARCH_ENDPOINT = "https://api.bing.microsoft.com/bing/v7.0/entities";
+SEARCH_ENDPOINT = "https://api.bing.microsoft.com/v7.0/entities";
 MAPS_ENDPOINT   = "https://dev.virtualearth.net/REST/v1/Locations";
 
 // ... omitted definitions of storeValue() and retrieveValue()
@@ -541,7 +541,7 @@ npm install -g cors-proxy-server
 ```
 
 Next, change the Bing Web Search endpoint in the HTML file to:\
-`http://localhost:9090/https://api.bing.microsoft.com/bing/v7.0/search`
+`http://localhost:9090/https://api.bing.microsoft.com/v7.0/search`
 
 Finally, start the CORS proxy with the following command:
 

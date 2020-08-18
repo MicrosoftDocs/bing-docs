@@ -47,7 +47,7 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
         {
         // Replace the this string with your valid access key.
         const string subscriptionKey = "enter your key here";
-        const string uriBase = "https://api.bing.microsoft.com/bing/v7.0/images/search";
+        const string uriBase = "https://api.bing.microsoft.com/v7.0/images/search";
         const string searchTerm = "tropical ocean";
     //...
     ```

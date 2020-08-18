@@ -40,7 +40,7 @@ Follow this quickstart to learn how to make calls to the Bing Autosuggest API an
     let subscriptionKey = 'enter key here';
     
     let host = 'api.bing.microsoft.com';
-    let path = '/bing/v7.0/Suggestions';
+    let path = '/v7.0/Suggestions';
     
     let mkt = 'en-US';
     let query = 'sail';
