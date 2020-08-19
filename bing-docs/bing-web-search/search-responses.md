@@ -245,7 +245,7 @@ For details about the image answer and images, see [Image Search API](../bing-im
 
 ## Videos answer
 
-The [videosAnswer](../bing-video-search/reference/response-objects.md#videosAnswer) answer contains a list of videos that Bing thought were relevant to the query. Each [video](../bing-video-search/reference/response-objects.md#video) in the list includes the video's URL, its duration, its dimensions, and its encoding format. The **Video** object also includes thumbnail URL of the video and the thumbnail's dimensions.
+The [videosAnswer](../bing-video-search/reference/response-objects.md#videosanswer) answer contains a list of videos that Bing thought were relevant to the query. Each [video](../bing-video-search/reference/response-objects.md#video) in the list includes the video's URL, its duration, its dimensions, and its encoding format. The **Video** object also includes thumbnail URL of the video and the thumbnail's dimensions.
 
 ```json
   "videos": {
