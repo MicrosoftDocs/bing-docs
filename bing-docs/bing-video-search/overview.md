@@ -40,7 +40,7 @@ By default, Video Search API returns videos that the user requested. But if you 
 
 |Feature|Description
 |-|-
-|[Filter the videos that bing returns](how-to/get-images.md#filter-the-videos-that-bing-returns)|Filter videos by when Bing discovered them, that are embeddable, are free, and more.
+|[Filter the videos that bing returns](how-to/get-videos.md#filter-the-videos-that-bing-returns)|Filter videos by when Bing discovered them, that are embeddable, are free, and more.
 |[Pivot user search queries](how-to/search-response.md#using-pivot-queries)|Get search strings that pivot on the user's search string.
 |[Expand user search queries](how-to/search-response.md#using-expanded-queries)|Get search strings that expand on the user's search string.
 |[Page results](../bing-web-search/page-results.md)|Page through multiple pages of video results.

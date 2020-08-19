@@ -76,7 +76,7 @@ Blocked|InvalidRequest.Blocked
 
 ### Object changes
 
-- Renamed the `nextOffsetAddCount` field of [Videos](reference/response-objects.md#videos) to `nextOffset`. The way you use the offset has also changed. Previously, you would set the [offset](reference/query-parameters.md#offset) query parameter to the `nextOffset` value plus the previous offset value plus the number of videos in the result. Now, you simply set the `offset` query parameter to the `nextOffset` value.  
+- Renamed the `nextOffsetAddCount` field of [VideosAnswer](reference/response-objects.md#videosanswer) to `nextOffset`. The way you use the offset has also changed. Previously, you would set the [offset](reference/query-parameters.md#offset) query parameter to the `nextOffset` value plus the previous offset value plus the number of videos in the result. Now, you simply set the `offset` query parameter to the `nextOffset` value.  
   
 - Changed the data type of the `relatedVideos` field from `Video[]` to `VideosModule` (see [VideoDetails](reference/response-objects.md#videodetails)).
 

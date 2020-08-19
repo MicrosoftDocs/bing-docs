@@ -259,7 +259,7 @@ If the service suspects a denial of service attack, the request succeeds (HTTP s
 |<a name="searchresponse-spellsuggestions"></a>spellSuggestions|The query string that likely represents the user's intent.|[SpellSuggestions](#spellsuggestions)  
 |<a name="searchresponse-timezone"></a>timeZone|The date and time of one or more geographic locations.|[TimeZone](#timezone)
 |<a name="searchresponse-translations"></a>translations|The translation of a word or phrase in the query string to another language.|[TranslationAnswer](#translationanswer)
-|<a name="searchresponse-videos"></a>videos|A list of videos that are relevant to the search query.|[Videos](../../bing-video-search/reference/response-objects.md#videos)
+|<a name="searchresponse-videos"></a>videos|A list of videos that are relevant to the search query.|[VideosAnswer](../../bing-video-search/reference/response-objects.md#videosAnswer)
 |<a name="search-response-webpages"></a>webPages|A list of webpages that are relevant to the search query.|[WebAnswer](#webanswer)
   
 ## SpellSuggestions  

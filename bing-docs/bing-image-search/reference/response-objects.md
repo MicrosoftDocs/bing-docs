@@ -294,7 +294,7 @@ Defines a search query.
   
 |Name|Value|Type
 |-|-|-
-|<a name="query-displaytext"></a>displayText|The display version of the search query string. This version of the query term may contain special characters that highlight the search term found in the query string. The string contains the highlighting characters only if the query enabled hit highlighting (see the [textDecorations](query-parameters.md#textdecorations) query parameter). For details about hit highlighting, see [Hit highlighting](../../bing-web-search/hit-highlighting.md).|String
+|<a name="query-displaytext"></a>displayText|The display version of the search query string.|String
 |<a name="query-searchurl"></a>searchLink|The Image Search API URL that you use to get image search results. The URL includes the *q* query parameter that's set the search string in `text`. Before using the URL, append other query parameters as appropriate.<br/><br/>Use this URL if you're displaying the results in your own user interface. Otherwise, use the URL in `webSearchUrl`.|String
 |<a name="query-text"></a>text|The query string. Use this string as the query term in a new search request.|String  
 |<a name="query-thumbnail"></a>thumbnail|A URL to a thumbnail image that represents the search string.|[Thumbnail](#thumbnail) 
