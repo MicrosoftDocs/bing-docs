@@ -12,9 +12,12 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Get trending images from the web
+# Get images that are trending
 
-To get images that are trending on social media today, use Bing Trending Images API. This API offers an experience similar to bing.com/images/trending.
+> [!NOTE]
+> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
+
+If you’re building a user experience that shows images that are trending on social media in different categories, use this API. This API offers an experience similar to bing.com/images/trending.
 
 Calling the API is easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 
@@ -65,7 +68,7 @@ curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.mic
 
 ## Query parameters
 
-The only query parameter that you should pass is the *mkt* parameter, which you set to the market where the results come from. Typically, this is the market where the user is making the request from.
+The only query parameter that you should pass is the *mkt* parameter. Set to the market where the results come from, which is typically the market where the user is making the request from.
 
 You can ignore all other parameters listed in [Query parameters](../reference/query-parameters.md).
 
@@ -151,7 +154,7 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 ## Next steps
 
-- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing Web Search.  
+- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing Image Search.  
 - Learn about [resizing and cropping thumbnails](../../bing-web-search/resize-and-crop-thumbnails.md).  
 - Learn about [searching the web for images](get-images.md).
 - Review [Image Search API v7 reference](../reference/endpoints.md) documentation.  

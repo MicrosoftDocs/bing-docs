@@ -17,7 +17,7 @@ ms.author: scottwhi
 > [!IMPORTANT]
 > Because [Bing Visual Search API](../../bing-visual-search/overview.md) provides more comprehensive image insights, use it instead of Bing Image Insights API.
 
-Each image includes an insights token that you can use to get information about the image. For example, you can get a collection of related images, web pages that include the image, or a list of merchants where you can buy the product shown in the image.  
+Sometimes users want to get information about an image, such as getting related images, getting web pages that include the image, or getting a list of merchants where you can buy the product shown in the image. Each image includes an insights token that you can use to get these insights and others.   
 
 To get insights about an image, get the image's [imageInsightsToken](../reference/response-objects.md#image-imageinsightstoken) token in the response.
 

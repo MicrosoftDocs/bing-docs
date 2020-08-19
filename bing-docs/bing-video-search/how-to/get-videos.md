@@ -12,215 +12,125 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Search for videos with the Bing Video Search API
+# Search the web for videos
 
-The Bing Video Search API makes it easy to integrate Bing's cognitive news searching capabilities into your applications. 
+Use Bing Video Search API to search the Web for videos that matches the user's request.
 
-## Getting videos
+It's easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 
-To get videos related to the user's search term from the web, send the following GET request:
+```
+https://api.bing.microsoft.com/v7.0/videos/search
+```
+
+Here's a cURL example that shows you how to call the endpoint using your subscription key. Change the *q* query parameter to search for whatever videos you'd like.
+
+```curl
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/videos/search?q=sailing+dinghies
+```
+
+
+## Request and response headers
+
+Although that's all the more you need to do to search the Web, Bing does suggest you include a couple of other headers to provide a better search experience for your user. Those headers include:
+
+- User-Agent &mdash; Lets Bing know whether needs a mobile or desktop experience.
+- X-MSEdge-ClientID &mdash; Provides continuity of experience.
+- X-MSEdge-ClientIP &mdash; Provides the user's location for location aware queries.
+- X-Search-Location &mdash; Provides the user's location for location aware queries.
+
+The more information you can provide Bing, the better the search experience will be for your users. To learn more about these headers, see [Request headers](../reference/headers.md#request-headers).
+
+Here's a cURL example that includes these headers.
+
+```curl
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/v7.0/videos/search?q=sailing+dinghies
+```
+
+Bing returns a couple of headers you should capture. 
+
+- BingAPIs-TraceId &mdash; ID that identifies the request in the log file.
+- X-MSEdge-ClientID &mdash; The ID that you need to pass in subsequent request to provide continuity of experience.
+- BingAPIs-Market &mdash; The market used by Bing for the request.
+
+To learn more about these headers, see [Response headers](../reference/headers.md#response-headers).
+
+Here's a cURL call that returns the response headers. If you want to remove the response data so you can see only the headers, include the `-o nul` parameter.
+
+```curl
+curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/videos/search?q=sailing+dinghies
+```
+
+
+## Query parameters
+
+The only query parameter that you must pass is the *q* parameter, which you set to the user's query string. You must URL encode the user's query string and all query parameter values that you pass.
+
+The API supports a number of query parameters that you can pass in your request. Here's a list of the ones you're most likely to use.
+
+- *count* and *offset* &mdash; Used to page image results. [Read more](../../bing-web-search/page-results.md)
+- *mkt* &mdash; Used to specify the market where the results come from, which is typically the market where the user is making the request from.
+- *safeSearch* &mdash; Used to specify the user's safe search preference.
+
+To learn more about these parameters and other parameters that you may specify, see [Query parameters](../reference/query-parameters.md).
+
+Here's a cURL example that includes these query parameters.
+
+```curl
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/videos/search?q=sailing+dinghies&mkt=en-us&safeSearch=moderate&count=10&offset=0
+```
+
+For information about query parameters that you can use to filter the search results, see [Filter the videos that Bing returns](#filter-the-videos-that-bing-returns).
+
+
+## Filter the videos that Bing returns
+
+When you query the Web, Bing returns all relevant videos that it finds. But what if you're only interested in videos that you can embed in your webpage or videos that are free? Simple, just use one or more of the following query parameters to filter the types of videos that you want. For more details about these parameters and others, see [Filter query parameters](../reference/query-parameters.md#filter-query-parameters).
+
+- [aspect](../reference/query-parameters.md#aspect) &mdash; Filter videos by aspect ratio (for example, standard or wide screen).
+- [embedded](../reference/query-parameters.md#embedded) &mdash; Filter for videos that you can embed in your webpage.
+- [freshness](../reference/query-parameters.md#freshness) &mdash; Filter videos by age (for example, videos that Bing discovered in the past week).
+- [pricing](../reference/query-parameters.md#pricing) &mdash; Filter by price (for example, free or paid).
+- [resolution](../reference/query-parameters.md#resolution) &mdash; Filter videos by resolution (for example, videos that are 1080p or higher).
+- [videoLength](../reference/query-parameters.md#videolength) &mdash; Filter videos by length (for example, videos that are between five and 20 minutes).
+
+
+The following example shows how to get embeddable videos that Bing discovered in the past week that are free.  
 
 ```http
-GET https://api.bing.microsoft.com/bing/v7.0/videos/search?q=sailing+dinghies&mkt=en-us HTTP/1.1
-Ocp-Apim-Subscription-Key: 123456789ABCDE
-User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 822)
-X-Search-ClientIP: 999.999.999.999
-X-Search-Location: lat:47.60357;long:-122.3295;re:100
-X-MSEdge-ClientID: <blobFromPriorResponseGoesHere>
-Host: api.cognitive.microsoft.com
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/videos/search?q=sailing+dinghies&embedded=true&freshness=week&pricing=free&mkt=en-us 
 ```
 
-All requests must be made from a server.
+### Filter images by website
 
-If it's your first time calling any of the Bing APIs, don't include the client ID header. Only include the client ID if you've previously called a Bing API and Bing returned a client ID for the user and device combination.
+To get videos from a specific domain, use the [site:](https://help.bing.microsoft.com/#apex/18/en-US/10001/-1) query operator in the query string. The response may contain results from other sites depending on the number of relevant results found on the specified site.
 
-To get videos from a specific domain, use the `site:` query operator (see [Bing Advanced Operators](https://help.bing.microsoft.com/#apex/18/en-US/10001/-1)).
+The following example gets sailing videos found on contososailing.com.
 
 ```http
-GET https://api.bing.microsoft.com/bing/v7.0/videos/search?q=sailing+dinghies+site:contososailing.com&mkt=en-us HTTP/1.1
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/videos/search?q=sailing+dinghies+site%3Acontososailing.com&mkt=en-us
 ```
-
-The response contains a [Videos](../reference/response-objects.md#videos) answer that contains a list of videos that Bing thought were relevant to the query. Each [Video](../reference/response-objects.md#video) object in the list includes the URL of the video, its duration, its dimensions, and its encoding format among other attributes. The video object also includes the URL of a thumbnail of the video and the thumbnail's dimensions.
-
-```json
-{
-    "_type" : "Videos",
-    "webSearchUrl" : "https:\/\/www.bing.com\/cr?IG=81EF7545...",
-    "totalEstimatedMatches" : 1000,
-    "value" : [
-        {
-            "name" : "How to sail - What to Wear for Dinghy Sailing",
-            "description" : "An informative video on what to wear when...",
-            "webSearchUrl" : "https:\/\/www.bing.com\/cr?IG=81EF7...",
-            "thumbnailUrl" : "https:\/\/tse4.mm.bing.net\/th?id=OVP.DYW...",
-            "datePublished" : "2014-03-04T11:51:53",
-            "publisher" : [
-                {
-                    "name" : "Fabrikam"
-                }
-            ],
-            "creator" : 
-            {
-                "name" : "Marcus Appel"
-            },
-            "contentUrl" : "https:\/\/www.fabrikam.com\/watch?v=vzmPjZ--g",
-            "hostPageUrl" : "https:\/\/www.bing.com\/cr?IG=81EF7545D569...",
-            "encodingFormat" : "h264",
-            "hostPageDisplayUrl" : "https:\/\/www.fabrikam.com\/watch?v=vzmPjZ--g",
-            "width" : 1280,
-            "height" : 720,
-            "duration" : "PT2M47S",
-            "motionThumbnailUrl" : "https:\/\/tse3.mm.bing.net\/th?id=OM.Y62...",
-            "embedHtml" : "<iframe width=\"1280\" height=\"720\" src=\"https:...><\/iframe>",
-            "allowHttpsEmbed" : true,
-            "viewCount" : 8743,
-            "thumbnail" : 
-            {
-                "width" : 300,
-                "height" : 168
-            },
-            "videoId" : "6DB795E11A6E3CBAAD636DB795E113CBAAD63",
-            "allowMobileEmbed" : true,
-            "isSuperfresh" : false
-        },
-        ...
-    ],
-    "queryExpansions" : [...],
-    "nextOffsetAddCount" : 0,
-    "pivotSuggestions" : [...]
-}
-```
-
-## Video thumbnails
-
-You can display all, or a subset of the video thumbnails returned by the Bing Video Search API. If you display a subset, provide the user an option to view the remaining videos. For details on display requirements, see [Use and display requirements](../../bing-web-search/use-display-requirements.md). For information about resizing the thumbnail, see [Resizing and cropping thumbnails](../../bing-web-search/resize-and-crop-thumbnails.md). 
-
-As the user hovers over the thumbnail you can use [motionThumbnailUrl](../reference/response-objects.md#video-motionthumbnailurl) to play a thumbnail version of the video. Be sure to attribute the motion thumbnail when you display it.
-
-<!-- Removing until the images can be sanitized.
-![Motion thumbnail of a video](../bing-web-search/media/cognitive-services-bing-web-api/bing-web-video-motion-thumbnail.PNG)
--->
-
-When a thumbnail is clicked, there are three options for viewing the video:
-
-- Use [hostPageUrl](../reference/response-objects.md#video-hostpageurl) to view the video on the host website (for example, YouTube)
-- Use [webSearchUrl](../reference/response-objects.md#video-websearchurl) to view the video in the Bing video browser
-- Use [embdedHtml](../reference/response-objects.md#video-embedhtml) to embed the video in your own experience 
-
-Be sure to use the publisher and creator to attribute the video when you play it.
-
-For details about using [videoId](../reference/response-objects.md#video-videoid) to get insights about the video, see [Video Insights](video-insights.md).
-
-## Filtering videos
-
-By default, the Video Search API returns all videos that are relevant to the query. If you only want free videos or videos less than five minutes in length, you'd use the following filter query parameters:
-
-- [pricing](../reference/query-parameters.md#pricing)&mdash;Filter videos by pricing (for example, videos that are free or that you have to pay for)
-- [resolution](../reference/query-parameters.md#resolution)&mdash;Filter videos by resolution (for example, videos with a 720p or higher resolution)
-- [videoLength](../reference/query-parameters.md#videolength)&mdash;Filter videos by video length (for example, videos that are less than five minutes in length)
-- [freshness](../reference/query-parameters.md#freshness)&mdash;Filter videos by age (for example, videos discovered by Bing in the past week)
-
-To get videos from a specific domain, include the `site:` query operator in the query string (see [Bing Advanced Operators](https://help.bing.microsoft.com/#apex/18/en-US/10001/-1)).
 
 > [!NOTE]
-> Depending on the query, if you use the `site:` query operator, there is the chance that the response contains adult content regardless of the [safeSearch](../reference/query-parameters.md#safesearch) setting. You should use `site:` only if you are aware of the content on the site and your scenario supports the possibility of adult content.
+> Because the `site:` operator might include adult content regardless of the [safeSearch](../reference/query-parameters.md#safesearch) setting, only use `site:` if you're aware of the content on the domain.
 
-The following example shows how to get free videos from ContosoSailing.com that have a resolution of 720p or better and that Bing has discovered in the past month.
+### Filter by SafeSearch Setting
 
-```http
-GET https://api.bing.microsoft.com/bing/v7.0/videos/search?q=sailing+dinghies+site:contososailing.com&pricing=free&freshness=month&resolution=720p&mkt=en-us HTTP/1.1
-Ocp-Apim-Subscription-Key: 123456789ABCDE
-User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 822)
-X-MSEdge-ClientIP: 999.999.999.999
-X-Search-Location: lat:47.60357;long:-122.3295;re:100
-X-MSEdge-ClientID: <blobFromPriorResponseGoesHere>
-Host: api.cognitive.microsoft.com
-```
+The [safeSearch](../reference/query-parameters.md#safesearch) query parameter lets you filter videos for adult content. 
 
-## Expanding the query
+You may set the *safeSearch* parameter to one of the following values:
 
-If Bing can expand the query to narrow the original search, the [Videos](../reference/response-objects.md#videos) object contains the `queryExpansions` field. For example, if the query was *Cleaning Gutters*, the expanded queries might be: Gutter Cleaning **Tools**, Cleaning Gutters **From the Ground**, Gutter Cleaning **Machine**, and **Easy** Gutter Cleaning.
+- Moderate &mdash; Does not return videos with adult content. 
+- Strict &mdash; Does not return videos with adult content.
 
-The following example shows the expanded queries for *Cleaning Gutters*.
+The default is Moderate. If you specify Off, Bing ignores it and use Moderate.
 
-```json
-{
-    "_type" : "Videos",
-    "webSearchUrl" : "https:\/\/www.bing.com\/cr?IG=B52FBC5...",
-    "totalEstimatedMatches" : 1000,
-    "value" : [...],
-    "nextOffsetAddCount" : 4,
-    "queryExpansions" : [
-        {
-            "text" : "Gutter Cleaning Tools",
-            "displayText" : "Tools",
-            "webSearchUrl" : "https:\/\/www.bing.com\/cr?IG=B52FB....",
-            "searchLink" : "https:\/\/api.cognitive.microsoft.com\/api\/v5...",
-            "thumbnail" : {
-                "thumbnailUrl" : "https:\/\/tse4.mm.bing.net\/th?q=Gutter..."
-            }
-        },
-        ...
-    ]
-    "pivotSuggestions" : [...],
-}
-```
 
-The `queryExpansions` field contains a list of [Query](../reference/response-objects.md#query) objects. The `text` field contains the expanded query and the `displayText` field contains the expansion term. You can use the text and thumbnail fields to display the expanded query strings to the user in case the expanded query string is really what they're looking for. Make the thumbnail and text clickable using the `webSearchUrl` URL or `searchLink` URL. Use `webSearchUrl` to send the user to the Bing search results, or `searchLink` if you provide your own results page.
+## Next steps
 
-## Pivoting the query
+- Learn about the [response](search-response.md) that Bing returns.
+- Learn how to [get the next page](../../bing-web-search/page-results.md) of search results.
+- Learn how to [get trending videos](trending-videos.md).
+- Learn how to [get insights about a video](video-insights.md) such as related videos.
+- Learn what happens if you don't stay within your queries per second (QPS) limit. Hint: your requests get [throttled](../../bing-web-search/throttling-requests.md).
+- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
 
-If Bing can segment the original search query, the [Videos](../reference/response-objects.md#videos) object contains the `pivotSuggestions` field. For example, if the original query was *Cleaning Gutters*, Bing might segment the query into *Cleaning* and *Gutters*.
-
-The following example shows the pivot suggestions for *Cleaning Gutters*.
-
-```json
-{
-    "_type" : "Videos",
-    "webSearchUrl" : "https:\/\/www.bing.com\/cr?IG=B52FBC...",
-    "totalEstimatedMatches" : 1000,
-    "value" : [...],
-    "nextOffsetAddCount" : 0,
-    "queryExpansions" : [...],
-    "pivotSuggestions" : [
-        {
-            "pivot" : "cleaning",
-            "suggestions" : [
-                {
-                    "text" : "Gutter Repair",
-                    "displayText" : "Repair",
-                    "webSearchUrl" : "https:\/\/www.bing.com\/cr?IG=B52...",
-                    "searchLink" : "https:\/\/api.cognitive.microsoft.com\/api\/v5\/videos...",
-                    "thumbnail" : {
-                        "thumbnailUrl" : "https:\/\/tse3.mm.bing.net\/th?q=Gutter..."
-                    }
-                },
-                ...
-            ]
-        },
-        {
-            "pivot" : "gutters",
-            "suggestions" : [
-                {
-                    "text" : "Window Cleaning",
-                    "displayText" : "Window",
-                    "webSearchUrl" : "https:\/\/www.bing.com\/cr?IG=B52FBC59...",
-                    "searchLink" : "https:\/\/api.cognitive.microsoft.com\/api\/v5...",
-                    "thumbnail" : {
-                        "thumbnailUrl" : "https:\/\/tse2.mm.bing.net\/th?q=Window..."
-                    }
-                },
-                ...
-            ]
-        }
-    ]
-}
-```
-
-For each pivot, the response contains a list of [Query](../reference/response-objects.md#query) objects that contain suggested queries. The `text` field contains the suggested query and the `displayText` field contains the term that replaces the pivot in the original query. For example, Window Cleaning.
-
-You can use the `text` and `thumbnail` fields to display the expanded query strings to the user in case the expanded query string is really what they're looking for. Make the thumbnail and text clickable using the `webSearchUrl` URL or `searchLink` URL. Use `webSearchUrl` to send the user to the Bing search results, or `searchLink` if you provide your own results page.
-
-## Throttling requests
-
-[!INCLUDE [bing-throttling-requests](../../../includes/bing-throttling-requests.md)]

@@ -12,97 +12,247 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Get trending videos with the Bing Video Search API 
+# Get videos that are trending
 
-The Bing Video Search API enables you to find today's trending videos from across the web, and in different categories. 
+> [!NOTE]
+> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
 
-## GET request
+If you’re building a user experience that shows videos that are trending on social media in different categories, use this API. 
 
-To get today's trending videos from the Bing Video Search API, send the following GET request:  
-  
-```cURL
-GET https://api.bing.microsoft.com/bing/v7.0/videos/trending?mkt=en-us HTTP/1.1
-Ocp-Apim-Subscription-Key: 123456789ABCDE  
-User-Agent: Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 822)  
-X-MSEdge-ClientIP: 999.999.999.999  
-X-Search-Location: lat:47.60357;long:-122.3295;re:100  
-X-MSEdge-ClientID: <blobFromPriorResponseGoesHere>  
-Host: api.cognitive.microsoft.com  
+Calling the API is easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
+
+```
+https://api.bing.microsoft.com/v7.0/videos/trending
 ```
 
-## Market support
+Here's a cURL example that shows you how to call the endpoint using your subscription key. 
 
-For a list of supported markets where you can use this API, see [Market codes](reference/market-codes.md#trending-video-api-markets
+```curl
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/videos/trending
+```  
 
-## Example JSON response  
 
-The following example shows an API response that contains trending videos, which are listed by category and subcategory. The response also contains banner videos, which are the most popular trending videos, and can come from one or more categories.  
+## Request and response headers
+
+Although that's all the more you need to do to get trending videos, Bing does suggest you include a couple of other headers to provide a better experience for your user. Those headers include:
+
+- User-Agent &mdash; Lets Bing know whether needs a mobile or desktop experience.
+- X-MSEdge-ClientID &mdash; Provides continuity of experience.
+- X-MSEdge-ClientIP &mdash; Provides the user's location for location aware queries.
+- X-Search-Location &mdash; Provides the user's location for location aware queries.
+
+The more information you can provide Bing, the better the experience will be for your users. To learn more about these headers, see [Request headers](../reference/headers.md#request-headers).
+
+Here's a cURL example that includes these headers.
+
+```curl
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/v7.0/videos/trending
+```
+
+Bing returns a couple of headers you should capture. 
+
+- BingAPIs-TraceId &mdash; ID that identifies the request in the log file.
+- X-MSEdge-ClientID &mdash; The ID that you need to pass in subsequent request to provide continuity of experience.
+- BingAPIs-Market &mdash; The market used by Bing for the request.
+
+To learn more about these headers, see [Response headers](../reference/headers.md#response-headers).
+
+Here's a cURL call that returns the response headers. If you want to remove the response data so you can see only the headers, include the `-o nul` parameter.
+
+```curl
+curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/videos/trending
+```
+
+
+## Query parameters
+
+The only query parameter that you should pass is the *mkt* parameter. Set to the market where the results come from, which is typically the market where the user is making the request from. For a list of markets that support trending videos, see [Market codes](../reference/market-codes.md#trending-video-api-markets).
+
+You can ignore all other parameters listed in [Query parameters](../reference/query-parameters.md).
+
+Here's a cURL example that includes the *mkt* query parameter.
+
+```curl
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/videos/trending?mkt=en-us
+```
+
+
+## Handling the response
+
+When you send a request to Trending Videos API, it returns a [TrendingVideos](../reference/response-objects.md#trendingvideos) object in the response body. The **TrendingVideos** object contains a list of videos to highlight in the banner and a list of trending videos by category. 
 
 ```json
-{  
-    "_type" : "TrendingVideos",  
-    "bannerTiles" : [
-        {  
-            "query" : {  
-                "text" : "Hello - Smith",  
-                "displayText" : "Hello - Smith",  
-                "webSearchUrl" : "https:\/\/www.bing.com\/cr?IG=3E8F5..."
-            },  
-            "image" : {  
-                "description" : "Image from: contosowallpapers.com",  
-                "thumbnailUrl" : "https:\/\/tse4.mm.bing.net\/th?id=RsA%2fdPlTmx4zS...",  
-                "headLine" : "\"Hello\" is a song by...",  
-                "contentUrl" : "http:\/\/www.contosowallpapers.com\/wp-content..."  
-            }  
-        },  
-        . . .  
-    ],  
-    "categories" : [
-        {  
-            "title" : "Music videos",  
-            "subcategories" : [
-                {  
-                    "tiles" : [
-                        {  
-                            "query" : {  
-                                "text" : "Song Title - Artist Name",  
-                                "displayText" : "Song Title - Artist Name",  
-                                "webSearchUrl" : "https:\/\/www.bing.com\/cr?IG=3E8F5..."
-                            },  
-                            "image" : {  
-                                "description" : "Image from: contoso.com",  
-                                "thumbnailUrl" : "https:\/\/tse2.mm.bing.net\/th?id=...",  
-                                "contentUrl" : "http:\/\/images6.contoso.com\/image..."  
-                            }  
-                        },  
-                        . . .  
-                    ],
-                    "title" : "Top "  
-                },
-                {
-                    "tiles" : [...],
-                    "title" : "Trending"
-                },
-                . . .
-            ],  
+{
+  "_type": "TrendingVideos",
+  "bannerTiles": [
+    {
+      "query": { ... },
+      "image": { ... }
+    },
+
+    . . .
+  ],
+  "categories": [
+    {
+      "title": "Music videos",
+      "subcategories": [
+        {
+          "tiles": [
+            {
+              "query": { ... },
+              "image": { ... }
+            },
+          
+            . . .  
+          ],
+          "title": "Top "
         },
         {
-            "title" : "Viral videos",
-            "subcategories" : [
-                {
-                    "tiles" : [...],
-                    "title" : "Trending"
-                },
-                . . .
-            ],  
+          "tiles": [
+            {
+              "query": { ... },
+              "image": { ... }
+            },
+          
+            . . .  
+          ],
+          "title": "Trending "
         },
-        . . .  
-    ]  
-}  
-  
+
+        . . .
+      ]
+    },
+    {
+      "title": "Viral videos",
+      "subcategories": [ ... ]
+    },
+    {
+      "title": "TV shows",
+      "subcategories": [ ... ]
+    },
+    {
+      "title": "Movie trailers",
+      "subcategories": [ ... ]
+    }
+  ]
+}
 ```
+
+### Display banner tiles
+
+The `bannerTiles` field contains the list of [Tile](../reference/response-objects.md#tile) objects that you use to highlight videos in the banner of your UX.
+
+```json
+  "bannerTiles": [
+    {
+      "query": {
+        "text": "<search query string>",
+        "displayText": "<search query string with possible hit highlighting characters>",
+        "webSearchUrl": "https:\/\/www.bing.com\/videos\/search?q=<search query string>&FORM=VSTREQ"
+      },
+      "image": {
+        "description": "Image from: contoso.com",
+        "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OET.84ceafb8856247968fc5f3a...",
+        "headLine": "<description that describes the video's content>",
+        "contentUrl": "https:\/\/www.contoso.com\/2019\/10\/23\/path\/"
+      }
+    },
+
+    . . .
+  ]
+```
+
+Use `thumbnailUrl` to display an image of the video. Use `description` to attribute the image. Use `headLine` to provide a description of the video. Options for making the thumbnail clickable:
+
+- Use `contentUrl` to take the user to the provider's website where they can watch the video.
+- Use `webSearchUrl` to take the user to Bing's Video search results where they can watch this and other videos. 
+
+
+### Displaying categories of trending videos
+
+The `categories` field contains the lists of trending videos by category (see the [Category](../reference/response-objects.md#category) object). Use the category's `title` to group the videos in your user experience. For example, Music videos and Movie trailers.
+
+```json
+  "categories": [
+    {
+      "title": "Music videos",
+      "subcategories": [ ... ]
+    },
+    {
+      "title": "Viral videos",
+      "subcategories": [ ... ]
+    },
+    {
+      "title": "TV shows",
+      "subcategories": [ ... ]
+    },
+    {
+      "title": "Movie trailers",
+      "subcategories": [ ... ]
+    }
+  ]
+```
+
+Each category is further subdivided into subcategories. For example, Music videos may be subdivided into Top music videos, Trending music videos, etc. Use the subcategory's `title` to group videos in your user experience.
+
+```json
+    {
+      "title": "Music videos",
+      "subcategories": [
+        {
+          "tiles": [ ... ],
+          "title": "Top "
+        },
+        {
+          "tiles": [ ... ],
+          "title": "Trending "
+        },
+        {
+          "tiles": [ ... ],
+          "title": "More music videos "
+        },
+      ]
+    },
+```
+
+The `tiles` field contains the list of [Tile](../reference/response-objects.md#tile) objects. Each tile is a trending video.
+
+```json
+      "subcategories": [
+        {
+          "tiles": [
+            {
+              "query": {
+                "text": "<search query string>",
+                "displayText": "<search query string with possible hit highlighting characters>",
+                "webSearchUrl": "https:\/\/www.bing.com\/videos\/search?q=<search query string>&FORM=VSTREQ"
+              },
+              "image": {
+                "description": "Image from: contoso.com",
+                "thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?id=OET.84ceafb8856247968fc5f3a...",
+                "contentUrl": "https:\/\/www.contoso.com\/2019\/10\/23\/path\/"
+              }
+            },
+        
+            . . .  
+          ],
+          "title": "Top "
+        },
+```
+
+Use `thumbnailUrl` to display an image of the video. Use `description` to attribute the image. Options for making the thumbnail clickable:
+
+- Use `contentUrl` to take the user to the provider's website where they can watch the video.
+- Use `webSearchUrl` to take the user to Bing's Video search results where they can watch this and other videos. 
+
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Get video insights](video-insights.md)
+- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing Video Search.  
+- Learn about [resizing and cropping thumbnails](../../bing-web-search/resize-and-crop-thumbnails.md).  
+- Learn about [searching the web for videos](get-videos.md).
+- Review [Video Search API v7 reference](../reference/endpoints.md) documentation.  
+- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
+
+
+

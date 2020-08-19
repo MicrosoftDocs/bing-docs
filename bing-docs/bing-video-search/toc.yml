@@ -9,6 +9,8 @@
 - name: Quickstarts
   expanded: true
   items:
+    - name: Quickstarts
+      href: quickstarts/quickstarts.md
     - name: REST
       items:
       - name: C#
@@ -39,17 +41,13 @@
   - name: Build a single-page web app
     href: tutorial/bing-video-search-single-page-app.md
 - name: Samples
-  items:
-  - name: REST samples
-    href: rest-samples.md
-  - name: SDK samples
-    href: sdk-samples.md
+  href: samples.md
 - name: How-to guides
   items:
-  - name: Getting videos from the web
+  - name: Get videos from the web
     href: how-to/get-videos.md
-  - name: Sending search requests
-    href: how-to/sending-requests.md 
+  - name: Handle the response
+    href: how-to/search-response.md 
   - name: Get video insights
     href: how-to/video-insights.md
   - name: Get trending videos

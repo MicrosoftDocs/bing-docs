@@ -84,7 +84,7 @@ For information about query parameters that you can use to filter the search res
 
 ## Filter the images that Bing returns
 
-When you query the Web, Bing returns all relevant images that it finds. But what if you're only interested in animated GIFs, images that Bing found in the last week, or images found on a specific site? Simple, use one or more of the following query parameters to filter the images that you want. For more details about these parameters and others, see [Filter query parameters](../reference/query-parameters.md#filter-query-parameters).
+When you query the Web, Bing returns all relevant images that it finds. But what if you're only interested in animated GIFs, images that Bing found in the last week, or images found on a specific site? Simple, just use one or more of the following query parameters to filter the types of images that you want. For more details about these parameters and others, see [Filter query parameters](../reference/query-parameters.md#filter-query-parameters).
 
 - [aspect](../reference/query-parameters.md#aspect) &mdash; Filter images by aspect ratio (for example, standard or wide screen images).
 - [color](../reference/query-parameters.md#color) &mdash; Filter images by dominant color or black and white.
@@ -105,7 +105,7 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 To get images from a specific domain, use the [site:](https://help.bing.microsoft.com/#apex/18/en-US/10001/-1) query operator in the query string. The response may contain results from other sites depending on the number of relevant results found on the specified site.
 
-The following example get sailing images found on contososailing.com.
+The following example gets sailing images found on contososailing.com.
 
 ```http
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/search?q=sailing+dinghies+site%3Acontososailing.com&mkt=en-us
