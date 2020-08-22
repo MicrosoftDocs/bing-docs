@@ -48,21 +48,12 @@
     href: tutorial/visual-search-single-page-app.md
 - name: Samples
   href: samples.md
-- name: Concepts
-  items:
-    - name: Default image insights
-      href: concepts/default-insights-tag.md
-    - name: Bing insights examples
-      href: concepts/bing-insights-usage.md
-    - name: Analytics for Visual Search API
-      maintainContext: true
-      href: ../bing-web-search/bing-web-stats.md
 - name: How-to guides
   items:
-  - name: Sending queries
-    href: how-to/sending-queries.md
-  - name: Get insights using token
-    href: how-to/use-insights-token.md
+  - name: Get insights
+    href: how-to/get-insights.md
+  - name: Handle the response
+    href: how-to/search-response.md
   - name: Resize and crop thumbnails
     maintainContext: true
     href: ../bing-web-search/resize-and-crop-thumbnails.md

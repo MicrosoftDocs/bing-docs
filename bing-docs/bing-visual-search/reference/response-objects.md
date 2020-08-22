@@ -231,13 +231,18 @@ Defines a list of images.
 |value|List of images.|[Image](#image)[]
 
 
+<!--
+Add to actions in ImageTag object
+<li>[ImageRecipesAction](#imagerecipesaction)</li>
+-->
+
 ## ImageTag
 
 Defines an image tag.
 
 |Name|Value|Type
 |-|-|-
-|actions|Actions within this tag. The following are the possible actions:<ul><li>[ImageEntityAction](#imageentityaction)</li><li>[ImageModuleAction](#imagemoduleaction)</li><li>[ImageRecipesAction](#imagerecipesaction)</li><li>[ImageRelatedSearchesAction](#imagerelatedsearchesaction)</li><li>[ImageShoppingSourcesAction](#imageshoppingsourcesaction)</li></ul>|Object[]
+|actions|Actions within this tag. The following are the possible actions:<ul><li>[ImageEntityAction](#imageentityaction)</li><li>[ImageModuleAction](#imagemoduleaction)</li><li>[ImageRelatedSearchesAction](#imagerelatedsearchesaction)</li><li>[ImageShoppingSourcesAction](#imageshoppingsourcesaction)</li></ul>|Object[]
 |alternateName|An alias for the item.|String
 |bingId|An ID that uniquely identifies this item.|String
 |boundingBox|The bounding box for this tag. The bounding box identifies the area of interest in the image. There is no bounding box for the default tag.|[ImageTagRegion](#imagetagregion)

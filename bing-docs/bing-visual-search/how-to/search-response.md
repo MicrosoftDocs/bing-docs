@@ -33,9 +33,9 @@ If Bing found insights about an image that you sent Visual Search API, the respo
 }
 ```
 
-The `image` field is an [Image](../reference/respons-objects.md#image) object that includes only the insights token of the image used in the request.
+The `image` field is an [Image](../reference/response-objects.md#image) object that includes only the insights token of the image used in the request.
 
-The `tags` field contains an array of [ImageTag](../reference/respons-objects.md#imagetag) objects. Each tag contains a list of actions, display name, an optional bounding box.
+The `tags` field contains an array of [ImageTag](../reference/response-objects.md#imagetag) objects. Each tag contains a list of actions, display name, an optional bounding box.
 
 The tag you're probably most interested in is the one where the display name is an empty string. This tag contains insights about the image used in the request, such as webpages that include the image, visually similar images, shopping sources and more. Because the entire image is of interest, the default insights tag doesn't include bounding boxes for the regions of interest. [Read more](#default-insights-tag).
 
@@ -64,7 +64,7 @@ The tag you're probably most interested in is the one where the display name is 
 }
 ```
 
-The other tags contain a diverse set of terms derived from the input image. These terms enable users to explore concepts found in the image. For example, if the image used in the request shows a black, long sleeve t-shirt, the other tags may contain URLs that you can use to find images of related clothing, such as jackets or sweatshirts. [Read more](#other-tags).
+The other tags contain a diverse set of terms derived from the input image. These terms enable users to explore concepts found in the image. For example, if the image used in the request shows a black, long sleeve t-shirt, the other tags may contain URLs that you can use to find images of related clothing, such as jackets or sweatshirts. [Read more](#the-other-tags).
 
 [!INCLUDE [bing-url-note](../../../includes/bing-url-note.md)]
 
@@ -780,10 +780,10 @@ Text recognition can also recognize the contact information on business cards, s
 
 ## Next steps
 
-- Learn about [use and display requirements](../bing-web-search/use-display-requirements.md) for Bing Visual Search.  
-- Learn about how to [get image insights](how-to/get-insights.md).
+- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing Visual Search.  
+- Learn about how to [get image insights](get-insights.md).
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
-- Review [Visual Search API v7 reference](reference/endpoints.md) documentation.  
+- Review [Visual Search API v7 reference](../reference/endpoints.md) documentation.  
 
 
 

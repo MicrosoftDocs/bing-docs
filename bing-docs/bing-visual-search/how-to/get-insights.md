@@ -18,7 +18,7 @@ ms.author: scottwhi
 Bing Visual Search API returns insights about an image. For example, Bing can help you find similar images, learn where to buy the dress seen in the pic, explore a landmark, identify a dog’s breed, and more. All you need is an image file, the URL to an image, or an insights token. 
 
 > [!IMPORTANT]
-> Bing Visual Search API is the preferred method for getting image insights. If you use [Image Insights API](../bing-image-search/how-to/image-insights.md), consider switching to Bing Visual Search API.
+> Bing Visual Search API is the preferred method for getting image insights. If you use [Image Insights API](../../bing-image-search/how-to/image-insights.md), consider switching to Bing Visual Search API.
 
 
 If you have your subscription key, just send an HTTP POST request to the following endpoint:
@@ -87,7 +87,7 @@ The **ImageInfo** object includes the following fields:
 
 -	`url` &mdash; The URL to the Internet-accessible image that you want insights of. The maximum supported image size is 1 MB. [Read more](#url-example).
 -	`imageInsightsToken` &mdash; The insights token that Image Search API returned for an image. [Read more](#image-token-example).
--	`cropArea` &mdash; The bounding box that identifies the area of interest in the image. [Read more](#region-of-interest).
+-	`cropArea` &mdash; The bounding box that identifies the area of interest in the image. [Read more](#region-of-interest-example).
 
 The `url` and `imageInsightsToken` fields are mutually exclusive. If the request uploads the image binary in the body of the request, don’t includes the `url` and `imageInsightsToken` fields.
 
