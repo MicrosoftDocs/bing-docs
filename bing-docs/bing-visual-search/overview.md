@@ -15,54 +15,59 @@ ms.author: scottwhi
 
 # What is the Bing Visual Search API?
 
-The Bing Visual Search API returns insights for an image. You can either upload an image or provide a URL to one. Insights are visually similar images, shopping sources, webpages that include the image, and more. Insights returned by the Bing Visual Search API are similar to ones shown on Bing.com/images. 
-
-If you use the [Bing Image Search API](../bing-image-search/overview.md), you can use insight tokens from that API's search results for your Bing Visual Search instead of uploading an image.
+Bing Visual Search API returns insights about an image. For example, Bing can help you find similar images, learn where to buy the dress seen in the pic, explore a landmark, identify a dog’s breed, and more. All you need is an image file, the URL to an image, or an insights token. Use Bing Visual Search API to offer an experience similar to Bing.com/visualsearch. 
 
 > [!IMPORTANT]
-> Because Bing Visual Search API provides more comprehensive image insights, it's the preferred method for getting  insights. If you use the [Image Details API](../bing-image-search/how-to/image-insights.md) to get image insights, consider switching to Bing Visual Search API.
+> Bing Visual Search API is the preferred method for getting image insights. If you use [Image Insights API](../bing-image-search/how-to/image-insights.md), consider switching to Bing Visual Search API.
 
-## Insights
+
+## Get started
+
+To get started using the API, pick the subscription you want from <a href="https://www.microsoft.com/en-us/bing/apis/pricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call. 
+
+You can easily call the API by sending a native HTTP GET request or by using the Visual Search SDK. For examples to help you get up and running quickly for either option, see [Quickstarts](quickstarts/quickstarts.md).
+
+
+## Features  
 
 You can discover the following insights by using Bing Visual Search:
 
-| Insight                              | Description |
-|--------------------------------------|-------------|
-| Visually similar images              | A list of images that are visually similar to the input image. |
-| Visually similar products            | Products that are visually similar to the product shown.            |
-| Shopping sources                     | Places where you can buy the item shown in the input image.            |
-| Related searches                     | Related searches made by others or that are based on the contents of the image.            |
-| Webpages that include the image     | Webpages that include the input image.            |
-| Recipes                              | Webpages that include recipes for making the dish shown in the input image.            |
-| Entities                             | Well-known people, places, and things. |
+|Insight|Description
+|-|-
+|Visually similar images|A list of images that are visually similar to the source image.
+|Visually similar products|A list of products that are visually similar to those seen in the image.
+|Shopping sources|A list of places where you can buy the item seen in the image.
+|Related searches|A list of related searches made by others or that are based on the contents of the image.
+|Webpages that include the image|A list of webpages that include the image.
+|Entities|A list of well-known people, places, and things seen in the image.
 
-In addition to insights, Bing Visual Search returns a variety of terms (that is, tags) derived from the input image. The tags enable users to explore concepts found in the image. For example, if the input image is of a famous athlete, one of the tags may be the name of the athlete, another tag could be Sports. Or, if the input image is of an apple pie, the tags could be Apple Pie, Pies, and Desserts.
+<!--
+|Recipes|A list of webpages that include recipes for making the dish seen in the image.
+-->
 
-Bing Visual Search results also include bounding boxes for regions of interest in the image. For example, if the image contains several celebrities, the results may include bounding boxes for each of the recognized celebrities. Or, if Bing recognizes a product or clothing in the image, the result may include a bounding box for the recognized item.
 
-## Workflow
+Bing Visual Search results also include bounding boxes for regions of interest in the image. For example, if the image contains several celebrities, the results may include bounding boxes for each of the recognized celebrities. Or, if Bing recognizes a product or clothing in the image, the result may include a bounding box for the recognized item. You can use the bounding box to explore more about its contents.
 
-The Bing Visual Search API is a RESTful web service, making it easy to call from any programming language that can make HTTP requests and parse JSON. You can use either the REST API or the SDK for the service.
+Bing provides API metrics, which you can use to inform your strategic decisions. Quickly retrieve statistics such as your top queries, call volume, market distribution, response code summary, and many more. For details, see [Bing Web Statistics](../bing-web-search/bing-web-stats.md).
 
-1. Create a [Cognitive Services account](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account) to access the Bing Search APIs. If you don't have an Azure subscription, you can [create an account for free](https://azure.microsoft.com/free/cognitive-services/).
-2. Send a request to the API with a valid search query.
-3. Process the API response by parsing the returned JSON message.
+
+### Search or search-like experience
+
+Bing Visual Search API may only be used as a result of a direct user query or search, or as a result of an action within an app or experience that logically can be interpreted as a user’s search request. For illustration purposes, the following are some examples of acceptable search or search-like experiences.
+
+- User enters a query directly into a search box in an app
+- User selects specific text or image and requests “more information” or “additional information”
+- User asks a search bot about a particular topic
+- User dwells on a particular object or entity in a visual search type scenario
+
+If you are not sure if your experience can be considered a search-like experience, check with Microsoft.
+
 
 ## Next steps
 
-To get started quickly with your first request, see the quickstarts:
-
-* [C#](quickstarts/rest/csharp.md)
-
-* [Java](quickstarts/rest/java.md)
-
-* [node.js](quickstarts/rest/nodejs.md)
-
-* [Python](quickstarts/rest/python.md)
-
-## See also
-
-* The [Images - Visual Search](reference/endpoints.md) reference describes definitions and information on the endpoints, request headers, responses, and query parameters that you can use to request image-based search results.
-
-* The [Bing Search API use and display requirements](../bing-web-search/use-display-requirements.md) specify acceptable uses of the content and information gained through the Bing search APIs.
+- Learn about other APIs in the [family of Bing Search APIs](../bing-web-search/bing-api-comparison.md).
+- Learn about [use and display requirements](../bing-web-search/use-display-requirements.md) for Bing Visual Search.  
+- Learn about how to [get image insights](how-to/get-insights.md).
+- Learn about what's in the [JSON response](how-to/search-response.md).
+- Review [Visual Search API v7 reference](reference/endpoints.md) documentation.  
 

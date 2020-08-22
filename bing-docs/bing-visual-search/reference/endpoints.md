@@ -25,8 +25,10 @@ For information about permitted use and display of the results, see [Use and dis
 To request web search results, send a POST request to:  
   
 ```
-https://api.bing.microsoft.com/bing/v7.0/images/visualsearch
+https://api.bing.microsoft.com/v7.0/images/visualsearch
 ```
+
+For information about the body of the POST, see [Get insights](get-insights.md).
 
 The request must use the HTTPS protocol. 
 

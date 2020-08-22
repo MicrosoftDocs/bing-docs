@@ -31,7 +31,7 @@ Bing Spell Check API lets you perform contextual grammar and spell checking on a
 
 To get started using the API, pick the subscription you want from <a href="https://www.microsoft.com/en-us/bing/apis/pricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call. 
 
-You can easily call the API by sending a native HTTP GET request or by using the Entity Search SDK. For examples to help you get up and running quickly for either option, see [Quickstarts](quickstarts/quickstarts.md).
+You can easily call the API by sending a native HTTP GET request or by using the Spell Check SDK. For examples to help you get up and running quickly for either option, see [Quickstarts](quickstarts/quickstarts.md).
 
 
 ## View API metrics

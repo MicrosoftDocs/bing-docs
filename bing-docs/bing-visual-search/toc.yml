@@ -8,6 +8,8 @@
       maintainContext: true
 - name: Quickstarts
   items:
+    - name: Quickstarts
+      href: quickstarts/quickstarts.md
     - name: REST API
       expanded: true
       items:
@@ -45,11 +47,7 @@
   - name: Create a Single-page Web app
     href: tutorial/visual-search-single-page-app.md
 - name: Samples
-  items:
-  - name: REST samples
-    href: rest-samples.md
-  - name: SDK samples
-    href: sdk-samples.md
+  href: samples.md
 - name: Concepts
   items:
     - name: Default image insights

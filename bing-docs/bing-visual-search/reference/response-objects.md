@@ -48,6 +48,20 @@ Defines metrics that indicate how well an item was rated by others.
 |reviewCount|The number of times the item was rated or reviewed.|Integer
 |text|Text representation of an item.|String
 
+
+## Entity  
+
+Defines an entity such as a person, place, or thing.  
+  
+|Name|Value|Type
+|-|-|-
+|bingId|An ID that uniquely identifies this entity.|String  
+|contractualRules|A list of rules that you must adhere to if you display the entity. For example, the rules may govern attribution of the entity's description.<br/><br/>The following contractual rules may apply:<ul><li>[LicenseAttribution](#licenseattribution)</li><li>[LinkAttribution](#linkattribution)</li><li>[MediaAttribution](#mediaattribution)</li><li>[TextAttribution](#textattribution)</li></ul>Not all entities include rules. If the entity provides contractual rules, you must abide by them. For more information about using contractual rules, see [Attributing Data](/../../bing-entities-search/concepts/data-attribution).|Object[]
+|description|A short description of the entity.|String  
+|image|An image of the entity.|[Image](#image)
+|name|The entity's name.|String
+|webSearchUrl|The URL that takes the user to the Bing search results page for this entity.|String
+
  
 ## Error  
 
@@ -108,9 +122,10 @@ Defines an entity action.
 |Name|Value|Type 
 |-|-|-  
 |_type|A type hint, which is set to ImageEntityAction.|String  
-|actionType|A string representing the type of action.|String
+|actionType|A string representing the type of action. Set to Entity.|String
+|data|The entity that Bing recognized in the image.|[Entity](#entity)
 |datePublished|The date on which the CreativeWork was published.|String
-|displayName|A display name for the action.|String
+|displayName|The name of the entity.|String
 |isTopAction|A Boolean representing whether this result is the top action.|Boolean
 |provider|The source of the creative work.|[Thing](#thing)[]
 |result|The result produced in the action.|[Thing](#thing)[]
@@ -127,10 +142,8 @@ Defines the top-level object in the API response.
 |-|-|-  
 |_type|A type hint, which is set to ImageKnowledge|String
 |id|A String identifier.|String
-|image|The image used in this insights request.|[Image](#image)
-|readLink|The URL that returns this resource. To use the URL, append query parameters as appropriate and include the Ocp-Apim-Subscription-Key header.|String
+|image|The image used in this insights request. The object includes the `imageInsightsToken` field only.|[Image](#image)
 |tags|A list of visual search tags.|[ImageTag](#imagetag)[]
-|webSearchUrl|A URL to Bing's search result for this item.|String
 
 
 ## ImageModuleAction
@@ -151,7 +164,7 @@ Defines an image list action.
 |text|Text content of this creative work.|String
 |thumbnailUrl|A URL to a thumbnail of the item.|String
 
-
+<!--
 ## ImageRecipesAction
 
 Defines a recipe action.
@@ -169,7 +182,7 @@ Defines a recipe action.
 |serviceUrl|Use this URL to get additional data to determine how to take the appropriate action. For example, the `serviceUrl` might return JSON along with an image URL.|String
 |text|Text content of this creative work.|String
 |thumbnailUrl|A URL to a thumbnail of the item.|String
-
+-->
 
 ## ImageRelatedSearchesAction
 
@@ -224,15 +237,14 @@ Defines an image tag.
 
 |Name|Value|Type
 |-|-|-
-|_type|A type hint.|String
-|actions|Actions within this tag. The order of the items denotes the default ranking order of these actions, with the first action being the most likely user intent. The following are the possible actions:<ul><li>[ImageEntityAction](#imageentityaction)</li><li>[ImageModuleAction](#imagemoduleaction)</li><li>[ImageRecipesAction](#imagerecipesaction)</li><li>[ImageRelatedSearchesAction](#imagerelatedsearchesaction)</li><li>[ImageShoppingSourcesAction](#imageshoppingsourcesaction)</li></ul>|Object[]
+|actions|Actions within this tag. The following are the possible actions:<ul><li>[ImageEntityAction](#imageentityaction)</li><li>[ImageModuleAction](#imagemoduleaction)</li><li>[ImageRecipesAction](#imagerecipesaction)</li><li>[ImageRelatedSearchesAction](#imagerelatedsearchesaction)</li><li>[ImageShoppingSourcesAction](#imageshoppingsourcesaction)</li></ul>|Object[]
 |alternateName|An alias for the item.|String
 |bingId|An ID that uniquely identifies this item.|String
-|boundingBox|The bounding box for this tag. For the default tag, there is no bounding box.|[ImageTagRegion](#imagetagregion)
+|boundingBox|The bounding box for this tag. The bounding box identifies the area of interest in the image. There is no bounding box for the default tag.|[ImageTagRegion](#imagetagregion)
 |description|A short description of the item.|String
-|displayName|Display name for this tag. For the default tag, the display name is empty.|String
+|displayName|The display name for this tag. The tag with the empty display name represents the default tag. The default tag contains all insights except for the entity insight. The entity insight is in another tag and its `actionType` is Entity.|String
 |id|A string identifier.|String
-|image|An image of the item.|[Image](#image)
+|image|An image of the item. The object includes the `thumbnailUrl` field only.|[Image](#image)
 |name|The name of the thing represented by this object.|String
 |readlink|The URL that returns this resource. To use the URL, append query parameters as appropriate and include the Ocp-Apim-Subscription-Key header.|String
 |url|The URL to get more information about the thing represented by this object.|String
@@ -260,6 +272,54 @@ Defines a count of the number of websites where you can shop or perform other ac
 |<a name="pagesincludingcount"></a>pagesIncludingCount|The number of webpages that include the image.|Unsigned Integer  
 |<a name="recipesourcecount"></a>recipeSourcesCount|The number of websites that offer recipes of the food seen in the image.|Unsigned Integer  
 |<a name="shoppingsourcecount"></a>shoppingSourcesCount|The number of websites that offer the products seen in the image.|Unsigned Integer
+
+
+## License  
+
+Defines the license under which the text or photo may be used.  
+  
+|Name|Value|Type
+|-|-|-
+|name|The name of the license.|String
+|url|A URL to a website where the user can get more information about the license.<br/><br/>Use the name and URL to create a hyperlink.|String
+  
+
+## LicenseAttribution  
+
+Defines a contractual rule for license attribution.  
+  
+|Name|Value|Type  
+|-|-|-
+|_type|A type hint, which is set to LicenseAttribution.|String
+|license|The license under which the content may be used.|[License](#license)
+|licenseNotice|The license to display next to the targeted field. For example, "Text under CC-BY-SA license".<br/><br/>Use the license's name and URL in the `license` field to create a hyperlink to the website that describes the details of the license. Then, replace the license name in the `licenseNotice` string (for example, CC-BY-SA) with the hyperlink you just created.|String
+|mustBeCloseToContent|A Boolean value that determines whether the contents of the rule must be placed in close proximity to the field that the rule applies to. If **true**, the contents must be placed in close proximity. If **false**, or this field does not exist, the contents may be placed at the caller's discretion.|Boolean
+|targetPropertyName|The name of the field that the rule applies to.|String
+
+
+## LinkAttribution  
+
+Defines a contractual rule for link attribution.  
+  
+|Name|Value|Type
+|-|-|-
+|_type|A type hint, which is set to LinkAttribution.|String
+|mustBeCloseToContent|A Boolean value that determines whether the contents of the rule must be placed in close proximity to the field that the rule applies to. If **true**, the contents must be placed in close proximity. If **false**, or this field does not exist, the contents may be placed at the caller's discretion.|Boolean 
+|targetPropertyName|The name of the field that the rule applies to.<br/><br/>If a target is not specified, the attribution applies to the entity as a whole and should be displayed immediately following the entity presentation. If there are multiple text and link attribution rules that do not specify a target, you should concatenate them and display them using a "Data from: " label. For example, “Data from <provider name1\> &#124; <provider name2\>".|String 
+|text|The attribution text.|String 
+|url|The URL to the provider's website. Use `text` and URL to create of hyperlink.|String
+
+
+## MediaAttribution  
+
+Defines a contractual rule for media attribution.  
+  
+|Name|Value|Type 
+|-|-|-  
+|_type|A type hint, which is set to MediaAttribution.|String
+|mustBeCloseToContent|A Boolean value that determines whether the contents of the rule must be placed in close proximity to the field that the rule applies to. If **true**, the contents must be placed in close proximity. If **false**, or this field does not exist, the contents may be placed at the caller's discretion.|Boolean 
+|targetPropertyName|The name of the field that the rule applies to.|String 
+|url|The URL that you use to create of hyperlink of the media content. For example, if the target is an image, you would use the URL to make the image clickable.|String  
 
 
 ## MediaSize  
@@ -367,7 +427,7 @@ Defines a search query.
 |<a name="query-thumbnail"></a>thumbnail|The URL to a thumbnail of a related image. The Image object includes only the `url` field.|[Image](#image) 
 |<a name="query-websearchurl"></a>webSearchUrl|The URL that takes the user to the Bing search results page for the query.|String
 
-
+<!--
 ## Recipe
 
 Defines a cooking recipe.
@@ -390,7 +450,7 @@ Defines a list of recipes.
 |Name|Value|Type
 |-|-|-
 |value|A list of recipes.|[Recipe](#recipe)[]
-
+-->
 
 ## RelatedSearchesModule
 
@@ -399,6 +459,16 @@ Defines a list of related searches.
 |Name|Value|Type
 |-|-|-
 |value|A list of related searches.|[Query](#query)[]
+
+
+## TextAttribution  
+
+Defines a contractual rule for plain text attribution.  
+  
+|Name|Value|Type 
+|-|-|- 
+|_type|A type hint, which is set to TextAttribution.|String
+|text|The attribution text.<br/><br/>Text attribution applies to the entity as a whole and should be displayed immediately following the entity presentation. If there are multiple text or link attribution rules that do not specify a target, you should concatenate them and display them using a "Data from: " label.|String    
 
 
 ## Thing

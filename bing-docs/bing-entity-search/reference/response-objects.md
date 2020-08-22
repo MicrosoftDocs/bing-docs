@@ -123,7 +123,7 @@ Defines a contractual rule for license attribution.
 |Name|Value|Type  
 |-|-|-
 |_type|A type hint, which is set to LicenseAttribution.|String
-|license|The license under which the content may be used.|License
+|license|The license under which the content may be used.|[License](#license)
 |licenseNotice|The license to display next to the targeted field. For example, "Text under CC-BY-SA license".<br/><br/>Use the license's name and URL in the `license` field to create a hyperlink to the website that describes the details of the license. Then, replace the license name in the `licenseNotice` string (for example, CC-BY-SA) with the hyperlink you just created.|String
 |mustBeCloseToContent|A Boolean value that determines whether the contents of the rule must be placed in close proximity to the field that the rule applies to. If **true**, the contents must be placed in close proximity. If **false**, or this field does not exist, the contents may be placed at the caller's discretion.|Boolean
 |targetPropertyName|The name of the field that the rule applies to.|String

@@ -26,9 +26,9 @@ To request news search results, send a GET request to one of the following endpo
   
 |Endpoint|Description 
 |-|-
-|`https://api.cognitive.microsoft.com/v7.0/news`|Returns the top news articles by category. For example, you can request the top sports or entertainment articles. For information about specifying categories, see the [category](query-parameters.md#category) query parameter. 
-|`https://api.cognitive.microsoft.com/v7.0/news/search`|Returns news articles based on the user's search query. If the search query is empty, the call returns the top news articles. 
-|`https://api.cognitive.microsoft.com/v7.0/news/trendingtopics`|Returns news topics that are currently trending on social networks.<br/><br/>For a list of markets that support trending news, see [Supported Trending News markets](market-codes.md#trending-news-api-markets). 
+|https://api.cognitive.microsoft.com/v7.0/news|Returns the top news articles by category. For example, you can request the top sports or entertainment articles. For information about specifying categories, see the [category](query-parameters.md#category) query parameter. 
+|https://api.cognitive.microsoft.com/v7.0/news/search|Returns news articles based on the user's search query. If the search query is empty, the call returns the top news articles. 
+|https://api.cognitive.microsoft.com/v7.0/news/trendingtopics|Returns news topics that are currently trending on social networks.<br/><br/>For a list of markets that support trending news, see [Supported Trending News markets](market-codes.md#trending-news-api-markets). 
 
 The request must use the HTTPS protocol. 
 

@@ -36,7 +36,7 @@ After getting the ID, send an HTTP GET request to Video Insights API. Set the [i
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/videos/details?id=6DB795E11A6E3CB...&modules=All&mkt=en-us  
 ```
 
-The top-level object in the response is a [VideoDetails]../(reference/response-objects.md#videodetails) object. The following fragment shows what it might look like.
+The top-level object in the response is a [VideoDetails](../reference/response-objects.md#videodetails) object. The following fragment shows what it might look like.
 
 ```json
 {
