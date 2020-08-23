@@ -50,11 +50,12 @@ Terminate each line with a carriage return and line feed character (\r\n).
 
 The form data must include the Content-Disposition header. If you use a URL or insights token to specify the image, set the header’s *name* parameter to "knowledgeRequest". 
 
+```
 --boundary_1234-abcd
 Content-Disposition: form-data; name="knowledgeRequest"
 
 --boundary_1234-abcd--
-
+```
 
 ## Specifying the image's information
 
@@ -169,6 +170,7 @@ By default, the API uses the entire image to look for insights about the image. 
 
 The crop area specifies the top-left corner and bottom-right corner of a region of interest. Specify the values in the range 0.0 through 1.0. The values are a percentage of the overall width and height of the image. 
 
+```
 --boundary_1234-abcd
 Content-Disposition: form-data; name="knowledgeRequest"
 
@@ -190,7 +192,7 @@ Content-Disposition: form-data; name="knowledgeRequest"
 }
 
 --boundary_1234-abcd-- 
-
+```
 
 ## Including entity data
 
@@ -219,6 +221,7 @@ Content-Disposition: form-data; name="knowledgeRequest"
 
 If the user is shopping for a black cocktail dress and wants to see if the store they shop at carries it, use the `site` filter. The `site` filter restricts the similar images and similar products results to a specific domain.
 
+```
 --boundary_1234-abcd
 Content-Disposition: form-data; name="knowledgeRequest"
 
@@ -234,6 +237,7 @@ Content-Disposition: form-data; name="knowledgeRequest"
 }
 
 --boundary_1234-abcd-- 
+```
 
 
 ## Local image example
@@ -242,11 +246,13 @@ If you want to get insights about a local image you have, you can upload the ima
 
 The form data must include the Content-Disposition and Content-Type headers. For the Content-Disposition header, set the header’s *name* parameter to "image" and the *filename* parameter to any appropriate string. The Content-Type header may be set to any commonly used image mime type. 
 
+```
 --boundary_1234-abcd
 Content-Disposition: form-data; name="image"; filename="myimagefile.jpg"
 Content-Type: image/jpeg
 
 --boundary_1234-abcd--
+```
 
 The contents of the form is the image's binary data.
 
