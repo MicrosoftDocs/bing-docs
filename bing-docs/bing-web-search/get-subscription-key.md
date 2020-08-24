@@ -76,6 +76,7 @@ To use Bing Search Service APIs, you need a subscription key. Here are the steps
 1. Go to <a href="https://portal.azure.com" target="_blank">Azure Portal</a> and sign in with your Microsoft account. If you don't have an account, click **Sign up for a free account**.
 1. From the portal, type *Bing* in the search box.
 1. Under **Marketplace** in the search results, select the Bing service you're interested in (for example, **Bing Search**).
+1. If you have a free trial or pay account, skip to [Create your Bing resource](#create-your-bing-resource). 
 1. On the **Create a free account** splash screen, click **Start free**.
 1. Next, you have the option of continuing with the free trial (click **Start free** again) or paying for a subscription (click **Or buy now**). You can always start with the free trial and pay for a subscription later.
 
