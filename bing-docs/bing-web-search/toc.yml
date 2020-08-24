@@ -101,7 +101,7 @@
 - name: Resources
   items:
   - name: Get subscription key
-    href: https://azure.microsoft.com/try/cognitive-services/?api=bing-web-search-api
+    href: get-subscription-key.md
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
   - name: Compliance

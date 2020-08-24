@@ -73,8 +73,9 @@
       href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingspellcheck?view=azure-java-stable
 - name: Resources
   items:
-  - name: Get API key
-    href: https://azure.microsoft.com/try/cognitive-services/?api=bing-web-search-api
+  - name: Get subscription key
+    href: ../bing-web-search/get-subscription-key.md
+    maintainContext: true
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
   - name: Analytics for Bing Spell Check API
