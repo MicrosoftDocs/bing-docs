@@ -254,7 +254,7 @@ The default tag doesn’t include this insight if Bing didn’t find any shoppin
 
 ### VisualSearch insight
 
-The VisualSearch insight provides a list of images that are visually similar to the original image (contains content that's similar to the content seen in the original image).
+The VisualSearch insight provides a list of images that are visually similar to the original image (contains content that's similar to the content seen in the original image). For information about paging through similar images, see [Paging VisualSearch and ProductVisualSearch action types](get-insights.md#paging).
 
 ```json
       {
@@ -287,7 +287,10 @@ The VisualSearch insight provides a list of images that are visually similar to 
               "imageId" : "1DCBA7AA6D23147F9DD06D47DB3A38EB25389",
               "accentColor" : "3E0D01"
             }
-          ]
+          ],
+          "currentOffset": 0,
+          "nextOffset": 237,
+          "totalEstimatedMatches": 896
         }
       }
 ```
@@ -390,7 +393,7 @@ The BestRepresentativeQuery insight provides the query string that Bing thinks b
 
 ### ProductVisualSearch insight
 
-The ProductVisualSearch insight provides a list of images that contain products that are visually similar to products seen in the original image. The `aggregateOffer` field in the **InsightsMetadata** object contains offers where you can buy the product and the price of the product. Not all images in the list include offers.
+The ProductVisualSearch insight provides a list of images that contain products that are visually similar to products seen in the original image. The `aggregateOffer` field in the **InsightsMetadata** object contains offers where you can buy the product and the price of the product. Not all images in the list include offers. For information about paging through similar products, see [Paging VisualSearch and ProductVisualSearch action types](get-insights.md#paging).
 
 ```json
       {
@@ -447,7 +450,10 @@ The ProductVisualSearch insight provides a list of images that contain products 
               "imageId" : "70A8B616355D681DA5980A8D0514BCC995A3",
               "accentColor" : "60646B"
             }
-          ]
+          ],
+          "currentOffset": 0,
+          "nextOffset": 237,
+          "totalEstimatedMatches": 896
         }
       }
 ```
@@ -655,128 +661,115 @@ The following example shows what the bounding rectangles look like if the area o
 ```
 
 
-
-<!--
 ### Text recognition
 
-If the image contains text that the service recognizes, one of the tags will contain a TextResults insight (action). The insight's `displayName` contains the recognized text:
+If the image contains text that the service recognizes, the `displayName` field of one or more of the tags is set to ##TextRecognition. The text recognition tag that has the `actionType` field set to TextRecognition contains all the lines of text found in the image. 
+
+The [TextRecognitionAction](../reference/response-objects.md#textrecognitionaction) object includes the `data` field, which is a [TextRegionsModule](../reference/response-objects.md#textregionsmodule) object. The `regions` field lists the areas of the image where the service found text. 
 
 ```json
     {
-        "image" : {
-            "thumbnailUrl" : "https://tse3.mm.bing.net/th?q=%23%23Text..."
-        },
-        "displayName" : "##TextRecognition",
-        "boundingBox" : {
-            "queryRectangle" : {
-                "topLeft" : {"x" : 0, "y" : 0},
-                "topRight" : {"x" : 1, "y" : 0},
-                "bottomRight" : {"x" : 1, "y" : 1},
-                "bottomLeft" : {"x" : 0, "y" : 1}
-            },
-            "displayRectangle" : {
-                "topLeft" : {"x" : 0, "y" : 0},
-                "topRight" : {"x" : 1, "y" : 0},
-                "bottomRight" : {"x" : 1, "y" : 1},
-                "bottomLeft" : {"x" : 0, "y" : 1}
+      "displayName": "##TextRecognition",
+      "boundingBox": {
+        "queryRectangle": { ... },
+        "displayRectangle": { ... }
+      },
+      "actions": [
+        {
+          "_type": "ImageKnowledge/TextRecognitionAction",
+          "actionType": "TextRecognition",
+          "data": {
+            "regions": [
+              {
+                "boundingBox": { ... },
+                "lines": [ { ... } ]
+              },
+
+              . . .
+            ],
+            "boundingBox": {
+              "topLeft": { ... },
+              "topRight": { ... },
+              "bottomRight": { ... },
+              "bottomLeft": { ... }
             }
-        },
-        "actions" : [{
-            "displayName" : "WALK BIKE ACROSS BRIDGE",
-            "actionType" : "TextResults"
-        }],
-        "sources" : ["OCR"]
+          }
+        }
+      ],
+      "sources": ["OCR"]
     }
 ```
 
 Because the tag's `displayName` field contains ##TextRecognition, do not use it as a category title in the UX. That goes for any display name that starts with ##. Instead, use the action's display name.
 
-Text recognition can also recognize the contact information on business cards, such as phone numbers and email addresses. The bounding box identifies the location of the contact information on the card.
+Each [TextRegion](../reference/response-objects.md#textregion) object specifies its bounding box and the lines of text found within the bounding box. The [TextLine](../reference/response-objects.md#textline) object contains a line of text from the image, the line's bounding box, each word in the line, and each words bounding box. 
+
+```json
+                "lines": [
+                  {
+                    "text": "New York 48874",
+                    "boundingBox": {
+                      "topLeft": { "x": 0.32931036, "y": 0.8316062 },
+                      "topRight": { "x": 0.43793103, "y": 0.7435233 },
+                      "bottomRight": { "x": 0.44568965, "y": 0.76554406 },
+                      "bottomLeft": { "x": 0.33620688, "y": 0.85362697 }
+                    },
+                    "words": [
+                      {
+                        "text": "New",
+                        "boundingBox": { ... }
+                      },
+                      {
+                        "text": "York",
+                        "boundingBox": { ... }
+                      },
+                      {
+                        "text": "48874",
+                        "boundingBox": { ... }
+                      }
+                    ]
+                  }
+                ]
+```
+
+If the list of tags includes other text recognition tags, they're likely Uri action types. The response includes Uri action types if the service recognized URIs such as a website URL, telephone number, or email address. Here are examples of what the tag looks like if the service recognized URIs.
 
 ```json
     {
-      "image" : {
-        "thumbnailUrl" : "https://tse3.mm.bing.net/th?q=%23%23TextRecognition..."
-      },
-      "displayName" : "##TextRecognition",
-      "boundingBox" : {
-        "queryRectangle" : {
-          "topLeft" : {"x" : 0.635, "y" : 0},
-          "topRight" : {"x" : 0.77, "y" : 0},
-          "bottomRight" : {"x" : 0.77, "y" : 0.4873333},
-          "bottomLeft" : {"x" : 0.635, "y" : 0.4873333}
-        },
-        "displayRectangle" : {
-          "topLeft" : {"x" : 0.635, "y" : 0},
-          "topRight" : {"x" : 0.77, "y" : 0},
-          "bottomRight" : {"x" : 0.77, "y" : 0.4873333},
-          "bottomLeft" : {"x" : 0.635, "y" : 0.4873333}
-        }
-      },
-      "actions" : [
+      "displayName": "##TextRecognition",
+      "boundingBox": { ... },
+      "actions": [
         {
-          "url" : "tel:888%20555%201212",
-          "actionType" : "Uri"
+          "url": "tel:+1%20888%20555%201212",
+          "actionType": "Uri"
         }
       ],
-      "sources" : ["OCR"]
+      "sources": ["OCR"]
     },
     {
-      "image" : {
-        "thumbnailUrl" : "https://tse3.mm.bing.net/th?q=%23%23TextRecognition..."
-      },
-      "displayName" : "##TextRecognition",
-      "boundingBox" : {
-        "queryRectangle" : {
-          "topLeft" : {"x" : 0.63, "y" : 0},
-          "topRight" : {"x" : 0.866, "y" : 0},
-          "bottomRight" : {"x" : 0.866, "y" : 0.5553334},
-          "bottomLeft" : {"x" : 0.63, "y" : 0.5553334}
-        },
-        "displayRectangle" : {
-          "topLeft" : {"x" : 0.63, "y" : 0},
-          "topRight" : {"x" : 0.866, "y" : 0},
-          "bottomRight" : {"x" : 0.866, "y" : 0.5553334},
-          "bottomLeft" : {"x" : 0.63, "y" : 0.5553334}
-        }
-      },
-      "actions" : [
+      "displayName": "##TextRecognition",
+      "boundingBox": { ... },
+      "actions": [
         {
-          "url" : "mailto:someone@outlook.com",
-          "actionType" : "Uri"
+          "url": "mailto:someone@outlook.com",
+          "actionType": "Uri"
         }
       ],
-      "sources" : ["OCR"]
+      "sources": ["OCR"]
     },
     {
-      "image" : {
-        "thumbnailUrl" : "https://tse3.mm.bing.net/th?q=%23%23TextRecognition..."
-      },
-      "displayName" : "##TextRecognition",
-      "boundingBox" : {
-        "queryRectangle" : {
-          "topLeft" : {"x" : 0, "y" : 0},
-          "topRight" : {"x" : 1, "y" : 0},
-          "bottomRight" : {"x" : 1, "y" : 1},
-          "bottomLeft" : {"x" : 0, "y" : 1}
-        },
-        "displayRectangle" : {
-          "topLeft" : {"x" : 0, "y" : 0},
-          "topRight" : {"x" : 1, "y" : 0},
-          "bottomRight" : {"x" : 1, "y" : 1},
-          "bottomLeft" : {"x" : 0, "y" : 1}
-        }
-      },
-      "actions" : [
+      "displayName": "##TextRecognition",
+      "boundingBox": { ... },
+      "actions": [
         {
-          "displayName" : "CHARLENE WHITNEY Graphic Designer 888 555 1212 someone@outlook.com www.contoso.com",
-          "actionType" : "TextResults"
+          "url": "http://www.contoso.com/",
+          "actionType": "Uri"
         }
       ],
-      "sources" : ["OCR"]
-    }
+      "sources": ["OCR"]
+    },
 ```
--->
+
 
 ## Next steps
 
@@ -784,24 +777,4 @@ Text recognition can also recognize the contact information on business cards, s
 - Learn about how to [get image insights](get-insights.md).
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
 - Review [Visual Search API v7 reference](../reference/endpoints.md) documentation.  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

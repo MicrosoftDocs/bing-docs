@@ -163,26 +163,8 @@ Defines an image list action.
 |serviceUrl|Use this URL to get additional data to determine how to take the appropriate action. For example, the `serviceUrl` might return JSON along with an image URL.|String
 |text|Text content of this creative work.|String
 |thumbnailUrl|A URL to a thumbnail of the item.|String
+|url|The URI used to perform the action. The object includes this field if `actionType` is Uri, which is typically returned as part of text recognition. The URI can use the:<ul><li>HTTP|HTTPS protocol for cases when the URI is a URL to a website</li><li>tel protocol for cases when the URI is a telephone number</li><li>mailto protocol for cases when the URI is an email address.</li></ul>|String
 
-<!--
-## ImageRecipesAction
-
-Defines a recipe action.
-
-|Name|Value|Type 
-|-|-|-  
-|_type|A type hint, which is set to ImageRecipeAction.|String
-|actionType|A string representing the type of action.|String
-|data|A list of recipes related to the image.|[RecipesModule](#recipesmodule)
-|datePublished|The date on which the CreativeWork was published.|String
-|displayName|A display name for the action.|String
-|isTopAction|A Boolean representing whether this result is the top action.|Boolean
-|provider|The source of the creative work.|[Thing](#thing)[]
-|result|The result produced in the action.|[Thing](#thing)[]
-|serviceUrl|Use this URL to get additional data to determine how to take the appropriate action. For example, the `serviceUrl` might return JSON along with an image URL.|String
-|text|Text content of this creative work.|String
-|thumbnailUrl|A URL to a thumbnail of the item.|String
--->
 
 ## ImageRelatedSearchesAction
 
@@ -228,13 +210,11 @@ Defines a list of images.
 
 |Name|Value|Type
 |-|-|-
+|currentOffset|The offset that represents where the first image in `value` is relative to all images that Bing might return for this query. The object includes this field only for the VisualSearch and ProductVisualSearch action types. 
+|nextOffset|The offset value that you set the `offset` field to in the **KnowledgeRequest** request object. For information about paging, see [Paging VisualSearch and ProductVisualSearch action types](../how-to/get-insights.md#paging). The object includes this field only for the VisualSearch and ProductVisualSearch action types.|Integer
+|totalEstimatedMatches|The estimated number of images that match the query. Use this number along with `count` and `offset` to page the results. The object includes this field only for the VisualSearch and ProductVisualSearch action types.|Long
 |value|List of images.|[Image](#image)[]
 
-
-<!--
-Add to actions in ImageTag object
-<li>[ImageRecipesAction](#imagerecipesaction)</li>
--->
 
 ## ImageTag
 
@@ -252,6 +232,7 @@ Defines an image tag.
 |image|An image of the item. The object includes the `thumbnailUrl` field only.|[Image](#image)
 |name|The name of the thing represented by this object.|String
 |readlink|The URL that returns this resource. To use the URL, append query parameters as appropriate and include the Ocp-Apim-Subscription-Key header.|String
+|sources|A list of sources used to recognize text in the image. For example, OCR (optical character recognition).|String[]
 |url|The URL to get more information about the thing represented by this object.|String
 |webSearchUrl|The URL to Bing's search result for this item.|String
 
@@ -432,30 +413,6 @@ Defines a search query.
 |<a name="query-thumbnail"></a>thumbnail|The URL to a thumbnail of a related image. The Image object includes only the `url` field.|[Image](#image) 
 |<a name="query-websearchurl"></a>webSearchUrl|The URL that takes the user to the Bing search results page for the query.|String
 
-<!--
-## Recipe
-
-Defines a cooking recipe.
-
-|Name|Value|Type
-|-|-|-
-|cookTime|The amount of time the food takes to cook. For example, PT25M. For information about the time format, see <a href="http://en.wikipedia.org/wiki/ISO_8601#Durations" target="_blank">http://en.wikipedia.org/wiki/ISO_8601#Durations</a>.|String
-|datePublished|The date that the CreativeWork was published.|String
-|prepTime|The amount of time required to prepare the ingredients. For example, PT15M. For information about the time format, see <a href="http://en.wikipedia.org/wiki/ISO_8601#Durations" target="_blank">http://en.wikipedia.org/wiki/ISO_8601#Durations</a>.|String
-|provider|The source of the creative work.|[Thing](#thing)
-|text|Text content of this creative work.|String
-|thumbnailUrl|The URL to a thumbnail of the item.|String
-|totalTime|The total amount of time it takes to prepare and cook the recipe. For example, PT45M. For information about the time format, see <a href="http://en.wikipedia.org/wiki/ISO_8601#Durations" target="_blank">http://en.wikipedia.org/wiki/ISO_8601#Durations</a>.|String
-
-
-## RecipesModule
-
-Defines a list of recipes.
-
-|Name|Value|Type
-|-|-|-
-|value|A list of recipes.|[Recipe](#recipe)[]
--->
 
 ## RelatedSearchesModule
 
@@ -474,6 +431,58 @@ Defines a contractual rule for plain text attribution.
 |-|-|- 
 |_type|A type hint, which is set to TextAttribution.|String
 |text|The attribution text.<br/><br/>Text attribution applies to the entity as a whole and should be displayed immediately following the entity presentation. If there are multiple text or link attribution rules that do not specify a target, you should concatenate them and display them using a "Data from: " label.|String    
+
+
+## TextRecognitionAction
+
+Defines a text recognition action.
+
+|Name|Value|Type 
+|-|-|-  
+|_type|A type hint, which is set to ImageKnowledge/TextRecognitionAction.|String
+|actionType|A string representing the type of action, which is set to TextRecognition.|String
+|data|The recognized text found in the image.|[TextRegionsModule](#textregionsmodule)
+
+
+## ItemRegion
+
+Defines a word within a line of text. 
+
+|Name|Value|Type 
+|-|-|- 
+|boundingBox|The bounding box of the word.|[NormalizedQuadrilateral](#normalizedquadrilateral)
+|text|The word within a line of text.|String 
+
+
+## TextLine
+
+Defines a line of text that was found in the image. 
+
+|Name|Value|Type 
+|-|-|- 
+|boundingBox|The bounding box within which the line of text was found.|[NormalizedQuadrilateral](#normalizedquadrilateral)
+|text|The line of text.|String
+|words|A list of words within the line of text.|[ItemRegion](#itemregion)[] 
+
+
+## TextRegion
+
+Defines an area where text was found in the image. 
+
+|Name|Value|Type 
+|-|-|- 
+|boundingBox|The bounding box within which the lines of text was found.|[NormalizedQuadrilateral](#normalizedquadrilateral)
+|lines|A list of areas within the bounding box where lines of text was found.|[TextLine](#textline)[] 
+
+
+## TextRegionsModule
+
+Defines the list of areas where text was found in the image.
+
+|Name|Value|Type 
+|-|-|- 
+|boundingBox|The bounding box within which all text in the image was found.|[NormalizedQuadrilateral](#normalizedquadrilateral)
+|regions|A list of areas within the bounding box where text was found.|[TextRegion](#textregion)[] 
 
 
 ## Thing

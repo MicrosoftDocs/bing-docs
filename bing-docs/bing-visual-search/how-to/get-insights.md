@@ -79,7 +79,10 @@ The body may include one or more parts of the following JSON object depending on
     },
     "invokedSkillsRequestData" : {
       "enableEntityData" : "true"
-    }
+    },
+    "invokedSkills": [""],
+    "offset":0,
+    "count":0
   }
 }
 ```
@@ -98,6 +101,7 @@ The **KnowledgeRequest** object includes the following fields:
   - `site` &mdash; The *site* filter returns similar images and similar products results from the specified site only. [Read more](#filtering-similar-images-and-products).  
 - `invokedSkillsRequestData` &mdash; A **SkillsRequestData** object that you use to request additional insights.  
   - `enableEntityData` &mdash; A Boolean value that if **true**, returns information about the well-known person, place, or thing seen in the image. [Read more](#including-entity-data).
+- `invokedSkills` &mdash; A list of insights to invoke. The string array may include only SimilarImages or SimilarProducts but not both. Include this field if you want to page visually similar insights or images of visually similar products. [Read more](#paging).
 
 
 ## URL example
@@ -238,6 +242,33 @@ Content-Disposition: form-data; name="knowledgeRequest"
 
 --boundary_1234-abcd-- 
 ```
+
+
+## <a name="paging"></a> Paging VisualSearch and ProductVisualSearch action types
+
+The VisualSearch and ProductVisualSearch action types may include the following paging-related fields.
+
+```json
+          "currentOffset": 0,
+          "nextOffset": 237,
+          "totalEstimatedMatches": 896
+```
+
+If the object includes these fields, and you want to provide your user the ability to page through more visually similar images or products, include the **KnowledgeRequest** object in your POST request with the following fields.
+
+```json
+  "knowledgeRequest" : {
+    "invokedSkills": ["SimilarImages"],
+    "offset":237,
+    "count":35
+  }
+```
+
+To page visually similar images, set the `invokedSkills` array to SimilarImages and set `invokedSkills` to SimilarProducts to page visually similar products.
+
+Set the `offset` field to the value from the `nextOffset` field in the VisualSearch or ProductVisualSearch insight depending on the value you specified in `invokedSkills`.
+
+Set the `count` field to the number of images to return.
 
 
 ## Local image example
