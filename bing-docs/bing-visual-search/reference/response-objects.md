@@ -260,6 +260,16 @@ Defines a count of the number of websites where you can shop or perform other ac
 |<a name="shoppingsourcecount"></a>shoppingSourcesCount|The number of websites that offer the products seen in the image.|Unsigned Integer
 
 
+## ItemRegion
+
+Defines a word within a line of text. 
+
+|Name|Value|Type 
+|-|-|- 
+|boundingBox|The bounding box of the word.|[NormalizedQuadrilateral](#normalizedquadrilateral)
+|text|The word within a line of text.|String 
+
+
 ## License  
 
 Defines the license under which the text or photo may be used.  
@@ -442,16 +452,6 @@ Defines a text recognition action.
 |_type|A type hint, which is set to ImageKnowledge/TextRecognitionAction.|String
 |actionType|A string representing the type of action, which is set to TextRecognition.|String
 |data|The recognized text found in the image.|[TextRegionsModule](#textregionsmodule)
-
-
-## ItemRegion
-
-Defines a word within a line of text. 
-
-|Name|Value|Type 
-|-|-|- 
-|boundingBox|The bounding box of the word.|[NormalizedQuadrilateral](#normalizedquadrilateral)
-|text|The word within a line of text.|String 
 
 
 ## TextLine

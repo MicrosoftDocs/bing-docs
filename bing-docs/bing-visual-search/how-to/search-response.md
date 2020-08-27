@@ -661,11 +661,11 @@ The following example shows what the bounding rectangles look like if the area o
 ```
 
 
-### Text recognition
+## Text recognition
 
 If the image contains text that the service recognizes, the `displayName` field of one or more of the tags is set to ##TextRecognition. The text recognition tag that has the `actionType` field set to TextRecognition contains all the lines of text found in the image. 
 
-The [TextRecognitionAction](../reference/response-objects.md#textrecognitionaction) object includes the `data` field, which is a [TextRegionsModule](../reference/response-objects.md#textregionsmodule) object. The `regions` field lists the areas of the image where the service found text. 
+The [TextRecognitionAction](../reference/response-objects.md#textrecognitionaction) object includes the `data` field, which is a [TextRegionsModule](../reference/response-objects.md#textregionsmodule) object. The `regions` field lists the areas of the image where text was found. 
 
 ```json
     {
@@ -700,7 +700,7 @@ The [TextRecognitionAction](../reference/response-objects.md#textrecognitionacti
     }
 ```
 
-Because the tag's `displayName` field contains ##TextRecognition, do not use it as a category title in the UX. That goes for any display name that starts with ##. Instead, use the action's display name.
+Because the tag's `displayName` field contains ##TextRecognition, do not use it as a category title in the UX. That goes for any display name that starts with ##.
 
 Each [TextRegion](../reference/response-objects.md#textregion) object specifies its bounding box and the lines of text found within the bounding box. The [TextLine](../reference/response-objects.md#textline) object contains a line of text from the image, the line's bounding box, each word in the line, and each words bounding box. 
 
