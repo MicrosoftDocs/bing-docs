@@ -18,7 +18,13 @@ ms.author: scottwhi
 
 For a list of possible objects, see **In this article** in the right pane.
 
-If the request succeeds, the top-level object in the response is the [SearchResponse](#searchresponse) object. And if the request fails, the top-level object in the response is the [ErrorResponse](#errorresponse) object.
+If the request succeeds, the top-level object in the response is:
+
+- [SearchResponse](#searchresponse) for web search
+- [Suggestions](#suggestions) for autosuggest 
+
+
+And if the request fails, the top-level object in the response is the [ErrorResponse](#errorresponse) object.
 
 > [!NOTE]
 > Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
@@ -89,6 +95,39 @@ Defines the query string that Bing used for the request.
 |<a name="querycontext-alteredquery"></a>alteredQuery|The query string that Bing used to perform the query. Bing uses the altered query string if the original query string contained spelling mistakes. For example, if the query string is *saling downwind*, the altered query string is *sailing downwind*.<br/><br/>The object includes this field only if the original query string contains a spelling mistake.|String 
 |askUserForLocation|A Boolean value that indicates whether Bing requires the user's location to provide accurate results. If you specified the user's location by using the [X-MSEdge-ClientIP](headers.md#clientip) and [X-Search-Location](headers.md#location) headers, you can ignore this field.<br/><br/>For location aware queries, such as "today's weather" or "restaurants near me" that need the user's location to provide accurate results, this field is set to **true**.<br/><br/>For location aware queries that include the location (for example, "Seattle weather"), this field is set to **false**. This field is also set to **false** for queries that are not location aware, such as "best sellers."|Boolean
 |<a name="querycontext-originalquery"></a>originalQuery|The query string as specified in the request.|String  
+  
+
+## SearchAction  
+
+Defines a query search suggestion.  
+  
+|Name|Value|Type
+|-|-|-
+|displayText|The suggested query term to display in a user interface. |String
+|<a name="searchaction-query"></a>query|The suggested query term.<br/><br/>If the user selects the query term from the list of suggestions, use the term in a Bing API request and display the search results yourself.|String
+|<a name="searchaction-searchkind"></a>searchKind|The type of suggestion. The following are the possible values:<ul><li>CustomSearch &mdash; The suggestion is from a non-web search suggestion data source.</li><li>WebSearch &mdash; The suggestion is from a web search suggestion data source.</li></ul>|String
+  
+
+## SuggestionGroup  
+
+Defines a group of suggestions of the same type.  
+  
+|Name|Value|Type
+|-|-|-
+|<a name="suggestgroup-name"></a>name|The name of the group. The name identifies the type of suggestions that the group contains. For example, web search suggestions. The following are the possible group names:<ul><li>Custom &mdash; The group contains suggestions from a non-web search suggestions data source.</li><li>Web &mdash; The group contains web search suggestions.</li></ul>|String
+|<a name="suggestgroup-searchsuggestions"></a>searchSuggestions|A list of up to 8 suggestions. If there are no suggestions, the array is empty.<br/><br/>You must display all suggestions in the order provided. The list is in order of decreasing relevance. The first suggestion is the most relevant and the last suggestion is the least relevant. The size of the list is subject to change.|[SearchAction](#searchaction)[]  
+  
+
+## Suggestions  
+
+The top-level object that the response includes when the request succeeds.  
+  
+If the service suspects a denial of service attack, the request succeeds (HTTP status code is 200 OK). However, the body of the response is empty.  
+  
+|Name|Value|Type
+|-|-|-
+|_type|The type hint, which is set to Suggestions.|String
+|<a name="suggestions-suggestiongroups"></a>suggestionGroups|A list of suggested query strings grouped by type. For example, web search suggestions.|[SuggestionGroup](#suggestiongroup)[]
 
   
 ## SearchResponse  

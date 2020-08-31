@@ -155,7 +155,7 @@ If multiple pins satisfy a match condition, Bing Custom Search will use the one 
 
 Custom search has two environments: staging/testing (see the **Configuration** tab) and production (see the **Production** tab). When you create a new instance or make changes to an existing instance, those changes occur in the testing environment.
 
-After you've validated your changes and are ready to publish, click **Publish**. Changes are not reflected against your production endpoints until you publish.
+After validating that your changes and are ready to publish, click **Publish**. Changes are not reflected against your production endpoints until you publish.
 
 Before publishing, if you decide that you don't want to keep the changes you've made, click **Revert**. When you revert your changes, the **Published** version remains unchanged and the **Configuration** version is reverted to match the **Published** version.
 

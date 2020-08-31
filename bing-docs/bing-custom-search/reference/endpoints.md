@@ -22,19 +22,17 @@ For information about permitted use and display of the results, see [Use and dis
   
 ## Endpoints 
  
-To request web search results from your custom instance, send a GET request to:  
+To request search results from your custom instance, send a GET request to:  
   
-```
-https://api.bing.microsoft.com/bingcustomsearch/v7.0/search
-```
+|Endpoint|Service
+|-|-
+|`https://api.bing.microsoft.com/bingcustomsearch/v7.0/search`|Custom Web Search
+|`https://api.bing.microsoft.com/bingcustomsearch/v7.0/suggestions/search`|Custom Autosuggest
+|`https://api.bing.microsoft.com/bingcustomsearch/v7.0/images/search`|Custom Image Search
+|`https://api.bing.microsoft.com/bingcustomsearch/v7.0/videos/search`|Custom Video Search
 
 The request must use the HTTPS protocol. 
 
-Other Custom Search endpoints:
-
-- [Custom Image Search API](../../bing-custom-image-search/reference/endpoints.md)
-- [Custom Video Search API](../../bing-custom-video-search/reference/endpoints.md)
-- [Custom Autosuggest API](../../bing-custom-autosuggest/reference/endpoints.md)
 
 > [!NOTE]
 > The maximum URL length is 2,048 characters. To ensure that your URL length does not exceed the limit, the maximum length of your query parameters should be less than 1,500 characters. If the URL exceeds 2,048 characters, the server returns 404 Not found.  

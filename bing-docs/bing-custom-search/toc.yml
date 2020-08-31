@@ -47,6 +47,8 @@
       href: how-to/hosted-ui.md
     - name: Share your custom search instance
       href: how-to/share-your-custom-search.md
+    - name: Configure custome autosuggest experience
+      href: how-to/configure-custom-autosuggest.md
     - name: Handle hit highlighting
       href: ../bing-web-search/hit-highlighting.md
       maintainContext: true
