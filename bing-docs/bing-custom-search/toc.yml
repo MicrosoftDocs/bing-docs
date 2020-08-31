@@ -12,7 +12,7 @@
     - name: Create a custom search instance
       href: how-to/quick-start.md
     - name: Quickstarts
-      href: quickstarts.md
+      href: quickstarts/quickstarts.md
     - name: REST API
       items:
         - name: C#
@@ -88,8 +88,6 @@
   - name: Get subscription key
     href: ../bing-web-search/get-subscription-key.md
     maintainContext: true
-  - name: Bing Custom Search endpoints
-    href: endpoint-custom.md
   - name: Pricing
     href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
   - name: Analytics for Bing News Search API

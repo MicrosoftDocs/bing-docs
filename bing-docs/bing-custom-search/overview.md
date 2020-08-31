@@ -50,7 +50,7 @@ After defining your custom view of the web, use the following APIs to query its 
 - Custom Search API  &mdash; Lets your users to search for webpages and more from the domains and sites specified in your custom search instance.
 - [Custom Image API](../bing-custom-image-search/overview.md) &mdash; Lets your users to search for images from the domains and sites specified in your custom search instance.
 - [Custom Video API](../bing-custom-video-search/overview.md) &mdash; Lets your users to search for videos from the domains and sites specified in your custom search instance.
-- [Custom Autosuggest API](../bing-custom-autosuggest/overview.md) &mdash; Lets you provide suggested search terms to your users as they type in your search box.
+- [Custom Autosuggest API](how-to/configure-custom-autosuggest.md) &mdash; Lets you provide suggested search strings to your users as they type in your search box.
 
 
 ### Search or search-like experience

@@ -107,5 +107,5 @@ The response contains a list of `SearchAction` objects that contain the suggeste
 
 Each suggestion includes a `displayText` and `query` field. The `displayText` field contains the suggested query string that you use to populate your search box's dropdown list.
 
-If the user selects a suggested query string from the dropdown list, use the query string in the `query` field when calling the [Bing Custom Search API](../bing-custom-search/overview.md).
+If the user selects a suggested query string from the dropdown list, use the query string in the `query` field when calling [Bing Custom Search API](../overview.md).
 

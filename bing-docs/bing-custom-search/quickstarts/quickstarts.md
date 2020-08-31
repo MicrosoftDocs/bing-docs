@@ -26,9 +26,9 @@ Use these quickstarts to make your first Custom Search API call in a matter of m
 
 ## Quickstarts using the Bing client library
 
-- [C#](sdk/image-search-client-library-csharp.md)
-- [Java](sdk/image-search-client-library-java.md)
-- [python](sdk/image-search-client-library-python.md)
+- [C#](sdk/custom-search-client-library-csharp.md)
+- [Java](sdk/custom-search-client-library-java.md)
+- [python](sdk/custom-search-client-library-python.md)
 
 
 ## Next steps
