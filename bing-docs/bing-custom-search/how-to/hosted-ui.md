@@ -15,95 +15,99 @@ ms.author: scottwhi
 
 # Configure your hosted UI experience
 
-Bing Custom Search provides a hosted UI that you can easily integrate into your webpages and web applications as a JavaScript code snippet. Using the Bing Custom Search portal, you can configure the layout, color, and search options of the UI.
+Bing Custom Search provides a hosted UI that easily integrates into your webpage using JavaScript. You can configure the UI's layout, color, and search options in the Custom Search portal.
 
 
+## Configure your hosted UI
 
-## Configure the custom hosted UI
+To configure a hosted UI for your web applications, follow these steps. As you make changes, the pane on the right provides a preview of what the UI will look like. (The displayed search results are not actual results for your instance.)
 
-To configure a hosted UI for your web applications, follow these steps. As you make changes, the pane on the right will give you a preview of your UI. The displayed search results are not actual results for your instance.
-
-1. Sign in to Bing Custom Search [portal](https://customsearch.ai).  
+1. Sign in to the [Custom Search portal](https://customsearch.ai).  
   
-2. Select your Bing Custom Search instance.
+2. Select your Custom Search instance.
 
 3. Click the **Hosted UI** tab.  
   
 4. Select a layout.
 
-    - Search bar and results (default): Displays a search box with search results below it.
-    - Results only: Displays search results only, without a search box. When using this layout, you must provide the search query (`&q=<query string>`). Add the query parameter to the request URL in the JavaScript snippet, or the HTML endpoint link.
+    - Search bar and results (default): Displays a search box with search results below it.  
+      
+    - Results only: Displays search results only, without a search box. When using this layout, you must provide the search string (`&q=<search string>`). Add the query parameter (*q*) to the request URL in the JavaScript snippet, or the HTML endpoint link.  
+      
     - Pop-over: Provides a search box and displays the search results in a sliding overlay.
 
-5. Select a color theme. You can customize the colors to fit your application by clicking **Customize theme**. To change a color, either enter the color's RGB HEX value (for example, `#366eb8`), or click on the color preview.
+5. Select a color theme. You can customize the colors to fit your application by clicking **Customize theme**. To change a color, either enter the color's RGB HEX value (for example, `#366eb8`) or click on the color preview.
 
-   You can preview your changes on the right side of the portal. Clicking **Reset to default** will revert your changes to the default colors for the selected theme.
+   You can preview your changes on the right side of the portal. Clicking **Reset to default** reverts your changes to the default colors for the selected theme.
 
    > [!NOTE]
    > Consider accessibility when choosing colors.
 
-6. Under **Additional Configurations**, provide values as appropriate for your app. These settings are optional. To see the effect of applying or removing them, see the preview pane on the right. Available configuration options are:  
+6. Under **Additional Configurations**, provide values as appropriate for your app. These settings are optional. To see the effect of applying or removing them, see the preview pane on the right.  
 
-7. Enter the search subscription key or choose one from the dropdown list. The dropdown list is populated with keys from your Azure account's subscriptions. See [Cognitive Services API account](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account).  
+7. Enter the search subscription key or choose one from the dropdown list. The dropdown list is populated with keys from your Azure account's subscriptions.   
 
-8. If you enabled autosuggest, enter the autosuggest subscription key or choose one from the dropdown list. The dropdown list is populated with keys from your Azure account's subscriptions. Custom Autosuggest requires a specific subscription tier, see the [pricing](https://azure.microsoft.com/pricing/details/cognitive-services/bing-custom-search/).
+8. If you enabled autosuggest, enter the autosuggest subscription key or choose one from the dropdown list. The dropdown list is populated with keys from your Azure account's subscriptions. 
 
-[!INCLUDE [publish or revert](../includes/publish-revert.md)]
 
-## Consume custom UI
+## Publish or revert a search instance
 
-To consume the hosted UI, either: 
+Custom search has two environments: staging/testing (see the **Configuration** tab) and production (see the **Production** tab). When you create a new instance or make changes to an existing instance, those changes occur in the testing environment.
 
-- Include the script in your web page  
+After configuring and validating your changes, click **Publish** to make your hosted UI configuration live. Changes are not reflected against your production endpoints until you publish.
+
+Before publishing, if you decide that you don't want to keep the changes you've made, click **Revert**. When you revert your changes, the **Published** version remains unchanged and the **Configuration** version is reverted to match the **Published** version.
+
+
+## Consume your custom UI
+
+To consume your hosted UI after publishing it, click the **Production** tab and then the **Endpoints** tab. In the list of endpoints, click **Hosted UI**.
+
+Click **Additional parameters** if you want to include the *safeSearch* query parameter or specify the language to use for user interface strings.
+
+Finally, use one of the following options to access your custom hosted UI:
+
+- Copy the JavaScript snippet and paste it into your webpage. The following is an example only (copy the actual snippet from the portal). 
   
   ```html
   <html>
       <body>
           <script type="text/javascript" 
               id="bcs_js_snippet"
-              src="https://ui.customsearch.ai /api/ux/rendering-js?customConfig=<YOUR-CUSTOM-CONFIG-ID>&market=en-US&safeSearch=Moderate&version=latest&q=">
+              src="https://ui.customsearch.ai/api/ux/rendering-js?customConfig=<YOUR-CUSTOM-CONFIG-ID>&market=en-US&safeSearch=Moderate&version=latest&q=">
           </script>
       </body>    
   </html>
   ```
 
-- Or, use the following URL in a Web browser.   
+- Or, copy and use the URL to access your custom UI in a Web browser. The following is an example only (copy the actual URL from the portal).  
   
-  `https://ui.customsearch.ai/hosted?customConfig=YOUR-CUSTOM-CONFIG-ID`  
+  `https://ui.customsearch.ai/hosted-page?customConfig=<YOUR-CUSTOM-CONFIG-ID>&market=en-US&safeSearch=Moderate&version=latest&q=`  
   
-  > [!NOTE]
-  > Add the following query parameters to the URL as needed. For information about these parameters, see [Custom Search API](../reference/query-parameters.md) reference.
-  >
-  > - q
-  > - mkt
-  > - safesearch
-  > - setlang
-
   > [!IMPORTANT]
   > The page cannot display your privacy statement or other notices and terms. Suitability for your use may vary.  
 
-For additional information, including your Custom Configuration ID, go to **Endpoints** under the **Production** tab.
 
 ## Configuration options
 
-You can configure the behavior of your hosted UI by clicking **Additional Configurations**, and providing values. These settings are optional. To see the effect of applying or removing them, see the preview pane on the right. 
+The following sections describe the additional configurations listed under **Additional Configurations** (see step 6 above). These settings are optional. To see the effect of applying or removing them, see the preview pane on the right. 
 
 ### Web search configurations
 
-- Web results enabled: Determines if web search is enabled (you will see a Web tab at the top of the page)
-- Enable autosuggest: Determines if custom autosuggest is enabled (see [pricing](https://azure.microsoft.com/pricing/details/cognitive-services/bing-custom-search/) for additional cost).
-- Web results per page: Number of web search results to display at a time (the maximum is 50 results per page).
+- Web results enabled: Determines if web search is enabled (see the Web tab at the top of the page).
+- Enable autosuggest: Determines if custom autosuggest is enabled.
+- Web results per page: Determines the number of web search results to display (the maximum is 50 results per page).
 - Image caption: Determines if images are displayed with search results.
 
 The following configurations are shown if you click **Show advanced configurations**:
 
-- Highlight words: Determines if results are displayed with search terms in bold.
-- Link target: Determines if the webpage opens in a new browser tab (Blank) or the same browser tab (self) when the user clicks a search result.
+- Highlight words: Determines whether words or phrases from the user's search string are highlighted (bolded) in the search results.
+- Link target: Determines if the webpage opens in a new browser tab (Blank) or the same browser tab (self) when the user clicks a search result link.
 
 ### Image search configurations
 
-- Image results enabled: Determines if image search is enabled (you will see an Images tab at the top of the page).
-- Image results per page: Number of image search results to display at a time (the maximum is 150 results per page).
+- Image results enabled: Determines if image search is enabled (see the Images tab at the top of the page).
+- Image results per page: Determines the number of image search results to display at a time (the maximum is 150 results per page).
 
 The following configuration is shown if you click **Show advanced configurations**.  
   
@@ -111,8 +115,8 @@ The following configuration is shown if you click **Show advanced configurations
 
 ### Video search configurations
 
-- Video results enabled: Determines if video search is enabled (you will see a Videos tab at the top of the page).
-- Video results per page: Number of video search results to display at a time (the maximum is 150 results per page).
+- Video results enabled: Determines if video search is enabled (see the Videos tab at the top of the page).
+- Video results per page: Determines the number of video search results to display at a time (the maximum is 150 results per page).
 
 The following configuration is shown if you click **Show advanced configurations**.  
   
@@ -125,12 +129,10 @@ The following configuration is shown if you click **Show advanced configurations
 
 The following configurations are shown if you click **Show advanced configurations**.  
 
-|Column1  |Column2  |
-|---------|---------|
-|Search box text placeholder   | Text displayed in the search box prior to input.        |
-|Title link url    |Target for the title link.         |
-|Logo URL     | Image displayed next to the title.         |
-|Favicon    | Icon displayed in the browser's title bar.          |
+- Search box text placeholder: The text displayed in the search box prior to user input.
+- Title link url: The target for the title link. 
+- Logo URL: The image displayed next to the title. 
+- Favicon: The icon displayed in the browser's title bar.
 
 The following configurations apply only if you consume the Hosted UI through the HTML endpoint (they don't apply if you use the JavaScript snippet).
 

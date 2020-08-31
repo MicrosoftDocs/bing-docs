@@ -1,7 +1,7 @@
 ---
 title: What is the Bing Custom Search API?
 titleSuffix: Bing Search Services
-description: The Bing Custom Search API enables you to create tailored search experiences for topics that you care about.
+description: The Bing Custom Search enables you to create tailored search experiences for topics that you care about.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -13,43 +13,63 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# What is the Bing Custom Search API?
+# What is Bing Custom Search?
 
-The Bing Custom Search API enables you to create a tailored, ad-free search experiences for topics that your users care about. You specify the domains and webpages that Bing searches. You can also pin, boost, and demote specific content to create a custom view of the web that helps your users quickly find relevant content. 
+Bing Custom Search lets you create a tailored, ad-free search experiences for topics that your users care about. You specify the domains and webpages that Bing searches. You can also pin, boost, and demote specific content to create a custom view of the web that helps your users quickly find relevant content. To create your custom view, use the [Bing Custom Search portal](https://customsearch.ai).
+
+After defining your view, integrate it into your website or application by calling Bing Custom Search API. As an option, you can configure a searchable user interface that you render within your website or application.
+
+![How Bing Custom Search works](media/BCS-Overview.png "How Bing Custom Search works.")
+
+> [!NOTE]
+> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
+
+> [!NOTE]
+> This documentation is for Bing Search Services. If you're looking for the Cognitive Services version of the documentation, see <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/Bing-Custom-Search/overview">Cognitive Services Bing Custom Search</a>.
+
+
+## Get started
+
+To get started using the API, pick the subscription you want from <a href="https://www.microsoft.com/en-us/bing/apis/pricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call. 
+
+You can easily call the API by sending a native HTTP GET request or by using the Custom Search SDK. For examples to help you get up and running quickly for either option, see [Quickstarts](quickstarts/quickstarts.md).
+
 
 ## Features
 
-|Feature  |Description  |
-|---------|---------|
-|[Custom real-time search suggestions](../bing-custom-autosuggest/overview.md)     | Provide search suggestions that can be displayed as a dropdown list as your users type.       | 
-|[Custom image search experiences](../bing-custom-image-search/overview.md)     | Enable your users to search for images from the domains and websites specified in your custom search instance.        |        
-|[Custom video search experiences](../bing-custom-video-search/overview.md)     | Enable your users to search for videos from the domains and sites specified in your custom search instance.        |    
-|[Share your custom search instance](how-to/share-your-custom-search.md)     | Collaboratively edit and test your search instance by sharing it with members of your team.        | 
-|[Configure a UI for your applications and websites](how-to/hosted-ui.md)     | Provides a hosted UI that you can easily integrate into your webpages and web applications as a JavaScript code snippet.        | 
+Custom Search provides the following features:
 
-## Workflow
+|Feature|Description
+|-|-
+|[Define your view of the web](how-to/define-your-custom-view.md)|Identify the content that your users care about.
+|[Define a search experience that you host within your website or app](how-to/hosted-ui.md)|Configure and host a search experience that you can integrate into a webpage or app using JavaScript. 
+|[Share your custom search instance](how-to/share-your-custom-search.md)|Collaboratively edit and test your search instance with teammates.
 
-You can create a customized search instance by using the [Bing Custom Search portal](https://customsearch.ai). The portal enables you to create a custom search instance that specifies the domains, websites, and webpages that you want Bing to search, along with the ones that you don’t want it to search. You can also use the portal to: preview the search experience, adjust the search rankings that the API provides, and optionally configure a searchable user interface to be rendered in your websites and applications.
+After defining your custom view of the web, use the following APIs to query its content. 
 
-After creating your search instance, you can integrate it (and optionally, a user interface) into your website or application by calling the Bing Custom Search API:
+- Custom Search API  &mdash; Lets your users to search for webpages and more from the domains and sites specified in your custom search instance.
+- [Custom Image API](../bing-custom-image-search/overview.md) &mdash; Lets your users to search for images from the domains and sites specified in your custom search instance.
+- [Custom Video API](../bing-custom-video-search/overview.md) &mdash; Lets your users to search for videos from the domains and sites specified in your custom search instance.
+- [Custom Autosuggest API](../bing-custom-autosuggest/overview.md) &mdash; Lets you provide suggested search terms to your users as they type in your search box.
 
-![Image showing that you can connect to Bing custom search via the API](media/BCS-Overview.png "How Bing Custom Search works.")
+
+### Search or search-like experience
+
+Bing Custom Search API may only be used as a result of a direct user query or search, or as a result of an action within an app or experience that logically can be interpreted as a user’s search request. For illustration purposes, the following are some examples of acceptable search or search-like experiences.
+
+- User enters a query directly into a search box in an app
+- User selects specific text or image and requests “more information” or “additional information”
+- User asks a search bot about a particular topic
+- User dwells on a particular object or entity in a visual search type scenario
+
+If you are not sure if your experience can be considered a search-like experience, check with Microsoft.
 
 
 ## Next steps
 
-To get started quickly, see [Create your first Bing Custom Search instance](how-to/quick-start.md).
-
-For details about customizing your search instance, see [Define a custom search instance](how-to/define-your-custom-view.md).
-
-Be sure to read [Bing Use and Display Requirements](../bing-web-search/use-display-requirements.md) for using search results in your services and applications.
-
-Familiarize yourself with the reference content for each of the custom search endpoints. The reference contains the endpoints, headers, and query parameters that you'd use to request search results. It also includes definitions of the response objects.
-
-[!INCLUDE [bing-url-note](../../includes/bing-url-note.md)]
-
-- [Custom Search API](reference/endpoints.md)
-- [Custom Image API](../bing-custom-image-search/reference/endpoints.md)
-- [Custom Video API](../bing-custom-video-search/reference/endpoints.md)
-- [Custom Autosuggest API](../bing-custom-autosuggest/reference/endpoints.md)
+- Learn about other APIs in the [family of Bing Search APIs](../bing-web-search/bing-api-comparison.md).
+- Learn about [use and display requirements](../bing-web-search/use-display-requirements.md) for Bing Image Search.  
+- Learn how to [create a custom search instance](how-to/define-your-custom-view.md).
+- Learn how to [search your custom search instance](how-to/search-your-custom-view.md).
+- Review [Custom Search API v7 reference](reference/endpoints.md) documentation.  
 

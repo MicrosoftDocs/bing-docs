@@ -11,41 +11,37 @@
   items:
     - name: Create a custom search instance
       href: how-to/quick-start.md
-    - name: Get search results from your instance
+    - name: Quickstarts
+      href: quickstarts.md
+    - name: REST API
       items:
-      - name: REST API
-        items:
-          - name: C#
-            href: quickstarts/rest/csharp.md
-          - name: Java
-            href: quickstarts/rest/java.md
-          - name: Node.js
-            href: quickstarts/rest/nodejs.md
-          - name: Python
-            href: quickstarts/rest/python.md
-      - name: SDK (client library)
-        items:
         - name: C#
-          href: quickstarts/sdk/custom-search-client-library-csharp.md
+          href: quickstarts/rest/csharp.md
         - name: Java
-          href: quickstarts/sdk/custom-search-client-library-java.md
+          href: quickstarts/rest/java.md
+        - name: Node.js
+          href: quickstarts/rest/nodejs.md
         - name: Python
-          href: quickstarts/sdk/custom-search-client-library-python.md
+          href: quickstarts/rest/python.md
+    - name: SDK (client library)
+      items:
+      - name: C#
+        href: quickstarts/sdk/custom-search-client-library-csharp.md
+      - name: Java
+        href: quickstarts/sdk/custom-search-client-library-java.md
+      - name: Python
+        href: quickstarts/sdk/custom-search-client-library-python.md
 - name: Tutorials
   items:
     - name: Build a Custom Search web page
       href: tutorial/custom-search-web-page.md
 - name: Samples
-  items:
-  - name: REST samples
-    href: rest-samples.md
-  - name: SDK samples
-    href: sdk-samples.md
+  href: samples.md
 - name: How-to guides
   items:
     - name: Configure your custom search experience
       href: how-to/define-your-custom-view.md
-    - name: Call your custom search instance
+    - name: Test your custom search instance
       href: how-to/search-your-custom-view.md
     - name: Configure and integrate a hosted UI
       href: how-to/hosted-ui.md
