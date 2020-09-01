@@ -46,9 +46,9 @@ To create a Bing Custom Search instance:
  
 1. On the **Active** tab under **Search Experience**, enter the URL of one or more websites you want to include in your search. 
 
-    > [!NOTE]
-    > Bing Custom Search instances will only return results for domains and webpages that are public and have been indexed by Bing.
-  
+   > [!NOTE]
+   > Bing Custom Search instances will only return results for domains and webpages that are public and have been indexed by Bing.  
+   
    1. After adding a URL, the UX displays a list of websites **You might want to add**. Select sites from the list as appropriate; otherwise, enter another website URL where it says **Type in a URL**.  
   
 1. To **Try out the search experience**, enter a search string in the right Preview pane. If no results are returned, try entering a different URL.  
@@ -57,8 +57,8 @@ To create a Bing Custom Search instance:
 
 1. Copy your **Custom Configuration ID**, which you set the *customConfig* query parameter to when calling Custom Search API.
 
-> [!NOTE]
-> To use the instance in production, you must have a subscription key.
+   > [!NOTE]
+   > To use the instance in production, you must have a subscription key.
 
 
 ## Next steps

@@ -45,4 +45,4 @@ Here's a list of SDK samples by language. The list is subject to change. For the
 
 - Learn how to [define your custom view](how-to/define-your-custom-view.md)
 - Learn how to [search your custom view](how-to/search-your-custom-view.md)
-- For a more in depth web app example, see the [Custom search tutorial](tutorial/custom-search-web-page.md).
+- For a more in depth web app example, see the [Custom Search tutorial](tutorial/custom-search-web-page.md).

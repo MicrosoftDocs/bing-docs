@@ -33,5 +33,5 @@ Use these quickstarts to make your first Custom Search API call in a matter of m
 
 ## Next steps
 
-- For a more in depth web app example, see the [Custom search tutorial](../tutorial/custom-search-web-page.md).
+- For a more in depth web app example, see the [Custom Search tutorial](../tutorial/custom-search-web-page.md).
 - For REST and SDK samples, see [Samples](../samples.md)

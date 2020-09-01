@@ -47,7 +47,11 @@
       href: how-to/hosted-ui.md
     - name: Share your custom search instance
       href: how-to/share-your-custom-search.md
-    - name: Configure custome autosuggest experience
+    - name: Get images from instance
+      href: how-to/get-images-from-instance.md
+    - name: Get videos from instance
+      href: how-to/get-videos-from-instance.md
+    - name: Configure custom autosuggest experience
       href: how-to/configure-custom-autosuggest.md
     - name: Handle hit highlighting
       href: ../bing-web-search/hit-highlighting.md
