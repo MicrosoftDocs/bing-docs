@@ -162,7 +162,7 @@ Before publishing, if you decide that you don't want to keep the changes you've 
 
 ## Search for images and videos
 
-The search results include any images or videos that Bing found that are relevant. If you want to get only images or only videos, use [Bing Custom Image Search API](../../bing-custom-image-search/overview.md) or [Bing Custom Video Search API](../../bing-custom-video-search/overview.md), respectively. 
+The search results include any images or videos that Bing found that are relevant. If you want to get only images or only videos, use [Bing Custom Image Search API](get-images-from-instance.md) or [Bing Custom Video Search API](get-videos-from-instance.md), respectively. 
 
 
 ## Test your search instance with the Preview pane

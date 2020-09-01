@@ -116,9 +116,18 @@ Custom Search provides a hosted UI to render the JSON response of your custom se
   
    ![Screenshot of the Hosted UI additional configurations step](./media/custom-search-hosted-ui-subscription-key.png)
 
-[!INCLUDE [publish or revert](../includes/publish-revert.md)]
+
+## Publish or revert a search instance
+
+Custom search has two environments: staging/testing (see the **Configuration** tab) and production (see the **Production** tab). When you create a new instance or make changes to an existing instance, those changes occur in the testing environment.
+
+After configuring and validating your changes, click **Publish** to make your hosted UI configuration live. Changes are not reflected against your production endpoints until you publish.
+
+Before publishing, if you decide that you don't want to keep the changes you've made, click **Revert**. When you revert your changes, the **Published** version remains unchanged and the **Configuration** version is reverted to match the **Published** version.
+
 
 <a name="consuminghostedui"></a>
+
 ## Consuming Hosted UI
 
 There are two ways to consume the hosted UI.  
