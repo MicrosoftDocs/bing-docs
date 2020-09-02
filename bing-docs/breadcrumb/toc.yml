@@ -1,3 +1,31 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Bing Search APIs
+  tocHref: /bing/
+  topicHref: /bing/
+  items:
+    - name: Bing Autosuggest
+      tocHref: /bing/Bing-Autosuggest
+      topicHref: /bing/Bing-Autosuggest/overview
+    - name: Bing Custom Search
+      tocHref: /bing/bing-custom-search
+      topicHref: /bing/bing-custom-search/overview
+    - name: Bing Entity Search
+      tocHref: /bing/bing-entities-search
+      topicHref: /bing/bing-entities-search/overview
+    - name: Bing Image Search
+      tocHref: /bing/bing-image-search
+      topicHref: /bing/bing-image-search/overview
+    - name: Bing News Search
+      tocHref: /bing/bing-news-search
+      topicHref: /bing/bing-news-search/overview
+    - name: Bing Spell Check
+      tocHref: /bing/bing-spell-check
+      topicHref: /bing/bing-spell-check/overview
+    - name: Bing Video Search
+      tocHref: /bing/Bing-Video-Search
+      topicHref: /bing/Bing-Video-Search/overview
+    - name: Bing Visual Search
+      tocHref: /bing/bing-visual-search
+      topicHref: /bing/bing-visual-search/overview
+    - name: Bing Web Search
+      tocHref: /bing/bing-web-search
+      topicHref: /bing/bing-web-search/overview
