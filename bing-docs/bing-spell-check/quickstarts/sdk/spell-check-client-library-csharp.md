@@ -2,7 +2,6 @@
 title: "Quickstart: Check spelling with the Bing Spell Check SDK for C#"
 titleSuffix: Bing Search Services
 description: The Spell Check API offers client libraries that makes it easy to integrate grammar capabilities into your applications. Use this C# quickstart to check a strings spelling and grammar.
-description: Get started using the Bing Spell Check REST API to check spelling and grammar.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen

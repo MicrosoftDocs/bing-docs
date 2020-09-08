@@ -101,7 +101,8 @@
 - name: Resources
   items:
   - name: Get subscription key
-    href: get-subscription-key.md
+    href: ../bing-web-search/get-subscription-key.md
+    maintainContext: true
   - name: Pricing
     href: https://aka.ms/bingsearchapipricing
   - name: Terms of use
