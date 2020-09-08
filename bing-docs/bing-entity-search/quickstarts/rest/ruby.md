@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Send a search request to the REST API using Ruby - Bing Entity Search"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send a request to the Bing Entity Search REST API using Ruby, and receive a JSON response.
+description: Use this quickstart to send a request to Bing Entity Search REST API using Ruby.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -13,9 +13,9 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Send a search request to the Bing Entity Search REST API using Ruby
+# Quickstart: Send a search request to Bing Entity Search REST API using Ruby
 
-Use this quickstart to make your first call to the Bing Entity Search API and view the JSON response. This simple Ruby application sends a news search query to the API, and displays the response. The source code for this application is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/ruby/Search/BingEntitySearchv7.rb).
+Use this quickstart to make your first call to Bing Entity Search API and view the JSON response. This simple Ruby application sends a news search query to the API, and displays the response. The source code for this application is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/ruby/Search/BingEntitySearchv7.rb).
 
 Although this application is written in Ruby, the API is a RESTful Web service compatible with most programming languages.
 
@@ -23,7 +23,9 @@ Although this application is written in Ruby, the API is a RESTful Web service c
 
 * [Ruby 2.4](https://www.ruby-lang.org/en/downloads/) or later.
 
+<!--
 [!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-entity-search-signup-requirements.md)]
+-->
 
 ## Create and initialize the application
 

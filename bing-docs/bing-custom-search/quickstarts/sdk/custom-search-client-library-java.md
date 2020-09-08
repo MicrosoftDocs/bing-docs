@@ -1,7 +1,7 @@
 ---
 title: Bing Custom Search Java client library quickstart
 titleSuffix: Bing Search Services
-description: The Custom Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results from your instance.
+description: The Custom Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this Java quickstart to send search requests and get back results from your instance.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -29,7 +29,9 @@ Use the Bing Custom Search client library for Java to:
 * The [Gradle build tool](https://gradle.org/install/), or another dependency manager.
 * A Bing Custom Search instance. See [Quickstart: Create your first Bing Custom Search instance](../../how-to/quick-start.md) for more information.
 
+<!--
 [!INCLUDE [bing-custom-search-prerequisites](../../../../includes/bing-custom-search-signup-requirements.md)]
+-->
 
 After you get a key from your resource, [create an environment variable](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account#configure-an-environment-variable-for-authentication) for the key, named `AZURE_BING_CUSTOM_SEARCH_API_KEY`.
 

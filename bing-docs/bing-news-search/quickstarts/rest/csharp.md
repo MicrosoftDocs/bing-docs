@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Perform a news search with C# - Bing News Search REST API"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send a request to the Bing News Search REST API using C#, and receive a JSON response.
+description: Use this quickstart to send a request to Bing News Search REST API using C#.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -13,9 +13,9 @@ ms.author: aahi
 ms.custom: seodec2018
 ---
 
-# Quickstart: Search for news using C# and the Bing News Search REST API
+# Quickstart: Search for news using C# and Bing News Search REST API
 
-Use this quickstart to make your first call to the Bing News Search API. This simple C# application sends a news search query to the API, and displays the JSON response. 
+Use this quickstart to make your first call to Bing News Search API. This simple C# application sends a news search query to the API, and displays the JSON response. 
 
 Although this application is written in C#, the API is a RESTful Web service compatible with most programming languages.
 
@@ -27,7 +27,9 @@ The full code to this sample can be found on [GitHub](https://github.com/Azure-S
 * The [Json.NET](https://www.newtonsoft.com/json) framework, available as a NuGet package.
 * If you're using Linux/MacOS, you can run this application by using [Mono](https://www.mono-project.com/).
 
+<!--
 [!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-news-search-signup-requirements.md)]
+-->
 
 ## Create and initialize a project
 

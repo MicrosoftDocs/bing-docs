@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Create a custom search web page - Bing Custom Search"
 titleSuffix: Bing Search Services
-description: Learn how to configure a custom Bing search instance and integrate it into a web page with this tutorial.
+description: This tutorial shows you how to configure a custom search instance and integrate it into a webpage.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen

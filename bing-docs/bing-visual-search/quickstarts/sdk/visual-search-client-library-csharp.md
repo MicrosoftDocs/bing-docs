@@ -27,8 +27,9 @@ Use this quickstart to begin getting image insights from the Bing Visual Search 
         - Microsoft.Rest.ClientRuntime.Azure
         - Newtonsoft.Json
 
-
+<!--
 [!INCLUDE [bing-visual-search-signup-requirements](../../../../includes/bing-visual-search-signup-requirements.md)]
+-->
 
 <a name="client"></a>
 

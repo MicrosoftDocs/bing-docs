@@ -22,7 +22,9 @@ Use this quickstart to make your first call to the Bing Visual Search API using 
 * Install the [Go binaries](https://golang.org/dl/).
 * Install the go-spew deep pretty printer, which is used to display results. To install go-spew, use the `$ go get -u https://github.com/davecgh/go-spew` command.
 
+<!--
 [!INCLUDE [bing-visual-search-signup-requirements](../../../../includes/bing-visual-search-signup-requirements.md)]
+-->
 
 ## Project and libraries
 

@@ -1,7 +1,7 @@
 ---
 title: Bing Image Search C# client library quickstart 
 titleSuffix: Bing Search Services
-description: The Image Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: The Image Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this C# quickstart to send search requests and get back results.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -24,9 +24,11 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 
 To install the Bing Image Search client library in Visual Studio, use the **Manage NuGet Packages** option from **Solution Explorer**.
 
+<!--
 [!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
 
 See also [Cognitive Services Pricing - Bing Search API](https://azure.microsoft.com/pricing/details/cognitive-services/search-api/).
+-->
 
 ## Create and initialize the application
 

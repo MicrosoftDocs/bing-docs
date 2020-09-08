@@ -28,7 +28,9 @@ You can run this example as a Jupyter notebook on [MyBinder](https://mybinder.or
 
 * Python [2.x or 3.x](https://python.org)
 
+<!--
 [!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
+-->
 
 ## Initialize the application
 

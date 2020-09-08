@@ -1,7 +1,7 @@
 ---
 title: Bing Entity Search C# client library quickstart 
 titleSuffix: Bing Search Services
-description: The Entity Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: The Entity Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this C# quickstart to send search requests and get back results.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -29,8 +29,9 @@ Use this quickstart to begin searching for entities with the Bing Entity Search 
 
 To add the Bing Entity Search client library to your Visual Studio project, use the **Manage NuGet Packages** option from **Solution Explorer**, and add the `Microsoft.Azure.CognitiveServices.Search.EntitySearch` package.
 
-
+<!--
 [!INCLUDE [bing-entity-search-signup-requirements](../../../../includes/bing-entity-search-signup-requirements.md)]
+-->
 
 ## Create and initialize an application
 

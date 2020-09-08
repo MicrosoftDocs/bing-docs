@@ -1,7 +1,7 @@
 ---
 title: Bing Autosuggest Go client library quickstart 
 titleSuffix: Bing Search Services
-description: The Autosuggest API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send a partial search term and get back suggested terms.
+description: The Autosuggest API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this Go quickstart to send a partial search term and get back suggested terms.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -27,7 +27,9 @@ Use the Bing Autosuggest client library for Go to get search suggestions based o
 
 Begin using the Bing Autosuggest client library by creating an Azure resource. Choose the resource type below that's right for you:
 
+<!--
 [!INCLUDE [bing-autosuggest-signup-requirements](../../../../includes/bing-autosuggest-signup-requirements.md)]
+-->
 
 ## Create environment variables
 

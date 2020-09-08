@@ -103,17 +103,17 @@
   - name: Get subscription key
     href: get-subscription-key.md
   - name: Pricing
-    href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
-  - name: Compliance
-    href: https://azure.microsoft.com/support/legal/cognitive-services-compliance-and-privacy/
+    href: https://aka.ms/bingsearchapipricing
+  - name: Terms of use
+    href: https://aka.ms/bingapilegal
   - name: Support
     items:
+    - name: Create support ticket
+      href: https://aka.ms/bingapisupport
     - name: User Voice Forum
       href: https://cognitive.uservoice.com/forums/555907-bing-web-search-api
     - name: Stack Overflow
       href: https://stackoverflow.com/search?q=bing+web+search
-    - name: Knowledge Base
-      href: https://cognitive.uservoice.com/knowledgebase/topics/127875-bing-search-web-image-video-news-autosuggest
 - name: Use and display requirements
   href: Use-display-requirements.md
 - name: Release notes

@@ -24,7 +24,9 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 * The [Json.NET](https://www.newtonsoft.com/json) framework, available as a NuGet package.
 * If you're using Linux/MacOS, you can run this application by using [Mono](https://www.mono-project.com/).
 
+<!--
 [!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
+-->
 
 ## Create and initialize a project
 

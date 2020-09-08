@@ -1,7 +1,7 @@
 ---
 title: Bing Entity Search Python client library quickstart 
 titleSuffix: Bing Search Services
-description: The Entity Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: The Entity Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this Python quickstart to send search requests and get back results.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -35,7 +35,9 @@ cd mytestenv
 python -m pip install azure-cognitiveservices-search-entitysearch
 ```
 
+<!--
 [!INCLUDE [bing-news-search-signup-requirements](../../../..//includes/bing-entity-search-signup-requirements.md)]
+-->
 
 ## Create and initialize the application
 

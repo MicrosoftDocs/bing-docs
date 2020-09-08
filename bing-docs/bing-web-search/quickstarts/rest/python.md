@@ -24,7 +24,9 @@ This example is run as a Jupyter notebook on [MyBinder](https://mybinder.org). T
 
 * [Python 2.x or 3.x](https://www.python.org/)
 
+<!--
 [!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
+-->
 
 ## Define variables
 

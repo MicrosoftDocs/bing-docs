@@ -1,7 +1,7 @@
 ---
 title: Bing Image Search Java client library quickstart 
 titleSuffix: Bing Search Services
-description: The Image Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: The Image Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this Java quickstart to send search requests and get back results.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -34,7 +34,9 @@ Install the Bing Image Search client library dependencies by using Maven, Gradle
  </dependencies>
 ```
 
+<!--
 [!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
+-->
 
 ## Create and initialize the application
 

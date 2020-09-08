@@ -23,7 +23,9 @@ Use this quickstart to make your first call to the Bing Visual Search API. This 
 * The [Gson Java library](https://github.com/google/gson)
 * [Apache HttpComponents](https://hc.apache.org/downloads.cgi)
 
+<!--
 [!INCLUDE [bing-visual-search-signup-requirements](../../../../includes/bing-visual-search-signup-requirements.md)]
+-->
 
 ## Create and initialize a project
 

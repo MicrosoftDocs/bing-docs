@@ -1,7 +1,7 @@
 ---
-title: "Quickstart: Suggest search queries with the Bing Autosuggest REST API and Ruby"
+title: "Quickstart: Suggest search strings with Bing Autosuggest REST API and Ruby"
 titleSuffix: Bing Search Services
-description: Learn how to quickly start suggesting search terms in real time with the Bing Autosuggest API.
+description: Learn how to quickly start suggesting search terms with Bing Autosuggest API using Ruby.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -13,16 +13,18 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Suggest search queries with the Bing Autosuggest REST API and Ruby
+# Quickstart: Suggest search strings with Bing Autosuggest REST API and Ruby
 
-Follow this quickstart to learn how to make calls to the Bing Autosuggest API and read the JSON response. This simple Ruby application sends a partial search query to the API, and returns suggestions for searches. While this application is written in Ruby, the API is a RESTful Web service compatible with most programming languages.
+Follow this quickstart to learn how to make calls to Bing Autosuggest API and read the JSON response. This simple Ruby application sends a partial search query to the API, and returns suggestions for searches. While this application is written in Ruby, the API is a RESTful Web service compatible with most programming languages.
 
 
 ## Prerequisites
 
 * [Ruby 2.4](https://www.ruby-lang.org/en/downloads/) or later.
 
+<!--
 [!INCLUDE [bing-autosuggest-signup-requirements](../../../../includes/bing-autosuggest-signup-requirements.md)]
+-->
 
 ## Create a new application
 

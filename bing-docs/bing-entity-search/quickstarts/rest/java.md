@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Send a search request to the REST API using Java - Bing Entity Search"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send a request to the Bing Entity Search REST API using Java, and receive a JSON response.
+description: Use this quickstart to send a request to the Bing Entity Search REST API using Java.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -12,9 +12,9 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-# Quickstart: Send a search request to the Bing Entity Search REST API using Java
+# Quickstart: Send a search request to Bing Entity Search REST API using Java
 
-Use this quickstart to make your first call to the Bing Entity Search API and view the JSON response. This simple Java application sends a news search query to the API, and displays the response.
+Use this quickstart to make your first call to Bing Entity Search API and view the JSON response. This simple Java application sends a news search query to the API, and displays the response.
 
 Although this application is written in Java, the API is a RESTful Web service compatible with most programming languages.
 
@@ -23,8 +23,9 @@ Although this application is written in Java, the API is a RESTful Web service c
 * The [Java Development Kit (JDK)](https://www.oracle.com/technetwork/java/javase/downloads/).
 * The [Gson library](https://github.com/google/gson).
 
-
+<!--
 [!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-entity-search-signup-requirements.md)]
+-->
 
 ## Create and initialize a project
 

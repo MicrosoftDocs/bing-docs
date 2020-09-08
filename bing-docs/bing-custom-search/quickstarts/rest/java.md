@@ -25,7 +25,9 @@ Use this quickstart to learn how to request search results from your Bing Custom
 
 - The [Gson library](https://github.com/google/gson).
 
+<!--
 [!INCLUDE [bing-custom-search-prerequisites](../../../../includes/bing-custom-search-signup-requirements.md)]
+-->
 
 ## Create and initialize the application
 

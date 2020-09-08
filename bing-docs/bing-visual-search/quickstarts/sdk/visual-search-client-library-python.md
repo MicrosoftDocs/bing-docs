@@ -25,8 +25,9 @@ Use this quickstart to begin getting image insights from the Bing Visual Search 
     1. `cd mytestenv`
     2. `python -m pip install azure-cognitiveservices-search-visualsearch`
 
+<!--
 [!INCLUDE [bing-visual-search-signup-requirements](../../../../includes/bing-visual-search-signup-requirements.md)]
-
+-->
 
 ## Create and initialize the application
 

@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Search for images using the Bing Image Search REST API and PHP"
 titleSuffix: Bing Search Services
-description:  Use this quickstart to send image search requests to the Bing Image Search REST API using PHP, and receive JSON responses.
+description:  Use this quickstart to send image search requests to Bing Image Search REST API using PHP.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -12,9 +12,9 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Search for images using the Bing Image Search REST API and PHP
+# Quickstart: Search for images using Bing Image Search REST API and PHP
 
-Use this quickstart to make your first call to the Bing Image Search API and receive a JSON response. The simple application in this article sends a search query and displays the raw results.
+Use this quickstart to make your first call to Bing Image Search API and receive a JSON response. The simple application in this article sends a search query and displays the raw results.
 
 Although this application is written in PHP, the API is a RESTful Web service compatible with any programming language that can make HTTP requests and parse JSON.
 
@@ -24,9 +24,11 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 
 * [PHP 5.6.x or later](https://php.net/downloads.php)
 
+<!--
 [!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
 
 For more information, see [Cognitive Services Pricing - Bing Search API](https://azure.microsoft.com/pricing/details/cognitive-services/search-api/).
+-->
 
 ## Create and initialize the application
 

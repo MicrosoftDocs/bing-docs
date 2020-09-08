@@ -1,7 +1,7 @@
 ---
 title: What is the Bing Entity Search API?
 titleSuffix: Bing Search Services
-description: Use the Bing Entity Search API to extract and search for entities and places from search queries.
+description: Use Bing Entity Search API to search for entities and places.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -30,7 +30,7 @@ Local business entities include restaurants, hotels, or other local businesses. 
 
 ## Get started
 
-To get started using the API, pick the subscription you want from <a href="https://www.microsoft.com/en-us/bing/apis/pricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call. 
+To get started using the API, pick the subscription you want from <a href="https://aka.ms/bingsearchapipricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call. 
 
 You can easily call the API by sending a native HTTP GET request or by using the Entity Search SDK. For examples to help you get up and running quickly for either option, see [Quickstarts](quickstarts/quickstarts.md).
 

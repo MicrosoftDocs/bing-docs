@@ -1,7 +1,7 @@
 ---
 title: Bing Video Search Python client library quickstart 
 titleSuffix: Bing Search Services
-description: The Video Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: The Video Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this Python quickstart to send search requests and get back results.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -15,7 +15,9 @@ ms.author: scottwhi
 
 Use this quickstart to begin searching for news with the Bing Video Search client library for Python. While Bing Video Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/blob/master/samples/search/video_search_samples.py) with additional annotations, and features.
 
+<!--
 [!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
+-->
 
 ## Prerequisites
 

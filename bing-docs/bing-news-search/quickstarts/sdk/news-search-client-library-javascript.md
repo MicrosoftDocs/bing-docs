@@ -1,7 +1,7 @@
 ---
 title: Bing News Search JavaScript client library quickstart 
 titleSuffix: Bing Search Services
-description: The News Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: The News Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this JavaScript quickstart to send search requests and get back results.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -24,8 +24,9 @@ To set up a console application using the Bing News Search client library:
 1. Run `npm install ms-rest-azure` in your development environment.
 2. Run `npm install azure-cognitiveservices-newssearch` in your development environment.
 
-
+<!--
 [!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-news-search-signup-requirements.md)]
+-->
 
 ## Create and initialize the application
 

@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Perform a news search with Python and the Bing News Search REST API"
 titleSuffix: Bing Search Services
-description:  Use this quickstart to send a request to the Bing News Search REST API using Python, and receive a JSON response.
+description:  Use this quickstart to send a request to Bing News Search REST API using Python.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -13,9 +13,9 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Perform a news search using Python and the Bing News Search REST API
+# Quickstart: Perform a news search using Python and Bing News Search REST API
 
-Use this quickstart to make your first call to the Bing News Search API. This simple Python application sends a search query to the API and processes the JSON result. 
+Use this quickstart to make your first call to Bing News Search API. This simple Python application sends a search query to the API and processes the JSON result. 
 
 Although this application is written in Python, the API is a RESTful Web service compatible with most programming languages.
 
@@ -25,7 +25,9 @@ To run this code sample as a Jupyter notebook on [MyBinder](https://mybinder.org
 
 The source code for this sample is also available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/python/Search/BingNewsSearchv7.py).
 
+<!--
 [!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-news-search-signup-requirements.md)]
+-->
 
 ## Create and initialize the application
 

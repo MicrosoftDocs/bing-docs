@@ -1,7 +1,7 @@
 ---
 title: Bing Image Search JavaScript client library quickstart 
 titleSuffix: Bing Search Services
-description: The Image Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: The Image Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this JavaScript quickstart to send search requests and get back results.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -25,7 +25,9 @@ The source code for this sample is available on [GitHub](https://github.com/Azur
 * The [Node.js Azure Rest](https://www.npmjs.com/package/ms-rest-azure) module
     * Install using `npm install ms-rest-azure`
 
+<!--
 [!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
+-->
 
 ## Create and initialize the application
 

@@ -1,7 +1,7 @@
 ---
 title: Bing Image Search Python client library quickstart 
 titleSuffix: Bing Search Services
-description: The Image Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: The Image Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this Python quickstart to send search requests and get back results.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -25,7 +25,9 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 * The [Azure Image Search client library](https://pypi.org/project/azure-cognitiveservices-search-imagesearch/) for Python
     * Install using `pip install azure-cognitiveservices-search-imagesearch`
 
+<!--
 [!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
+-->
 
 ## Create and initialize the application
 

@@ -16,7 +16,7 @@ ms.author: scottwhi
 
 Bing provides a family of search APIs that let your users comb billions of web documents and get back safe, ad-free, location-aware search results. Depending on the API, you can get back all relevant web results or only relevant news, images, or videos.
 
-The following table provides a summary of all APIs in the family of Bing Search APIs. For pricing and subscription details, see <a href="https://www.microsoft.com/en-us/bing/apis/pricing" target="_blank">Bing API Pricing</a>.
+The following table provides a summary of all APIs in the family of Bing Search APIs. For pricing and subscription details, see <a href="https://aka.ms/bingsearchapipricing" target="_blank">Bing API Pricing</a>.
 
 |Bing API|Description
 |-|-
@@ -39,4 +39,4 @@ Bing provides API metrics such as your top queries, call volume, market distribu
 ## Next steps
 
 - Learn about [use and display requirements](use-display-requirements.md) for Bing search results.  
-- Learn about <a href="https://www.microsoft.com/en-us/bing/apis/pricing" target="_blank">pricing and subscription options</a>.
+- Learn about <a href="https://aka.ms/bingsearchapipricing" target="_blank">pricing and subscription options</a>.

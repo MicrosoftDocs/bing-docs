@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Perform a news search with PHP and the Bing News Search REST API"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send a request to the Bing News Search REST API using PHP, and receive a JSON response.
+description: Use this quickstart to send a request to Bing News Search REST API using PHP.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -13,9 +13,9 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Perform a news search using PHP and the Bing News Search REST API
+# Quickstart: Perform a news search using PHP and Bing News Search REST API
 
-Use this quickstart to make your first call to the Bing News Search API. This simple PHP application sends a search query to the API and displays the JSON response.
+Use this quickstart to make your first call to Bing News Search API. This simple PHP application sends a search query to the API and displays the JSON response.
 
 Although this application is written in PHP, the API is a RESTful Web service compatible with most programming languages.
 
@@ -23,7 +23,9 @@ Although this application is written in PHP, the API is a RESTful Web service co
 
 * PHP 5.6 or later
 
+<!--
 [!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-news-search-signup-requirements.md)]
+-->
 
 For more information, see [Cognitive Services Pricing - Bing Search API](https://azure.microsoft.com/pricing/details/cognitive-services/search-api/).
 

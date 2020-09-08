@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Check spelling with the REST API and C# - Bing Spell Check"
 titleSuffix: Bing Search Services
-description: Get started using the Bing Spell Check REST API to check spelling and grammar.
+description: Get started with Bing Spell Check REST API to check spelling and grammar using C#.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -12,9 +12,9 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Check spelling with the Bing Spell Check REST API and C#
+# Quickstart: Check spelling with Bing Spell Check REST API and C#
 
-Use this quickstart to make your first call to the Bing Spell Check REST API. This simple C# application sends a request to the API and returns a list of suggested corrections. 
+Use this quickstart to make your first call to Bing Spell Check REST API. This simple C# application sends a request to the API and returns a list of suggested corrections. 
 
 Although this application is written in C#, the API is a RESTful Web service compatible with most programming languages. The source code for this application is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/dotnet/Search/BingAutosuggestv7.cs).
 
@@ -31,7 +31,9 @@ Although this application is written in C#, the API is a RESTful Web service com
 
 * If you're using Linux/MacOS, you can run this application by using [Mono](https://www.mono-project.com/).
 
+<!--
 [!INCLUDE [bing-spell-check-signup-requirements](../../../../includes/bing-spell-check-signup-requirements.md)]
+-->
 
 ## Create and initialize a project
 

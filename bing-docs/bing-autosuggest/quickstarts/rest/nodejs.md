@@ -1,7 +1,7 @@
 ---
-title: "Quickstart: Suggest search queries with the Bing Autosuggest REST API and Node.js"
+title: "Quickstart: Suggest search strings with Bing Autosuggest REST API and Node.js"
 titleSuffix: Bing Search Services
-description: Learn how to quickly start suggesting search terms in real time with the Bing Autosuggest API.
+description: Learn how to quickly start suggesting search terms with Bing Autosuggest API using Node.js.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -13,15 +13,17 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Suggest search queries with the Bing Autosuggest REST API and Node.js
+# Quickstart: Suggest search strings with Bing Autosuggest REST API and Node.js
 
-Follow this quickstart to learn how to make calls to the Bing Autosuggest API and read the JSON response. This simple Node.js application sends a partial search query to the API, and returns suggestions for searches. While this application is written in JavaScript, the API is a RESTful Web service compatible with most programming languages. The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/nodejs/Search/BingAutosuggestv7.js)
+Follow this quickstart to learn how to make calls to Bing Autosuggest API and read the JSON response. This simple Node.js application sends a partial search query to the API, and returns suggestions for searches. While this application is written in JavaScript, the API is a RESTful Web service compatible with most programming languages. The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/nodejs/Search/BingAutosuggestv7.js)
 
 ## Prerequisites
 
 * [Node.js 6](https://nodejs.org/en/download/) or later
 
+<!--
 [!INCLUDE [bing-autosuggest-signup-requirements](../../../../includes/bing-autosuggest-signup-requirements.md)]
+-->
 
 ## Create a new application
 

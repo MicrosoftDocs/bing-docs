@@ -1,7 +1,7 @@
 ---
 title: Bing Custom Search C# client library quickstart 
 titleSuffix: Bing Search Services
-description: The Custom Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results from your instance.
+description: The Custom Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this C# quickstart to send search requests and get back results from your instance.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -34,8 +34,9 @@ Use the Bing Custom Search client library for C# to:
         - Microsoft.Rest.ClientRuntime.Azure
         - Newtonsoft.Json
 
+<!--
 [!INCLUDE [bing-custom-search-prerequisites](../../../../includes/bing-custom-search-signup-requirements.md)]
-
+-->
 
 ## Create and initialize the application
 

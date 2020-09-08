@@ -85,23 +85,19 @@
 - name: Resources
   items:
   - name: Get subscription key
-    href: ../bing-web-search/get-subscription-key.md
-    maintainContext: true
+    href: get-subscription-key.md
   - name: Pricing
-    href: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/web/
-  - name: Analytics for Bing Entity Search API
-    href: ../bing-web-search/bing-web-stats.md
-    maintainContext: true
-  - name: Compliance
-    href: https://azure.microsoft.com/support/legal/cognitive-services-compliance-and-privacy/
+    href: https://aka.ms/bingsearchapipricing
+  - name: Terms of use
+    href: https://aka.ms/bingapilegal
   - name: Support
     items:
+    - name: Create support ticket
+      href: https://aka.ms/bingapisupport
     - name: User Voice Forum
       href: https://cognitive.uservoice.com/forums/555907-bing-web-search-api
     - name: Stack Overflow
       href: https://stackoverflow.com/search?q=bing+web+search
-    - name: Knowledge Base
-      href: https://cognitive.uservoice.com/knowledgebase/topics/127875-bing-search-web-image-video-news-autosuggest
 - name: Use and display requirements
   href: ../bing-web-search/use-display-requirements.md
   maintainContext: true

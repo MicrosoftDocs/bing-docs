@@ -1,7 +1,7 @@
 ---
 title: "Release notes for Bing News Search APIs"
 titleSuffix: Bing Services
-description: Identifies the changes made to Video Search APIs for each release.
+description: Identifies the changes made to News Search APIs for each release.
 ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: "overview"
@@ -15,23 +15,21 @@ ms.date: 07/15/2020
 
 See the following sections for information about changes that were included with each release.
 
-## September 1, 2020
+## October 30, 2020
 
 Initial release of this version of Bing News Search APIs. These APIs replace the same APIs hosted by <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/bing-news-search/" target="_blank">Azure Cognitive Services</a>, which are being phased out. 
 
 ### New to Bing Search?
 
-Go here to get a subscription key for the package that includes these APIs. Then, get familiar with the [News Search API](overview.md) documentation, and be sure to check out the quickstarts to get up and running quickly.
+To subscribe to a package that includes this API, see [Get a subscription key](get-subscription-key.md). Next, get familiar with the [News Search API](overview.md) documentation, and be sure to check out the [quickstarts](quickstarts/quickstarts.md) to get up and running quickly.
 
 
 ### Current Cognitive Services user?
 
 Things current Cognitive Services users must do prior to their subscription ending:
 
-1. Update your application to use your Bing Search Services subscription key. Current Cognitive Services users that want to maintain continuity of service should sign up [here](???) for a Bing Search Services subscription before their Azure Cognitive Services subscription ends. 
+1. Update your application to use your Bing Search Services subscription key. Current Cognitive Services users that want to maintain continuity of service should sign up [here](get-subscription-key.md) for a Bing Search Services subscription before their Azure Cognitive Services subscription ends. 
   
 2. Update your app to use the new endpoints. For the new endpoints, see [News Search API](reference/endpoints.md) reference.
-
-Unfortunately, if you use <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/bing-web-search/bing-web-stats" target="_blank">Web Search Analytics</a>, your Cognitive Services metrics will not be used to seed Bing Search Services analytics.
 
 If you use <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/bing-local-business-search/local-search-reference" target="_blank">Local Business Search API</a>, it's not available in Bing Search Services. 

@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Check spelling with the REST API and Ruby - Bing Spell Check"
 titleSuffix: Bing Search Services
-description: Get started using the Bing Spell Check REST API to check spelling and grammar with this quickstart.
+description: Get started with Bing Spell Check REST API to check spelling and grammar using Ruby.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -12,9 +12,9 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: aahi
 ---
-# Quickstart: Check spelling with the Bing Spell Check REST API and Ruby
+# Quickstart: Check spelling with Bing Spell Check REST API and Ruby
 
-Use this quickstart to make your first call to the Bing Spell Check REST API using Ruby. This simple application sends a request to the API and returns a list of suggested corrections. 
+Use this quickstart to make your first call to Bing Spell Check REST API using Ruby. This simple application sends a request to the API and returns a list of suggested corrections. 
 
 Although this application is written in Ruby, the API is a RESTful Web service compatible with most programming languages. The source code for this application is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/ruby/Search/BingSpellCheckv7.rb)
 
@@ -22,8 +22,9 @@ Although this application is written in Ruby, the API is a RESTful Web service c
 
 * [Ruby 2.4](https://www.ruby-lang.org/en/downloads/) or later.
 
+<!--
 [!INCLUDE [bing-spell-check-signup-requirements](../../../../includes/bing-spell-check-signup-requirements.md)]
-
+-->
 
 ## Create and initialize the application
 

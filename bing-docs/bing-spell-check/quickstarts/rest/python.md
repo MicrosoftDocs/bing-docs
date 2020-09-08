@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Check spelling with the REST API and Python - Bing Spell Check"
 titleSuffix: Bing Search Services
-description: Get started using the Bing Spell Check REST API to check spelling and grammar with this quickstart.
+description: Get started with Bing Spell Check REST API to check spelling and grammar using Python.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -12,9 +12,9 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-# Quickstart: Check spelling with the Bing Spell Check REST API and Python
+# Quickstart: Check spelling with Bing Spell Check REST API and Python
 
-Use this quickstart to make your first call to the Bing Spell Check REST API. This simple Python application sends a request to the API and returns a list of suggested corrections. 
+Use this quickstart to make your first call to Bing Spell Check REST API. This simple Python application sends a request to the API and returns a list of suggested corrections. 
 
 Although this application is written in Python, the API is a RESTful Web service compatible with most programming languages. The source code for this application is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/python/Search/BingEntitySearchv7.py)
 
@@ -22,7 +22,9 @@ Although this application is written in Python, the API is a RESTful Web service
 
 * Python [3.x](https://www.python.org)
 
+<!--
 [!INCLUDE [bing-spell-check-signup-requirements](../../../../includes/bing-spell-check-signup-requirements.md)]
+-->
 
 ## Initialize the application
 

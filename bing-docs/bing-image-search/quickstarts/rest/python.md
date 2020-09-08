@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Search for images using the Bing Image Search REST API and Python"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send image search requests to the Bing Image Search REST API using Python, and receive JSON responses.
+description: Use this quickstart to send image search requests to Bing Image Search REST API using Python.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -12,9 +12,9 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Search for images using the Bing Image Search REST API and Python
+# Quickstart: Search for images using Bing Image Search REST API and Python
 
-Use this quickstart to learn how to send search requests to the Bing Image Search API. This Python application sends a search query to the API, and displays the URL of the first image in the results. Although this application is written in Python, the API is a RESTful web service compatible with most programming languages.
+Use this quickstart to learn how to send search requests to Bing Image Search API. This Python application sends a search query to the API, and displays the URL of the first image in the results. Although this application is written in Python, the API is a RESTful web service compatible with most programming languages.
 
 To run this example as a Jupyter notebook on [MyBinder](https://mybinder.org), select the **launch binder** badge:
 
@@ -30,7 +30,9 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 * The [Python Imaging Library (PIL)](https://pillow.readthedocs.io/en/stable/index.html)
 * [matplotlib](https://matplotlib.org/) 
 
+<!--
 [!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
+-->
 
 ## Create and initialize the application
 

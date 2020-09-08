@@ -1,7 +1,7 @@
 ---
 title: Bing Video Search JavaScript client library quickstart 
 titleSuffix: Bing Search Services
-description: The Video Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: The Video Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this JavaScript quickstart to send search requests and get back results.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -23,7 +23,9 @@ To set up a console application using the Bing Video Search client library:
 * Run `npm install ms-rest-azure` in your development environment.
 * Run `npm install azure-cognitiveservices-videosearch` in your development environment.
 
+<!--
 [!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
+-->
 
 ## Create and initialize the application
 

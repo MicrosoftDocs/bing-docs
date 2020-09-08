@@ -1,7 +1,7 @@
 ---
-title: "Quickstart: Perform a web search with C# - Bing Web Search REST API"
+title: "Quickstart: Perform a web search with C# - Bing Web Search API"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send requests to the Bing Web Search REST API using C#, and receive a JSON response.
+description: Use this quickstart to send requests to the Bing Web Search API using C#.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -12,11 +12,12 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Search the web using the Bing Web Search REST API and C#
+# Quickstart: Search the web using Bing Web Search API and C#
 
-Use this quickstart to make your first call to the Bing Web Search API. This C# application sends a search request to the API, and shows the JSON response. Although this application is written in C#, the API is a RESTful Web service compatible with most programming languages.
+Use this quickstart to make your first call to Bing Web Search API. This C# console application sends a search request to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. 
 
-This example program in this quickstart uses only .NET Core classes.
+Grab your favorite .NET editor, JSON library, and [subscription key](../../get-subscription-key.md) for Bing Web Search and let's get started. 
+
 
 ## Prerequisites
 
@@ -24,13 +25,12 @@ Here are a few things that you'll need before running this quickstart:
 
 * Windows: [Visual Studio 2017 or later](https://www.visualstudio.com/downloads/)
 * Linux/macOS: [Mono](https://www.mono-project.com/)  
-* A subscription key
+* A [subscription key]() for Bing Web Search
 
-[!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
 
 ## Create a project and declare dependencies
 
-Create a new project in Visual Studio or Mono. Use the following code to import the required namespaces and types:
+Create a new project in Visual Studio or Mono. This example program uses only .NET Core classes. Use the following code to import the required namespaces and types.
 
 ```csharp
 using System;

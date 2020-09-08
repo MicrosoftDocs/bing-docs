@@ -23,7 +23,9 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 
 * Ruby 2.4 or later
 
+<!--
 [!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
+-->
 
 ## Create and initialize the application
 

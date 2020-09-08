@@ -1,6 +1,7 @@
 ---
 title: "Quickstart: Check spelling with the Bing Spell Check SDK for C#"
 titleSuffix: Bing Search Services
+description: The Spell Check API offers client libraries that makes it easy to integrate grammar capabilities into your applications. Use this C# quickstart to check a strings spelling and grammar.
 description: Get started using the Bing Spell Check REST API to check spelling and grammar.
 services: bing-search-services
 author: swhite-msft
@@ -13,9 +14,9 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Check spelling with the Bing Spell Check SDK for C#
+# Quickstart: Check spelling with Bing Spell Check SDK for C#
 
-Use this quickstart to begin spell checking with the Bing Spell Check SDK for C#. While Bing Spell Check has a REST API compatible with most programming languages, the SDK provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/samples/SpellCheck).
+Use this quickstart to begin spell checking with Bing Spell Check SDK for C#. While Bing Spell Check has a REST API compatible with most programming languages, the SDK provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/samples/SpellCheck).
 
 ## Application dependencies
 
@@ -28,7 +29,9 @@ To add the Bing Spell Check SDK to your project, select **Manage NuGet Packages*
 * Microsoft.Rest.ClientRuntime.Azure
 * Newtonsoft.Json
 
+<!--
 [!INCLUDE [bing-spell-check-signup-requirements](../../../../includes/bing-spell-check-signup-requirements.md)]
+-->
 
 ## Create and initialize the application
 

@@ -21,7 +21,9 @@ Use this quickstart to make your first call to the Bing Visual Search API. This 
 
 * [Python 3.x](https://www.python.org/)
 
+<!--
 [!INCLUDE [bing-visual-search-signup-requirements](../../../../includes/bing-visual-search-signup-requirements.md)]
+-->
 
 ## Initialize the application
 

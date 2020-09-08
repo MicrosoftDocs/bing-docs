@@ -1,7 +1,7 @@
 ---
-title: "Quickstart: Suggest search queries with the Bing Autosuggest REST API and PHP"
+title: "Quickstart: Suggest search strings with Bing Autosuggest REST API and PHP"
 titleSuffix: Bing Search Services
-description: Learn how to quickly start suggesting search terms in real time with the Bing Autosuggest API.
+description: Learn how to quickly start suggesting search terms with Bing Autosuggest API using PHP.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -13,15 +13,17 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Suggest search queries with the Bing Autosuggest REST API and PHP
+# Quickstart: Suggest search strings with Bing Autosuggest REST API and PHP
 
-Follow this quickstart to learn how to make calls to the Bing Autosuggest API and read the JSON response. This simple PHP application sends a partial search query to the API, and returns suggestions for searches. While this application is written in PHP, the API is a RESTful Web service compatible with most programming languages.
+Follow this quickstart to learn how to make calls to Bing Autosuggest API and read the JSON response. This simple PHP application sends a partial search query to the API, and returns suggestions for searches. While this application is written in PHP, the API is a RESTful Web service compatible with most programming languages.
 
 ## Prerequisites
 
 * [PHP 5.6.x](https://php.net/downloads.php) or later
 
+<!--
 [!INCLUDE [bing-autosuggest-signup-requirements](../../../../includes/bing-autosuggest-signup-requirements.md)]
+-->
 
 ## Get Autosuggest results
 

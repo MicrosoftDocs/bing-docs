@@ -23,7 +23,9 @@ Use this quickstart to make your first call to the Bing Visual Search API. This 
 * The Request module for JavaScript. You can use `npm install request` command to install the module.
 * The form-data module. You can use the `npm install form-data` command to install the module. 
 
+<!--
 [!INCLUDE [bing-visual-search-signup-requirements](../../../../includes/bing-visual-search-signup-requirements.md)]
+-->
 
 ## Initialize the application
 

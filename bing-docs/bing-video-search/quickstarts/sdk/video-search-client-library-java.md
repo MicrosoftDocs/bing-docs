@@ -1,7 +1,7 @@
 ---
 title: Bing Video Search Java client library quickstart 
 titleSuffix: Bing Sesarch Services
-description: The Video Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: The Video Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this Java quickstart to send search requests and get back results.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -21,7 +21,9 @@ Use this quickstart to begin searching for news with the Bing Video Search clien
 
 * The [Gson library](https://github.com/google/gson)
 
+<!--
 [!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
+-->
 
 Install the Bing Video Search client library dependencies by using Maven, Gradle, or another dependency management system. The Maven POM file requires the following declaration:
 

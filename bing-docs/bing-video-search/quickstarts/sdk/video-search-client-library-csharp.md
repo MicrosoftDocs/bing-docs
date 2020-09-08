@@ -1,7 +1,7 @@
 ---
 title: Bing Video Search C# client library quickstart 
 titleSuffix: Bing Search Services
-description: The Video Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: The Video Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this C# quickstart to send search requests and get back results.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -28,8 +28,9 @@ Installing the [[NuGet Video Search SDK package]](https://www.nuget.org/packages
 * Microsoft.Rest.ClientRuntime.Azure
 * Newtonsoft.Json
 
+<!--
 [!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
-
+-->
 
 ## Create and initialize a project
 

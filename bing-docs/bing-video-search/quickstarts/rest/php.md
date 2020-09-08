@@ -23,7 +23,9 @@ Although this application is written in PHP, the API is a RESTful Web service co
 
 * PHP 5.6 or later
 
+<!--
 [!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
+-->
 
 ## Running the application
 

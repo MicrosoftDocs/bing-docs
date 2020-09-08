@@ -24,7 +24,9 @@ Here are a few things that you'll need before running this quickstart:
 * [Go binaries](https://golang.org/dl/)
 * A subscription key
 
+<!--
 [!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]  
+-->
 
 ## Create a project and import core libraries
 

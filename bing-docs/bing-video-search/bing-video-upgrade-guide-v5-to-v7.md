@@ -1,7 +1,7 @@
 ---
 title: Upgrade Bing Video Search API v5 to v7
 titleSuffix: Bing Search Services
-description: Identifies the parts of your application that you need to update to use version 7.
+description: This upgrade guide identifies the changes between version 5 and version 7 of the Bing Video Search API. Use this guide to help you identify the parts of your application that you need to update to use version 7.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen

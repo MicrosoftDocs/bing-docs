@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Get news using Bing News Search REST API and Go"
 titleSuffix: Bing Search Services
-description: This quickstart uses the Go language to call the Bing News Search API. The results include names and URLs of news sources identified by the query string.
+description: This quickstart uses the Go language to call Bing News Search API. The results include names and URLs of news sources identified by the query string.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -13,15 +13,17 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Get news results using the Bing News Search REST API and Go
+# Quickstart: Get news results using Bing News Search REST API and Go
 
-This quickstart uses the Go language to call the Bing News Search API. The results include names and URLs of news sources identified by the query string.
+This quickstart uses the Go language to call Bing News Search API. The results include names and URLs of news sources identified by the query string.
 
 ## Prerequisites
 * Install the [Go binaries](https://golang.org/dl/).
 * Install the go-spew library to use a deep pretty printer to display the results. Use this command to install the library: `$ go get -u https://github.com/davecgh/go-spew`.
 
+<!--
 [!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-news-search-signup-requirements.md)]
+-->
 
 ## Create a project and import libraries
 

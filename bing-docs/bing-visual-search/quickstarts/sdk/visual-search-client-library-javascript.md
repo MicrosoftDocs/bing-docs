@@ -24,8 +24,9 @@ Use this quickstart to begin getting image insights from the Bing Visual Search 
         1. `npm install ms-rest-azure`
         2. `npm install azure-cognitiveservices-visualsearch`.
 
-
+<!--
 [!INCLUDE [bing-visual-search-signup-requirements](../../../../includes/bing-visual-search-signup-requirements.md)]
+-->
 
 <a name="client"></a>
 

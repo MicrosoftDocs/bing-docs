@@ -23,7 +23,9 @@ Here are a few things that you'll need before running this quickstart:
 * [PHP 5.6.x](https://php.net/downloads.php) or later
 * A subscription key  
 
+<!--
 [!INCLUDE [bing-web-search-quickstart-signup](../../../../includes/bing-web-search-quickstart-signup.md)]
+-->
 
 ## Enable secure HTTP support
 

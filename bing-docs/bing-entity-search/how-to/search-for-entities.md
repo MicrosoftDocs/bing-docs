@@ -1,7 +1,7 @@
 ---
 title: Search for entities with the Bing Entity Search API
 titleSuffix: Bing Search Services
-description: Use the Bing Entity Search API to extract and search for entities and places from search queries.
+description: Bing Entity Search API returns entities and local business entities.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen

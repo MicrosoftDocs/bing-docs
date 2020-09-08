@@ -34,8 +34,9 @@ Use this quickstart to learn how to request search results from your Bing Custom
      - **Microsoft.Rest.ClientRuntime.Azure**
      - **Newtonsoft.Json**
 
-
+<!--
 [!INCLUDE [bing-custom-search-prerequisites](../../../../includes/bing-custom-search-signup-requirements.md)]
+-->
 
 ## Create and initialize the application
 

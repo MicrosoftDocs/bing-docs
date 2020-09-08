@@ -24,7 +24,9 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 
 * The Request module for JavaScript. Install this module by using `npm install request`.
 
+<!--
 [!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
+-->
 
 ## Initialize the application
 

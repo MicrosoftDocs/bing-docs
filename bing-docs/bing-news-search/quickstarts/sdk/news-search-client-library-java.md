@@ -1,7 +1,7 @@
 ---
 title: Bing News Search Java client library quickstart 
 titleSuffix: Bing Search Services
-description: The News Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: The News Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this Java quickstart to send search requests and get back results.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -30,7 +30,9 @@ Install the Bing News Search client library dependencies using Maven, Gradle, or
     </dependencies>
 ```
 
+<!--
 [!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-news-search-signup-requirements.md)]
+-->
 
 ## Create and initialize a project
 

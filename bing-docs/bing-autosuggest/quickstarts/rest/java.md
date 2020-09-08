@@ -1,7 +1,7 @@
 ---
-title: "Quickstart: Suggest search queries with the Bing Autosuggest REST API and Java"
+title: "Quickstart: Suggest search strings with Bing Autosuggest REST API and Java"
 titleSuffix: Bing Search Services
-description: Learn how to quickly start suggesting search terms in real time with the Bing Autosuggest API.
+description: Learn how to quickly start suggesting search terms with Bing Autosuggest API using Java.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -13,16 +13,18 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Suggest search queries with the Bing Autosuggest REST API and Java
+# Quickstart: Suggest search strings with Bing Autosuggest REST API and Java
 
-Follow this quickstart to learn how to make calls to the Bing Autosuggest API and read the JSON response. This simple Java application sends a partial search query to the API, and returns suggestions for searches. While this application is written in Java, the API is a RESTful Web service compatible with most programming languages. The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/java/Search/BingAutosuggestv7.java)
+Follow this quickstart to learn how to make calls to Bing Autosuggest API and read the JSON response. This simple Java application sends a partial search query to the API, and returns suggestions for searches. While this application is written in Java, the API is a RESTful Web service compatible with most programming languages. The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/java/Search/BingAutosuggestv7.java)
 
 ## Prerequisites
 
 * The [Java Development Kit(JDK)](https://www.oracle.com/technetwork/java/javase/downloads/)
 * The [Gson library](https://github.com/google/gson)
 
+<!--
 [!INCLUDE [bing-autosuggest-signup-requirements](../../../../includes/bing-autosuggest-signup-requirements.md)]
+-->
 
 ## Create and initialize a project
 

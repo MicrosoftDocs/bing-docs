@@ -1,7 +1,7 @@
 ---
 title: Market and language codes used by the Bing Autosuggest API
 titleSuffix: Bing Services
-description: Provides the list of markets and languages that you may specify in Bing Search requests.
+description: Provides the list of markets and languages that you may specify in Bing Autosuggest requests.
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services

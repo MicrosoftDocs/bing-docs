@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Check spelling with the REST API and PHP - Bing Spell Check"
 titleSuffix: Bing Search Services
-description: This quickstart shows how a simple PHP application sends a request to the Bing Spell Check API and returns a list of suggested corrections.
+description: Get started with Bing Spell Check REST API to check spelling and grammar using PHP.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -12,9 +12,9 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-# Quickstart: Check spelling with the Bing Spell Check REST API and PHP
+# Quickstart: Check spelling with Bing Spell Check REST API and PHP
 
-Use this quickstart to make your first call to the Bing Spell Check REST API. This simple PHP application sends a request to the API and returns a list of suggested corrections. 
+Use this quickstart to make your first call to Bing Spell Check REST API. This simple PHP application sends a request to the API and returns a list of suggested corrections. 
 
 Although this application is written in PHP, the API is a RESTful Web service compatible with most programming languages.
 
@@ -22,8 +22,9 @@ Although this application is written in PHP, the API is a RESTful Web service co
 
 * [PHP 5.6.x](https://php.net/downloads.php)
 
+<!--
 [!INCLUDE [bing-spell-check-signup-requirements](../../../../includes/bing-spell-check-signup-requirements.md)]
-
+-->
 
 ## Get Bing Spell Check REST API results
 

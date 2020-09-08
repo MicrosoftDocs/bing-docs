@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Check spelling with the REST API and Node.js - Bing Spell Check"
 titleSuffix: Bing Search Services
-description: Get started using the Bing Spell Check REST API to check spelling and grammar with this quickstart.
+description: Get started with Bing Spell Check REST API to check spelling and grammar using Node.js.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -13,9 +13,9 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Check spelling with the Bing Spell Check REST API and Node.js
+# Quickstart: Check spelling with Bing Spell Check REST API and Node.js
 
-Use this quickstart to make your first call to the Bing Spell Check REST API. This simple JavaScript application sends a request to the API and returns a list of suggested corrections. 
+Use this quickstart to make your first call to Bing Spell Check REST API. This simple JavaScript application sends a request to the API and returns a list of suggested corrections. 
 
 Although this application is written in JavaScript, the API is a RESTful Web service compatible with most programming languages. The source code for this application is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/nodejs/Search/BingSpellCheckv7.js).
 
@@ -23,8 +23,9 @@ Although this application is written in JavaScript, the API is a RESTful Web ser
 
 * [Node.js 6](https://nodejs.org/en/download/) or later.
 
+<!--
 [!INCLUDE [bing-spell-check-signup-requirements](../../../../includes/bing-spell-check-signup-requirements.md)]
-
+-->
 
 ## Create and initialize a project
 

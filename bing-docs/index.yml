@@ -74,16 +74,7 @@ conceptualContent:
           text: Overview
         - url: https://docs.microsoft.com/bing/bing-custom-search/reference
           itemType: reference
-          text: Custom Search Reference
-        - url: https://docs.microsoft.com/bing/bing-custom-image-search/reference
-          itemType: reference
-          text: Custom Image Search Reference
-        - url: https://docs.microsoft.com/bing/bing-custom-video-search/reference
-          itemType: reference
-          text: Custom Video Search Reference
-        - url: https://docs.microsoft.com/bing/bing-custom-autosuggest/reference
-          itemType: reference
-          text: Custom Autosuggest Reference
+          text: Reference
     # Card
     - title: Bing Entity Search API
       links:

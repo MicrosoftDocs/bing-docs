@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Search for images using the Bing Image Search REST API and Java"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send image search requests to the Bing Image Search REST API using Java, and receive JSON responses.
+description: Use this quickstart to send image search requests to Bing Image Search REST API using Java.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -12,9 +12,9 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Search for images with the Bing Image Search API and Java 
+# Quickstart: Search for images with Bing Image Search API and Java 
 
-Use this quickstart to learn how to send search requests to the Bing Image Search API in Azure Cognitive Services. This Java application sends a search query to the API, and displays the URL of the first image in the results. Although this application is written in Java, the API is a RESTful web service compatible with most programming languages.
+Use this quickstart to learn how to send search requests to Bing Image Search API in Azure Cognitive Services. This Java application sends a search query to the API, and displays the URL of the first image in the results. Although this application is written in Java, the API is a RESTful web service compatible with most programming languages.
 
 The source code for this sample is available [on GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/java/Search/BingImageSearchv7Quickstart.java) with additional error handling and annotations.
 
@@ -24,7 +24,9 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 
 * The [Gson library](https://github.com/google/gson)
 
+<!--
 [!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
+-->
 
 ## Create and initialize a project
 

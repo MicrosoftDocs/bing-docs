@@ -1,7 +1,7 @@
 ---
 title: Bing News Search C# client library quickstart 
 titleSuffix: Bing Search Services
-description: The News Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: The News Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this C# quickstart to send search requests and get back results.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -29,7 +29,9 @@ Use this quickstart to begin searching for news with the Bing News Search client
 
 To set up a console application using the Bing News Search client library, browse to the `Manage NuGet Packages` option from the Solution Explorer in Visual Studio.  Add the `Microsoft.Azure.CognitiveServices.Search.NewsSearch` package.
 
+<!--
 [!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-news-search-signup-requirements.md)]
+-->
 
 ## Create and initialize a project
 

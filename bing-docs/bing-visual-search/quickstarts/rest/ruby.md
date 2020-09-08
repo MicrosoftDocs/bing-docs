@@ -22,7 +22,9 @@ Use this quickstart to make your first call to the Bing Visual Search API using 
 * Install [Ruby 2.4 or later](https://www.ruby-lang.org/en/downloads/).
 * Get a subscription key.
 
+<!--
 [!INCLUDE [bing-visual-search-signup-requirements](../../../../includes/bing-visual-search-signup-requirements.md)]
+-->
 
 ## Project and required modules
 

@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Perform a news search with Node.js - Bing News Search REST API"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send a request to the Bing News Search REST API using Node.js, and receive a JSON response.
+description: Use this quickstart to send a request to Bing News Search REST API using Node.js.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
@@ -12,9 +12,9 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Perform a news search using Node.js and the Bing News Search REST API
+# Quickstart: Perform a news search using Node.js and Bing News Search REST API
 
-Use this quickstart to make your first call to the Bing News Search API. This simple JavaScript application sends a search query to the API and displays the JSON response.
+Use this quickstart to make your first call to Bing News Search API. This simple JavaScript application sends a search query to the API and displays the JSON response.
 
 Although this application is written in JavaScript and runs in Node.js, the API is a RESTful Web service compatible with most programming languages.
 
@@ -25,7 +25,9 @@ The source code for this sample is available on [GitHub](https://github.com/Azur
 * The latest version of [Node.js](https://nodejs.org/en/download/).
 * The [JavaScript Request Library](https://github.com/request/request).
 
+<!--
 [!INCLUDE [bing-news-search-signup-requirements](../../../../includes/bing-news-search-signup-requirements.md)]
+-->
 
 ## Create and initialize the application
 

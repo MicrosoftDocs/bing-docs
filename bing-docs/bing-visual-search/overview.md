@@ -23,7 +23,7 @@ Bing Visual Search API returns insights about an image. For example, Bing can he
 
 ## Get started
 
-To get started using the API, pick the subscription you want from <a href="https://www.microsoft.com/en-us/bing/apis/pricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call. 
+To get started using the API, pick the subscription you want from <a href="https://aka.ms/bingsearchapipricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call. 
 
 You can easily call the API by sending a native HTTP GET request or by using the Visual Search SDK. For examples to help you get up and running quickly for either option, see [Quickstarts](quickstarts/quickstarts.md).
 
@@ -40,11 +40,6 @@ You can discover the following insights by using Bing Visual Search:
 |Related searches|A list of related searches made by others or that are based on the contents of the image.
 |Webpages that include the image|A list of webpages that include the image.
 |Entities|A list of well-known people, places, and things seen in the image.
-
-<!--
-|Recipes|A list of webpages that include recipes for making the dish seen in the image.
--->
-
 
 Bing Visual Search results also include bounding boxes for regions of interest in the image. For example, if the image contains several celebrities, the results may include bounding boxes for each of the recognized celebrities. Or, if Bing recognizes a product or clothing in the image, the result may include a bounding box for the recognized item. You can use the bounding box to explore more about its contents.
 
