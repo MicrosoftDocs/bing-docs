@@ -21,14 +21,14 @@ Initial release of this version of Bing Entity Search API. This API replaces the
 
 ### New to Bing Search?
 
-To subscribe to a package that includes this API, see [Get a subscription key](get-subscription-key.md). Next, get familiar with the [Entity Search API](overview.md) documentation, and be sure to check out the [quickstarts](quickstarts/quickstarts.md) to get up and running quickly.
+To subscribe to a package that includes this API, see [Get a subscription key](../bing-web-search/get-subscription-key.md). Next, get familiar with the [Entity Search API](overview.md) documentation, and be sure to check out the [quickstarts](quickstarts/quickstarts.md) to get up and running quickly.
 
 
 ### Current Cognitive Services user?
 
 Things current Cognitive Services users must do prior to their subscription ending:
 
-1. Update your application to use your Bing Search Services subscription key. Current Cognitive Services users that want to maintain continuity of service should sign up [here](get-subscription-key.md) for a Bing Search Services subscription before their Azure Cognitive Services subscription ends. 
+1. Update your application to use your Bing Search Services subscription key. Current Cognitive Services users that want to maintain continuity of service should sign up [here](../bing-web-search/get-subscription-key.md) for a Bing Search Services subscription before their Azure Cognitive Services subscription ends. 
   
 2. Update your app to use the new endpoints. For the new endpoints, see [Entity Search API](reference/endpoints.md) reference.
 
