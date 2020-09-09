@@ -19,7 +19,7 @@ Follow this quickstart to learn how to make calls to Bing Autosuggest API and re
 
 Use this quickstart to make your first call to Bing Autosuggest API. This C# console application sends a partial search string to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. 
 
-Grab your favorite .NET editor, JSON library, and [subscription key](../../get-subscription-key.md) for Bing Autosuggest and let's get started. 
+Grab your favorite .NET editor, JSON library, and [subscription key](../../../bing-web-search/get-subscription-key.md) for Bing Autosuggest and let's get started. 
 
 
 ## Create a project and declare dependencies
@@ -149,7 +149,7 @@ Here's the HTTP request. It's your basic HTTP GET request. Use whatever HTTP cli
         }
 ```
 
-That's all the more there is to sending a search request and getting back search search string suggestions. To see what the JSON response looks like, see [Handling the response](../../get-suggestions.md#handling-the-response).
+That's all the more there is to sending a search request and getting back search search string suggestions. To see what the JSON response looks like, see [Handling the response](../../how-to/get-suggestions.md#handling-the-response).
 
 The rest of the sections walk you through one way of parsing the JSON response and displaying the suggestions. Be sure to read the [use and display requirements](../../../bing-web-search/use-display-requirements.md) to make sure you comply with all display requirements.
 
