@@ -60,7 +60,7 @@ Add a few variables to the `Program` class. For simplicity, this example hardcod
 
         // The user's search string.
 
-        private static string searchString = "coronovirus vaccine";
+        private static string searchString = "coronavirus vaccine";
 ```
 
 Here's all the query parameters you can add to the base URI. The *q* parameter is required and you should always include the *mkt* parameter too. The rest are optional. For information about these parameters, see [Query parameters](../../reference/query-parameters.md).
