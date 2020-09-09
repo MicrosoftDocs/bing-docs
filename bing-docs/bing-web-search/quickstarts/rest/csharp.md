@@ -50,7 +50,7 @@ namespace WebSearchQuickstart
 
 ## Define variables
 
-Add a few variables to the `Program` class. For simplicity, this example hardcodes the subscription key, but you should make sure you're pulling it from secured storage instead.
+Add a few variables to the `Program` class. For simplicity, this example hardcodes the subscription key, but make sure you're pulling it from secured storage instead.
 
 ```csharp
         // In production, make sure you're pulling the subscription key from secured storage.
