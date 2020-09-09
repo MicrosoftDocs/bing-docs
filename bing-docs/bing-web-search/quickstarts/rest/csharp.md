@@ -21,7 +21,7 @@ Grab your favorite .NET editor, JSON library, and [subscription key](../../get-s
 
 ## Create a project and declare dependencies
 
-Create a new project and declare the code's dependencies. This example uses <a href="https://www.newtonsoft.com/json" target="_blank">Newtonsoft</a> to parse the JSON response.
+Create a new project and declare the code's dependencies. This example uses <a href="https://www.newtonsoft.com/json" target="_blank">Newtonsoft</a> to parse the JSON response. Use Newtonsoft's NuGet package to install its libraries.
 
 ```csharp
 using System;
@@ -50,16 +50,20 @@ namespace WebSearchQuickstart
 
 ## Define variables
 
-Define a few variables to the `Program` class. For simplicity, this example hardcodes the subscription key, but you should make sure you're pulling it from secured storage instead.
+Add a few variables to the `Program` class. For simplicity, this example hardcodes the subscription key, but you should make sure you're pulling it from secured storage instead.
 
 ```csharp
         // In production, make sure you're pulling the subscription key from secured storage.
 
         private static string _subscriptionKey = "<your key goes here"; 
         private static string _baseUri = "https://api.bing.microsoft.com/v7.0/search";
+
+        // The user's search string.
+
+        private static string searchString = "coronovirus vaccine";
 ```
 
-Here's all the query parameters you can add to the base URI. The *q* parameter is required and you should always include the *mkt* parameter too. The rest are optional. For information about these parameters, see (../../reference/query-paramters.md).
+Here's all the query parameters you can add to the base URI. The *q* parameter is required and you should always include the *mkt* parameter too. The rest are optional. For information about these parameters, see [Query parameters](../../reference/query-paramters.md).
 
 ```csharp
         private const string QUERY_PARAMETER = "?q=";  // Required
@@ -73,21 +77,6 @@ Here's all the query parameters you can add to the base URI. The *q* parameter i
         private const string TEXT_FORMAT_PARAMETER = "&textFormat=";
         private const string ANSWER_COUNT = "&answerCount=";
         private const string PROMOTE = "&promote=";
-```
-
-These variables will hold the response data for each of the answers in the response.
-
-```csharp
-        private static Newtonsoft.Json.Linq.JToken _webpages = null;
-        private static Newtonsoft.Json.Linq.JToken _images = null;
-        private static Newtonsoft.Json.Linq.JToken _videos = null;
-        private static Newtonsoft.Json.Linq.JToken _news = null;
-        private static Newtonsoft.Json.Linq.JToken _relatedSearches = null;
-        private static Newtonsoft.Json.Linq.JToken _computation = null;
-        private static Newtonsoft.Json.Linq.JToken _timeZone = null;
-        private static Newtonsoft.Json.Linq.JToken _entities = null;
-        private static Newtonsoft.Json.Linq.JToken _places = null;
-        private static Newtonsoft.Json.Linq.JToken _translations = null;
 ```
 
 
@@ -104,7 +93,7 @@ Our `Main()` method is pretty simple since we're going to implement the HTTP req
 
 ## Where all the work happens
 
-The `RunAsync` method is where all the work happens. It builds the query string that's appended to the base URI, waits for the asynchronous HTTP request to return, deserializes the response, and either prints the search results or error message.
+The `RunAsync` method is where all the work happens. It builds the query string that's appended to the base URI, waits for the asynchronous HTTP request to return, deserializes the response, and either prints the search results or an error message.
 
 This example uses dictionaries instead of objects to access the response data.
 
@@ -149,7 +138,7 @@ This example uses dictionaries instead of objects to access the response data.
 
 ## The HTTP call
 
-Here's the HTTP request. It's your basic HTTP GET request.
+Here's the HTTP request. It's your basic HTTP GET request. Use whatever HTTP client works for you.
 
 ```csharp
         // Makes the request to the Web Search endpoint.
@@ -168,18 +157,16 @@ Here's the HTTP request. It's your basic HTTP GET request.
         }
 ```
 
-Yah, you just made your first request but you probably already knew how to make HTTP GET requests. If you want to see what all the answers look like in the JSON response, see [Handling the web search response](../../search-responses.md).
+That's all the more there is to sending a search request and getting back search results. To see what all the answers look like in the JSON response, see [Handling the web search response](../../search-responses.md).
 
-The rest of the sections walk you through one way of parsing the JSON response and displaying the search results. Be sure to read the [use and display requirements](use-display-requirements.md) to make sure you comply with all display requirements.
+The rest of the sections walk you through one way of parsing the JSON response and displaying the search results. Be sure to read the [use and display requirements](../../use-display-requirements.md) to make sure you comply with all display requirements.
 
 
 ## Using ranking to display the search results
 
 If the request succeeds, the code calls the `PrintResponse` method to print the search results in the console window.
 
-The example deserializes the JSON response into a dictionary instead of using class objects. The method first calls the `GetAnswerDataFromResponse` method to get the answer data for each answer in the response.
-
-After that, the code displays the search results using the RankingResponse answer. The ranking which answers to display in the pole, mainline, and sidebar sections of the search results page. For information about using the RankingResponse answer, see [Use ranking to display search results](rank-results.md). 
+The example uses the RankingResponse answer to display the search results. The ranking determines which answers to display in the pole, mainline, and sidebar sections of the search results page. For information about using the RankingResponse answer, see [Use ranking to display search results](../../rank-results.md). 
 
 ```csharp
         // Prints the JSON response data for pole, mainline, and sidebar.
@@ -188,110 +175,45 @@ After that, the code displays the search results using the RankingResponse answe
         {
             Console.WriteLine("The response contains the following answers:\n");
 
-            object answer;
+            var ranking = response["rankingResponse"] as Newtonsoft.Json.Linq.JToken; 
 
-            GetAnswerDataFromResponse(response);
+            Newtonsoft.Json.Linq.JToken position;
 
-            if (response.TryGetValue("rankingResponse", out answer))
+            if ((position = ranking["pole"]) != null)
             {
-                var ranking = (Newtonsoft.Json.Linq.JToken)answer;
-
-                Newtonsoft.Json.Linq.JToken items;
-
-                if ((items = ranking["pole"]) != null)
-                {
-                    Console.WriteLine("Pole Position:\n");
-                    DisplayAnswersByRank(ranking["pole"]);
-                }
-
-                if ((items = ranking["mainline"]) != null)
-                {
-                    Console.WriteLine("Mainline Position:\n");
-                    DisplayAnswersByRank(ranking["mainline"]);
-                }
-
-                if ((items = ranking["sidebar"]) != null)
-                {
-                    Console.WriteLine("Sidebar Position:\n");
-                    DisplayAnswersByRank(ranking["sidebar"]);
-                }
-
-            }
-        }
-
-        // Gets the results for each answer in the response.
-
-        static void GetAnswerDataFromResponse(Dictionary<string, object> response)
-        {
-            object answer;
-
-            if (response.TryGetValue("webPages", out answer))
-            {
-                _webpages = ((Newtonsoft.Json.Linq.JToken)answer)["value"];
+                Console.WriteLine("Pole Position:\n");
+                DisplayAnswersByRank(position["items"], response);
             }
 
-            if (response.TryGetValue("images", out answer))
+            if ((position = ranking["mainline"]) != null)
             {
-                _images = ((Newtonsoft.Json.Linq.JToken)answer)["value"];
+                Console.WriteLine("Mainline Position:\n");
+                DisplayAnswersByRank(position["items"], response);
             }
 
-            if (response.TryGetValue("videos", out answer))
+            if ((position = ranking["sidebar"]) != null)
             {
-                _videos = ((Newtonsoft.Json.Linq.JToken)answer)["value"];
-            }
-
-            if (response.TryGetValue("news", out answer))
-            {
-                _news = ((Newtonsoft.Json.Linq.JToken)answer)["value"];
-            }
-
-            if (response.TryGetValue("relatedSearches", out answer))
-            {
-                _relatedSearches = ((Newtonsoft.Json.Linq.JToken)answer)["value"];
-            }
-
-            if (response.TryGetValue("computation", out answer))
-            {
-                _computation = (Newtonsoft.Json.Linq.JToken)answer;
-            }
-
-            if (response.TryGetValue("timeZone", out answer))
-            {
-                _timeZone = (Newtonsoft.Json.Linq.JToken)answer;
-            }
-
-            if (response.TryGetValue("entities", out answer))
-            {
-                _entities = ((Newtonsoft.Json.Linq.JToken)answer)["value"];
-            }
-
-            if (response.TryGetValue("places", out answer))
-            {
-                _places = ((Newtonsoft.Json.Linq.JToken)answer)["value"];
-            }
-
-            if (response.TryGetValue("translations", out answer))
-            {
-                _translations = (Newtonsoft.Json.Linq.JToken)answer;
+                Console.WriteLine("Sidebar Position:\n");
+                DisplayAnswersByRank(position["items"], response);
             }
         }
 ```
 
 ### Display all results for an answer or a single result
 
-Each item in the ranking tells you whether to display all results for an answer together or to display a single result from the answer.
+Each item in the ranking tells you whether to display all results from the answer together or to display a single result from the answer.
 
-If the item includes the `resultIndex` field, you display that single result from the answer. But if the item doesn't include `resultIndex`, you display all results in the answer. Typically, the ranking has you display individual webpage results interspersed amongst the other answers but has you group all images together. For answers that have many results like images and videos, you typically display a few of the images or videos and provide a link that users can click to see the rest.
+If the item includes the `resultIndex` field, use the index value to display that single result from the answer. But if the item doesn't include `resultIndex`, you display all results from the answer. Typically, the ranking has you display individual webpages interspersed amongst the other answers, and has you group all images together. For answers that have many results like images and videos, you typically display a few of the images or videos and provide a link that users can click to see the rest.
 
 ```csharp
         // Displays each result based on ranking. Ranking contains the results for
         // the pole, mainline, or sidebar section of the search results.
 
-        static void DisplayAnswersByRank(Newtonsoft.Json.Linq.JToken ranking)
+        static void DisplayAnswersByRank(Newtonsoft.Json.Linq.JToken items, Dictionary<string, object> response)
         {
-            foreach (Newtonsoft.Json.Linq.JObject item in ranking["items"])
+            foreach (Newtonsoft.Json.Linq.JToken item in items) 
             {
-                var answerType = item.Value<string>("answerType");
+                var answerType = (string)item["answerType"];
                 Newtonsoft.Json.Linq.JToken index = -1;
 
                 // If the ranking item doesn't include an index of the result to  
@@ -299,92 +221,96 @@ If the item includes the `resultIndex` field, you display that single result fro
 
                 if ("WebPages" == answerType)
                 {
-                    if (item.TryGetValue("resultIndex", out index) == false)
+                    if ((index = item["resultIndex"]) == null)
                     {
-                        DisplayAllWebPages(_webpages);
+                        DisplayAllWebPages(((Newtonsoft.Json.Linq.JToken)response["webPages"])["value"]);
                     }
                     else
                     {
-                        DisplayWegPage(_webpages.ElementAt((int)index));
+                        DisplayWegPage(((Newtonsoft.Json.Linq.JToken)response["webPages"])["value"].ElementAt((int)index));
                     }
                 }
                 else if ("Images" == answerType)
                 {
-                    if (item.TryGetValue("resultIndex", out index) == false)
+                    if ((index = item["resultIndex"]) == null)
                     {
-                        DisplayAllImages(_images);
+                        DisplayAllImages(((Newtonsoft.Json.Linq.JToken)response["images"])["value"]);
                     }
                     else
                     {
-                        DisplayImage(_images.ElementAt((int)index));
+                        DisplayImage(((Newtonsoft.Json.Linq.JToken)response["images"])["value"].ElementAt((int)index));
                     }
                 }
                 else if ("Videos" == answerType)
                 {
-                    if (item.TryGetValue("resultIndex", out index) == false)
+                    if ((index = item["resultIndex"]) == null)
                     {
-                        DisplayAllVideos(_videos);
+                        DisplayAllVideos(((Newtonsoft.Json.Linq.JToken)response["videos"])["value"]);
                     }
                     else
                     {
-                        DisplayVideo(_videos.ElementAt((int)index));
+                        DisplayVideo(((Newtonsoft.Json.Linq.JToken)response["videos"])["value"].ElementAt((int)index));
                     }
                 }
                 else if ("News" == answerType)
                 {
-                    if (item.TryGetValue("resultIndex", out index) == false)
+                    if ((index = item["resultIndex"]) == null)
                     {
-                        DisplayAllNews(_news);
+                        DisplayAllNews(((Newtonsoft.Json.Linq.JToken)response["news"])["value"]);
                     }
                     else
                     {
-                        DisplayImage(_news.ElementAt((int)index));
+                        DisplayArticle(((Newtonsoft.Json.Linq.JToken)response["news"])["value"].ElementAt((int)index));
                     }
                 }
                 else if ("RelatedSearches" == answerType)
                 {
-                    if (item.TryGetValue("resultIndex", out index) == false)
+                    if ((index = item["resultIndex"]) == null)
                     {
-                        DisplayAllRelatedSearches(_relatedSearches);
+                        DisplayAllRelatedSearches(((Newtonsoft.Json.Linq.JToken)response["relatedSearches"])["value"]);
                     }
                     else
                     {
-                        DisplayRelatedSearch(_relatedSearches.ElementAt((int)index));
+                        DisplayRelatedSearch(((Newtonsoft.Json.Linq.JToken)response["relatedSearches"])["value"].ElementAt((int)index));
                     }
                 }
                 else if ("Entities" == answerType)
                 {
-                    if (item.TryGetValue("resultIndex", out index) == false)
+                    if ((index = item["resultIndex"]) == null)
                     {
-                        DisplayAllEntities(_entities);
+                        DisplayAllEntities(((Newtonsoft.Json.Linq.JToken)response["entities"])["value"]);
                     }
                     else
                     {
-                        DisplayEntity(_entities.ElementAt((int)index));
+                        DisplayEntity(((Newtonsoft.Json.Linq.JToken)response["entities"])["value"].ElementAt((int)index));
                     }
                 }
                 else if ("Places" == answerType)
                 {
-                    if (item.TryGetValue("resultIndex", out index) == false)
+                    if ((index = item["resultIndex"]) == null)
                     {
-                        DisplayAllPlaces(_places);
+                        DisplayAllPlaces(((Newtonsoft.Json.Linq.JToken)response["places"])["value"]);
                     }
                     else
                     {
-                        DisplayPlace(_places.ElementAt((int)index));
+                        DisplayPlace(((Newtonsoft.Json.Linq.JToken)response["places"])["value"].ElementAt((int)index));
                     }
                 }
                 else if ("Computation" == answerType)
                 {
-                    DisplayComputation(_computation);
+                    DisplayComputation((Newtonsoft.Json.Linq.JToken)response["computation"]);
                 }
                 else if ("Translations" == answerType)
                 {
-                    DisplayTranslations(_translations);
+                    DisplayTranslations((Newtonsoft.Json.Linq.JToken)response["translations"]);
                 }
                 else if ("TimeZone" == answerType)
                 {
-                    DisplayTimeZone(_timeZone);
+                    DisplayTimeZone((Newtonsoft.Json.Linq.JToken)response["timeZone"]);
+                }
+                else
+                {
+                    Console.WriteLine("\nUnknown answer type: {0}\n", answerType);
                 }
             }
         }
@@ -392,10 +318,9 @@ If the item includes the `resultIndex` field, you display that single result fro
 
 ### Display answer results
 
-This section show how to access some of the fields from each type of answer result and apply the results contractual rules. You will likely use data from more of the fields that are shown here. For information about the fields that each answer result may include, see [Response objects](../../reference/response-objects.md). 
+This example accesses a few of the fields from each type of answer result and applies any contractual rules. You will likely use data from more of the fields than are shown in this example. For information about the fields that each answer result may include, see [Response objects](../../reference/response-objects.md). 
 
 ```csharp
-
         // Displays all webpages in the Webpages answer.
         static void DisplayAllWebPages(Newtonsoft.Json.Linq.JToken webpages)
         {
@@ -667,9 +592,9 @@ This section show how to access some of the fields from each type of answer resu
 
 ### Handling contractual rules
 
-You need to check each result to if it includes one or more contractual rules. For example, some webpages do as do news articles, entities, and translations. Some rules apply to the result as a whole and other rules apply to specific fields. If the rule applies to a specific field, it includes the `targetPropertyName` field. 
+You need to check each result to see if it includes one or more contractual rules. Some webpages contain contractual rules as do news articles, entities, and translations. Some rules apply to the result as a whole and others apply to a specific field. If the rule applies to a specific field, it includes the `targetPropertyName` field, which contains the name of the target field. 
 
-This example, builds a dictionary of the rules that the calling method accesses when it displays the result. The key for rules that apply to the result as a whole, is `global`. Otherwise, the key is the name of the field that the rule targets.
+This example, builds a dictionary of the rules that the calling method accesses when it displays the result. If the rule applies to the result as a whole, the key `global`. Otherwise, the key is the name of the field that the rule targets.
 
 ```csharp
         // Checks if the result includes contractual rules and builds a dictionary of 
@@ -715,7 +640,7 @@ This example, builds a dictionary of the rules that the calling method accesses 
                 // snippet field, use the target's name as the key. Multiple rules
                 // can apply to the same field. 
 
-                if ((key = rule.Value<string>("targetPropertyName")) != null)
+                if ((key = (string) rule["targetPropertyName"]) != null)
                 {
                     if (rules.TryGetValue(key, out value))
                     {
@@ -751,7 +676,7 @@ This example, builds a dictionary of the rules that the calling method accesses 
 
 ## Handling errors
 
-This section shows an option for handling errors that the service may return. For example, if your subscription key is not valid or not valid for the specified endpoint. The service may also throw an error if you specify a parameter value that's not valid.
+This section shows an option for handling errors that the service may return. For example, the service returns an error if your subscription key is not valid or is not valid for the specified endpoint. The service may also return an error if you specify a parameter value that's not valid.
 
 ```csharp
         // Print any errors that occur. Depending on which part of the service is
@@ -794,12 +719,12 @@ This section shows an option for handling errors that the service may return. Fo
             Console.WriteLine("Code: " + error["code"]);
             Console.WriteLine("Message: " + error["message"]);
 
-            if ((value = error.Value<string>("parameter")) != null)
+            if ((value = (string)error["parameter"]) != null)
             {
-                Console.WriteLine("Parameter: " + value);
+                    Console.WriteLine("Parameter: " + value);
             }
 
-            if ((value = error.Value<string>("value")) != null)
+            if ((value = (string)error["value"]) != null)
             {
                 Console.WriteLine("Value: " + value);
             }
@@ -807,9 +732,7 @@ This section shows an option for handling errors that the service may return. Fo
 ```
 
 
-
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Bing Web Search API single-page app tutorial](../../tutorial/bing-web-search-single-page-app.md)
+- For a more in depth web app example, see the [Web Search tutorial](../../tutorial/bing-web-search-single-page-app.md).
 
