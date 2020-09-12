@@ -62,7 +62,7 @@ Add a few variables to the `Program` class. For simplicity, this example hardcod
         // The user's search string. To get today's top stories
         // set searchString to an empty string.
 
-        private static string searchString = "coronavirus vaccine";
+        private static string searchString = "california wildfires";
 
         // Bing uses the X-MSEdge-ClientID header to provide users with consistent
         // behavior across Bing API calls. See the reference documentation

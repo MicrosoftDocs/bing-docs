@@ -28,6 +28,7 @@ Create a new project and declare the code's dependencies. This example uses <a h
 using System;
 using System.Net.Http.Headers;
 using System.Net.Http;
+using System.Xml;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Collections.Generic;
@@ -88,21 +89,12 @@ Here's all the query parameters you can add to the base URI. The *q* parameter i
 Use these query parameters to filter the images that Bing returns. For information about these parameters, see [Filter query parameters](../../reference/query-parameters.md#filter-query-parameters).
 
 ```csharp
-        private const string ASPECT_PARAMETER = "&aspect="; 
-        private const string COLOR_PARAMETER = "&color=";
+        private const string ASPECT_PARAMETER = "&aspect=";
+        private const string EMBEDDED_PARAMETER = "&embedded=";
         private const string FRESHNESS_PARAMETER = "&freshness=";
-        private const string HEIGHT_PARAMETER = "&height=";
-        private const string WIDTH_PARAMETER = "&width=";
-        private const string IMAGE_CONTENT_PARAMETER = "&imageContent=";
-        private const string IMAGE_TYPE_PARAMETER = "&imageType=";
-        private const string LICENSE_PARAMETER = "&license=";
-        private const string MAX_FILE_SIZE_PARAMETER = "&maxFileSize=";
-        private const string MIN_FILE_SIZE_PARAMETER = "&minFileSize=";
-        private const string MAX_HEIGHT_PARAMETER = "&maxHeight=";
-        private const string MIN_HEIGHT_PARAMETER = "&minHeight=";
-        private const string MAX_WIDTH_PARAMETER = "&maxWidth=";
-        private const string MIN_WIDTH_PARAMETER = "&minWidth=";
-        private const string SIZE_PARAMETER = "&size=";
+        private const string PRICING_PARAMETER = "&pricing=";
+        private const string RESOLUTION_PARAMETER = "&resolution=";
+        private const string VIDEO_LENGTH_PARAMETER = "&videoLength=";
 ```
 
 
