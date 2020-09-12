@@ -188,7 +188,7 @@ That's all the more there is to sending a search request and getting back search
 
 The rest of the sections walk you through one way of parsing the JSON response and displaying the search results. Be sure to read the [use and display requirements](../../../bing-web-search/use-display-requirements.md) to make sure you comply with all display requirements.
 
-For information about resizing the thumbnails, see [Resizing and cropping thumbnails](../../../bing-web-search/resize-an-crop-thumbnails.md).
+For information about resizing the thumbnails, see [Resizing and cropping thumbnails](../../../bing-web-search/resize-and-crop-thumbnails.md).
 
 
 
@@ -196,7 +196,7 @@ For information about resizing the thumbnails, see [Resizing and cropping thumbn
 
 The response's `value` field contains the list of videos. The example shows the fields you're most likely to use. For the full list of fields, see the [Video](../../reference/response-objects.md#video) object.
 
-The [VideoAnswer](../../reference/response-objects.md#videoanswer) object contains a number of fields like `pivotSuggestions`, `queryExpansions`, and `relatedSearches` that this example doesn't address.
+The [VideosAnswer](../../reference/response-objects.md#videosanswer) object contains a number of fields like `pivotSuggestions`, `queryExpansions`, and `relatedSearches` that this example doesn't address.
 
 ```csharp
         // Prints the list of videos in the JSON response.
