@@ -13,7 +13,7 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Send a search request to Bing Entity Search API using C#
+# Quickstart: Search for entities and local businesses using C# and Bing Entity Search API
 
 Use this quickstart to make your first call to Bing Entity Search API. This C# console application sends a search request to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. 
 
@@ -56,12 +56,18 @@ Add a few variables to the `Program` class. For simplicity, this example hardcod
 ```csharp
         // In production, make sure you're pulling the subscription key from secured storage.
 
-        private static string _subscriptionKey = "<your key goes here"; 
+        private static string _subscriptionKey = "<your key goes here>"; 
         private static string _baseUri = "https://api.bing.microsoft.com/v7.0/entities";
 
         // The user's search string.
 
         private static string searchString = "bill gates";
+
+        // Bing uses the X-MSEdge-ClientID header to provide users with consistent
+        // behavior across Bing API calls. See the reference documentation
+        // for usage.
+
+        private static string _clientIdHeader = null;
 ```
 
 Here's all the query parameters you can add to the base URI. The *q* parameter is required and you should always include the *mkt* parameter too. The rest are optional. For information about these parameters, see [Query parameters](../../reference/query-parameters.md).
@@ -104,6 +110,8 @@ This example uses dictionaries instead of objects to access the response data.
 
                 HttpResponseMessage response = await MakeRequestAsync(queryString);
 
+                _clientIdHeader = response.Headers.GetValues("X-MSEdge-ClientID").FirstOrDefault();
+
                 // This example uses dictionaries instead of objects to access the response data.
 
                 var contentString = await response.Content.ReadAsStringAsync();
@@ -134,7 +142,7 @@ This example uses dictionaries instead of objects to access the response data.
 Here's the HTTP request. It's your basic HTTP GET request. Use whatever HTTP client works for you.
 
 ```csharp
-        // Makes the request to the Web Search endpoint.
+        // Makes the request to the Entity Search endpoint.
 
         static async Task<HttpResponseMessage> MakeRequestAsync(string queryString)
         {
@@ -467,5 +475,5 @@ This section shows an option for handling errors that the service may return. Fo
 
 ## Next steps
 
-- For a more in depth web app example, see the [Web Search tutorial](../../tutorial/bing-entities-search-single-page-app.md).
+- For a more in depth web app example, see the [Entity web app tutorial](../../tutorial/bing-entities-search-single-page-app.md).
 

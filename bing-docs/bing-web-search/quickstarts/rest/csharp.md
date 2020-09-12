@@ -12,7 +12,7 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Search the web using Bing Web Search API and C#
+# Quickstart: Search the web using C# and Bing Web Search API
 
 Use this quickstart to make your first call to Bing Web Search API. This C# console application sends a search request to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. 
 
@@ -55,12 +55,18 @@ Add a few variables to the `Program` class. For simplicity, this example hardcod
 ```csharp
         // In production, make sure you're pulling the subscription key from secured storage.
 
-        private static string _subscriptionKey = "<your key goes here"; 
+        private static string _subscriptionKey = "<your key goes here>"; 
         private static string _baseUri = "https://api.bing.microsoft.com/v7.0/search";
 
         // The user's search string.
 
         private static string searchString = "coronavirus vaccine";
+
+        // Bing uses the X-MSEdge-ClientID header to provide users with consistent
+        // behavior across Bing API calls. See the reference documentation
+        // for usage.
+
+        private static string _clientIdHeader = null;
 ```
 
 Here's all the query parameters you can add to the base URI. The *q* parameter is required and you should always include the *mkt* parameter too. The rest are optional. For information about these parameters, see [Query parameters](../../reference/query-parameters.md).
@@ -110,6 +116,8 @@ This example uses dictionaries instead of objects to access the response data.
                 queryString += TEXT_DECORATIONS_PARAMETER + Boolean.TrueString;
 
                 HttpResponseMessage response = await MakeRequestAsync(queryString);
+
+                _clientIdHeader = response.Headers.GetValues("X-MSEdge-ClientID").FirstOrDefault();
 
                 // This example uses dictionaries instead of objects to access the response data.
 
