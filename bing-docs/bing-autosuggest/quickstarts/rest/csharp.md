@@ -66,7 +66,7 @@ Add a few variables to the `Program` class. For simplicity, this example hardcod
         private static string searchString = "coro";
 ```
 
-Here's all the query parameters you can add to the base URI. The *q* parameter is required and you should always include the *mkt* parameter too. For information about these parameters, see [Query parameters](../../reference/query-parameters.md).
+Here are all the query parameters you can add to the base URI. The *q* parameter is required and you should always include the *mkt* parameter too. For information about these parameters, see [Query parameters](../../reference/query-parameters.md).
 
 ```csharp
         private const string QUERY_PARAMETER = "?q=";  // Required
