@@ -624,7 +624,7 @@ This section shows an option for handling errors that the service may return. Fo
 ```
 
 
-## Defining VisualSearchRequest objects
+## Defining the VisualSearchRequest objects
 
 These classes define the request parameters that you may specify in the request. For example, you'd use these classes if you specify the image using an insights token or a URL. For information about these parameters, see [Specifying the image's information](../../how-to/get-insights.md#specifying-the-images-information).
 
