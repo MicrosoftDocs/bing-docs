@@ -269,6 +269,8 @@ This example accesses a few of the fields from each type of answer result and ap
 
         static void DisplayEntity(Newtonsoft.Json.Linq.JToken entity)
         {
+            string rule = null;
+
             // Entities require attribution. Gets the list of attributions to apply.
 
             Dictionary<string, string> rulesByField = null;
@@ -281,22 +283,20 @@ This example accesses a few of the fields from each type of answer result and ap
             {
                 Console.WriteLine("\t\tImage: " + entity["image"]["thumbnailUrl"]);
 
-                try
+                if (rulesByField.TryGetValue("image", out rule))
                 {
-                    Console.WriteLine("\t\t\tImage from: " + rulesByField["image"]);
+                    Console.WriteLine("\t\t\tImage from: " + rule);
                 }
-                catch (Exception) { };
             }
 
             if (entity["description"] != null)
             {
                 Console.WriteLine("\t\tDescription: " + entity["description"]);
 
-                try
+                if (rulesByField.TryGetValue("description", out rule))
                 {
                     Console.WriteLine("\t\t\tData from: " + rulesByField["description"]);
                 }
-                catch (Exception) { };
             }
             else
             {
@@ -335,7 +335,7 @@ This example accesses a few of the fields from each type of answer result and ap
 
 You need to check each result to see if it includes one or more contractual rules. Some rules apply to the result as a whole and others apply to a specific field. If the rule applies to a specific field, it includes the `targetPropertyName` field, which contains the name of the target field. 
 
-This example, builds a dictionary of the rules that the calling method accesses when it displays the result. If the rule applies to the result as a whole, the key `global`. Otherwise, the key is the name of the field that the rule targets.
+This example, builds a dictionary of the rules that the calling method accesses when it displays the result. If the rule applies to the result as a whole, the key is `global`. Otherwise, the key is the name of the field that the rule targets.
 
 ```csharp
         // Checks if the result includes contractual rules and builds a dictionary of 

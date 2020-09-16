@@ -341,6 +341,8 @@ This example accesses a few of the fields from each type of answer result and ap
         // Displays a single webpage.
         static void DisplayWegPage(Newtonsoft.Json.Linq.JToken webpage)
         {
+            string rule = null;
+
             // Some webpages require attribution. Checks if this page requires
             // attribution and gets the list of attributions to apply.
 
@@ -357,11 +359,10 @@ This example accesses a few of the fields from each type of answer result and ap
 
             if (null != rulesByField)
             {
-                try
+                if (rulesByField.TryGetValue("snippet", out rule))
                 {
                     Console.WriteLine("\t\t\tData from: " + rulesByField["snippet"]);
                 }
-                catch (Exception) { };
             }
 
             Console.WriteLine();
@@ -427,7 +428,7 @@ This example accesses a few of the fields from each type of answer result and ap
 
             Console.WriteLine("\tArticle\n");
             Console.WriteLine("\t\tName: " + article["name"]);
-            Console.WriteLine("\t\tURL: " + article["ulr"]);
+            Console.WriteLine("\t\tURL: " + article["url"]);
             Console.WriteLine("\t\tDescription: " + article["description"]);
             Console.WriteLine("\t\tArticle from: " + rulesByField["global"]);
             Console.WriteLine();
@@ -467,6 +468,8 @@ This example accesses a few of the fields from each type of answer result and ap
 
         static void DisplayEntity(Newtonsoft.Json.Linq.JToken entity)
         {
+            string rule = null;
+
             // Entities require attribution. Gets the list of attributions to apply.
 
             Dictionary<string, string> rulesByField = null;
@@ -479,22 +482,20 @@ This example accesses a few of the fields from each type of answer result and ap
             {
                 Console.WriteLine("\t\tImage: " + entity["image"]["thumbnail"]);
 
-                try
+                if (rulesByField.TryGetValue("image", out rule))
                 {
-                    Console.WriteLine("\t\t\tImage from: " + rulesByField["image"]);
+                    Console.WriteLine("\t\t\tImage from: " + rule);
                 }
-                catch (Exception) { };
             }
 
             if (entity["description"] != null)
             {
                 Console.WriteLine("\t\tDescription: " + entity["description"]);
 
-                try
+                if (rulesByField.TryGetValue("description", out rule))
                 {
                     Console.WriteLine("\t\t\tData from: " + rulesByField["description"]);
                 }
-                catch (Exception) { };
             }
             else
             {
@@ -600,9 +601,7 @@ This example accesses a few of the fields from each type of answer result and ap
 
 ### Handling contractual rules
 
-You need to check each result to see if it includes one or more contractual rules. Some webpages contain contractual rules as do news articles, entities, and translations. Some rules apply to the result as a whole and others apply to a specific field. If the rule applies to a specific field, it includes the `targetPropertyName` field, which contains the name of the target field. 
-
-This example, builds a dictionary of the rules that the calling method accesses when it displays the result. If the rule applies to the result as a whole, the key `global`. Otherwise, the key is the name of the field that the rule targets.
+The `GetRulesByField` method builds a dictionary of the rules that the calling method accesses when it displays the result. If the rule applies to the result as a whole, the key is `global`. Otherwise, the key is the name of the field that the rule targets (see the `targetPropertyName` field).
 
 ```csharp
         // Checks if the result includes contractual rules and builds a dictionary of 
