@@ -1,7 +1,7 @@
 ---
 title: Bing Visual Search C# client library quickstart 
 titleSuffix: Bing Search Services
-description: The Visual Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: Learn how to get image insights using the .NET client library for Bing Visual Search API.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen

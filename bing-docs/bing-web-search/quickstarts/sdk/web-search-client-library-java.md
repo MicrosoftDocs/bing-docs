@@ -1,7 +1,7 @@
 ---
 title: Bing Web Search Java client library quickstart 
 titleSuffix: Bing Search Services
-description: The Web Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: Learn how to get web search results using the Java client library for Bing Web Search API.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen

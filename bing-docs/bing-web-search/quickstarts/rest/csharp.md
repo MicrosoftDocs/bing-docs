@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Perform a web search with C# - Bing Web Search API"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send requests to the Bing Web Search API using C#.
+description: Learn how to get web search results using C# and Bing Web Search API.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen

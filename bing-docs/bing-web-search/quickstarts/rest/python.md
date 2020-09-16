@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Perform a search with Python - Bing Web Search API"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send requests to the Bing Web Search REST API using Python, and receive a JSON response
+description: Learn how to get web search results using Python and Bing Web Search API.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
