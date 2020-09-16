@@ -1,11 +1,12 @@
 ---
 title: Bing Web Search C# client library quickstart 
 titleSuffix: Bing Search Services
-description: The Web Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: Learn how to get web search results using the .NET client library for Bing Web Search API.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
+ms.subservice: bing-web-search
 ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi

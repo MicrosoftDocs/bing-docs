@@ -13,118 +13,419 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Call your Bing Custom Search endpoint using C# 
+# Quickstart: Search your custom view of the web using C# and Bing Custom Search API
 
-Use this quickstart to learn how to request search results from your Bing Custom Search instance. Although this application is written in C#, the Bing Custom Search API is a RESTful web service compatible with most programming languages. The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/dotnet/Search/BingCustomSearchv7.cs).
+Use this quickstart to make your first call to Bing Custom Search API. This C# console application sends a search request to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. 
 
-## Prerequisites
+If you've created your Custom Search instance (view), grab your favorite .NET editor, JSON library, and [subscription key](../../../bing-web-search/get-subscription-key.md) for Bing Custom Search and let's get started. Otherwise, please [create your instance](../../how-to/define-your-custom-view.md).
 
-- A Bing Custom Search instance. For more information, see [Quickstart: Create your first Bing Custom Search instance](../../how-to/quick-start.md).
-- [Microsoft .NET Core](https://www.microsoft.com/net/download/core).
-- Any edition of [Visual Studio 2019 or later](https://www.visualstudio.com/downloads/).
-- If you're using Linux/MacOS, this application can be run using [Mono](https://www.mono-project.com/).
-- The [Bing Custom Search](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.CustomSearch/2.0.0) NuGet package. 
 
-   To install this package in Visual Studio: 
-     1. Right-click your project in **Solution Explorer**, and then select **Manage NuGet Packages**. 
-     2. Search for and select *Microsoft.Azure.CognitiveServices.Search.CustomSearch*, and then install the package.
+## Create a project and declare dependencies
 
-   When you install the Bing Custom Search NuGet package, Visual Studio also installs the following packages:
-     - **Microsoft.Rest.ClientRuntime**
-     - **Microsoft.Rest.ClientRuntime.Azure**
-     - **Newtonsoft.Json**
+Create a new project and declare the code's dependencies. This example uses <a href="https://www.newtonsoft.com/json" target="_blank">Newtonsoft</a> to parse the JSON response. Use Newtonsoft's NuGet package to install its libraries.
 
-<!--
-[!INCLUDE [bing-custom-search-prerequisites](../../../../includes/bing-custom-search-signup-requirements.md)]
--->
+```csharp
+using System;
+using System.Net.Http.Headers;
+using System.Net.Http;
+using System.Threading.Tasks;
+using System.Linq;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+```
 
-## Create and initialize the application
 
-1. Create a new C# console application in Visual Studio. Then, add the following packages to your project:
+## Declare a namespace and class for your program
 
-    ```csharp
-    using System;
-    using System.Net.Http;
-    using System.Web;
-    using Newtonsoft.Json;
-    ```
+Add a namespace and class. This example uses `CustomWebSearchQuickstart` for the namespace and `Program` for the class.  
 
-2. Create the following classes to store the search results returned by the Bing Custom Search API:
-
-    ```csharp
-    public class BingCustomSearchResponse {        
-        public string _type{ get; set; }            
-        public WebPages webPages { get; set; }
+```csharp
+namespace CustomWebSearchQuickstart
+{
+    class Program
+    {
+        // The code in the following sections goes here.
     }
+}
+```
 
-    public class WebPages {
-        public string webSearchUrl { get; set; }
-        public int totalEstimatedMatches { get; set; }
-        public WebPage[] value { get; set; }        
-    }
+## Define variables
 
-    public class WebPage {
-        public string name { get; set; }
-        public string url { get; set; }
-        public string displayUrl { get; set; }
-        public string snippet { get; set; }
-        public DateTime dateLastCrawled { get; set; }
-        public string cachedPageUrl { get; set; }
-    }
-    ```
+Add a few variables to the `Program` class. For simplicity, this example hardcodes the subscription key and configuration ID, but make sure you're pulling them from secured storage instead.
 
-3. In the main method of your project, create the following variables for your Bing Custom Search API subscription key, search instance's custom configuration ID, and search term:
+```csharp
+        // In production, make sure you're pulling the subscription key and configuration
+        // ID from secured storage.
 
-    ```csharp
-    var subscriptionKey = "YOUR-SUBSCRIPTION-KEY";
-    var customConfigId = "YOUR-CUSTOM-CONFIG-ID";
-    var searchTerm = args.Length > 0 ? args[0]:"microsoft";
-    ```
+        private static string _subscriptionKey = "<your key goes here>"; 
+        private static string _baseUri = "https://api.bing.microsoft.com/bingcustomsearch/v7.0/search";
+        private static string _customConfigId = "<your custom instance configuration ID goes here>";
 
-4. Construct the request URL by appending your search term to the `q=` query parameter, and your search instance's custom configuration ID to the `customconfig=` parameter. Separate the parameters with an ampersand (`&`). 
+        // The user's search string.
 
-    ```csharp
-    var url = "https://api.bing.microsoft.com/bingcustomsearch/v7.0/search?" +
-                "q=" + searchTerm + "&" +
-                "customconfig=" + customConfigId;
-    ```
+        private static string searchString = "surface book 3";
 
-## Send and receive a search request 
+        // Bing uses the X-MSEdge-ClientID header to provide users with consistent
+        // behavior across Bing API calls. See the reference documentation
+        // for usage.
 
-1. Create a request client, and add your subscription key to the `Ocp-Apim-Subscription-Key` header.
+        private static string _clientIdHeader = null;
+```
 
-    ```csharp
-    var client = new HttpClient();
-    client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", subscriptionKey);
-    ```
+Here are all the query parameters you can add to the base URI. The *q* parameter is required and you should always include the *mkt* parameter too. The rest are optional. For information about these parameters, see [Query parameters](../../reference/query-parameters.md).
 
-2. Perform the search request and get the response as a JSON object.
+```csharp
+        private const string QUERY_PARAMETER = "?q=";  // Required
+        private const string CUSTOM_CONFIG_PARAMETER = "&customConfig=";  // Required
+        private const string MKT_PARAMETER = "&mkt=";  // Strongly suggested
+        private const string COUNT_PARAMETER = "&count=";
+        private const string OFFSET_PARAMETER = "&offset=";
+        private const string SAFE_SEARCH_PARAMETER = "&safeSearch=";
+        private const string TEXT_DECORATIONS_PARAMETER = "&textDecorations=";
+        private const string TEXT_FORMAT_PARAMETER = "&textFormat=";
+```
 
-    ```csharp
-    var httpResponseMessage = client.GetAsync(url).Result;
-    var responseContent = httpResponseMessage.Content.ReadAsStringAsync().Result;
-    BingCustomSearchResponse response = JsonConvert.DeserializeObject<BingCustomSearchResponse>(responseContent);
-    ```
-## Process and view the results
 
-- Iterate over the response object to display information about each search result, including its name, url, and the date the webpage was last crawled.
+## Declare the Main method
 
-    ```csharp
-    for(int i = 0; i < response.webPages.value.Length; i++) {                
-        var webPage = response.webPages.value[i];
-        
-        Console.WriteLine("name: " + webPage.name);
-        Console.WriteLine("url: " + webPage.url);                
-        Console.WriteLine("displayUrl: " + webPage.displayUrl);
-        Console.WriteLine("snippet: " + webPage.snippet);
-        Console.WriteLine("dateLastCrawled: " + webPage.dateLastCrawled);
-        Console.WriteLine();
-    }
-    Console.WriteLine("Press any key to exit...");
-    Console.ReadKey();
-    ```
+Our `Main()` method is pretty simple since we're going to implement the HTTP requests asynchronously.
+
+```csharp
+        static void Main()
+        {
+            RunAsync().Wait();
+        }
+```
+
+## Where all the work happens
+
+The `RunAsync` method is where all the work happens. It builds the query string that's appended to the base URI, waits for the asynchronous HTTP request to return, deserializes the response, and either prints the search results or an error message.
+
+This example uses dictionaries instead of objects to access the response data.
+
+```csharp
+        static async Task RunAsync()
+        {
+            try
+            {
+                // Remember to encode query parameters like q, responseFilters, promote, etc.
+
+                var queryString = QUERY_PARAMETER + Uri.EscapeDataString(searchString);
+                queryString += CUSTOM_CONFIG_PARAMETER + _customConfigId;
+                queryString += MKT_PARAMETER + "en-us";
+                queryString += TEXT_DECORATIONS_PARAMETER + Boolean.TrueString;
+
+                HttpResponseMessage response = await MakeRequestAsync(queryString);
+
+                _clientIdHeader = response.Headers.GetValues("X-MSEdge-ClientID").FirstOrDefault();
+
+                // This example uses dictionaries instead of objects to access the response data.
+
+                var contentString = await response.Content.ReadAsStringAsync();
+                Dictionary<string, object> searchResponse = JsonConvert.DeserializeObject<Dictionary<string, object>>(contentString);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    PrintResponse(searchResponse);
+                }
+                else
+                {
+                    PrintErrors(response.Headers, searchResponse);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            Console.WriteLine("\nPress ENTER to exit...");
+            Console.ReadLine();
+        }
+```
+
+
+## The HTTP call
+
+Here's the HTTP request. It's your basic HTTP GET request. Use whatever HTTP client works for you.
+
+```csharp
+        // Makes the request to the Web Search endpoint.
+
+        static async Task<HttpResponseMessage> MakeRequestAsync(string queryString)
+        {
+            var client = new HttpClient();
+
+            // Request headers. The subscription key is the only required header but you should
+            // include User-Agent (especially for mobile), X-MSEdge-ClientID, X-Search-Location
+            // and X-MSEdge-ClientIP (especially for local aware queries).
+
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", _subscriptionKey);
+
+            return (await client.GetAsync(_baseUri + queryString));
+        }
+```
+
+That's all the more there is to sending a search request and getting back search results. The rest of the sections walk you through one way of parsing the JSON response and displaying the search results. Be sure to read the [use and display requirements](../../../bing-web-search/use-display-requirements.md) to make sure you comply with all display requirements.
+
+
+## Using ranking to display the search results
+
+If the request succeeds, the code calls the `PrintResponse` method to print the search results in the console window.
+
+The example uses the RankingResponse answer to display the search results. The ranking determines which answers to display in the pole, mainline, and sidebar sections of the search results page. For information about using the RankingResponse answer, see [Use ranking to display search results](../../../bing-web-search/rank-results.md). 
+
+```csharp
+        // Prints the JSON response data for pole, mainline, and sidebar.
+
+        static void PrintResponse(Dictionary<string, object> response)
+        {
+            Console.WriteLine("The response contains the following answers:\n");
+
+            var ranking = response["rankingResponse"] as Newtonsoft.Json.Linq.JToken; 
+
+            Newtonsoft.Json.Linq.JToken position;
+
+            if ((position = ranking["pole"]) != null)
+            {
+                Console.WriteLine("Pole Position:\n");
+                DisplayAnswersByRank(position["items"], response);
+            }
+
+            if ((position = ranking["mainline"]) != null)
+            {
+                Console.WriteLine("Mainline Position:\n");
+                DisplayAnswersByRank(position["items"], response);
+            }
+
+            if ((position = ranking["sidebar"]) != null)
+            {
+                Console.WriteLine("Sidebar Position:\n");
+                DisplayAnswersByRank(position["items"], response);
+            }
+        }
+```
+
+### Display all results for an answer or a single result
+
+Each item in the ranking tells you whether to display all results from the answer together or to display a single result from the answer. If the item includes the `resultIndex` field, use the index value to display that single result from the answer. But if the item doesn't include `resultIndex`, you display all results from the answer. 
+
+```csharp
+        // Displays each result based on ranking. Ranking contains the results for
+        // the pole, mainline, or sidebar section of the search results.
+
+        static void DisplayAnswersByRank(Newtonsoft.Json.Linq.JToken items, Dictionary<string, object> response)
+        {
+            foreach (Newtonsoft.Json.Linq.JToken item in items)
+            {
+                var answerType = (string)item["answerType"];
+                Newtonsoft.Json.Linq.JToken index = -1;
+
+                // If the ranking item doesn't include an index of the result to  
+                // display, then display all the results for that answer.
+
+                if ("WebPages" == answerType)
+                {
+                    if ((index = item["resultIndex"]) == null)
+                    {
+                        DisplayAllWebPages(((Newtonsoft.Json.Linq.JToken)response["webPages"])["value"]);
+                    }
+                    else
+                    {
+                        DisplayWegPage(((Newtonsoft.Json.Linq.JToken)response["webPages"])["value"].ElementAt((int)index));
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("\nUnknown answer type: {0}\n", answerType);
+                }
+            }
+        }
+```
+
+### Display answer results
+
+This example accesses a few of the fields from each type of answer result and applies any contractual rules. You will likely use data from more of the fields than are shown in this example. For information about the fields that each answer result may include, see [Response objects](../../reference/response-objects.md). 
+
+```csharp
+        // Displays all webpages in the Webpages answer.
+        static void DisplayAllWebPages(Newtonsoft.Json.Linq.JToken webpages)
+        {
+            foreach (Newtonsoft.Json.Linq.JToken webpage in webpages)
+            {
+                DisplayWegPage(webpage);
+            }
+        }
+
+        // Displays a single webpage.
+        static void DisplayWegPage(Newtonsoft.Json.Linq.JToken webpage)
+        {
+            // Some webpages require attribution. Checks if this page requires
+            // attribution and gets the list of attributions to apply.
+
+            Dictionary<string, string> rulesByField = null;
+            rulesByField = GetRulesByField(webpage["contractualRules"]);
+
+            Console.WriteLine("\tWebpage\n");
+            Console.WriteLine("\t\tName: " + webpage["name"]);
+            Console.WriteLine("\t\tUrl: " + webpage["url"]);
+            Console.WriteLine("\t\tDisplayUrl: " + webpage["displayUrl"]);
+            Console.WriteLine("\t\tSnippet: " + webpage["snippet"]);
+
+            // Apply attributions if they exist.
+
+            if (null != rulesByField && null != rulesByField["snippet"])
+            {
+                Console.WriteLine("\t\t\tData from: " + rulesByField["snippet"]);
+            }
+
+            Console.WriteLine();
+
+        }
+```
+
+### Handling contractual rules
+
+You need to check each result to see if it includes one or more contractual rules. Some webpages contain contractual rules. Some rules apply to the result as a whole and others apply to a specific field. If the rule applies to a specific field, it includes the `targetPropertyName` field, which contains the name of the target field. 
+
+This example, builds a dictionary of the rules that the calling method accesses when it displays the result. If the rule applies to the result as a whole, the key `global`. Otherwise, the key is the name of the field that the rule targets.
+
+```csharp
+        // Checks if the result includes contractual rules and builds a dictionary of 
+        // the rules. 
+
+        static Dictionary<string, string> GetRulesByField(Newtonsoft.Json.Linq.JToken contractualRules)
+        {
+            if (null == contractualRules)
+            {
+                return null;
+            }
+
+            var rules = new Dictionary<string, string>();
+
+            foreach (Newtonsoft.Json.Linq.JToken rule in contractualRules as Newtonsoft.Json.Linq.JToken)
+            {
+                // Use the rule's type as the key.
+
+                string key = null;
+                string value = null;
+                var index = ((string)rule["_type"]).LastIndexOf('/');
+                var ruleType = ((string)rule["_type"]).Substring(index + 1);
+                string attribution = null;
+
+                if (ruleType == "LicenseAttribution")
+                {
+                    attribution = (string)rule["licenseNotice"];
+                }
+                else if (ruleType == "LinkAttribution")
+                {
+                    attribution = string.Format("{0}({1})", (string)rule["text"], (string)rule["url"]);
+                }
+                else if (ruleType == "MediaAttribution")
+                {
+                    attribution = (string)rule["url"];
+                }
+                else if (ruleType == "TextAttribution")
+                {
+                    attribution = (string)rule["text"];
+                }
+
+                // If the rule targets specific data in the result; for example, the
+                // snippet field, use the target's name as the key. Multiple rules
+                // can apply to the same field. 
+
+                if ((key = (string) rule["targetPropertyName"]) != null)
+                {
+                    if (rules.TryGetValue(key, out value))
+                    {
+                        rules[key] = value + " | " + attribution;
+                    }
+                    else
+                    {
+                        rules.Add(key, attribution);
+                    }
+                }
+                else
+                {
+                    // Otherwise, the rule applies to the result. Uses 'global' as the key
+                    // value for this case.
+
+                    key = "global";
+
+                    if (rules.TryGetValue(key, out value))
+                    {
+                        rules[key] = value + " | " + attribution;
+                    }
+                    else
+                    {
+                        rules.Add(key, attribution);
+                    }
+                }
+            }
+
+            return rules;
+        }
+```
+
+
+## Handling errors
+
+This section shows an option for handling errors that the service may return. For example, the service returns an error if your subscription key is not valid or is not valid for the specified endpoint. The service may also return an error if you specify a parameter value that's not valid.
+
+```csharp
+        // Print any errors that occur. Depending on which part of the service is
+        // throwing the error, the response may contain different error formats.
+
+        static void PrintErrors(HttpResponseHeaders headers, Dictionary<String, object> response)
+        {
+            Console.WriteLine("The response contains the following errors:\n");
+
+            object value;
+
+            if (response.TryGetValue("error", out value))  // typically 401, 403
+            {
+                PrintError(response["error"] as Newtonsoft.Json.Linq.JToken);
+            }
+            else if (response.TryGetValue("errors", out value))
+            {
+                // Bing API error
+
+                foreach (Newtonsoft.Json.Linq.JToken error in response["errors"] as Newtonsoft.Json.Linq.JToken)
+                {
+                    PrintError(error);
+                }
+
+                // Included only when HTTP status code is 400; not included with 401 or 403.
+
+                IEnumerable<string> headerValues;
+                if (headers.TryGetValues("BingAPIs-TraceId", out headerValues))
+                {
+                    Console.WriteLine("\nTrace ID: " + headerValues.FirstOrDefault());
+                }
+            }
+
+        }
+
+        static void PrintError(Newtonsoft.Json.Linq.JToken error)
+        {
+            string value = null;
+
+            Console.WriteLine("Code: " + error["code"]);
+            Console.WriteLine("Message: " + error["message"]);
+
+            if ((value = (string)error["parameter"]) != null)
+            {
+                    Console.WriteLine("Parameter: " + value);
+            }
+
+            if ((value = (string)error["value"]) != null)
+            {
+                Console.WriteLine("Value: " + value);
+            }
+        }
+```
+
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Build a Custom Search web app](../../tutorial/custom-search-web-page.md)
+- For a more in depth web app example, see the [Custom Web Search tutorial](../../tutorial/custom-search-web-page.md).
+

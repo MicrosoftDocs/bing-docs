@@ -12,188 +12,304 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Check spelling with Bing Spell Check REST API and C#
+# Quickstart: Check spelling using C# and Bing Spell Check API
 
-Use this quickstart to make your first call to Bing Spell Check REST API. This simple C# application sends a request to the API and returns a list of suggested corrections. 
+Use this quickstart to make your first call to Bing Spell Check API. This C# console application sends Bing a text string to check for spelling and grammar issues and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. 
 
-Although this application is written in C#, the API is a RESTful Web service compatible with most programming languages. The source code for this application is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/dotnet/Search/BingAutosuggestv7.cs).
+Grab your favorite .NET editor, JSON library, and [subscription key](../../../bing-web-search/get-subscription-key.md) for Bing Spell Check and let's get started. 
 
-## Prerequisites
 
-* Any edition of [Visual Studio 2017 or later](https://www.visualstudio.com/downloads/).
-* The Newtonsoft.Json NuGet package. 
-     
-   To install this package in Visual studio:
+## Create a project and declare dependencies
 
-     1. In **Solution Explorer**, right-click the Solution file.
-     1. Select **Manage NuGet Packages for Solution**.
-     1. Search for *Newtonsoft.Json* and install the package.
+Create a new project and declare the code's dependencies. This example uses <a href="https://www.newtonsoft.com/json" target="_blank">Newtonsoft</a> to parse the JSON response. Use Newtonsoft's NuGet package to install its libraries.
 
-* If you're using Linux/MacOS, you can run this application by using [Mono](https://www.mono-project.com/).
+```csharp
+using System;
+using System.Net.Http.Headers;
+using System.Net.Http;
+using System.Threading.Tasks;
+using System.Linq;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+```
 
-<!--
-[!INCLUDE [bing-spell-check-signup-requirements](../../../../includes/bing-spell-check-signup-requirements.md)]
--->
 
-## Create and initialize a project
+## Declare a namespace and class for your program
 
-1. Create a new console solution named SpellCheckSample in Visual Studio. Then, add the following namespaces into the main code file:
-    
-    ```csharp
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Net.Http;
-    using System.Net.Http.Headers;
-    using System.Text;
-    using Newtonsoft.Json;
-    ```
+Add a namespace and class. This example uses `SpellCheckQuickstart` for the namespace and `Program` for the class.  
 
-2. Create variables for the API endpoint, your subscription key, and the text to be spell checked. 
-
-    ```csharp
-    namespace SpellCheckSample
+```csharp
+namespace SpellCheckQuickstart
+{
+    class Program
     {
-        class Program
+        // The code in the following sections goes here.
+    }
+}
+```
+
+## Define variables
+
+Add a few variables to the `Program` class. For simplicity, this example hardcodes the subscription key, but make sure you're pulling it from secured storage instead.
+
+```csharp
+        // In production, make sure you're pulling the subscription key from secured storage.
+
+        private static string _subscriptionKey = "<your key goes here>"; 
+        private static string _baseUri = "https://api.bing.microsoft.com/v7.0/spellcheck";
+
+        // The text to spell check.
+
+        private static string _spellCheckString = "when its your turn turn, john, come runing";
+```
+
+Here are all the query parameters you're likely to use. The *text* parameter is required and you should always include the *mkt* parameter too. For information about these and other parameters you may specify, see [Query parameters](../../reference/query-parameters.md).
+
+```csharp
+        // The query parameters you're most likely to use.
+
+        private const string TEXT_PARAMETER = "?text=";  // Required
+        private const string MKT_PARAMETER = "&mkt=";    // Strongly suggested
+        private const string MODE_PARAMETER = "&mode=";  // proof (default), spell
+```
+
+
+## Declare the Main method
+
+Our `Main()` method is pretty simple since we're going to implement the HTTP requests asynchronously.
+
+```csharp
+        static void Main()
         {
-            static string host = "https://api.bing.microsoft.com";
-            static string path = "/v7.0/spellcheck?";
-            static string key = "<ENTER-KEY-HERE>";
-            //text to be spell-checked
-            static string text = "Hollo, wrld!";
+            RunAsync().Wait();
         }
-    }
-    ```
-
-3. Create a string for your search parameters: 
-
-   1. Assign your market code to the `mkt` parameter with the `=` operator. The market code is the code of the country/region you make the request from. 
-
-   1. Add the `mode` parameter with the `&` operator, and then assign the spell-check mode. The mode can be either `proof` (catches most spelling/grammar errors) or `spell` (catches most spelling errors, but not as many grammar errors).
-    
-    ```csharp
-    static string params_ = "mkt=en-US&mode=proof";
-    ```
-
-## Create and send a spell check request
-
-1. Create an asynchronous function called `SpellCheck()` to send a request to the API. Create a `HttpClient`, and add your subscription key to the `Ocp-Apim-Subscription-Key` header. Within the function, follow the next steps.
-
-    ```csharp
-    async static void SpellCheck()
-    {
-        var client = new HttpClient();
-        client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", key);
-
-        HttpResponseMessage response = null;
-        // add the rest of the code snippets here (except for main())...
-    }
-    ```
-
-2. Create the URI for your request by appending your host, path, and parameters.
-    
-    ```csharp
-    string uri = host + path + params_;
-    ```
-
-3. Create a list with a `KeyValuePair` object containing your text, and use it to create a `FormUrlEncodedContent` object. Set the header information, and use `PostAsync()` to send the request.
-
-    ```csharp
-    var values = new Dictionary<string, string>();
-    values.Add("text", text);
-    var content = new FormUrlEncodedContent(values);
-    content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
-    response = await client.PostAsync(uri, new FormUrlEncodedContent(values));
-    ```
-
-## Get and print the API response
-
-### Get the client ID header
-
-If the response contains an `X-MSEdge-ClientID` header, get the value and print it.
-
-``` csharp
-string client_id;
-if (response.Headers.TryGetValues("X-MSEdge-ClientID", out IEnumerable<string> header_values))
-{
-    client_id = header_values.First();
-    Console.WriteLine("Client ID: " + client_id);
-}
 ```
 
-### Get the response
 
-Get the response from the API. Deserialize the JSON object, and print it to the console.
+## Where all the work happens
+
+The `RunAsync` method is where all the work happens. It builds the query string that's appended to the base URI, waits for the asynchronous HTTP request to return, deserializes the response, and either prints the spelling and grammar results or an error message.
+
+This example uses dictionaries instead of objects to access the response data.
 
 ```csharp
-string contentString = await response.Content.ReadAsStringAsync();
+        static async Task RunAsync()
+        {
+            try
+            {
+                // Remember to encode the text query parameter.
 
-dynamic jsonObj = JsonConvert.DeserializeObject(contentString);
-Console.WriteLine(jsonObj);
+                var queryString = TEXT_PARAMETER + Uri.EscapeDataString(_spellCheckString);
+                queryString += MODE_PARAMETER + "proof"; // "spell";
+                queryString += MKT_PARAMETER + "en-us";
+
+                HttpResponseMessage response = await MakeRequestAsync(queryString);
+
+                _clientIdHeader = response.Headers.GetValues("X-MSEdge-ClientID").FirstOrDefault();
+
+                // This example uses dictionaries instead of objects to access the response data.
+
+                var contentString = await response.Content.ReadAsStringAsync();
+                Dictionary<string, object> searchResponse = JsonConvert.DeserializeObject<Dictionary<string, object>>(contentString);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    PrintSpellCheckResults(searchResponse);
+                }
+                else
+                {
+                    PrintErrors(response.Headers, searchResponse);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            Console.WriteLine("\nPress ENTER to exit...");
+            Console.ReadLine();
+        }
 ```
 
-## Call the spell check function
 
-In the `Main()` function of your project, call `SpellCheck()`.
+## The HTTP call
+
+Here's the HTTP request. It's your basic HTTP GET request. Use whatever HTTP client works for you.
 
 ```csharp
-static void Main(string[] args)
-{
-    SpellCheck();
-    Console.ReadLine();
-}
+        // Makes the request to the Spell Check endpoint.
+
+        static async Task<HttpResponseMessage> MakeRequestAsync(string queryString)
+        {
+            var client = new HttpClient();
+
+            // Request headers. The subscription key is the only required header but you should
+            // include User-Agent (especially for mobile), X-MSEdge-ClientID, X-Search-Location
+            // and X-MSEdge-ClientIP (especially for local aware queries).
+
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", _subscriptionKey);
+
+            return (await client.GetAsync(_baseUri + queryString));
+        }
 ```
 
-## Run the application
+That's all the more there is to sending spell check request and getting back results. To see what the answer looks like in the JSON response, see [Handling the search response](../../how-to/search-response.md).
 
-Build and run your project. If you're using Visual Studio, press **F5** to debug the file.
+The rest of the sections walk you through one way of parsing the JSON response and displaying the results. Be sure to read the [use and display requirements](../../../bing-web-search/use-display-requirements.md) to make sure you comply with all display requirements.
 
-## Example JSON response
 
-A successful response is returned in JSON, as shown in the following example: 
+## Displaying the spelling results
 
-```json
-{
-   "_type": "SpellCheck",
-   "flaggedTokens": [
-      {
-         "offset": 0,
-         "token": "Hollo",
-         "type": "UnknownToken",
-         "suggestions": [
+The response's `flaggedTokens` field contains the list of spelling and grammar issues. The example shows the fields you're most likely to use. For the full list of fields, see the [FlaggedToken](../../reference/response-objects.md#flaggedtoken) object.
+
+```csharp
+        // Prints the list of spelling issues and the corrected string.
+
+        static void PrintSpellCheckResults(Dictionary<string, object> response)
+        {
+            string updatedTextString = _spellCheckString;
+            int adjustOffset = 0;
+            int tokenLength = 0;
+            bool isRemoveTokenCase = false;
+
+            Console.WriteLine("The response contains the following spelling issues:\n");
+
+            var tokens = response["flaggedTokens"] as Newtonsoft.Json.Linq.JToken;
+
+            foreach (Newtonsoft.Json.Linq.JToken token in tokens)
             {
-               "suggestion": "Hello",
-               "score": 0.9115257530801
-            },
-            {
-               "suggestion": "Hollow",
-               "score": 0.858039839213461
-            },
-            {
-               "suggestion": "Hallo",
-               "score": 0.597385084464481
+                Console.WriteLine("Word: " + token["token"]);
+                Console.WriteLine("Suggestion: " + token["suggestions"][0]["suggestion"]);
+                Console.WriteLine("Offset: " + token["offset"]);
+                Console.WriteLine();
+
+                tokenLength = ((string)token["token"]).Length;
+
+                // Repeat token case
+
+                if ((string)(token["suggestions"][0]["suggestion"]) == string.Empty)
+                {
+                    isRemoveTokenCase = true;
+                    adjustOffset--;
+                    tokenLength++;
+                }
+
+                updatedTextString = updatedTextString.Remove((int)token["offset"] + adjustOffset, tokenLength);
+
+                if (!isRemoveTokenCase)
+                {
+                    updatedTextString = updatedTextString.Insert((int)token["offset"] + adjustOffset, (string)token["suggestions"][0]["suggestion"]);
+                }
+                else
+                {
+                    isRemoveTokenCase = false;
+                    adjustOffset++;
+                }
+
+                // The token offset value is the offset into the original string but
+                // we need the offset into the updated text string after applying the
+                // changes.
+
+                adjustOffset += ((string)token["suggestions"][0]["suggestion"]).Length - tokenLength;
             }
-         ]
-      },
-      {
-         "offset": 7,
-         "token": "wrld",
-         "type": "UnknownToken",
-         "suggestions": [
-            {
-               "suggestion": "world",
-               "score": 0.9115257530801
-            }
-         ]
-      }
-   ]
-}
+
+            Console.WriteLine("Original text: " + _spellCheckString);
+            Console.WriteLine("Updated text: " + updatedTextString);
+        }
 ```
+
+
+## Handling errors
+
+This section shows an option for handling errors that the service may return. For example, the service returns an error if your subscription key is not valid or is not valid for the specified endpoint. The service may also return an error if you specify a parameter value that's not valid.
+
+```csharp
+        // Print any errors that occur. Depending on which part of the service is
+        // throwing the error, the response may contain different error formats.
+
+        static void PrintErrors(HttpResponseHeaders headers, Dictionary<String, object> response)
+        {
+            Console.WriteLine("The response contains the following errors:\n");
+
+            object value;
+
+            if (response.TryGetValue("error", out value))  // typically 401, 403
+            {
+                PrintError(response["error"] as Newtonsoft.Json.Linq.JToken);
+            }
+            else if (response.TryGetValue("errors", out value))
+            {
+                // Bing API error
+
+                foreach (Newtonsoft.Json.Linq.JToken error in response["errors"] as Newtonsoft.Json.Linq.JToken)
+                {
+                    PrintError(error);
+                }
+
+                // Included only when HTTP status code is 400; not included with 401 or 403.
+
+                IEnumerable<string> headerValues;
+                if (headers.TryGetValues("BingAPIs-TraceId", out headerValues))
+                {
+                    Console.WriteLine("\nTrace ID: " + headerValues.FirstOrDefault());
+                }
+            }
+
+        }
+
+        static void PrintError(Newtonsoft.Json.Linq.JToken error)
+        {
+            string value = null;
+
+            Console.WriteLine("Code: " + error["code"]);
+            Console.WriteLine("Message: " + error["message"]);
+
+            if ((value = (string)error["parameter"]) != null)
+            {
+                    Console.WriteLine("Parameter: " + value);
+            }
+
+            if ((value = (string)error["value"]) != null)
+            {
+                Console.WriteLine("Value: " + value);
+            }
+        }
+```
+
+
+## Using a POST request
+
+You can send requests using an HTTP GET or POST request. Use GET requests if your strings are always less than 1,500 characters; otherwise, for longer text or for documentation scenarios, use POST. Make the following changes to the quickstart to use POST.
+
+Replace the `TEXT_PARAMETER` constant with:
+
+```csharp
+        private const string TEXT_PARAMETER = "text=";  // Required
+```
+
+And replace the `MakeRequestAsync` method with:
+
+```csharp
+        // Makes the request to the Spell Check endpoint.
+
+        static async Task<HttpResponseMessage> MakeRequestAsync(string queryString)
+        {
+            var client = new HttpClient();
+
+            // Request headers. The subscription key is the only required header but you should
+            // include User-Agent (especially for mobile), X-MSEdge-ClientID, X-Search-Location
+            // and X-MSEdge-ClientIP (especially for local aware queries).
+
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", _subscriptionKey);
+
+            var postContent = new StringContent(queryString, System.Text.Encoding.UTF8, "application/x-www-form-urlencoded");
+
+            return (await client.PostAsync(_baseUri, postContent));
+        }
+```
+
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Create a single-page web app](../../tutorial/spellcheck.md)
+- For a more in depth web app example, see the [Spell check web app tutorial](../../tutorial/spellcheck.md).
 
-- [What is the Bing Spell Check API?](../../overview.md)
-- [Bing Spell Check API v7 reference](../../reference/endpoints.md)

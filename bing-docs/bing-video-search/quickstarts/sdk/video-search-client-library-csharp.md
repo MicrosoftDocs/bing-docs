@@ -6,6 +6,7 @@ services: bing-search-services
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
+ms.subservice: bing-video-search
 ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi

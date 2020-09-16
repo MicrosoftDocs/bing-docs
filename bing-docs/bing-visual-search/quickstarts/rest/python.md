@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Get image insights using the REST API and Python - Bing Visual Search"
 titleSuffix: Bing Search Services
-description: Learn how to upload an image to the Bing Visual Search API and get insights about it.
+description: Learn how to get image insights using Python and Bing Visual Search API.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen

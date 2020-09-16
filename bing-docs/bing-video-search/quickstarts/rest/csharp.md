@@ -13,218 +13,328 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Search for videos using the Bing Video Search REST API and C#
+# Quickstart: Search for videos using C# and Bing Video Search API
 
-Use this quickstart to make your first call to the Bing Video Search API. This simple C# application sends an HTTP video search query to the API, and displays the JSON response. Although this application is written in C#, the API is a RESTful Web service compatible with most programming languages.
+Use this quickstart to make your first call to Bing Video Search API. This C# console application sends a search request to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. 
 
-The source code for this sample is available [on GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/dotnet/Search/BingVideoSearchv7.cs) with additional error handling, features, and code annotations.
+Grab your favorite .NET editor, JSON library, and [subscription key](../../../bing-web-search/get-subscription-key.md) for Bing Image Search and let's get started. 
 
-## Prerequisites
-* Any edition of [Visual Studio 2017 or later](https://www.visualstudio.com/downloads/).
-* The [Json.NET](https://www.newtonsoft.com/json) framework, available as a NuGet package.
-* If you're using Linux/MacOS, you can run this application by using [Mono](https://www.mono-project.com/).
 
-<!--
-[!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
--->
+## Create a project and declare dependencies
 
-## Create and initialize a project
-
-1. Create a new console solution in Visual Studio. Then, add the following namespaces to the main code file:
-
-    ```csharp
-    using System;
-    using System.Text;
-    using System.Net;
-    using System.IO;
-    using System.Collections.Generic;
-    ```
-
-2. Add variables for your subscription key, endpoint, and search term. 
-
-    ```csharp
-    const string accessKey = "enter your key here";
-    const string uriBase = "https://api.bing.microsoft.com/bing/v7.0/videos/search";
-    const string searchTerm = "kittens";
-    ```
-
-## Create a struct to format the Bing Video Search API response
-
-Define a `SearchResult` struct to contain the image search results, and JSON header information.
+Create a new project and declare the code's dependencies. This example uses <a href="https://www.newtonsoft.com/json" target="_blank">Newtonsoft</a> to parse the JSON response. Use Newtonsoft's NuGet package to install its libraries.
 
 ```csharp
-struct SearchResult
-    {
-        public String jsonResult;
-        public Dictionary<String, String> relevantHeaders;
-    }
+using System;
+using System.Net.Http.Headers;
+using System.Net.Http;
+using System.Xml;
+using System.Threading.Tasks;
+using System.Linq;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 ```
 
-## Create and handle a video search request
 
-1. Create a method named `BingVideoSearch` to perform the call to the API, and set the return type to the `SearchResult` struct created previously. 
+## Declare a namespace and class for your program
 
-   Add code to this method in the steps that follow.
+Add a namespace and class. This example uses `VideoSearchQuickstart` for the namespace and `Program` for the class.  
 
-1. Construct the URI for the search request. Format the search term `toSearch` before you append it to the string.
-
-    ```csharp    
-    static SearchResult BingVideoSearch(string toSearch){
-    
-        var uriQuery = uriBase + "?q=" + Uri.EscapeDataString(toSearch);
-    //...
-    ```
-
-2. Perform the web request by adding your key to the `Ocp-Acpim-Subscription-Key` header, and using a `HttpWebResponse` object to store the API response. Then, use a `StreamReader` to get the JSON string.
-
-    ```csharp
-    //...
-    WebRequest request = HttpWebRequest.Create(uriQuery);
-    request.Headers["Ocp-Apim-Subscription-Key"] = accessKey;
-    HttpWebResponse response = (HttpWebResponse)request.GetResponseAsync().Result;
-    string json = new StreamReader(response.GetResponseStream()).ReadToEnd();
-    //...
-    ```
-
-## Process the result
-
-1. Create the search result object, and extract the Bing HTTP headers. Then, return the `searchResult` object. 
-
-    ```csharp
-    var searchResult = new SearchResult();
-    searchResult.jsonResult = json;
-    searchResult.relevantHeaders = new Dictionary<String, String>();
-
-    // Extract Bing HTTP headers
-    foreach (String header in response.Headers)
-    {
-        if (header.StartsWith("BingAPIs-") || header.StartsWith("X-MSEdge-"))
-            searchResult.relevantHeaders[header] = response.Headers[header];
-    }
-    return searchResult;
-    ```
-
-2. Print the response.
-
-    ```csharp
-    Console.WriteLine(result.jsonResult);
-    ```
-
-## Example JSON response 
-
-A successful response is returned in JSON, as shown in the following example:
-
-```json
+```csharp
+namespace VideoSearchQuickstart
 {
-    "_type": "Videos",
-    "instrumentation": {},
-    "readLink": "https://api.cognitive.microsoft.com/api/v7/videos/search?q=kittens",
-    "webSearchUrl": "https://www.bing.com/videos/search?q=kittens",
-    "totalEstimatedMatches": 1000,
-    "value": [
-        {
-            "webSearchUrl": "https://www.bing.com/videos/search?q=kittens&view=...",
-            "name": "Top 10 cute kitten videos compilation",
-            "description": "HELP HOMELESS ANIMALS AND WIN A PRIZE BY CHOOSING...",
-            "thumbnailUrl": "https://tse4.mm.bing.net/th?id=OVP.n1aE_Oikl4MtzBb...",
-            "datePublished": "2014-11-12T22:47:36.0000000",
-            "publisher": [
-                {
-                    "name": "Fabrikam"
-                }
-            ],
-            "creator": {
-                "name": "Marcus Appel"
-            },
-            "isAccessibleForFree": true,
-            "contentUrl": "https://www.fabrikam.com/watch?v=8HVWitAW-Qg",
-            "hostPageUrl": "https://www.fabrikam.com/watch?v=8HVWitAW-Qg",
-            "encodingFormat": "h264",
-            "hostPageDisplayUrl": "https://www.fabrikam.com/watch?v=8HVWitAW-Qg",
-            "width": 480,
-            "height": 360,
-            "duration": "PT3M52S",
-            "motionThumbnailUrl": "https://tse4.mm.bing.net/th?id=OM.j4QyJAENJphdZQ_1501386166&pid=Api",
-            "embedHtml": "<iframe width=\"1280\" height=\"720\" src=\"https://www.fabrikam.com/embed/8HVWitAW-Qg?autoplay=1\" frameborder=\"0\" allowfullscreen></iframe>",
-            "allowHttpsEmbed": true,
-            "viewCount": 7513633,
-            "thumbnail": {
-                "width": 300,
-                "height": 168
-            },
-            "videoId": "655D98260D012432848F6558260D012432848F",
-            "allowMobileEmbed": true,
-            "isSuperfresh": false
-        },
-        . . .
-    ],
-    "nextOffset": 36,
-    "queryExpansions": [
-        {
-            "text": "Kittens Meowing",
-            "displayText": "Meowing",
-            "webSearchUrl": "https://www.bing.com/videos/search?q=Kittens+Meowing...",
-            "searchLink": "https://api.cognitive.microsoft.com/api/v7/videos/search...",
-            "thumbnail": {
-                "thumbnailUrl": "https://tse3.mm.bing.net/th?q=Kittens+Meowing&pid..."
-            }
-        },
-        {
-            "text": "Funny Kittens",
-            "displayText": "Funny",
-            "webSearchUrl": "https://www.bing.com/videos/search?q=Funny+Kittens...",
-            "searchLink": "https://api.cognitive.microsoft.com/api/v7/videos/search...",
-            "thumbnail": {
-                "thumbnailUrl": "https://tse3.mm.bing.net/th?q=Funny+Kittens&..."
-            }
-        },
-        . . .
-    ],
-    "pivotSuggestions": [
-        {
-            "pivot": "kittens",
-            "suggestions": [
-                {
-                    "text": "Cat",
-                    "displayText": "Cat",
-                    "webSearchUrl": "https://www.bing.com/videos/search?q=Cat...",
-                    "searchLink": "https://api.cognitive.microsoft.com/api/v7/videos/search?...",
-                    "thumbnail": {
-                        "thumbnailUrl": "https://tse3.mm.bing.net/th?q=Cat&pid=Api..."
-                    }
-                },
-                {
-                    "text": "Feral Cat",
-                    "displayText": "Feral Cat",
-                    "webSearchUrl": "https://www.bing.com/videos/search?q=Feral+Cat...",
-                    "searchLink": "https://api.cognitive.microsoft.com/api/v7/videos/search...",
-                    "thumbnail": {
-                        "thumbnailUrl": "https://tse3.mm.bing.net/th?q=Feral+Cat&pid=Api&..."
-                    }
-                }
-            ]
-        }
-    ],
-    "relatedSearches": [
-        {
-            "text": "Kittens Being Born",
-            "displayText": "Kittens Being Born",
-            "webSearchUrl": "https://www.bing.com/videos/search?q=Kittens+Being+Born...",
-            "searchLink": "https://api.cognitive.microsoft.com/api/v7/videos/search?...",
-            "thumbnail": {
-                "thumbnailUrl": "https://tse1.mm.bing.net/th?q=Kittens+Being+Born&pid=..."
-            }
-        },
-        . . .
-    ]
+    class Program
+    {
+        // The code in the following sections goes here.
+    }
 }
 ```
 
+## Define variables
+
+Add a few variables to the `Program` class. For simplicity, this example hardcodes the subscription key, but make sure you're pulling it from secured storage instead.
+
+```csharp
+        // In production, make sure you're pulling the subscription key from secured storage.
+
+        private static string _subscriptionKey = "<your key goes here>"; 
+        private static string _baseUri = "https://api.bing.microsoft.com/v7.0/videos/search";
+
+        // The user's search string.
+
+        private static string searchString = "hummingbird";
+
+        // To page through the videos, you'll need the next offset that Bing returns.
+
+        private static int _nextOffset = 0;
+
+        // Bing uses the X-MSEdge-ClientID header to provide users with consistent
+        // behavior across Bing API calls. See the reference documentation
+        // for usage.
+
+        private static string _clientIdHeader = null;
+```
+
+Here are all the query parameters you can add to the base URI. The *q* parameter is required and you should always include the *mkt* parameter too. The rest are optional. For information about these parameters, see [Query parameters](../../reference/query-parameters.md).
+
+```csharp
+        private const string QUERY_PARAMETER = "?q=";  // Required
+        private const string MKT_PARAMETER = "&mkt=";  // Strongly suggested
+        private const string COUNT_PARAMETER = "&count=";
+        private const string OFFSET_PARAMETER = "&offset=";
+        private const string ID_PARAMETER = "&id=";
+        private const string SAFE_SEARCH_PARAMETER = "&safeSearch=";
+```
+
+Use these query parameters to filter the images that Bing returns. For information about these parameters, see [Filter query parameters](../../reference/query-parameters.md#filter-query-parameters).
+
+```csharp
+        private const string ASPECT_PARAMETER = "&aspect=";
+        private const string EMBEDDED_PARAMETER = "&embedded=";
+        private const string FRESHNESS_PARAMETER = "&freshness=";
+        private const string PRICING_PARAMETER = "&pricing=";
+        private const string RESOLUTION_PARAMETER = "&resolution=";
+        private const string VIDEO_LENGTH_PARAMETER = "&videoLength=";
+```
+
+
+## Declare the Main method
+
+Our `Main()` method is pretty simple since we're going to implement the HTTP requests asynchronously.
+
+```csharp
+        static void Main()
+        {
+            RunAsync().Wait();
+        }
+```
+
+
+## Where all the work happens
+
+The `RunAsync` method is where all the work happens. It builds the query string that's appended to the base URI, waits for the asynchronous HTTP request to return, deserializes the response, and either prints the search results or an error message.
+
+This example uses dictionaries instead of objects to access the response data.
+
+```csharp
+        static async Task RunAsync()
+        {
+            try
+            {
+                // Remember to encode the q query parameter.
+
+                var queryString = QUERY_PARAMETER + Uri.EscapeDataString(searchString); 
+                queryString += MKT_PARAMETER + "en-us";
+
+                HttpResponseMessage response = await MakeRequestAsync(queryString);
+
+                _clientIdHeader = response.Headers.GetValues("X-MSEdge-ClientID").FirstOrDefault();
+
+                // This example uses dictionaries instead of objects to access the response data.
+
+                var contentString = await response.Content.ReadAsStringAsync();
+                Dictionary<string, object> searchResponse = JsonConvert.DeserializeObject<Dictionary<string, object>>(contentString);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    PrintVideos(searchResponse);
+                }
+                else
+                {
+                    PrintErrors(response.Headers, searchResponse);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+
+            Console.WriteLine("\nPress ENTER to exit...");
+            Console.ReadLine();
+        }
+```
+
+
+## The HTTP call
+
+Here's the HTTP request. It's your basic HTTP GET request. Use whatever HTTP client works for you.
+
+```csharp
+        // Makes the request to the Video Search endpoint.
+
+        static async Task<HttpResponseMessage> MakeRequestAsync(string queryString)
+        {
+            var client = new HttpClient();
+
+            // Request headers. The subscription key is the only required header but you should
+            // include User-Agent (especially for mobile), X-MSEdge-ClientID, X-Search-Location
+            // and X-MSEdge-ClientIP (especially for local aware queries).
+
+            client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", _subscriptionKey);
+
+            return (await client.GetAsync(_baseUri + queryString));
+        }
+```
+
+That's all the more there is to sending a search request and getting back search results. To see what the answer looks like in the JSON response, see [Handling the videos search response](../../how-to/search-response.md).
+
+The rest of the sections walk you through one way of parsing the JSON response and displaying the search results. Be sure to read the [use and display requirements](../../../bing-web-search/use-display-requirements.md) to make sure you comply with all display requirements.
+
+For information about resizing the thumbnails, see [Resizing and cropping thumbnails](../../../bing-web-search/resize-and-crop-thumbnails.md).
+
+
+
+## Displaying the videos
+
+The response's `value` field contains the list of videos. The example shows the fields you're most likely to use. For the full list of fields, see the [Video](../../reference/response-objects.md#video) object.
+
+The [VideosAnswer](../../reference/response-objects.md#videosanswer) object contains a number of fields like `pivotSuggestions`, `queryExpansions`, and `relatedSearches` that this example doesn't address.
+
+```csharp
+        // Prints the list of videos in the JSON response.
+
+        static void PrintVideos(Dictionary<string, object> response)
+        {
+            Newtonsoft.Json.Linq.JToken value = null;
+
+            Console.WriteLine("The response contains the following videos:\n");
+
+            // This example just prints the first page of videos. If you want to page
+            // through the videos, set the offset query parameter to the next offset 
+            // value that Bing returns.
+
+            _nextOffset = (long)response["nextOffset"];
+
+            var videos = response["value"] as Newtonsoft.Json.Linq.JToken;
+
+            foreach (Newtonsoft.Json.Linq.JToken video in videos)
+            {
+                Console.WriteLine("Title: " + video["name"]);
+                Console.WriteLine("Thumbnail: " + video["thumbnailUrl"]);
+                Console.WriteLine("Thumbnail size: {0} (w) x {1} (h) ", video["thumbnail"]["width"], video["thumbnail"]["height"]);
+                Console.WriteLine("Source video: " + video["contentUrl"]);
+                Console.WriteLine("Source video size: {0} (w) x {1} (h) ", video["width"], video["height"]);
+                Console.WriteLine("Publisher: " + GetPublisherString(video["publisher"]));
+
+                if ((value = video["creator"]) != null)
+                {
+                    Console.WriteLine("Creator: " + (string)value["name"]);
+                }
+
+                // Always good to indicate how many people watched the video
+                // on the source website, and how long the video is.
+
+                if ((value = video["viewCount"]) != null)
+                {
+                    Console.WriteLine("Views: " + (long)value);
+                }
+
+                if ((value = video["duration"]) != null)
+                {
+                    TimeSpan ts = XmlConvert.ToTimeSpan((string)value);
+                    Console.WriteLine("Length: " + ts.ToString());
+                }
+
+                // If the video includes the motionThumbnailUrl, use it to play
+                // a preview of the video as the user hovers over the thumbnail.
+
+                if ((value = video["motionThumbnailUrl"]) != null)
+                {
+                    Console.WriteLine("Motion thumbnail: " + (string)value);
+                }
+
+                if ((value = video["embedHtml"]) != null)
+                {
+                    Console.WriteLine("Embed HTML: " + (string)value);
+                }
+
+                Console.WriteLine();
+            }
+        }
+
+        // Get a printable publisher string. The video's publisher field is an array
+        // of publishers. In practice, there's a single publisher, but...
+
+        static string GetPublisherString(Newtonsoft.Json.Linq.JToken publishers)
+        {
+            string publisherString = "";
+            Boolean isFirst = true;
+
+            foreach (Newtonsoft.Json.Linq.JToken publisher in publishers)
+            {
+                if (!isFirst)
+                {
+                    publisherString += " | ";
+                }
+
+                publisherString += publisher["name"];
+            }
+
+            return publisherString;
+        }
+```
+
+
+## Handling errors
+
+This section shows an option for handling errors that the service may return. For example, the service returns an error if your subscription key is not valid or is not valid for the specified endpoint. The service may also return an error if you specify a parameter value that's not valid.
+
+```csharp
+        // Print any errors that occur. Depending on which part of the service is
+        // throwing the error, the response may contain different error formats.
+
+        static void PrintErrors(HttpResponseHeaders headers, Dictionary<String, object> response)
+        {
+            Console.WriteLine("The response contains the following errors:\n");
+
+            object value;
+
+            if (response.TryGetValue("error", out value))  // typically 401, 403
+            {
+                PrintError(response["error"] as Newtonsoft.Json.Linq.JToken);
+            }
+            else if (response.TryGetValue("errors", out value))
+            {
+                // Bing API error
+
+                foreach (Newtonsoft.Json.Linq.JToken error in response["errors"] as Newtonsoft.Json.Linq.JToken)
+                {
+                    PrintError(error);
+                }
+
+                // Included only when HTTP status code is 400; not included with 401 or 403.
+
+                IEnumerable<string> headerValues;
+                if (headers.TryGetValues("BingAPIs-TraceId", out headerValues))
+                {
+                    Console.WriteLine("\nTrace ID: " + headerValues.FirstOrDefault());
+                }
+            }
+
+        }
+
+        static void PrintError(Newtonsoft.Json.Linq.JToken error)
+        {
+            string value = null;
+
+            Console.WriteLine("Code: " + error["code"]);
+            Console.WriteLine("Message: " + error["message"]);
+
+            if ((value = (string)error["parameter"]) != null)
+            {
+                    Console.WriteLine("Parameter: " + value);
+            }
+
+            if ((value = (string)error["value"]) != null)
+            {
+                Console.WriteLine("Value: " + value);
+            }
+        }
+```
+
+
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Build a single-page web app](../../tutorial/bing-video-search-single-page-app.md)
+- For a more in depth web app example, see the [Video web app tutorial](../../tutorial/bing-video-search-single-page-app.md).
 
-## See also 
 
- [What is the Bing Video Search API?](../../overview.md)

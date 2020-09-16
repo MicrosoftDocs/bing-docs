@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Use Java to call the Bing Web Search REST API"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send requests to the Bing Web Search REST API using Java, and receive a JSON response
+description: Learn how to get web search results using Java and Bing Web Search API.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen

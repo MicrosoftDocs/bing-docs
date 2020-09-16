@@ -5,7 +5,7 @@ description: Provides the list of HTTP status codes and service error codes that
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
-ms.subservice: bing-autosugggest
+ms.subservice: bing-autosuggest
 ms.topic: reference
 ms.date: 07/15/2020
 ms.author: scottwhi

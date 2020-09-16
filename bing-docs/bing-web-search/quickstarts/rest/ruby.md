@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Perform a web search with Ruby - Bing Web Search API"
 titleSuffix: Bing Search Services
-description: Use this quickstart to send requests to the Bing Web Search REST API using Ruby, and receive a JSON response
+description: Learn how to get web search results using Ruby and Bing Web Search API.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen

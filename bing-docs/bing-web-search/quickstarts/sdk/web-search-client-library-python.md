@@ -1,11 +1,12 @@
 ---
 title: Bing Web Search Python client library quickstart 
 titleSuffix: Bing Search Services
-description: The Web Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this quickstart to send search requests and get back results.
+description: Learn how to get web search results using the Python client library for Bing Web Search API.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
+ms.subservice: bing-web-search
 ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
@@ -177,7 +178,7 @@ Now that you've made your first call to the Bing Web Search API, let's look at a
 
 ### Limit the number of results returned by Bing
 
-This sample uses the `count` and `offset` parameters to limit the number of results returned using the SDK's [`search` method](https://docs.microsoft.com/python/api/azure-cognitiveservices-search-websearch/azure.cognitiveservices.search.websearch.operations.weboperations?view=azure-python). The `name` and `url` for the first result are printed.
+This sample uses the `count` and `offset` parameters to limit the number of results returned using the SDK's [`search` method](https://docs.microsoft.com/python/api/azure-cognitiveservices-search-websearch/azure.cognitiveservices.search.websearch.operations.weboperations?view=azure-python&preserve-view=true). The `name` and `url` for the first result are printed.
 
 1. Add this code to your Python project:
 
@@ -266,7 +267,7 @@ This sample uses the `response_filter` and `freshness` parameters to filter sear
 
 ### Use safe search, answer count, and the promote filter
 
-This sample uses the `answer_count`, `promote`, and `safe_search` parameters to filter search results using the SDK's [`search` method](https://docs.microsoft.com/python/api/azure-cognitiveservices-search-websearch/azure.cognitiveservices.search.websearch.operations.weboperations?view=azure-python). The `name` and `url` for the first result are displayed.
+This sample uses the `answer_count`, `promote`, and `safe_search` parameters to filter search results using the SDK's [`search` method](https://docs.microsoft.com/python/api/azure-cognitiveservices-search-websearch/azure.cognitiveservices.search.websearch.operations.weboperations?view=azure-python&preserve-view=true). The `name` and `url` for the first result are displayed.
 
 1. Add this code to your Python project:
 
