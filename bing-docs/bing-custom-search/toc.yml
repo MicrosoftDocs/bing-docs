@@ -59,6 +59,9 @@
     - name: Page through search results
       href: ../bing-web-search/page-results.md
       maintainContext: true
+    - name: Get Custom Search API analytics
+      href: ../bing-web-search/bing-web-stats.md
+      maintainContext: true
 - name: Reference
   items:
   - name: REST

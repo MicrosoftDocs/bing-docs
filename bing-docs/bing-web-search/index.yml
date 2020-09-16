@@ -31,7 +31,7 @@ highlightedContent:
       url: use-display-requirements.md
     - title: API pricing details
       itemType: reference
-      url: https://azure.microsoft.com/pricing/details/cognitive-services/search-api/
+      url: https://aka.ms/bingsearchapipricing
 
 conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new

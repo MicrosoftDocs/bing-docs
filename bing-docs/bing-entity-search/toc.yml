@@ -52,6 +52,9 @@
     - name: Resize and crop thumbnails
       href: ../bing-web-search/resize-and-crop-thumbnails.md
       maintainContext: true
+    - name: Get Entity Search API analytics
+      href: ../bing-web-search/bing-web-stats.md
+      maintainContext: true
 - name: Reference
   items:
   - name: REST
