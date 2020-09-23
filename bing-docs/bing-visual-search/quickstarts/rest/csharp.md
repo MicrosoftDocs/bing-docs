@@ -115,35 +115,30 @@ This example uses dictionaries instead of objects to access the response data.
                 using (var postContent = new MultipartFormDataContent("boundary_" + DateTime.Now.ToString(CultureInfo.InvariantCulture)))
                 {
                     // Builds the body of the request. This example shows
-                    // some of the fields you're most likely to specify.
+                    // just some of the fields you can specify.
 
-                    var request = new VisualSearchRequest()
+                    var visualSearchParams = new Dictionary<string, object>()
                     {
-                        ImageInfo = new ImageInfo()
-                        {
-                            //ImageInsightsToken = _insightsToken,
-                            URL = _imageUrl,
-                            CropArea = new CropArea()
+                        {"ImageInfo", new Dictionary<string, object>()
                             {
-                                Top = 0.1,
-                                Left = 0.1,
-                                Right = 0.9,
-                                Bottom = 0.9
+                                {"ImageInsightsToken", _insightsToken}
                             }
                         },
-                        KnowledgeRequest = new KnowledgeRequest()
-                        {
-                            InvokedSkillsRequestData = new InvokedSkillsData()
+                        {"KnowledgeRequest", new Dictionary<string, object>()
                             {
-                                EnableEntityData = true
+                                {"InvokedSkillsRequestData",  new Dictionary<string, object>()
+                                    {
+                                        {"EnableEntityData", true}
+                                    }
+                                }
                             }
                         }
                     };
 
-                    // Searializes the VisualSearchRequest object into a string and 
+                    // Searializes the parameters object into a string and 
                     // adds it to the form data.
 
-                    using (var jsonContent = new StringContent(JsonConvert.SerializeObject(request,
+                    using (var jsonContent = new StringContent(JsonConvert.SerializeObject(visualSearchParams,
                         new JsonSerializerSettings() { NullValueHandling = NullValueHandling.Ignore })))
                     {
 
@@ -621,82 +616,6 @@ This section shows an option for handling errors that the service may return. Fo
                 Console.WriteLine("Value: " + value);
             }
         }
-```
-
-
-## Defining the VisualSearchRequest objects
-
-These classes define the request parameters that you may specify in the request. For example, you'd use these classes if you specify the image using an insights token or a URL. For information about these parameters, see [Specifying the image's information](../../how-to/get-insights.md#specifying-the-images-information).
-
-Pass only the parameters that are set. The call to the `JsonConvert.SerializeObject` method sets the `NullValueHandling` setting to `NullValueHandling.Ignore`, which prevents null fields from being serialized. This applies to the `count` and `offset` fields, which use the nullable `int?` data type.
-
-```csharp
-
-    class VisualSearchRequest
-    {
-        [JsonProperty("imageInfo")]
-        public ImageInfo ImageInfo { get; set; }
-
-        [JsonProperty("knowledgeRequest")]
-        public KnowledgeRequest KnowledgeRequest { get; set; }
-    }
-
-    class ImageInfo
-    {
-        [JsonProperty("url")]
-        public string URL { get; set; }
-
-        [JsonProperty("imageInsightsToken")]
-        public string ImageInsightsToken { get; set; }
-
-        [JsonProperty("cropArea")]
-        public CropArea CropArea { get; set; }
-    }
-
-    class CropArea
-    {
-        [JsonProperty("top")]
-        public double Top { get; set; }
-
-        [JsonProperty("left")]
-        public double Left { get; set; }
-
-        [JsonProperty("right")]
-        public double Right { get; set; }
-
-        [JsonProperty("bottom")]
-        public double Bottom { get; set; }
-    }
-
-    class KnowledgeRequest
-    {
-        [JsonProperty("filters")]
-        public FilterData Filters{ get; set; }
-
-        [JsonProperty("invokedSkillsRequestData")]
-        public InvokedSkillsData InvokedSkillsRequestData { get; set; }
-
-        [JsonProperty("invokedSkills")]
-        public List<string> InvokedSkills { get; set; }
-
-        [JsonProperty("count")]
-        public int? Count { get; set; }
-
-        [JsonProperty("offset")]
-        public int? Offset { get; set; }
-    }
-
-    class FilterData
-    {
-        [JsonProperty("site")]
-        public string Site { get; set; }
-    }
-
-    class InvokedSkillsData
-    {
-        [JsonProperty("enableEntityData")]
-        public Boolean EnableEntityData { get; set; }
-    }
 ```
 
 
