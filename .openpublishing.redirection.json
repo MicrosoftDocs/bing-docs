@@ -1,43 +1,43 @@
 {
   "redirections": [
     {
-      "source_path": "articles/cognitive-services/bing-image-search/index.yml",
-      "redirect_url": "/azure/cognitive-services/bing-image-search/overview",
+      "source_path": "bing-docs/bing-image-search/index.yml",
+      "redirect_url": "/bing/bing-image-search/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/cognitive-services/bing-visual-search/index.yml",
-      "redirect_url": "/azure/cognitive-services/bing-visual-search/overview",
+      "source_path": "bing-docs/bing-visual-search/index.yml",
+      "redirect_url": "/bing/bing-visual-search/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/cognitive-services/bing-video-search/index.yml",
-      "redirect_url": "/azure/cognitive-services/bing-video-search/overview",
+      "source_path": "bing-docs/bing-video-search/index.yml",
+      "redirect_url": "/bing/bing-video-search/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/cognitive-services/bing-news-search/index.yml",
-      "redirect_url": "/azure/cognitive-services/bing-news-search/overview",
+      "source_path": "bing-docs/bing-news-search/index.yml",
+      "redirect_url": "/bing/bing-news-search/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/cognitive-services/bing-custom-search/index.yml",
-      "redirect_url": "/azure/cognitive-services/bing-custom-search/overview",
+      "source_path": "bing-docs/bing-custom-search/index.yml",
+      "redirect_url": "/bing/bing-custom-search/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/cognitive-services/bing-entity-search/index.yml",
-      "redirect_url": "/azure/cognitive-services/bing-entity-search/overview",
+      "source_path": "bing-docs/bing-entity-search/index.yml",
+      "redirect_url": "/bing/bing-entity-search/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/cognitive-services/bing-autosuggest/index.yml",
-      "redirect_url": "/azure/cognitive-services/bing-autosuggest/overview",
+      "source_path": "bing-docs/bing-autosuggest/index.yml",
+      "redirect_url": "/bing/bing-autosuggest/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "articles/cognitive-services/bing-spell-check/index.yml",
-      "redirect_url": "/azure/cognitive-services/bing-spell-check/overview",
+      "source_path": "bing-docs/bing-spell-check/index.yml",
+      "redirect_url": "/bing/bing-spell-check/overview",
       "redirect_document_id": false
     }
   ]
