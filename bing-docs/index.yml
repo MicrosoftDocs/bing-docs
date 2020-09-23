@@ -24,73 +24,70 @@ conceptualContent:
         - url: bing-web-search/overview.md
           itemType: overview
           text: Overview
-        # - url: https://docs.microsoft.com/en-us/advertising/guides/get-started
-        #   itemType: get-started
-        #   text: Get started
         - url: bing-web-search/reference/endpoints.md
           itemType: reference
           text: Reference
     # Card
     - title: Bing Image Search API
       links:
-        - url: bing-image-search/overview
+        - url: bing-image-search/overview.md
           itemType: overview
           text: Overview
-        - url: bing-image-search/reference/endpoints
+        - url: bing-image-search/reference/endpoints.md
           itemType: reference
           text: Reference
     # Card
     - title: Bing News Search API
       links:
-        - url: bing-news-search/overview
+        - url: bing-news-search/overview.md
           itemType: overview
           text: Overview
-        - url: bing-news-search/reference/endpoints
+        - url: bing-news-search/reference/endpoints.md
           itemType: reference
           text: Reference
     # Card
     - title: Bing Video Search API
       links:
-        - url: bing-video-search/overview
+        - url: bing-video-search/overview.md
           itemType: overview
           text: Overview
-        - url: bing-video-search/reference/endpoints
+        - url: bing-video-search/reference/endpoints.md
           itemType: reference
           text: Reference
     # Card
     - title: Bing Visual Search API
       links:
-        - url: bing-visual-search/overview
+        - url: bing-visual-search/overview.md
           itemType: overview
           text: Overview
-        - url: bing-visual-search/reference/endpoints
+        - url: bing-visual-search/reference/endpoints.md
           itemType: reference
           text: Reference
     # Card
     - title: Bing Custom Search API
       links:
-        - url: bing-custom-search/overview
+        - url: bing-custom-search/overview.md
           itemType: overview
           text: Overview
-        - url: bing-custom-search/reference/endpoints
+        - url: bing-custom-search/reference/endpoints.md
           itemType: reference
           text: Reference
     # Card
     - title: Bing Entity Search API
       links:
-        - url: bing-entity-search/overview
+        - url: bing-entity-search/overview.md
           itemType: overview
           text: Overview
-        - url: bing-entity-search/reference/endpoints
+        - url: bing-entity-search/reference/endpoints.md
           itemType: reference
           text: Reference
     # Card
     - title: Bing Spell Check API
       links:
-        - url: bing-spell-check/overview
+        - url: bing-spell-check/overview.md
           itemType: overview
           text: Overview
-        - url: bing-spell-check/reference/endpoints
+        - url: bing-spell-check/reference/endpoints.md
           itemType: reference
           text: Reference
 
