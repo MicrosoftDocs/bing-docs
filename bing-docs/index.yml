@@ -21,13 +21,13 @@ conceptualContent:
     # Card
     - title: Bing Web Search API
       links:
-        - url: bing/bing-web-search/overview
+        - url: bing-docs/bing-web-search/overview
           itemType: overview
           text: Overview
         # - url: https://docs.microsoft.com/en-us/advertising/guides/get-started
         #   itemType: get-started
         #   text: Get started
-        - url: bing/bing-web-search/reference/endpoints
+        - url: bing-docs/bing-web-search/reference/endpoints
           itemType: reference
           text: Reference
     # Card
