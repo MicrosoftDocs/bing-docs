@@ -41,6 +41,9 @@
   items:
   - name: Suggesting query terms
     href: how-to/get-suggestions.md
+  - name: Get Autosuggest API analytics
+    href: ../bing-web-search/bing-web-stats.md
+    maintainContext: true
   - name: Upgrade from v5 to v7
     href: bing-autosuggest-upgrade-guide-v5-to-v7.md
 - name: Reference

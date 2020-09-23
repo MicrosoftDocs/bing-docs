@@ -21,76 +21,73 @@ conceptualContent:
     # Card
     - title: Bing Web Search API
       links:
-        - url: https://docs.microsoft.com/bing/bing-web-search/
+        - url: bing-web-search/overview.md
           itemType: overview
           text: Overview
-        # - url: https://docs.microsoft.com/en-us/advertising/guides/get-started
-        #   itemType: get-started
-        #   text: Get started
-        - url: https://docs.microsoft.com/bing/bing-web-search/reference
+        - url: bing-web-search/reference/endpoints.md
           itemType: reference
           text: Reference
     # Card
     - title: Bing Image Search API
       links:
-        - url: https://docs.microsoft.com/bing/bing-image-search/
+        - url: bing-image-search/overview.md
           itemType: overview
           text: Overview
-        - url: https://docs.microsoft.com/bing/bing-image-search/reference
+        - url: bing-image-search/reference/endpoints.md
           itemType: reference
           text: Reference
     # Card
     - title: Bing News Search API
       links:
-        - url: https://docs.microsoft.com/bing/bing-news-search/
+        - url: bing-news-search/overview.md
           itemType: overview
           text: Overview
-        - url: https://docs.microsoft.com/bing/bing-news-search/reference
+        - url: bing-news-search/reference/endpoints.md
           itemType: reference
           text: Reference
     # Card
     - title: Bing Video Search API
       links:
-        - url: https://docs.microsoft.com/bing/bing-video-search/
+        - url: bing-video-search/overview.md
           itemType: overview
           text: Overview
-        - url: https://docs.microsoft.com/bing/bing-video-search/reference
+        - url: bing-video-search/reference/endpoints.md
           itemType: reference
           text: Reference
     # Card
     - title: Bing Visual Search API
       links:
-        - url: https://docs.microsoft.com/bing/bing-visual-search/
+        - url: bing-visual-search/overview.md
           itemType: overview
           text: Overview
-        - url: https://docs.microsoft.com/bing/bing-visual-search/reference
+        - url: bing-visual-search/reference/endpoints.md
           itemType: reference
           text: Reference
     # Card
     - title: Bing Custom Search API
       links:
-        - url: https://docs.microsoft.com/bing/bing-custom-search/
+        - url: bing-custom-search/overview.md
           itemType: overview
           text: Overview
-        - url: https://docs.microsoft.com/bing/bing-custom-search/reference
+        - url: bing-custom-search/reference/endpoints.md
           itemType: reference
           text: Reference
     # Card
     - title: Bing Entity Search API
       links:
-        - url: https://docs.microsoft.com/bing/bing-entity-search/
+        - url: bing-entity-search/overview.md
           itemType: overview
           text: Overview
-        - url: https://docs.microsoft.com/bing/bing-entity-search/reference
+        - url: bing-entity-search/reference/endpoints.md
           itemType: reference
           text: Reference
     # Card
     - title: Bing Spell Check API
       links:
-        - url: https://docs.microsoft.com/bing/bing-spell-check/
+        - url: bing-spell-check/overview.md
           itemType: overview
           text: Overview
-        - url: https://docs.microsoft.com/bing/bing-spell-check/reference
+        - url: bing-spell-check/reference/endpoints.md
           itemType: reference
           text: Reference
 

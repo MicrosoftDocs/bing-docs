@@ -58,6 +58,9 @@
   - name: Resize and crop thumbnails
     maintainContext: true
     href: ../bing-web-search/resize-and-crop-thumbnails.md
+  - name: Get Image Search API analytics
+    href: ../bing-web-search/bing-web-stats.md
+    maintainContext: true
   - name: Upgrade from v5 to v7
     href: bing-image-upgrade-guide-v5-to-v7.md
 - name: Reference

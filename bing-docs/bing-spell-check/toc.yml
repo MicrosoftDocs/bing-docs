@@ -39,6 +39,9 @@
     href: how-to/sending-requests.md
   - name: Handling the response
     href: how-to/search-response.md
+  - name: Get Spell Check API analytics
+    href: ../bing-web-search/bing-web-stats.md
+    maintainContext: true
   - name: Upgrade from v5 to v7
     href: bing-spell-check-upgrade-guide-v5-to-v7.md
 - name: Samples
