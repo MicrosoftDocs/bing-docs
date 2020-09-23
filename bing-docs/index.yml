@@ -21,21 +21,15 @@ conceptualContent:
     # Card
     - title: Bing Web Search API
       links:
-        # - url: ./bing-web-search/overview
-        #   itemType: overview
-        #   text: Overview
-        - href: bing-web-search/overview.md
+        - url: bing-web-search/overview.md
           itemType: overview
           text: Overview
         # - url: https://docs.microsoft.com/en-us/advertising/guides/get-started
         #   itemType: get-started
         #   text: Get started
-        - href: bing-web-search/reference/endpoints.md
+        - url: bing-web-search/reference/endpoints.md
           itemType: reference
           text: Reference
-        # - url: ./bing-web-search/reference/endpoints
-        #   itemType: reference
-        #   text: Reference
     # Card
     - title: Bing Image Search API
       links:
