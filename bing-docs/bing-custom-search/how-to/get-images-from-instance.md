@@ -20,5 +20,5 @@ Bing Custom Images Search lets you enrich your custom search experience with ima
 If you want more control over displaying the search results, use Custom Image Search API. If you're familiar [Bing Image Search API](../../bing-image-search/overview.md), then calling Custom Image Search API will be a breeze. The main differences are 1) the endpoint you send requests to and 2) you must include the *customConfig* query parameter.
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bingcustomsearch/v7.0/images/search?q=mt+rainier&customConfig=<your configuration ID> 
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/custom/images/search?q=mt+rainier&customConfig=<your configuration ID> 
 ```

@@ -44,7 +44,7 @@ Use this quickstart to learn how to request search results from your Bing Custom
 1. Construct the request URL by appending your search term to the `q=` query parameter, and your search instance's custom configuration ID to the `customconfig=` parameter. Separate the parameters with an ampersand (`&`). 
 
     ```python
-    url = 'https://api.bing.microsoft.com/bingcustomsearch/v7.0/search?' + 'q=' + searchTerm + '&' + 'customconfig=' + customConfigId
+    url = 'https://api.bing.microsoft.com/v7.0/custom/search?' + 'q=' + searchTerm + '&' + 'customconfig=' + customConfigId
     ```
 
 2. Send the request to your Bing Custom Search instance, and print the returned search results.  

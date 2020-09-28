@@ -58,7 +58,7 @@ Add a few variables to the `Program` class. For simplicity, this example hardcod
         // ID from secured storage.
 
         private static string _subscriptionKey = "<your key goes here>"; 
-        private static string _baseUri = "https://api.bing.microsoft.com/bingcustomsearch/v7.0/search";
+        private static string _baseUri = "https://api.bing.microsoft.com/v7.0/custom/search";
         private static string _customConfigId = "<your custom instance configuration ID goes here>";
 
         // The user's search string.

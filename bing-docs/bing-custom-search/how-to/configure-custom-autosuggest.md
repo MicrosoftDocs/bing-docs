@@ -91,7 +91,7 @@ To enable query string suggestions for your hosted UI, click **Hosted UI**. Scro
 
 To get suggested query strings using the Bing Custom Search API, send a `GET` request to the following endpoint.
 
-`https://api.bing.microsoft.com/bingcustomsearch/v7.0/Suggestions`
+`https://api.bing.microsoft.com/v7.0/custom/suggestions/search`
 
 Add query parameters as appropriate. The request must include the *q* and *customConfig* query parameters.
 
