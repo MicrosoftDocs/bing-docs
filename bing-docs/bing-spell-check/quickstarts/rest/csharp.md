@@ -14,7 +14,7 @@ ms.author: scottwhi
 
 # Quickstart: Check spelling using C# and Bing Spell Check API
 
-Use this quickstart to make your first call to Bing Spell Check API. This C# console application sends Bing a text string to check for spelling and grammar issues and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. 
+Use this quickstart to make your first call to Bing Spell Check API. This C# console application sends Bing a text string to check for spelling and grammar issues and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. The source code for this sample is available on <a href="https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/quickstarts/SpellCheck.cs" target="_blank">GitHub</a>. 
 
 Grab your favorite .NET editor, JSON library, and [subscription key](../../../bing-web-search/get-subscription-key.md) for Bing Spell Check and let's get started. 
 

@@ -14,7 +14,7 @@ ms.author: scottwhi
 
 # Quickstart: Search for images using C# and Bing Image Search API
 
-Use this quickstart to make your first call to Bing Image Search API. This C# console application sends a search request to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. 
+Use this quickstart to make your first call to Bing Image Search API. This C# console application sends a search request to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. The source code for this sample is available on <a href="https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/quickstarts/ImageSearch.cs" target="_blank">GitHub</a>.
 
 Grab your favorite .NET editor, JSON library, and [subscription key](../../../bing-web-search/get-subscription-key.md) for Bing Image Search and let's get started. 
 
