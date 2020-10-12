@@ -53,7 +53,7 @@ Use this quickstart to learn how to request search results from your Bing Custom
     ```java
     public class CustomSrchJava {
         static String host = "https://api.bing.microsoft.com";
-        static String path = "/bingcustomsearch/v7.0/search";
+        static String path = "/v7.0/custom/search";
         static String subscriptionKey = "YOUR-SUBSCRIPTION-KEY"; 
         static String customConfigId = "YOUR-CUSTOM-CONFIG-ID";
         static String searchTerm = "Microsoft";  

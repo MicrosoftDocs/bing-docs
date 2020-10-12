@@ -15,9 +15,7 @@ ms.author: scottwhi
 
 # Quickstart: Get search string suggestions using C# and Bing Autosuggest API
 
-Follow this quickstart to learn how to make calls to Bing Autosuggest API and read the JSON response. This simple C# application sends a partial search query to the API, and returns suggestions for searches. While this application is written in C#, the API is a RESTful Web service compatible with most programming languages. The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/dotnet/Search/BingAutosuggestv7.cs).
-
-Use this quickstart to make your first call to Bing Autosuggest API. This C# console application sends a partial search string to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. 
+Use this quickstart to make your first call to Bing Autosuggest API. This C# console application sends a partial search string to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. The source code for this sample is available on <a href="https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/quickstarts/Autosuggest.cs" target="_blank">GitHub</a>.
 
 Grab your favorite .NET editor, JSON library, and [subscription key](../../../bing-web-search/get-subscription-key.md) for Bing Autosuggest and let's get started. 
 

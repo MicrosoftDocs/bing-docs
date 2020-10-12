@@ -31,5 +31,3 @@ Things current Cognitive Services users must do prior to their subscription endi
 1. Update your application to use your Bing Search Services subscription key. Current Cognitive Services users that want to maintain continuity of service should sign up [here](../bing-web-search/get-subscription-key.md) for a Bing Search Services subscription before their Azure Cognitive Services subscription ends. 
   
 2. Update your app to use the new endpoints. For the new endpoints, see [Custom Search API](reference/endpoints.md) reference.
-
-If you use <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/bing-local-business-search/local-search-reference" target="_blank">Local Business Search API</a>, it's not available in Bing Search Services. 

@@ -26,10 +26,10 @@ To request search results from your custom instance, send a GET request to:
   
 |Endpoint|Service
 |-|-
-|`https://api.bing.microsoft.com/bingcustomsearch/v7.0/search`|Custom Web Search
-|`https://api.bing.microsoft.com/bingcustomsearch/v7.0/suggestions/search`|Custom Autosuggest
-|`https://api.bing.microsoft.com/bingcustomsearch/v7.0/images/search`|Custom Image Search
-|`https://api.bing.microsoft.com/bingcustomsearch/v7.0/videos/search`|Custom Video Search
+|`https://api.bing.microsoft.com/v7.0/custom/search`|Custom Web Search
+|`https://api.bing.microsoft.com/v7.0/custom/suggestions/search`|Custom Autosuggest
+|`https://api.bing.microsoft.com/v7.0/custom/images/search`|Custom Image Search
+|`https://api.bing.microsoft.com/v7.0/custom/videos/search`|Custom Video Search
 
 The request must use the HTTPS protocol. 
 

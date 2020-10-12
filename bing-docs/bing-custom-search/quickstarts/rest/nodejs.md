@@ -47,7 +47,7 @@ Use this quickstart to learn how to request search results from your Bing Custom
 
     ```javascript
     var info = {
-        url: 'https://api.bing.microsoft.com/bingcustomsearch/v7.0/search?' + 
+        url: 'https://api.bing.microsoft.com/v7.0/custom/search?' + 
             'q=' + searchTerm + "&" +
             'customconfig=' + customConfigId,
         headers: {

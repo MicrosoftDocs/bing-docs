@@ -15,7 +15,7 @@ ms.author: scottwhi
 
 # Quickstart: Search your custom view of the web using C# and Bing Custom Search API
 
-Use this quickstart to make your first call to Bing Custom Search API. This C# console application sends a search request to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. 
+Use this quickstart to make your first call to Bing Custom Search API. This C# console application sends a search request to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only.  The source code for this sample is available on <a href="https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/quickstarts/CustomSearch.cs" target="_blank">GitHub</a>.
 
 If you've created your Custom Search instance (view), grab your favorite .NET editor, JSON library, and [subscription key](../../../bing-web-search/get-subscription-key.md) for Bing Custom Search and let's get started. Otherwise, please [create your instance](../../how-to/define-your-custom-view.md).
 
@@ -58,7 +58,7 @@ Add a few variables to the `Program` class. For simplicity, this example hardcod
         // ID from secured storage.
 
         private static string _subscriptionKey = "<your key goes here>"; 
-        private static string _baseUri = "https://api.bing.microsoft.com/bingcustomsearch/v7.0/search";
+        private static string _baseUri = "https://api.bing.microsoft.com/v7.0/custom/search";
         private static string _customConfigId = "<your custom instance configuration ID goes here>";
 
         // The user's search string.

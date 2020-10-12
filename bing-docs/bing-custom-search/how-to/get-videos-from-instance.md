@@ -20,7 +20,7 @@ Bing Custom Video Search lets you enrich your custom search experience with vide
 If you want more control over displaying the search results, use Custom Video Search API. If you're familiar with [Bing Video Search API](../../bing-video-search/overview.md), then calling Custom Video Search API will be a breeze. The main differences are 1) the endpoint you send requests to and 2) you must include the *customConfig* query parameter. 
 
 ```curl
-curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/bingcustomsearch/v7.0/videos/search?q=sailing+dinghies&customConfig=<your configuration ID>
+curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/custom/videos/search?q=sailing+dinghies&customConfig=<your configuration ID>
 ```
 
 
