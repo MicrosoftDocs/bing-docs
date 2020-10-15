@@ -90,4 +90,13 @@ conceptualContent:
         - url: bing-spell-check/reference/endpoints.md
           itemType: reference
           text: Reference
+    # Card
+    - title: Bing Autosuggest API
+      links:
+        - url: bing-autosuggest/overview.md
+          itemType: overview
+          text: Overview
+        - url: bing-autosuggest/reference/endpoints.md
+          itemType: reference
+          text: Reference
 
