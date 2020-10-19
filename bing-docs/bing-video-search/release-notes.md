@@ -28,7 +28,7 @@ To subscribe to a package that includes this API, see [Create Bing Search Servic
 
 Things current Cognitive Services users must do prior to their subscription ending:
 
-1. Update your application to use your Bing Search Services subscription key. Current Cognitive Services users that want to maintain continuity of service should sign up [here](../bing-web-search/get-subscription-key.md) for a Bing Search Services subscription before their Azure Cognitive Services subscription ends. 
+1. Update your application to use your Bing Search Services subscription key. Current Cognitive Services users that want to maintain continuity of service should sign up [here](../bing-web-search/create-bing-search-service-resource.md) for a Bing Search Services subscription before their Azure Cognitive Services subscription ends. 
   
 2. Update your app to use the new endpoints. For the new endpoints, see [Video Search API](reference/endpoints.md) reference.
 
