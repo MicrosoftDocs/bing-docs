@@ -88,7 +88,7 @@
         href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-visualsearch/?view=azure-node-latest
 - name: Resources
   items:
-  - name: Create Bing Search Service Resource
+  - name: Create Bing Search Service resource
     href: ../bing-web-search/create-bing-search-service-resource.md
     maintainContext: true
   - name: Pricing

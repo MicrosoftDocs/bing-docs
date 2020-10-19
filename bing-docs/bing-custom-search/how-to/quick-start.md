@@ -25,7 +25,7 @@ To use Bing Custom Search, you need to create a custom search instance that defi
 
 ## Prerequisites
 
-To use Bing Custom Search, you need to define an Azure Bing Custom Search resource and get your subscription key. For details, see [Get a subscription key](../../bing-web-search/get-subscription-key.md).
+To use Bing Custom Search, you need to define an Azure Bing Custom Search resource and get your key. For details, see [Create Bing Search Service resource ](../../bing-web-search/create-bing-search-service-resource.md).
 
 
 ## Create a custom search instance

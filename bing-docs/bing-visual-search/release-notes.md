@@ -21,7 +21,7 @@ Initial release of this version of Bing Visual Search API. This API replaces the
 
 ### New to Bing Search?
 
-To subscribe to a package that includes this API, see [Get a subscription key](../bing-web-search/get-subscription-key.md). Next, get familiar with the [Visual Search API](overview.md) documentation, and be sure to check out the [quickstarts](quickstarts/quickstarts.md) to get up and running quickly.
+To subscribe to a package that includes this API, see [Create Bing Search Service resource](../bing-web-search/create-bing-search-service-resource.md). Next, get familiar with the [Visual Search API](overview.md) documentation, and be sure to check out the [quickstarts](quickstarts/quickstarts.md) to get up and running quickly.
 
 
 ### Current Cognitive Services user?
