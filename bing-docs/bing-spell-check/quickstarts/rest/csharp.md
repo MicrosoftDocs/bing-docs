@@ -16,7 +16,7 @@ ms.author: scottwhi
 
 Use this quickstart to make your first call to Bing Spell Check API. This C# console application sends Bing a text string to check for spelling and grammar issues and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. The source code for this sample is available on <a href="https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/quickstarts/SpellCheck.cs" target="_blank">GitHub</a>. 
 
-Grab your favorite .NET editor, JSON library, and [Create Bing Search Service resource](../../bing-web-search/create-bing-search-service-resource.md) for Bing Spell Check and let's get started. 
+Grab your favorite .NET editor, JSON library, and [Create Bing Search Service resource](../../../bing-web-search/create-bing-search-service-resource.md) for Bing Spell Check and let's get started. 
 
 
 ## Create a project and declare dependencies
