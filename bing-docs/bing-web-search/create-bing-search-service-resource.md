@@ -1,27 +1,27 @@
 ---
-title: Sign up for a subscription key
+title: Create Bing Search Services Resource
 titleSuffix: Bing Search Services
-description: Use Azure Marketplace to sign up for a Bing Search Service subscription and get your subscription key.
+description: Use Azure Marketplace to sign up for a Bing Search Service and get your key.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 07/15/2020
+ms.date: 10/18/2020
 ms.author: scottwhi
 ---
 
-# Sign up for a subscription key
+# Create Bing Search resource through Azure Marketplace
 
-To use Bing Search Service APIs, you need a subscription key. Here are the steps to sign up for a Bing Search Service subscription and get your subscription key.
+Here are the steps to create a Bing Search Service resource through Azure Marketplace and get your key.
  
-1. Go to <a href="https://portal.azure.com" target="_blank">Azure Portal</a> and sign in with your Microsoft account. If you don't have an account, click **Sign up for a free account**.
+1. Go to <a href="https://portal.azure.com" target="_blank">Azure Portal</a> and sign in with your Microsoft account. If you don't have a Microsoft account, click **Create one!**.
 1. From the portal, type *Bing* in the search box.
 1. Under **Marketplace** in the search results, select the Bing service you're interested in (for example, **Bing Search**).
 1. If you have a free trial or pay account, skip to [Create your Bing resource](#create-your-bing-resource). 
 1. On the **Create a free account** splash screen, click **Start free**.
-1. Next, you have the option of continuing with the free trial (click **Start free** again) or paying for a subscription (click **Or buy now**). You can always start with the free trial and pay for a subscription later.
+1. Next, you have the option of continuing with the free trial (click **Start free** again) or paying for an Azure subscription (click **Or buy now**). You can always start with the free trial and pay for a subscription later.
 
 
 ## Free trial option
@@ -35,7 +35,7 @@ If you clicked **Start free**, simply follow the sign up process.
 1. Finally, click **Sign up**.
 
 
-You should be redirected back to Azure Portal where you can create a resource and get your subscription key. If Azure wasn't able to redirect you, go to <a href="https://portal.azure.com" target="_blank">Azure Portal</a> and sign in with your Microsoft account. Back in the portal, type *Bing* in the search box. Under **Marketplace** in the search results, select the Bing service you're interested in (for example, **Bing Search**).
+You should be redirected back to Azure Portal where you can create a resource and get your key. If Azure wasn't able to redirect you, go to <a href="https://portal.azure.com" target="_blank">Azure Portal</a> and sign in with your Microsoft account. Back in the portal, type *Bing* in the search box. Under **Marketplace** in the search results, select the Bing service you're interested in (for example, **Bing Search**).
 
 
 ## Create your Bing resource
@@ -43,7 +43,7 @@ You should be redirected back to Azure Portal where you can create a resource an
 The following steps walk you through creating a Bing Search resource:  
 
 1. Enter a resource name. Names may contain alphanumeric characters and dashes (-) only. 
-1. The **Subscription** field should be set to **Free Trial**.
+1. The **Subscription** field could be set to **Free Trial** or select your appropriate subscription.
 1. In the **Pricing tier** dropdown, select **Free F1** package. The other packages are for the pay model. To view package options and pricing for the pay model, click **View full pricing details**.
 1. If you have an existing resource group that you want to add this resource to, select it from the **Resource group** dropdown list. Otherwise, click **Create new** to create a resource group.
 1. Select a location from the **Resource group location** dropdown. The location is where the metadata associated with your account resides and has no impact on runtime availability.
@@ -52,6 +52,7 @@ The following steps walk you through creating a Bing Search resource:
 1. When the deployment process completes, click **Go to resource**.
 1. To get your subscription key to use in API calls, click **Keys and Endpoint** in the left pane.  
 
+:::image type="content" source="media/bing-web-api/bing-create-blade-image.png" alt-text="Bing Search Create Blade experience":::
 
 ## Next steps
 

@@ -88,8 +88,8 @@
         href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-visualsearch/?view=azure-node-latest
 - name: Resources
   items:
-  - name: Get subscription key
-    href: ../bing-web-search/get-subscription-key.md
+  - name: Create Bing Search Service Resource
+    href: ../bing-web-search/create-bing-search-service-resource.md
     maintainContext: true
   - name: Pricing
     href: https://aka.ms/bingsearchapipricing
