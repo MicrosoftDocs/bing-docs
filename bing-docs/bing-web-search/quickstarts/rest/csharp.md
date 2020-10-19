@@ -16,7 +16,7 @@ ms.author: scottwhi
 
 Use this quickstart to make your first call to Bing Web Search API. This C# console application sends a search request to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. The source code for this sample is available on <a href="https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/quickstarts/WebSearch.cs" target="_blank">GitHub</a>. 
 
-Grab your favorite .NET editor, JSON library, and [subscription key](../../get-subscription-key.md) for Bing Web Search and let's get started. 
+Grab your favorite .NET editor, JSON library, and [Create Bing Search Service resource](../../create-bing-search-service-resource.md) for Bing Web Search and let's get started. 
 
 
 ## Create a project and declare dependencies
