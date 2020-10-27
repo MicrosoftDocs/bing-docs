@@ -1,31 +1,31 @@
 - name: Bing Search APIs
-  tocHref: /bing/
-  topicHref: /bing/
+  tocHref: /bing/search-apis/
+  topicHref: /bing/search-apis/
   items:
     - name: Bing Autosuggest
-      tocHref: /bing/Bing-Autosuggest
-      topicHref: /bing/Bing-Autosuggest/overview
+      tocHref: /bing/search-apis/Bing-Autosuggest
+      topicHref: /bing/search-apis/Bing-Autosuggest/overview
     - name: Bing Custom Search
-      tocHref: /bing/bing-custom-search
-      topicHref: /bing/bing-custom-search/overview
+      tocHref: /bing/search-apis/bing-custom-search
+      topicHref: /bing/search-apis/bing-custom-search/overview
     - name: Bing Entity Search
-      tocHref: /bing/bing-entities-search
-      topicHref: /bing/bing-entities-search/overview
+      tocHref: /bing/search-apis/bing-entities-search
+      topicHref: /bing/search-apis/bing-entities-search/overview
     - name: Bing Image Search
-      tocHref: /bing/bing-image-search
-      topicHref: /bing/bing-image-search/overview
+      tocHref: /bing/search-apis/bing-image-search
+      topicHref: /bing/search-apis/bing-image-search/overview
     - name: Bing News Search
-      tocHref: /bing/bing-news-search
-      topicHref: /bing/bing-news-search/overview
+      tocHref: /bing/search-apis/bing-news-search
+      topicHref: /bing/search-apis/bing-news-search/overview
     - name: Bing Spell Check
-      tocHref: /bing/bing-spell-check
-      topicHref: /bing/bing-spell-check/overview
+      tocHref: /bing/search-apis/bing-spell-check
+      topicHref: /bing/search-apis/bing-spell-check/overview
     - name: Bing Video Search
-      tocHref: /bing/Bing-Video-Search
-      topicHref: /bing/Bing-Video-Search/overview
+      tocHref: /bing/search-apis/Bing-Video-Search
+      topicHref: /bing/search-apis/Bing-Video-Search/overview
     - name: Bing Visual Search
-      tocHref: /bing/bing-visual-search
-      topicHref: /bing/bing-visual-search/overview
+      tocHref: /bing/search-apis/bing-visual-search
+      topicHref: /bing/search-apis/bing-visual-search/overview
     - name: Bing Web Search
-      tocHref: /bing/bing-web-search
-      topicHref: /bing/bing-web-search/overview
+      tocHref: /bing/search-apis/bing-web-search
+      topicHref: /bing/search-apis/bing-web-search/overview
