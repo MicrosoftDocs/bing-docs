@@ -27,12 +27,12 @@ Use these quickstarts to make your first Web Search API call in a matter of minu
 - [Ruby](rest/ruby.md)
 
 
-## Quickstarts using the Bing client library
+<!-- ## Quickstarts using the Bing client library
 
 - [C#](sdk/web-search-client-library-csharp.md)
 - [Java](sdk/web-search-client-library-java.md)
 - [JavaScript](sdk/web-search-client-library-javascript.md)
-- [Python](sdk/web-search-client-library-python.md)
+- [Python](sdk/web-search-client-library-python.md) -->
 
 
 ## Next steps
