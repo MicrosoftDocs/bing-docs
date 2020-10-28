@@ -33,7 +33,7 @@ highlightedContent:
       itemType: reference
       url: https://aka.ms/bingsearchapipricing
 
-conceptualContent:
+# conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
   # title: Get started
   # summary: Get started quickly searching the web using one of the following quickstarts. 
@@ -249,9 +249,9 @@ conceptualContent:
 #        url: ../bing-local-business-search/overview.md
 #        text: See more
 
-additionalContent:
+#additionalContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
-  sections:
+#  sections:
 
 #   - title: Reference
 #     items:      
