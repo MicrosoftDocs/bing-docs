@@ -25,12 +25,12 @@
         href: quickstarts/rest/python.md
       - name: Ruby
         href: quickstarts/rest/ruby.md
-    - name: SDK (client library)
-      items:
-      - name: C#
-        href: quickstarts/sdk/autosuggest-client-library-csharp.md
-      - name: Go
-        href: quickstarts/sdk/autosuggest-client-library-go.md
+    # - name: SDK (client library)
+    #   items:
+    #   - name: C#
+    #     href: quickstarts/sdk/autosuggest-client-library-csharp.md
+    #   - name: Go
+    #     href: quickstarts/sdk/autosuggest-client-library-go.md
 - name: Tutorials
   items:
   - name: Single-page web app
@@ -62,16 +62,16 @@
       href: reference/market-codes.md
     - name: Error codes
       href: reference/error-codes.md
-  - name: SDKs
-    items:
-    - name: .NET
-      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-dotnet
-    - name: Java
-      href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-java-stable
-    - name: Go
-      href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/autosuggest
-    - name: Node.js
-      href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-autosuggest/?view=azure-node-latest
+  # - name: SDKs
+  #   items:
+  #   - name: .NET
+  #     href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-dotnet
+  #   - name: Java
+  #     href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-java-stable
+  #   - name: Go
+  #     href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/autosuggest
+  #   - name: Node.js
+  #     href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-autosuggest/?view=azure-node-latest
 - name: Resources
   items:
   - name: Create Bing Search Service resource
