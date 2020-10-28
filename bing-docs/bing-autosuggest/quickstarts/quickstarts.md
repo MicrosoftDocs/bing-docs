@@ -26,10 +26,10 @@ Use these quickstarts to make your first Autosuggest API call in a matter of min
 - [Ruby](rest/ruby.md)
 
 
-## Quickstarts using the Bing client library
+<!-- ## Quickstarts using the Bing client library
 
 - [C#](sdk/autosuggest-client-library-csharp.md)
-- [Go](sdk/autosuggest-client-library-go.md)
+- [Go](sdk/autosuggest-client-library-go.md) -->
 
 
 ## Next steps
