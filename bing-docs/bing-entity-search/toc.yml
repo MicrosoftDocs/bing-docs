@@ -25,16 +25,16 @@
         href: quickstarts/rest/python.md
       - name: Ruby
         href: quickstarts/rest/ruby.md
-    - name: SDK (client library)
-      items:
-      - name: C#
-        href: quickstarts/sdk/entity-search-client-library-csharp.md
-      - name: Java
-        href: quickstarts/sdk/entity-search-client-library-java.md
-      - name: Node.js
-        href: quickstarts/sdk/entity-search-client-library-javascript.md
-      - name: Python
-        href: quickstarts/sdk/entity-search-client-library-python.md
+#    - name: SDK (client library)
+#      items:
+#      - name: C#
+#        href: quickstarts/sdk/entity-search-client-library-csharp.md
+#      - name: Java
+#        href: quickstarts/sdk/entity-search-client-library-java.md
+#      - name: Node.js
+#        href: quickstarts/sdk/entity-search-client-library-javascript.md
+#      - name: Python
+#        href: quickstarts/sdk/entity-search-client-library-python.md
 - name: Tutorials
   items:
   - name: Build a single-page web app

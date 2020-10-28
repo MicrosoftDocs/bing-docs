@@ -102,26 +102,26 @@ conceptualContent:
         text: See more
   
           
-    - title: Bing Entity Search API
-      links:
-        - text: Use C#
-          itemType: quickstart
-          url: ../bing-entity-search/quickstarts/sdk/entity-search-client-library-csharp.md
-        - text: Use Java
-          itemType: quickstart
-          url: ../bing-entity-search/quickstarts/sdk/entity-search-client-library-java.md
-        - text: Use JavaScript
-          itemType: quickstart
-          url: ../bing-entity-search/quickstarts/sdk/entity-search-client-library-javascript.md
-        - text: Use Python
-          itemType: quickstart
-          url: ../bing-entity-search/quickstarts/sdk/entity-search-client-library-python.md
-        - text: Create a single page web-app
-          itemType: tutorial
-          url: ../bing-entity-search/tutorial/bing-entities-search-single-page-app.md
-      footerLink:
-        url: ../bing-entity-search/overview.md
-        text: See more
+    # - title: Bing Entity Search API
+    #   links:
+    #     - text: Use C#
+    #       itemType: quickstart
+    #       url: ../bing-entity-search/quickstarts/sdk/entity-search-client-library-csharp.md
+    #     - text: Use Java
+    #       itemType: quickstart
+    #       url: ../bing-entity-search/quickstarts/sdk/entity-search-client-library-java.md
+    #     - text: Use JavaScript
+    #       itemType: quickstart
+    #       url: ../bing-entity-search/quickstarts/sdk/entity-search-client-library-javascript.md
+    #     - text: Use Python
+    #       itemType: quickstart
+    #       url: ../bing-entity-search/quickstarts/sdk/entity-search-client-library-python.md
+    #     - text: Create a single page web-app
+    #       itemType: tutorial
+    #       url: ../bing-entity-search/tutorial/bing-entities-search-single-page-app.md
+    #   footerLink:
+    #     url: ../bing-entity-search/overview.md
+    #     text: See more
 
     - title: Bing News Search API
       links:
