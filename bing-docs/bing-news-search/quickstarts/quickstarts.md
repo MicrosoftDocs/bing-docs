@@ -27,12 +27,12 @@ Use these quickstarts to make your first News Search API call in a matter of min
 - [Ruby](rest/ruby.md)
 
 
-## Quickstarts using the Bing client library
+<!-- ## Quickstarts using the Bing client library
 
 - [C#](sdk/news-search-client-library-csharp.md)
 - [Java](sdk/news-search-client-library-java.md)
 - [JavaScript](sdk/news-search-client-library-javascript.md)
-- [python](sdk/news-search-client-library-python.md)
+- [python](sdk/news-search-client-library-python.md) -->
 
 
 ## Next steps

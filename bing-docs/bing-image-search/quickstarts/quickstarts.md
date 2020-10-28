@@ -26,12 +26,12 @@ Use these quickstarts to make your first Image Search API call in a matter of mi
 - [Ruby](rest/ruby.md)
 
 
-## Quickstarts using the Bing client library
+<!-- ## Quickstarts using the Bing client library
 
 - [C#](sdk/image-search-client-library-csharp.md)
 - [Java](sdk/image-search-client-library-java.md)
 - [JavaScript](sdk/image-search-client-library-javascript.md)
-- [python](sdk/image-search-client-library-python.md)
+- [python](sdk/image-search-client-library-python.md) -->
 
 
 ## Next steps

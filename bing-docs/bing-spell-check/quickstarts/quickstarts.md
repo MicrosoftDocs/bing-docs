@@ -26,9 +26,9 @@ Use these quickstarts to make your first Spell Check API call in a matter of min
 - [Ruby](rest/ruby.md)
 
 
-## Quickstarts using the Bing client library
+<!-- ## Quickstarts using the Bing client library
 
-- [C#](sdk/spell-check-client-library-csharp.md)
+- [C#](sdk/spell-check-client-library-csharp.md) -->
 
 
 ## Next steps
