@@ -1,0 +1,44 @@
+{
+  "redirections": [
+    {
+      "source_path": "bing-docs/bing-image-search/index.yml",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/index.yml",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/index.yml",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-news-search/index.yml",
+      "redirect_url": "/bing/search-apis/bing-news-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-custom-search/index.yml",
+      "redirect_url": "/bing/search-apis/bing-custom-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-entity-search/index.yml",
+      "redirect_url": "/bing/search-apis/bing-entity-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-autosuggest/index.yml",
+      "redirect_url": "/bing/search-apis/bing-autosuggest/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/index.yml",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    }
+  ]
+}

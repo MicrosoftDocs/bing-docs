@@ -1,0 +1,115 @@
+- name: Bing Video Search documentation
+  expanded: true
+  items:
+    - name: What is the Bing Video Search API?
+      href: overview.md
+    - name: Compare the Bing Search APIs
+      href: ../bing-web-search/bing-api-comparison.md
+      maintainContext: true
+- name: Quickstarts
+  expanded: true
+  items:
+    - name: Quickstarts
+      href: quickstarts/quickstarts.md
+    - name: REST
+      items:
+      - name: C#
+        href: quickstarts/rest/csharp.md
+      - name: Java
+        href: quickstarts/rest/java.md
+      - name: Node.js
+        href: quickstarts/rest/nodejs.md
+      - name: PHP
+        href: quickstarts/rest/php.md
+      - name: Python
+        href: quickstarts/rest/python.md
+      - name: Ruby
+        href: quickstarts/rest/ruby.md
+    - name: SDK (client library)
+      expanded: true
+      items:
+      - name: C#
+        href: quickstarts/sdk/video-search-client-library-csharp.md
+      - name: Java
+        href: quickstarts/sdk/video-search-client-library-java.md
+      - name: Node.js
+        href: quickstarts/sdk/video-search-client-library-javascript.md
+      - name: Python
+        href: quickstarts/sdk/video-search-client-library-python.md
+- name: Tutorials
+  items:
+  - name: Build a single-page web app
+    href: tutorial/bing-video-search-single-page-app.md
+- name: Samples
+  href: samples.md
+- name: How-to guides
+  items:
+  - name: Get videos from the web
+    href: how-to/get-videos.md
+  - name: Handle the response
+    href: how-to/search-response.md 
+  - name: Get video insights
+    href: how-to/video-insights.md
+  - name: Get trending videos
+    href: how-to/trending-videos.md
+  - name: Page videos
+    maintainContext: true
+    href: ../bing-web-search/page-results.md
+  - name: Resize and crop thumbnails
+    maintainContext: true
+    href: ../bing-web-search/resize-and-crop-thumbnails.md
+  - name: Get Video Search API analytics
+    href: ../bing-web-search/bing-web-stats.md
+    maintainContext: true
+  - name: Upgrade from v5 to v7
+    href: bing-video-upgrade-guide-v5-to-v7.md
+- name: Reference
+  items:
+  - name: REST
+    items:
+    - name: Endpoints
+      href: reference/endpoints.md
+    - name: Response objects
+      href: reference/response-objects.md
+    - name: Query parameters
+      href: reference/query-parameters.md
+    - name: Headers
+      href: reference/headers.md
+    - name: Market and language codes
+      href: reference/market-codes.md
+    - name: Error codes
+      href: reference/error-codes.md
+  - name: SDKs (client libraries)
+    items:
+    - name: .NET
+      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingvideosearch?view=azure-dotnet
+    - name: Java
+      href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingvideosearch?view=azure-java-stable
+    - name: Python 
+      href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/videosearch?view=azure-python
+    - name: Node.js 
+      href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-videosearch/?view=azure-node-latest
+    - name: Go
+      href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/videosearch
+- name: Resources
+  items:
+  - name: Create Bing Search Service resource
+    href: ../bing-web-search/create-bing-search-service-resource.md
+    maintainContext: true
+  - name: Pricing
+    href: https://aka.ms/bingsearchapipricing
+  - name: Terms of use
+    href: https://aka.ms/bingapilegal
+  - name: Support
+    items:
+    - name: Create support ticket
+      href: https://aka.ms/bingapisupport
+    - name: User Voice Forum
+      href: https://cognitive.uservoice.com/forums/555907-bing-web-search-api
+    - name: Stack Overflow
+      href: https://stackoverflow.com/search?q=bing+web+search
+- name: Use and display requirements
+  href: ../bing-web-search/use-display-requirements.md
+  maintainContext: true
+- name: Release notes
+  href: release-notes.md

@@ -1,0 +1,110 @@
+- name: Bing Visual Search documentation
+  expanded: true
+  items:
+    - name: What is Bing Visual Search API?
+      href: overview.md
+    - name: Compare the Bing Search APIs
+      href: ../bing-web-search/bing-api-comparison.md
+      maintainContext: true
+- name: Quickstarts
+  items:
+    - name: Quickstarts
+      href: quickstarts/quickstarts.md
+    - name: REST API
+      expanded: true
+      items:
+      - name: C#
+        href: quickstarts/rest/csharp.md
+      - name: Java
+        href: quickstarts/rest/java.md
+      - name: Node.js
+        href: quickstarts/rest/nodejs.md
+      - name: Python
+        href: quickstarts/rest/python.md
+      - name: Ruby
+        href: quickstarts/rest/ruby.md
+      - name: Go
+        href: quickstarts/rest/go.md
+    - name: SDK (client library)
+      expanded: true
+      items:
+      - name: C#
+        href: quickstarts/sdk/visual-search-client-library-csharp.md
+      - name: Java
+        href: quickstarts/sdk/visual-search-client-library-java.md
+      - name: Node.js
+        href: quickstarts/sdk/visual-search-client-library-javascript.md
+      - name: Python
+        href: quickstarts/sdk/visual-search-client-library-python.md
+- name: Tutorials
+  items:
+  - name: Uploading an image
+    href: tutorial/visual-search-image-upload.md
+  - name: Crop and search an area of an image
+    href: tutorial/visual-search-crop-area-results.md
+  - name: Find similar images from previous searches
+    href: tutorial/visual-search-insights-token.md
+  - name: Create a Single-page Web app
+    href: tutorial/visual-search-single-page-app.md
+- name: Samples
+  href: samples.md
+- name: How-to guides
+  items:
+  - name: Get insights
+    href: how-to/get-insights.md
+  - name: Handle the response
+    href: how-to/search-response.md
+  - name: Resize and crop thumbnails
+    maintainContext: true
+    href: ../bing-web-search/resize-and-crop-thumbnails.md
+  - name: Get Visual Search API analytics
+    href: ../bing-web-search/bing-web-stats.md
+    maintainContext: true
+- name: Reference
+  items:
+  - name: REST
+    items:
+    - name: Endpoints
+      href: reference/endpoints.md
+    - name: Response objects
+      href: reference/response-objects.md
+    - name: Query parameters
+      href: reference/query-parameters.md
+    - name: Headers
+      href: reference/headers.md
+    - name: Market and language codes
+      href: reference/market-codes.md
+    - name: Error codes
+      href: reference/error-codes.md
+  - name: SDKs (client libraries)
+    items:
+      - name: .NET
+        href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingvisualsearch?view=azure-dotnet
+      - name: Java
+        href:  https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingvisualsearch?view=azure-java-stable
+      - name: Python
+        href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/visualsearch?view=azure-python
+      - name: Node.js
+        href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-visualsearch/?view=azure-node-latest
+- name: Resources
+  items:
+  - name: Create Bing Search Service resource
+    href: ../bing-web-search/create-bing-search-service-resource.md
+    maintainContext: true
+  - name: Pricing
+    href: https://aka.ms/bingsearchapipricing
+  - name: Terms of use
+    href: https://aka.ms/bingapilegal
+  - name: Support
+    items:
+    - name: Create support ticket
+      href: https://aka.ms/bingapisupport
+    - name: User Voice Forum
+      href: https://cognitive.uservoice.com/forums/555907-bing-web-search-api
+    - name: Stack Overflow
+      href: https://stackoverflow.com/search?q=bing+web+search
+- name: Use and display requirements
+  href: ../bing-web-search/use-display-requirements.md
+  maintainContext: true
+- name: Release notes
+  href: release-notes.md

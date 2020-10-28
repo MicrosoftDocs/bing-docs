@@ -1,0 +1,102 @@
+### YamlMime:Hub
+
+title: Bing Search Services developer documentation # < 60 chars
+summary: Official developer documentation for Bing Search Services. Learn how to build web-connected apps and services that find webpages, images, news, videos, and more without advertisements. # < 160 chars
+# brand: aspnet | azure | dotnet | dynamics | m365 | ms-graph | office | power-bi | power-platform | sql | sql-server | vs | visual-studio | windows | xamarin
+brand: m365
+
+metadata:
+  title: Bing Search Services developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
+  description: Official developer documentation for Bing Search Services. Learn how to build web-connected apps and services that find webpages, images, news, videos, and more without advertisements. # Required; article description that is displayed in search results. < 160 chars.
+  ms.service: bing-search-services #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: hub-page # Required
+  author: swhite-msft #Required; your GitHub user alias, with correct capitalization.
+  ms.author: scottwhi #Required; microsoft alias of author; optional team alias.
+  ms.date: 07/15/2020 #Required; mm/dd/yyyy format.
+
+# conceptualContent section (optional)
+conceptualContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+  items:
+    # Card
+    - title: Bing Web Search API
+      links:
+        - url: bing-web-search/overview.md
+          itemType: overview
+          text: Overview
+        - url: bing-web-search/reference/endpoints.md
+          itemType: reference
+          text: Reference
+    # Card
+    - title: Bing Image Search API
+      links:
+        - url: bing-image-search/overview.md
+          itemType: overview
+          text: Overview
+        - url: bing-image-search/reference/endpoints.md
+          itemType: reference
+          text: Reference
+    # Card
+    - title: Bing News Search API
+      links:
+        - url: bing-news-search/overview.md
+          itemType: overview
+          text: Overview
+        - url: bing-news-search/reference/endpoints.md
+          itemType: reference
+          text: Reference
+    # Card
+    - title: Bing Video Search API
+      links:
+        - url: bing-video-search/overview.md
+          itemType: overview
+          text: Overview
+        - url: bing-video-search/reference/endpoints.md
+          itemType: reference
+          text: Reference
+    # Card
+    - title: Bing Visual Search API
+      links:
+        - url: bing-visual-search/overview.md
+          itemType: overview
+          text: Overview
+        - url: bing-visual-search/reference/endpoints.md
+          itemType: reference
+          text: Reference
+    # Card
+    - title: Bing Custom Search API
+      links:
+        - url: bing-custom-search/overview.md
+          itemType: overview
+          text: Overview
+        - url: bing-custom-search/reference/endpoints.md
+          itemType: reference
+          text: Reference
+    # Card
+    - title: Bing Entity Search API
+      links:
+        - url: bing-entity-search/overview.md
+          itemType: overview
+          text: Overview
+        - url: bing-entity-search/reference/endpoints.md
+          itemType: reference
+          text: Reference
+    # Card
+    - title: Bing Spell Check API
+      links:
+        - url: bing-spell-check/overview.md
+          itemType: overview
+          text: Overview
+        - url: bing-spell-check/reference/endpoints.md
+          itemType: reference
+          text: Reference
+    # Card
+    - title: Bing Autosuggest API
+      links:
+        - url: bing-autosuggest/overview.md
+          itemType: overview
+          text: Overview
+        - url: bing-autosuggest/reference/endpoints.md
+          itemType: reference
+          text: Reference
+
