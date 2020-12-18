@@ -19,7 +19,7 @@ Use this quickstart to make your first call to Bing News Search API. This simple
 
 Although this application is written in Python, the API is a RESTful Web service compatible with most programming languages.
 
-To run this code sample as a Jupyter notebook on [MyBinder](https://mybinder.org), select the **launch binder** badge: 
+To run this code sample as a Jupyter Notebook on [MyBinder](https://mybinder.org), select the **launch binder** badge: 
 
 [![launch binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/Microsoft/cognitive-services-notebooks/master?filepath=BingNewsSearchAPI.ipynb)
 
