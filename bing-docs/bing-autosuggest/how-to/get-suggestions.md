@@ -22,7 +22,7 @@ As the user types their search query, send Bing the partial query string and get
 
 The suggestions are based on user intent and past searches made by the user and others.
 
-When the user selects a suggestion from the drop-down list, you can use it to search the web using one of [Bing Search APIs](../../bing-web-search/bing-api-comparison.md) or you can send the user to Bing's search results page for the query.
+When the user selects a suggestion from the drop-down list, you can use it to search the web using one of the [Bing Search APIs](../../bing-web-search/bing-api-comparison.md) or send the user to Bing's search results page for the query.
 
 
 ## Sending a request
@@ -41,12 +41,12 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 ## Request and response headers
 
-Besides the required subscription key header, Bing does suggest you include a couple of other headers to provide a better experience for your user. Those headers include:
+Bing suggests including a couple other headers aside from the required subscription key header to provide a better experience for your user. Those headers include:
 
-- User-Agent &mdash; Lets Bing know whether needs a mobile or desktop experience.
+- User-Agent &mdash; Lets Bing know whether the user needs a mobile or desktop experience.
 - X-MSEdge-ClientID &mdash; Provides continuity of experience.
-- X-MSEdge-ClientIP &mdash; Provides the user's location for location aware queries.
-- X-Search-Location &mdash; Provides the user's location for location aware queries.
+- X-MSEdge-ClientIP &mdash; Provides the user's location for location-aware queries.
+- X-Search-Location &mdash; Provides the user's location for location-aware queries.
 
 The more information you can provide Bing, the better the experience will be for your users. To learn more about these headers, see [Request headers](../reference/headers.md#request-headers).
 
@@ -59,7 +59,7 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00
 Bing returns a couple of headers you should capture. 
 
 - BingAPIs-TraceId &mdash; ID that identifies the request in the log file.
-- X-MSEdge-ClientID &mdash; The ID that you need to pass in subsequent request to provide continuity of experience.
+- X-MSEdge-ClientID &mdash; The ID that you need to pass in a subsequent request to provide continuity of experience.
 - BingAPIs-Market &mdash; The market used by Bing for the request.
 
 To learn more about these headers, see [Response headers](../reference/headers.md#response-headers).
@@ -73,7 +73,7 @@ curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.mic
 
 ## Query parameters
 
-The only query parameter that you must pass is the *q* parameter, which you set to the user's query string. You must URL encode the user's query string and all query parameter values that you pass.
+The only query parameter that you must pass is the *q* parameter, which you set to the user's query string. You must URL-encode the user's query string and all query parameter values that you pass.
 
 The only other query parameter that you should set is the *mkt* parameter. This parameter specifies the market where the results come from, which is typically the market where the user is making the request from.
 
@@ -87,7 +87,7 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 ## Handling the response
 
-The body of the response is a [Suggestions](../reference/response-objects.md#suggestions) object. Use the suggestions from the Web suggestions group. The `searchSuggestions` list contains at most eight suggestions. You must display all suggestions in the order provided. The list is in order of decreasing relevance. The first suggestion is the most relevant and the last suggestion is the least relevant.
+The body of the response is a [Suggestions](../reference/response-objects.md#suggestions) object. Use the suggestions from the Web suggestions group. The `searchSuggestions` list contains at most eight suggestions. Display all suggestions in the order provided. The list is in order of decreasing relevance. The first suggestion is the most relevant and the last suggestion is the least relevant.
 
 ```json
 {
@@ -153,7 +153,7 @@ The body of the response is a [Suggestions](../reference/response-objects.md#sug
 }
 ```
 
-The [SearchAction](../reference/response-objects.md#searchaction) object contains the suggested query string. Use the `displayText` field to populate your search box's drop-down list and the `query` when calling one of Bing's Search APIs such as [Bing Web Search API](../../bing-web-search/overview.md).
+The [SearchAction](../reference/response-objects.md#searchaction) object contains the suggested query string. Use the `displayText` field to populate your search box's drop-down list and the `query` field when calling one of Bing's Search APIs such as [Bing Web Search API](../../bing-web-search/overview.md).
 
 If you don't want to call one of Bing's Search APIs, you can use the URL in the `url` field to send the user to the Bing search results page instead.
 
