@@ -15,7 +15,7 @@ ms.author: scottwhi
 
 # Quickstart: Suggest search strings with Bing Autosuggest REST API and Node.js
 
-Follow this quickstart to learn how to make calls to Bing Autosuggest API and read the JSON response. This simple Node.js application sends a partial search query to the API, and returns suggestions for searches. While this application is written in JavaScript, the API is a RESTful Web service compatible with most programming languages. The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/nodejs/Search/BingAutosuggestv7.js)
+Follow this quickstart to learn how to make calls to Bing Autosuggest API and read the JSON response. This simple Node.js application sends a partial search query to the API, and returns suggestions for searches. While this application is written in JavaScript, the API is a RESTful Web service compatible with most programming languages. The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/nodejs/Search/BingAutosuggestv7.js).
 
 ## Prerequisites
 
@@ -72,7 +72,7 @@ Follow this quickstart to learn how to make calls to Bing Autosuggest API and re
     }
     ```
 
- 1. In the same function, use the request library to send your query to the API. `response_handler` is defined in the next section.
+ 1. In the same function, use the request library to send your query to the API. The `response_handler` is defined in the next section.
     
     ```javascript
         //...
@@ -93,7 +93,7 @@ Do the following steps within this function:
         };
         ```
 
-    2. Store the body of the response when the `data` flag is called
+    2. Store the body of the response when the `data` flag is called.
         
         ```javascript
         response.on ('data', function (d) {
