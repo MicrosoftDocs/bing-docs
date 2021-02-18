@@ -15,7 +15,7 @@ ms.author: scottwhi
 
 # Quickstart: Suggest search strings with Bing Autosuggest REST API and Java
 
-Follow this quickstart to learn how to make calls to Bing Autosuggest API and read the JSON response. This simple Java application sends a partial search query to the API, and returns suggestions for searches. While this application is written in Java, the API is a RESTful Web service compatible with most programming languages. The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/java/Search/BingAutosuggestv7.java)
+Follow this quickstart to learn how to make calls to Bing Autosuggest API and read the JSON response. This simple Java application sends a partial search query to the API and returns suggestions for searches. While this application is written in Java, the API is a RESTful Web service compatible with most programming languages. The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/java/Search/BingAutosuggestv7.java).
 
 ## Prerequisites
 
@@ -70,7 +70,7 @@ public static String prettify(String json_text) {
 
 1. Create a new method named  `get_suggestions()` and perform the following steps:
 
-   1. Construct the URL for your request by combining your API host, path, and encoding your search query. Be sure to url-encode the query before appending it. Create a parameters string for your query by appending the market code to the `mkt=` parameter, and your query to the `q=` parameter.
+   1. Construct the URL for your request by combining your API host, path, and encoding for your search query. Be sure to url-encode the query before appending it. Create a parameters string for your query by appending the market code to the `mkt=` parameter, and your query to the `q=` parameter.
     
       ```java
   
@@ -89,7 +89,7 @@ public static String prettify(String json_text) {
        //...
        ```
     
-   3. Create a `HttpsURLConnection` object, and use  `openConnection()` to create a connection. Set the request method to `GET`, and add your subscription key to the `Ocp-Apim-Subscription-Key` header.
+   3. Create an `HttpsURLConnection` object, and use  `openConnection()` to create a connection. Set the request method to `GET`, and add your subscription key to the `Ocp-Apim-Subscription-Key` header.
 
       ```java
        //...
