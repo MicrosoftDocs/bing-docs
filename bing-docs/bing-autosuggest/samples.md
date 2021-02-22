@@ -14,7 +14,7 @@ ms.author: scottwhi
 
 # Bing Autosuggest API samples
 
-Use Bing Autosuggest API samples to learn how to improve your apps search box experience by adding suggested search terms as the user types their query string. The samples, prerequisites, and build instructions are provided on GitHub. 
+Use these Bing Autosuggest API samples to learn how to improve your app's search box experience by adding suggested search terms as the user types their query string. The samples, prerequisites, and build instructions are provided on GitHub. 
 
 ## Samples using native HTTP GET requests
 
