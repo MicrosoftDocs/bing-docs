@@ -138,7 +138,7 @@ By default, webpages are only pinned to the top of the search results when a use
 
 |Value|Description
 |-|-
-|Starts with|The pin is a match if the user's search string starts with the pin's search string
+|Starts with|The pin is a match if the user's search string starts with the pin's search string.
 |Ends with|The pin is a match if the user's search string ends with the pin's search string.
 |Contains|The pin is a match if the user's search string contains the pin's search string.
 
@@ -146,7 +146,7 @@ To change the pin's match condition, click the pin's edit icon (pencil). In the 
 
 ### Change the order of your pinned sites
 
-To change the order of your pins, you can drag-and-drop the them, or edit their order number by clicking the edit icon (pencil) in the **Controls** Column of the **Pinned** list.
+To change the order of your pins, you can drag-and-drop them, or edit their order number by clicking the edit icon (pencil) in the **Controls** Column of the **Pinned** list.
 
 If multiple pins satisfy a match condition, Bing Custom Search will use the one highest in the list.
 
@@ -155,7 +155,7 @@ If multiple pins satisfy a match condition, Bing Custom Search will use the one 
 
 Custom search has two environments: staging/testing (see the **Configuration** tab) and production (see the **Production** tab). When you create a new instance or make changes to an existing instance, those changes occur in the testing environment.
 
-After validating that your changes and are ready to publish, click **Publish**. Changes are not reflected against your production endpoints until you publish.
+After validating that your changes are ready to publish, click **Publish**. Changes are not reflected against your production endpoints until you publish.
 
 Before publishing, if you decide that you don't want to keep the changes you've made, click **Revert**. When you revert your changes, the **Published** version remains unchanged and the **Configuration** version is reverted to match the **Published** version.
 
@@ -171,7 +171,7 @@ You can test your search instance by using the preview pane on the portal's righ
 
 1. Below the search box, select **My Instance**. You can compare the results from your search experience to Bing, by selecting **Bing**. 
 2. Select a safe search filter and which market to search (see [Query Parameters](../reference/query-parameters.md)).
-3. Enter a query and press enter or click the search icon to view the results from the current configuration. You can change your search type you perform by clicking **Web**, **Image**, or **Video** to get corresponding results. 
+3. Enter a query and press Enter or click the search icon to view the results from the current configuration. You can change your search type you perform by clicking **Web**, **Image**, or **Video** to get corresponding results. 
 
 
 ## View statistics
