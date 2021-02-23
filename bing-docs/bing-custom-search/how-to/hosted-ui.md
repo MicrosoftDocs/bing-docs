@@ -61,7 +61,7 @@ Before publishing, if you decide that you don't want to keep the changes you've 
 
 ## Consume your custom UI
 
-To consume your hosted UI after publishing it, click the **Production** tab and then the **Endpoints** tab. In the list of endpoints, click **Hosted UI**.
+To consume your hosted UI after publishing it, select the **Production** tab and then select the **Endpoints** tab. In the list of endpoints, click **Hosted UI**.
 
 Click **Additional parameters** if you want to include the *safeSearch* query parameter or specify the language to use for user interface strings.
 
@@ -80,7 +80,7 @@ Finally, use one of the following options to access your custom hosted UI:
   </html>
   ```
 
-- Or, copy and use the URL to access your custom UI in a Web browser. The following is an example only (copy the actual URL from the portal).  
+- Or, copy and use the URL to access your custom UI in a web browser. The following is an example only (copy the actual URL from the portal).  
   
   `https://ui.customsearch.ai/hosted-page?customConfig=<YOUR-CUSTOM-CONFIG-ID>&market=en-US&safeSearch=Moderate&version=latest&q=`  
   
@@ -99,7 +99,7 @@ The following sections describe the additional configurations listed under **Add
 - Web results per page: Determines the number of web search results to display (the maximum is 50 results per page).
 - Image caption: Determines if images are displayed with search results.
 
-The following configurations are shown if you click **Show advanced configurations**:
+The following configurations are shown if you select **Show advanced configurations**:
 
 - Highlight words: Determines whether words or phrases from the user's search string are highlighted (bolded) in the search results.
 - Link target: Determines if the webpage opens in a new browser tab (Blank) or the same browser tab (self) when the user clicks a search result link.
