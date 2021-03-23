@@ -18,9 +18,9 @@ Use this quickstart to begin searching for entities with the Bing Entity Search 
 
 ## Prerequisites
 
-* The [Java Development Kit(JDK)](https://www.oracle.com/technetwork/java/javase/downloads/)
+* The [Java Development Kit (JDK)](https://www.oracle.com/technetwork/java/javase/downloads/).
 
-* The Bing Entity Search client library for Java
+* The Bing Entity Search client library for Java.
 
 Install the Bing Entity Search client library dependencies by using Maven, Gradle, or another dependency management system. The Maven POM file requires the declaration:
 
@@ -55,7 +55,7 @@ Install the Bing Entity Search client library dependencies by using Maven, Gradl
     import java.util.List;
     ```
 
-2. Create a variable for your subscription key
+2. Create a variable for your subscription key.
 
     ```java
     String subscriptionKey = "your-key-here"
@@ -76,7 +76,7 @@ Install the Bing Entity Search client library dependencies by using Maven, Gradl
 
     To implement the `ServiceClientCredentials`, follow these steps:
 
-   1. override the `applyCredentialsFilter()` function, with a `OkHttpClient.Builder` object as a parameter. 
+   1. Override the `applyCredentialsFilter()` function, with a `OkHttpClient.Builder` object as a parameter. 
         
        ```java
        //...
@@ -118,7 +118,7 @@ Install the Bing Entity Search client library dependencies by using Maven, Gradl
        ```
 ## Send a request and receive a response
 
-1. Create a new instance of the search client with your subscription key. use `client.entities().search()` to send a search request for the search query `satya nadella`, and get a response. 
+1. Create a new instance of the search client with your subscription key. Use `client.entities().search()` to send a search request for the search query `satya nadella`, and get a response. 
     
     ```java
     EntitySearchAPIImpl client = getClient(subscriptionKey);
