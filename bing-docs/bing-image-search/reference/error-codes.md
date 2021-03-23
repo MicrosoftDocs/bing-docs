@@ -13,7 +13,7 @@ ms.author: scottwhi
 
 # HTTP status codes that Bing Image Search APIs may return
 
-The following are the possible HTTP status codes that a request may return.  
+The following are the possible HTTP status codes that a request may return:
   
 |Status code|Description  
 |-|-  
@@ -25,7 +25,7 @@ The following are the possible HTTP status codes that a request may return.
 |429|The caller exceeded their queries per second quota.
 |500|Unexpected server error.
 
-If the request fails, the response contains an [ErrorResponse](response-objects.md#errorresponse) object, which contains a list of [Error](response-objects.md#errorresponse) objects that describe what caused of error. If the error is related to a parameter, the `parameter` field identifies the parameter that caused the issue. And if the error is related to a parameter value, the `value` field identifies the value that is not valid.
+If the request fails, the response contains an [ErrorResponse](response-objects.md#errorresponse) object, which contains a list of [Error](response-objects.md#errorresponse) objects that describe what caused the error. If the error is related to a parameter, the `parameter` field identifies the parameter that caused the issue. And if the error is related to a parameter value, the `value` field identifies the value that is not valid.
 
 ```json
 {
@@ -62,6 +62,6 @@ The following are the possible error code and sub-error code values.
 |ServerError|UnexpectedError<br/>ResourceError<br/>NotImplemented|HTTP status code is 500.
 |InvalidRequest|ParameterMissing<br/>ParameterInvalidValue<br/>HttpNotAllowed<br/>Blocked|Bing returns InvalidRequest whenever any part of the request is not valid. For example, a required parameter is missing or a parameter value is not valid.<br/><br/>If the error is ParameterMissing or ParameterInvalidValue, the HTTP status code is 400.<br/><br/>If you use the HTTP protocol instead of HTTPS, Bing returns HttpNotAllowed, and the HTTP status code is 410.
 |RateLimitExceeded|No sub-codes|Bing returns RateLimitExceeded whenever you exceed your queries per second (QPS) or queries per month (QPM) quota.<br/><br/>If you exceed QPS, Bing returns HTTP status code 429, and if you exceed QPM, Bing returns 403.
-|InvalidAuthorization|AuthorizationMissing<br/>AuthorizationRedundancy|Bing returns InvalidAuthorization when Bing cannot authenticate the caller. For example, the [Ocp-Apim-Subscription-Key](headers.md#subscriptionkey) header is missing or the subscription key is not valid.<br/><br/>Redundancy occurs if you specify more than one authentication method.<br/><br/>If the error is InvalidAuthorization, the HTTP status code is 401.
+|InvalidAuthorization|AuthorizationMissing<br/>AuthorizationRedundancy|Bing returns InvalidAuthorization when Bing cannot authenticate the caller. For example, if the [Ocp-Apim-Subscription-Key](headers.md#subscriptionkey) header is missing or the subscription key is not valid.<br/><br/>Redundancy occurs if you specify more than one authentication method.<br/><br/>If the error is InvalidAuthorization, the HTTP status code is 401.
 |InsufficientAuthorization|AuthorizationDisabled<br/>AuthorizationExpired|Bing returns InsufficientAuthorization when the caller does not have permissions to access the resource. This can occur if the subscription key has been disabled or has expired. <br/><br/>If the error is InsufficientAuthorization, the HTTP status code is 403.
 
