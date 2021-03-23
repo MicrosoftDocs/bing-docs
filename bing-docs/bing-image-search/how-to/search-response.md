@@ -37,7 +37,7 @@ When you send a request to Image Search API, it returns an [ImageAnswer](../refe
 }
 ```
 
-But if an error occurs, the response body contains an [ErrorResponse](../reference/response-objects.md#errorresponse) object. Bing returns an error response for all 400 level HTTP status codes. [Read more](../reference/error-codes.md)
+But if an error occurs, the response body contains an [ErrorResponse](../reference/response-objects.md#errorresponse) object. Bing returns an error response for all 400 level HTTP status codes. [Read more](../reference/error-codes.md).
 
 ```json
 {
@@ -95,7 +95,7 @@ The `value` field contains the list of [Image](../reference/response-objects.md#
 
 If you plan to display a collage of the thumbnails on a page, use the following fields:
 
-- `thumbnailUrl` &mdash; A URL to the thumbnail of the image that `contentUrl` points to
+- `thumbnailUrl` &mdash; A URL to the thumbnail of the image that `contentUrl` points to.
 - `thumbnail` &mdash; The size of the thumbnail that `thumbnailUrl` points to.
 
 For information about resizing the thumbnail, see [Resizing and cropping thumbnails](../../bing-web-search/resize-and-crop-thumbnails.md).
@@ -122,9 +122,9 @@ Each image includes an `insightsMetadata` field, which contains a count of the n
 
 The following list identifies the types of metadata counts that an image may include.
 
-- `recipeSourcesCount` &mdash; The number of webpages that include recipes of the food shown in the image
-- `pagesIncludingCount` &mdash; The number of webpages that include the image
-- `availableSizesCount` &mdash; The number of different sizes (width/height) of the image that Bing found
+- `recipeSourcesCount` &mdash; The number of webpages that include recipes of the food shown in the image.
+- `pagesIncludingCount` &mdash; The number of webpages that include the image.
+- `availableSizesCount` &mdash; The number of different sizes (width/height) of the image that Bing found.
 - `shoppingSourcesCount` &mdash; The number of websites that sell the products seen in the image.
 
 
