@@ -26,7 +26,7 @@ Calling the API is easy. If you have your subscription key, just send an HTTP GE
 https://api.bing.microsoft.com/v7.0/news/trendingtopics
 ```
 
-Here's a cURL example that shows you how to call the endpoint using your subscription key. 
+Here's a cURL example that shows you how to call the endpoint using your subscription key:
 
 ```curl
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news/trendingtopics
@@ -35,7 +35,7 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 ## Request and response headers
 
-Although that's all the more you need to do to get trending news, Bing does suggest that you include a couple of other headers to provide a better search experience for your user. Those headers include:
+Although that's all you need to do to get trending news, Bing suggests that you include a couple of other headers to provide a better search experience for your user. Those headers include:
 
 - User-Agent &mdash; Lets Bing know whether needs a mobile or desktop experience.
 - X-MSEdge-ClientID &mdash; Provides continuity of experience.
@@ -86,8 +86,8 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 The following JSON fragment shows what the Trending News response looks like. Use `name` and `image` to present the list of trending news stories. Be sure to use `provider` to attribute the image. To make the `name` and/or `image` clickable, do one of the following:
 
-- Use the URL in `webSearchUrl`, which takes the user to Bing's Web search results page
-- Use the URL in `newsSearchUrl`, which takes the user to Bing's News search results page
+- Use the URL in `webSearchUrl`, which takes the user to Bing's Web search results page.
+- Use the URL in `newsSearchUrl`, which takes the user to Bing's News search results page.
 - Use the query text to call the [Web Search API](../../bing-web-search/overview.md) or [News Search API](../overview.md)yourself and display the results.
 
 ```json
