@@ -32,7 +32,7 @@ Use these quickstarts to make your first News Search API call in a matter of min
 - [C#](sdk/news-search-client-library-csharp.md)
 - [Java](sdk/news-search-client-library-java.md)
 - [JavaScript](sdk/news-search-client-library-javascript.md)
-- [python](sdk/news-search-client-library-python.md)
+- [Python](sdk/news-search-client-library-python.md)
 
 
 ## Next steps
