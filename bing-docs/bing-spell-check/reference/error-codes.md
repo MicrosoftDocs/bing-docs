@@ -13,7 +13,7 @@ ms.author: scottwhi
 
 # HTTP status codes that Bing Spell Check API may return
 
-The following are the possible HTTP status codes that a request may return.  
+The following are the possible HTTP status codes that a request may return: 
   
 |Status code|Description  
 |-|-  
@@ -25,7 +25,7 @@ The following are the possible HTTP status codes that a request may return.
 |429|The caller exceeded their queries per second quota.
 |500|Unexpected server error.
 
-If the request fails, the response contains an [ErrorResponse](response-objects.md#errorresponse) object, which contains a list of [Error](response-objects.md#errorresponse) objects that describe what caused of error. If the error is related to a parameter, the `parameter` field identifies the parameter that caused the issue. And if the error is related to a parameter value, the `value` field identifies the value that is not valid.
+If the request fails, the response contains an [ErrorResponse](response-objects.md#errorresponse) object, which contains a list of [Error](response-objects.md#errorresponse) objects that describe what caused the error. If the error is related to a parameter, the `parameter` field identifies the parameter that caused the issue. And if the error is related to a parameter value, the `value` field identifies the value that is not valid.
 
 ```json
 {
