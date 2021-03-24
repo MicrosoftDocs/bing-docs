@@ -16,7 +16,7 @@ ms.author: aahi
 
 Use this quickstart to make your first call to Bing Spell Check REST API using Ruby. This simple application sends a request to the API and returns a list of suggested corrections. 
 
-Although this application is written in Ruby, the API is a RESTful Web service compatible with most programming languages. The source code for this application is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/ruby/Search/BingSpellCheckv7.rb)
+Although this application is written in Ruby, the API is a RESTful Web service compatible with most programming languages. The source code for this application is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/ruby/Search/BingSpellCheckv7.rb).
 
 ## Prerequisites
 
