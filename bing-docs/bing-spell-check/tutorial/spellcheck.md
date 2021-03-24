@@ -19,16 +19,16 @@ In this tutorial, we'll build a Web page that allows users to query the Bing Spe
 This tutorial shows you how to:
 
 > [!div class="checklist"]
-> - Make a simple query to the Bing Spell Check API
-> - Display query results
+> - Make a simple query to the Bing Spell Check API.
+> - Display query results.
 
 ## Prerequisites
 
 
 To follow along with the tutorial, you need a subscription key for the Bing Spell Check API. If you don't have one, you'll need:
 
-* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/)
-* [A Bing Spell Check resource](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesBingSpellCheck-v7)
+* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
+* [A Bing Spell Check resource](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesBingSpellCheck-v7).
 
 ## Create a new Web page
 
@@ -66,7 +66,7 @@ Add the HTML header information and begin the script section as follows.
 ## getSubscriptionKey function
 
 The getSubscriptionKey function returns the Bing Spell Check API key. It either retrieves it from
-local storage (that is, a cookie) or prompts the user for if needed.
+local storage (that is, a cookie) or prompts the user for it if needed.
 
 Begin the getSubscriptionKey function and declare the cookie name as follows.
 
