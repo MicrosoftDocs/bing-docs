@@ -37,4 +37,4 @@ Use these quickstarts to make your first Video Search API call in a matter of mi
 ## Next steps
 
 - For a more in depth web app example, see the [Video search tutorial](../tutorial/bing-video-search-single-page-app.md).
-- For REST and SDK samples, see [Samples](../samples.md)
+- For REST and SDK samples, see [Samples](../samples.md).
