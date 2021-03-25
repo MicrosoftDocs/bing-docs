@@ -37,7 +37,7 @@ When you send a request to Video Search API, it returns a [VideosAnswer](../refe
 }
 ```
 
-But if an error occurs, the response body contains an [ErrorResponse](../reference/response-objects.md#errorresponse) object. Bing returns an error response for all 400 level HTTP status codes. [Read more](../reference/error-codes.md)
+But if an error occurs, the response body contains an [ErrorResponse](../reference/response-objects.md#errorresponse) object. Bing returns an error response for all 400 level HTTP status codes. [Read more](../reference/error-codes.md).
 
 ```json
 {
@@ -120,8 +120,8 @@ As the user hovers over the thumbnail, use `motionThumbnailUrl`, if it exists, t
 
 Make the surface where you display the thumbnail and video information clickable by using one of the following URLs:
 
-- Use `hostPageUrl` to view the video on the provider’s website
-- Use `webSearchUrl` to view the video in Bing’s video viewer
+- Use `hostPageUrl` to view the video on the provider’s website.
+- Use `webSearchUrl` to view the video in Bing’s video viewer.
 - Use `embedHtml`, if it exists, to view the video in your own experience. If you provide your own view experience, consider `allowHttpsEmbed` and `allowMobileEmbed`.
 
 
