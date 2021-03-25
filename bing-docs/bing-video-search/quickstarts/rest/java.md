@@ -20,9 +20,9 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 
 ## Prerequisites
 
-* The [Java Development Kit (JDK)](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
+* The [Java Development Kit (JDK)](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html).
 
-* The [Gson library](https://github.com/google/gson)
+* The [Gson library](https://github.com/google/gson).
 
 <!--
 [!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
@@ -244,7 +244,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../../tutorial/bing-video-search-single-page-app.md)
+> [Build a single-page web app](../../tutorial/bing-video-search-single-page-app.md).
 
 ## See also 
 
