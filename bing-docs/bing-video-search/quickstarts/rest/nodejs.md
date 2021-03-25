@@ -16,7 +16,7 @@ ms.author: scottwhi
 
 Use this quickstart to make your first call to the Bing Video Search API. This simple JavaScript application sends an HTTP video search query to the API, and displays the JSON response. Although this application is written in JavaScript and uses Node.js, the API is a RESTful Web service compatible with most programming languages. 
 
-The source code for this sample is available [on GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/nodejs/Search/BingVideoSearchv7.js) with additional error handling, and code annotations.
+The source code for this sample is available [on GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/nodejs/Search/BingVideoSearchv7.js) with additional error handling and code annotations.
 
 ## Prerequisites
 
@@ -96,7 +96,7 @@ let request_params = {
 
 ## JSON response
 
-A successful response is returned in JSON, as shown in the following example: 
+A successful response is returned in JSON as shown in the following example: 
 
 ```json
 {
@@ -207,7 +207,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../../tutorial/bing-video-search-single-page-app.md)
+> [Build a single-page web app](../../tutorial/bing-video-search-single-page-app.md).
 
 ## See also 
 
