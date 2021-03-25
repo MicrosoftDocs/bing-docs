@@ -31,9 +31,9 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 ## Request and response headers
 
-Although that's all the more you need to do to search the Web, Bing does suggest you include a couple of other headers to provide a better search experience for your user. Those headers include:
+Although that's all you need to do to search the Web, Bing suggests you include a couple of other headers to provide a better search experience for your user. Those headers include:
 
-- User-Agent &mdash; Lets Bing know whether needs a mobile or desktop experience.
+- User-Agent &mdash; Lets Bing know whether the user needs a mobile or desktop experience.
 - X-MSEdge-ClientID &mdash; Provides continuity of experience.
 - X-MSEdge-ClientIP &mdash; Provides the user's location for location aware queries.
 - X-Search-Location &mdash; Provides the user's location for location aware queries.
@@ -63,7 +63,7 @@ curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.mic
 
 ## Query parameters
 
-The only query parameter that you must pass is the *q* parameter, which you set to the user's query string. You must URL encode the user's query string and all query parameter values that you pass.
+The only query parameter that you must pass is the *q* parameter, which you set to the user's query string. You must URL-encode the user's query string and all query parameter values that you pass.
 
 The API supports a number of query parameters that you can pass in your request. Here's a list of the ones you're most likely to use.
 
