@@ -122,7 +122,7 @@ You may set the *safeSearch* parameter to one of the following values:
 - Moderate &mdash; Does not return videos with adult content. 
 - Strict &mdash; Does not return videos with adult content.
 
-The default is Moderate. If you specify Off, Bing ignores it and use Moderate.
+The default is Moderate. If you specify Off, Bing ignores it and will use Moderate.
 
 
 ## Next steps
