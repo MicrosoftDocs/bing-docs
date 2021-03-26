@@ -74,8 +74,8 @@ Defines the size of the media content.
   
 |Name|Value|Type
 |-|-|-
-|height|The height of the media content, in pixels.|Integer
-|width|The width of the media content, in pixels.|Integer 
+|height|The height of the media content in pixels.|Integer
+|width|The width of the media content in pixels.|Integer 
 
 ## Pivot  
 
@@ -184,7 +184,7 @@ Defines a video that is relevant to the query.
 |<a name="video-embedhtml"></a>embedHtml|An iFrame that lets you embed and run the video on your webpage.|String 
 |<a name="video-encodingformat"></a>encodingFormat|The video's mime type (for example, mp4).|String  
 |height|The height of the video, in pixels.|Integer
-|<a name="video-hostpagedisplayurl"></a>hostPageDisplayUrl|The display URL of the webpage that hosts the video.<br/><br/>Use this URL in your user interface to identify the host webpage that contains the video. The URL is not a well-formed and should not be used to access the host webpage. To access the host webpage, use the URL in `hostPageUrl`.|String
+|<a name="video-hostpagedisplayurl"></a>hostPageDisplayUrl|The display URL of the webpage that hosts the video.<br/><br/>Use this URL in your user interface to identify the host webpage that contains the video. The URL is not well-formed and should not be used to access the host webpage. To access the host webpage, use the URL in `hostPageUrl`.|String
 |<a name="video-hostpageurl"></a>hostPageUrl|The URL to the webpage that hosts the video.<br/><br/>This URL and `contentUrl` URL may be the same URL.|String
 |id|An ID that uniquely identifies this video in the list of videos.<br/><br/>Only Web Search API responses include this field. For information about how to use this field, see [Ranking results](../../bing-web-search/rank-results.md) in the Web Search API guide.|String 
 |<a name="video-isaccessibleforfree"></a>isAccessibleForFree|A Boolean value that indicates whether the video requires payment or a paid subscription to view. If **true**, the video is free to watch. Otherwise, if **false**, a payment or subscription is required.<br/><br/>**NOTE:** If Bing is unable to determine whether payment is required, the object may not include this field.<br/><br/>To ensure that Bing returns only free videos, set the [pricing](query-parameters.md#pricing) query parameter to Free.|Boolean
@@ -198,7 +198,7 @@ Defines a video that is relevant to the query.
 |<a name="video-videoid"></a>videoId|An ID that uniquely identifies this video in the list of videos. You can use the ID in a subsequent request to ensure that this video is the first video returned in the list of videos. To ensure the video is the first video in the list, set the request's [id](query-parameters.md#id) query parameter to this ID.|String  
 |<a name="video-viewcount"></a>viewCount|The number of times that the video has been watched at the source site.|Integer 
 |<a name="video-websearchurl"></a>webSearchUrl|The URL that takes the user to the Bing video search results and plays the video.|String
-|width|The width of the video, in pixels.|Integer 
+|width|The width of the video in pixels.|Integer 
   
 ## VideoDetails  
 
