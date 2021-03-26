@@ -25,9 +25,9 @@ Use the Bing Visual Search client library for Java to:
 
 ## Prerequisites
 
-* Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/)
-* The current version of the [Java Development Kit(JDK)](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
-* The [Gradle build tool](https://gradle.org/install/), or another dependency manager
+* Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
+* The current version of the [Java Development Kit (JDK)](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
+* The [Gradle build tool](https://gradle.org/install/), or another dependency manager.
 
 <!--
 [!INCLUDE [bing-visual-search-signup-requirements](../../../../includes/bing-visual-search-signup-requirements.md)]
@@ -262,4 +262,4 @@ gradle run
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../../tutorial/visual-search-single-page-app.md)
+> [Build a single-page web app](../../tutorial/visual-search-single-page-app.md).
