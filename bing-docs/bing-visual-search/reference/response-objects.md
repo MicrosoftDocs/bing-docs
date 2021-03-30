@@ -100,7 +100,7 @@ Defines an image.
 |<a name="image-contentsize"></a>contentSize|The image's file size. The format of the string is {size} {units}. For example, 12345 B indicates that the size of the image is 12,345 bytes.|String
 |<a name="image-contenturl"></a>contentUrl|A URL to the image on the source website.|String
 |<a name="image-datepublished"></a>datePublished|The date and time, in UTC, that Bing discovered the image. The date is in the format, YYYY-MM-DDTHH:MM:SS.|String  
-|<a name="image-encodingformat"></a>encodingFormat|The image's mime type (for example, jpeg).|String 
+|<a name="image-encodingformat"></a>encodingFormat|The image's MIME type (for example, jpeg).|String 
 |<a name="image-height"></a>height|The height of the source image, in pixels.|Unsigned Short
 |<a name="image-hostpagedisplayurl"></a>hostPageDisplayUrl|The display URL of the webpage that hosts the image.<br/><br/>Use this URL in your user interface to identify the host webpage that contains the image. The URL is not a well-formed and should not be used to access the host webpage. To access the host webpage, use the `hostPageUrl` URL.|String 
 |<a name="image-hostpageurl"></a>hostPageUrl|The URL of the webpage that includes the image. This URL and `contentUrl` may be the same URL.|String 
@@ -163,7 +163,7 @@ Defines an image list action.
 |serviceUrl|Use this URL to get additional data to determine how to take the appropriate action. For example, the `serviceUrl` might return JSON along with an image URL.|String
 |text|Text content of this creative work.|String
 |thumbnailUrl|A URL to a thumbnail of the item.|String
-|url|The URI used to perform the action. The object includes this field if `actionType` is Uri, which is typically returned as part of text recognition. The URI can use the:<ul><li>HTTP|HTTPS protocol for cases when the URI is a URL to a website</li><li>tel protocol for cases when the URI is a telephone number</li><li>mailto protocol for cases when the URI is an email address.</li></ul>|String
+|url|The URI used to perform the action. The object includes this field if `actionType` is Uri, which is typically returned as part of text recognition. The URI can use the:<ul><li>HTTP</li><li>HTTPS protocol for cases when the URI is a URL to a website</li><li>tel protocol for cases when the URI is a telephone number</li><li>mailto protocol for cases when the URI is an email address.</li></ul>|String
 
 
 ## ImageRelatedSearchesAction
