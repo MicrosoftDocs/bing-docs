@@ -121,7 +121,7 @@ Defines an entity action.
   
 |Name|Value|Type 
 |-|-|-  
-|_type|A type hint, which is set to ImageEntityAction.|String  
+|\_type|A type hint, which is set to ImageEntityAction.|String  
 |actionType|A string representing the type of action. Set to Entity.|String
 |data|The entity that Bing recognized in the image.|[Entity](#entity)
 |datePublished|The date on which the CreativeWork was published.|String
@@ -140,7 +140,7 @@ Defines the top-level object in the API response.
 
 |Name|Value|Type 
 |-|-|-  
-|_type|A type hint, which is set to ImageKnowledge|String
+|\_type|A type hint, which is set to ImageKnowledge|String
 |id|A String identifier.|String
 |image|The image used in this insights request. The object includes the `imageInsightsToken` field only.|[Image](#image)
 |tags|A list of visual search tags.|[ImageTag](#imagetag)[]
@@ -152,7 +152,7 @@ Defines an image list action.
 
 |Name|Value|Type 
 |-|-|-  
-|_type|A type hint, which is set to ImageModuleAction.|String
+|\_type|A type hint, which is set to ImageModuleAction.|String
 |actionType|A string representing the type of action.|String
 |data|A list of images.|[ImagesModule](#imagesmodule)
 |datePublished|The date on which the CreativeWork was published.|String
@@ -163,7 +163,7 @@ Defines an image list action.
 |serviceUrl|Use this URL to get additional data to determine how to take the appropriate action. For example, the `serviceUrl` might return JSON along with an image URL.|String
 |text|Text content of this creative work.|String
 |thumbnailUrl|A URL to a thumbnail of the item.|String
-|url|The URI used to perform the action. The object includes this field if `actionType` is Uri, which is typically returned as part of text recognition. The URI can use the:<ul><li>HTTP</li><li>HTTPS protocol for cases when the URI is a URL to a website</li><li>tel protocol for cases when the URI is a telephone number</li><li>mailto protocol for cases when the URI is an email address.</li></ul>|String
+|url|The URI used to perform the action. The object includes this field if `actionType` is Uri, which is typically returned as part of text recognition. The URI can use the:<ul><li>HTTP</li><li>HTTPS protocol for cases when the URI is a URL to a website.</li><li>tel protocol for cases when the URI is a telephone number</li><li>mailto protocol for cases when the URI is an email address.</li></ul>|String
 
 
 ## ImageRelatedSearchesAction
@@ -172,7 +172,7 @@ Defines a related search action.
 
 |Name|Value|Type 
 |-|-|-  
-|_type|A type hint, which is set to ImageRelatedSearchesAction.|String
+|\_type|A type hint, which is set to ImageRelatedSearchesAction.|String
 |actionType|A string representing the type of action.|String
 |data|A list of searches that are related to the image.|[RelatedSearchesModule](#relatedsearchesmodule)
 |datePublished|The date on which the CreativeWork was published.|String
@@ -191,7 +191,7 @@ Defines a shopping sources action.
 
 |Name|Value|Type 
 |-|-|-  
-|_type|A type hint, which is set to ImageShoppingSourcesAction.|String
+|\_type|A type hint, which is set to ImageShoppingSourcesAction.|String
 |actionType|A string representing the type of action.|String
 |data|A list of merchants that offer items seen in the image.|[AggregateOffer](#aggregateoffer)
 |datePublished|The date on which the CreativeWork was published.|String
@@ -286,7 +286,7 @@ Defines a contractual rule for license attribution.
   
 |Name|Value|Type  
 |-|-|-
-|_type|A type hint, which is set to LicenseAttribution.|String
+|\_type|A type hint, which is set to LicenseAttribution.|String
 |license|The license under which the content may be used.|[License](#license)
 |licenseNotice|The license to display next to the targeted field. For example, "Text under CC-BY-SA license".<br/><br/>Use the license's name and URL in the `license` field to create a hyperlink to the website that describes the details of the license. Then, replace the license name in the `licenseNotice` string (for example, CC-BY-SA) with the hyperlink you just created.|String
 |mustBeCloseToContent|A Boolean value that determines whether the contents of the rule must be placed in close proximity to the field that the rule applies to. If **true**, the contents must be placed in close proximity. If **false**, or this field does not exist, the contents may be placed at the caller's discretion.|Boolean
@@ -299,7 +299,7 @@ Defines a contractual rule for link attribution.
   
 |Name|Value|Type
 |-|-|-
-|_type|A type hint, which is set to LinkAttribution.|String
+|\_type|A type hint, which is set to LinkAttribution.|String
 |mustBeCloseToContent|A Boolean value that determines whether the contents of the rule must be placed in close proximity to the field that the rule applies to. If **true**, the contents must be placed in close proximity. If **false**, or this field does not exist, the contents may be placed at the caller's discretion.|Boolean 
 |targetPropertyName|The name of the field that the rule applies to.<br/><br/>If a target is not specified, the attribution applies to the entity as a whole and should be displayed immediately following the entity presentation. If there are multiple text and link attribution rules that do not specify a target, you should concatenate them and display them using a "Data from: " label. For example, “Data from <provider name1\> &#124; <provider name2\>".|String 
 |text|The attribution text.|String 
@@ -312,7 +312,7 @@ Defines a contractual rule for media attribution.
   
 |Name|Value|Type 
 |-|-|-  
-|_type|A type hint, which is set to MediaAttribution.|String
+|\_type|A type hint, which is set to MediaAttribution.|String
 |mustBeCloseToContent|A Boolean value that determines whether the contents of the rule must be placed in close proximity to the field that the rule applies to. If **true**, the contents must be placed in close proximity. If **false**, or this field does not exist, the contents may be placed at the caller's discretion.|Boolean 
 |targetPropertyName|The name of the field that the rule applies to.|String 
 |url|The URL that you use to create of hyperlink of the media content. For example, if the target is an image, you would use the URL to make the image clickable.|String  
@@ -334,7 +334,7 @@ Defines a region of an image. The region is a convex quadrilateral defined by co
 
 |Name|Value|Type
 |-|-|-
-|_type|A type hint.|String
+|\_type|A type hint.|String
 |alternateName|An alias for the item.|String
 |bingId|An ID that uniquely identifies this item.|String
 |bottomLeft|The bottom left corner coordinate.|[Point2D](#point2d)
@@ -379,7 +379,7 @@ Defines an organization.
 
 |Name|Value|Type
 |-|-|-
-|_type|A type hint.|String
+|\_type|A type hint.|String
 |alternateName|An alias for the item.|String
 |bingId|An ID that uniquely identifies this item.|String
 |description|A short description of the item.|String
@@ -397,7 +397,7 @@ Defines a 2-dimensional point with X and Y coordinates.
 
 |Name|Value|Type
 |-|-|-
-|_type|A type hint.|String
+|\_type|A type hint.|String
 |alternateName|An alias for the item.|String
 |bingId|An ID that uniquely identifies this item.|String
 |description|A short description of the item.|String
@@ -439,7 +439,7 @@ Defines a contractual rule for plain text attribution.
   
 |Name|Value|Type 
 |-|-|- 
-|_type|A type hint, which is set to TextAttribution.|String
+|\_type|A type hint, which is set to TextAttribution.|String
 |text|The attribution text.<br/><br/>Text attribution applies to the entity as a whole and should be displayed immediately following the entity presentation. If there are multiple text or link attribution rules that do not specify a target, you should concatenate them and display them using a "Data from: " label.|String    
 
 
@@ -449,7 +449,7 @@ Defines a text recognition action.
 
 |Name|Value|Type 
 |-|-|-  
-|_type|A type hint, which is set to ImageKnowledge/TextRecognitionAction.|String
+|\_type|A type hint, which is set to ImageKnowledge/TextRecognitionAction.|String
 |actionType|A string representing the type of action, which is set to TextRecognition.|String
 |data|The recognized text found in the image.|[TextRegionsModule](#textregionsmodule)
 
