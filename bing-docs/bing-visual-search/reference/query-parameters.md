@@ -13,7 +13,7 @@ ms.author: scottwhi
 
 # Visual Search API v7 query parameters
 
-The following are the query parameters that the request may include. The Required column indicates whether you must specify the parameter. You must URL encode the query parameter values.  
+The following are the query parameters that the request may include. The Required column indicates whether you must specify the parameter. You must URL-encode the query parameter values.  
   
 |Name|Value|Type|Required 
 |-|-|-|-
