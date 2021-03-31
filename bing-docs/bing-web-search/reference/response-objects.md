@@ -239,20 +239,20 @@ The response's top-level object for search requests that succeed.
   
 By default, the Search API includes all relevant answers unless:  
   
-- The query specifies the [responseFilter](query-parameters.md#responsefilter) query parameter to limit the answers it returns 
-- One or more of the search components does not return results (for example, no news results are relevant to the query)  
+- The query specifies the [responseFilter](query-parameters.md#responsefilter) query parameter to limit the answers it returns. 
+- One or more of the search components does not return results (for example, no news results are relevant to the query).  
 - The subscription key does not have access to the search component.  
   
 If the service suspects a denial of service attack, the request succeeds (HTTP status code is 200 OK), but the body of the response is empty.  
   
 |Name|Value|Type 
 |-|-|-
-|_type|Type hint, which is set to SearchResponse.|String
+|\_type|Type hint, which is set to SearchResponse.|String
 |<a name="searchresponse-computation"></a>computation|The answer to a math expression or unit conversion expression.|[Computation](#computation)
 |<a name="searchresponse-entities"></a>entities|A list of entities that are relevant to the search query.|[EntityAnswer](../../bing-entity-search/reference/response-objects.md#entityanswer)
 |<a name="searchresponse-images"></a>images|A list of images that are relevant to the search query.|[ImageAnswer](../../bing-image-search/reference/response-objects.md#imageanswer)
 |<a name="searchresponse-news"></a>news|A list of news articles that are relevant to the search query.|[NewsAnswer](../../bing-news-search/reference/response-objects.md#newsanswer) 
-|<a name="searchresponse-places"></a>places|A list of places that are relevant to the search query|[LocalEntityAnswer](../../bing-entity-search/reference/response-objects.md#localentityanswer)
+|<a name="searchresponse-places"></a>places|A list of places that are relevant to the search query.|[LocalEntityAnswer](../../bing-entity-search/reference/response-objects.md#localentityanswer)
 |<a name="searchresponse-querycontext"></a>queryContext|The query string that Bing used for the request.|[QueryContext](#querycontext)
 |<a name="searchresponse-ranking"></a>rankingResponse|The order that Bing suggests that you display the search results in.|[RankingResponse](#rankingresponse)
 |<a name="searchresponse-relatedsearches"></a>relatedSearches|A list of related queries made by others.|[RelatedSearchAnswer](#relatedsearchanswer)
@@ -291,7 +291,7 @@ Defines the date and time of one or more geographic locations.
 |Name|Value|Type
 |-|-|-
 |date|A date in string form. For example, Thursday, June 5, 2019. The answer may include this field if the user’s query asks Bing to compute a date. For example, *90 days from today*.|String
-|description|A description of the response. The answer may include this field if the query asks Bing how many days or weeks in a period (for example, *weeks in a year* or *days in a month*), or converts time to a different time zone (for example, *pst to est*.|String
+|description|A description of the response. The answer may include this field if the query asks Bing how many days or weeks in a period (for example, *weeks in a year* or *days in a month*), or converts time to a different time zone (for example, *pst to est*).|String
 |<a name="othercitytimes"></a>otherCityTimes|A list of dates and times in a geographical location. The answer includes this field for queries like *US time zones* or *Arizona time zones*. The list is ordered by UTC offset.|[TimeZoneInformation](#timezoneinformation)[]
 |<a name="primarycitytime"></a>primaryCityTime|The data and time, in UTC, of the geographic location specified in the query.<br/><br/>If the query specified a specific geographic location (for example, a city), this object contains the name of the geographic location and the current date and time of the location.<br/><br/>If the query specified a general geographic location, such as a state or country, this object contains the date and time of the primary city or state found within the specified state or country. If the location contains additional time zones, the `otherCityTimes` field contains the date and time of cities or states located in the other time zones.|[TimeZoneInformation](#timezoneinformation)
 |primaryResponse|The primary data that satisfies the request. If the query string is *how many weeks in 2019*, this field contains, **52 weeks and 1 day**. Other query examples: *how many days in this month* and *what’s the date*.|String
@@ -328,11 +328,9 @@ Defines the translation of a word or phrase in the query string to another langu
   
 |Name|Value|Type
 |-|-|-
-|attributions|A list of publishers that you must attribute the information to when you render the answer.<br/><br/>You must display the names of all publishers in the list as the source of the data. Typically, you display the providers in a single line after the translation. For example, “Data from: <provider> | <provider> | …", where <provider> is the name of the provider in providerDisplayName.<br/><br/>**Note**: If the answer includes contractualRules, you must apply them instead of applying attributions from this field.|[Attribution](#attribution)[]
-|contractualRules|A list of rules that you must adhere to if you display the answer. The following contractual rules may apply.<ul><li>[LinkAttribution](#linkattribution)</li><ul>For information about displaying contractual rules, see [Data Attribution](../data-attribution.md).
-|Object[]
-|id|An ID that uniquely identifies this answer.<br/><br/>The [RankingResponse](#rankingresponse) answer uses the ID to indicate where in the rendered response you should display this answer. For information about how to use this field, see [How to use ranking to display search results](../rank-results.md).
-|String
+|attributions|A list of publishers that you must attribute the information to when you render the answer.<br/><br/>You must display the names of all publishers in the list as the source of the data. Typically, you display the providers in a single line after the translation. For example, “Data from: \<provider\> \| \<provider\> \| …", where \<provider\> is the name of the provider in providerDisplayName.<br/><br/>**Note**: If the answer includes contractualRules, you must apply them instead of applying attributions from this field.|[Attribution](#attribution)[]
+|contractualRules|A list of rules that you must adhere to if you display the answer. The following contractual rules may apply.<ul><li>[LinkAttribution](#linkattribution)</li><ul>For information about displaying contractual rules, see [Data Attribution](../data-attribution.md).|Object[]
+|id|An ID that uniquely identifies this answer.<br/><br/>The [RankingResponse](#rankingresponse) answer uses the ID to indicate where in the rendered response you should display this answer. For information about how to use this field, see [How to use ranking to display search results](../rank-results.md).|String
 |inLanguage|The language that the text was translated from. An ISO 639-1 two-letter language code identifies the language. For example, es for Spanish.|String
 |originalText|The text to translate.|String
 |translatedLanguageName|The language that the text was translated to. An ISO 639-1 two-letter language code identifies the language. For example, en for English.|String
@@ -359,8 +357,7 @@ Defines a webpage that is relevant to the query.
 |-|-|-
 |about|For internal use only.|Object[]
 |<a name="datelastcrawled"></a>dateLastCrawled|The last time that Bing crawled the webpage. The date is in the form, YYYY-MM-DDTHH:MM:SS. For example, 2015-04-13T05:23:39.|String
-|contractualRules|A list of rules that you must adhere to if you display the answer. The following contractual rules may apply.<ul><li>[LicenseAttribution](#licenseattribution)</li><ul>For information about displaying contractual rules, see [Data Attribution](../data-attribution.md).
-|Object[]
+|contractualRules|A list of rules that you must adhere to if you display the answer. The following contractual rules may apply.<ul><li>[LicenseAttribution](#licenseattribution)</li></ul><br>For information about displaying contractual rules, see [Data Attribution](../data-attribution.md).|Object[]
 |<a name="deeplinks"></a>deepLinks|A list of links to related content that Bing found in the website that contains this webpage.<br/><br/>The `Webpage` object in this context includes only the `name` and `url` fields and optionally the `snippet` field.|[Webpage](#webpage)[]
 |<a name="displayurl"></a>displayUrl|The display URL of the webpage. The URL is meant for display purposes only and is not well formed.|String
 |id|An ID that uniquely identifies this webpage in the list of web results.<br/><br/>The object includes this field only if the Ranking answer specifies that you mix the webpages with the other search results. Each webpage contains an ID that matches an ID in the Ranking answer. For more information, see [Ranking results](../rank-results.md).|String
