@@ -22,7 +22,7 @@ You can specify the answers to include in the response or those that you want to
 &responseFilter=webpages,news
 ```
 
-Remember that you need to URL encode all query parameters, so the parameter actually looks like:
+Remember that you need to URL-encode all query parameters, so the parameter actually looks like:
 
 ```
 &responseFilter=webpages%2Cnews
@@ -54,11 +54,11 @@ It’s possible that Bing will return content that’s older than 30 days. If yo
 
 You may set the parameter to one of the following time periods:
 
-- Day &mdash; Return webpages that Bing discovered within the last 24 hours
-- Week &mdash; Return webpages that Bing discovered within the last 7 days
-- Month &mdash; Return webpages that Bing discovered within the last 30 days
+- Day &mdash; Return webpages that Bing discovered within the last 24 hours.
+- Week &mdash; Return webpages that Bing discovered within the last 7 days.
+- Month &mdash; Return webpages that Bing discovered within the last 30 days.
 
-The following example filters the webpage results to those that Bing discovered in the last seven days.
+The following example filters the webpage results to those that Bing discovered in the last seven days:
 
 ```
 freshness=week
