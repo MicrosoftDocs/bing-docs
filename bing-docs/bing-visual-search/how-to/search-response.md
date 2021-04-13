@@ -561,7 +561,7 @@ But if you set the `enableEntityData` field to **true** in your request, the Ent
 
 ## The other tags
 
-The other tags contain a diverse set of terms derived from the image sent in the request. These terms enable users to explore concepts found in the image. For example, if the image used in the request shows a black, long sleeve t-shirt, the other tags may contain URLs that you can use to find images of related clothing, such as jackets or sweatshirts. 
+The other tags contain a diverse set of terms derived from the image sent in the request. These terms enable users to explore concepts found in the image. For example, if the image used in the request shows a black, long sleeve T-shirt, the other tags may contain URLs that you can use to find images of related clothing, such as jackets or sweatshirts. 
 
 Each tag includes a display name that you can use to categorize the related images, a bounding box that identifies the region of interest in the image, a thumbnail of the image that represents the related images, and URLs that you can use to explore the derived term. 
 
@@ -732,7 +732,7 @@ Each [TextRegion](../reference/response-objects.md#textregion) object specifies 
                 ]
 ```
 
-If the list of tags includes other text recognition tags, they're likely Uri action types. The response includes Uri action types if the service recognized URIs such as a website URL, telephone number, or email address. Here are examples of what the tag looks like if the service recognized URIs.
+If the list of tags includes other text recognition tags, they're likely URI action types. The response includes URI action types if the service recognized URIs such as a website URL, telephone number, or email address. Here are examples of what the tag looks like if the service recognized URIs.
 
 ```json
     {

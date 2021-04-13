@@ -22,17 +22,17 @@ The Bing Video Search API lets you search the Web and get video results relevant
 > [!NOTE]
 > The JSON and HTTP headings at the bottom of the page when clicked show the JSON response and HTTP request information. These details can be useful when exploring the service.
 
-![JSON, HTTP raw results](../media/json-http-raw-results.png)
+![JSON, HTTP raw results](../media/json-http-raw-results.PNG)
 
 This tutorial app illustrates how to:
 > [!div class="checklist"]
-> * Perform a Bing Video Search API call in JavaScript
-> * Pass search options to the Bing Search API
-> * Display video search results or to optionally include Web pages, news, or images
-> * Search time-frames of 24 hours, the past week, month, or all available time
-> * Page through search results
-> * Handle the Bing client ID and API subscription key
-> * Handle errors that might occur
+> * Perform a Bing Video Search API call in JavaScript.
+> * Pass search options to the Bing Search API.
+> * Display video search results or to optionally include Web pages, news, or images.
+> * Search time-frames of 24 hours, the past week, month, or all available times.
+> * Page through search results.
+> * Handle the Bing client ID and API subscription key.
+> * Handle errors that might occur.
 
 The tutorial page is entirely self-contained; it does not use any external frameworks, style sheets, or image files. It uses only widely supported JavaScript language features and works with current versions of all major Web browsers.
 
@@ -41,9 +41,9 @@ The tutorial page is entirely self-contained; it does not use any external frame
 Like any single-page Web app, this tutorial application includes three parts:
 
 > [!div class="checklist"]
-> * HTML - Defines the structure and content of the page
-> * CSS - Defines the appearance of the page
-> * JavaScript - Defines the behavior of the page
+> * HTML - Defines the structure and content of the page.
+> * CSS - Defines the appearance of the page.
+> * JavaScript - Defines the behavior of the page.
 
 Most of the HTML and CSS is conventional, so the tutorial doesn't discuss it. The HTML contains the search form in which the user enters a query and chooses search options. The form is connected to JavaScript that does the search using the `onsubmit` attribute of the `<form>` tag:
 
@@ -90,7 +90,7 @@ The HTML `<form>` tag `onsubmit` calls the `bingWebSearch` function to return se
 ## Selecting search options
 The following figure shows the query text box and options that define a search.
 
-![Bing News Search options](../media/video-search-options.png)
+![Bing News Search options](../media/video-search-options.PNG)
 
 The HTML form includes elements with the following names:
 
@@ -132,7 +132,7 @@ function bingSearchOptions(form) {
 }
 ```
 
-For example, the `SafeSearch` parameter in an actual API call can be `strict`, or `moderate`, with `moderate` being the default.
+For example, the `SafeSearch` parameter in an actual API call can be either `strict` or `moderate`, with `moderate` being the default.
 
 ## Performing the request
 Given the query, the options string, and the API key, the `BingWebSearch` function uses an `XMLHttpRequest` object to make the request to the Bing Search endpoint. 
@@ -362,7 +362,7 @@ The `video` renderer is shown in the following javascript excerpt. Using the Vid
 
 The renderer function:
 > [!div class="checklist"]
-> * Creates a paragraph tag, assigns it to the `images` class, and pushes it to the html array.
+> * Creates a paragraph tag, assigns it to the `images` class, and pushes it to the HTML array.
 > * Calculates image thumbnail size (width is fixed at 60 pixels, height calculated proportionately).
 > * Builds the HTML `<img>` tag to display the image thumbnail. 
 > * Builds the HTML `<a>` tags that link to the image and the page that contains it.

@@ -41,9 +41,9 @@ require 'json'
 
 A few variables must be set before we can continue:
 
-2. Confirm that the `uri` and `path` values are valid and replace the `accessKey` value with a subscription key from your Azure account. 
+1. Confirm that the `uri` and `path` values are valid and replace the `accessKey` value with a subscription key from your Azure account. 
 
-3. Optionally, customize the search query by replacing the value for `term`.
+2. Optionally, customize the search query by replacing the value for `term`.
 
 ```ruby
 accessKey = "YOUR_SUBSCRIPTION_KEY"

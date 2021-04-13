@@ -39,7 +39,7 @@ const https = require('https')
 
 ## Set the subscription key
 
-This code snippet uses the `AZURE_SUBSCRIPTION_KEY` environment variable to store your subscription key, which is a good practice to prevent the accidental exposure of your keys when deploying code.
+This code snippet uses the `AZURE_SUBSCRIPTION_KEY` environment variable to store your subscription key. Using an environment variable in this way is a good practice to prevent the accidental exposure of your keys when deploying code.
 
 If you're unfamiliar with the use of environment variables, or you want to run this app as fast as possible, replace `process.env['AZURE_SUBSCRIPTION_KEY']` with your subscription key set as a string.
 
@@ -54,11 +54,11 @@ if (!SUBSCRIPTION_KEY) {
 
 This function makes a secure GET request and saves the search query as a query parameter in the path. 
 
-2. Use `encodeURIComponent` to escape invalid characters. The subscription key is passed in a header. 
+1. Use `encodeURIComponent` to escape invalid characters. The subscription key is passed in a header. 
 
-3. The callback receives a [response](https://nodejs.org/dist/latest-v10.x/docs/api/http.html#http_class_http_serverresponse) that subscribes to the `data` event to aggregate the JSON body, the `error` event to log any issues, and the `end` event to know when the message should be considered complete. 
+2. The callback receives a [response](https://nodejs.org/dist/latest-v10.x/docs/api/http.html#http_class_http_serverresponse) that subscribes to the `data` event to aggregate the JSON body, the `error` event to log any issues, and the `end` event to know when the message should be considered complete. 
 
-4. When the app is complete, it prints the relevant headers and message body. You can adjust the colors and set the depth to suit your preference. A depth of `1` gives a nice summary of the response.
+3. When the app is complete, it prints the relevant headers and message body. You can adjust the colors and set the depth to suit your preference. A depth of `1` gives a nice summary of the response.
 
 ```javascript
 function bingWebSearch(query) {

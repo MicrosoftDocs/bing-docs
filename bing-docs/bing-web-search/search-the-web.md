@@ -30,7 +30,7 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 ## Request and response headers
 
-Although that's all the more you need to do to search the web, Bing does suggest you include a couple of other headers to provide a better search experience for your user. Those headers include:
+Although that's all you need to do to search the web, Bing suggests you include a couple of other headers to provide a better search experience for your user. Those headers include:
 
 - User-Agent &mdash; Lets Bing know whether needs a mobile or desktop experience.
 - X-MSEdge-ClientID &mdash; Provides continuity of experience.
@@ -45,9 +45,9 @@ Here's a cURL example that includes these headers.
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/v7.0/search?q=microsoft+devices
 ```
 
-Bing returns a couple of headers you should capture. 
+Bing returns a few headers you should capture.
 
-- BingAPIs-TraceId &mdash; ID that identifies the request in the log file.
+- BingAPIs-TraceId &mdash; The ID that identifies the request in the log file.
 - X-MSEdge-ClientID &mdash; The ID that you need to pass in subsequent request to provide continuity of experience.
 - BingAPIs-Market &mdash; The market used by Bing for the request.
 
@@ -61,7 +61,7 @@ curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.mic
 
 ## Query parameters
 
-The only query parameter that you must pass is the *q* parameter, which you set to the user's query string. You must URL encode the user's query string and all query parameter values that you pass.
+The only query parameter that you must pass is the *q* parameter, which you set to the user's query string. You must URL-encode the user's query string and all query parameter values that you pass.
 
 The API supports a number of query parameters that you can pass in your request. Here's a list of the ones you're most likely to pass.
 

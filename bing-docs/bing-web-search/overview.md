@@ -37,17 +37,17 @@ By default, the API returns and ranks whatever content is relevant to the user's
 |[Page results](page-results.md)|Page through multiple pages of webpage results.
 |[Hit highlighting](hit-highlighting.md)|Add highlighting characters to words and phrases in the results' titles and descriptions that identify the words or phrases from the user's search query.
 
-Bing also provides API metrics, which you can use to inform your strategic decisions. Quickly retrieve statistics such as your top queries, call volume, market distribution, response code summary, and many more. For details, see [Bing Web Statistics](bing-web-stats.md).
+Bing also provides API metrics, which you can use to inform your strategic decisions. Quickly retrieve statistics such as your top queries, call volume, market distribution, response code summary, and much more. For details, see [Bing Web Statistics](bing-web-stats.md).
 
 
 ### Search or search-like experience
 
-Bing Web Search API may only be used as a result of a direct user query or search, or as a result of an action within an app or experience that logically can be interpreted as a user’s search request. For illustration purposes, the following are some examples of acceptable search or search-like experiences.
+Bing Web Search API may only be used as a result of a direct user query or search, or as a result of an action within an app or experience that logically can be interpreted as a user’s search request. For illustration purposes, the following are some examples of acceptable search or search-like experiences:
 
-- User enters a query directly into a search box in an app
-- User selects specific text or image and requests “more information” or “additional information”
-- User asks a search bot about a particular topic
-- User dwells on a particular object or entity in a visual search type scenario
+- User enters a query directly into a search box in an app.
+- User selects specific text or image and requests “more information” or “additional information”.
+- User asks a search bot about a particular topic.
+- User dwells on a particular object or entity in a visual search type scenario.
 
 If you are not sure if your experience can be considered a search-like experience, check with Microsoft.
 

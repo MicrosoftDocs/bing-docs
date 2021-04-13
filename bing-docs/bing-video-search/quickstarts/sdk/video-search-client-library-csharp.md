@@ -23,7 +23,7 @@ Use this quickstart to begin searching for news with the Bing Video Search clien
 
 To add the Bing Video Search client library to your project, select **Manage NuGet Packages** from **Solution Explorer** in Visual Studio. Add the `Microsoft.Azure.CognitiveServices.Search.VideoSearch` package.
 
-Installing the [[NuGet Video Search SDK package]](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.VideoSearch/1.2.0) also installs the following dependencies:
+Installing the [NuGet Video Search SDK package](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.VideoSearch/1.2.0) also installs the following dependencies:
 
 * Microsoft.Rest.ClientRuntime
 * Microsoft.Rest.ClientRuntime.Azure
@@ -45,7 +45,7 @@ Installing the [[NuGet Video Search SDK package]](https://www.nuget.org/packages
     using Microsoft.Azure.CognitiveServices.Search.VideoSearch.Models;
     ```
 
-2. Instantiate the client by creating a new `ApiKeyServiceClientCredentials` object with your subscription key, and calling the constructor.
+2. Instantiate the client by creating a new `ApiKeyServiceClientCredentials` object with your subscription key, and then calling the constructor.
 
     ```csharp
     var client = new VideoSearchAPI(new ApiKeyServiceClientCredentials("YOUR-ACCESS-KEY"));
@@ -59,7 +59,7 @@ Installing the [[NuGet Video Search SDK package]](https://www.nuget.org/packages
     var videoResults = client.Videos.SearchAsync(query: "SwiftKey").Result;
     ```
 
-2. If any results were returned, get the first one with `videoResults.Value[0]`. Then print the video's ID, title, and url.
+2. If any results were returned, get the first one with `videoResults.Value[0]`. Then print the video's ID, title, and URL.
 
     ```csharp
     if (videoResults.Value.Count > 0)
@@ -80,7 +80,7 @@ Installing the [[NuGet Video Search SDK package]](https://www.nuget.org/packages
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single page web app](../../tutorial/bing-video-search-single-page-app.md)
+> [Create a single page web app](../../tutorial/bing-video-search-single-page-app.md).
 
 ## See also 
 

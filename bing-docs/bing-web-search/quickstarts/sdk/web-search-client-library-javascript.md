@@ -45,7 +45,7 @@ Let's start by setting up the development environment for our Node.js project.
     npm init
     ```
 
-1. Now, let's install some azure modules and add them to the `package.json`:
+1. Now, let's install some Azure modules and add them to the `package.json`:
 
     ```console
     npm install --save azure-cognitiveservices-websearch
@@ -74,7 +74,7 @@ let webSearchApiClient = new WebSearchAPIClient(credentials);
 
 ## Make a request and print the results
 
-Use the client to send a search query to Bing Web Search. If the response includes results for any of the items in the `properties` array, the `result.value` is printed to console.
+Use the client to send a search query to Bing Web Search. If the response includes results for any of the items in the `properties` array, the `result.value` is printed to the console.
 
 ```javascript
 webSearchApiClient.web.search('seahawks').then((result) => {

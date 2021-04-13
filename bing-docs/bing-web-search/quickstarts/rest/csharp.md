@@ -165,7 +165,7 @@ Here's the HTTP request. It's your basic HTTP GET request. Use whatever HTTP cli
         }
 ```
 
-That's all the more there is to sending a search request and getting back search results. To see what all the answers look like in the JSON response, see [Handling the web search response](../../search-responses.md).
+That's all there is to sending a search request and getting back search results. To see what all the answers look like in the JSON response, see [Handling the web search response](../../search-responses.md).
 
 The rest of the sections walk you through one way of parsing the JSON response and displaying the search results. Be sure to read the [use and display requirements](../../use-display-requirements.md) to make sure you comply with all display requirements.
 
@@ -211,7 +211,7 @@ The example uses the RankingResponse answer to display the search results. The r
 
 Each item in the ranking tells you whether to display all results from the answer together or to display a single result from the answer.
 
-If the item includes the `resultIndex` field, use the index value to display that single result from the answer. But if the item doesn't include `resultIndex`, you display all results from the answer. Typically, the ranking has you display individual webpages interspersed amongst the other answers, and has you group all images together. For answers that have many results like images and videos, you typically display a few of the images or videos and provide a link that users can click to see the rest.
+If the item includes the `resultIndex` field, use the index value to display that single result from the answer. But if the item doesn't include `resultIndex`, you display all results from the answer. Typically, the ranking has you display individual webpages interspersed among the other answers, and has you group all images together. For answers that have many results like images and videos, you typically display a few of the images or videos and provide a link that users can click to see the rest.
 
 ```csharp
         // Displays each result based on ranking. Ranking contains the results for

@@ -71,7 +71,7 @@ The rest of this topic provides details about each of the answer types in the **
 
 ## Webpages answer
 
-The [webPages](reference/response-objects.md#webanswer) answer contains a list of links to webpages that Bing determined were relevant to the query. At a minimum, each [webpage](reference/response-objects.md#webpage) in the list includes the page's name, url, display URL, a short description of the content, the date Bing found the content, and the ranking ID.
+The [webPages](reference/response-objects.md#webanswer) answer contains a list of links to webpages that Bing determined were relevant to the query. At a minimum, each [webpage](reference/response-objects.md#webpage) in the list includes the page's name, URL, display URL, a short description of the content, the date Bing found the content, and the ranking ID.
 
 ```json
   "webPages": {
@@ -98,7 +98,7 @@ The webpage may include a few other fields that you should account for like deep
 
 ### Deep links
 
-Deep links are related webpages that Bing found on the webpage’s website. The **Webpage** object in this context includes only the name and url fields and may include the snippet field. 
+Deep links are related webpages that Bing found on the webpage’s website. The **Webpage** object in this context includes only the name and URL fields and may include the snippet field. 
 
 ```json
         "deepLinks": [
@@ -151,7 +151,7 @@ Deep links can also have nested deep links.
 
 If Bing determines that a webpage may cause a potential issue for the user if they click the link, Bing provides a notice that you should display next to the webpage's link. Potential issues might be that the page contains malware, is a phishing site, or is not recommended for purchasing pharmaceuticals. 
 
-The following image shows how Bing might display the notice for the query, canada drugs. Bing displays the warning when the user hovers over the webpage in the search results page, tabs to it, or touches the webpage on a touch device. 
+The following image shows how Bing might display the notice for the query, _canada drugs_. Bing displays the warning when the user hovers over the webpage in the search results page, tabs to it, or touches the webpage on a touch device. 
 
 ![Malware notice](media/bing-web-api/malware-notice.png) 
 
@@ -293,8 +293,8 @@ As the user hovers over the thumbnail you can use `motionThumbnailUrl` to play a
 
 If the user clicks the thumbnail, the following are the options for viewing the video:
 
-- Use `hostPageUrl` to view the video on the host website (for example, YouTube)
-- Use `webSearchUrl` to view the video in the Bing video browser
+- Use `hostPageUrl` to view the video on the host website (for example, YouTube).
+- Use `webSearchUrl` to view the video in the Bing video browser.
 - Use `embedHtml` to embed the video in your own experience.
 
 For details about the video answer and videos, see [Video Search API](../bing-video-search/overview.md).

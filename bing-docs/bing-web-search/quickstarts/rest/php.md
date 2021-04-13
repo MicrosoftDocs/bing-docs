@@ -14,7 +14,7 @@ ms.author: scottwhi
 
 # Quickstart: Use PHP to call the Bing Web Search API  
 
-Use this quickstart to make your first call to the Bing Web Search API. This Node.js application sends a search request to the API, and shows the JSON response. Although this application is written in JavaScript, the API is a RESTful Web service compatible with most programming languages.
+Use this quickstart to make your first call to the Bing Web Search API. This PHP application sends a search request to the API, and shows the response. Although this application is written in PHP, the API is a RESTful Web service compatible with most programming languages.
 
 ## Prerequisites
 

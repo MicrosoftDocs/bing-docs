@@ -45,10 +45,10 @@ By default, the charts and graphs display all metrics and data that you have acc
 - **Endpoints**: The Bing Search API endpoints. The list contains all endpoints for which you have a paid subscription. By default, all endpoints are selected.  
 
 - **Time Frame**: The reporting period. You can specify:
-  - **All**: Includes up to 13 months' worth of data  
-  - **Past 24 hours**: Includes analytics from the last 24 hours  
-  - **Past week**: Includes analytics from the previous 7 days  
-  - **Past month**: Includes analytics from the previous 30 days  
+  - **All**: Includes up to 13 months' worth of data.  
+  - **Past 24 hours**: Includes analytics from the last 24 hours.  
+  - **Past week**: Includes analytics from the previous 7 days.  
+  - **Past month**: Includes analytics from the previous 30 days.  
   - **A custom date range**: Includes analytics from the specified date range, if available. 
 
 ## Charts and graphs

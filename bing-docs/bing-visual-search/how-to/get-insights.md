@@ -264,7 +264,7 @@ If the object includes these fields, and you want to provide your user the abili
   }
 ```
 
-To page visually similar images, set the `invokedSkills` array to SimilarImages or set it to SimilarProducts to page visually similar products.
+To paginate visually similar images, set the `invokedSkills` array to SimilarImages or set it to SimilarProducts to paginate visually similar products.
 
 Set the `offset` field to the value from the `nextOffset` field in the VisualSearch or ProductVisualSearch insight depending on the value you specified in `invokedSkills`.
 
