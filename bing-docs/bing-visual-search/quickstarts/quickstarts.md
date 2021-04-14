@@ -34,7 +34,6 @@ Use these quickstarts to make your first Visual Search API call in a matter of m
 - [Python](sdk/visual-search-client-library-python.md)
 
 
-
 ## Next steps
 
 - For a more in depth web app example, see the [Video search tutorial](../tutorial/visual-search-single-page-app.md).

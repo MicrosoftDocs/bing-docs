@@ -25,10 +25,10 @@
       href: quickstarts/rest/python.md
     - name: Using Ruby
       href: quickstarts/rest/ruby.md
-  # - name: SDK
-  #   items:
-  #   - name: Using C#
-  #     href: quickstarts/sdk/spell-check-client-library-csharp.md
+  - name: SDK
+    items:
+    - name: Using C#
+      href: quickstarts/sdk/spell-check-client-library-csharp.md
 - name: Tutorials
   items:
   - name: Build a spell check web app
@@ -62,18 +62,18 @@
       href: reference/market-codes.md
     - name: Error codes
       href: reference/error-codes.md
-  # - name: SDKs (client libraries)
-  #   items:
-  #   - name: .NET
-  #     href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingspellcheck?view=azure-dotnet
-  #   - name: Node.js
-  #     href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-spellcheck/?view=azure-node-latest
-  #   - name: Python
-  #     href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/spellcheck?view=azure-python
-  #   - name: Go
-  #     href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/spellcheck
-  #   - name: Java
-  #     href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingspellcheck?view=azure-java-stable
+  - name: SDKs (client libraries)
+    items:
+    - name: .NET
+      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingspellcheck?view=azure-dotnet
+    - name: Node.js
+      href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-spellcheck/?view=azure-node-latest
+    - name: Python
+      href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/spellcheck?view=azure-python
+    - name: Go
+      href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/spellcheck
+    - name: Java
+      href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingspellcheck?view=azure-java-stable
 - name: Resources
   items:
   - name: Create Bing Search Service resource
