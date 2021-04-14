@@ -20,7 +20,7 @@ Use this quickstart to begin spell checking with Bing Spell Check SDK for C#. Wh
 ## Application dependencies
 
 * Any edition of [Visual Studio 2017 or later](https://visualstudio.microsoft.com/downloads/).
-* The Bing Spell Check [NuGet Package](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Language.SpellCheck)
+* The Bing Spell Check [NuGet Package](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Language.SpellCheck).
 
 To add the Bing Spell Check SDK to your project, select **Manage NuGet Packages** from **Solution Explorer** in Visual Studio. Add the `Microsoft.Azure.CognitiveServices.Language.SpellCheck` package. The package also installs the following dependencies:
 
@@ -34,7 +34,7 @@ To add the Bing Spell Check SDK to your project, select **Manage NuGet Packages*
 
 ## Create and initialize the application
 
-1. Create a new C# console solution in Visual Studio. Then add the following `using` statement.
+1. Create a new C# console solution in Visual Studio. Then add the following `using` statement:
     
     ```csharp
     using System;

@@ -32,8 +32,8 @@ New search endpoint: `https://api.bing.microsoft.com/v7.0/news/search`
 - All failed requests should now include an `ErrorResponse` object in the response body.
 
 - Added the following fields to the `Error` object.  
-  - `subCode`&mdash;Partitions the error code into discrete buckets, if possible
-  - `moreDetails`&mdash;Additional information about the error described in the `message` field
+  - `subCode`&mdash;Partitions the error code into discrete buckets, if possible.
+  - `moreDetails`&mdash;Additional information about the error described in the `message` field.
 
 - Replaced the v5 error codes with the following possible `code` and `subCode` values.
 
@@ -80,7 +80,7 @@ Blocked|InvalidRequest.Blocked
 
 - Added the [SortBy](reference/query-parameters.md#sortby) query parameter, which returns trending topics sorted by date with the most recent first.
 
-- Added the [Since](reference/query-parameters.md#since) query parameter, which returns trending topics that were discovered by Bing on or after the specified Unix epoch timestamp.
+- Added the [Since](reference/query-parameters.md#since) query parameter, which returns trending topics that were discovered by Bing on or after the specified UNIX epoch timestamp.
 
 ### Object changes
 

@@ -35,7 +35,7 @@ To add the Bing Entity Search client library to your Visual Studio project, use 
 
 ## Create and initialize an application
 
-1. create a new C# console solution in Visual Studio. Then add the following into the main code file.
+1. Create a new C# console solution in Visual Studio. Then add the following into the main code file:
 
     ```csharp
     using System;

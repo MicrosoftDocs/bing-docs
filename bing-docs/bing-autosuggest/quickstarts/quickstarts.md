@@ -35,4 +35,4 @@ Use these quickstarts to make your first Autosuggest API call in a matter of min
 ## Next steps
 
 - For a more in depth web app example, see the [Autosuggest tutorial](../tutorial/autosuggest.md).
-- For REST and SDK samples, see [Samples](../samples.md)
+- For REST and SDK samples, see [Samples](../samples.md).

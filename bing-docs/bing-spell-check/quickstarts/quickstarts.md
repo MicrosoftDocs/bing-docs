@@ -34,4 +34,4 @@ Use these quickstarts to make your first Spell Check API call in a matter of min
 ## Next steps
 
 - For a more in depth web app example, see the [Spell check tutorial](../tutorial/spellcheck.md).
-- For REST and SDK samples, see [Samples](../samples.md)
+- For REST and SDK samples, see [Samples](../samples.md).

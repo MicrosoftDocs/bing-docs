@@ -59,7 +59,7 @@ If the `type` field is RepeatedToken, you also replace `token` with `suggestion`
     },
 ```
 
-If an error occurs, the response body contains an [ErrorResponse](../reference/response-objects.md#errorresponse) object. Bing returns an error response for all 400 level HTTP status codes. [Read more](../reference/error-codes.md)
+If an error occurs, the response body contains an [ErrorResponse](../reference/response-objects.md#errorresponse) object. Bing returns an error response for all 400 level HTTP status codes. [Read more](../reference/error-codes.md).
 
 ```json
 {

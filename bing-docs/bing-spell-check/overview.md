@@ -23,8 +23,8 @@ Bing Spell Check API lets you perform contextual grammar and spell checking on a
 |-|-
 |Multiple spell check modes|Multiple spell check modes let you get corrections focused on grammar and/or spelling.
 |Slang and informal language recognition|Recognize common expressions and informal terms used in text.
-|Differentiate between similar words|Find the correct usage between words that sound similar but differ in meaning (for example, "see" and "sea") 
-|Brand, title, and popular usage support|Recognize new brands, titles, and other popular expressions as they emerge
+|Differentiate between similar words|Find the correct usage between words that sound similar but differ in meaning (for example, "see" and "sea").
+|Brand, title, and popular usage support|Recognize new brands, titles, and other popular expressions as they emerge.
 
 
 ## Get started
@@ -36,7 +36,7 @@ You can easily call the API by sending a native HTTP GET request or by using the
 
 ## View API metrics
 
-Bing provides API metrics, which you can use to inform your strategic decisions. Quickly retrieve statistics such as your top queries, call volume, market distribution, response code summary, and many more. For details, see [Bing Web Statistics](../bing-web-search/bing-web-stats.md).
+Bing provides API metrics that you can use to inform your strategic decisions. Quickly retrieve statistics such as your top queries, call volume, market distribution, response code summary, and many more. For details, see [Bing Web Statistics](../bing-web-search/bing-web-stats.md).
 
 
 ## Next steps

@@ -118,7 +118,7 @@ The Bing Image Search API offers several [filter query parameters](https://docs.
 | `where`      | A drop-down menu for selecting the market (location and language) used for the search.                                                                                             |
 | `query`      | The text field in which to enter the search terms.                                                                                                                                 |
 | `aspect`     | Radio buttons for choosing the proportions of the found images: roughly square, wide, or tall.                                                                                     |
-| `color`      |                                                                                                                                                                                    |
+| `color`      | Drop-down menu for optionally specifying the color of the found images.                                                                                                            |
 | `when`       | Drop-down menu for optionally limiting the search to the most recent day, week, or month.                                                                                          |
 | `safe`       | A checkbox indicating whether to use Bing's SafeSearch feature to filter out "adult" results.                                                                                      |
 | `count`      | Hidden field. The number of search results to return on each request. Change to display fewer or more results per page.                                                            |
@@ -370,7 +370,7 @@ The thumbnail image's `height` and `width` are used in both the `<img>` tag and 
 
 Responses from the Bing search APIs may include a `X-MSEdge-ClientID` header that should be sent back to the API with successive requests. If multiple Bing Search APIs are being used, the same client ID should be used with all of them, if possible.
 
-Providing the `X-MSEdge-ClientID` header allows the Bing APIs to associate all of a user's searches, which is useful in
+Providing the `X-MSEdge-ClientID` header allows the Bing APIs to associate all of a user's searches, which is useful in:
 
 First, it allows the Bing search engine to apply past context to searches to find results that better satisfy the user. If a user has previously searched for terms related to sailing, for example, a later search for "knots" might preferentially return information about knots used in sailing.
 

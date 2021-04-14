@@ -39,6 +39,8 @@ To run this application, follow these steps:
 4. Replace the `accessKey` value with an access key valid for your subscription.
 6. Run the program.
 
+Example code:
+
 ```php
 <?php
 

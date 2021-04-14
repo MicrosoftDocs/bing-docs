@@ -47,9 +47,9 @@ Custom Search provides the following features:
 
 After defining your custom view of the web, use the following APIs to query its content. 
 
-- Custom Search API  &mdash; Lets your users to search for webpages and more from the domains and sites specified in your custom search instance.
-- [Custom Image API](how-to/get-images-from-instance.md) &mdash; Lets your users to search for images from the domains and sites specified in your custom search instance.
-- [Custom Video API](how-to/get-videos-from-instance.md) &mdash; Lets your users to search for videos from the domains and sites specified in your custom search instance.
+- Custom Search API  &mdash; Lets your users search for webpages and more from the domains and sites specified in your custom search instance.
+- [Custom Image API](how-to/get-images-from-instance.md) &mdash; Lets your users search for images from the domains and sites specified in your custom search instance.
+- [Custom Video API](how-to/get-videos-from-instance.md) &mdash; Lets your users search for videos from the domains and sites specified in your custom search instance.
 - [Custom Autosuggest API](how-to/configure-custom-autosuggest.md) &mdash; Lets you provide suggested search strings to your users as they type in your search box.
 
 
@@ -57,10 +57,10 @@ After defining your custom view of the web, use the following APIs to query its 
 
 Bing Custom Search API may only be used as a result of a direct user query or search, or as a result of an action within an app or experience that logically can be interpreted as a user’s search request. For illustration purposes, the following are some examples of acceptable search or search-like experiences.
 
-- User enters a query directly into a search box in an app
-- User selects specific text or image and requests “more information” or “additional information”
-- User asks a search bot about a particular topic
-- User dwells on a particular object or entity in a visual search type scenario
+- User enters a query directly into a search box in an app.
+- User selects specific text or image and requests “more information” or “additional information”.
+- User asks a search bot about a particular topic.
+- User dwells on a particular object or entity in a visual search type scenario.
 
 If you are not sure if your experience can be considered a search-like experience, check with Microsoft.
 
