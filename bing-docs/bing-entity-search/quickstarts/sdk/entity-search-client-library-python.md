@@ -14,15 +14,15 @@ ms.author: scottwhi
 
 # Quickstart: Use the Bing Entity Search Python client library
 
-Use this quickstart to begin searching for entities with the Bing Entity Search client library for Python. While Bing Entity Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/blob/master/samples/search/entity_search_samples.py).
+Use this quickstart to begin searching for entities with the Bing Entity Search client library for Python. While Bing Entity Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/microsoft/bing-search-sdk-for-python/blob/main/samples/sdk/entity_search_samples.py).
 
 ## Prerequisites
 
-* Python [2.x or 3.x](https://www.python.org/).
+* Python [2.x or 3.x](https://www.python.org/)
 
-* The [Bing Entity Search SDK for Python](https://pypi.org/project/azure-cognitiveservices-search-entitysearch/).
+* The [Bing Entity Search SDK for Python](https://pypi.org/project/microsoft-bing-entitysearch/)
 
-It is recommended that you use a Python virtual environment. You can install and initialize a virtual environment with the venv module. You can install virtualenv with:
+It is recommended that you use a python virtual environment. You can install and initialize a virtual environment with the venv module. You can install virtualenv with:
 
 ```Console
 python -m venv mytestenv
@@ -32,7 +32,7 @@ Install the Bing Entity Search client library with:
 
 ```Console
 cd mytestenv
-python -m pip install azure-cognitiveservices-search-entitysearch
+python -m pip install microsoft-bing-entitysearch
 ```
 
 <!--
@@ -44,17 +44,20 @@ python -m pip install azure-cognitiveservices-search-entitysearch
 1. Create a new Python file in your favorite IDE or editor, and add the following import statements. 
 
     ```python
-    from azure.cognitiveservices.search.entitysearch import EntitySearchClient
-    from azure.cognitiveservices.search.entitysearch.models import Place, ErrorResponseException
-    from msrest.authentication import CognitiveServicesCredentials
+    from entity_search_client import EntitySearchClient
+    from entity_search_client.models import Place
+    from azure.core.credentials import AzureKeyCredential
     ```
 
-2. Create a variable for your subscription key and endpoint. Instantiate the client by creating a new `CognitiveServicesCredentials` object with your key.
+2. Create a variable for your subscription key and endpoint. Instantiate the client by creating a new `AzureKeyCredential` object with your key.
     
     ```python
     subscription_key = "YOUR-SUBSCRIPTION-KEY"
     endpoint = "YOUR-ENDPOINT"
-    client = EntitySearchclient(endpoint=endpoint, credentials=CognitiveServicesCredentials(subscription_key))
+    client = EntitySearchClient(
+        endpoint=ENDPOINT,
+        credential=AzureKeyCredential(SUBSCRIPTION_KEY)
+    )
     ```
 
 ## Send a search request and receive a response

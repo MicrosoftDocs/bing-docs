@@ -16,7 +16,7 @@ ms.author: scottwhi
 
 Use this quickstart to make your first image search using the Bing Image Search client library, which is a wrapper for the API and contains the same features. This simple Java application sends an image search query, parses the JSON response, and displays the URL of the first image returned.
 
-The source code for this sample is available [on GitHub](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples/tree/master/Search/BingImageSearch/Quickstart) with additional error handling and annotations.
+The source code for this sample is available [on GitHub](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/ImageSearchSample) with additional error handling and annotations.
 
 ## Prerequisites
 
@@ -27,9 +27,9 @@ Install the Bing Image Search client library dependencies by using Maven, Gradle
 ```xml
  <dependencies>
     <dependency>
-      <groupId>com.microsoft.azure.cognitiveservices</groupId>
-      <artifactId>azure-cognitiveservices-imagesearch</artifactId>
-      <version>1.0.1</version>
+      <groupId>com.microsoft.bing</groupId>
+      <artifactId>bing-imagesearch</artifactId>
+      <version>1.0.0</version>
     </dependency>
  </dependencies>
 ```
@@ -43,19 +43,22 @@ Install the Bing Image Search client library dependencies by using Maven, Gradle
 1. Create a new Java project in your favorite IDE or editor, and add the following imports to your class implementation:
 
     ```java
-    import com.microsoft.azure.cognitiveservices.search.imagesearch.BingImageSearchAPI;
-    import com.microsoft.azure.cognitiveservices.search.imagesearch.BingImageSearchManager;
-    import com.microsoft.azure.cognitiveservices.search.imagesearch.models.ImageObject;
-    import com.microsoft.azure.cognitiveservices.search.imagesearch.models.ImagesModel;
+    package com.microsoft.bing.samples;
+    import com.microsoft.bing.imagesearch.models.ImageObject;
+    import com.microsoft.bing.imagesearch.models.Images;
+    import com.microsoft.bing.imagesearch.implementation.ImageSearchClientImpl;
+    import com.microsoft.rest.credentials.ServiceClientCredentials;
+    import okhttp3.*;
+    import okhttp3.OkHttpClient.Builder;
+    import java.io.IOException;
     ```
 
 2. In your main method create variables for your subscription key, and search term. Then instantiate the Bing Image Search client.
 
     ```java
-    final String subscriptionKey = "COPY_YOUR_KEY_HERE";
-    String searchTerm = "canadian rockies";
     //Image search client
-    BingImageSearchAPI client = BingImageSearchManager.authenticate(subscriptionKey);
+    ImageSearchClientImpl client = new ImageSearchClientImpl(endpoint,credentials);
+    String searchTerm = "canadian rockies";
     ```
 
 ## Send a search request to the API
@@ -63,10 +66,7 @@ Install the Bing Image Search client library dependencies by using Maven, Gradle
 1. Using `bingImages().search()`, send the HTTP request containing the search query. Save the response as a `ImagesModel`.
 
    ```java
-    ImagesModel imageResults = client.bingImages().search()
-                .withQuery(searchTerm)
-                .withMarket("en-us")
-                .execute();
+    Images imageResults = client.images().search(searchTerm);
     ```
 
 ## Parse and view the result
@@ -97,5 +97,5 @@ else {
 ## See also
 
 * [What is Bing Image Search?](../../overview.md)  
-* [Java samples for the Azure Cognitive Services SDK](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples)
+* [Java samples for the BingApis SDK](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/ImageSearchSample)
 * [Bing Image Search API reference](../../reference/endpoints.md)

@@ -1,19 +1,19 @@
 ---
-title: Bing Video Search Java client library quickstart 
+title: Bing SpellCheck Java client library quickstart 
 titleSuffix: Bing Sesarch Services
-description: The Video Search API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this Java quickstart to send search requests and get back results.
+description: The SpellCheck API offers client libraries that makes it easy to integrate search capabilities into your applications. Use this Java quickstart to send search requests and get back results.
 services: bing-search-services
 author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
-ms.subservice: bing-video-search
+ms.subservice: bing-spellcheck
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-# Quickstart: Use the Bing Video Search Java client library
+# Quickstart: Use the Bing SpellCheck Java client library
 
-Use this quickstart to begin searching for news with the Bing Video Search client library for Java. While Bing Video Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/VideoSearchSample), with additional annotations, and features.
+Use this quickstart to begin searching for news with the Bing SpellCheck client library for Java. While Bing SpellCheck has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/SpellCheckSample), with additional annotations, and features.
 
 ## Prerequisites
 
@@ -21,17 +21,14 @@ Use this quickstart to begin searching for news with the Bing Video Search clien
 
 * The [Gson library](https://github.com/google/gson)
 
-<!--
-[!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
--->
 
-Install the Bing Video Search client library dependencies by using Maven, Gradle, or another dependency management system. The Maven POM file requires the following declaration:
+Install the Bing SpellCheck client library dependencies by using Maven, Gradle, or another dependency management system. The Maven POM file requires the following declaration:
 
 ```xml
   <dependencies>
     <dependency>
       <groupId>com.microsoft.bing</groupId>
-      <artifactId>bing-videosearch</artifactId>
+      <artifactId>bing-spellcheck</artifactId>
       <version>1.0.0</version>
     </dependency>
   </dependencies> 
@@ -45,31 +42,21 @@ Create a new Java project in your favorite IDE or editor, and import the followi
 ```java
     package com.microsoft.bing.samples;
 
-    import com.microsoft.bing.videosearch.models.ErrorResponseException;
-    import com.microsoft.bing.videosearch.models.Freshness;
-    import com.microsoft.bing.videosearch.models.TrendingVideos;
-    import com.microsoft.bing.videosearch.models.TrendingVideosCategory;
-    import com.microsoft.bing.videosearch.models.TrendingVideosSubcategory;
-    import com.microsoft.bing.videosearch.models.TrendingVideosTile;
-    import com.microsoft.bing.videosearch.models.VideoDetails;
-    import com.microsoft.bing.videosearch.models.VideoInsightModule;
-    import com.microsoft.bing.videosearch.models.VideoLength;
-    import com.microsoft.bing.videosearch.models.VideoObject;
-    import com.microsoft.bing.videosearch.models.VideoPricing;
-    import com.microsoft.bing.videosearch.models.VideoResolution;
-    import com.microsoft.bing.videosearch.models.Videos;
-    import com.microsoft.bing.videosearch.implementation.VideoSearchClientImpl;
+    import com.microsoft.bing.spellcheck.models.Mode;
+    import com.microsoft.bing.spellcheck.models.SpellCheck;
+    import com.microsoft.bing.spellcheck.models.SpellingFlaggedToken;
+    import com.microsoft.bing.spellcheck.models.SpellingTokenSuggestion;
+    import com.microsoft.bing.spellcheck.implementation.SpellCheckClientImpl;
     import com.microsoft.rest.credentials.ServiceClientCredentials;
     import okhttp3.*;
     import okhttp3.OkHttpClient.Builder;
     import java.io.IOException;
     import java.util.List;
-    import java.util.ArrayList;
 ```
 
 ## Create a search client
 
-1. Implement the `VideoSearchAPIImpl` client, which requires your API endpoint, and an instance of the `ServiceClientCredentials` class.
+1. Implement the `SpellCheckClientImpl` client, which requires your API endpoint, and an instance of the `ServiceClientCredentials` class.
 
     ```java
     ServiceClientCredentials credentials = new ServiceClientCredentials() {
@@ -90,7 +77,7 @@ Create a new Java project in your favorite IDE or editor, and import the followi
             );
         }
     };
-    VideoSearchClientImpl client = new VideoSearchClientImpl(endpoint,credentials);
+    SpellCheckClientImpl client = new SpellCheckClientImpl(endpoint,credentials);
     ```
 
     To implement `ServiceClientCredentials`, follow these steps:
@@ -138,27 +125,44 @@ Create a new Java project in your favorite IDE or editor, and import the followi
 
 ## Send a search request and receive the response 
 
-1.  Send a video search request using the client, with `SwiftKey` as the search term. If the Video Search API returned a result, get the first result and print its id, name, and URL, along with the total number of videos returned. 
+1.  Send a Spell Check request using the client, with `SwiftKey` as the search term. If the spellcheck API returned a result, print them 
     
     ```java
-    Videos videoResults = client.videos().search("SwiftKey");
+    Mode proofmode = Mode.fromString("proof");
+    SpellCheck result = client.spellChecker("Bill Gatas", null, null, null, null, null, null, null, null, null, null, null, "en-us", null, null,null, proofmode, null, null);
 
-    if (videoResults == null){
-        System.out.println("Didn't see any video result data..");
-    }
-    else{
-        if (videoResults.value().size() > 0){
-            VideoObject firstVideoResult = videoResults.value().get(0);
 
-            System.out.println(String.format("Video result count: %d", videoResults.value().size()));
-            System.out.println(String.format("First video id: %s", firstVideoResult.videoId()));
-            System.out.println(String.format("First video name: %s", firstVideoResult.name()));
-            System.out.println(String.format("First video url: %s", firstVideoResult.contentUrl()));
+    if (result.flaggedTokens().size() > 0)
+            {
+                // find the first spellcheck result
+                SpellingFlaggedToken firstspellCheckResult = result.flaggedTokens().get(0);
+
+                if (firstspellCheckResult != null)
+                {
+                    System.out.println(String.format("SpellCheck Results#%d", result.flaggedTokens().size()));
+                    System.out.println(String.format("First SpellCheck Result token: %s ", firstspellCheckResult.token()));
+                    System.out.println(String.format("First SpellCheck Result Type: %s ", firstspellCheckResult.type()));
+                    System.out.println(String.format("First SpellCheck Result Suggestion Count: %d ",
+                            firstspellCheckResult.suggestions().size()));
+
+                    List<SpellingTokenSuggestion> suggestions = firstspellCheckResult.suggestions();
+                    if (suggestions.size() > 0)
+                    {
+                        SpellingTokenSuggestion firstSuggestion = suggestions.get(0);
+                        System.out.println(String.format("First SpellCheck Suggestion Score: %f ", firstSuggestion.score()));
+                        System.out.println(String.format("First SpellCheck Suggestion : %s ", firstSuggestion.suggestion()));
+                    }
+                }
+                else
+                {
+                    System.out.println("Couldn't get any Spell check results!");
+                }
+            }
+            else
+            {
+                System.out.println("Didn't see any SpellCheck results..");
+            }
         }
-        else{
-            System.out.println("Couldn't find video results!");
-        }
-    }
     ```
 
 3. Call the search method from your main method.
@@ -171,9 +175,10 @@ Create a new Java project in your favorite IDE or editor, and import the followi
             // Set the BING_SEARCH_V7_SUBSCRIPTION_KEY environment variable with your subscription key, 
             // then reopen your command prompt or IDE. If not, you may get an API key not found exception.
             final String subscriptionKey = "8bcbe10fa0674c9c8366ea2e8d914250";
+
             // Add your Bing Search V7 endpoint to your environment variables.
             String endpoint = "https://api.bing.microsoft.com" + "/v7.0";
-             
+            
             ServiceClientCredentials credentials = new ServiceClientCredentials() {
                 @Override
                 public void applyCredentialsFilter(Builder builder) {
@@ -192,7 +197,7 @@ Create a new Java project in your favorite IDE or editor, and import the followi
                     );
                 }
             };
-            VideoSearchClientImpl client = new VideoSearchClientImpl(endpoint,credentials);
+            SpellCheckClientImpl client = new SpellCheckClientImpl(endpoint,credentials);
 
             runSample(client);
         } catch (Exception e) {
@@ -205,9 +210,8 @@ Create a new Java project in your favorite IDE or editor, and import the followi
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single page web app](../../tutorial/bing-video-search-single-page-app.md)
 
 ## See also 
 
-* [What is the Bing Video Search API?](../../overview.md)
-* [BingApis .NET SDK samples](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/VideoSearchSample)
+* [What is the Bing SpellCheck API?](../../overview.md)
+* [BingApis .NET SDK samples](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/SpellCheckSample)

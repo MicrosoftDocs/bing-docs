@@ -14,17 +14,17 @@ ms.author: scottwhi
 
 # Quickstart: Use the Bing Custom Search Java client library
 
-Get started with the Bing Custom Search client library for Java. Follow these steps to install the package and try out the example code for basic tasks. The Bing Custom Search API enables you to create tailored, ad-free search experiences for topics that you care about. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples/tree/master/Search/BingCustomSearch).
+Get started with the Bing Custom Search client library for Java. Follow these steps to install the package and try out the example code for basic tasks. The Bing Custom Search API enables you to create tailored, ad-free search experiences for topics that you care about. The source code for this sample can be found on [GitHub](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/CustomSearchSample)
 
 Use the Bing Custom Search client library for Java to:
 
-* Find search results on the web from your Bing Custom Search instance.
+* Find search results on the web, from your Bing Custom Search instance.
 
-[Reference documentation](https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingcustomsearch?view=azure-java-stable) | [Library source code](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/Search.BingCustomSearch) | [Artifact (Maven)](https://search.maven.org/artifact/com.microsoft.azure.cognitiveservices/azure-cognitiveservices-customsearch/) | [Samples](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples)
+[Reference documentation](https://www.customsearch.ai/) | [Library source code](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/sdk/CustomWebSearch) | [Samples](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/CustomSearchSample)
 
 ## Prerequisites
 
-* Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
+* Azure subscription - [Create one for free](https://portal.azure.com/#create/microsoft.bingsearch).
 * The current version of the [Java Development Kit (JDK)](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
 * The [Gradle build tool](https://gradle.org/install/), or another dependency manager.
 * A Bing Custom Search instance. See [Quickstart: Create your first Bing Custom Search instance](../../how-to/quick-start.md) for more information.
@@ -33,14 +33,14 @@ Use the Bing Custom Search client library for Java to:
 [!INCLUDE [bing-custom-search-prerequisites](../../../../includes/bing-custom-search-signup-requirements.md)]
 -->
 
-After you get a key from your resource, [create an environment variable](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account#configure-an-environment-variable-for-authentication) for the key, named `AZURE_BING_CUSTOM_SEARCH_API_KEY`.
+After you get a key from your resource, create an environment variable for the key, named `AZURE_BING_CUSTOM_SEARCH_API_KEY`.
 
 ### Create a new Gradle project
 
 > [!TIP]
-> If you're not using Gradle, you can find the client library details for other dependency managers on the [Maven Central Repository](https://search.maven.org/artifact/com.microsoft.azure.cognitiveservices/azure-cognitiveservices-textanalytics/).
+> If you're not using Gradle, you can find the client library details for other dependency managers on the [Maven Central Repository](https://mvnrepository.com/artifact/com.microsoft.bing/bing-customwebsearch).
 
-In a console window (such as cmd, PowerShell, or Bash), create a new directory for your app, and then navigate to it.
+In a console window (such as cmd, PowerShell, or Bash), create a new directory for your app, and navigate to it.
 
 ```console
 mkdir myapp && cd myapp
@@ -56,7 +56,7 @@ When prompted to choose a **DSL**, select **Kotlin**.
 
 ## Install the client library
 
-Locate *build.gradle.kts* and open it with your preferred IDE or text editor. Next, copy in this build configuration. Be sure to include the client library under `dependencies`:
+Locate *build.gradle.kts* and open it with your preferred IDE or text editor. Then copy in this build configuration. Be sure to include the client library under `dependencies`:
 
 ```kotlin
 plugins {
@@ -71,7 +71,7 @@ repositories {
 }
 dependencies {
     compile("org.slf4j:slf4j-simple:1.7.25")
-    compile("com.microsoft.azure.cognitiveservices:azure-cognitiveservices-customsearch:1.0.2")
+    compile("com.microsoft.Bing:bing-customwebsearch:1.0.0")
 }
 ```
 
@@ -83,31 +83,22 @@ mkdir src/main/java
 
 Navigate to the new folder and create a file called *BingCustomSearchSample.java*. Open it and add the following `import` statements:
 
-<!--
-[!code-java[import statements](~/cognitive-services-java-sdk-samples/Search/BingCustomSearch/src/main/java/BingCustomSearchSample.java?name=imports)]
--->
 
 ```java
-package main.java;
-
-import com.microsoft.azure.cognitiveservices.search.customsearch.BingCustomSearchAPI;
-import com.microsoft.azure.cognitiveservices.search.customsearch.BingCustomSearchManager;
-import com.microsoft.azure.cognitiveservices.search.customsearch.models.SearchResponse;
-import com.microsoft.azure.cognitiveservices.search.customsearch.models.WebPage;
+package com.microsoft.bing.samples;
+import com.microsoft.bing.customsearch.models.SearchResponse;
+import com.microsoft.bing.customsearch.models.WebPage;
+import com.microsoft.bing.customsearch.implementation.CustomSearchClientImpl;
+import com.microsoft.rest.credentials.ServiceClientCredentials;
+import okhttp3.*;
+import okhttp3.OkHttpClient.Builder;
+import java.io.IOException;
 ```
 
-Create a class named `BingCustomSearchSample`
-
-```java
-public class BingCustomSearchSample {
-}
-```
 
 In the class, create a `main` method and a variable for your resource's key. If you created the environment variable after you launched the application, close and reopen the editor, IDE, or shell running it to access the variable. You will define the methods later.
 
-<!--
-[!code-java[main method](~/cognitive-services-java-sdk-samples/Search/BingCustomSearch/src/main/java/BingCustomSearchSample.java?name=main)]
--->
+
 
 ```java
     public static void main(String[] args) {
@@ -115,12 +106,30 @@ In the class, create a `main` method and a variable for your resource's key. If 
     
             // Set the BING_CUSTOM_SEARCH_SUBSCRIPTION_KEY and AZURE_BING_SAMPLES_CUSTOM_CONFIG_ID environment variables, 
             // then reopen your command prompt or IDE. If not, you may get an API key not found exception.
-            final String subscriptionKey = System.getenv("BING_CUSTOM_SEARCH_SUBSCRIPTION_KEY");
+            final String subscriptionKey = "cfbd6d1e94654a2cb0f44da1a08831a0";
             // If you do not have a customConfigId, you can also use 1 as your value when setting your environment variable.
-            final String customConfigId = System.getenv("AZURE_BING_SAMPLES_CUSTOM_CONFIG_ID");
-    
-            BingCustomSearchAPI client = BingCustomSearchManager.authenticate(subscriptionKey);
-    
+            final String customConfigId = "f29e0e72-f50c-4182-88d2-1eb4946029ef";
+            //Custom Search Endpoint
+            String endpoint = "https://api.bing.microsoft.com" + "/v7.0/custom";
+            ServiceClientCredentials credentials = new ServiceClientCredentials() {
+                @Override
+                public void applyCredentialsFilter(Builder builder) {
+                    builder.addNetworkInterceptor(
+                        new Interceptor() {
+                            @Override
+                            public Response intercept(Chain chain) throws IOException {
+                                Request request = null;
+                                Request original = chain.request();
+                                Request.Builder requestBuilder = original.newBuilder();
+                                requestBuilder.addHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
+                                request = requestBuilder.build();
+                                return chain.proceed(request);
+                            }
+                        }
+                    );
+                }
+            };
+            CustomSearchClientImpl client = new CustomSearchClientImpl(endpoint,credentials);
             runSample(client, customConfigId);
         } catch (Exception e) {
             System.out.println(e.getMessage());
@@ -144,33 +153,25 @@ These code snippets show you how to do the following tasks with the Bing Custom 
 
 ## Authenticate the client
 
-Your main method should include a [BingCustomSearchManager](https://docs.microsoft.com/java/api/com.microsoft.azure.cognitiveservices.search.customsearch.bingcustomsearchapi?view=azure-java-stable) object that takes your key, and calls its `authenticate()`.
-
 ```java
-BingCustomSearchAPI client = BingCustomSearchManager.authenticate(subscriptionKey);
+CustomSearchClientImpl client = new CustomSearchClientImpl(endpoint,credentials);
 ```
 
 ## Get search results from your custom search instance
 
-Use the client's [BingCustomInstances.search()](https://docs.microsoft.com/java/api/com.microsoft.azure.cognitiveservices.search.customsearch.bingcustominstances.search?view=azure-java-stable#com_microsoft_azure_cognitiveservices_search_customsearch_BingCustomInstances_search__) function to send a search query to your custom instance. Set the `withCustomConfig` to your custom configuration ID, or default to `1`. After getting a response from the API, check if any search results were found. If so, get the first search result by calling the response's `webPages().value().get()` function and print the result's name, and URL.
 
-<!--
-[!code-java[call the custom search API](~/cognitive-services-java-sdk-samples/Search/BingCustomSearch/src/main/java/BingCustomSearchSample.java?name=runSample)]
--->
+
 
 ```java
-    public static boolean runSample(BingCustomSearchAPI client, String customConfigId) {
+    public static boolean runSample(CustomSearchClientImpl client, String customConfigId) {
         try {
     
             // This will search for "Xbox" using Bing Custom Search 
             //and print out name and url for the first web page in the results list
     
             System.out.println("Searching for Query: \"Xbox\"");
-            SearchResponse webData = client.bingCustomInstances().search()
-                .withCustomConfig(customConfigId != null ? Long.valueOf(customConfigId) : 0)
-                .withQuery("Xbox")
-                .withMarket("en-us")
-                .execute();
+            customConfigId = customConfigId != null ? customConfigId : "0";
+            SearchResponse webData = client.customInstances().search(customConfigId,"Xbox");
     
             if (webData != null && webData.webPages() != null && webData.webPages().value().size() > 0)
             {

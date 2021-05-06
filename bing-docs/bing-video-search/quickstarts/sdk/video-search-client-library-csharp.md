@@ -14,16 +14,16 @@ ms.author: scottwhi
 
 # Quickstart: Use the Bing Video Search .NET client library
 
-Use this quickstart to begin searching for news with the Bing Video Search client library for C#. While Bing Video Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7/BingVideoSearch) with additional annotations, and features.
+Use this quickstart to begin searching for news with the Bing Video Search client library for C#. While Bing Video Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/samples/BingSearchSamples/BingVideoSearch) with additional annotations, and features.
 
 ## Prerequisites
 
 * Any edition of [Visual Studio 2017 or later](https://visualstudio.microsoft.com/downloads/).
 * The Json.NET framework, available [as a NuGet package](https://www.nuget.org/packages/Newtonsoft.Json/).
 
-To add the Bing Video Search client library to your project, select **Manage NuGet Packages** from **Solution Explorer** in Visual Studio. Add the `Microsoft.Azure.CognitiveServices.Search.VideoSearch` package.
+To add the Bing Video Search client library to your project, select **Manage NuGet Packages** from **Solution Explorer** in Visual Studio. Add the `Microsoft.Bing.Search.VideoSearch` package.
 
-Installing the [NuGet Video Search SDK package](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.VideoSearch/1.2.0) also installs the following dependencies:
+Installing the dependencies:
 
 * Microsoft.Rest.ClientRuntime
 * Microsoft.Rest.ClientRuntime.Azure
@@ -41,25 +41,26 @@ Installing the [NuGet Video Search SDK package](https://www.nuget.org/packages/M
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using Microsoft.Azure.CognitiveServices.Search.VideoSearch;
-    using Microsoft.Azure.CognitiveServices.Search.VideoSearch.Models;
+    using Credentials;
+    using Microsoft.Bing.VideoSearch;
+    using Microsoft.Bing.VideoSearch.Models;
     ```
 
-2. Instantiate the client by creating a new `ApiKeyServiceClientCredentials` object with your subscription key, and then calling the constructor.
+2. Instantiate the client by creating a new `ClientCredentials` object with your subscription key, and calling the constructor.
 
     ```csharp
-    var client = new VideoSearchAPI(new ApiKeyServiceClientCredentials("YOUR-ACCESS-KEY"));
+    var client = new VideoSearchClient(new ClientCredentials(subscriptionKey));
     ```
 
 ## Send a search request and process the results
 
-1. Use the client to send a search request. Use "SwiftKey" for the search query.
+1. Use the client to send a search request. Use "Nasa CubeSat" for the search query.
 
     ```csharp
-    var videoResults = client.Videos.SearchAsync(query: "SwiftKey").Result;
+    var videoResults = client.Videos.SearchAsync(query: "Nasa CubeSat").Result;
     ```
 
-2. If any results were returned, get the first one with `videoResults.Value[0]`. Then print the video's ID, title, and URL.
+2. If any results were returned, get the first one with `videoResults.Value[0]`. Then print the video's ID, title, and url.
 
     ```csharp
     if (videoResults.Value.Count > 0)
@@ -80,9 +81,9 @@ Installing the [NuGet Video Search SDK package](https://www.nuget.org/packages/M
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single page web app](../../tutorial/bing-video-search-single-page-app.md).
+> [Create a single page web app](../../tutorial/bing-video-search-single-page-app.md)
 
 ## See also 
 
 * [What is the Bing Video Search API?](../../overview.md)
-* [Cognitive services .NET SDK samples](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7)
+* [BingApis .NET SDK samples](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/samples/BingSearchSamples)
