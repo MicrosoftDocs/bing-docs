@@ -17,7 +17,7 @@ ms.author: scottwhi
 
 The Bing Web Search client library makes it easy to integrate Bing Web Search into your Java application. In this quickstart, you'll learn how to send a request, receive a JSON response, and filter and parse the results.
 
-Want to see the code right now? Samples for the [Bing Search client libraries for Java](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples/tree/master/Search) are available on GitHub.
+Want to see the code right now? Samples for the [Bing Search client libraries for Java](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/WebSearchSample) are available on GitHub.
 
 ## Prerequisites
 
@@ -102,9 +102,9 @@ Create a new Java project using Maven or your favorite build automation tool. As
       <version>3.3</version>
     </dependency>
     <dependency>
-      <groupId>com.microsoft.azure.cognitiveservices</groupId>
-      <artifactId>azure-cognitiveservices-websearch</artifactId>
-      <version>1.0.1</version>
+      <groupId>com.microsoft.bing</groupId>
+      <artifactId>bing-websearch</artifactId>
+      <version>1.0.0</version>
     </dependency>
   </dependencies>
 ```
@@ -114,13 +114,16 @@ Create a new Java project using Maven or your favorite build automation tool. As
 Open your project in your favorite IDE or editor and import these dependencies:
 
 ```java
-import com.microsoft.azure.cognitiveservices.search.websearch.BingWebSearchAPI;
-import com.microsoft.azure.cognitiveservices.search.websearch.BingWebSearchManager;
-import com.microsoft.azure.cognitiveservices.search.websearch.models.ImageObject;
-import com.microsoft.azure.cognitiveservices.search.websearch.models.NewsArticle;
-import com.microsoft.azure.cognitiveservices.search.websearch.models.SearchResponse;
-import com.microsoft.azure.cognitiveservices.search.websearch.models.VideoObject;
-import com.microsoft.azure.cognitiveservices.search.websearch.models.WebPage;
+import com.microsoft.bing.websearch.implementation.WebSearchClientImpl;
+import com.microsoft.bing.websearch.models.ImageObject;
+import com.microsoft.bing.websearch.models.NewsArticle;
+import com.microsoft.bing.websearch.models.SearchResponse;
+import com.microsoft.bing.websearch.models.VideoObject;
+import com.microsoft.bing.websearch.models.WebPage;
+import com.microsoft.rest.credentials.ServiceClientCredentials;
+import okhttp3.*;
+import okhttp3.OkHttpClient.Builder;
+import java.io.IOException;
 ```
 
 If you created the project with Maven, the package should already be declared. Otherwise, declare the package now. For example:
@@ -161,11 +164,7 @@ public static boolean runSample(BingWebSearchAPI client) {
          */
         System.out.println("Searched Web for \"Xbox\"");
         // Construct the request.
-        SearchResponse webData = client.bingWebs().search()
-            .withQuery("Xbox")
-            .withMarket("en-us")
-            .withCount(10)
-            .execute();
+        SearchResponse webData = client.webs().search("Xbox");
 
 // Code continues in the next section...
 ```
@@ -266,8 +265,28 @@ public static void main(String[] args) {
     try {
         // Enter a valid subscription key for your account.
         final String subscriptionKey = "YOUR_SUBSCRIPTION_KEY";
+        final String endpoint = "YOUR_ENDPOINT";
         // Instantiate the client.
-        BingWebSearchAPI client = BingWebSearchManager.authenticate(subscriptionKey);
+        ServiceClientCredentials credentials = new ServiceClientCredentials() {
+                @Override
+                public void applyCredentialsFilter(Builder builder) {
+                    builder.addNetworkInterceptor(
+                        new Interceptor() {
+                            @Override
+                            public Response intercept(Chain chain) throws IOException {
+                                Request request = null;
+                                Request original = chain.request();
+                                Request.Builder requestBuilder = original.newBuilder();
+                                requestBuilder.addHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
+                                request = requestBuilder.build();
+                                return chain.proceed(request);
+                            }
+                        }
+                    );
+                }
+            };
+            WebSearchClientImpl client = new WebSearchClientImpl(endpoint,credentials);
+
         // Make a call to the Bing Web Search API.
         runSample(client);
     } catch (Exception e) {
@@ -292,5 +311,5 @@ When you're done with this project, make sure to remove your subscription key fr
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Cognitive Services Java SDK samples](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples/tree/master/Search/BingWebSearch)
+> [Web Search Java SDK samples](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/WebSearchSample)
 

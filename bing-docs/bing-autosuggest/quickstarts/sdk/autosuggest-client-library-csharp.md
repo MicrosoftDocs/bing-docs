@@ -18,7 +18,7 @@ Get started with the Bing Autosuggest client library for .NET. Follow these step
 
 Use the Bing Autosuggest client library for .NET to get search suggestions based on partial query strings.
 
-[Reference documentation](https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-dotnet) | [Library source code](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/Search.BingAutoSuggest) | [Package (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.AutoSuggest/) | [Sample code](https://github.com/Azure-Samples/cognitive-services-quickstart-code/blob/master/dotnet/BingAutoSuggest/Program.cs)
+[Reference documentation](https://docs.microsoft.com/en-us/bing/search-apis/bing-autosuggest/overview) | [Library source code](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/sdk/AutoSuggest) | [Sample code](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/samples/BingSearchSamples/BingAutoSuggest)
 
 ## Prerequisites
 
@@ -32,12 +32,12 @@ Use the Bing Autosuggest client library for .NET to get search suggestions based
 ## Create environment variables
 
 >[!NOTE]
-> The endpoints for resources created after July 1, 2019 use the custom subdomain format shown below. For more information and a complete list of regional endpoints, see [Custom subdomain names for Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-custom-subdomains). 
+> The endpoints for resources created after July 1, 2019 use the custom subdomain format shown below. For more information and a complete list of regional endpoints,
 
 Using your key and endpoint from the resource you created, create two environment variables for authentication:
 <!-- replace the below variable names with the names expected in the code sample.-->
 * `AUTOSUGGEST_SUBSCRIPTION_KEY`: The resource key for authenticating your requests.
-* `AUTOSUGGEST_ENDPOINT`: The resource endpoint for sending API requests. It should look like this: `https://<your-custom-subdomain>.api.cognitive.microsoft.com`. 
+* `AUTOSUGGEST_ENDPOINT`: The resource endpoint for sending API requests.  
 
 Use the instructions for your operating system.
 <!-- replace the below endpoint and key examples -->
@@ -100,99 +100,63 @@ Build succeeded.
 From the project directory, open the *program.cs* file in your preferred editor or IDE. Add the following `using` directives:
 
 ```csharp
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+    using System;
+    using Microsoft.Bing.AutoSuggest;
+    using Microsoft.Bing.AutoSuggest.Models;
+    using Microsoft.Rest;
+    using Microsoft.Rest.Serialization;
+    using Newtonsoft.Json;
+    using System.Collections;
+    using System.Collections.Generic;
+    using System.Net;
+    using System.Net.Http;
+    using System.Threading;
+    using System.Threading.Tasks;
+    using Credentials;
 ```
 
-In the `Program` class, create variables for your resource's Azure endpoint and key. If you created the environment variable after you launched the application, you'll need to close and reopen the editor, IDE, or shell running it to access the variable.
 
-```csharp
-private const string key_var = "AUTOSUGGEST_SUBSCRIPTION_KEY";
-private static readonly string subscription_key = Environment.GetEnvironmentVariable(key_var);
+# Create a client and send a search request
 
-// Note you must use the same region as you used to get your subscription key.
-private const string endpoint_var = "AUTOSUGGEST_ENDPOINT";
-private static readonly string endpoint = Environment.GetEnvironmentVariable(endpoint_var);
-```
+1. Create a new search client. Add your subscription key by creating a new `ClientCredentials`.
 
-In the application's `Main` method, add the following method calls, which you'll define later.
+    ```csharp
+    var client = new AutoSuggestClient(new ClientCredentials(subscriptionKey));
+    ```
 
-```csharp
-static void Main(string[] args)
-{
-    Task.WaitAll(RunQuickstart());
-    Console.WriteLine("Press any key to exit.");
-    Console.Read();
-}
-```
+1. Use the client's `AutoSuggestMethod` function to search for your query:
+    
+    ```csharp
+    var suggestions = client.AutoSuggestMethod(query: "Satya Nadella");
+    ```
 
-## Install the client library
-
-Within the application directory, install the Bing Autosuggest client library for .NET with the following command:
-
-```console
-dotnet add package Microsoft.Azure.CognitiveServices.Search.AutoSuggest --version 2.0.0
-```
-
-If you're using the Visual Studio IDE, the client library is available as a downloadable NuGet package.
-
-## Code examples
-
-These code snippets show you how to do the following tasks with the Bing Autosuggest client library for .NET:
-
-* [Authenticate the client](#authenticate-the-client)
-* [Send an Autosuggest request](#send-an-autosuggest-request)
-
-### Authenticate the client
-
-> [!NOTE]
-> This quickstart assumes you've created an environment variable for your Bing Autosuggest key, named `AUTOSUGGEST_SUBSCRIPTION_KEY`, and one for your endpoint, named `AUTOSUGGEST_ENDPOINT`.
+## Get and print an entity description
 
 
-In a new asynchronous method, instantiate a client with your endpoint and key. Create an ApiKeyServiceClientCredentials object with your key, and use it with your endpoint to create an AutosuggestClient object.
 
-```csharp
-async static Task RunQuickstart()
-{
-    // Generate the credentials and create the client.
-    var credentials = new Microsoft.Azure.CognitiveServices.Search.AutoSuggest.ApiKeyServiceClientCredentials(subscription_key);
-    var client = new AutoSuggestClient(credentials, new System.Net.Http.DelegatingHandler[] { })
+    ```csharp
+    if (suggestions != null && suggestions.SuggestionGroups.Count > 0)
     {
-        Endpoint = endpoint
-    };
-}
-```
-
-### Send an Autosuggest request
-
-In the same method, use the client's AutoSuggestMethodAsync method to send a query to Bing. Then, iterate over the Suggestions response, and print the first suggestion.
-
-```csharp
-var result = await client.AutoSuggestMethodAsync("xb");
-var groups = result.SuggestionGroups;
-if (groups.Count > 0) {
-    var group = groups[0];
-    Console.Write("First suggestion group: {0}\n", group.Name);
-    var suggestions = group.SearchSuggestions;
-    if (suggestions.Count > 0)
-    {
-        Console.WriteLine("First suggestion:");
-        Console.WriteLine("Query: {0}", suggestions[0].Query);
-        Console.WriteLine("Display text: {0}", suggestions[0].DisplayText);
+        // dump content
+        Console.WriteLine("Searched for \"Satya Nadella\" and found suggestions:");
+        foreach (var suggestion in suggestions.SuggestionGroups[0].SearchSuggestions)
+        {
+            Console.WriteLine("....................................");
+            Console.WriteLine(suggestion.Query);
+            Console.WriteLine(suggestion.DisplayText);
+            Console.WriteLine(suggestion.Url);
+            Console.WriteLine(suggestion.SearchKind);
+            
+        }
     }
     else
     {
-        Console.WriteLine("No suggestions found in this group.");
+        Console.WriteLine("Didn't see any suggestion..");
     }
-}
-else
-{
-    Console.WriteLine("No suggestions found.");
-}
-```
+    ```
+
+
+
 
 ## Run the application
 
@@ -211,4 +175,4 @@ dotnet run
 ## See also
 
 - [What is Bing Autosuggest?](../../overview.md)
-- [Bing Autosuggest .NET reference](https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-dotnet)
+- [Bing Autosuggest .NET reference](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/sdk/AutoSuggest)

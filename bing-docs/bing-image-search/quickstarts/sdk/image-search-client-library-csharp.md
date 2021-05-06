@@ -16,18 +16,17 @@ ms.author: scottwhi
 
 Use this quickstart to make your first image search using the Bing Image Search client library, which is a wrapper for the API and contains the same features. This simple C# application sends an image search query, parses the JSON response, and displays the URL of the first image returned.
 
-The source code for this sample is available [on GitHub](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7/BingImageSearch) with additional error handling and annotations.
+The source code for this sample is available [on GitHub](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/samples/BingSearchSamples/BingImageSearch) with additional error handling and annotations.
 
 ## Prerequisites
 * Any edition of [Visual Studio 2017 or later](https://visualstudio.microsoft.com/vs/whatsnew/).
-* The [Cognitive Image Search NuGet package](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.ImageSearch/).
+
 
 To install the Bing Image Search client library in Visual Studio, use the **Manage NuGet Packages** option from **Solution Explorer**.
 
 <!--
 [!INCLUDE [bing-image-search-signup-requirements](../../../../includes/bing-image-search-signup-requirements.md)]
 
-See also [Cognitive Services Pricing - Bing Search API](https://azure.microsoft.com/pricing/details/cognitive-services/search-api/).
 -->
 
 ## Create and initialize the application
@@ -35,16 +34,18 @@ See also [Cognitive Services Pricing - Bing Search API](https://azure.microsoft.
 First, create a new C# console application in Visual Studio. Then add the following packages to your project.
 
 ```csharp
-using System;
-using System.Linq;
-using Microsoft.Azure.CognitiveServices.Search.ImageSearch;
-using Microsoft.Azure.CognitiveServices.Search.ImageSearch.Models;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using Credentials;
+    using Microsoft.Bing.ImageSearch;
+    using Microsoft.Bing.ImageSearch.Models;
 ```
 
 In the main method of your project, create variables for your valid subscription key, the image results to be returned by Bing, and a search term. Then instantiate the image search client using the key.
 
 ```csharp
-//IMPORTANT: replace this variable with your Cognitive Services subscription key
+//IMPORTANT: replace this variable with your Bing Apis subscription key
 string subscriptionKey = "ENTER YOUR KEY HERE";
 //stores the image results returned by Bing
 Images imageResults = null;
@@ -55,7 +56,7 @@ string searchTerm = "canadian rockies";
 //NOTE: If you're using version 1.2.0 or below for the Bing Image Search client library, 
 // use ImageSearchAPI() instead of ImageSearchClient() to initialize your search client.
 
-var client = new ImageSearchClient(new ApiKeyServiceClientCredentials(subscriptionKey));
+var client = new ImageSearchClient(new ClientCredentials(subscriptionKey));
 ```
 
 ## Send a search query using the client
@@ -93,5 +94,5 @@ if (imageResults != null)
 ## See also
 
 * [What is Bing Image Search?](../../overview.md)  
-* [.NET samples for the Azure Cognitive Services SDK](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7)
+* [.NET samples for the BingApis SDK](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/samples/BingSearchSamples)
 * [Bing Image Search API reference](../../reference/endpoints.md)
