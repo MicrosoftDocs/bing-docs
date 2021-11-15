@@ -10,7 +10,7 @@ ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: conceptual
 ms.date: 11/15/2021
-ms.author: scottwhi
+ms.author: v-apunnamara
 ---
 
 # Search the web for news
