@@ -3,13 +3,13 @@ title: Search for news with the Bing News Search API
 titleSuffix: Bing Search Services
 description: Learn how to send search queries for general news, trending topics, and headlines.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 
 ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: conceptual
-ms.date: 07/15/2020
+ms.date: 11/15/2021
 ms.author: scottwhi
 ---
 
