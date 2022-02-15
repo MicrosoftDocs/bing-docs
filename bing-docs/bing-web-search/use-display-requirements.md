@@ -96,9 +96,9 @@ Do:
 
 - Prominently include a functional hyperlink to the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839), near each point in the user experience (UX) that offers a user the ability to input a search query. Label the hyperlink **Microsoft Privacy Statement**.
 
-- Prominently display Bing branding, consistent with the [Bing Trademark Usage Guidelines](https://go.microsoft.com/fwlink/?linkid=833278), near each point in the UX that offers a user the ability to input a search query. Such branding must clearly state to the user that Microsoft is powering the internet search experience.
+- Prominently display Bing branding, consistent with the [Bing Trademark Usage Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks), near each point in the UX that offers a user the ability to input a search query. Such branding must clearly state to the user that Microsoft is powering the internet search experience.
 
-- Attribute each response (or portion of a response) displayed from the Bing Web Search, Entity Search, Image Search, News Search, Video Search, and Visual Search APIs to Microsoft, unless Microsoft specifies otherwise in writing for your use. This is described in [Bing Trademark Usage Guidelines](https://go.microsoft.com/fwlink/?linkid=833278).
+- Attribute each response (or portion of a response) displayed from the Bing Web Search, Entity Search, Image Search, News Search, Video Search, and Visual Search APIs to Microsoft, unless Microsoft specifies otherwise in writing for your use. This is described in [Bing Trademark Usage Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks).
 
 Do not:
 
