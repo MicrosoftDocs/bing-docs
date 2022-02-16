@@ -26,15 +26,15 @@ Use these quickstarts to make your first Visual Search API call in a matter of m
 - [Ruby](rest/ruby.md)
 
 
-<!-- ## Quickstarts using the Bing client library
+## Quickstarts using the Bing client library
 
 - [C#](sdk/visual-search-client-library-csharp.md)
 - [Java](sdk/visual-search-client-library-java.md)
 - [JavaScript](sdk/visual-search-client-library-javascript.md)
-- [python](sdk/visual-search-client-library-python.md) -->
+- [Python](sdk/visual-search-client-library-python.md)
 
 
 ## Next steps
 
 - For a more in depth web app example, see the [Video search tutorial](../tutorial/visual-search-single-page-app.md).
-- For REST and SDK samples, see [Samples](../samples.md)
+- For REST and SDK samples, see [Samples](../samples.md).

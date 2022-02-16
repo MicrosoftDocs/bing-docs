@@ -19,7 +19,7 @@ Use this quickstart to make your first call to the Bing Visual Search API. This 
 
 ## Prerequisites
 
-* [Node.js](https://nodejs.org/en/download/)
+* [Node.js](https://nodejs.org/en/download/).
 * The Request module for JavaScript. You can use `npm install request` command to install the module.
 * The form-data module. You can use the `npm install form-data` command to install the module. 
 
@@ -89,4 +89,4 @@ Use this quickstart to make your first call to the Bing Visual Search API. This 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a Visual Search single-page web app](../../tutorial/visual-search-single-page-app.md)
+> [Build a Visual Search single-page web app](../../tutorial/visual-search-single-page-app.md).

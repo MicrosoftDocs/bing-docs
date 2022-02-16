@@ -195,7 +195,7 @@ Defines information about a local entity, such as a restaurant or hotel.
   
 |Name|Value|Type
 |-|-|-
-|_type|Type hint, which may be set to one of the following:<ul><li>Hotel</li><li>LocalBusiness<br /></li><li>Restaurant</ul><li>|String
+|_type|Type hint, which may be set to one of the following:<ul><li>Hotel</li><li>LocalBusiness</li><li>Restaurant</li></ul>|String
 |address|The postal address of where the entity is located.|[PostalAddress](#postaladdress)
 |entityPresentationInfo|Additional information about the entity such as hints that you can use to determine the entity's type. For example, whether it's a restaurant or hotel. The `entityScenario` field is set to ListItem.|[EntityPresentationInfo](#entitypresentationinfo)
 |name|The entity's name.|String

@@ -21,7 +21,7 @@ Although this application is written in PHP, the API is a RESTful Web service co
 
 ## Prerequisites
 
-* PHP 5.6 or later
+* PHP 5.6 or later.
 
 <!--
 [!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
@@ -206,7 +206,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../../tutorial/bing-video-search-single-page-app.md)
+> [Build a single-page web app](../../tutorial/bing-video-search-single-page-app.md).
 
 ## See also 
 

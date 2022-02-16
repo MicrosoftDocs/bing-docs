@@ -25,7 +25,7 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 ## Tips and suggestions
 
-- Specify the [maxFileSize](../reference/query-parameters.md#maxfilesize) and [minFileSize](../reference/query-parameters.md#minfilesize) query parameters. Because most GIFs in our index are under 2 MB, set *maxFileSize* to 2000000. This also helps to control the data size if bandwidth is a concern, such as in mobile cellular scenarios.
+- Specify the [maxFileSize](../reference/query-parameters.md#maxfilesize) and [minFileSize](../reference/query-parameters.md#minfilesize) query parameters. Because most GIFs in our index are under 2 MB, set *maxFileSize* to 2000000. This also helps to control the data size if bandwidth is a concern, such as in mobile device scenarios.
 - Help improve perceived performance by loading the thumbnail first and then loading the source URL.  
 - Use the [safeSearch](../reference/query-parameters.md#safesearch) query parameter to block adult content. Set to `strict` to block adult content.
 - Use the *AnimatedGifHttps* image type to return get only animated GIF images that are from an HTTPS address. For security, many applications require connection to external Web links over HTTPS.

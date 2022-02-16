@@ -25,12 +25,12 @@ The Bing News Search API lets you search the Web and obtain results of the news 
 
 The tutorial app illustrates how to:
 > [!div class="checklist"]
-> * Perform a Bing News Search API call in JavaScript
-> * Pass search options to the Bing News Search API
-> * Display news search results from four categories: any-type, business, health, or politics, from time-frames of 24 hours, the past week, month, or all available time
-> * Page through search results
-> * Handle the Bing client ID and API subscription key
-> * Handle errors that might occur
+> * Perform a Bing News Search API call in JavaScript.
+> * Pass search options to the Bing News Search API.
+> * Display news search results from four categories: any-type, business, health, or politics, from time-frames of 24 hours, the past week, month, or all available time.
+> * Page through search results.
+> * Handle the Bing client ID and API subscription key.
+> * Handle errors that might occur.
 
 The tutorial page is entirely self-contained; it does not use any external frameworks, style sheets, or image files. It uses only widely supported JavaScript language features and works with current versions of all major Web browsers.
 
@@ -39,7 +39,7 @@ The tutorial page is entirely self-contained; it does not use any external frame
 
 To follow along with the tutorial, you need subscription keys for the Bing Search API. If you don't have these, you'll need to create them:
 
-* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/)
+* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
 * Once you have your Azure subscription, <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesBingSearch-v7"  title="Create a Bing Search resource"  target="_blank">create a Bing Search resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
 
 ## App components
@@ -99,7 +99,7 @@ The HTML `<form>` tag `onsubmit` calls the `bingWebSearch` function to return se
 ## Selecting search options
 The following figure shows the query text box and options that define a search for news about school funding.
 
-![Bing News Search options](../media/news-search-categories.png)
+![Bing News Search options](../media/news-search-categories.PNG)
 
 The HTML form includes elements with the following names:
 

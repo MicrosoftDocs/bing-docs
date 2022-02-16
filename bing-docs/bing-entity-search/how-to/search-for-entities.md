@@ -42,7 +42,7 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 Although that's all the more you need to do to search the web, Bing does suggest you include a couple of other headers to provide a better search experience for your user. Those headers include:
 
-- User-Agent &mdash; Lets Bing know whether needs a mobile or desktop experience.
+- User-Agent &mdash; Lets Bing know whether the user needs a mobile or desktop experience.
 - X-MSEdge-ClientID &mdash; Provides continuity of experience.
 - X-MSEdge-ClientIP &mdash; Provides the user's location for location aware queries.
 - X-Search-Location &mdash; Provides the user's location for location aware queries.

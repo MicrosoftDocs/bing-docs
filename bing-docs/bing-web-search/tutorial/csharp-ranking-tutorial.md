@@ -18,14 +18,14 @@ This tutorial shows how to build a simple .NET Core console app that allows user
 
 This tutorial shows how to:
 
-- Make a simple query to the Bing Web Search API
-- Display query results in ranked order
+- Make a simple query to the Bing Web Search API.
+- Display query results in ranked order.
 
 ## Prerequisites
 
 To follow along with the tutorial, you need:
 
-* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/)
+* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
 * Once you have your Azure subscription, <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesBingSearch-v7"  title="Create a Bing Search resource"  target="_blank">create a Bing Search resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
 * The [Visual Studio IDE](https://www.visualstudio.com/downloads/).
 
@@ -41,7 +41,7 @@ Name the application **MyConsoleSearchApp**, and then click **OK**.
 
 JSON.net allows you to work with the JSON responses returned by the API. Add its NuGet package to your project:
 
-- In **Solution Explorer** right-click on the project and select **Manage NuGet Packages...**.
+- In **Solution Explorer**, right-click on the project and select **Manage NuGet Packages**.
 - On the  **Browse** tab, search for `Newtonsoft.Json`. Select the latest version, and then click **Install**.
 - Click the **OK** button on the **Review Changes** window.
 - Close the Visual Studio tab titled **NuGet: MyConsoleSearchApp**.
@@ -50,9 +50,9 @@ JSON.net allows you to work with the JSON responses returned by the API. Add its
 
 This tutorial relies on the `System.Web` assembly. Add a reference to this assembly to your project:
 
-- In **Solution Explorer**, right-click on **References** and select **Add Reference...**
-- Select **Assemblies > Framework**, then scroll down and check **System.Web**
-- Select **OK**
+- In **Solution Explorer**, right-click on **References** and select **Add Reference**
+- Select **Assemblies > Framework**, then scroll down and check **System.Web**.
+- Select **OK**.
 
 ## Add some necessary using statements
 
@@ -86,8 +86,8 @@ static void Main()
 
 This method:
 
-- Asks the user for a query
-- Calls `RunQueryAndDisplayResults(userQuery)` to execute the query and display the results
+- Asks the user for a query.
+- Calls `RunQueryAndDisplayResults(userQuery)` to execute the query and display the results.
 - Waits for user input in order to prevent the console window from immediately closing.
 
 ## Search for query results using the Bing Web Search API
@@ -132,10 +132,10 @@ static void RunQueryAndDisplayResults(string userQuery)
 
 This method:
 
-- Creates an `HttpClient` to query the Web Search API
-- Sets the `Ocp-Apim-Subscription-Key` HTTP header, which Bing uses to authenticate the request
-- Executes the request and uses JSON.net to deserialize the results
-- Calls `DisplayAllRankedResults(responseObjects)` to display all results in ranked order
+- Creates an `HttpClient` to query the Web Search API.
+- Sets the `Ocp-Apim-Subscription-Key` HTTP header, which Bing uses to authenticate the request.
+- Executes the request and uses JSON.net to deserialize the results.
+- Calls `DisplayAllRankedResults(responseObjects)` to display all results in ranked order.
 
 Make sure to set the value of `Ocp-Apim-Subscription-Key` to your subscription key.
 
@@ -216,7 +216,7 @@ Before showing how to display the results in ranked order, take a look at a samp
 }
 ```
 
-The [rankingResponse](../reference/response-objects.md#rankingresponse)) describes the appropriate display order for search results. It includes one or more of the following, prioritized groups:
+The [rankingResponse](../reference/response-objects.md#rankingresponse) describes the appropriate display order for search results. It includes one or more of the following, prioritized groups:
 
 - `pole`: The search results to get the most visible treatment (for example, displayed above the mainline and sidebar).
 - `mainline`: The search results to display in the mainline.
@@ -268,8 +268,8 @@ static void DisplayAllRankedResults(Newtonsoft.Json.Linq.JObject responseObjects
 
 This method:
 
-- Loops over the `rankingResponse` groups that the response contains
-- Displays the items in each group by calling `DisplaySpecificResults(...)`
+- Loops over the `rankingResponse` groups that the response contains.
+- Displays the items in each group by calling `DisplaySpecificResults(...)`.
 
 In **Program.cs**, add the following two methods:
 

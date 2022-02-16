@@ -43,27 +43,27 @@ To get started configuring search query suggestions for your instance:
 
 ### Enable Bing suggestions
 
-To enable Bing suggestions, toggle the **Automatic Bing suggestions** slider to the on position. 
+To enable Bing suggestions, toggle the **Automatic Bing suggestions** slider to the On position. 
 
 
 ### Add your own suggestions
 
-To add your own query string suggestions, add them to the list under **User-defined suggestions**. After adding a suggestion in the list, press the enter key or click the **+** icon. You can specify the suggestion in any language. You can add a maximum of 5,000 query string suggestions.
+To add your own query string suggestions, add them to the list under **User-defined suggestions**. After adding a suggestion in the list, press the Enter key or click the **+** icon. You can specify the suggestion in any language. You can add a maximum of 5,000 query string suggestions.
 
 
 ### Upload suggestions
 
-As an option, you can upload a list of suggestions from a file. The file must contain one search query string per line. To upload the file, click the upload icon and select the file to upload. The service extracts the suggestions from the file and adds them to the list.
+As an option, you can upload a list of suggestions from a file. The file must contain one search query string per line. To upload the file, click the Upload icon and select the file to upload. The service extracts the suggestions from the file and adds them to the list.
 
 
 ### Remove suggestions
 
-To remove a query string suggestion, click the trash bin icon next to the suggestion you want to remove.
+To remove a query string suggestion, click the Trash Bin icon next to the suggestion you want to remove.
 
 
 ### Block suggestions
 
-To specify a list of search strings that you don't want Bing to return, click **Show blocked suggestions**. Add the query string to the list and press the enter key or click the **+** icon. You can add a maximum of 50 blocked query strings.
+To specify a list of search strings that you don't want Bing to return, click **Show blocked suggestions**. Add the query string to the list and press the Enter key or click the **+** icon. You can add a maximum of 50 blocked query strings.
 
 
 ### Publish or revert

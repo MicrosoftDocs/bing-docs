@@ -18,7 +18,7 @@ Use this quickstart to begin searching for news with the Bing Video Search clien
 
 ## Prerequisites
 
-- [Node.js](https://www.nodejs.org/)
+- [Node.js](https://www.nodejs.org/).
 
 To set up a console application using the Bing Video Search client library:
 * Run `npm install ms-rest-azure` in your development environment.
@@ -59,7 +59,7 @@ To set up a console application using the Bing Video Search client library:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single page web app](../../tutorial/bing-video-search-single-page-app.md)
+> [Create a single page web app](../../tutorial/bing-video-search-single-page-app.md).
 
 ## See also 
 

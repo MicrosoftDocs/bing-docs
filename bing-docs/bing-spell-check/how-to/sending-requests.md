@@ -62,9 +62,9 @@ curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.mic
 
 ## Query parameters
 
-The only query parameter that you must pass is the *text* parameter, which you set to the text string to proof. You must URL encode the text string and all query parameter values that you pass.
+The only query parameter that you must pass is the *text* parameter, which you set to the text string to proof. You must URL-encode the text string and all query parameter values that you pass.
 
-The API supports a number of query parameters that you can pass in your request. Here's a list of the ones you're most likely to pass.
+The API supports a number of query parameters that you can pass in your request. Here's a list of the ones you're most likely to pass:
 
 - *mkt* &mdash; Used to specify the market where the results come from, which is typically the market where the user is making the request from.
 - *mode* &mdash; Used to specify the type of spelling and grammar checks to perform. Possible values are Proof (default) and Spell.  

@@ -78,7 +78,7 @@ If the service suspects a denial of service attack, the request succeeds (HTTP s
 |-|-|-
 |_type|Type hint.|String
 |id|An ID that uniquely identifies the news answer. Only Web Search API responses include this field. For information about how to use this field, see [Ranking results](../../bing-web-search/rank-results.md) in the Web Search API guide.|String
-|readLink|A URL that you'd use to request news from News Search API. Include other query parameters as needed. Only Web Search API responses include this field.|String
+|readLink|A URL to request news from News Search API. Include other query parameters as needed. Only Web Search API responses include this field.|String
 |<a name="news-relatedtopics"></a>relatedTopics|A list of news articles that are related to the search term.<br/><br/>Only the News Search API includes this field.|[RelatedTopic](#relatedtopic)[]
 |<a name="news-sort"></a>sort|A list of options for sorting the news articles. For example, sort by relevance (default) or date. To determine which sort order the request used, see the `isSelected` field.<br/><br/>Only the News Search API includes this field.|[SortValue](#sortvalue)[]
 |<a name="news-totalmatches"></a>totalEstimatedMatches|The estimated number of news articles that are relevant to the query. Use this number along with the [count](query-parameters.md#count) and [offset](query-parameters.md#offset) query parameters to page the results.<br/><br/>Only the News Search API includes this field.|Long
@@ -141,7 +141,7 @@ Defines a sort order to use for the request.
   
 |Name|Value|Type
 |-|-|-
-|id|An identifier that identifies the articles sort order. The following are the possible values:<ul><li>date &mdash; Sort by date</li><li>relevance &mdash; Sort by relevance</li></ul>|String
+|id|An identifier that identifies the articles sort order. The following are the possible values:<ul><li>date &mdash; Sort by date.</li><li>relevance &mdash; Sort by relevance.</li></ul>|String
 |isSelected|A Boolean value that determines whether the response used this sort order. If **true**, the response used this sort order.|Boolean  
 |name|The display name of the sort order.|String 
 |url|A URL that you can use to make the same request using this sort order.|String  
@@ -173,8 +173,8 @@ Defines a link to the related image.
 |Name|Value|Type
 |-|-|-
 |<a name="thumbnail-contenturl"></a>contentUrl|The URL to the image.|String
-|<a name="thumbnail-height"></a>height|The height of the image, in pixels.|Unsigned Short
-|<a name="thumbnail-width"></a>width|The width of the image, in pixels.|Unsigned Short
+|<a name="thumbnail-height"></a>height|The height of the image in pixels.|Unsigned Short
+|<a name="thumbnail-width"></a>width|The width of the image in pixels.|Unsigned Short
   
 ## Topic  
 

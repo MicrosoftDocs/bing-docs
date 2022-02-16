@@ -17,7 +17,7 @@ Use this quickstart to begin searching for news with the Bing Video Search clien
 
 ## Prerequisites
 
-* The [Java Development Kit(JDK)](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
+* The [Java Development Kit (JDK)](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
 
 * The [Gson library](https://github.com/google/gson)
 
@@ -70,7 +70,7 @@ Create a new Java project in your favorite IDE or editor, and import the followi
 
     To implement `ServiceClientCredentials`, follow these steps:
 
-    1. override the `applyCredentialsFilter()` function, with a `OkHttpClient.Builder` object as a parameter. 
+    1. Override the `applyCredentialsFilter()` function, with a `OkHttpClient.Builder` object as a parameter. 
         
         ```java
         //...

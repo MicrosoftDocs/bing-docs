@@ -48,12 +48,12 @@ Bing provides API metrics, which you can use to inform your strategic decisions.
 
 ### Search or search-like experience
 
-Bing Visual Search API may only be used as a result of a direct user query or search, or as a result of an action within an app or experience that logically can be interpreted as a user’s search request. For illustration purposes, the following are some examples of acceptable search or search-like experiences.
+Bing Visual Search API may only be used as a result of a direct user query or search, or as a result of an action within an app or experience that logically can be interpreted as a user’s search request. For illustration purposes, the following are some examples of acceptable search or search-like experiences:
 
-- User enters a query directly into a search box in an app
-- User selects specific text or image and requests “more information” or “additional information”
-- User asks a search bot about a particular topic
-- User dwells on a particular object or entity in a visual search type scenario
+- User enters a query directly into a search box in an app.
+- User selects specific text or image and requests “more information” or “additional information”.
+- User asks a search bot about a particular topic.
+- User dwells on a particular object or entity in a visual search type scenario.
 
 If you are not sure if your experience can be considered a search-like experience, check with Microsoft.
 

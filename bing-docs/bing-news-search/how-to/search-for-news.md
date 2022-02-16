@@ -35,9 +35,9 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 ## Request and response headers
 
-Although that's all the more you need to do to search the Web, Bing does suggest you include a couple of other headers to provide a better search experience for your user. Those headers include:
+Although that's all you need to do to search the Web, Bing suggests you include a couple of other headers to provide a better search experience for your user. Those headers include:
 
-- User-Agent &mdash; Lets Bing know whether needs a mobile or desktop experience.
+- User-Agent &mdash; Lets Bing know whether the user needs a mobile or desktop experience.
 - X-MSEdge-ClientID &mdash; Provides continuity of experience.
 - X-MSEdge-ClientIP &mdash; Provides the user's location for location aware queries.
 - X-Search-Location &mdash; Provides the user's location for location aware queries.
@@ -69,12 +69,12 @@ curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.mic
 
 The only query parameter that you must pass is the *q* parameter, which you set to the user's query string. You must URL encode the user's query string and all query parameter values that you pass.
 
-The API supports a number of query parameters that you can pass in your request. Here's a list of the ones you're most likely to use.
+The API supports a number of query parameters that you can pass in your request. Here's a list of the ones you're most likely to use:
 
-- *count* and *offset* &mdash; Used to page image results. [Read more](../../bing-web-search/page-results.md)
+- *count* and *offset* &mdash; Used to page image results. [Read more](../../bing-web-search/page-results.md).
 - *mkt* &mdash; Used to specify the market where the results come from, which is typically the market where the user is making the request from.
 - *safeSearch* &mdash; Used to specify the user's safe search preference.
-- *textDecorations* and *textFormat* &mdash; Used to turn on hit highlighting. [Read more](../../bing-web-search/hit-highlighting.md)
+- *textDecorations* and *textFormat* &mdash; Used to turn on hit highlighting. [Read more](../../bing-web-search/hit-highlighting.md).
 
 To learn more about these parameters and other parameters that you may specify, see [Query parameters](../reference/query-parameters.md).
 
@@ -89,9 +89,9 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 If you want to limit the age of the articles are that Bing returns, check out the [freshness](../reference/query-parameters.md) query parameter. For example, you can request that Bing return only articles that it discovered within the last day, week, or month. The [NewsArticle](../reference/response-objects.md#newsarticle) object's `datePublished` field contains the date that Bing discovered the article.
 
 
-### Get news from a specify site
+### Get news from a specific site
 
-To get news from a specific domain, add the [site](https://help.bing.microsoft.com/#apex/18/en-US/10001/-1)) query operator to the user's query string.
+To get news from a specific domain, add the [site](https://help.bing.microsoft.com/#apex/18/en-US/10001/-1) query operator to the user's query string.
 
 ```curl
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news/search?q=sailing+dinghies+site%3Acontososailing.com&mkt=en-us

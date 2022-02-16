@@ -33,8 +33,8 @@ New search endpoint: `https://api.bing.microsoft.com/v7.0/video/search`
 - All failed requests should now include an `ErrorResponse` object in the response body.
 
 - Added the following fields to the `Error` object.  
-  - `subCode`&mdash;Partitions the error code into discrete buckets, if possible
-  - `moreDetails`&mdash;Additional information about the error described in the `message` field
+  - `subCode`&mdash;Partitions the error code into discrete buckets, if possible.
+  - `moreDetails`&mdash;Additional information about the error described in the `message` field.
    
 
 - Replaced the v5 error codes with the following possible `code` and `subCode` values.

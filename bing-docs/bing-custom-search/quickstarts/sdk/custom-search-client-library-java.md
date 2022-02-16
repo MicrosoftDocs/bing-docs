@@ -14,11 +14,11 @@ ms.author: scottwhi
 
 # Quickstart: Use the Bing Custom Search Java client library
 
-Get started with the Bing Custom Search client library for Java. Follow these steps to install the package and try out the example code for basic tasks. The Bing Custom Search API enables you to create tailored, ad-free search experiences for topics that you care about. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples/tree/master/Search/BingCustomSearch)
+Get started with the Bing Custom Search client library for Java. Follow these steps to install the package and try out the example code for basic tasks. The Bing Custom Search API enables you to create tailored, ad-free search experiences for topics that you care about. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples/tree/master/Search/BingCustomSearch).
 
 Use the Bing Custom Search client library for Java to:
 
-* Find search results on the web, from your Bing Custom Search instance.
+* Find search results on the web from your Bing Custom Search instance.
 
 [Reference documentation](https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingcustomsearch?view=azure-java-stable) | [Library source code](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/Search.BingCustomSearch) | [Artifact (Maven)](https://search.maven.org/artifact/com.microsoft.azure.cognitiveservices/azure-cognitiveservices-customsearch/) | [Samples](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples)
 
@@ -40,7 +40,7 @@ After you get a key from your resource, [create an environment variable](https:/
 > [!TIP]
 > If you're not using Gradle, you can find the client library details for other dependency managers on the [Maven Central Repository](https://search.maven.org/artifact/com.microsoft.azure.cognitiveservices/azure-cognitiveservices-textanalytics/).
 
-In a console window (such as cmd, PowerShell, or Bash), create a new directory for your app, and navigate to it.
+In a console window (such as cmd, PowerShell, or Bash), create a new directory for your app, and then navigate to it.
 
 ```console
 mkdir myapp && cd myapp
@@ -56,7 +56,7 @@ When prompted to choose a **DSL**, select **Kotlin**.
 
 ## Install the client library
 
-Locate *build.gradle.kts* and open it with your preferred IDE or text editor. Then copy in this build configuration. Be sure to include the client library under `dependencies`:
+Locate *build.gradle.kts* and open it with your preferred IDE or text editor. Next, copy in this build configuration. Be sure to include the client library under `dependencies`:
 
 ```kotlin
 plugins {

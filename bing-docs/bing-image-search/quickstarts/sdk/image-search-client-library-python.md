@@ -57,10 +57,9 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
     ```python
     image_results = client.images.search(query=search_term)
     ```
-   ## Process and view the results
+## Process and view the results
 
-Parse the image results returned in the response.
-
+1. Parse the image results returned in the response.
 
 If the response contains search results, store the first result and print out its details, such as a thumbnail URL, the original URL,along with the total number of returned images.  
 

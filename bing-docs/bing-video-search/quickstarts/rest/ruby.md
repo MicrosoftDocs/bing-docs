@@ -21,7 +21,7 @@ The source code for this sample is available [on GitHub](https://github.com/Azur
 
 ## Prerequisites
 
-* Ruby 2.4 or later
+* Ruby 2.4 or later.
 
 <!--
 [!INCLUDE [bing-video-search-signup-requirements](../../../../includes/bing-video-search-signup-requirements.md)]
@@ -191,7 +191,7 @@ A successful response is returned in JSON, as shown in the following example:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a single-page web app](../../tutorial/bing-video-search-single-page-app.md)
+> [Create a single-page web app](../../tutorial/bing-video-search-single-page-app.md).
 
 ## See also 
 

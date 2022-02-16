@@ -26,15 +26,15 @@ Use these quickstarts to make your first Video Search API call in a matter of mi
 - [Ruby](rest/ruby.md)
 
 
-<!-- ## Quickstarts using the Bing client library
+## Quickstarts using the Bing client library
 
 - [C#](sdk/video-search-client-library-csharp.md)
 - [Java](sdk/video-search-client-library-java.md)
 - [JavaScript](sdk/video-search-client-library-javascript.md)
-- [python](sdk/video-search-client-library-python.md) -->
+- [python](sdk/video-search-client-library-python.md)
 
 
 ## Next steps
 
 - For a more in depth web app example, see the [Video search tutorial](../tutorial/bing-video-search-single-page-app.md).
-- For REST and SDK samples, see [Samples](../samples.md)
+- For REST and SDK samples, see [Samples](../samples.md).

@@ -83,7 +83,7 @@ Although this application is written in JavaScript, the API is a RESTful Web ser
 
 ## Send a request
 
-1. Create a function called `Search()` to send a search request. In it, perform the following steps:
+1. Create a function called `Search()` to send a search request. 
 
 2. Within this function, create a JSON object containing your request parameters. Use `Get` for the method, and add your host and path information. Add your subscription key to the `Ocp-Apim-Subscription-Key` header. 
 

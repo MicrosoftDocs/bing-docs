@@ -19,7 +19,7 @@ Use this quickstart to make your first call to the Bing Visual Search API. This 
 
 ## Prerequisites
 
-* [Python 3.x](https://www.python.org/)
+* [Python 3.x](https://www.python.org/).
 
 <!--
 [!INCLUDE [bing-visual-search-signup-requirements](../../../../includes/bing-visual-search-signup-requirements.md)]
@@ -92,4 +92,4 @@ except Exception as ex:
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Create a Visual Search single-page web app](../../tutorial/visual-search-single-page-app.md)
+> [Create a Visual Search single-page web app](../../tutorial/visual-search-single-page-app.md).

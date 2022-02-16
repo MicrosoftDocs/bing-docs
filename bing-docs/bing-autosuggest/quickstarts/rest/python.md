@@ -15,7 +15,7 @@ ms.author: scottwhi
 
 # Quickstart: Suggest search strings with Bing Autosuggest REST API and Python
 
-Follow this quickstart to learn how to make calls to Bing Autosuggest API and read the JSON response. This simple Python application sends a partial search query to the API, and returns suggestions for searches. While this application is written in Python, the API is a RESTful Web service compatible with most programming languages. The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/python/Search/BingAutosuggestv7.py)
+Follow this quickstart to learn how to make calls to Bing Autosuggest API and read the JSON response. This simple Python application sends a partial search query to the API and returns suggestions for searches. While this application is written in Python, the API is a RESTful Web service compatible with most programming languages. The source code for this sample is available on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/python/Search/BingAutosuggestv7.py).
 
 ## Prerequisites
 

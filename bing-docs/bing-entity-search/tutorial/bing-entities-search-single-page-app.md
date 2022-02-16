@@ -38,12 +38,12 @@ Our app therefore calls upon the Bing Maps service to obtain latitude and longit
 The tutorial app illustrates how to:
 
 > [!div class="checklist"]
-> * Perform a Bing Entity Search API call in JavaScript
-> * Perform a Bing Maps `locationQuery` API call in JavaScript
-> * Pass search options to the API calls
-> * Display search results
-> * Handle the Bing client ID and API subscription keys
-> * Deal with any errors that might occur
+> * Perform a Bing Entity Search API call in JavaScript.
+> * Perform a Bing Maps `locationQuery` API call in JavaScript.
+> * Pass search options to the API calls.
+> * Display search results.
+> * Handle the Bing client ID and API subscription keys.
+> * Deal with any errors that might occur.
 
 The tutorial page is entirely self-contained; it does not use any external frameworks, style sheets, or even image files. It uses only widely supported JavaScript language features and works with current versions of all major Web browsers.
 
@@ -56,7 +56,7 @@ In this tutorial, we discuss only selected portions of the source code. Copy and
 
 To follow along with the tutorial, you need subscription keys for the Bing Search API, and Bing Maps API. 
 
-* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/)
+* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
 * Once you have your Azure subscription:
   * <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesBingSearch-v7"  title="Create a Bing Search resource"  target="_blank">Create a Bing Search resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
   * <a href="https://www.microsoft.com/maps/create-a-bing-maps-key.aspx"  title="Create a Computer Vision resource"  target="_blank">Create a Bing Maps resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
@@ -141,7 +141,7 @@ The HTML form includes the following controls:
 |-|-|
 |`where`|A drop-down menu for selecting the market (location and language) used for the search.|
 |`query`|The text field in which to enter the search terms.|
-|`safe`|A checkbox indicating whether SafeSearch is turned on (restricts "adult" results)|
+|`safe`|A checkbox indicating whether SafeSearch is turned on (restricts "adult" results).|
 |`what`|A menu for choosing to search for entities, places, or both.|
 |`mapquery`|The text field in which the user may enter a full or partial address, a landmark, etc. to help Bing Entity Search return more relevant results.|
 

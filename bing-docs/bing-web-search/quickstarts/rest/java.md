@@ -71,9 +71,9 @@ public class BingWebSearch {
 
 The following code sets the `subscriptionKey`, `host`, `path`, and `searchTerm`. Add this code to the `BingWebSearch` class described in the previous section:
 
-2. Replace the `subscriptionKey` value with a valid subscription key from your Azure account. 
+1. Replace the `subscriptionKey` value with a valid subscription key from your Azure account. 
 
-3. Optionally, customize the search query by replacing the value for `searchTerm`. 
+2. Optionally, customize the search query by replacing the value for `searchTerm`. 
 
 ```java
 // Enter a valid subscription key.

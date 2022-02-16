@@ -20,7 +20,7 @@ Use this quickstart to begin getting image insights from the Bing Visual Search 
 
 ## Prerequisites
 
-* [Python](https://www.python.org/) 2.x or 3.x
+* [Python](https://www.python.org/) 2.x or 3.x.
 * It is recommended to use a [virtual environment](https://docs.python.org/3/tutorial/venv.html). Install and initialize the virtual environment with the [venv module](https://pypi.python.org/pypi/virtualenv).
 * The Bing Visual Search client library for Python. You can install it with the following commands:
     1. `cd mytestenv`
@@ -32,7 +32,7 @@ Use this quickstart to begin getting image insights from the Bing Visual Search 
 
 ## Create and initialize the application
 
-1. Create a new Python file in your favorite IDE or editor, and add the following import statements. 
+1. Create a new Python file in your favorite IDE or editor, and add the following import statements:
 
     ```python
     import http.client, urllib.parse
@@ -57,7 +57,7 @@ Use this quickstart to begin getting image insights from the Bing Visual Search 
     
     ```
 
-3. Instantiate the client
+3. Instantiate the client.
 
     ```python
     client = VisualSearchClient(endpoint="https://api.bing.microsoft.com", credentials=CognitiveServicesCredentials(subscription_key))
@@ -107,4 +107,4 @@ Use this quickstart to begin getting image insights from the Bing Visual Search 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../../tutorial/visual-search-single-page-app.md)
+> [Build a single-page web app](../../tutorial/visual-search-single-page-app.md).

@@ -85,7 +85,7 @@ Our `Main()` method is pretty simple since we're going to implement the HTTP req
 
 ## Where all the work happens
 
-The `RunAsync` method is where all the work happens. It builds the query string that's appended to the base URI, waits for the asynchronous HTTP request to return, deserializes the response, and either prints the suggestions or an error message.
+The `RunAsync` method is one of the most powerful methods. It builds the query string that's appended to the base URI, waits for the asynchronous HTTP request to return, deserializes the response, and prints either the suggestions or an error message.
 
 This example uses dictionaries instead of objects to access the response data.
 
@@ -128,7 +128,7 @@ This example uses dictionaries instead of objects to access the response data.
 
 ## The HTTP call
 
-Here's the HTTP request. It's your basic HTTP GET request. Use whatever HTTP client works for you.
+The HTTP request is just your basic HTTP GET request. Use whatever HTTP client works for you.
 
 ```csharp
         // Makes the request to the Autosuggest endpoint.
@@ -147,7 +147,7 @@ Here's the HTTP request. It's your basic HTTP GET request. Use whatever HTTP cli
         }
 ```
 
-That's all the more there is to sending a search request and getting back search search string suggestions. To see what the JSON response looks like, see [Handling the response](../../how-to/get-suggestions.md#handling-the-response).
+That's all there is to sending a search request and getting back search string suggestions. To see what the JSON response looks like, see [Handling the response](../../how-to/get-suggestions.md#handling-the-response).
 
 The rest of the sections walk you through one way of parsing the JSON response and displaying the suggestions. Be sure to read the [use and display requirements](../../../bing-web-search/use-display-requirements.md) to make sure you comply with all display requirements.
 

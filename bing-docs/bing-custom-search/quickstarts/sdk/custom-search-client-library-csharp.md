@@ -25,8 +25,8 @@ Use the Bing Custom Search client library for C# to:
 ## Prerequisites
 
 - A Bing Custom Search instance. See [Quickstart: Create your first Bing Custom Search instance](../../how-to/quick-start.md) for more information.
-- Microsoft [.NET Core](https://www.microsoft.com/net/download/core)
-- Any edition of [Visual Studio 2017 or later](https://www.visualstudio.com/downloads/)
+- Microsoft [.NET Core](https://www.microsoft.com/net/download/core).
+- Any edition of [Visual Studio 2017 or later](https://www.visualstudio.com/downloads/).
 - If you are using Linux/MacOS, this application can be run using [Mono](https://www.mono-project.com/).
 - The [Bing Custom Search](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.CustomSearch/1.2.0)  NuGet package. 
     - From **Solution Explorer** in Visual Studio, right-click your project and select **Manage NuGet Packages** from the menu. Install the `Microsoft.Azure.CognitiveServices.Search.CustomSearch` package. Installing the NuGet Custom Search package also installs the following assemblies:
@@ -40,7 +40,7 @@ Use the Bing Custom Search client library for C# to:
 
 ## Create and initialize the application
 
-1. Create a new C# console application in Visual Studio. Then add the following packages to your project.
+1. Create a new C# console application in Visual Studio. Then add the following packages to your project:
 
     ```csharp
     using System;
@@ -56,7 +56,7 @@ Use the Bing Custom Search client library for C# to:
 
 ## Send the search request and receive a response
     
-1. Send a search query using your client's `SearchAsync()` method, and save the response. Be sure to replace your `YOUR-CUSTOM-CONFIG-ID` with your instance's configuration ID (you can find the ID in the [Bing Custom Search portal](https://www.customsearch.ai/)). This example searches for "Xbox".
+1. Send a search query using your client's `SearchAsync()` method, and then save the response. Be sure to replace your `YOUR-CUSTOM-CONFIG-ID` with your instance's configuration ID (you can find the ID in the [Bing Custom Search portal](https://www.customsearch.ai/)). This example searches for "Xbox":
 
     ```csharp
     // This will look up a single query (Xbox).
