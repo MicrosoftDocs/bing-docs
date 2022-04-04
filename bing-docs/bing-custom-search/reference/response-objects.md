@@ -2,26 +2,23 @@
 title: Bing Custom Web Search API v7 response objects
 titleSuffix: Bing Services
 description: Describes the response objects that Bing Custom Web Search API may return in the JSON response.
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: reference
-ms.date: 07/15/2017
-ms.author: scottwhi
+ms.date: 04/04/2022
+ms.author: v-apunnamara
 ---
 
 # Custom Web Search API v7 response objects
-
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
 
 For a list of possible objects, see **In this article** in the right pane.
 
 If the request succeeds, the top-level object in the response is:
 
 - [SearchResponse](#searchresponse) for Custom Web Search
-- [Suggestions](#suggestions) for Custom Autosuggest 
+- [Suggestions](#suggestions) for Custom Autosuggest
 - [Images](#imageanswer) for Custom Image Search
 - [Videos](#videoanswer) for Custom Video Search
 
@@ -30,15 +27,14 @@ And if the request fails, the top-level object in the response is the [ErrorResp
 > [!NOTE]
 > Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
 
-  
 ## Error  
 
 Defines the error that occurred.  
   
-|Name|Value|Type 
+|Name|Value|Type
 |-|-|-  
 |<a name="error-code"></a>code|The error code that identifies the category of error. For a list of possible codes, see [Error codes](error-codes.md#error-codes).|String
-|<a name="error-message"></a>message|A description of the error.|String 
+|<a name="error-message"></a>message|A description of the error.|String
 |<a name="error-moredetails"></a>moreDetails|A description that provides additional information about the error.|String
 |<a name="error-parameter"></a>parameter|The query parameter in the request that caused the error.|String
 |<a name="error-subcode"></a>subCode|The error code that identifies the error. For example, if `code` is InvalidRequest, `subCode` may be ParameterInvalid or ParameterInvalidValue.|String
@@ -52,7 +48,6 @@ The top-level object that the response includes when the request fails.
 |-|-|-
 |_type|Type hint, which is set to ErrorResponse.|String
 |<a name="errors"></a>errors|A list of errors that describe the reasons why the request failed.|[Error](#error)[]  
-
   
 ## Image  
 
@@ -78,24 +73,22 @@ Defines an image that is relevant to the query.
 |webSearchUrl|A URL to the Bing search results for this image.|String  
 |<a name="image-width"></a>width|The width of the source image, in pixels.|Unsigned Short 
 
-
 ## ImageAnswer  
 
 The top-level object that the response includes when an image request succeeds.  
   
 |Name|Value|Type
 |-|-|-
-|_type|A type hint, which is set to Images.|String 
+|_type|A type hint, which is set to Images.|String
 |<a name="nextoffset"></a>nextOffset|The offset value that you set the [offset](query-parameters.md#offset) query parameter to.<br/><br/>If you set `offset` to 0 and `count` to 30 in your first request, and then set `offset` to 30 in your second request, some of the results in the second response may be duplicates of the first response. To prevent duplicates, set `offset` to the value of `nextOffset`.|Integer
 |<a name="pivotsuggestions"></a>pivotSuggestions|A list of segments in the original query. For example, if the query was *Red Flowers*, Bing might segment the query into *Red* and *Flowers*.<br/><br/>The Flowers pivot may contain query suggestions such as Red Peonies and Red Daisies, and the Red pivot may contain query suggestions such as Green Flowers and Yellow Flowers.|[Pivot](#pivot)  
 |<a name="queryexpansions"></a>queryExpansions|A list of expanded queries that narrows the original query. For example, if the query was *Microsoft Surface*, the expanded queries might be: Microsoft Surface **Pro 3**, Microsoft Surface **RT**, Microsoft Surface **Phone**, and Microsoft Surface **Hub**.|[Query](#query)  
-|readLink|A URL that returns this answer. To use the URL, append query parameters as appropriate.<br/><br/>This field is included only in a Web Search API response. Typically, you'd use the URL if you want to query the Image Search API directly.|String 
+|readLink|A URL that returns this answer. To use the URL, append query parameters as appropriate.<br/><br/>This field is included only in a Web Search API response. Typically, you'd use the URL if you want to query the Image Search API directly.|String
 |<a name="similarterms">similarTerms|A list of terms that are similar in meaning to the user's query term.|[Query](#query)
 |<a name="totalestimatedmatches"></a>totalEstimatedMatches|The estimated number of images that are relevant to the query. Use this number along with the [count](query-parameters.md#count) and [offset](query-parameters.md#offset) query parameters to page the results.<br/><br/>Only the Image Search API includes this field.|Long
 |<a name="images-value">value|A list of images that are relevant to the query. If there are no results, the array is empty.|[Image](#image)[]
-|webSearchUrl|A URL to the Bing search results for the requested images.|String 
+|webSearchUrl|A URL to the Bing search results for the requested images.|String
   
-
 ## MediaSize  
 
 Defines the size of the media content.  
@@ -103,9 +96,8 @@ Defines the size of the media content.
 |Name|Value|Type
 |-|-|-
 |height|The height of the media content, in pixels.|Integer
-|width|The width of the media content, in pixels.|Integer 
+|width|The width of the media content, in pixels.|Integer
   
-
 ## MetaTag  
 
 Defines a webpage's metadata.  
@@ -114,7 +106,6 @@ Defines a webpage's metadata.
 |-|-|-
 |content|The metadata.|String
 |name|The name of the metadata.|String
-
 
 ## OpenGraphImage
 
@@ -125,7 +116,6 @@ Defines the location and dimensions of an image relevant to a webpage.
 |contentUrl|The image's location.|String
 |width|The width of the image. May be zero (0).|UInt32
 |height|The height of the image. May be zero (0).|UInt32
-
 
 ## Pivot  
 
@@ -142,8 +132,7 @@ Defines a publisher or creator.
   
 |Name|Value|Type  
 |-|-|-
-|name|The name of the publisher or creator.|String 
-
+|name|The name of the publisher or creator.|String
 
 ## Query  
 
@@ -157,10 +146,9 @@ Defines a search query.
 |<a name="query-thumbnail"></a>thumbnail|The URL to a thumbnail of a related image.<br/><br/>The object includes this field only for pivot suggestions and related searches.|[Thumbnail](#thumbnail) 
 |<a name="query-websearchurl"></a>webSearchUrl|The URL that takes the user to the Bing search results page for the query.|String
 
-  
 ## QueryContext  
 
-Defines the query string that Bing used for the request.   
+Defines the query string that Bing used for the request.
   
 |Name|Value|Type 
 |-|-|-
@@ -170,7 +158,6 @@ Defines the query string that Bing used for the request.
 |askUserForLocation|A Boolean value that indicates whether Bing requires the user's location to provide accurate results. If you specified the user's location by using the [X-MSEdge-ClientIP](headers.md#clientip) and [X-Search-Location](headers.md#location) headers, you can ignore this field.<br/><br/>For location aware queries, such as "today's weather" or "restaurants near me" that need the user's location to provide accurate results, this field is set to **true**.<br/><br/>For location aware queries that include the location (for example, "Seattle weather"), this field is set to **false**. This field is also set to **false** for queries that are not location aware, such as "best sellers."|Boolean
 |<a name="querycontext-originalquery"></a>originalQuery|The query string as specified in the request.|String  
   
-
 ## SearchAction  
 
 Defines a query search suggestion.  
@@ -181,7 +168,6 @@ Defines a query search suggestion.
 |<a name="searchaction-query"></a>query|The suggested query term.<br/><br/>If the user selects the query term from the list of suggestions, use the term in a Bing API request and display the search results yourself.|String
 |<a name="searchaction-searchkind"></a>searchKind|The type of suggestion. The following are the possible values:<ul><li>CustomSearch &mdash; The suggestion is from a non-web search suggestion data source.</li><li>WebSearch &mdash; The suggestion is from a web search suggestion data source.</li></ul>|String
   
-
 ## SuggestionGroup  
 
 Defines a group of suggestions of the same type.  
@@ -190,7 +176,6 @@ Defines a group of suggestions of the same type.
 |-|-|-
 |<a name="suggestgroup-name"></a>name|The name of the group. The name identifies the type of suggestions that the group contains. For example, web search suggestions. The following are the possible group names:<ul><li>Custom &mdash; The group contains suggestions from a non-web search suggestions data source.</li><li>Web &mdash; The group contains web search suggestions.</li></ul>|String
 |<a name="suggestgroup-searchsuggestions"></a>searchSuggestions|A list of up to 8 suggestions. If there are no suggestions, the array is empty.<br/><br/>You must display all suggestions in the order provided. The list is in order of decreasing relevance. The first suggestion is the most relevant and the last suggestion is the least relevant. The size of the list is subject to change.|[SearchAction](#searchaction)[]  
-  
 
 ## Suggestions  
 
@@ -203,21 +188,19 @@ If the service suspects a denial of service attack, the request succeeds (HTTP s
 |_type|The type hint, which is set to Suggestions.|String
 |<a name="suggestions-suggestiongroups"></a>suggestionGroups|A list of suggested query strings grouped by type. For example, web search suggestions.|[SuggestionGroup](#suggestiongroup)[]
 
-  
 ## SearchResponse  
 
 The response's top-level object for search requests that succeed.  
   
 If the service suspects a denial of service attack, the request succeeds (HTTP status code is 200 OK), but the body of the response is empty.  
   
-|Name|Value|Type 
+|Name|Value|Type
 |-|-|-
 |_type|Type hint, which is set to SearchResponse.|String
 |<a name="searchresponse-querycontext"></a>queryContext|The query string that Bing used for the request.|[QueryContext](#querycontext)
 |<a name="search-response-images"></a>images|A list of images that are relevant to the search query.|[ImageAnswer](#imageanswer)
 |<a name="search-response-videos"></a>videos|A list of videos that are relevant to the search query.|[VideoAnswer](#videoanswer)
 |<a name="search-response-webpages"></a>webPages|A list of webpages that are relevant to the search query.|[WebAnswer](#webanswer)
-  
   
 ## Thing  
 
@@ -234,7 +217,6 @@ Defines the URL to a thumbnail of an image.
 |Name|Value|Type
 |-|-|-
 |url|The URL to a thumbnail of an image.|String
-  
   
 ## Video  
 
@@ -291,7 +273,6 @@ If the service suspects a denial of service attack, the request succeeds (HTTP s
 |<a name="videos-value"></a>value|The list of videos that are relevant to the user's query.|[Video](#video)[] 
 |<a name="videos-websearchurl"></a>webSearchUrl|The URL to the Bing search results for the requested videos.|String 
   
-  
 ## WebAnswer  
 
 Defines a list of relevant webpage links.  
@@ -302,7 +283,6 @@ Defines a list of relevant webpage links.
 |<a name="webanswer-value"></a>value|A list of webpages that are relevant to the query.|[WebPage](#webpage)[]  
 |<a name="webanswer-websearchurl"></a>webSearchUrl|The URL to the Bing search results for the requested webpages.|String
   
-
 ## Webpage  
 
 Defines a webpage that is relevant to the query.  
@@ -318,4 +298,3 @@ Defines a webpage that is relevant to the query.
 |<a name="searchtags"></a>searchTags|A list of search tags that the webpage owner specified on the webpage. The API returns only indexed search tags.<br/><br/>The `name` field of the `MetaTag` object contains the indexed search tag. Search tags begin with search.* (for example, search.assetId). The `content` field contains the tag's value.|[MetaTag](#metatag)[]
 |snippet|A snippet of text from the webpage that describes its contents.|String
 |<a name="url"></a>url|The URL to the webpage.<br/><br/>Use this URL along with `name` to create a hyperlink that when clicked takes the user to the webpage.|String 
-
