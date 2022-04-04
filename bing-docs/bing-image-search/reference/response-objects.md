@@ -2,19 +2,16 @@
 title: Bing Image Search APIs v7 response objects
 titleSuffix: Bing Services
 description: Describes the response objects that Bing Image Search APIs may return in the JSON response.
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: reference
-ms.date: 07/15/2017
-ms.author: scottwhi
+ms.date: 04/04/2022
+ms.author: v-apunnamara
 ---
 
 # Image Search APIs v7 response objects
-
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
 
 For a list of possible objects, see **In this article** in the right pane.
 
@@ -23,16 +20,14 @@ The top-level object in the response depends on the endpoint you call. If you ca
 > [!NOTE]
 > Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
 
-
 ## AggregateOffer  
 
 Defines a list of offers from merchants that are related to the image.  
   
 |Element|Description|Type
 |-|-|-
-|<a name="offers"></a>offers|A list of offers from merchants that have offerings related to the image.|[Offer](#offer)[] 
+|<a name="offers"></a>offers|A list of offers from merchants that have offerings related to the image.|[Offer](#offer)[]
   
-
 ## AggregateRating  
 
 Defines the metrics that indicate how well an item was rated by others.  
@@ -43,7 +38,6 @@ Defines the metrics that indicate how well an item was rated by others.
 |<a name="ratingvalue"></a>ratingValue|The mean (average) rating. The possible values are 1.0 through 5.0.|float
 |<a name="reviewcount"></a>reviewCount|The number of times the recipe has been rated or reviewed.|Unsigned Integer
 |<a name="rating-text"></a>text|The mean (average) rating, in string form.|String
-
 
 ## Category  
 
@@ -58,7 +52,7 @@ Defines the category of trending images.
 
 Defines the error that occurred.  
   
-|Name|Value|Type 
+|Name|Value|Type
 |-|-|-  
 |<a name="error-code"></a>code|The error code that identifies the category of error. For a list of possible codes, see [Error codes](error-codes.md#error-codes).|String
 |<a name="error-message"></a>message|A description of the error.|String 
@@ -103,9 +97,8 @@ Defines an image that is relevant to the query.
 |<a name="image-thumbnail"></a>thumbnail|The width and height of the thumbnail image (see `thumbnailUrl`).|[MediaSize](#mediasize) 
 |<a name="image-thumbnailurl"></a>thumbnailUrl|A URL to a thumbnail of the image. For information about resizing the image, see [Resize and crop thumbnail images](../../bing-web-search/resize-and-crop-thumbnails.md).|String
 |webSearchUrl|A URL to the Bing search results for this image.|String  
-|<a name="image-width"></a>width|The width of the source image, in pixels.|Unsigned Short 
+|<a name="image-width"></a>width|The width of the source image, in pixels.|Unsigned Short
 
-  
 ## ImageAnswer  
 
 The top-level object that the response includes when an image request succeeds.  
@@ -125,8 +118,7 @@ The top-level object that the response includes when an image request succeeds.
 |<a name="similarterms">similarTerms|A list of terms that are similar in meaning to the user's query term.|[Query](#query)
 |<a name="totalestimatedmatches"></a>totalEstimatedMatches|The estimated number of images that are relevant to the query. Use this number along with the [count](query-parameters.md#count) and [offset](query-parameters.md#offset) query parameters to page the results.<br/><br/>Only the Image Search API includes this field.|Long
 |<a name="images-value">value|A list of images that are relevant to the query. If there are no results, the array is empty.|[Image](#image)[]
-|webSearchUrl|A URL to the Bing search results for the requested images.|String 
-
+|webSearchUrl|A URL to the Bing search results for the requested images.|String
 
 ## ImageCaption  
 
@@ -137,8 +129,7 @@ Defines an image's caption.
 |<a name="caption"></a>caption|A caption about the image.|String 
 |<a name="caption-datasourceurl"></a>dataSourceUrl|The URL to the website where the caption was found. You must attribute the caption to the source. For example, by displaying the domain name from the URL next to the caption and using the URL to link to the source website.|String
 |<a name="caption-relatedsearches"></a>relatedSearches|A list of entities found in the caption. Use the contents of the `Query` object to find the entity in the caption and create a link. The link takes the user to images of the entity.|[Query](#query)
- 
-  
+
 ## ImageGallery  
 
 Defines a link to a webpage that contains a collection of related images.  
@@ -146,14 +137,13 @@ Defines a link to a webpage that contains a collection of related images.
 |Name|Value|Type
 |-|-|-
 |<a name="gallery-creator"></a>creator|The person that owns the collection. You must attribute the collection to the creator.|[Person](#person)
-|<a name="gallery-description"></a>description|A description of the collection. The description may be empty.|String 
-|<a name="gallery-followerscount"></a>followersCount|The number of users on the social network that follow the creator.|Unsigned Integer 
+|<a name="gallery-description"></a>description|A description of the collection. The description may be empty.|String
+|<a name="gallery-followerscount"></a>followersCount|The number of users on the social network that follow the creator.|Unsigned Integer
 |<a name="gallery-imagescount"></a>imagesCount|The number of related images found in the collection.|Unsigned Integer  
 |<a name="gallery-name"></a>name|The name of the gallery.|String
-|<a name="gallery-source"></a>source|The publisher or social network where the images were found. You must attribute the publisher as the source where the collection was found.|String 
+|<a name="gallery-source"></a>source|The publisher or social network where the images were found. You must attribute the publisher as the source where the collection was found.|String
 |<a name="gallery-thumbnailurl"></a>thumbnailUrl|The URL to a thumbnail of one of the images found in the collection.|String
 |<a name="gallery-url"></a>url|The URL to the webpage that contains the collection of related images.|String
-
 
 ## ImageInsightsResponse
   
@@ -179,7 +169,6 @@ The [modules](query-parameters.md#modulesrequested) query parameter affects the 
 |<a name="insights-visuallysimilarimages"></a>visuallySimilarImages|A list of images that are visually similar to the original image. For example, if the specified image is of a sunset over a body of water, the list of similar images are of a sunset over a body of water.<br /><br /> If the specified image is of a person, similar images might be of the same person or they might be of persons dressed similarly or in a similar setting.<br /><br /> The criteria for similarity continues to evolve.|[ImagesModule](#imagesmodule)|  
 |<a name="insights-visuallysimilarproducts"></a>visuallySimilarProducts|A list of images that contain products that are visually similar to products found in the original image. For example, if the specified image contains a dress, the list of similar images contain a dress.<br /><br /> The image provides summary information about offers that Bing found online for the product.|[ImagesModule](#imagesmodule)|  
 
-
 ## ImagesModule  
 
 Defines a list of images.  
@@ -188,7 +177,6 @@ Defines a list of images.
 |-|-|-  
 |value|A list of images.|[Image](#image)[]
   
-
 ## ImageTagsModule  
 
 Defines the characteristics of content found in an image.  
@@ -196,7 +184,6 @@ Defines the characteristics of content found in an image.
 |Element|Description|Type
 |-|-|-
 |value|A list of tags that describe the characteristics of the content found in the image. For example, if the image is of a musical artist, the list might include Female, Dress, and Music to indicate the person is female music artist that's wearing a dress.|[Tag](#tag)[]  
-
 
 ## InsightsMetadata  
 
@@ -210,7 +197,6 @@ Defines a count of the number of websites where you can shop or perform other ac
 |<a name="recipesourcecount"></a>recipeSourcesCount|The number of websites that offer recipes of the food seen in the image.|Unsigned Integer  
 |<a name="shoppingsourcecount"></a>shoppingSourcesCount|The number of websites that offer the products seen in the image.|Unsigned Integer
 
-
 ## MediaSize  
 
 Defines the size of the media content.  
@@ -218,8 +204,7 @@ Defines the size of the media content.
 |Name|Value|Type
 |-|-|-
 |height|The height of the media content, in pixels.|Integer
-|width|The width of the media content, in pixels.|Integer 
-
+|width|The width of the media content, in pixels.|Integer
 
 ## NormalizedRectangle  
 
@@ -232,7 +217,6 @@ Defines a region of an image. The region is defined by the coordinates of the to
 |right|The right coordinate|Float
 |top|The top coordinate|Float
 
-  
 ## Offer  
 
 Defines a merchant's offer.  
@@ -253,7 +237,6 @@ The ShoppingSources insights and SimilarProducts insights both use this object. 
 |seller|The merchant's name.<br /><br /> Used by ShoppingSources.|[Organization](#organization)
 |url|The URL to the offer on the merchant's website.<br /><br /> Used by ShoppingSources.|String
 
-  
 ## Organization  
 
 Defines information about a merchant.  
@@ -263,7 +246,6 @@ Defines information about a merchant.
 |image|The merchant's logo. The `Image` object includes only the `url` field.|[Image](#image)
 |name|The merchant's name.|String
 
-  
 ## Person  
 
 Defines a person.  
@@ -279,7 +261,6 @@ Defines a person.
 |url|The URL to the person's social network home page, if applicable.|String
 |webSearchUrl|The URL to the Bing search results page that contains information about this person.|String
 
-
 ## Pivot  
 
 Defines the pivot segment.  
@@ -288,7 +269,6 @@ Defines the pivot segment.
 |-|-|-
 |<a name="pivot-pivot"></a>pivot|The segment from the original query to pivot on.|String  
 |<a name="pivot-suggestions"></a>suggestions|A list of suggested query strings for the pivot.|[Query](#query)
-  
 
 ## Query  
 
@@ -299,23 +279,21 @@ Defines a search query.
 |<a name="query-displaytext"></a>displayText|The display version of the search query string.|String
 |<a name="query-searchurl"></a>searchLink|The Image Search API URL that you use to get image search results. The URL includes the *q* query parameter that's set the search string in `text`. Before using the URL, append other query parameters as appropriate.<br/><br/>Use this URL if you're displaying the results in your own user interface. Otherwise, use the URL in `webSearchUrl`.|String
 |<a name="query-text"></a>text|The query string. Use this string as the query term in a new search request.|String  
-|<a name="query-thumbnail"></a>thumbnail|A URL to a thumbnail image that represents the search string.|[Thumbnail](#thumbnail) 
+|<a name="query-thumbnail"></a>thumbnail|A URL to a thumbnail image that represents the search string.|[Thumbnail](#thumbnail)
 |<a name="query-websearchurl"></a>webSearchUrl|The URL that takes the user to the Bing search results page for the query.|String
 
-  
 ## QueryContext  
 
-Defines the query string that Bing used for the request.   
+Defines the query string that Bing used for the request.
   
-|Name|Value|Type 
+|Name|Value|Type
 |-|-|-
 |<a name="adultintent"></a>adultIntent|A Boolean value that indicates whether the specified query has adult intent. The value is **true** if the query has adult intent.<br/><br/>If **true**, and the request's [safeSearch](query-parameters.md#safesearch) query parameter is set to Strict, the response contains only news results, if applicable.|Boolean
-|<a name="alterationoverridequery"></a>alterationOverrideQuery|The query string to use to force Bing to use the original string. For example, if the query string is *saling downwind*, the override query string is *+saling downwind*. Remember to encode the query string, which results in *%2Bsaling+downwind*.<br/><br/>The object includes this field only if the original query string contains a spelling mistake.|String 
-|<a name="alteredquery"></a>alteredQuery|The query string that Bing used to perform the query. Bing uses the altered query string if the original query string contained spelling mistakes. For example, if the query string is *saling downwind*, the altered query string is *sailing downwind*.<br/><br/>The object includes this field only if the original query string contains a spelling mistake.|String 
+|<a name="alterationoverridequery"></a>alterationOverrideQuery|The query string to use to force Bing to use the original string. For example, if the query string is *saling downwind*, the override query string is *+saling downwind*. Remember to encode the query string, which results in *%2Bsaling+downwind*.<br/><br/>The object includes this field only if the original query string contains a spelling mistake.|String
+|<a name="alteredquery"></a>alteredQuery|The query string that Bing used to perform the query. Bing uses the altered query string if the original query string contained spelling mistakes. For example, if the query string is *saling downwind*, the altered query string is *sailing downwind*.<br/><br/>The object includes this field only if the original query string contains a spelling mistake.|String
 |askUserForLocation|A Boolean value that indicates whether Bing requires the user's location to provide accurate results. If you specified the user's location by using the [X-MSEdge-ClientIP](headers.md#clientip) and [X-Search-Location](headers.md#location) headers, you can ignore this field.<br/><br/>For location aware queries, such as "today's weather" or "restaurants near me" that need the user's location to provide accurate results, this field is set to **true**.<br/><br/>For location aware queries that include the location (for example, "Seattle weather"), this field is set to **false**. This field is also set to **false** for queries that are not location aware, such as "best sellers."|Boolean
 |<a name="originalquery"></a>originalQuery|The query string as specified in the request.|String  
 
-  
 ## Recipe  
 
 Defines a cooking recipe.  
@@ -331,7 +309,6 @@ Defines a cooking recipe.
 |totalTime|The total amount of time it takes to prepare and cook the recipe. For example, PT45M. For information about the time format, see [https://en.wikipedia.org/wiki/ISO_8601#Durations](https://en.wikipedia.org/wiki/ISO_8601#Durations).|String
 |url|The URL that takes the user to the webpage that contains the recipe.|String
 
-  
 ## RecipesModule  
 
 Defines a list of recipes.  
@@ -340,7 +317,6 @@ Defines a list of recipes.
 |-|-|-
 |value|A list of recipes.|[Recipe](#recipe)[]
 
-  
 ## RecognizedEntitiesModule  
 
 Defines a list of previously recognized entities.  
@@ -349,7 +325,6 @@ Defines a list of previously recognized entities.
 |-|-|-
 |value|A list of recognized entities.|[RecognizedEnityGroup](#recognizedentitygroup)[]
 
-  
 ## RecognizedEntity  
 
 Defines a recognized entity.  
@@ -359,7 +334,6 @@ Defines a recognized entity.
 |entity|The entity that was recognized.<br/><br/>The following are the possible entity objects.<ul><li>[Person](#person)</li></ul>|Object
 |matchConfidence|The confidence that Bing has that the entity in the image matches this entity. The confidence ranges from 0.0 through 1.0 with 1.0 being very confident.|Float  
 
-  
 ## RecognizedEntityGroup  
 
 Defines a group of previously recognized entities.  
@@ -368,7 +342,6 @@ Defines a group of previously recognized entities.
 |-|-|-
 |name|The name of the group where images of the entity were also found.<br/><br/>The following are possible groups.<ul><li>CelebRecognitionAnnotations &mdash; Similar to CelebrityAnnotations but provides a higher probability of an accurate match.</li><li>CelebrityAnnotations &mdash; Contains celebrities such as actors, politicians, athletes, and historical figures.</li></ul>|String
 |recognizedEntityRegions|The regions of the image that contain entities.|[RecognizedEntityRegion](#recognizedentityregion)[]
-  
 
 ## RecognizedEntityRegion  
 
@@ -379,7 +352,6 @@ Defines a region of the image where an entity was found and a list of entities t
 |matchingEntities|A list of entities that Bing believes match the entity found in the region. The entities are in descending order of confidence (see the `matchConfidence` field of RecognizedEntity).|[RecognizedEntity](#recognizedentity)[]
 |region|A region of the image that contains an entity.<br/><br/> The values of the rectangle are relative to the width and height of the original image and are in the range 0.0 through 1.0.<br/><br/> For example, if the image is 300x200 and the region's top, left corner is at point (10, 20) and the bottom, right corner is at point (290, 150), then the normalized rectangle is:<br/><br/>Left = 0.0333333333333333<br/>Top = 0.1<br/>Right = 0.9666666666666667<br/>Bottom = 0.75<br/><br/>For people, the region represents the person's face.|[NormalizedRectangle](#normalizedrectangle)  
 
-  
 ## RelatedCollectionsModule  
 
 Defines a list of webpages that contain related images.  
@@ -388,7 +360,6 @@ Defines a list of webpages that contain related images.
 |-|-|-
 |value|A list of webpages that contain related images.|[ImageGallery](#imagegallery)[]
 
-  
 ## RelatedSearchesModule  
 
 Defines a list of related searches made by others.  
@@ -397,7 +368,6 @@ Defines a list of related searches made by others.
 |-|-|-
 |value|A list of related searches made by others.|[Query](#query)[]
 
-  
 ## Tag  
 
 Defines a characteristic of the content found in the image.  
@@ -405,8 +375,7 @@ Defines a characteristic of the content found in the image.
 |Element|Description|Type
 |-|-|-
 |name|The name of the characteristic. For example, cat, kitty, calico cat.|String
-  
-  
+
 ## Thumbnail  
 
 Defines the URL to a thumbnail of an image.  
@@ -423,7 +392,6 @@ Defines a video tile.
 |-|-|-
 |<a name="tile-image"></a>image|A URL to the image's thumbnail.|[Image](#image)  
 |<a name="tile-query"></a>query|A query that returns a Bing search results page with images of the subject. For example, the thumbnail is of a popular person if the category is Popular People Searches. The query would return a Bing search results page with more images of that person.|[Query](#query)  
-  
   
 ## TrendingImages  
 
