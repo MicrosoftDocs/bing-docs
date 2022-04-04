@@ -3,23 +3,18 @@ title: Image Search API response structure
 titleSuffix: Bing Search Services
 description: Learn how to handle the image search response.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 04/04/2022
+ms.author: v-apunnamara
 ---
 
 # Handle the image search response
 
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
-
-
 When you send a request to Image Search API, it returns an [ImageAnswer](../reference/response-objects.md#imageanswer) object in the response body. The object may include one or more of the following fields:
-
 
 ```json
 {
@@ -56,6 +51,7 @@ But if an error occurs, the response body contains an [ErrorResponse](../referen
 For information about the `nextOffset` and `totalEstimatedMatches` fields, see [Paging image and video results](../../bing-web-search/page-results.md#paging-image-and-video-results).
 
 > [!NOTE]
+>
 > - Images must be displayed in the order provided in the response.
 > - Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
 
@@ -110,15 +106,13 @@ If the user clicks on the thumbnail, you could:
 
 Regardless, at some level, you should give the user the option of visiting the webpage where Bing found the image.
 
-
 ## Getting insights about an image
 
 Each image includes an insights token (see the `imageInsightsToken` field) that you can use to get information about the image, such as a collection of related images, web pages that include the image, or a list of merchants where you can buy the product shown in the image. For information about how to get insights, see [Visual Search API](../../bing-visual-search/overview.md).
 
-
 ## Adding badges to the image
 
-Each image includes an `insightsMetadata` field, which contains a count of the number of websites where you can shop or perform other actions related to the image. For example, if the image shows an apple pie, the metadata includes a count of the number of websites where you can buy an apple pie. To indicate the number of offers in your UX, include badging such as a shopping cart icon that contains the count. When the user clicks on the icon, use the token in `imageInisghtsToken` to get the list of websites from [Visual Search API](../../bing-visual-search/overview.md).
+Each image includes an `insightsMetadata` field, which contains a count of the number of websites where you can shop or perform other actions related to the image. For example, if the image shows an apple pie, the metadata includes a count of the number of websites where you can buy an apple pie. To indicate the number of offers in your UX, include badging such as a shopping cart icon that contains the count. When the user clicks on the icon, use the token in `imageInsightsToken` to get the list of websites from [Visual Search API](../../bing-visual-search/overview.md).
 
 The following list identifies the types of metadata counts that an image may include.
 
@@ -127,7 +121,6 @@ The following list identifies the types of metadata counts that an image may inc
 - `availableSizesCount` &mdash; The number of different sizes (width/height) of the image that Bing found.
 - `shoppingSourcesCount` &mdash; The number of websites that sell the products seen in the image.
 
-
 ## Using expanded queries
 
 Most responses include the `queryExpansions` field, which contains a list of queries that expand the user’s query string in an effort to narrow the search results. This may help the user focus more on the content that they’re really interested in. For example, the query that returned the following response fragment was *black cocktail dress**. Here's the list of expanded queries that Bing returned (the bolded words are the ones that Bing added):
@@ -135,7 +128,7 @@ Most responses include the `queryExpansions` field, which contains a list of que
 - Black **Lace** Cocktail Dress
 - **Little** Black Cocktail Dress
 - Black **Halter** Cocktail Dress
- 
+
 ```json
   "queryExpansions": [
     {
@@ -168,7 +161,6 @@ Most responses include the `queryExpansions` field, which contains a list of que
 ```
 
 The `queryExpansions` field contains a list of [Query](../reference/response-objects.md#query) objects. The `text` field contains the expanded query that you display in your UX (the `displayText` field contains the expansion term). Make `text` clickable by using the URL in `webSearchUrl` or `searchLink`. Use `webSearchUrl` to send the user to Bing's Image search results. If you provide your own results page experience, use `searchLink` to get new image search results using the expanded query string.
-
 
 ## Using pivot queries
 
@@ -258,10 +250,9 @@ If Bing can segment the user’s query, the response includes the `pivotSuggesti
   ]
 ```
 
-The `pivotSuggestions` field contains the list of segments (pivots) that the original query was broken into. For each pivot, the response contains a list of [Query](../reference/response-objects.md#query) objects that contain suggested queries. The `text` field contains the suggested query. The `displayText` field contains the term that replaces the pivot in the original query. 
+The `pivotSuggestions` field contains the list of segments (pivots) that the original query was broken into. For each pivot, the response contains a list of [Query](../reference/response-objects.md#query) objects that contain suggested queries. The `text` field contains the suggested query. The `displayText` field contains the term that replaces the pivot in the original query.
 
 Make `text` clickable by using the URL in `webSearchUrl` or `searchLink`. Use `webSearchUrl` to send the user to Bing's Image search results. If you provide your own results page experience, use `searchLink` to get new image search results using the pivot query string.
-
 
 ## Related searches answer
 
@@ -287,10 +278,8 @@ Use the `displayText` query string and the `webSearchUrl` URL to create a hyperl
 
 For information about how to handle the highlighting markers in `displayText`, see [Hit Highlighting](../../bing-web-search/hit-highlighting.md).
 
-
 ## Next steps
 
 - Learn how to [get trending images](trending-images.md).
 - Learn how to [get insights about an image](image-insights.md) such as shopping sources or related images.
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
-
