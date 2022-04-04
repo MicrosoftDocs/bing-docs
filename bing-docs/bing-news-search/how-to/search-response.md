@@ -3,21 +3,16 @@ title: "Sending queries to the Bing News Search API"
 titleSuffix: Bing Search Services
 description: The Bing News Search API enables you to search the web for relevant news items. Use this article to learn more about sending search queries to the API.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 04/04/2022
+ms.author: v-apunnamara
 ---
 
 # Handling the news search response
-
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
-
 
 When you send a request to News Search API, it returns a [NewsAnswer](../reference/response-objects.md#newsanswer) object in the response body. The object may include one or more of the following fields:
 
@@ -115,11 +110,9 @@ Note that in some cases, the [Video](../reference/response-objects.md#video) obj
       },
 ```
 
-
 ## Next steps
 
 - Learn how to [get trending news](trending-news.md).
 - Learn how to [get news by news category](category-news.md).
 - Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing News Search.  
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
-
