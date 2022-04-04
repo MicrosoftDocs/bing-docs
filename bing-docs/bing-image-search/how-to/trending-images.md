@@ -3,36 +3,32 @@ title: Get trending images with the Bing Trending Images API
 titleSuffix: Bing Search Services
 description: Search for today's trending images from the web with the Bing Trending Images API.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 04/04/2022
+ms.author: v-apunnamara
 ---
 
 # Get images that are trending
-
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
 
 If you’re building a user experience that shows images that are trending on social media in different categories, use this API. This API offers an experience similar to bing.com/images/trending.
 
 Calling the API is easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 
-```
+```curl
 https://api.bing.microsoft.com/v7.0/images/trending
 ```
 
-Here's a cURL example that shows you how to call the endpoint using your subscription key. 
+Here's a cURL example that shows you how to call the endpoint using your subscription key.
 
 ```curl
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/trending
 ```
 
 For a list of markets that support Trending Images, see [Market codes](../reference/market-codes.md#trending-image-api-markets).  
-
 
 ## Request and response headers
 
@@ -51,7 +47,7 @@ Here's a cURL example that includes these headers.
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/v7.0/images/trending
 ```
 
-Bing returns a couple of headers you should capture. 
+Bing returns a couple of headers you should capture.
 
 - BingAPIs-TraceId &mdash; ID that identifies the request in the log file.
 - X-MSEdge-ClientID &mdash; The ID that you need to pass in subsequent request to provide continuity of experience.
@@ -65,7 +61,6 @@ Here's a cURL call that returns the response headers. If you want to remove the 
 curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/trending
 ```
 
-
 ## Query parameters
 
 The only query parameter that you should pass is the *mkt* parameter. Set to the market where the results come from, which is typically the market where the user is making the request from.
@@ -77,7 +72,6 @@ Here's a cURL example that includes the *mkt* query parameter.
 ```curl
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/trending?mkt=en-us
 ```
-
 
 ## Handling the response
 
@@ -114,7 +108,7 @@ When you send a request to Trending Images API, it returns a [TrendingImages](..
 Each [Category](../reference/response-objects.md#category) object includes the following fields:
 
 - `title` &mdash; The name of the category. Use the name to group the images in your UX.
-- `tiles` &mdash; A list of [Tile](../reference/response-objects.md#tile) objects. 
+- `tiles` &mdash; A list of [Tile](../reference/response-objects.md#tile) objects.
 
 Each tile contains a trending image and options for getting related images. The following example shows what a tile looks like in the JSON response.
 
@@ -151,7 +145,6 @@ The following cURL example shows how to call Image Search API to get the related
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/search?q=Red-knobbed+hornbill&id=467A365F7E182F8875EB3379B3B1E8DB4FB2C464&mkt=en-us
 ```
 
-
 ## Next steps
 
 - Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing Image Search.  
@@ -159,4 +152,3 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 - Learn about [searching the web for images](get-images.md).
 - Review [Image Search API v7 reference](../reference/endpoints.md) documentation.  
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
-
