@@ -2,19 +2,16 @@
 title: Bing Video Search APIs v7 response objects
 titleSuffix: Bing Services
 description: Describes the response objects that Bing Video Search APIs may return in the JSON response.
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: reference
-ms.date: 07/15/2017
-ms.author: scottwhi
+ms.date: 04/04/2022
+ms.author: v-apunnamara
 ---
 
 # Video Search APIs v7 response objects
-
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
 
 For a list of possible objects, see **In this article** in the right pane.
 
@@ -27,9 +24,9 @@ The top-level object in the response depends on the endpoint you call. If you ca
 
 Defines the category of trending videos.  
   
-|Name|Value|Type 
+|Name|Value|Type
 |-|-|-
-|<a name="category-subcategories"></a>subcategories|A list of subcategories. For example, Top Music Videos.|[Subcategory](#subcategory)[] 
+|<a name="category-subcategories"></a>subcategories|A list of subcategories. For example, Top Music Videos.|[Subcategory](#subcategory)[]
 |<a name="category-title"></a>title|The name of the video category. For example, Music Videos.|String  
 
 ## Error  
