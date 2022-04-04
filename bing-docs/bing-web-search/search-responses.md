@@ -3,20 +3,16 @@ title: Web Search API response structure and answer types
 titleSuffix: Bing Search Services
 description: Bing Web Search API returns a SearchResponse object in the response body, which contains the search results.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 04/04/2022
+ms.author: v-apunnamara
 ---
 
-# Handling the web search response 
-
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
-
+# Handling the web search response
 
 When you send a request to Web Search API, it returns a [SearchResponse](reference/response-objects.md#searchresponse) object in the response body. The object may include one or more of the following answer types:
 
@@ -98,7 +94,7 @@ The webpage may include a few other fields that you should account for like deep
 
 ### Deep links
 
-Deep links are related webpages that Bing found on the webpage’s website. The **Webpage** object in this context includes only the name and URL fields and may include the snippet field. 
+Deep links are related webpages that Bing found on the webpage’s website. The **Webpage** object in this context includes only the name and URL fields and may include the snippet field.
 
 ```json
         "deepLinks": [
@@ -146,18 +142,17 @@ Deep links can also have nested deep links.
           },
 ```
 
-
 ### Malware notice
 
 If Bing determines that a webpage may cause a potential issue for the user if they click the link, Bing provides a notice that you should display next to the webpage's link. Potential issues might be that the page contains malware, is a phishing site, or is not recommended for purchasing pharmaceuticals. 
 
-The following image shows how Bing might display the notice for the query, _canada drugs_. Bing displays the warning when the user hovers over the webpage in the search results page, tabs to it, or touches the webpage on a touch device. 
+The following image shows how Bing might display the notice for the query, _canada drugs_. Bing displays the warning when the user hovers over the webpage in the search results page, tabs to it, or touches the webpage on a touch device.
 
-![Malware notice](media/bing-web-api/malware-notice.png) 
+![Malware notice](media/bing-web-api/malware-notice.png)
 
 Bing does not let the user click the link or deep links in the search results page. However, the warning does include a link that the user can click to navigate to the webpage if they choose to.
 
-The following example shows what the notice looks like in the JSON response. 
+The following example shows what the notice looks like in the JSON response.
 
 ```json
         "malware": {
@@ -169,7 +164,6 @@ The following example shows what the notice looks like in the JSON response.
 ```
 
 If you follow Bing's approach of disabling the webpage's link in the search results, then you'd use the webpage's link in the notice's "visit anyway" link.
-
 
 ### Contractual rules
 
@@ -192,7 +186,6 @@ If a webpage requires attribution, the **Webpage** object includes the `contract
 ```
 
 To learn more about attribution, see [Data attribution](data-attribution.md).
-
 
 ## Images answer
 
@@ -233,7 +226,7 @@ The [images](../bing-image-search/reference/response-objects.md#imageanswer) ans
 ```
 
 The `contentUrl` is the image's URL, the `hostPageUrl` is the URL of the webpage that includes the image, and `thumbnailUrl` is the URL to a thumbnail version of the image in `contentUrl`.
- 
+
 Depending on the user's device, you'd typically display a subset of the thumbnails, with an option for the user to see the remaining images.
 
 You can also expand the thumbnail as the user hovers the cursor over it. Be sure to attribute the image if you expand it. For example, by extracting the host from `hostPageDisplayUrl` and displaying it below the image. For information about resizing the thumbnail, see [Resizing and cropping thumbnails](resize-and-crop-thumbnails.md).
@@ -241,7 +234,6 @@ You can also expand the thumbnail as the user hovers the cursor over it. Be sure
 If the user clicks the thumbnail, use `webSearchUrl` to take the user to Bing's search results page for images, which contains a collage of the images.
 
 For details about the image answer and images, see [Image Search API](../bing-image-search/overview.md).
-
 
 ## Videos answer
 
