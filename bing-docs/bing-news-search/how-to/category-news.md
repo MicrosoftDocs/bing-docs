@@ -3,24 +3,20 @@ title: Get news by news categories
 titleSuffix: Bing Search Services
 description: Learn how to get news by news category.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: conceptual
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: v-apunnamara
 ---
 
 # Get news by news categories
 
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
-
 If you’re building a news page and want to get headline news or category-specific news, such sports or world news, call News Category API.
 
-To get headline news, call the API without including the [cateogry](../reference/query-parameters.md#category) query parameter.
+To get headline news, call the API without including the [category](../reference/query-parameters.md#category) query parameter.
 
 ```curl
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news?mkt=en-us
@@ -33,7 +29,6 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 ```
 
 For a list of possible news categories that you may specify, see [News categories by market](../reference/query-parameters.md#news-categories-by-market).
-
 
 ## Request and response headers
 
@@ -52,7 +47,7 @@ Here's a cURL example that includes these headers.
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/v7.0/news?mkt=en-us
 ```
 
-Bing returns a couple of headers you should capture. 
+Bing returns a couple of headers you should capture.
 
 - BingAPIs-TraceId &mdash; ID that identifies the request in the log file.
 - X-MSEdge-ClientID &mdash; The ID that you need to pass in subsequent request to provide continuity of experience.
@@ -66,12 +61,11 @@ Here's a cURL call that returns the response headers. If you want to remove the 
 curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news?mkt=en-us
 ```
 
-
 ## Query parameters
 
 The API supports a number of query parameters that you can pass in your request. Here's a list of the ones you're most likely to use.
 
-- *category* &mdash; Optional. Used to specify the news category to get news from. For a list of possible news categories that you may specify, see [News categories by market](../reference/query-parameters.md#news-categories-by-market). If not specified, the API returns up to 10 headline news articles. 
+- *category* &mdash; Optional. Used to specify the news category to get news from. For a list of possible news categories that you may specify, see [News categories by market](../reference/query-parameters.md#news-categories-by-market). If not specified, the API returns up to 10 headline news articles.
 - *mkt* &mdash; Used to specify the market where the results come from, which is typically the market where the user is making the request from. For a list of markets that this API supports, see [News Category API markets](../reference/market-codes.md#news-category-api-markets).
 
 To learn more about these parameters, see [Query parameters](../reference/query-parameters.md).
@@ -81,7 +75,6 @@ Here's a cURL example that includes these query parameters.
 ```curl
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news?mkt=en-us&category=sports
 ```
-
 
 ## What the response looks like
 
@@ -127,7 +120,6 @@ Notice that the [NewsAnswer](../reference/response-objects.md#newsanswer) object
 
 [!INCLUDE [bing-url-note](../../../includes/bing-url-note.md)]
 
-
 ## Next steps
 
 - Learn about the [response](search-response.md) that Bing returns.
@@ -136,5 +128,3 @@ Notice that the [NewsAnswer](../reference/response-objects.md#newsanswer) object
 - Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing News Search.  
 - Learn what happens if you don't stay within your queries per second (QPS) limit. Hint: your requests get [throttled](../../bing-web-search/throttling-requests.md).
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
-
-
