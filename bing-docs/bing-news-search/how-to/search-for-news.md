@@ -5,24 +5,20 @@ description: Learn how to send search queries for general news, trending topics,
 services: bing-search-services
 author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: conceptual
-ms.date: 11/15/2021
+ms.date: 04/04/2022
 ms.author: v-apunnamara
 ---
 
 # Search the web for news
 
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
-
 Use Bing News Search API to search the Web for news that's relevant to the user's search query.
 
 It's easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 
-```
+```curl
 https://api.bing.microsoft.com/v7.0/news/search
 ```
 
@@ -31,7 +27,6 @@ Here's a cURL example that shows you how to call the endpoint using your subscri
 ```curl
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news/search?q=mt+rainier
 ```
-
 
 ## Request and response headers
 
@@ -50,7 +45,7 @@ Here's a cURL example that includes these headers.
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/v7.0/news/search?q=mt+rainier
 ```
 
-Bing returns a couple of headers you should capture. 
+Bing returns a couple of headers you should capture.
 
 - BingAPIs-TraceId &mdash; ID that identifies the request in the log file.
 - X-MSEdge-ClientID &mdash; The ID that you need to pass in subsequent request to provide continuity of experience.
@@ -63,7 +58,6 @@ Here's a cURL call that returns the response headers. If you want to remove the 
 ```curl
 curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news/search?q=mt+rainier
 ```
-
 
 ## Query parameters
 
@@ -87,7 +81,6 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 ### Control the freshness of the articles
 
 If you want to limit the age of the articles are that Bing returns, check out the [freshness](../reference/query-parameters.md) query parameter. For example, you can request that Bing return only articles that it discovered within the last day, week, or month. The [NewsArticle](../reference/response-objects.md#newsarticle) object's `datePublished` field contains the date that Bing discovered the article.
-
 
 ### Get news from a specific site
 
@@ -119,8 +112,8 @@ By default, the API orders the list of news articles by relevance with the most 
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news/search?q=sailing&mkt=en-us&sortBy=date
 ```
 
-The response’s `sort` field lists the sort options and indicates which option the request used (see the `isSelected` field). In the following example, the request used relevance to sort the articles. 
- 
+The response’s `sort` field lists the sort options and indicates which option the request used (see the `isSelected` field). In the following example, the request used relevance to sort the articles.
+
 ```json
   "sort": [
     {
@@ -154,7 +147,6 @@ If the article includes an image, the image is a thumbnail of the article’s or
 
 To include the original image in the response, in addition to the thumbnail, include the *originalImg* query parameter and set it to true (the default is false).
 
-
 ```curl
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news/search?q=sailing&mkt=en-us&originalImg=true
 ```
@@ -172,7 +164,6 @@ Now the response includes both the `contentUrl` (link to the original image) and
       },
  ```
 
-
 ## Next steps
 
 - Learn about the [response](search-response.md) that Bing returns.
@@ -181,4 +172,3 @@ Now the response includes both the `contentUrl` (link to the original image) and
 - Learn how to [get news by category](category-news.md) such as sports or world.
 - Learn what happens if you don't stay within your queries per second (QPS) limit. Hint: your requests get [throttled](../../bing-web-search/throttling-requests.md).
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
-
