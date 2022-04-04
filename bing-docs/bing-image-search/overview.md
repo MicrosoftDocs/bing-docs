@@ -3,31 +3,26 @@ title: What is the Bing Image Search API?
 titleSuffix: Bing Search Services
 description: The Bing Image Search API enables you to use Bing's cognitive image search capabilities in your application. By sending user search queries with the API, you can get and display relevant and high-quality images similar to Bing Images.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: overview
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 04/04/2022
+ms.author: v-apunnamara
 ---
 
 # What is the Bing Image Search API?
 
 Bing Image Search API lets your users find images on the world-wide-web. If you're looking to build an experience similar to [bing.com/images](https://www.bing.com/images), this is the API to use.
 
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
-
-
 ## Get started
 
-To get started using the API, pick the subscription you want from <a href="https://aka.ms/bingsearchapipricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call. 
+To get started using the API, pick the subscription you want from [Bing API Pricing](https://aka.ms/bingsearchapipricing). After getting your subscription key, you're all set to make your first call.
 
 You can easily call the API by sending a native HTTP GET request or by using the Image Search SDK. For examples to help you get up and running quickly for either option, see [Quickstarts](quickstarts/quickstarts.md).
 
-
-## Features  
+## Features
 
 Bing provides the following Image APIs:
 
@@ -50,7 +45,6 @@ By default, Image Search API returns images that the user requested. But if you 
 
 Bing also provides API metrics, which you can use to inform your strategic decisions. Quickly retrieve statistics such as your top queries, call volume, market distribution, response code summary, and many more. For details, see [Bing Web Statistics](../bing-web-search/bing-web-stats.md).
 
-
 ### Search or search-like experience
 
 Bing Image Search API may only be used as a result of a direct user query or search, or as a result of an action within an app or experience that logically can be interpreted as a user’s search request. For illustration purposes, the following are some examples of acceptable search or search-like experiences.
@@ -62,7 +56,6 @@ Bing Image Search API may only be used as a result of a direct user query or sea
 
 If you are not sure if your experience can be considered a search-like experience, check with Microsoft.
 
-
 ## Next steps
 
 - Learn about other APIs in the [family of Bing Search APIs](../bing-web-search/bing-api-comparison.md).
@@ -70,4 +63,3 @@ If you are not sure if your experience can be considered a search-like experienc
 - Learn about [searching the web for images](how-to/get-images.md).
 - Learn about what's in the [JSON response](how-to/search-response.md).
 - Review [Image Search API v7 reference](reference/endpoints.md) documentation.  
-
