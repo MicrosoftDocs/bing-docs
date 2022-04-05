@@ -8,7 +8,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: overview
-ms.date: 04/04/2022
+ms.date: 04/05/2022
 ms.author: v-apunnamara
 ---
 # What is the Bing Video Search API?
@@ -17,7 +17,7 @@ The Bing Video Search API makes it easy to add video searching capabilities to y
 
 ## Get started
 
-To get started using the API, pick the subscription you want from [Bing API Pricing](https://aka.ms/bingsearchapipricing). After getting your subscription key, you're all set to make your first call.
+To get started using the API, pick the subscription you want from <a href="https://aka.ms/bingsearchapipricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call.
 
 You can easily call the API by sending a native HTTP GET request or by using the Video Search SDK. For examples to help you get up and running quickly for either option, see [Quickstarts](quickstarts/quickstarts.md).
 

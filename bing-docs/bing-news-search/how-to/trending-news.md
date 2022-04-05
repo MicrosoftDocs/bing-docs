@@ -8,13 +8,13 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: conceptual
-ms.date: 04/04/2022
+ms.date: 04/05/2022
 ms.author: v-apunnamara
 ---
 
 # Get news that's trending on social networks
 
-If you’re building a news-only search results page and you want to get news that’s trending on social media, call this API.
+If you’re building a news-only search results page and you want to get news that's trending on social media, call this API.
 
 Calling the API is easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 

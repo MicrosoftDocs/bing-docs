@@ -8,16 +8,16 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: overview
-ms.date: 04/04/2022
+ms.date: 04/05/2022
 ms.author: v-apunnamara
 ---
 
 # What is Bing Custom Search?
 
 > [!NOTE]
-> This documentation is for Bing Search Services. If you're looking for the Cognitive Services version of the documentation, see [Cognitive Services Bing Custom Search](/azure/cognitive-services/Bing-Custom-Search/overview).
+> This documentation is for Bing Search Services. If you're looking for the Cognitive Services version of the documentation, see <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/Bing-Custom-Search/overview">Cognitive Services Bing Custom Search</a>.
 
-Bing Custom Search lets you create a tailored, ad-free search experiences for topics that your users care about. You specify the domains and webpages that Bing searches. You can also pin, boost, and demote specific content to create a custom view of the web that helps your users quickly find relevant content. To create your custom view, use the [Bing Custom Search portal](https://customsearch.ai).
+Bing Custom Search lets you create a tailored, ad-free search experiences for topics that your users care about. You specify the domains and webpages that Bing searches. You can also pin, boost, and demote specific content to create a custom view of the web that helps your users quickly find relevant content. To create your custom view, use the <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/Bing-Custom-Search/overview">Cognitive Services Bing Custom Search</a>.
 
 After defining your view, integrate it into your website or application by calling Bing Custom Search API. As an option, you can configure a searchable user interface that you render within your website or application.
 
@@ -25,7 +25,7 @@ After defining your view, integrate it into your website or application by calli
 
 ## Get started
 
-To get started using the API, pick the subscription you want from [Bing API Pricing](https://aka.ms/bingsearchapipricing)</a>. After getting your subscription key, you're all set to make your first call.
+To get started using the API, pick the subscription you want from <a href="https://aka.ms/bingsearchapipricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call.
 
 You can easily call the API by sending a native HTTP GET request or by using the Custom Search SDK. For examples to help you get up and running quickly for either option, see [Quickstarts](quickstarts/quickstarts.md).
 

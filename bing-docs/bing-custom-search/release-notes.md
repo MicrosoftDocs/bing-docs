@@ -8,7 +8,7 @@ ms.topic: "overview"
 author: alekhyasasi
 manager: ehansen
 ms.author: v-apunnamara
-ms.date: 04/04/2022
+ms.date: 04/05/2022
 ---
 
 # Release notes for Custom Web Search API
@@ -17,7 +17,7 @@ See the following sections for information about changes that were included with
 
 ## October 30, 2020
 
-Initial release of this version of Bing Custom Web Search API. This API replaces the same API hosted by [Azure Cognitive Services](/azure/cognitive-services/bing-custom-search/), which is being phased out.
+Initial release of this version of Bing Custom Web Search API. This API replaces the same API hosted by <a href="https://docs.microsoft.com/en-us/azure/cognitive-services/bing-custom-search/" target="_blank">Azure Cognitive Services</a>, which is being phased out.
 
 ### New to Bing Search?
 

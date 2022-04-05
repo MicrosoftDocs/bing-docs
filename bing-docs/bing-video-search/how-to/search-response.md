@@ -101,7 +101,7 @@ For information about resizing the thumbnail, see [Resizing and cropping thumbna
 
 You should display the following information with each thumbnail:
 
-- `duration` &mdash; The video's length. Convert the [duration notion](https://en.wikipedia.org/wiki/ISO_8601#Durations) to human-readable form. For example, convert PT3M12S to 3:12.
+- `duration` &mdash; The video's length. Convert the <a href="https://en.wikipedia.org/wiki/ISO_8601#Durations" target="_blank">duration notion</a> to human-readable form. For example, convert PT3M12S to 3:12.
 - `name` &mdash; The video's title.
 - `datePublished` &mdash; The date that Bing discovered the video. Use the date portion of the date time stamp.
 - `publisher` &mdash; The publisher that's hosting the video.
