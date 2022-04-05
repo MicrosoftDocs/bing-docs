@@ -3,22 +3,17 @@ title: What is the Bing Image Search API?
 titleSuffix: Bing Search Services
 description: The Bing Image Search API enables you to use Bing's cognitive image search capabilities in your application. By sending user search queries with the API, you can get and display relevant and high-quality images similar to Bing Images.
 services: bing-search-services
-author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-image-search
-ms.topic: overview
-ms.date: 07/15/2020
-ms.author: scottwhi
+author: alekhyasasi
+ms.date: 04/05/2022
+ms.author: v-apunnamara
 ---
 
 # What is the Bing Image Search API?
 
 Bing Image Search API lets your users find images on the world-wide-web. If you're looking to build an experience similar to [bing.com/images](https://www.bing.com/images), this is the API to use.
-
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
-
 
 ## Get started
 
