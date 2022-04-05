@@ -3,20 +3,16 @@ title: Web Search API response structure and answer types
 titleSuffix: Bing Search Services
 description: Bing Web Search API returns a SearchResponse object in the response body, which contains the search results.
 services: bing-search-services
-author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+author: alekhyasasi
+ms.date: 04/05/2022
+ms.author: v-apunnamara
 ---
 
 # Handling the web search response 
-
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
-
 
 When you send a request to Web Search API, it returns a [SearchResponse](reference/response-objects.md#searchresponse) object in the response body. The object may include one or more of the following answer types:
 

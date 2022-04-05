@@ -3,14 +3,13 @@ title: What is the Bing Custom Search API?
 titleSuffix: Bing Search Services
 description: The Bing Custom Search enables you to create tailored search experiences for topics that you care about.
 services: bing-search-services
-author: swhite-msft
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: overview
-ms.date: 07/15/2020
-ms.author: scottwhi
+author: alekhyasasi
+ms.date: 04/05/2022
+ms.author: v-apunnamara
 ---
 
 # What is Bing Custom Search?
@@ -23,10 +22,6 @@ Bing Custom Search lets you create a tailored, ad-free search experiences for to
 After defining your view, integrate it into your website or application by calling Bing Custom Search API. As an option, you can configure a searchable user interface that you render within your website or application.
 
 ![How Bing Custom Search works](media/BCS-Overview.png "How Bing Custom Search works.")
-
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
-
 
 ## Get started
 

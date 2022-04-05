@@ -3,19 +3,16 @@ title: Search the web for trending videos using the Bing Video Search API
 titleSuffix: Bing Search Services
 description: Learn how to use the Bing Video Search API to search the web for trending videos.
 services: bing-search-services
-author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+author: alekhyasasi
+ms.date: 04/05/2022
+ms.author: v-apunnamara
 ---
 
 # Get videos that are trending
-
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
 
 If you’re building a user experience that shows videos that are trending on social media in different categories, use this API. 
 
