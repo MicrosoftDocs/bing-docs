@@ -3,20 +3,16 @@ title: Search for news with the Bing News Search API
 titleSuffix: Bing Search Services
 description: Learn how to send search queries for general news, trending topics, and headlines.
 services: bing-search-services
-author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: conceptual
-ms.date: 11/15/2021
+author: alekhyasasi
+ms.date: 04/05/2022
 ms.author: v-apunnamara
 ---
 
 # Search the web for news
-
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
 
 Use Bing News Search API to search the Web for news that's relevant to the user's search query.
 

@@ -3,22 +3,18 @@ title: What is the Bing Web Search API?
 titleSuffix: Bing Search Services
 description: Bing Web Search API enables safe, ad-free, location-aware search results, surfacing relevant information from billions of web documents.
 services: bing-search-services
-author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: overview
-ms.date: 07/15/2020
-ms.author: scottwhi
+author: alekhyasasi
+ms.date: 04/05/2022
+ms.author: v-apunnamara
 ---
 
 # What is the Bing Web Search API?
 
 Bing Web Search API enables safe, ad-free, location-aware search results, surfacing relevant information from billions of web documents. Help your users find what they're looking for from the world-wide-web by harnessing Bing's ability to comb billions of webpages, images, videos, and news with a single API call.
-
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
-
 
 ## Get started
 

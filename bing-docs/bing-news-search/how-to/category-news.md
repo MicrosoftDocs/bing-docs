@@ -3,20 +3,16 @@ title: Get news by news categories
 titleSuffix: Bing Search Services
 description: Learn how to get news by news category.
 services: bing-search-services
-author: swhite-msft
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+author: alekhyasasi
+ms.date: 04/05/2022
+ms.author: v-apunnamara
 ---
 
 # Get news by news categories
-
-> [!NOTE]
-> To comply with the new EU Copyright Directive in France, the Bing Web, News, Video, Image and all Custom Search APIs must omit some content from certain EU News sources for French users. The removed content may include thumbnail images and videos, video previews, and snippets which accompany search results from these sources. As a consequence, the Bing APIs may serve fewer results with thumbnail images and videos, video previews, and snippets to French users.
 
 If you’re building a news page and want to get headline news or category-specific news, such sports or world news, call News Category API.
 
