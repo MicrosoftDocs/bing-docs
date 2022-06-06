@@ -107,8 +107,10 @@ The following are the Bing supported languages that you may specify in the [setL
   
 |Supported Languages|Language Code
 |-|-  
+|Africa|af
 |Arabic|ar
 |Basque|eu
+|Belgium|be
 |Bengali|bn
 |Bulgarian|bg
 |Catalan|ca
@@ -130,6 +132,7 @@ The following are the Bing supported languages that you may specify in the [setL
 |Hindi|hi
 |Hungarian|hu
 |Icelandic|is
+|Indonesia|id
 |Italian|it
 |Japanese|jp
 |Kannada|kn
@@ -139,6 +142,7 @@ The following are the Bing supported languages that you may specify in the [setL
 |Malay|ms
 |Malayalam|ml
 |Marathi|mr
+|Netherlands|nl
 |Norwegian (Bokmål)|nb
 |Polish​|pl
 |Portuguese (Brazil)​|pt-br
@@ -157,3 +161,56 @@ The following are the Bing supported languages that you may specify in the [setL
 |Turkish|tr
 |Ukrainian|uk
 |Vietnamese|vi
+| |ga
+| |gd
+| |fa
+| |el
+| |chr
+| |cy
+| |bs
+| |az
+| |am
+| |as
+| |ha
+| |hy
+| |ig
+| |ka
+| |kk
+| |km
+| |ku
+| |ky
+| |lb
+| |lo
+| |mi
+| |mk
+| |mn
+| |mt
+| |ne
+| |nn
+| |or
+| |pa
+| |rw
+| |sd
+| |si
+| |sq
+| |sw
+| |ta
+| |tg
+| |ti
+| |tk
+| |tn
+| |tt
+| |ug
+| |ur
+| |uz
+| |wo
+| |xh
+| |yo
+| |zu
+| |fil
+| |ty
+| |sm
+| |quz
+| |tzm
+| |ps
+| |prs
