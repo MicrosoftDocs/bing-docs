@@ -1,11 +1,10 @@
 - name: Bing News Search documentation
   expanded: true
   items:
-    - name: What is the Bing News Search API?
-      href: overview.md
-    - name: Compare the Bing Search APIs
-      href: ../bing-web-search/bing-api-comparison.md
-      maintainContext: true
+  - name: What is the Bing News Search API?
+    href: overview.md
+  - name: Compare the Bing Search APIs
+    href: ../bing-web-search/bing-api-comparison.md
 - name: Quickstarts
   items:
   - name: Quickstarts
@@ -52,15 +51,12 @@
     href: how-to/category-news.md
   - name: Handle hit highlighting
     href: ../bing-web-search/hit-highlighting.md
-    maintainContext: true
   - name: Page through search results
     href: ../bing-web-search/page-results.md
   - name: Resize and crop thumbnails
-    maintainContext: true
     href: ../bing-web-search/resize-and-crop-thumbnails.md
   - name: Get News Search API analytics
     href: ../bing-web-search/bing-web-stats.md
-    maintainContext: true
   - name: Upgrade from v5 to v7 of the API
     href: bing-news-upgrade-guide-v5-to-v7.md
 - name: Reference
@@ -82,9 +78,9 @@
   - name: SDKs (client libraries)
     items:
     - name: .NET
-      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingnewssearch?view=azure-dotnet
+      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/bing-news-search-readme?view=azure-dotnet
     - name: Java
-      href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingnewssearch?view=azure-java-stable
+      href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingnewssearch?view=azure-java-legacy
     - name: Python
       href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/newssearch?view=azure-python
     - name: Node.js
@@ -95,7 +91,6 @@
   items:
   - name: Create Bing Search Service resource
     href: ../bing-web-search/create-bing-search-service-resource.md
-    maintainContext: true
   - name: Pricing
     href: https://aka.ms/bingsearchapipricing
   - name: Terms of use
@@ -104,12 +99,9 @@
     items:
     - name: Create support ticket
       href: https://aka.ms/bingapisupport
-    - name: User Voice Forum
-      href: https://cognitive.uservoice.com/forums/555907-bing-web-search-api
     - name: Stack Overflow
       href: https://stackoverflow.com/search?q=bing+web+search
 - name: Use and display requirements
   href: ../bing-web-search/use-display-requirements.md
-  maintainContext: true
 - name: Release notes
   href: release-notes.md
