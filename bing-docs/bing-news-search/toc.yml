@@ -81,8 +81,8 @@
     items:
     - name: .NET
       href: /dotnet/api/overview/azure/cognitiveservices/bing-news-search-readme?view=azure-dotnet&preserve-view=true
-    - name: Java&preserve-view=true
-      href: /java/api/overview/azure/cognitiveservices/client/bingnewssearch?view=azure-java-legacy
+    - name: Java
+      href: /java/api/overview/azure/cognitiveservices/client/bingnewssearch?view=azure-java-legacy&preserve-view=true
     - name: Python
       href: /python/api/overview/azure/cognitiveservices/newssearch?view=azure-python&preserve-view=true
     - name: Node.js
