@@ -12,6 +12,7 @@
     href: how-to/quick-start.md
   - name: Quickstarts
     href: quickstarts/quickstarts.md
+    items:
     - name: REST API
       items:
       - name: C#
