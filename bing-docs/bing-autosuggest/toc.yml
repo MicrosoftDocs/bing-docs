@@ -1,12 +1,14 @@
 - name: Bing Autosuggest documentation
-  # expanded: true
+  href: index.yml
+- name: Overview
   items:
   - name: What is Bing Autosuggest?
     href: overview.md
+    expanded: true
   - name: Compare the Bing Search APIs
     href: ../bing-web-search/bing-api-comparison.md
 - name: Quickstarts
-  # expanded: true
+  expanded: true
   items:
   - name: Quickstarts
     href: quickstarts/quickstarts.md
@@ -63,13 +65,13 @@
   - name: SDKs
     items:
     - name: .NET
-      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-dotnet
+      href: /dotnet/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-dotnet
     - name: Java
-      href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-java-stable
+      href: /java/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-java-stable
     - name: Go
       href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/autosuggest
     - name: Node.js
-      href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-autosuggest/?view=azure-node-latest
+      href: /javascript/api/@azure/cognitiveservices-autosuggest/?view=azure-node-latest
 - name: Resources
   items:
   - name: Create Bing Search Service resource
