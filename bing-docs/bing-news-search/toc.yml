@@ -1,8 +1,10 @@
 - name: Bing News Search documentation
-  expanded: true
+  href: index.yml
+- name: Overview
   items:
   - name: What is the Bing News Search API?
     href: overview.md
+    expanded: true
   - name: Compare the Bing Search APIs
     href: ../bing-web-search/bing-api-comparison.md
 - name: Quickstarts
@@ -78,13 +80,13 @@
   - name: SDKs (client libraries)
     items:
     - name: .NET
-      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/bing-news-search-readme?view=azure-dotnet
+      href: /dotnet/api/overview/azure/cognitiveservices/bing-news-search-readme?view=azure-dotnet
     - name: Java
-      href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingnewssearch?view=azure-java-legacy
+      href: /java/api/overview/azure/cognitiveservices/client/bingnewssearch?view=azure-java-legacy
     - name: Python
-      href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/newssearch?view=azure-python
+      href: /python/api/overview/azure/cognitiveservices/newssearch?view=azure-python
     - name: Node.js
-      href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-newssearch/?view=azure-node-latest
+      href: /javascript/api/@azure/cognitiveservices-newssearch/?view=azure-node-latest
     - name: Go
       href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/newssearch
 - name: Resources
