@@ -25,11 +25,11 @@
     - name: Ruby
       href: quickstarts/rest/ruby.md
   - name: SDK (client library)
-      items:
-      - name: C#
-        href: quickstarts/sdk/autosuggest-client-library-csharp.md
-      - name: Go
-        href: quickstarts/sdk/autosuggest-client-library-go.md
+    items:
+    - name: C#
+      href: quickstarts/sdk/autosuggest-client-library-csharp.md
+    - name: Go
+      href: quickstarts/sdk/autosuggest-client-library-go.md
 - name: Tutorials
   items:
   - name: Single-page web app
