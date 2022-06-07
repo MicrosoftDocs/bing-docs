@@ -1,8 +1,10 @@
 - name: Bing Video Search documentation
-  expanded: true
+  href: index.yml
+- name: Overview
   items:
   - name: What is the Bing Video Search API?
     href: overview.md
+    expanded: true
   - name: Compare the Bing Search APIs
     href: ../bing-web-search/bing-api-comparison.md
 - name: Quickstarts
