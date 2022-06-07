@@ -1,5 +1,6 @@
 - name: Bing Spell Check documentation
-  # expanded: true
+  href: index.yml
+- name: Overview
   items:
   - name: What is the Bing Spell Check API?
     href: overview.md
@@ -10,7 +11,7 @@
   - name: Quickstarts
     href: quickstarts/quickstarts.md
   - name: REST API
-    # expanded: true
+    expanded: true
     items:
     - name: Using C#
       href: quickstarts/rest/csharp.md
@@ -63,15 +64,15 @@
   - name: SDKs (client libraries)
     items:
     - name: .NET
-      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/bing-spell-check-readme?view=azure-dotnet
+      href: /dotnet/api/overview/azure/cognitiveservices/bing-spell-check-readme?view=azure-dotnet
     - name: Node.js
-      href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-spellcheck/?view=azure-node-latest
+      href: /javascript/api/@azure/cognitiveservices-spellcheck/?view=azure-node-latest
     - name: Python
-      href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/spellcheck?view=azure-python
+      href: /python/api/overview/azure/cognitiveservices/spellcheck?view=azure-python
     - name: Go
       href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/spellcheck
     - name: Java
-      href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingspellcheck?view=azure-java-legacy
+      href: /java/api/overview/azure/cognitiveservices/client/bingspellcheck?view=azure-java-legacy
 - name: Resources
   items:
   - name: Create Bing Search Service resource
