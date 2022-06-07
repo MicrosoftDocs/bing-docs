@@ -5,24 +5,23 @@
       href: overview.md
     - name: Compare the Bing Search APIs
       href: ../bing-web-search/bing-api-comparison.md
-      maintainContext: true
 - name: Quickstarts
   expanded: true
   items:
-    - name: Create a custom search instance
-      href: how-to/quick-start.md
-    - name: Quickstarts
-      href: quickstarts/quickstarts.md
+  - name: Create a custom search instance
+    href: how-to/quick-start.md
+  - name: Quickstarts
+    href: quickstarts/quickstarts.md
     - name: REST API
       items:
-        - name: C#
-          href: quickstarts/rest/csharp.md
-        - name: Java
-          href: quickstarts/rest/java.md
-        - name: Node.js
-          href: quickstarts/rest/nodejs.md
-        - name: Python
-          href: quickstarts/rest/python.md
+      - name: C#
+        href: quickstarts/rest/csharp.md
+      - name: Java
+        href: quickstarts/rest/java.md
+      - name: Node.js
+        href: quickstarts/rest/nodejs.md
+      - name: Python
+        href: quickstarts/rest/python.md
     - name: SDK (client library)
       items:
       - name: C#
@@ -33,35 +32,32 @@
         href: quickstarts/sdk/custom-search-client-library-python.md
 - name: Tutorials
   items:
-    - name: Build a Custom Search web page
-      href: tutorial/custom-search-web-page.md
+  - name: Build a Custom Search web page
+    href: tutorial/custom-search-web-page.md
 - name: Samples
   href: samples.md
 - name: How-to guides
   items:
-    - name: Configure your custom search experience
-      href: how-to/define-your-custom-view.md
-    - name: Test your custom search instance
-      href: how-to/search-your-custom-view.md
-    - name: Configure and integrate a hosted UI
-      href: how-to/hosted-ui.md
-    - name: Share your custom search instance
-      href: how-to/share-your-custom-search.md
-    - name: Get images from instance
-      href: how-to/get-images-from-instance.md
-    - name: Get videos from instance
-      href: how-to/get-videos-from-instance.md
-    - name: Configure custom autosuggest experience
-      href: how-to/configure-custom-autosuggest.md
-    - name: Handle hit highlighting
-      href: ../bing-web-search/hit-highlighting.md
-      maintainContext: true
-    - name: Page through search results
-      href: ../bing-web-search/page-results.md
-      maintainContext: true
-    - name: Get Custom Search API analytics
-      href: ../bing-web-search/bing-web-stats.md
-      maintainContext: true
+  - name: Configure your custom search experience
+    href: how-to/define-your-custom-view.md
+  - name: Test your custom search instance
+    href: how-to/search-your-custom-view.md
+  - name: Configure and integrate a hosted UI
+    href: how-to/hosted-ui.md
+  - name: Share your custom search instance
+    href: how-to/share-your-custom-search.md
+  - name: Get images from instance
+    href: how-to/get-images-from-instance.md
+  - name: Get videos from instance
+    href: how-to/get-videos-from-instance.md
+  - name: Configure custom autosuggest experience
+    href: how-to/configure-custom-autosuggest.md
+  - name: Handle hit highlighting
+    href: ../bing-web-search/hit-highlighting.md
+  - name: Page through search results
+    href: ../bing-web-search/page-results.md
+  - name: Get Custom Search API analytics
+    href: ../bing-web-search/bing-web-stats.md
 - name: Reference
   items:
   - name: REST
@@ -81,20 +77,19 @@
   - name: SDKs (client libraries)
     items:
     - name: .NET
-      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingcustomsearch?view=azure-dotnet
+      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/bing-custom-search-readme?view=azure-dotnet?toc=/dotnet/api/toc.json&bc=/dotnet/api/breadcrumb/toc.json
     - name: Java
-      href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingcustomsearch?view=azure-java-stable
+      href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingcustomsearch?view=azure-java-stable?toc=/java/api/toc.json&bc=/java/api/breadcrumb/toc.json
     - name: Python
-      href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/customsearch?view=azure-python
+      href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/customsearch?view=azure-python?toc=/python/api/toc.json&bc=/python/api/breadcrumb/toc.json
     - name: Node.js
-      href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-customsearch/?view=azure-node-latest
+      href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-customsearch/?view=azure-node-latest?toc=/javascript/api/toc.json&bc=/javascript/api/breadcrumb/toc.json
     - name: Go
       href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/customsearch
 - name: Resources
   items:
   - name: Create Bing Search Service resource
     href: ../bing-web-search/create-bing-search-service-resource.md
-    maintainContext: true
   - name: Pricing
     href: https://aka.ms/bingsearchapipricing
   - name: Terms of use
@@ -103,12 +98,9 @@
     items:
     - name: Create support ticket
       href: https://aka.ms/bingapisupport
-    - name: User Voice Forum
-      href: https://cognitive.uservoice.com/forums/555907-bing-web-search-api
     - name: Stack Overflow
       href: https://stackoverflow.com/search?q=bing+web+search
 - name: Use and display requirements
   href: ../bing-web-search/use-display-requirements.md
-  maintainContext: true
 - name: Release notes
   href: release-notes.md
