@@ -8,14 +8,13 @@ ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: conceptual
 author: alekhyasasi
-ms.date: 04/05/2022
+ms.date: 06/17/2022
 ms.author: v-apunnamara
 ---
 
 # Handle the video search response
 
 When you send a request to Video Search API, it returns a [VideosAnswer](../reference/response-objects.md#videosanswer) object in the response body. The object may include one or more of the following fields:
-
 
 ```json
 {
@@ -27,7 +26,6 @@ When you send a request to Video Search API, it returns a [VideosAnswer](../refe
   "nextOffset": 36,
   "currentOffset": 0,
   "value": [ { ... } ],
-  "queryExpansions": [ { ... } ],
   "pivotSuggestions": [ { ... } ],
   "relatedSearches": [ { ... } ]
 }
@@ -102,7 +100,7 @@ For information about resizing the thumbnail, see [Resizing and cropping thumbna
 
 You should display the following information with each thumbnail:
 
-- `duration` &mdash; The video's length. Convert the <a href="https://en.wikipedia.org/wiki/ISO_8601#Durations" target="_blank">duration notion</a> to human-readable form. For example, convert PT3M12S to 3:12.
+- `duration` &mdash; The video's length. Convert the [duration notion](https://en.wikipedia.org/wiki/ISO_8601#Durations) to human-readable form. For example, convert PT3M12S to 3:12.
 - `name` &mdash; The video's title.
 - `datePublished` &mdash; The date that Bing discovered the video. Use the date portion of the date time stamp.
 - `publisher` &mdash; The publisher that's hosting the video.
@@ -120,7 +118,6 @@ Make the surface where you display the thumbnail and video information clickable
 - Use `webSearchUrl` to view the video in Bing’s video viewer.
 - Use `embedHtml`, if it exists, to view the video in your own experience. If you provide your own view experience, consider `allowHttpsEmbed` and `allowMobileEmbed`.
 
-
 ## Using expanded queries
 
 Most responses include the `queryExpansions` field, which contains a list of queries that expand the user’s query string in an effort to narrow the search results. This may help the user focus more on the content that they’re really interested in. For example, the query that returned the following response fragment was *sailing**. Here's the list of expanded queries that Bing returned (the bolded words are the ones that Bing added):
@@ -128,7 +125,6 @@ Most responses include the `queryExpansions` field, which contains a list of que
 - Sailing **around the World**
 - **Solo** Sailing
 - Sailing **Lessons**
-
 
 ```json
   "queryExpansions": [
@@ -156,7 +152,6 @@ Most responses include the `queryExpansions` field, which contains a list of que
 ```
 
 The `queryExpansions` field contains a list of [Query](../reference/response-objects.md#query) objects. The `text` field contains the expanded query that you display in your UX (the `displayText` field contains the expansion term). Make `text` clickable by using the URL in `webSearchUrl` or `searchLink`. Use `webSearchUrl` to send the user to Bing's Video search results. If you provide your own results page experience, use `searchLink` to get new video search results using the expanded query string.
-
 
 ## Using pivot queries
 
@@ -202,10 +197,9 @@ As you can see from this example, Bing may not provide suggestions for all pivot
   ]
 ```
 
-The `pivotSuggestions` field contains the list of segments (pivots) that the original query was broken into. For each pivot, the response contains a list of [Query](../reference/response-objects.md#query) objects that contain suggested queries. The `text` field contains the suggested query. The `displayText` field contains the term that replaces the pivot in the original query. 
+The `pivotSuggestions` field contains the list of segments (pivots) that the original query was broken into. For each pivot, the response contains a list of [Query](../reference/response-objects.md#query) objects that contain suggested queries. The `text` field contains the suggested query. The `displayText` field contains the term that replaces the pivot in the original query.
 
 Make `text` clickable by using the URL in `webSearchUrl` or `searchLink`. Use `webSearchUrl` to send the user to Bing's Video search results. If you provide your own results page experience, use `searchLink` to get new video search results using the pivot query string.
-
 
 ## Related searches answer
 
@@ -240,10 +234,8 @@ Use the `displayText` query string and the `webSearchUrl` URL to create a hyperl
 
 For information about how to handle the highlighting markers in `displayText`, see [Hit Highlighting](../../bing-web-search/hit-highlighting.md).
 
-
 ## Next steps
 
 - Learn how to [get trending videos](trending-videos.md).
 - Learn how to [get insights about a video](video-insights.md) such as related videos.
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
-
