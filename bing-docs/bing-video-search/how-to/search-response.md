@@ -8,7 +8,7 @@ ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: conceptual
 author: alekhyasasi
-ms.date: 06/17/2022
+ms.date: 06/27/2022
 ms.author: v-apunnamara
 ---
 
@@ -117,41 +117,6 @@ Make the surface where you display the thumbnail and video information clickable
 - Use `hostPageUrl` to view the video on the provider’s website.
 - Use `webSearchUrl` to view the video in Bing’s video viewer.
 - Use `embedHtml`, if it exists, to view the video in your own experience. If you provide your own view experience, consider `allowHttpsEmbed` and `allowMobileEmbed`.
-
-## Using expanded queries
-
-Most responses include the `queryExpansions` field, which contains a list of queries that expand the user’s query string in an effort to narrow the search results. This may help the user focus more on the content that they’re really interested in. For example, the query that returned the following response fragment was *sailing**. Here's the list of expanded queries that Bing returned (the bolded words are the ones that Bing added):
-
-- Sailing **around the World**
-- **Solo** Sailing
-- Sailing **Lessons**
-
-```json
-  "queryExpansions": [
-    {
-      "text": "Sailing around the World",
-      "displayText": "Around the World",
-      "webSearchUrl": "https://www.bing.com/videos/search?q=Sailing+around+the+World...",
-      "searchLink": "https://api.bing.microsoft.com/v7/videos/search?q=Sailing+around+the+World...",
-      "thumbnail": {
-        "thumbnailUrl": "https://tse4.mm.bing.net/th?q=Sailing+around+the+World&pid=Api..."
-      }
-    },
-    {
-      "text": "Sailing Solo",
-      "displayText": "Solo",
-      "webSearchUrl": "https://www.bing.com/videos/search?q=Sailing+Solo...",
-      "searchLink": "https://api.bing.microsoft.com/v7/videos/search?q=Sailing+Solo...",
-      "thumbnail": {
-        "thumbnailUrl": "https://tse1.mm.bing.net/th?q=Sailing+Solo&pid=Api..."
-      }
-    },
-
-    . . .
-  ]
-```
-
-The `queryExpansions` field contains a list of [Query](../reference/response-objects.md#query) objects. The `text` field contains the expanded query that you display in your UX (the `displayText` field contains the expansion term). Make `text` clickable by using the URL in `webSearchUrl` or `searchLink`. Use `webSearchUrl` to send the user to Bing's Video search results. If you provide your own results page experience, use `searchLink` to get new video search results using the expanded query string.
 
 ## Using pivot queries
 
