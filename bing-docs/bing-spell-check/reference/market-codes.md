@@ -7,7 +7,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: reference
-ms.date: 06/06/2022
+ms.date: 06/29/2022
 ms.author: v-apunnamara
 ---
 
@@ -108,10 +108,15 @@ The following are the Bing supported languages that you may specify in the [setL
 |Supported Languages|Language Code
 |-|-  
 |Africa|af
+|Amharic|am
 |Arabic|ar
+|Armenian|hy
+|Assamese|as
+|Azerbaijani|az
 |Basque|eu
 |Belgium|be
 |Bengali|bn
+|Bosnian|bs
 |Bulgarian|bg
 |Catalan|ca
 |Chinese (Simplified)|zh-hans
@@ -126,17 +131,27 @@ The following are the Bing supported languages that you may specify in the [setL
 |Finnish|fi
 |French|fr
 |Galician|gl
+|Gaelic (Scottish)|gd
+|Georgian|ka
 |German|de
+|Greek|el
 |Gujarati|gu
+|Hausa|ha
 |Hebrew|he
 |Hindi|hi
 |Hungarian|hu
 |Icelandic|is
+|Igbo|ig
 |Indonesia|id
+|Irish|ga
 |Italian|it
 |Japanese|jp
 |Kannada|kn
+|Kazakh|kk
+|Khmer|km
 |Korean|ko
+|Kurdish|ku
+|Kyrgyz|ky
 |Latvian|lv
 |Lithuanian|lt
 |Malay|ms
@@ -144,6 +159,7 @@ The following are the Bing supported languages that you may specify in the [setL
 |Marathi|mr
 |Netherlands|nl
 |Norwegian (Bokmål)|nb
+|Persian (Farsi)|fa
 |Polish​|pl
 |Portuguese (Brazil)​|pt-br
 |Portuguese (Portugal)​|pt-pt
@@ -161,24 +177,10 @@ The following are the Bing supported languages that you may specify in the [setL
 |Turkish|tr
 |Ukrainian|uk
 |Vietnamese|vi
-| |ga
-| |gd
-| |fa
-| |el
+
+
 | |chr
-| |cy
-| |bs
-| |az
-| |am
-| |as
-| |ha
-| |hy
-| |ig
-| |ka
-| |kk
-| |km
-| |ku
-| |ky
+
 | |lb
 | |lo
 | |mi
