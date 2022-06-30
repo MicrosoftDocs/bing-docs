@@ -7,7 +7,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: reference
-ms.date: 06/29/2022
+ms.date: 06/30/2022
 ms.author: v-apunnamara
 ---
 
@@ -106,7 +106,8 @@ The following are the country codes that you may specify in the [cc](query-param
 The following are the Bing supported languages that you may specify in the [setLang](query-parameters.md#setlang) query parameter. The list is subject to change.  
   
 |Supported Languages|Language Code
-|-|-  
+|-|-
+|Albanian|sq
 |Africa|af
 |Amharic|am
 |Arabic|ar
@@ -148,17 +149,28 @@ The following are the Bing supported languages that you may specify in the [setL
 |Japanese|jp
 |Kannada|kn
 |Kazakh|kk
+|Kinyarwanda (Rwanda)|rw
 |Khmer|km
 |Korean|ko
 |Kurdish|ku
 |Kyrgyz|ky
+|Lao|lo
 |Latvian|lv
 |Lithuanian|lt
+|Luxembourgish|lb
+|Macedonian|mk
 |Malay|ms
 |Malayalam|ml
+|Maltese|mt
+|Maori|mi
 |Marathi|mr
+|Mongolian|mn
+|Nepali|ne
 |Netherlands|nl
 |Norwegian (Bokmål)|nb
+|Norwegian (Nynorsk)|nn
+|Oriya|or
+|Pashto, Pushto|ps
 |Persian (Farsi)|fa
 |Polish​|pl
 |Portuguese (Brazil)​|pt-br
@@ -167,52 +179,37 @@ The following are the Bing supported languages that you may specify in the [setL
 |Romanian|ro
 |Russian|ru
 |Serbian (Cyrylic)|sr
+|Setswana|tn
+|Sindhi|sd
+|Sinhalese|si
 |Slovak​|sk
 |Slovenian​|sl
 |Spanish|es
+|Swahili (Kiswahili)|sw
 |Swedish|sv
+|Tajik|tg
 |Tamil|ta
+|Tagalog|ti
+|Tahitian|ty
+|Tatar|tt
 |Telugu|te
 |Thai|th
 |Turkish|tr
+|Turkmen|tk
 |Ukrainian|uk
+|Urdu|ur
+|Uyghur|ug
+|Uzbek|uz
 |Vietnamese|vi
+|Wolof|wo
+|Xhosa|xh
+|Yoruba|yo
+|Zulu|zu
 
-
+<!--
 | |chr
-
-| |lb
-| |lo
-| |mi
-| |mk
-| |mn
-| |mt
-| |ne
-| |nn
-| |or
-| |pa
-| |rw
-| |sd
-| |si
-| |sq
-| |sw
-| |ta
-| |tg
-| |ti
-| |tk
-| |tn
-| |tt
-| |ug
-| |ur
-| |uz
-| |wo
-| |xh
-| |yo
-| |zu
 | |fil
-| |ty
-| |sm
+| |prs
 | |quz
 | |tzm
-| |ps
-| |prs
+-- >
