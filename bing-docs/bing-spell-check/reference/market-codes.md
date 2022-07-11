@@ -7,7 +7,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: reference
-ms.date: 06/30/2022
+ms.date: 07/11/2022
 ms.author: v-apunnamara
 ---
 
@@ -120,15 +120,19 @@ The following are the Bing supported languages that you may specify in the [setL
 |Bosnian|bs
 |Bulgarian|bg
 |Catalan|ca
+|Central Atlas Tamazight|tzm
+|Cherokee|chr
 |Chinese (Simplified)|zh-hans
 |Chinese (Traditional)|zh-hant
 |Croatian|hr
 |Czech|cs
 |Danish​|da
+|Dari|prs
 |Dutch​|nl
 |English|en
 |English-United Kingdom|en-gb
 |Estonian|et
+|Filipino|fil
 |Finnish|fi
 |French|fr
 |Galician|gl
@@ -176,6 +180,7 @@ The following are the Bing supported languages that you may specify in the [setL
 |Portuguese (Brazil)​|pt-br
 |Portuguese (Portugal)​|pt-pt
 |Punjabi​|pa
+|Quechua|quz
 |Romanian|ro
 |Russian|ru
 |Serbian (Cyrylic)|sr
@@ -205,11 +210,3 @@ The following are the Bing supported languages that you may specify in the [setL
 |Xhosa|xh
 |Yoruba|yo
 |Zulu|zu
-
-<!--
-| |chr
-| |fil
-| |prs
-| |quz
-| |tzm
--- >
