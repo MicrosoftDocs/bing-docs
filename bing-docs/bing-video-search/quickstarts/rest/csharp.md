@@ -3,26 +3,24 @@ title: "Quickstart: Search for videos using the REST API and C# - Bing Video Sea
 titleSuffix: Bing Search Services
 description: Use this quickstart to send video search requests to the Bing Video Search REST API using C#.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: quickstart
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 06/16/2022
+ms.author: v-apunnamara
 ---
 
 # Quickstart: Search for videos using C# and Bing Video Search API
 
-Use this quickstart to make your first call to Bing Video Search API. This C# console application sends a search request to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. The source code for this sample is available on <a href="https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/quickstarts/VideoSearch.cs" target="_blank">GitHub</a>. 
+Use this quickstart to make your first call to Bing Video Search API. This C# console application sends a search request to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. The source code for this sample is available on [GitHub](https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/quickstarts/VideoSearch.cs).
 
 Grab your favorite .NET editor, JSON library, and [Create Bing Search Service resource](../../../bing-web-search/create-bing-search-service-resource.md) for Bing Image Search and let's get started.
 
-
 ## Create a project and declare dependencies
 
-Create a new project and declare the code's dependencies. This example uses <a href="https://www.newtonsoft.com/json" target="_blank">Newtonsoft</a> to parse the JSON response. Use Newtonsoft's NuGet package to install its libraries.
+Create a new project and declare the code's dependencies. This example uses [Newtonsoft](https://www.newtonsoft.com/json) to parse the JSON response. Use Newtonsoft's NuGet package to install its libraries.
 
 ```csharp
 using System;
@@ -34,7 +32,6 @@ using System.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 ```
-
 
 ## Declare a namespace and class for your program
 
@@ -52,7 +49,7 @@ namespace VideoSearchQuickstart
 
 ## Define variables
 
-Add a few variables to the `Program` class. For simplicity, this example hardcodes the subscription key, but make sure you're pulling it from secured storage instead.
+Add a few variables to the `Program` class. For simplicity, this example hardcode the subscription key, but make sure you're pulling it from secured storage instead.
 
 ```csharp
         // In production, make sure you're pulling the subscription key from secured storage.
@@ -97,7 +94,6 @@ Use these query parameters to filter the images that Bing returns. For informati
         private const string VIDEO_LENGTH_PARAMETER = "&videoLength=";
 ```
 
-
 ## Declare the Main method
 
 Our `Main()` method is pretty simple since we're going to implement the HTTP requests asynchronously.
@@ -108,7 +104,6 @@ Our `Main()` method is pretty simple since we're going to implement the HTTP req
             RunAsync().Wait();
         }
 ```
-
 
 ## Where all the work happens
 
@@ -154,7 +149,6 @@ This example uses dictionaries instead of objects to access the response data.
         }
 ```
 
-
 ## The HTTP call
 
 Here's the HTTP request. It's your basic HTTP GET request. Use whatever HTTP client works for you.
@@ -182,13 +176,11 @@ The rest of the sections walk you through one way of parsing the JSON response a
 
 For information about resizing the thumbnails, see [Resizing and cropping thumbnails](../../../bing-web-search/resize-and-crop-thumbnails.md).
 
-
-
 ## Displaying the videos
 
 The response's `value` field contains the list of videos. The example shows the fields you're most likely to use. For the full list of fields, see the [Video](../../reference/response-objects.md#video) object.
 
-The [VideosAnswer](../../reference/response-objects.md#videosanswer) object contains a number of fields like `pivotSuggestions`, `queryExpansions`, and `relatedSearches` that this example doesn't address.
+The [VideosAnswer](../../reference/response-objects.md#videosanswer) object contains a number of fields like `pivotSuggestions` and `relatedSearches` that this example doesn't address.
 
 ```csharp
         // Prints the list of videos in the JSON response.
@@ -274,7 +266,6 @@ The [VideosAnswer](../../reference/response-objects.md#videosanswer) object cont
         }
 ```
 
-
 ## Handling errors
 
 This section shows an option for handling errors that the service may return. For example, the service returns an error if your subscription key is not valid or is not valid for the specified endpoint. The service may also return an error if you specify a parameter value that's not valid.
@@ -332,9 +323,6 @@ This section shows an option for handling errors that the service may return. Fo
         }
 ```
 
-
 ## Next steps
 
 - For a more in depth web app example, see the [Video web app tutorial](../../tutorial/bing-video-search-single-page-app.md).
-
-
