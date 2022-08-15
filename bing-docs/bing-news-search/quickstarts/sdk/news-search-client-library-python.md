@@ -14,24 +14,22 @@ ms.author: scottwhi
 
 # Quickstart: Use the Bing News Search Python client library
 
-Use this quickstart to begin searching for news with the Bing News Search client library for Python. While Bing News Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/blob/master/samples/search/news_search_samples.py).
+Use this quickstart to begin searching for news with the Bing News Search client library for Python. While Bing News Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/microsoft/bing-search-sdk-for-python/blob/main/samples/sdk/news_search_samples.py).
 
 ## Prerequisites
 
 * [Python](https://www.python.org/) 2.x or 3.x
 
-It is recommended to use a [virtual environment](https://docs.python.org/3/tutorial/venv.html) for your Python development. You can install and initialize the virtual environment with the [venv module](https://pypi.python.org/pypi/virtualenv). You must install a virtualenv for Python 2.7. 
-
-Create a virtual environment with:
+It is recommended to use a [virtual environment](https://docs.python.org/3/tutorial/venv.html) for your python development. You can install and initialize the virtual environment with the [venv module](https://pypi.python.org/pypi/virtualenv). You must install a virtualenv for Python 2.7. You can create a virtual environment with:
 
 ```console
 python -m venv mytestenv
 ```
 
-Install the Bing News Search client library dependencies with this command:
+You can install the Bing News Search client library dependencies with this command:
     
 ```console
-python -m pip install azure-cognitiveservices-search-newssearch
+python -m pip install microsoft-bing-newssearch
 ```
 
 <!--
@@ -43,8 +41,8 @@ python -m pip install azure-cognitiveservices-search-newssearch
 1. Create a new Python file in your favorite IDE or editor, and import the following libraries. Create a variable for your subscription key, and your search term.
 
     ```python
-    from azure.cognitiveservices.search.newssearch import NewsSearchClient
-    from msrest.authentication import CognitiveServicesCredentials
+    from news_search_client import NewsSearchClient
+    from azure.core.credentials import AzureKeyCredential
     subscription_key = "YOUR-SUBSCRIPTION-KEY"
     endpoint = "YOUR-ENDPOINT"
     search_term = "Quantum Computing"
@@ -52,13 +50,17 @@ python -m pip install azure-cognitiveservices-search-newssearch
 
 ## Initialize the client and send a request
 
-1. Create an instance of `CognitiveServicesCredentials`.
+1. Create an instance of `AzureKeyCredential`.
     
     ```python
-    client = NewsSearchClient(endpoint=endpoint, credentials=CognitiveServicesCredentials(subscription_key))
+    client = NewsSearchClient(
+        endpoint=ENDPOINT,
+        credential=AzureKeyCredential(SUBSCRIPTION_KEY)
+    )
+
     ```
 
-2. Send a search query to the News Search API, and then store the response.
+2. Send a search query to the News Search API, store the response.
 
     ```python
     news_result = client.news.search(query=search_term, market="en-us", count=10)

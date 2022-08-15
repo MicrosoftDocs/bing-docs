@@ -14,26 +14,26 @@ ms.author: scottwhi
 
 # Quickstart: Use the Bing Visual Search Java client library
 
-Use this quickstart to begin getting image insights from the Bing Visual Search service, using the Java client library. While Bing Visual Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this quickstart can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples/tree/master/Search/BingVisualSearch).
+Use this quickstart to begin getting image insights from the Bing Visual Search service, using the Java client library. While Bing Visual Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this quickstart can be found on [GitHub](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/sdk/VisualSearch).
 
 Use the Bing Visual Search client library for Java to:
 
 * Upload an image to send a visual search request.
 * Get the image insight token and visual search tags.
 
-[Reference documentation](https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingvisualsearch?view=azure-java-stable&preserve-view=true) | [Library source code](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/Search.BingVisualSearch) | [Artifact (Maven)](https://search.maven.org/artifact/com.microsoft.azure.cognitiveservices/azure-cognitiveservices-visualsearch/) | [Samples](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples)
+[Reference documentation](https://docs.microsoft.com/en-us/bing/search-apis/bing-visual-search/overview) | [Library source code](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/sdk/VisualSearch) | [Artifact (Maven)](https://mvnrepository.com/artifact/com.microsoft.bing/bing-visualsearch) | [Samples](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/VisualSearchSample)
 
 ## Prerequisites
 
-* Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
-* The current version of the [Java Development Kit (JDK)](https://www.oracle.com/technetwork/java/javase/downloads/index.html).
-* The [Gradle build tool](https://gradle.org/install/), or another dependency manager.
+* Azure subscription - [Create one for free](https://aka.ms/bingapisignup)
+* The current version of the [Java Development Kit(JDK)](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* The [Gradle build tool](https://gradle.org/install/), or another dependency manager
 
 <!--
 [!INCLUDE [bing-visual-search-signup-requirements](../../../../includes/bing-visual-search-signup-requirements.md)]
 -->
 
-After you get a key from your resource, [create an environment variable](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account#configure-an-environment-variable-for-authentication) for the key, named `BING_SEARCH_V7_SUBSCRIPTION_KEY`.
+After you get a key from your resource, create an environment variable for the key, named `BING_SEARCH_V7_SUBSCRIPTION_KEY`.
 
 ### Create a new Gradle project
 
@@ -66,7 +66,7 @@ repositories {
 }
 dependencies {
     compile("org.slf4j:slf4j-simple:1.7.25")
-    compile("com.microsoft.azure.cognitiveservices:azure-cognitiveservices-visualsearch:1.0.2-beta")
+    compile("com.microsoft.bing:bing-visualsearch:1.0.0")
     compile("com.google.code.gson:gson:2.8.5")
 }
 ```
@@ -85,25 +85,20 @@ mkdir -p src/main/resources
 
 Navigate to the new folder and create a file called *BingVisualSearchSample.java*. Open it in your preferred editor or IDE and add the following `import` statements:
 
-<!--
-[!code-java[Import statements](~/cognitive-services-java-sdk-samples/Search/BingVisualSearch/src/main/java/BingVisualSearchSample.java?name=imports)]
--->
+
 
 ```java
-package main.java;
+package com.microsoft.bing.samples;
 
-import com.google.common.io.ByteStreams;
-import com.google.gson.Gson;
-import com.microsoft.azure.cognitiveservices.search.visualsearch.BingVisualSearchAPI;
-import com.microsoft.azure.cognitiveservices.search.visualsearch.BingVisualSearchManager;
-import com.microsoft.azure.cognitiveservices.search.visualsearch.models.CropArea;
-import com.microsoft.azure.cognitiveservices.search.visualsearch.models.ErrorResponseException;
-import com.microsoft.azure.cognitiveservices.search.visualsearch.models.Filters;
-import com.microsoft.azure.cognitiveservices.search.visualsearch.models.ImageInfo;
-import com.microsoft.azure.cognitiveservices.search.visualsearch.models.ImageKnowledge;
-import com.microsoft.azure.cognitiveservices.search.visualsearch.models.ImageTag;
-import com.microsoft.azure.cognitiveservices.search.visualsearch.models.KnowledgeRequest;
-import com.microsoft.azure.cognitiveservices.search.visualsearch.models.VisualSearchRequest;```
+import com.microsoft.bing.autosuggest.models.SearchAction;
+import com.microsoft.bing.autosuggest.models.Suggestions;
+import com.microsoft.bing.autosuggest.models.SuggestionsSuggestionGroup;
+import com.microsoft.bing.autosuggest.implementation.AutoSuggestClientImpl;
+import com.microsoft.rest.credentials.ServiceClientCredentials;
+import okhttp3.*;
+import okhttp3.OkHttpClient.Builder;
+import java.io.IOException;
+import java.util.List;`
 
 Then create a new class.
 
@@ -114,53 +109,54 @@ public class BingVisualSearchSample {
 
 In the application's `main` method, create variables for your resource's Azure endpoint and key. If you created the environment variable after you launched the application, you will need to close and reopen the editor, IDE, or shell running it to access the variable. Then create a `byte[]` for the image you'll be uploading. Create a `try` block for the methods you'll define  later, and load the image and convert it to bytes using `toByteArray()`.
 
-<!--
-[!code-java[Main method](~/cognitive-services-java-sdk-samples/Search/BingVisualSearch/src/main/java/BingVisualSearchSample.java?name=main)]
--->
 
 ```java
     public static void main(String[] args) {
-
-        // Set the BING_SEARCH_V7_SUBSCRIPTION_KEY environment variable with your subscription key,
-        // then reopen your command prompt or IDE. If not, you may get an API key not found exception.
-        final String subscriptionKey = System.getenv("BING_SEARCH_V7_SUBSCRIPTION_KEY");
-
-        BingVisualSearchAPI client = BingVisualSearchManager.authenticate(subscriptionKey);
-
-        //runSample(client);
-        byte[] imageBytes;
-
         try {
-            imageBytes = ByteStreams.toByteArray(ClassLoader.getSystemClassLoader().getResourceAsStream("image.jpg"));
-            visualSearch(client, imageBytes);
-            searchWithCropArea(client, imageBytes);
-            // wait 1 second to avoid rate limiting
-            Thread.sleep(1000);
-            searchWithFilter(client);
-            searchUsingCropArea(client);
-            searchUsingInsightToken(client);
+            //=============================================================
+            // Authenticate
+            // Add your Bing Autosuggest subscription key to your environment variables.
+            String subscriptionKey = System.getenv("BING_AUTOSUGGEST_SUBSCRIPTION_KEY");
+            String endpoint = System.getenv("BING_AUTOSUGGEST_ENDPOINT") +  "/v7.0";
+            ServiceClientCredentials credentials = new ServiceClientCredentials() {
+                @Override
+                public void applyCredentialsFilter(Builder builder) {
+                    builder.addNetworkInterceptor(
+                        new Interceptor() {
+                            @Override
+                            public Response intercept(Chain chain) throws IOException {
+                                Request request = null;
+                                Request original = chain.request();
+                                Request.Builder requestBuilder = original.newBuilder();
+                                requestBuilder.addHeader("Ocp-Apim-Subscription-Key", subscriptionKey);
+                                request = requestBuilder.build();
+                                return chain.proceed(request);
+                            }
+                        }
+                    );
+                }
+            };
+            AutoSuggestClientImpl client = new AutoSuggestClientImpl(endpoint,credentials);
+            runSample(client);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            e.printStackTrace();
         }
-        catch (java.io.IOException f) {
-            System.out.println(f.getMessage());
-            f.printStackTrace();
-        }
-        catch (java.lang.InterruptedException f){
-            f.printStackTrace();
-        }
-
     }
+}
+
 ```
 
 ### Install the client library
 
-This quickstart uses the Gradle dependency manager. You can find the client library and information for other dependency managers on the [Maven Central Repository](https://search.maven.org/artifact/com.microsoft.azure.cognitiveservices/azure-cognitiveservices-textanalytics/).
+This quickstart uses the Gradle dependency manager. You can find the client library and information for other dependency managers on the [Maven Central Repository](https://mvnrepository.com/artifact/com.microsoft.bing/bing-visualsearch).
 
 In your project's *build.gradle.kts* file, be sure to include the client library as an `implementation` statement. 
 
 ```kotlin
 dependencies {
     compile("org.slf4j:slf4j-simple:1.7.25")
-    compile("com.microsoft.azure.cognitiveservices:azure-cognitiveservices-visualsearch:1.0.2-beta")
+    compile("com.microsoft.bing:bing-visualsearch:1.0.0")
     compile("com.google.code.gson:gson:2.8.5")
 }
 ```
@@ -176,10 +172,10 @@ These code snippets show you how to do the following tasks with the Bing Visual 
 ## Authenticate the client
 
 > [!NOTE]
-> This quickstart assumes you've [created an environment variable](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account#configure-an-environment-variable-for-authentication) for your Bing Visual Search key, named `BING_SEARCH_V7_SUBSCRIPTION_KEY`.
+> This quickstart assumes you've created an environment variable for your Bing Visual Search key, named `BING_SEARCH_V7_SUBSCRIPTION_KEY`.
 
 
-In your main method, be sure to use your subscription key to instantiate a [BingVisualSearchAPI](https://docs.microsoft.com/java/api/com.microsoft.azure.cognitiveservices.search.visualsearch.bingvisualsearchapi?view=azure-java-stable&preserve-view=true) object.
+In your main method, be sure to use your subscription key to instantiate a [BingVisualSearchAPI](https://docs.microsoft.com/en-us/bing/search-apis/bing-visual-search/overview) object.
 
 ```csharp
 BingVisualSearchAPI client = BingVisualSearchManager.authenticate(subscriptionKey);
@@ -187,30 +183,17 @@ BingVisualSearchAPI client = BingVisualSearchManager.authenticate(subscriptionKe
 
 ## Send a visual search request
 
-In a new method, send the image byte array (which was created in the `main()` method) using the client's [bingImages().visualSearch()](https://docs.microsoft.com/java/api/com.microsoft.azure.cognitiveservices.search.visualsearch.bingimages.visualsearch?view=azure-java-stable&preserve-view=true#com_microsoft_azure_cognitiveservices_search_visualsearch_BingImages_visualSearch__) method. 
-
-<!--
-[!code-java[visualSearch() method](~/cognitive-services-java-sdk-samples/Search/BingVisualSearch/src/main/java/BingVisualSearchSample.java?name=visualSearch)]
--->
 
 ```java
-    public static void visualSearch(BingVisualSearchAPI client, byte[] imageBytes){
-        System.out.println("Calling Bing Visual Search with image binary");
-        ImageKnowledge visualSearchResults = client.bingImages().visualSearch()
-                .withImage(imageBytes)
-                .execute();
-        PrintVisualSearchResults(visualSearchResults);
+    ImageKnowledge visualSearchResults = client.images().visualSearch(null, null, null, null, null, null, null, null, null, null, imageBytes);
+    PrintVisualSearchResults(visualSearchResults);
 
     }
 ```
 
 ## Print the image insight token and visual search tags
 
-Check if the [ImageKnowledge](https://docs.microsoft.com/java/api/com.microsoft.azure.cognitiveservices.search.visualsearch.models.imageknowledge?view=azure-java-stable&preserve-view=true) object is null. If not, print the image insights token, the number of tags, the number of actions, and the first action type.
 
-<!--
-[!code-java[Print token and tags](~/cognitive-services-java-sdk-samples/Search/BingVisualSearch/src/main/java/BingVisualSearchSample.java?name=printVisualSearchResults)]
--->
 
 ```java
     static void PrintVisualSearchResults(ImageKnowledge visualSearchResults) {
@@ -262,4 +245,4 @@ gradle run
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../../tutorial/visual-search-single-page-app.md).
+> [Build a single-page web app](../../tutorial/visual-search-single-page-app.md)

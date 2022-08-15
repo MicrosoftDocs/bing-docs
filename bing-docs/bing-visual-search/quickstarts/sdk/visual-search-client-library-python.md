@@ -14,17 +14,17 @@ ms.author: scottwhi
 
 # Quickstart: Use the Bing Visual Search Python client library
 
-Use this quickstart to begin getting image insights from the Bing Visual Search service, using the Python client library. While Bing Visual Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/blob/master/samples/search/visual_search_samples.py) 
+Use this quickstart to begin getting image insights from the Bing Visual Search service, using the Python client library. While Bing Visual Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/microsoft/bing-search-sdk-for-python/blob/main/samples/sdk/visual_search_samples.py) 
 
-[Reference documentation](https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/visualsearch?view=azure-python&preserve-view=true) | [Library source code](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/cognitiveservices/azure-cognitiveservices-search-visualsearch) | [Package (PyPi)](https://pypi.org/project/azure-cognitiveservices-search-visualsearch/) | [Samples](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/)
+[Reference documentation](https://docs.microsoft.com/en-us/bing/search-apis/bing-visual-search/overview) | [Library source code](https://github.com/microsoft/bing-search-sdk-for-python/tree/main/sdk/VisualSearch) | [Package (PyPi)](https://pypi.org/project/microsoft-bing-visualsearch/) | [Samples](https://github.com/microsoft/bing-search-sdk-for-python/tree/main/samples)
 
 ## Prerequisites
 
-* [Python](https://www.python.org/) 2.x or 3.x.
+* [Python](https://www.python.org/) 2.x or 3.x
 * It is recommended to use a [virtual environment](https://docs.python.org/3/tutorial/venv.html). Install and initialize the virtual environment with the [venv module](https://pypi.python.org/pypi/virtualenv).
 * The Bing Visual Search client library for Python. You can install it with the following commands:
     1. `cd mytestenv`
-    2. `python -m pip install azure-cognitiveservices-search-visualsearch`
+    2. `python -m pip install microsoft-bing-visualsearch`
 
 <!--
 [!INCLUDE [bing-visual-search-signup-requirements](../../../../includes/bing-visual-search-signup-requirements.md)]
@@ -32,35 +32,36 @@ Use this quickstart to begin getting image insights from the Bing Visual Search 
 
 ## Create and initialize the application
 
-1. Create a new Python file in your favorite IDE or editor, and add the following import statements:
+1. Create a new Python file in your favorite IDE or editor, and add the following import statements. 
 
     ```python
     import http.client, urllib.parse
     import json
     import os.path
-    from azure.cognitiveservices.search.visualsearch import VisualSearchClient
-    from azure.cognitiveservices.search.visualsearch.models import (
+    from visual_search_client import VisualSearchClient
+    from visual_search_client.models import (
         VisualSearchRequest,
         CropArea,
         ImageInfo,
         Filters,
         KnowledgeRequest,
     )
-    from msrest.authentication import CognitiveServicesCredentials
+    from azure.core.credentials import AzureKeyCredential
     ```
 2. Create variables for your subscription key, Custom Configuration ID, and the image you want to upload. 
     
     ```python
     subscription_key = 'YOUR-VISUAL-SEARCH-ACCESS-KEY'
-    PATH = 'C:\\Users\\USER\\azure-cognitive-samples\\mytestenv\\TestImages\\'
-    image_path = os.path.join(PATH, "image.jpg")
+    ENDPOINT = "https://api.bing.microsoft.com"+  "/v7.0/"
+    CWD = os.path.dirname(__file__)
+    TEST_IMAGES = os.path.join(CWD, "TestImages")
     
     ```
 
-3. Instantiate the client.
+3. Instantiate the client
 
     ```python
-    client = VisualSearchClient(endpoint="https://api.bing.microsoft.com", credentials=CognitiveServicesCredentials(subscription_key))
+    client = VisualSearchClient(endpoint=ENDPOINT,credential=AzureKeyCredential(subscription_key))
     ```
 
 ## Send the search request
@@ -107,4 +108,4 @@ Use this quickstart to begin getting image insights from the Bing Visual Search 
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Build a single-page web app](../../tutorial/visual-search-single-page-app.md).
+> [Build a single-page web app](../../tutorial/visual-search-single-page-app.md)

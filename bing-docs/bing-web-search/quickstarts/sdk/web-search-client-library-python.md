@@ -16,7 +16,7 @@ ms.author: scottwhi
 
 The Bing Web Search client library makes it easy to integrate Bing Web Search into your Python application. In this quickstart, you'll learn how to send a request, receive a JSON response, and filter and parse the results.
 
-Want to see the code right now? Samples for the [Bing Search client libraries for Python](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/tree/master/samples/search) are available on GitHub.
+Want to see the code right now? Samples for the [Bing Search client libraries for Python](https://github.com/microsoft/bing-search-sdk-for-python/tree/main/samples) are available on GitHub.
 
 
 ## Prerequisites
@@ -52,7 +52,7 @@ source bin/activate
 Install Bing Web Search SDK dependencies:
 
 ```console
-python -m pip install azure-cognitiveservices-search-websearch
+python -m pip install microsoft-bing-websearch
 ```
 
 ### Python 3.x
@@ -73,7 +73,7 @@ Install Bing Web Search SDK dependencies:
 
 ```console
 cd mytestenv
-python -m pip install azure-cognitiveservices-search-websearch
+python -m pip install microsoft-bing-websearch
 ```
 
 ## Create a client and print your first results
@@ -88,15 +88,15 @@ If the response contains web pages, images, news, or videos, the first result fo
 
     ```python
     # Import required modules.
-    from azure.cognitiveservices.search.websearch import WebSearchClient
-    from azure.cognitiveservices.search.websearch.models import SafeSearch
-    from msrest.authentication import CognitiveServicesCredentials
+    from web_search_client import WebSearchClient
+    from web_search_client.models import SafeSearch
+    from azure.core.credentials import AzureKeyCredential
 
     # Replace with your subscription key.
     subscription_key = "YOUR_SUBSCRIPTION_KEY"
 
     # Instantiate the client and replace with your endpoint.
-    client = WebSearchClient(endpoint="YOUR_ENDPOINT", credentials=CognitiveServicesCredentials(subscription_key))
+    client = WebSearchClient(AzureKeyCredential(SUBSCRIPTION_KEY))
 
     # Make a request. Replace Yosemite if you'd like.
     web_data = client.web.search(query="Yosemite")
@@ -168,7 +168,6 @@ If the response contains web pages, images, news, or videos, the first result fo
 
 1. Replace `SUBSCRIPTION_KEY` with a valid subscription key.
 
-1. Replace `YOUR_ENDPOINT` with your endpoint URL in portal and remove the "bing/v7.0" section from the endpoint.
 
 1. Run the program. For example: `python your_program.py`.
 
@@ -178,19 +177,19 @@ Now that you've made your first call to the Bing Web Search API, let's look at a
 
 ### Limit the number of results returned by Bing
 
-This sample uses the `count` and `offset` parameters to limit the number of results returned using the SDK's [`search` method](https://docs.microsoft.com/python/api/azure-cognitiveservices-search-websearch/azure.cognitiveservices.search.websearch.operations.weboperations?view=azure-python&preserve-view=true). The `name` and `url` for the first result are printed.
+This sample uses the `count` and `offset` parameters to limit the number of results returned using the SDK's [`search` method](https://docs.microsoft.com/en-us/bing/search-apis/bing-web-search/reference/query-parameters). The `name` and `url` for the first result are printed.
 
 1. Add this code to your Python project:
 
    ```python
     # Declare the function.
     def web_results_with_count_and_offset(subscription_key):
-        client = WebSearchAPI(CognitiveServicesCredentials(subscription_key))
+        client = WebSearchClient(AzureKeyCredential(SUBSCRIPTION_KEY))
 
         try:
             '''
             Set the query, offset, and count using the SDK's search method. See:
-            https://docs.microsoft.com/python/api/azure-cognitiveservices-search-websearch/azure.cognitiveservices.search.websearch.operations.weboperations?view=azure-python.
+            https://docs.microsoft.com/en-us/bing/search-apis/bing-web-search/reference/query-parameters.
             '''
             web_data = client.web.search(query="Best restaurants in Seattle", offset=10, count=20)
             print("\r\nSearching for \"Best restaurants in Seattle\"")
@@ -217,18 +216,18 @@ This sample uses the `count` and `offset` parameters to limit the number of resu
 
 ### Filter for news and freshness
 
-This sample uses the `response_filter` and `freshness` parameters to filter search results using the SDK's [`search` method](/python/api/azure-cognitiveservices-search-websearch/azure.cognitiveservices.search.websearch.operations.weboperations). The search results returned are limited to news articles and pages that Bing has discovered within the last 24 hours. The `name` and `url` for the first result are printed.
+This sample uses the `response_filter` and `freshness` parameters to filter search results using the SDK's [`search` method](https://docs.microsoft.com/en-us/bing/search-apis/bing-web-search/reference/query-parameters). The search results returned are limited to news articles and pages that Bing has discovered within the last 24 hours. The `name` and `url` for the first result are printed.
 
 1. Add this code to your Python project:
 
     ```python
     # Declare the function.
     def web_search_with_response_filter(subscription_key):
-        client = WebSearchAPI(CognitiveServicesCredentials(subscription_key))
+        client = WebSearchClient(AzureKeyCredential(SUBSCRIPTION_KEY))
         try:
             '''
             Set the query, response_filter, and freshness using the SDK's search method. See:
-            https://docs.microsoft.com/python/api/azure-cognitiveservices-search-websearch/azure.cognitiveservices.search.websearch.operations.weboperations?view=azure-python.
+            https://docs.microsoft.com/en-us/bing/search-apis/bing-web-search/reference/query-parameters.
             '''
             web_data = client.web.search(query="xbox",
                 response_filter=["News"],
@@ -267,7 +266,7 @@ This sample uses the `response_filter` and `freshness` parameters to filter sear
 
 ### Use safe search, answer count, and the promote filter
 
-This sample uses the `answer_count`, `promote`, and `safe_search` parameters to filter search results using the SDK's [`search` method](https://docs.microsoft.com/python/api/azure-cognitiveservices-search-websearch/azure.cognitiveservices.search.websearch.operations.weboperations?view=azure-python&preserve-view=true). The `name` and `url` for the first result are displayed.
+This sample uses the `answer_count`, `promote`, and `safe_search` parameters to filter search results using the SDK's [`search` method](https://docs.microsoft.com/en-us/bing/search-apis/bing-web-search/reference/query-parameters). The `name` and `url` for the first result are displayed.
 
 1. Add this code to your Python project:
 
@@ -275,12 +274,12 @@ This sample uses the `answer_count`, `promote`, and `safe_search` parameters to 
     # Declare the function.
     def web_search_with_answer_count_promote_and_safe_search(subscription_key):
 
-        client = WebSearchAPI(CognitiveServicesCredentials(subscription_key))
+        client = WebSearchClient(AzureKeyCredential(SUBSCRIPTION_KEY))
 
         try:
             '''
             Set the query, answer_count, promote, and safe_search parameters using the SDK's search method. See:
-            https://docs.microsoft.com/python/api/azure-cognitiveservices-search-websearch/azure.cognitiveservices.search.websearch.operations.weboperations?view=azure-python.
+            https://docs.microsoft.com/en-us/bing/search-apis/bing-web-search/reference/query-parameters.
             '''
             web_data = client.web.search(
                 query="Niagara Falls",
@@ -317,4 +316,4 @@ When you're done with this project, make sure to remove your subscription key fr
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Cognitive Services Python SDK samples](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples)
+> [Bing Apis Python SDK samples](https://github.com/microsoft/bing-search-sdk-for-python/tree/main/samples)
