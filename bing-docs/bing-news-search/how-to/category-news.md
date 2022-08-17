@@ -16,7 +16,7 @@ ms.author: v-apunnamara
 
 If you’re building a news page and want to get headline news or category-specific news, such sports or world news, call News Category API.
 
-To get headline news, call the API without including the [cateogry](../reference/query-parameters.md#category) query parameter.
+To get headline news, call the API without including the [category](../reference/query-parameters.md#category) query parameter.
 
 ```curl
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news?mkt=en-us
