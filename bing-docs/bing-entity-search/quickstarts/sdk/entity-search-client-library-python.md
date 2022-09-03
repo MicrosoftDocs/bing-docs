@@ -41,7 +41,7 @@ python -m pip install azure-cognitiveservices-search-entitysearch
 
 ## Create and initialize the application
 
-1. Create a new Python file in your favorite IDE or editor, and add the following import statements. 
+1. Create a new Python file in your favorite IDE or editor, and add the following import statements.
 
     ```python
     from azure.cognitiveservices.search.entitysearch import EntitySearchClient
@@ -50,7 +50,7 @@ python -m pip install azure-cognitiveservices-search-entitysearch
     ```
 
 2. Create a variable for your subscription key and endpoint. Instantiate the client by creating a new `CognitiveServicesCredentials` object with your key.
-    
+
     ```python
     subscription_key = "YOUR-SUBSCRIPTION-KEY"
     endpoint = "YOUR-ENDPOINT"
@@ -59,13 +59,14 @@ python -m pip install azure-cognitiveservices-search-entitysearch
 
 ## Send a search request and receive a response
 
-1. Send a search request to Bing Entity Search with `client.entities.search()` and a search query. 
-    
+1. Send a search request to Bing Entity Search with `client.entities.search()` and a search query.
+
     ```python
     entity_data = client.entities.search(query="Gibralter")
     ```
 
 2. If entities were returned, convert `entity_data.entities.value` to a list, and print the first result.
+
     ```python
     if entity_data.entities.value:
     
@@ -81,4 +82,4 @@ python -m pip install azure-cognitiveservices-search-entitysearch
 > [!div class="nextstepaction"]
 > [Create a single-page web app](../../tutorial/bing-entities-search-single-page-app.md)
 
-* [What is the Bing Entity Search API?](../../overview.md )
+* [What is the Bing Entity Search API?](../../overview.md)
