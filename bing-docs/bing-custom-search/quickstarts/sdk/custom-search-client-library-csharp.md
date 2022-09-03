@@ -17,10 +17,10 @@ ms.author: scottwhi
 Get started with the Bing Custom Search client library for C#. Follow these steps to install the package and try out the example code for basic tasks. The Bing Custom Search API enables you to create tailored, ad-free search experiences for topics that you care about. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7/BingCustomWebSearch).
 
 Use the Bing Custom Search client library for C# to:
-* Find search results on the web, from your Bing Custom Search instance.
 
-[Reference documentation](https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingcustomsearch?view=azure-dotnet) | [Library source code](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/Search.BingCustomSearch) | [Package (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.CustomSearch/1.2.0) | [Samples](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples)
+- Find search results on the web, from your Bing Custom Search instance.
 
+[Reference documentation](/dotnet/api/overview/azure/cognitiveservices/client/bingcustomsearch?view=azure-dotnet) | [Library source code](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/Search.BingCustomSearch) | [Package (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.CustomSearch/1.2.0) | [Samples](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples)
 
 ## Prerequisites
 
@@ -28,11 +28,11 @@ Use the Bing Custom Search client library for C# to:
 - Microsoft [.NET Core](https://www.microsoft.com/net/download/core).
 - Any edition of [Visual Studio 2017 or later](https://www.visualstudio.com/downloads/).
 - If you are using Linux/MacOS, this application can be run using [Mono](https://www.mono-project.com/).
-- The [Bing Custom Search](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.CustomSearch/1.2.0)  NuGet package. 
-    - From **Solution Explorer** in Visual Studio, right-click your project and select **Manage NuGet Packages** from the menu. Install the `Microsoft.Azure.CognitiveServices.Search.CustomSearch` package. Installing the NuGet Custom Search package also installs the following assemblies:
-        - Microsoft.Rest.ClientRuntime
-        - Microsoft.Rest.ClientRuntime.Azure
-        - Newtonsoft.Json
+- The [Bing Custom Search](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.CustomSearch/1.2.0)  NuGet package.
+  - From **Solution Explorer** in Visual Studio, right-click your project and select **Manage NuGet Packages** from the menu. Install the `Microsoft.Azure.CognitiveServices.Search.CustomSearch` package. Installing the NuGet Custom Search package also installs the following assemblies:
+    - Microsoft.Rest.ClientRuntime
+    - Microsoft.Rest.ClientRuntime.Azure
+    - Newtonsoft.Json
 
 <!--
 [!INCLUDE [bing-custom-search-prerequisites](../../../../includes/bing-custom-search-signup-requirements.md)]
@@ -55,7 +55,7 @@ Use the Bing Custom Search client library for C# to:
     ```
 
 ## Send the search request and receive a response
-    
+
 1. Send a search query using your client's `SearchAsync()` method, and then save the response. Be sure to replace your `YOUR-CUSTOM-CONFIG-ID` with your instance's configuration ID (you can find the ID in the [Bing Custom Search portal](https://www.customsearch.ai/)). This example searches for "Xbox":
 
     ```csharp

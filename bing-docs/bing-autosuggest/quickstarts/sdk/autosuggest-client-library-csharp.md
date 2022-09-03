@@ -18,7 +18,7 @@ Get started with the Bing Autosuggest client library for .NET. Follow these step
 
 Use the Bing Autosuggest client library for .NET to get search suggestions based on partial query strings.
 
-[Reference documentation](https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-dotnet) | [Library source code](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/Search.BingAutoSuggest) | [Package (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.AutoSuggest/) | [Sample code](https://github.com/Azure-Samples/cognitive-services-quickstart-code/blob/master/dotnet/BingAutoSuggest/Program.cs)
+[Reference documentation](/dotnet/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-dotnet) | [Library source code](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/Search.BingAutoSuggest) | [Package (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.AutoSuggest/) | [Sample code](https://github.com/Azure-Samples/cognitive-services-quickstart-code/blob/master/dotnet/BingAutoSuggest/Program.cs)
 
 ## Prerequisites
 
@@ -32,12 +32,12 @@ Use the Bing Autosuggest client library for .NET to get search suggestions based
 ## Create environment variables
 
 >[!NOTE]
-> The endpoints for resources created after July 1, 2019 use the custom subdomain format shown below. For more information and a complete list of regional endpoints, see [Custom subdomain names for Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-custom-subdomains). 
+> The endpoints for resources created after July 1, 2019 use the custom subdomain format shown below. For more information and a complete list of regional endpoints, see [Custom subdomain names for Cognitive Services](/azure/cognitive-services/cognitive-services-custom-subdomains).
 
 Using your key and endpoint from the resource you created, create two environment variables for authentication:
 <!-- replace the below variable names with the names expected in the code sample.-->
 * `AUTOSUGGEST_SUBSCRIPTION_KEY`: The resource key for authenticating your requests.
-* `AUTOSUGGEST_ENDPOINT`: The resource endpoint for sending API requests. It should look like this: `https://<your-custom-subdomain>.api.cognitive.microsoft.com`. 
+* `AUTOSUGGEST_ENDPOINT`: The resource endpoint for sending API requests. It should look like this: `https://<your-custom-subdomain>.api.cognitive.microsoft.com`.
 
 Use the instructions for your operating system.
 <!-- replace the below endpoint and key examples -->
@@ -75,7 +75,7 @@ After you add the environment variable, run `source .bash_profile` from your con
 
 Create a new .NET Core application in your preferred editor or IDE. 
 
-In a console window (such as cmd, PowerShell, or Bash), use the `dotnet new` command to create a new console app with the name `bing-autosuggest-quickstart`. This command creates a simple "Hello World" C# project with a single source file: *program.cs*. 
+In a console window (such as cmd, PowerShell, or Bash), use the `dotnet new` command to create a new console app with the name `bing-autosuggest-quickstart`. This command creates a simple "Hello World" C# project with a single source file: *program.cs*.
 
 ```console
 dotnet new console -n bing-autosuggest-quickstart
@@ -87,7 +87,7 @@ Change your directory to the newly created app folder. You can build the applica
 dotnet build
 ```
 
-The build output should contain no warnings or errors. 
+The build output should contain no warnings or errors.
 
 ```console
 ...
@@ -151,7 +151,6 @@ These code snippets show you how to do the following tasks with the Bing Autosug
 > [!NOTE]
 > This quickstart assumes you've created an environment variable for your Bing Autosuggest key, named `AUTOSUGGEST_SUBSCRIPTION_KEY`, and one for your endpoint, named `AUTOSUGGEST_ENDPOINT`.
 
-
 In a new asynchronous method, instantiate a client with your endpoint and key. Create an ApiKeyServiceClientCredentials object with your key, and use it with your endpoint to create an AutosuggestClient object.
 
 ```csharp
@@ -202,7 +201,6 @@ Run the application from your application directory with the `dotnet run` comman
 dotnet run
 ```
 
-
 ## Next steps
 
 > [!div class="nextstepaction"]
@@ -211,4 +209,4 @@ dotnet run
 ## See also
 
 - [What is Bing Autosuggest?](../../overview.md)
-- [Bing Autosuggest .NET reference](https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-dotnet)
+- [Bing Autosuggest .NET reference](/dotnet/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-dotnet)
