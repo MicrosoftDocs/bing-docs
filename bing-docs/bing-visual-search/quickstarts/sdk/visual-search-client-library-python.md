@@ -14,9 +14,9 @@ ms.author: scottwhi
 
 # Quickstart: Use the Bing Visual Search Python client library
 
-Use this quickstart to begin getting image insights from the Bing Visual Search service, using the Python client library. While Bing Visual Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/blob/master/samples/search/visual_search_samples.py) 
+Use this quickstart to begin getting image insights from the Bing Visual Search service, using the Python client library. While Bing Visual Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/blob/master/samples/search/visual_search_samples.py).
 
-[Reference documentation](https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/visualsearch?view=azure-python&preserve-view=true) | [Library source code](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/cognitiveservices/azure-cognitiveservices-search-visualsearch) | [Package (PyPi)](https://pypi.org/project/azure-cognitiveservices-search-visualsearch/) | [Samples](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/)
+[Reference documentation](/python/api/overview/azure/cognitiveservices/visualsearch?view=azure-python&preserve-view=true) | [Library source code](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/cognitiveservices/azure-cognitiveservices-search-visualsearch) | [Package (PyPi)](https://pypi.org/project/azure-cognitiveservices-search-visualsearch/) | [Samples](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/)
 
 ## Prerequisites
 
@@ -48,13 +48,13 @@ Use this quickstart to begin getting image insights from the Bing Visual Search 
     )
     from msrest.authentication import CognitiveServicesCredentials
     ```
+
 2. Create variables for your subscription key, Custom Configuration ID, and the image you want to upload. 
-    
+
     ```python
     subscription_key = 'YOUR-VISUAL-SEARCH-ACCESS-KEY'
     PATH = 'C:\\Users\\USER\\azure-cognitive-samples\\mytestenv\\TestImages\\'
     image_path = os.path.join(PATH, "image.jpg")
-    
     ```
 
 3. Instantiate the client.
