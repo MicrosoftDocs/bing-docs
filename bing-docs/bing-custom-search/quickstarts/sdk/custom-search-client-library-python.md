@@ -17,10 +17,10 @@ ms.author: scottwhi
 Get started with the Bing Custom Search client library for Python. Follow these steps to install the package and try out the example code for basic tasks. The Bing Custom Search API enables you to create tailored, ad-free search experiences for topics that you care about. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/blob/master/samples/search/custom_search_samples.py).
 
 Use the Bing Custom Search client library for Python to:
-* Find search results on the web from your Bing Custom Search instance.
 
-[Reference documentation](https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/customsearch?view=azure-python) | [Library source code](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/cognitiveservices/azure-cognitiveservices-search-customsearch) | [Package (PyPi)](https://pypi.org/project/azure-cognitiveservices-search-customsearch/) | [Samples](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/)
+- Find search results on the web from your Bing Custom Search instance.
 
+[Reference documentation](/python/api/overview/azure/cognitiveservices/customsearch?view=azure-python) | [Library source code](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/cognitiveservices/azure-cognitiveservices-search-customsearch) | [Package (PyPi)](https://pypi.org/project/azure-cognitiveservices-search-customsearch/) | [Samples](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/)
 
 ## Prerequisites
 
@@ -40,7 +40,6 @@ Install the Bing Custom Search client library with the following command:
 python -m pip install azure-cognitiveservices-search-customsearch
 ```
 
-
 ## Create a new application
 
 Create a new Python file in your favorite editor or IDE, and add the following imports:
@@ -59,7 +58,7 @@ from msrest.authentication import CognitiveServicesCredentials
     endpoint = 'your-endpoint'
     ```
 
-2. Create an instance of `CustomSearchClient`, using a `CognitiveServicesCredentials` object with the subscription key. 
+2. Create an instance of `CustomSearchClient`, using a `CognitiveServicesCredentials` object with the subscription key.
 
     ```python
     client = CustomSearchClient(endpoint=endpoint, credentials=CognitiveServicesCredentials(subscription_key))

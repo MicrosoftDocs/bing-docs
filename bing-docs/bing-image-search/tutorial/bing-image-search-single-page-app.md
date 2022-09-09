@@ -111,7 +111,7 @@ By default, the `onsubmit` handler returns `false`, keeping the form from being 
 
 ![[Bing Image Search form]](../media/bing-images-api/image-search-spa-form.png)
 
-The Bing Image Search API offers several [filter query parameters](https://docs.microsoft.com/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#filter-query-parameters) to narrow and filter search results. The HTML form in this application uses and displays the following parameter options:
+The Bing Image Search API offers several [filter query parameters](/rest/api/cognitiveservices-bingsearch/bing-images-api-v7-reference#filter-query-parameters) to narrow and filter search results. The HTML form in this application uses and displays the following parameter options:
 
 | Option | Description |
 |--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -154,7 +154,6 @@ function bingSearchOptions(form) {
 ## Performing the request
 
 Using the search query, options string, and API key, the `BingImageSearch()` function uses an XMLHttpRequest object to make the request to the Bing Image Search endpoint.
-
 
 ```javascript
 // perform a search given query, options string, and API key

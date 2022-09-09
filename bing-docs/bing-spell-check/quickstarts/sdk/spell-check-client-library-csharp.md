@@ -35,7 +35,7 @@ To add the Bing Spell Check SDK to your project, select **Manage NuGet Packages*
 ## Create and initialize the application
 
 1. Create a new C# console solution in Visual Studio. Then add the following `using` statement:
-    
+
     ```csharp
     using System;
     using System.Linq;
@@ -46,7 +46,7 @@ To add the Bing Spell Check SDK to your project, select **Manage NuGet Packages*
 
 2. Create a new class. Then create an asynchronous function called `SpellCheckCorrection()` that takes a subscription key and sends the spell check request.
 
-3. Instantiate the client by creating a new `ApiKeyServiceClientCredentials` object. 
+3. Instantiate the client by creating a new `ApiKeyServiceClientCredentials` object.
 
     ```csharp
     public static class SpellCheckSample{
@@ -60,7 +60,7 @@ To add the Bing Spell Check SDK to your project, select **Manage NuGet Packages*
 ## Send the request and read the response
 
 1. In the function created above, perform the following steps. Send the spell check request with the client. Add the text to be checked to the `text` parameter, and set the mode to `proof`.  
-    
+
     ```csharp
     var result = await client.SpellCheckerWithHttpMessagesAsync(text: "Bill Gatas", mode: "proof");
     ```
@@ -102,4 +102,4 @@ Build and run your project. If you're using Visual Studio, press **F5** to debug
 > [Create a single page web-app](../../tutorial/spellcheck.md)
 
 - [What is the Bing Spell Check API?](../../overview.md)
-- [Bing Spell Check C# SDK reference guide](https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingspellcheck?view=azure-dotnet)
+- [Bing Spell Check C# SDK reference guide](/dotnet/api/overview/azure/cognitiveservices/client/bingspellcheck?view=azure-dotnet)
