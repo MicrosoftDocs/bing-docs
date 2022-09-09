@@ -25,14 +25,6 @@
         href: quickstarts/rest/nodejs.md
       - name: Python
         href: quickstarts/rest/python.md
-    - name: SDK (client library)
-      items:
-      - name: C#
-        href: quickstarts/sdk/custom-search-client-library-csharp.md
-      - name: Java
-        href: quickstarts/sdk/custom-search-client-library-java.md
-      - name: Python
-        href: quickstarts/sdk/custom-search-client-library-python.md
 - name: Tutorials
   items:
   - name: Build a Custom Search web page
