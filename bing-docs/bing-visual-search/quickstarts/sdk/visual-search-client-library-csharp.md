@@ -16,17 +16,17 @@ ms.author: scottwhi
 
 Use this quickstart to begin getting image insights from the Bing Visual Search service, using the C# client library. While Bing Visual Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7/BingVisualSearch).
 
-[Reference documentation](https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingvisualsearch?view=azure-dotnet&preserve-view=true) | [Library source code](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/Search.BingVisualSearch) | [Package (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.VisualSearch/) | [Samples](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/)
+[Reference documentation](/dotnet/api/overview/azure/cognitiveservices/client/bingvisualsearch?view=azure-dotnet&preserve-view=true) | [Library source code](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/Search.BingVisualSearch) | [Package (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.VisualSearch/) | [Samples](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/)
 
 ## Prerequisites
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/).
-* If you are using Linux/MacOS, this application can be run using [Mono](https://www.mono-project.com/).
-* The NuGet Visual Search package. 
-    - From the Solution Explorer in Visual Studio, right-click on your project and select `Manage NuGet Packages` from the menu. Install the `Microsoft.Azure.CognitiveServices.Search.VisualSearch` package. Installing the NuGet packages also installs the following:
-        - Microsoft.Rest.ClientRuntime
-        - Microsoft.Rest.ClientRuntime.Azure
-        - Newtonsoft.Json
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/).
+- If you are using Linux/MacOS, this application can be run using [Mono](https://www.mono-project.com/).
+- The NuGet Visual Search package.
+  - From the Solution Explorer in Visual Studio, right-click on your project and select `Manage NuGet Packages` from the menu. Install the `Microsoft.Azure.CognitiveServices.Search.VisualSearch` package. Installing the NuGet packages also installs the following:
+    - Microsoft.Rest.ClientRuntime
+    - Microsoft.Rest.ClientRuntime.Azure
+    - Newtonsoft.Json
 
 <!--
 [!INCLUDE [bing-visual-search-signup-requirements](../../../../includes/bing-visual-search-signup-requirements.md)]
@@ -37,28 +37,28 @@ Use this quickstart to begin getting image insights from the Bing Visual Search 
 ## Create and initialize the application
 
 1. In Visual Studio, create a new project. Then add the following directives.
-    
+
     ```csharp
     using Microsoft.Azure.CognitiveServices.Search.VisualSearch;
     using Microsoft.Azure.CognitiveServices.Search.VisualSearch.Models;
     ```
 
 2. Instantiate the client with your subscription key.
-    
+
     ```csharp
     var client = new VisualSearchClient(new ApiKeyServiceClientCredentials("YOUR-ACCESS-KEY"));
     ```
-    
-## Send a search request 
 
-1. Create a `FileStream` to your images (in this case `TestImages/image.jpg`). Then use the client to send a search request using `client.Images.VisualSearchMethodAsync()`. 
-    
+## Send a search request
+
+1. Create a `FileStream` to your images (in this case `TestImages/image.jpg`). Then use the client to send a search request using `client.Images.VisualSearchMethodAsync()`.
+
     ```csharp
      System.IO.FileStream stream = new FileStream(Path.Combine("TestImages", "image.jpg"), FileMode.Open);
      // The knowledgeRequest parameter is not required if an image binary is passed in the request body
      var visualSearchResults = client.Images.VisualSearchMethodAsync(image: stream, knowledgeRequest: (string)null).Result;
     ```
-    
+
 2. Parse the results of the previous query:
 
     ```csharp

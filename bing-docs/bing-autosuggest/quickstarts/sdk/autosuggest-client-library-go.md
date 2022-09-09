@@ -34,12 +34,12 @@ Begin using the Bing Autosuggest client library by creating an Azure resource. C
 ## Create environment variables
 
 >[!NOTE]
-> The endpoints for resources created after July 1, 2019 use the custom subdomain format shown below. For more information and a complete list of regional endpoints, see [Custom subdomain names for Cognitive Services](https://docs.microsoft.com/azure/cognitive-services/cognitive-services-custom-subdomains). 
+> The endpoints for resources created after July 1, 2019 use the custom subdomain format shown below. For more information and a complete list of regional endpoints, see [Custom subdomain names for Cognitive Services](/azure/cognitive-services/cognitive-services-custom-subdomains).
 
 Using your key and endpoint from the resource you created, create two environment variables for authentication:
 <!-- replace the below variable names with the names expected in the code sample.-->
 * `AUTOSUGGEST_SUBSCRIPTION_KEY`: The resource key for authenticating your requests.
-* `AUTOSUGGEST_ENDPOINT`: The resource endpoint for sending API requests. It should look like this: `https://<your-custom-subdomain>.api.cognitive.microsoft.com` 
+* `AUTOSUGGEST_ENDPOINT`: The resource endpoint for sending API requests. It should look like this: `https://<your-custom-subdomain>.api.cognitive.microsoft.com`
 
 Use the instructions for your operating system.
 <!-- replace the below endpoint and key examples -->
@@ -206,7 +206,6 @@ Run your Go application with the `go run [arguments]` command from your applicat
 go run sample-app.go
 ```
 
-
 ## Next steps
 
 > [!div class="nextstepaction"]
@@ -215,4 +214,4 @@ go run sample-app.go
 ## See also
 
 - [What is Bing Autosuggest?](../../overview.md)
-- [Bing Autosuggest Go reference](https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-go)
+- [Bing Autosuggest Go reference](/dotnet/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-go)

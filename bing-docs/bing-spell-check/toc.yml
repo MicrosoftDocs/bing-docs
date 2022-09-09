@@ -1,17 +1,17 @@
 - name: Bing Spell Check documentation
-  # expanded: true
+  href: index.yml
+- name: Overview
   items:
   - name: What is the Bing Spell Check API?
     href: overview.md
   - name: Compare the Bing Search APIs
     href: ../bing-web-search/bing-api-comparison.md
-    maintainContext: true
 - name: Quickstarts
   items:
   - name: Quickstarts
     href: quickstarts/quickstarts.md
   - name: REST API
-    # expanded: true
+    expanded: true
     items:
     - name: Using C#
       href: quickstarts/rest/csharp.md
@@ -41,7 +41,6 @@
     href: how-to/search-response.md
   - name: Get Spell Check API analytics
     href: ../bing-web-search/bing-web-stats.md
-    maintainContext: true
   - name: Upgrade from v5 to v7
     href: bing-spell-check-upgrade-guide-v5-to-v7.md
 - name: Samples
@@ -62,23 +61,11 @@
       href: reference/market-codes.md
     - name: Error codes
       href: reference/error-codes.md
-  - name: SDKs (client libraries)
-    items:
-    - name: .NET
-      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingspellcheck?view=azure-dotnet
-    - name: Node.js
-      href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-spellcheck/?view=azure-node-latest
-    - name: Python
-      href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/spellcheck?view=azure-python
-    - name: Go
-      href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/spellcheck
-    - name: Java
-      href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingspellcheck?view=azure-java-stable
+      
 - name: Resources
   items:
   - name: Create Bing Search Service resource
     href: ../bing-web-search/create-bing-search-service-resource.md
-    maintainContext: true
   - name: Pricing
     href: https://aka.ms/bingsearchapipricing
   - name: Terms of use
@@ -87,12 +74,9 @@
     items:
     - name: Create support ticket
       href: https://aka.ms/bingapisupport
-    - name: User Voice Forum
-      href: https://cognitive.uservoice.com/forums/555907-bing-web-search-api
     - name: Stack Overflow
       href: https://stackoverflow.com/search?q=bing+web+search
 - name: Use and display requirements
   href: ../bing-web-search/use-display-requirements.md
-  maintainContext: true
 - name: Release notes
   href: release-notes.md

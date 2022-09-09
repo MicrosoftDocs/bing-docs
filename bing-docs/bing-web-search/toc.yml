@@ -10,34 +10,34 @@
 - name: Quickstarts
   # expanded: true
   items:
-    - name: Quickstarts
-      href: quickstarts/quickstarts.md
-    - name: REST
-      items:
-      - name: C#
-        href: quickstarts/rest/csharp.md
-      - name: Go
-        href: quickstarts/rest/go.md
-      - name: Java
-        href: quickstarts/rest/java.md
-      - name: Node.js
-        href: quickstarts/rest/nodejs.md
-      - name: PHP
-        href: quickstarts/rest/php.md
-      - name: Python
-        href: quickstarts/rest/python.md
-      - name: Ruby
-        href: quickstarts/rest/ruby.md
-    - name: SDKs (client library)
-      items:
-      - name: C#
-        href: quickstarts/sdk/web-search-client-library-csharp.md
-      - name: Java
-        href: quickstarts/sdk/web-search-client-library-java.md
-      - name: Node.js
-        href: quickstarts/sdk/web-search-client-library-javascript.md
-      - name: Python
-        href: quickstarts/sdk/web-search-client-library-python.md
+  - name: Quickstarts
+    href: quickstarts/quickstarts.md
+  - name: REST
+    items:
+    - name: C#
+      href: quickstarts/rest/csharp.md
+    - name: Go
+      href: quickstarts/rest/go.md
+    - name: Java
+      href: quickstarts/rest/java.md
+    - name: Node.js
+      href: quickstarts/rest/nodejs.md
+    - name: PHP
+      href: quickstarts/rest/php.md
+    - name: Python
+      href: quickstarts/rest/python.md
+    - name: Ruby
+      href: quickstarts/rest/ruby.md
+  - name: SDKs (client library)
+    items:
+    - name: C#
+      href: quickstarts/sdk/web-search-client-library-csharp.md
+    - name: Java
+      href: quickstarts/sdk/web-search-client-library-java.md
+    - name: Node.js
+      href: quickstarts/sdk/web-search-client-library-javascript.md
+    - name: Python
+      href: quickstarts/sdk/web-search-client-library-python.md
 - name: Tutorials
   items:
   - name: Build a single-page web app
@@ -86,23 +86,10 @@
       href: reference/error-codes.md
     - name: Entity types
       href: reference/entity-types.md
-  - name: SDKs (client libraries)
-    items:
-    - name: .NET
-      href: https://docs.microsoft.com/dotnet/api/overview/azure/cognitiveservices/client/bingwebsearchapi?view=azure-dotnet
-    - name: Java
-      href: https://docs.microsoft.com/java/api/overview/azure/cognitiveservices/client/bingwebsearchapi?view=azure-java-stable
-    - name: Python
-      href: https://docs.microsoft.com/python/api/overview/azure/cognitiveservices/websearch?view=azure-python
-    - name: Node.js
-      href: https://docs.microsoft.com/javascript/api/@azure/cognitiveservices-websearch/?view=azure-node-latest
-    - name: Go
-      href: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/websearch
 - name: Resources
   items:
   - name: Create Bing Search Service resource
     href: ../bing-web-search/create-bing-search-service-resource.md
-    maintainContext: true
   - name: Pricing
     href: https://aka.ms/bingsearchapipricing
   - name: Terms of use
@@ -111,8 +98,6 @@
     items:
     - name: Create support ticket
       href: https://aka.ms/bingapisupport
-    - name: User Voice Forum
-      href: https://cognitive.uservoice.com/forums/555907-bing-web-search-api
     - name: Stack Overflow
       href: https://stackoverflow.com/search?q=bing+web+search
 - name: Use and display requirements
