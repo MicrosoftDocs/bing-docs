@@ -4,7 +4,8 @@
       {
         "files": [
           "**/*.md",
-          "**/*.yml"
+          "**/*.yml",
+          "bing-docs/breadcrumb/toc.yml"
         ],
         "exclude": [
           "**/obj/**",

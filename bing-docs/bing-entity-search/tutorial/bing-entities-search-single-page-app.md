@@ -168,7 +168,7 @@ The `mapquery` field isn't handled in `bingSearchOptions()` because it is used f
 
 ## Obtaining a location
 
-The Bing Maps API offers a <a href="https://docs.microsoft.com/en-us/bingmaps/rest-services/locations/find-a-location-by-query" target="_blank">locationQuery method</a>, which we use to find the latitude and longitude of the location the user enters. These coordinates are then passed to the Bing Entity Search API with the user's request. The search results prioritize entities and places that are close to the specified location.
+The Bing Maps API offers a <a href="https://learn.microsoft.com/bingmaps/rest-services/locations/find-a-location-by-query" target="_blank">locationQuery method</a>, which we use to find the latitude and longitude of the location the user enters. These coordinates are then passed to the Bing Entity Search API with the user's request. The search results prioritize entities and places that are close to the specified location.
 
 We can't access the Bing Maps API using an ordinary `XMLHttpRequest` query in a Web app because the service does not support cross-origin queries. Fortunately, it supports JSONP (the "P" is for "padded"). A JSONP response is an ordinary JSON response wrapped in a function call. The request is made by inserting using a `<script>` tag into the document. (Loading scripts is not subject to browser security policies.)
 

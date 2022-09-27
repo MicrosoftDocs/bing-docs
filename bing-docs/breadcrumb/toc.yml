@@ -1,16 +1,16 @@
-- name: Bing Search APIs
-  tocHref: /bing/search-apis/
-  topicHref: /bing/search-apis/index
+- name: Learn
+  tocHref: /
+  topicHref: /
   items:
   - name: Bing Autosuggest
     tocHref: /bing/search-apis/bing-autosuggest/
-    topicHref: /bing/search-apis/bing-aAutosuggest/overview
+    topicHref: /bing/search-apis/bing-autosuggest/overview
   - name: Bing Custom Search
     tocHref: /bing/search-apis/bing-custom-search/
     topicHref: /bing/search-apis/bing-custom-search/overview
   - name: Bing Entity Search
-    tocHref: /bing/search-apis/bing-entities-search/
-    topicHref: /bing/search-apis/bing-entities-search/overview
+    tocHref: /bing/search-apis/bing-entity-search/
+    topicHref: /bing/search-apis/bing-entity-search/overview
   - name: Bing Image Search
     tocHref: /bing/search-apis/bing-image-search/
     topicHref: /bing/search-apis/bing-image-search/overview
