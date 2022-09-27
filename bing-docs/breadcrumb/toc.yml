@@ -1,6 +1,6 @@
-- name: Bing Search APIs
-  tocHref: /bing/search-apis/
-  topicHref: /bing/search-apis/index
+- name: Learn
+  tocHref: /
+  topicHref: /
   items:
   - name: Bing Autosuggest
     tocHref: /bing/search-apis/bing-autosuggest/
