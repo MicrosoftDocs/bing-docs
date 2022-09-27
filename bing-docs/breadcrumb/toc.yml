@@ -2,12 +2,30 @@
   tocHref: /
   topicHref: /
   items:
-  
-  - name: Bing Search Services
-    tocHref: /bing/search-apis/
-    topicHref: /bing/search-apis/index
-    items:
-  
-     - name: Bing Web Search API
-       tocHref: /bing/search-apis/bing-web-search
-       topicHref: /bing/search-apis/bing-web-search/index
+  - name: Bing Autosuggest
+    tocHref: /bing/search-apis/bing-autosuggest/
+    topicHref: /bing/search-apis/bing-autosuggest/overview
+  - name: Bing Custom Search
+    tocHref: /bing/search-apis/bing-custom-search/
+    topicHref: /bing/search-apis/bing-custom-search/overview
+  - name: Bing Entity Search
+    tocHref: /bing/search-apis/bing-entity-search/
+    topicHref: /bing/search-apis/bing-entity-search/overview
+  - name: Bing Image Search
+    tocHref: /bing/search-apis/bing-image-search/
+    topicHref: /bing/search-apis/bing-image-search/overview
+  - name: Bing News Search
+    tocHref: /bing/search-apis/bing-news-search/
+    topicHref: /bing/search-apis/bing-news-search/overview
+  - name: Bing Spell Check
+    tocHref: /bing/search-apis/bing-spell-check/
+    topicHref: /bing/search-apis/bing-spell-check/overview
+  - name: Bing Video Search
+    tocHref: /bing/search-apis/bing-video-search/
+    topicHref: /bing/search-apis/bing-video-search/overview
+  - name: Bing Visual Search
+    tocHref: /bing/search-apis/bing-visual-search/
+    topicHref: /bing/search-apis/bing-visual-search/overview
+  - name: Bing Web Search
+    tocHref: /bing/search-apis/bing-web-search/
+    topicHref: /bing/search-apis/bing-web-search/overview
