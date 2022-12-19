@@ -95,8 +95,14 @@ If the response contains web pages, images, news, or videos, the first result fo
     # Replace with your subscription key.
     subscription_key = "YOUR_SUBSCRIPTION_KEY"
 
-    # Instantiate the client and replace with your endpoint.
-    client = WebSearchClient(endpoint="YOUR_ENDPOINT", credentials=CognitiveServicesCredentials(subscription_key))
+    # Instantiate the client and replace with the required endpoint.
+    '''
+    https://api.bing.microsoft.com/v7.0/search	- Web Search
+    https://api.bing.microsoft.com/v7.0/suggestions/search - Autosuggest
+    https://api.bing.microsoft.com/v7.0/images/search - Image Search
+    https://api.bing.microsoft.com/v7.0/videos/search - Video Search
+    '''
+    client = WebSearchClient(endpoint="ENDPOINT", credentials=CognitiveServicesCredentials(subscription_key))
 
     # Make a request. Replace Yosemite if you'd like.
     web_data = client.web.search(query="Yosemite")
