@@ -8,7 +8,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 02/16/2022
+ms.date: 01/12/2023
 ms.author: v-apunnamara
 ---
 
@@ -30,17 +30,18 @@ These use and display requirements apply to any implementation of the content an
 
 |Term|Description
 |-|-
-|Answer|A category of results returned in a response. For example, a response from the Bing Web Search API can include answers in the categories of webpage results, image, video, visual, and news.
+|Answer|A category of results returned in a response. For example, a response from the Bing Web Search API can include answers in the categories of webpage results, image, video, and news.
 |Response|Any and all answers and associated data received in response to a single call to a Search API.
 |Result|An item of information in an answer. For example, the set of data connected with a single news article is a result in a news answer.
 |Search APIs|Collectively, the Bing Custom Search, Entity Search, Image Search, News Search, Video Search, Visual Search, and Web Search APIs.
 
 ## Bing Spell Check and Bing Autosuggest API restrictions
 
-Do not:
+**Do not:**
 
 - Copy, store, or cache any data you receive from the Bing Spell Check or Bing Autosuggest APIs.
 - Use data you receive from Bing Spell Check or Bing Autosuggest APIs as part of any machine learning or similar algorithmic activity. Do not use this data to train, evaluate, or improve new or existing services that you or third parties might offer.
+- Display data received from the Bing Spell Check or Bing Autosuggest APIs on the same page as content from any general web search engine, large language models or advertising network.
 
 ## Bing Search APIs
 
@@ -52,55 +53,42 @@ Do not:
 All data returned in responses may only be used in internet search experiences. An internet search experience means the content displayed:
 
 - Is relevant and responsive to the end user's direct query, or other indication of their search interest and intent (for example, a user-indicated search query).
-
 - Helps users find and navigate to the response's data sources. For example, providing clickable links from hyperlinks in the response.
-
 - Includes multiple results for the user to select from.
-
 - Are in a placement that enables users to search.
-
 - Includes a visible indication that the content is an internet search result. For example, a statement that the content is "from the web".
-
 - Includes any other appropriate measures to ensure your Bing Search API data does not violate any applicable laws or rights of, or duties or obligations owed by you to, third parties. Consult your legal advisors to determine what measures may be appropriate.
 
 The only exception to these internet search experience requirements is for URL discovery, as described later in this article.
 
 ### Restrictions
 
-Do not:
+**Do not:**
 
 - Copy, store, or cache any data from responses (except retention to the extent permitted by [continuity of service](#continuity-of-service)).
-
 - Use data received from the Search APIs as part of any machine learning or similar algorithmic activity. Do not use this data to train, evaluate, or improve new or existing services that you or third parties might offer.
-
+- Display data received from the Search APIs on the same page as content from any general web search engine, large language models or advertising network.
 - Modify the results content (other than to reformat them in a way that does not violate any other requirement), unless required by law or agreed to by Microsoft.
-
 - Omit attribution information and URLs associated with results content.
-
 - Reorder, including by omission, the results displayed in an answer when an order or ranking is provided, unless required by law or agreed to by Microsoft.
 
     > [!NOTE]
     > This requirement does not apply to reordering implemented through the portal for the Bing Custom Search API.
-
 - Display content that was not included within any part of a response in a way that would lead a user to believe that content is part of the response.
-
 - Display advertising that is not provided by Microsoft on any page that displays any part of a response.
-
 - Display any advertising on pages with responses:
   - From the Bing Image, News Search, Video Search, or Visual Search APIs, or
   - That are filtered or limited primarily (or solely) to image, news and/or video or visual search results.
 
 ### Notices and branding
 
-Do:
+**Do:**
 
 - Prominently include a functional hyperlink to the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839), near each point in the user experience (UX) that offers a user the ability to input a search query. Label the hyperlink **Microsoft Privacy Statement**.
-
 - Prominently display Bing branding, consistent with the [Bing Trademark Usage Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks), near each point in the UX that offers a user the ability to input a search query. Such branding must clearly state to the user that Microsoft is powering the internet search experience.
-
 - Attribute each response (or portion of a response) displayed from the Bing Web Search, Entity Search, Image Search, News Search, Video Search, and Visual Search APIs to Microsoft, unless Microsoft specifies otherwise in writing for your use. This is described in [Bing Trademark Usage Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks).
 
-Do not:
+**Do not:**
 
 - Attribute responses (or portions of responses) displayed from the Bing Custom Search API to Microsoft, unless Microsoft specifies otherwise in writing for your particular use.
 
