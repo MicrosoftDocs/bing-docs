@@ -288,7 +288,7 @@ additionalContent:
           - text: Bing Image Search
             url: /dotnet/api/overview/azure/cognitiveservices/bing-image-search-readme?view=azure-dotnet
           - text: Bing News Search
-            url: dotnet/api/overview/azure/cognitiveservices/bing-news-search-readme?view=azure-dotnet
+            url: /dotnet/api/overview/azure/cognitiveservices/bing-news-search-readme?view=azure-dotnet
           - text: Bing Video Search
             url: /dotnet/api/overview/azure/cognitiveservices/bing-video-search-readme?view=azure-dotnet
           - text: Bing Visual Search
