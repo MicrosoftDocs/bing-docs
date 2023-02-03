@@ -22,7 +22,7 @@ Here's a list of REST samples by language. The list is subject to change. For th
 
 |Language|Sample
 |-|-
-|[C#](https://github.com/microsoft/bing-search-dotnet-samples/tree/main/rest)|[Bing Video Search](ttps://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/BingVideoSearchV7.cs)
+|[C#](https://github.com/microsoft/bing-search-dotnet-samples/tree/main/rest)|[Bing Video Search](https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/BingVideoSearchV7.cs)
 |[Java](https://github.com/microsoft/bing-search-java-samples/tree/main/rest)|[Bing Video Search](https://github.com/microsoft/bing-search-java-samples/blob/main/rest/BingVideoSearchV7.java)
 |[JavaScript](https://github.com/microsoft/bing-search-nodejs-samples/tree/main/rest)|[Bing Video Search](https://github.com/microsoft/bing-search-nodejs-samples/blob/main/rest/BingVideoSearchV7.js)
 |[Python](https://github.com/microsoft/bing-search-python-samples/tree/main/rest)|[Bing Video Search](https://github.com/microsoft/bing-search-python-samples/blob/main/rest/BingVideoSearchV7.py)
