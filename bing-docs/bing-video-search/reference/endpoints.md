@@ -26,9 +26,9 @@ To request video search results, send a GET request to one of the following endp
   
 |Endpoint|Description
 |-|-
-|<https://api.bing.microsoft.com/v7.0/videos/search>|Returns videos that are relevant to the user's search query.
-|<https://api.bing.microsoft.com/v7.0/videos/details>|Returns insights about a video, such as related videos.
-|<https://api.bing.microsoft.com/v7.0/videos/trending>|Returns videos that are trending based on search requests made by others. The videos are broken out into different categories. For example, Top Music Videos. For a list of markets that support trending videos, see [Supported trending videos markets](market-codes.md#trending-video-api-markets).
+|`https://api.bing.microsoft.com/v7.0/videos/search`|Returns videos that are relevant to the user's search query.
+|`https://api.bing.microsoft.com/v7.0/videos/details`|Returns insights about a video, such as related videos.
+|`https://api.bing.microsoft.com/v7.0/videos/trending`|Returns videos that are trending based on search requests made by others. The videos are broken out into different categories. For example, Top Music Videos. For a list of markets that support trending videos, see [Supported trending videos markets](market-codes.md#trending-video-api-markets).
 
 The request must use the HTTPS protocol.
 

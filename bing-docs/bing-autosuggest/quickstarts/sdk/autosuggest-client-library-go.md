@@ -214,4 +214,4 @@ go run sample-app.go
 ## See also
 
 - [What is Bing Autosuggest?](../../overview.md)
-- [Bing Autosuggest Go reference](/dotnet/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-go)
+- Bing Autosuggest Go reference

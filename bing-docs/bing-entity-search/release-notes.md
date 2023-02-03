@@ -17,7 +17,7 @@ See the following sections for information about changes that were included with
 
 ## October 30, 2020
 
-Initial release of this version of Bing Entity Search API. This API replaces the same API hosted by <a href="https://learn.microsoft.com/azure/cognitive-services/bing-entity-search/" target="_blank">Azure Cognitive Services</a>, which is being phased out. 
+Initial release of this version of Bing Entity Search API. This API replaces the same API hosted by [Azure Cognitive Services](/azure/cognitive-services/what-are-cognitive-services), which is being phased out. 
 
 ### New to Bing Search?
 
@@ -32,4 +32,4 @@ Things current Cognitive Services users must do prior to their subscription endi
   
 2. Update your app to use the new endpoints. For the new endpoints, see [Entity Search API](reference/endpoints.md) reference.
 
-If you use <a href="https://learn.microsoft.com/azure/cognitive-services/bing-local-business-search/local-search-reference" target="_blank">Local Business Search API</a>, it's not available in Bing Search Services. 
+If you use [Local Business Search API](/azure/cognitive-services/bing-local-business-search/local-search-reference), it's not available in Bing Search Services. 
