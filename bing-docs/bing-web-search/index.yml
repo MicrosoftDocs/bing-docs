@@ -280,23 +280,23 @@ additionalContent:
       - title: .NET SDK
         links:
           - text: Bing Web Search
-            url: /dotnet/api/overview/azure/cognitiveservices/client/bingwebsearchapi?view=azure-dotnet
+            url: /dotnet/api/overview/azure/cognitiveservices/bing-web-search-api-readme?view=azure-dotnet
           - text: Bing Custom Search
-            url: /dotnet/api/overview/azure/cognitiveservices/client/bingcustomsearch?view=azure-dotnet
+            url: /dotnet/api/overview/azure/cognitiveservices/bing-custom-search-readme?view=azure-dotnet
           - text: Bing Entity Search
-            url: /dotnet/api/overview/azure/cognitiveservices/client/bingentitysearchapi?view=azure-dotnet
+            url: /dotnet/api/overview/azure/cognitiveservices/bing-entity-search-api-readme?view=azure-dotnet
           - text: Bing Image Search
-            url: /dotnet/api/overview/azure/cognitiveservices/client/bingimagesearch?view=azure-dotnet
+            url: /dotnet/api/overview/azure/cognitiveservices/bing-image-search-readme?view=azure-dotnet
           - text: Bing News Search
-            url: /dotnet/api/overview/azure/cognitiveservices/client/bingnewssearch?view=azure-dotnet
+            url: /dotnet/api/overview/azure/cognitiveservices/bing-news-search-readme?view=azure-dotnet
           - text: Bing Video Search
-            url: /dotnet/api/overview/azure/cognitiveservices/client/bingvideosearch?view=azure-dotnet
+            url: /dotnet/api/overview/azure/cognitiveservices/bing-video-search-readme?view=azure-dotnet
           - text: Bing Visual Search
-            url: /dotnet/api/overview/azure/cognitiveservices/client/bingvisualsearch?view=azure-dotnet
+            url: /dotnet/api/overview/azure/cognitiveservices/bing-visual-search-readme?view=azure-dotnet
           - text: Bing Spell Check
-            url: /dotnet/api/overview/azure/cognitiveservices/client/bingspellcheck?view=azure-dotnet
+            url: /dotnet/api/overview/azure/cognitiveservices/bing-spell-check-readme?view=azure-dotnet
           - text: Bing Autosuggest
-            url: /dotnet/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-dotnet
+            url: /dotnet/api/overview/azure/cognitiveservices/bing-autosuggest-readme?view=azure-dotnet
       - title: Java SDK
         links:
           - text: Bing Web Search
@@ -320,21 +320,20 @@ additionalContent:
       - title: Python SDK
         links:
           - text: Bing Web Search
-            url: /python/api/overview/azure/cognitiveservices/websearch?view=azure-python
+            url: /python/api/overview/azure/cognitiveservices/bing-web-search-api-readme?view=azure-python
           - text: Bing Custom Search
-            url: /python/api/overview/azure/cognitiveservices/customsearch?view=azure-python
+            url: /python/api/overview/azure/cognitiveservices/bing-custom-search-readme?view=azure-python
           - text: Bing Entity Search
-            url: /python/api/overview/azure/cognitiveservices/entitysearch?view=azure-python
+            url: /python/api/overview/azure/cognitiveservices/bing-entity-search-api-readme?view=azure-python
           - text: Bing Image Search
-            url: /python/api/overview/azure/cognitiveservices/imagesearch?view=azure-python
+            url: /python/api/overview/azure/cognitiveservices/bing-image-search-readme?view=azure-python
           - text: Bing News Search
-            url: /python/api/overview/azure/cognitiveservices/newssearch?view=azure-python
+            url: /python/api/overview/azure/cognitiveservices/bing-news-search-readme?view=azure-python
           - text: Bing Video Search
-            url: /python/api/overview/azure/cognitiveservices/videosearch?view=azure-python
+            url: /python/api/overview/azure/cognitiveservices/bing-video-search-readme?view=azure-python
           - text: Bing Visual Search
-            url: /python/api/overview/azure/cognitiveservices/visualsearch?view=azure-python
-          - text: Bing Spell Check
-            url: /python/api/overview/azure/cognitiveservices/spellcheck?view=azure-python
+            url: /python/api/overview/azure/cognitiveservices/bing-visual-search-readme?view=azure-python
+          
       - title: Node.js SDK
         links:
           - text: Bing Web Search

@@ -22,10 +22,10 @@ Here's a list of REST samples by language. The list is subject to change. For th
 
 |Language|Sample
 |-|-
-|<a href="https://github.com/microsoft/bing-search-dotnet-samples/tree/main/rest" target="_blank">C#</a>|<a href="https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/BingCustomSearchV7.cs" target="_blank">Bing Custom Search</a>
-|<a href="https://github.com/microsoft/bing-search-java-samples/tree/main/rest" target="_blank">Java</a>|<a href="https://github.com/microsoft/bing-search-java-samples/blob/main/rest/BingCustomSearchV7.java" target="_blank">Bing Custom Search</a>
-|<a href="https://github.com/microsoft/bing-search-nodejs-samples/tree/main/rest" target="_blank">JavaScript</a>|<a href="https://github.com/microsoft/bing-search-nodejs-samples/blob/main/rest/BingCustomSearchV7.js" target="_blank">Bing Custom Search</a>
-|<a href="https://github.com/microsoft/bing-search-python-samples/tree/main/rest" target="_blank">Python</a>|<a href="https://github.com/microsoft/bing-search-python-samples/blob/main/rest/BingCustomSearchV7.py" target="_blank">Bing Custom Search</a>
+|[C#](https://github.com/microsoft/bing-search-dotnet-samples/tree/main/rest)|[Bing Custom Search](https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/BingCustomSearchV7.cs)
+|[Java](https://github.com/microsoft/bing-search-java-samples/tree/main/rest)|[Bing Custom Search](https://github.com/microsoft/bing-search-java-samples/blob/main/rest/BingCustomSearchV7.java)
+|[JavaScript](https://github.com/microsoft/bing-search-nodejs-samples/tree/main/rest)|[Bing Custom Search](https://github.com/microsoft/bing-search-nodejs-samples/blob/main/rest/BingCustomSearchV7.js)
+|[Python](https://github.com/microsoft/bing-search-python-samples/tree/main/rest)|[Bing Custom Search](https://github.com/microsoft/bing-search-python-samples/blob/main/rest/BingCustomSearchV7.py)
 
 
 
@@ -35,10 +35,10 @@ Here's a list of SDK samples by language. The list is subject to change. For the
 
 |Language|Sample
 |-|-
-|<a href="https://github.com/microsoft/bing-search-dotnet-samples/tree/main/rest" target="_blank">C#</a>|<a href="https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/BingWebSearchV7.cs" target="_blank">Bing Custom Search</a>
-|<a href="https://github.com/Azure-Samples/cognitive-services-java-sdk-samples" target="_blank">Java</a>|<a href="https://github.com/microsoft/bing-search-java-samples/blob/main/rest/BingWebSearchV7.java" target="_blank">Bing Custom Search</a>
-|<a href="https://github.com/Azure-Samples/cognitive-services-node-sdk-samples" target="_blank">Node.js</a>|<a href="https://github.com/microsoft/bing-search-nodejs-samples/blob/main/rest/BingWebSearchV7.js" target="_blank">Bing Custom Search</a>
-|<a href="https://github.com/Azure-Samples/cognitive-services-python-sdk-samples" target="_blank">Python</a>|<a href="https://github.com/microsoft/bing-search-python-samples/blob/main/rest/BingWebSearchV7.py" target="_blank">Bing Custom Search</a>
+|[C#](https://github.com/microsoft/bing-search-dotnet-samples/tree/main/rest)|[Bing Custom Search](https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/BingWebSearchV7.cs)
+|[Java](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples)|[Bing Custom Search](https://github.com/microsoft/bing-search-java-samples/blob/main/rest/BingWebSearchV7.java)
+|[Node.js](https://github.com/Azure-Samples/cognitive-services-node-sdk-samples)|[Bing Custom Search](https://github.com/microsoft/bing-search-nodejs-samples/blob/main/rest/BingWebSearchV7.js)
+|[Python](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples)|[Bing Custom Search](https://github.com/microsoft/bing-search-python-samples/blob/main/rest/BingWebSearchV7.py)
 
 
 ## Next steps

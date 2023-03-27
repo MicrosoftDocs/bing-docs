@@ -53,7 +53,7 @@ Defines an entity such as a person, place, or thing.
 |Name|Value|Type
 |-|-|-
 |bingId|An ID that uniquely identifies this entity.|String  
-|contractualRules|A list of rules that you must adhere to if you display the entity. For example, the rules may govern attribution of the entity's description.<br/><br/>The following contractual rules may apply:<ul><li>[LicenseAttribution](#licenseattribution)</li><li>[LinkAttribution](#linkattribution)</li><li>[MediaAttribution](#mediaattribution)</li><li>[TextAttribution](#textattribution)</li></ul>Not all entities include rules. If the entity provides contractual rules, you must abide by them. For more information about using contractual rules, see [Attributing Data](/../../bing-entities-search/concepts/data-attribution).|Object[]
+|contractualRules|A list of rules that you must adhere to if you display the entity. For example, the rules may govern attribution of the entity's description.<br/><br/>The following contractual rules may apply:<ul><li>[LicenseAttribution](#licenseattribution)</li><li>[LinkAttribution](#linkattribution)</li><li>[MediaAttribution](#mediaattribution)</li><li>[TextAttribution](#textattribution)</li></ul>Not all entities include rules. If the entity provides contractual rules, you must abide by them. For more information about using contractual rules, see [Attributing Data](/bing/search-apis/bing-web-search/data-attribution).|Object[]
 |description|A short description of the entity.|String  
 |image|An image of the entity.|[Image](#image)
 |name|The entity's name.|String
