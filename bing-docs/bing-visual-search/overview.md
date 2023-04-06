@@ -8,7 +8,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: overview
-ms.date: 03/07/2023
+ms.date: 01/18/2023
 ---
 
 # What is the Bing Visual Search API?
@@ -31,7 +31,6 @@ You can discover the following insights by using Bing Visual Search:
 |Insight|Description
 |-|-
 |Visually similar images|A list of images that are visually similar to the source image.
-|Visually similar products|A list of products that are visually similar to those seen in the image.
 |Shopping sources|A list of places where you can buy the item seen in the image.
 |Related searches|A list of related searches made by others or that are based on the contents of the image.
 |Webpages that include the image|A list of webpages that include the image.
