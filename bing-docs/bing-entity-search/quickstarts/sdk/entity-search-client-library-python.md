@@ -54,7 +54,7 @@ python -m pip install azure-cognitiveservices-search-entitysearch
     ```python
     subscription_key = "YOUR-SUBSCRIPTION-KEY"
     endpoint = "YOUR-ENDPOINT"
-    client = EntitySearchclient(endpoint=endpoint, credentials=CognitiveServicesCredentials(subscription_key))
+    client = EntitySearchClient(endpoint=endpoint, credentials=CognitiveServicesCredentials(subscription_key))
     ```
 
 ## Send a search request and receive a response
