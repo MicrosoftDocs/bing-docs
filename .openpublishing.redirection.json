@@ -39,6 +39,11 @@
       "source_path": "bing-docs/bing-spell-check/index.yml",
       "redirect_url": "/bing/search-apis/bing-spell-check/overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/how-to/image-insights.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
     }
   ]
 }

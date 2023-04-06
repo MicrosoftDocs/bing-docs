@@ -4,16 +4,16 @@ titleSuffix: Bing Services
 description: Describes the programming elements of the Bing Image Search APIs.
 ms.service: bing-search-services
 ms.subservice: bing-image-search
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.topic: reference
 ms.date: 07/15/2020
-ms.author: scottwhi
+
 ---
 
 # Image Search APIs v7 reference
 
-The Image Search APIs let you search for images that are relevant to the user's search query and also get trending videos. This section provides technical details about the query parameters and headers that you use to request images and the JSON response objects that contain them. For examples that show how to make requests, see [Bing Image Search overview](../overview.md). 
+The Image Search APIs let you search for images that are relevant to the user's search query and also get trending videos. This section provides technical details about the query parameters and headers that you use to request images and the JSON response objects that contain them. For examples that show how to make requests, see [Bing Image Search overview](../overview.md).
   
 For information about permitted use and display of the results, see [Use and display requirements](../../bing-web-search/use-display-requirements.md).
 
@@ -24,14 +24,12 @@ For information about permitted use and display of the results, see [Use and dis
 
 To request image search results, send a GET request to one of the following endpoints:  
   
-|Endpoint|Description 
+|Endpoint|Description
 |-|-
-|https://api.bing.microsoft.com/v7.0/images/search|Returns images that are relevant to the user's search query.
-|https://api.bing.microsoft.com/v7.0/images/trending|Returns images that are trending based on search requests made by others. The images are broken out into different categories. For example, Popular People Searches.<br/><br/>For a list of markets that support trending images, see [Supported trending images markets](market-codes.md#trending-image-api-markets).
-|https://api.bing.microsoft.com/v7.0/images/search/details|Returns insights about an image. Do not use this API. Instead, use [Visual Search API](../../bing-visual-search/overview.md).
+|<https://api.bing.microsoft.com/v7.0/images/search> | Returns images that are relevant to the user's search query.
+|<https://api.bing.microsoft.com/v7.0/images/trending> | Returns images that are trending based on search requests made by others. The images are broken out into different categories. For example, Popular People Searches.<br/><br/>For a list of markets that support trending images, see [Supported trending images markets](market-codes.md#trending-image-api-markets).
 
-
-The request must use the HTTPS protocol. 
+The request must use the HTTPS protocol.
 
 > [!NOTE]
 > The maximum URL length is 2,048 characters. To ensure that your URL length does not exceed the limit, the maximum length of your query parameters should be less than 1,500 characters. If the URL exceeds 2,048 characters, the server returns 404 Not found.  

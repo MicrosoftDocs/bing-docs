@@ -47,8 +47,6 @@
     href: how-to/get-images.md
   - name: Handle the response
     href: how-to/search-response.md
-  - name: Get image insights
-    href: how-to/image-insights.md
   - name: Get .gif images
     href: how-to/gif-images.md
   - name: Get trending images

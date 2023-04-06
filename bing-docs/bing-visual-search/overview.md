@@ -9,19 +9,18 @@ ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: overview
 ms.date: 01/18/2023
-ms.author: v-apunnamara
 ---
 
 # What is the Bing Visual Search API?
 
-Bing Visual Search API returns insights about an image. For example, Bing can help you find similar images, learn where to buy the dress seen in the pic, explore a landmark, identify a dog’s breed, and more. All you need is an image file, the URL to an image, or an insights token. Use Bing Visual Search API to offer an experience similar to Bing.com/visualsearch.
+Bing Visual Search API returns insights about an image. For example, Bing can help you find similar images, learn where to buy the dress seen in the pic, explore a landmark, identify a dog’s breed, and more. All you need is an image file, the URL to an image, or an insights token. Use Bing Visual Search API to offer an experience similar to `Bing.com/visualsearch`.
 
 > [!IMPORTANT]
-> Bing Visual Search API is the preferred method for getting image insights. If you use [Image Insights API](../bing-image-search/how-to/image-insights.md), consider switching to Bing Visual Search API.
+> Bing Visual Search API is the preferred method for getting image insights.
 
 ## Get started
 
-To get started using the API, pick the subscription you want from [Bing API Pricing](https://aka.ms/bingsearchapipricing). After getting your subscription key, you're all set to make your first call.
+To get started using the API, pick the subscription you want from <a href="https://aka.ms/bingsearchapipricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call.
 
 You can easily call the API by sending a native HTTP GET request or by using the Visual Search SDK. For examples to help you get up and running quickly for either option, see [Quickstarts](quickstarts/quickstarts.md).
 
@@ -56,6 +55,5 @@ If you are not sure if your experience can be considered a search-like experienc
 
 - Learn about other APIs in the [family of Bing Search APIs](../bing-web-search/bing-api-comparison.md).
 - Learn about [use and display requirements](../bing-web-search/use-display-requirements.md) for Bing Visual Search.  
-- Learn about how to [get image insights](how-to/get-insights.md).
 - Learn about what's in the [JSON response](how-to/search-response.md).
 - Review [Visual Search API v7 reference](reference/endpoints.md) documentation.  
