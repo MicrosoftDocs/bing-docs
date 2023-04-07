@@ -2,13 +2,12 @@
 title: Market and language codes used by the Bing News Search APIs
 titleSuffix: Bing Services
 description: Provides the list of markets and languages that you may specify in Bing News Search requests.
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: reference
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 04/07/2023
 ---
 
 # Market and language codes used by Bing News Search APIs
@@ -20,8 +19,8 @@ The following table lists the market code values that you may use to specify the
 
 For a list of country codes that you may specify in the [cc](query-parameters.md#cc) query parameter, see [Country codes](#country-codes).  
   
-|Country/Region|Language|Market code 
-|-|-|- 
+|Country/Region|Language|Market code
+|-|-|-
 |Argentina|Spanish|es-AR  
 |Australia|English|en-AU
 |Austria|German|de-AT
@@ -33,31 +32,31 @@ For a list of country codes that you may specify in the [cc](query-parameters.md
 |Chile|Spanish|es-CL
 |Denmark|Danish|da-DK
 |Finland|Finnish|fi-FI
-|France|French|fr-FR 
+|France|French|fr-FR
 |Germany|German|de-DE
 |Hong Kong SAR|Traditional Chinese|zh-HK
-|India|English|en-IN 
+|India|English|en-IN
 |Indonesia|English|en-ID
-|Italy|Italian|it-IT 
+|Italy|Italian|it-IT
 |Japan|Japanese|ja-JP
-|Korea|Korean|ko-KR 
+|Korea|Korean|ko-KR
 |Malaysia|English|en-MY
-|Mexico|Spanish|es-MX 
+|Mexico|Spanish|es-MX
 |Netherlands|Dutch|nl-NL
 |New Zealand|English|en-NZ
 |Norway|Norwegian|no-NO
 |People's republic of China|Chinese|zh-CN
-|Poland|Polish|pl-PL 
+|Poland|Polish|pl-PL
 |Republic of the Philippines|English|en-PH
-|Russia|Russian|ru-RU 
-|South Africa|English|en-ZA 
-|Spain|Spanish|es-ES 
+|Russia|Russian|ru-RU
+|South Africa|English|en-ZA
+|Spain|Spanish|es-ES
 |Sweden|Swedish|sv-SE
-|Switzerland|French|fr-CH 
-|Switzerland|German|de-CH 
-|Taiwan|Traditional Chinese|zh-TW 
-|Turkey|Turkish|tr-TR 
-|United Kingdom|English|en-GB 
+|Switzerland|French|fr-CH
+|Switzerland|German|de-CH
+|Taiwan|Traditional Chinese|zh-TW
+|Turkey|Turkish|tr-TR
+|United Kingdom|English|en-GB
 |United States|English|en-US  
 |United States|Spanish|es-US  
   
@@ -65,11 +64,11 @@ For a list of country codes that you may specify in the [cc](query-parameters.md
 
 The following are the country codes that you may specify in the [cc](query-parameters.md#cc) query parameter. The list is subject to change.  
   
-|Country/Region|Country Code 
+|Country/Region|Country Code
 |-|-
 |Argentina|AR
 |Australia|AU  
-|Austria|AT 
+|Austria|AT
 |Belgium|BE  
 |Brazil|BR  
 |Canada|CA  
@@ -85,12 +84,12 @@ The following are the country codes that you may specify in the [cc](query-param
 |Japan|JP  
 |Korea|KR  
 |Malaysia|MY
-|Mexico|MX 
-|Netherlands|NL 
+|Mexico|MX
+|Netherlands|NL
 |New Zealand|NZ  
 |Norway|NO
-|People's Republic of China|CN 
-|Poland|PL 
+|People's Republic of China|CN
+|Poland|PL
 |Portugal|PT
 |Republic of the Philippines|PH
 |Russia|RU
@@ -165,37 +164,34 @@ The following are the Bing supported languages that you may specify in the [setL
 
 The following table lists the market code values that you may use to specify the [mkt](query-parameters.md#mkt) query parameter when calling the News Category API. Bing returns content for only these markets. The list is subject to change.  
   
-|Country/Region|Language|Market code 
-|-|-|- 
+|Country/Region|Language|Market code
+|-|-|-
 |Australia|English|en-AU
 |Canada|French|fr-CA
 |Chile|Spanish|es-CL
 |Denmark|Danish|da-DK
 |Finland|Finnish|fi-FI
-|France|French|fr-FR 
+|France|French|fr-FR
 |Germany|German|de-DE
-|Italy|Italian|it-IT 
+|Italy|Italian|it-IT
 |Mexico|Spanish|es-MX
 |People's republic of China|Chinese|zh-CN
 |Portuguese|Brazil|pt-BR
 |United Kingdom|English|en-GB
 |United States|English|en-US
-|United States|Spanish|es-US 
+|United States|Spanish|es-US
 |Worldwide aggregate|English|en-WW
 
 ## Trending News API markets
 
 The following table lists the market code values that you may use to specify the [mkt](query-parameters.md#mkt) query parameter when calling the Trending News API. Bing returns content for only these markets. The list is subject to change.  
   
-|Country/Region|Language|Market code 
-|-|-|- 
-|Australia|English|en-AU
+|Country/Region|Language|Market code
+|-|-|-
 |Canada|English|en-CA
 |Canada|French|fr-CA
 |Germany|German|de-DE
-|India|English|en-IN
 |France|French|fr-FR
 |People's republic of China|Chinese|zh-CN
-|Portuguese|Brazil|pt-BR
 |United Kingdom|English|en-GB
 |United States|English|en-US
