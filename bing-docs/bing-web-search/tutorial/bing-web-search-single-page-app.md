@@ -3,13 +3,12 @@ title: "Tutorial: Create a single-page web app - Bing Web Search API"
 titleSuffix: Bing Search Services
 description: This single-page app demonstrates how the Bing Web Search API can be used to retrieve, parse, and display relevant search results in a single-page app.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 04/07/2023
 ---
 
 # Tutorial: Create a single-page app using the Bing Web Search API
@@ -19,6 +18,7 @@ This single-page app demonstrates how to retrieve, parse, and display search res
 This sample app can:
 
 > [!div class="checklist"]
+>
 > * Call the Bing Web Search API with search options
 > * Display web, image, news, and video results
 > * Paginate results
@@ -32,7 +32,7 @@ To use this app, an [Azure Cognitive Services account](/azure/cognitive-services
 Here are a few things that you'll need to run the app:
 
 * An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
-* Once you have your Azure subscription, <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesBingSearch-v7"  title="Create a Bing Search resource". target="_blank">create a Bing Search resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
+* Once you have your Azure subscription, <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesBingSearch-v7"  title="Create a Bing Search resource" target="_blank"> create a Bing Search resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
 
 * Node.js 8 or later
 
