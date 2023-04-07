@@ -30,7 +30,7 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 ## Request and response headers
 
-Although that's all the more you need to do to spell check a text string, Bing does suggest you include a couple of other headers to provide a better experience for your user. Those headers include:
+Although that's all you need to do to spell check on a text string, Bing suggests you include a couple of other headers to provide a better experience for your user. Those headers include:
 
 - User-Agent &mdash; Lets Bing know whether needs a mobile or desktop experience.
 - X-MSEdge-ClientID &mdash; Provides continuity of experience.
