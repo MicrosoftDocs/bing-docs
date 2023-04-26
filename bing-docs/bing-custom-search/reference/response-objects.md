@@ -260,7 +260,7 @@ Defines a video that is relevant to the query.
 |<a name="video-mainentity"></a>mainEntity|The name of the main entity shown in the video.<br/><br/>The object includes this field only when the `scenario` field in the [VideoAnswer](#videoanswer) object is set to SingleDominantVideo.|[Thing](#thing)
 |<a name="video-motionthumbnailurl"></a>motionThumbnailUrl|The URL to an animated thumbnail that shows a preview of the video. Typically, you use this URL to play a preview of the video when the user mouses over the thumbnail image of the video on your results page.|String  
 |<a name="video-name"></a>name|The name of the video.|String
-|<a name="video-publisher"></a>publisher|A list of the publishers that published the video.|[Publisher](#publisher) 
+|<a name="video-publisher"></a>publisher|A list of the publishers that published the video.|[Publisher[]](#publisher) 
 |<a name="video-thumbnail"></a>thumbnail|The width and height of the thumbnail image (see `thumbnailUrl`).|[MediaSize](#mediasize)
 |<a name="video-thumbnailurl">thumbnailUrl|The URL to a thumbnail image of the video. For information about resizing the image, see [Resize and crop thumbnail images](../../bing-web-search/resize-and-crop-thumbnails.md).|String
 |<a name="video-videoid"></a>videoId|An ID that uniquely identifies this video in the list of videos.|String  
