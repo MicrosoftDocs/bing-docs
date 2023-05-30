@@ -8,10 +8,13 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 05/29/2023
+ms.date: 05/30/2023
 ---
 
-# Use and display requirements of Bing Search API with your LLM
+# Use and Display requirements of Bing Search API with your LLM
+
+> [!NOTE]
+> The Use and Display requirements on this page apply to the Bing Search APIs with your LLM only. Refer [Use and Display requirements of Bing Search APIs](use-display-requirements.md) to understand specific requirements of the using Bing Search APIs.
 
 These use and display requirements apply to any implementation of the content and associated information from the following Bing Search APIs, including relationships, metadata, and other signals.
 
