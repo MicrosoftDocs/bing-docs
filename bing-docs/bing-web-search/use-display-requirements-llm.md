@@ -60,7 +60,7 @@ You will not modify or create a derivative work based on any Content unless expr
 
 #### 4. Bing Search APIs, with your LLM Use and Display Requirements
 
-You must comply with the Bing Search APIs, with your [LLM Use and Display Requirements](llm-use-display-requirements.md). You must use results you obtain through the Services only in Internet Search Experiences (as defined in the Bing Search APIs, with your LLM Use and Display Requirements) and you must not cache or copy results.
+You must comply with the Bing Search APIs, with your [LLM Use and Display Requirements](use-display-requirements-llm.md). You must use results you obtain through the Services only in Internet Search Experiences (as defined in the Bing Search APIs, with your LLM Use and Display Requirements) and you must not cache or copy results.
 
 #### 5. LLM Use
 
