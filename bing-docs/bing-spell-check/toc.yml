@@ -78,5 +78,7 @@
       href: https://stackoverflow.com/search?q=bing+web+search
 - name: Use and display requirements
   href: ../bing-web-search/use-display-requirements.md
+- name: Use and display requirements for your LLM
+  href: ../bing-web-search/use-display-requirements-llm.md
 - name: Release notes
   href: release-notes.md
