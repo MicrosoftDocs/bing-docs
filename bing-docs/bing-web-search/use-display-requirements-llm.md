@@ -8,13 +8,13 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 05/31/2023
+ms.date: 06/01/2023
 ---
 
 # Use and Display requirements of Bing Search API with your LLM
 
 > [!NOTE]
-> The Use and Display requirements on this page apply to the Bing Search APIs with your LLM only. Refer [Use and Display requirements of Bing Search APIs](use-display-requirements.md) to understand specific requirements of the using Bing Search APIs.
+> The Use and Display requirements on this page apply to the Bing Search APIs with your LLM. For Use and Display Requirements specific to using the Bing Search APIs, refer [here](use-display-requirements.md).
 
 These terms of use (*TOU*) apply to your use of the Services and Content, including LLM Use, all as defined below. By installing, accessing, or otherwise using the Services within your Application (defined below), you are agreeing to these TOU with Microsoft Corporation (**"Microsoft"**, **"we"**, **"us"**, or **"our"**). You represent and warrant to us that you have the authority to accept this TOU on behalf of yourself, a company, or another entity, as applicable (**"you"** or **"Company"**). We may change, amend, or cancel this TOU at any time. Your use of the Services after the changes become effective means you agree to the new TOU. If you do not agree to the new TOU, you must stop using the Services.
 
