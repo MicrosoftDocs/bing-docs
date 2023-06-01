@@ -1,14 +1,13 @@
 ---
 title: Error codes used by the Bing Visual Search API
 titleSuffix: Bing Services
-description: Provides the list of HTTP status codes and service error codes that Bing Search may return.
-author: swhite-msft
+description: Provides the list of HTTP status codes and service error codes that Bing Visual Search may return.
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: reference
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 06/01/2023
 ---
 
 # HTTP status codes that Bing Visual Search API may return
@@ -17,7 +16,7 @@ The following are the possible HTTP status codes that a request may return:
   
 |Status code|Description  
 |-|-  
-|200|Success. 
+|200|Success.
 |400|One of the query parameters is missing or not valid.
 |401|The subscription key is missing or is not valid.
 |403|The user is authenticated (for example, they used a valid subscription key) but they don’t have permission to the requested resource.<br/><br/>Bing may also return this status if the caller exceeded their queries per month quota.
@@ -64,4 +63,3 @@ The following are the possible error code and sub-error code values:
 |RateLimitExceeded|No sub-codes|Bing returns RateLimitExceeded whenever you exceed your queries per second (QPS) or queries per month (QPM) quota.<br/><br/>If you exceed QPS, Bing returns HTTP status code 429, and if you exceed QPM, Bing returns 403.
 |InvalidAuthorization|AuthorizationMissing<br/>AuthorizationRedundancy|Bing returns InvalidAuthorization when Bing cannot authenticate the caller. For example, the [Ocp-Apim-Subscription-Key](headers.md#subscriptionkey) header is missing or the subscription key is not valid.<br/><br/>Redundancy occurs if you specify more than one authentication method.<br/><br/>If the error is InvalidAuthorization, the HTTP status code is 401.
 |InsufficientAuthorization|AuthorizationDisabled<br/>AuthorizationExpired|Bing returns InsufficientAuthorization when the caller does not have permissions to access the resource. This can occur if the subscription key has been disabled or has expired. <br/><br/>If the error is InsufficientAuthorization, the HTTP status code is 403.
-
