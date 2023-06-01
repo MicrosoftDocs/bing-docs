@@ -103,6 +103,6 @@
 - name: Use and display requirements
   href: Use-display-requirements.md
 - name: Use and display requirements with your LLM
-  href: Use-display-requirements-llm.md
+  href: use-display-requirements-llm.md
 - name: Release notes
   href: release-notes.md
