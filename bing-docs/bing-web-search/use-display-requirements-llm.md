@@ -1,5 +1,5 @@
 ---
-title: Use and display requirements for the Bing Search API with LLM
+title: Use and Display requirements of Bing Search API with your LLM
 titleSuffix: Bing Search Services
 description: The requirements for displaying search results from the Bing Search APIs with LLM in your applications.
 services: bing-search-services
