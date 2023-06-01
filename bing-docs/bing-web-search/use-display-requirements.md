@@ -14,7 +14,7 @@ ms.date: 06/01/2023
 # Bing Search API use and display requirements
 
 > [!NOTE]
-> The Use and Display requirements on this page apply to the Bing Search APIs. For Use and Display Requirements specific to using the Bing APIs, bring your own LLM, refer [here](use-display-requirements-llm.md).
+> The Use and Display requirements on this page apply to the Bing Search APIs. For Use and Display Requirements specific to using the Bing Search APIs, with your LLM, refer [here](use-display-requirements-llm.md).
 
 These use and display requirements apply to any implementation of the content and associated information from the following Bing Search APIs, including relationships, metadata, and other signals.
 

@@ -28,7 +28,7 @@ highlightedContent:
     - title: Use and display requirements
       itemType: reference
       url: use-display-requirements.md
-    - title: Use and display requirements of Bing Search API with your LLM
+    - title: Use and display requirements of Bing Search APIs, with your LLM  
       itemType: reference
       url: use-display-requirements-llm.md
     - title: API pricing details
