@@ -13,9 +13,8 @@ metadata:
   ms.subservice: bing-web-search
   ms.topic: hub-page
   ms.collection: collection
-  author: swhite-msft
-  ms.author: scottwhi
-  ms.date: 07/15/2020
+  author: alekhyasasi
+  ms.date: 06/01/2023
 
 highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -29,6 +28,9 @@ highlightedContent:
     - title: Use and display requirements
       itemType: reference
       url: use-display-requirements.md
+    - title: Use and display requirements of Bing Search API with your LLM
+      itemType: reference
+      url: use-display-requirements-llm.md
     - title: API pricing details
       itemType: reference
       url: https://aka.ms/bingsearchapipricing
