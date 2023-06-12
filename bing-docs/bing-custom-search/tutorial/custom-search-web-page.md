@@ -3,25 +3,24 @@ title: "Tutorial: Create a custom search web page - Bing Custom Search"
 titleSuffix: Bing Search Services
 description: This tutorial shows you how to configure a custom search instance and integrate it into a webpage.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 06/12/2023
 ---
 
 # Tutorial: Build a Custom Search web page
 
-Bing Custom Search enables you to create tailored search experiences for topics that you care about. For example, if you own a martial arts website that provides a search experience, you can specify the domains, sub-sites, and webpages that Bing searches. Your users see search results tailored to the content they care about instead of paging through general search results that may contain irrelevant content. 
+Bing Custom Search enables you to create tailored search experiences for topics that you care about. For example, if you own a martial arts website that provides a search experience, you can specify the domains, sub-sites, and webpages that Bing searches. Your users see search results tailored to the content they care about instead of paging through general search results that may contain irrelevant content.
 
 This tutorial demonstrates how to configure a custom search instance and integrate it into a new web page.
 
 The tasks covered are:
 
 > [!div class="checklist"]
+>
 > - Create a custom search instance
 > - Add active entries
 > - Add blocked entries
@@ -51,7 +50,6 @@ To create a Bing Custom Search instance:
   
    ![Screenshot of URL definition page](../media/newCustomSrch1-a.png)  
 
-
 ## Add active entries
 
 To include results from specific websites or URLs, add them to the **Active** tab.
@@ -70,8 +68,7 @@ To exclude results from specific websites or URLs, add them to the **Blocked** t
 
     ![Screenshot of the Definition Editor blocked tab](../media/blockedCustomSrch.png)
 
-
-2. To confirm that your instance doesn't return results from the blocked websites, enter a query in the preview pane on the right. 
+2. To confirm that your instance doesn't return results from the blocked websites, enter a query in the preview pane on the right.
 
 ## Add pinned entries
 
@@ -103,7 +100,6 @@ Custom Search provides a hosted UI to render the JSON response of your custom se
   
    ![Screenshot of the Hosted UI customize color theme](./media/custom-search-hosted-ui-customize-color-theme.png)  
 
-  
 4. Specify additional configuration options.  
   
    ![Screenshot of the Hosted UI additional configurations step](./media/custom-search-hosted-ui-additional-configurations.png)  
@@ -116,7 +112,6 @@ Custom Search provides a hosted UI to render the JSON response of your custom se
   
    ![Screenshot of the Hosted UI additional configurations step](./media/custom-search-hosted-ui-subscription-key.png)
 
-
 ## Publish or revert a search instance
 
 Custom search has two environments: staging/testing (see the **Configuration** tab) and production (see the **Production** tab). When you create a new instance or make changes to an existing instance, those changes occur in the testing environment.
@@ -124,7 +119,6 @@ Custom search has two environments: staging/testing (see the **Configuration** t
 After configuring and validating your changes, click **Publish** to make your hosted UI configuration live. Changes are not reflected against your production endpoints until you publish.
 
 Before publishing, if you decide that you don't want to keep the changes you've made, click **Revert**. When you revert your changes, the **Published** version remains unchanged and the **Configuration** version is reverted to match the **Published** version.
-
 
 <a name="consuminghostedui"></a>
 
@@ -213,8 +207,3 @@ Your new custom search web page should look similar to this:
 Performing a search renders results like this:
 
 ![Screenshot of custom search results](./media/custom-search-webapp-results.png)
-
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Call Bing Custom Search endpoint (C#)](../quickstarts/rest/csharp.md)
