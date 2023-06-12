@@ -3,14 +3,12 @@ title: "Tutorial: Getting Automatic suggestions Results using Bing Autosuggest A
 titleSuffix: Bing Search Services
 description: In this tutorial, you will build a web page that allows users to query the Bing Autosuggest API and displays the query results.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 06/12/2023
 ---
 
 # Tutorial: Get search suggestions on a web page
@@ -20,6 +18,7 @@ In this tutorial, we'll build a Web page that allows users to query the Bing Aut
 This tutorial shows you how to:
 
 > [!div class="checklist"]
+>
 > - Make a simple query to the Bing Autosuggest API
 > - Display query results
 
@@ -190,7 +189,7 @@ function bingAutosuggest(query, key) {
 ```
 
 Specify the Bing Autosuggest API endpoint and declare an XMLHttpRequest object, which we will
-use to send requests. 
+use to send requests.
 
 ```html
     var endpoint = "https://api.bing.microsoft.com/v7.0/suggestions";

@@ -3,20 +3,19 @@ title: Suggesting search terms with the Bing Autosuggest API
 titleSuffix: Bing Search Services
 description: Use Bing Autosuggest API to improve your users' search box experience by providing a list of suggested query strings with each character they type.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 06/12/2023
 ---
 
 # Getting query string suggestions
 
 Use Bing Autosuggest API to improve your users' search box experience by providing a list of suggested query strings with each character they type.
 
-As the user types their search query, send Bing the partial query string and get back suggestions. The more complete the user’s query string is, the more relevant the list of suggested query terms will be. For example, the suggestions that Bing might return for *s* are likely to be less relevant than the suggestions Bing returns for *sail*. 
+As the user types their search query, send Bing the partial query string and get back suggestions. The more complete the user’s query string is, the more relevant the list of suggested query terms will be. For example, the suggestions that Bing might return for *s* are likely to be less relevant than the suggestions Bing returns for *sail*.
 
 ![Autosuggest drop-down search box list](../media/bing-autosuggest-drop-down-list.PNG)
 
@@ -24,14 +23,11 @@ The suggestions are based on user intent and past searches made by the user and 
 
 When the user selects a suggestion from the drop-down list, you can use it to search the web using one of the [Bing Search APIs](../../bing-web-search/bing-api-comparison.md) or send the user to Bing's search results page for the query.
 
-
 ## Sending a request
 
 Sending a request is easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 
-```
-https://api.bing.microsoft.com/v7.0/suggestions
-```
+> <https://api.bing.microsoft.com/v7.0/suggestions>
 
 Here's a cURL example that shows you how to call the endpoint using your subscription key. Change the *q* query parameter to get query string suggestions for whatever you'd like.
 
@@ -56,7 +52,7 @@ Here's a cURL example that includes these headers.
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/v7.0/suggestions?q=sail
 ```
 
-Bing returns a couple of headers you should capture. 
+Bing returns a couple of headers you should capture.
 
 - BingAPIs-TraceId &mdash; ID that identifies the request in the log file.
 - X-MSEdge-ClientID &mdash; The ID that you need to pass in a subsequent request to provide continuity of experience.
@@ -69,7 +65,6 @@ Here's a cURL call that returns the response headers. If you want to remove the 
 ```curl
 curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/suggestions?q=sail
 ```
-
 
 ## Query parameters
 
@@ -157,10 +152,8 @@ The [SearchAction](../reference/response-objects.md#searchaction) object contain
 
 If you don't want to call one of Bing's Search APIs, you can use the URL in the `url` field to send the user to the Bing search results page instead.
 
-
 ## Next steps
 
-- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
 - Learn about the [Bing Search APIs](../../bing-web-search/bing-api-comparison.md) where you can use the suggested search strings.
 - Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing Search APIs.  
 - Review [Autosuggest API v7 reference](../reference/endpoints.md) documentation.  

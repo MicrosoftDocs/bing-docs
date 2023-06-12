@@ -7,7 +7,7 @@ ms.subservice: bing-autosuggest
 ms.topic: "overview"
 author: alekhyasasi
 manager: ehansen
-ms.date: 05/26/2023
+ms.date: 06/12/2023
 ---
 
 # Release notes for Autosuggest API
@@ -20,7 +20,7 @@ Initial release of this version of Bing Autosuggest API. This API replaces the s
 
 ### New to Bing Search?
 
-To subscribe to a package that includes this API, see [Create Bing Search Service resource](../bing-web-search/create-bing-search-service-resource.md). Next, get familiar with the [Autosuggest API](overview.md) documentation, and be sure to check out the [quickstarts](quickstarts/quickstarts.md) to get up and running quickly.
+To subscribe to a package that includes this API, see [Create Bing Search Service resource](../bing-web-search/create-bing-search-service-resource.md). Next, get familiar with the [Autosuggest API](overview.md) documentation.
 
 ### Are you a current Cognitive Services user?
 
