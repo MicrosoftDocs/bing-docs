@@ -3,20 +3,17 @@ title: Using ranking to display answers - Bing Entity Search
 titleSuffix: Bing Search Services
 description: Learn how to use ranking to display the answers that the Bing Entity Search API returns.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 06/26/2023
 ---
 
 # Use ranking to display entity search results  
 
 Each entity search response includes a [RankingResponse](../reference/response-objects.md#rankingresponse) answer that tells you how to display the search results. For details about using the ranking response, see [Web Search API](../../bing-web-search/rank-results.md).
-
 
 ## Ranking response examples
 
@@ -111,8 +108,6 @@ And this example shows what the ranking response looks like for local business e
 }
 ```
 
-
 ## Next steps
 
-- Learn about [sending entity search requests](search-for-entities.md)
-- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
+- Learn about [sending entity search requests](search-for-entities.md).

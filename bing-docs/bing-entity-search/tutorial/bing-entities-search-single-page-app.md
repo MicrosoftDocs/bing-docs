@@ -3,14 +3,12 @@ title: "Tutorial: Bing Entity Search single-page web app"
 titleSuffix: Bing Azure Services
 description: This tutorial shows how to use the Bing Entity Search API in a single-page Web application.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 06/26/2023
 ---
 
 # Tutorial: Single-page web app
@@ -38,6 +36,7 @@ Our app therefore calls upon the Bing Maps service to obtain latitude and longit
 The tutorial app illustrates how to:
 
 > [!div class="checklist"]
+>
 > * Perform a Bing Entity Search API call in JavaScript.
 > * Perform a Bing Maps `locationQuery` API call in JavaScript.
 > * Pass search options to the API calls.
@@ -54,7 +53,7 @@ In this tutorial, we discuss only selected portions of the source code. Copy and
 
 ## Prerequisites
 
-To follow along with the tutorial, you need subscription keys for the Bing Search API, and Bing Maps API. 
+To follow along with the tutorial, you need subscription keys for the Bing Search API, and Bing Maps API.
 
 * An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
 * Once you have your Azure subscription:
@@ -66,6 +65,7 @@ To follow along with the tutorial, you need subscription keys for the Bing Searc
 Like any single-page Web app, the tutorial application includes three parts:
 
 > [!div class="checklist"]
+>
 > * HTML - Defines the structure and content of the page
 > * CSS - Defines the appearance of the page
 > * JavaScript - Defines the behavior of the page
@@ -91,7 +91,7 @@ The HTML also contains the divisions (HTML `<div>` tags) where the search result
 
 To avoid having to include the Bing Search and Bing Maps API subscription keys in the code, we use the browser's persistent storage to store them. If either key has not been stored, we prompt for it and store it for later use. If the key is later rejected by the API, we invalidate the stored key so the user is asked for it upon their next search.
 
-We define `storeValue` and `retrieveValue` functions that use either the `localStorage` object (if the browser supports it) or a cookie. Our `getSubscriptionKey()` function uses these functions to store and retrieve the user's key. 
+We define `storeValue` and `retrieveValue` functions that use either the `localStorage` object (if the browser supports it) or a cookie. Our `getSubscriptionKey()` function uses these functions to store and retrieve the user's key.
 
 ```javascript
 // cookie names for data we store
@@ -252,7 +252,7 @@ function bingMapsCallback(response) {
 }
 ```
 
-Along with latitude and longitude, the Bing Entity Search query requires a *radius* that indicates the precision of the location information. We calculate the radius using the *bounding box* provided in the Bing Maps response. The bounding box is a rectangle that surrounds the entire location. For example, if the user enters `NYC`, the result contains roughly central coordinates of New York City and a bounding box that encompasses the city. 
+Along with latitude and longitude, the Bing Entity Search query requires a *radius* that indicates the precision of the location information. We calculate the radius using the *bounding box* provided in the Bing Maps response. The bounding box is a rectangle that surrounds the entire location. For example, if the user enters `NYC`, the result contains roughly central coordinates of New York City and a bounding box that encompasses the city.
 
 We first calculate the distances from the primary coordinates to each of the four corners of the bounding box using the function `haversineDistance()` (not shown). We use the largest of these four distances as the radius. The minimum radius is a kilometer. This value is also used as a default if no bounding box is provided in the response.
 
@@ -313,7 +313,7 @@ function bingEntitySearch(query, latlong, options, key) {
 }
 ```
 
-Upon successful completion of the HTTP request, JavaScript calls our `load` event handler, the `handleBingResponse()` function, to handle a successful HTTP GET request to the API. 
+Upon successful completion of the HTTP request, JavaScript calls our `load` event handler, the `handleBingResponse()` function, to handle a successful HTTP GET request to the API.
 
 ```javascript
 // handle Bing search request results
@@ -349,7 +349,7 @@ function handleBingResponse() {
             renderErrorMessage("Empty response (are you sending too many requests too quickly?)");
         }
     if (divHidden("pole") && divHidden("mainline") && divHidden("sidebar")) 
-        showDiv("noresults", "No results.<p><small>Looking for restaurants or other local businesses? Those currently areen't supported outside the US.</small>");
+        showDiv("noresults", "No results.<p><small>Looking for restaurants or other local businesses? Those currently aren't supported outside the US.</small>");
     }
 
     // Any other HTTP status is an error
@@ -399,9 +399,9 @@ The Bing Entity Search API [requires you to display results in a specified order
 
 Instead, we use the `rankingResponse` collection in the search results to order the results for display. This object refers to items in the `Entitiess` and/or `Places` collections.
 
-`rankingResponse` may contain up to three collections of search results, designated `pole`, `mainline`, and `sidebar`. 
+`rankingResponse` may contain up to three collections of search results, designated `pole`, `mainline`, and `sidebar`.
 
-`pole`, if present, is the most relevant search result and should be displayed prominently. `mainline` refers to the bulk of the search results. Mainline results should be displayed immediately after `pole` (or first, if `pole` is not present). 
+`pole`, if present, is the most relevant search result and should be displayed prominently. `mainline` refers to the bulk of the search results. Mainline results should be displayed immediately after `pole` (or first, if `pole` is not present).
 
 Finally. `sidebar` refers to auxiliary search results. They may be displayed in an actual sidebar or simply after the mainline results. We have chosen the latter for our tutorial app.
 
@@ -510,7 +510,8 @@ Let's take a closer look at the `entities` renderer:
 Our entity renderer function:
 
 > [!div class="checklist"]
-> * Builds the HTML `<img>` tag to display the image thumbnail, if any. 
+>
+> * Builds the HTML `<img>` tag to display the image thumbnail, if any.
 > * Builds the HTML `<a>` tag that links to the page that contains the image.
 > * Builds the description that displays information about the image and the site it's on.
 > * Incorporates the entity's classification using the display hints, if any.
