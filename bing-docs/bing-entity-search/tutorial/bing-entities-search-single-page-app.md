@@ -297,7 +297,7 @@ function bingEntitySearch(query, latlong, options, key) {
     // event handler for successful response
     request.addEventListener("load", handleBingResponse);
     
-    // event handler for erorrs
+    // event handler for errors
     request.addEventListener("error", function() {
         renderErrorMessage("Error completing request");
     });
@@ -397,7 +397,7 @@ Errors are handled by calling `renderErrorMessage()` with any details known abou
 
 The Bing Entity Search API [requires you to display results in a specified order](../../bing-web-search/use-display-requirements.md). Since the API may return two different kinds of responses, it is not enough to iterate through the top level `Entities` or `Places` collection in the JSON response and display those results. (If you want only one type of result, use the `responseFilter` query parameter.)
 
-Instead, we use the `rankingResponse` collection in the search results to order the results for display. This object refers to items in the `Entitiess` and/or `Places` collections.
+Instead, we use the `rankingResponse` collection in the search results to order the results for display. This object refers to items in the `Entities` and/or `Places` collections.
 
 `rankingResponse` may contain up to three collections of search results, designated `pole`, `mainline`, and `sidebar`.
 
