@@ -76,12 +76,12 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "/bing/search-apis/bing-autosuggest/quickstarts/sdk/autosuggest-client-library-csharp.md",
+      "source_path": "bing/search-apis/bing-autosuggest/quickstarts/sdk/autosuggest-client-library-csharp.md",
       "redirect_url": "/bing/search-apis/bing-autosuggest/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "/bing/search-apis/bing-autosuggest/quickstarts/sdk/autosuggest-client-library-go.md",
+      "source_path": "bing-docs/bing-autosuggest/quickstarts/sdk/autosuggest-client-library-go.md",
       "redirect_url": "/bing/search-apis/bing-autosuggest/overview",
       "redirect_document_id": false
     },
@@ -136,12 +136,12 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "/bing/search-apis/bing-custom-search/quickstarts/sdk/custom-search-client-library-csharp.md",
+      "source_path": "bing-docs/bing-custom-search/quickstarts/sdk/custom-search-client-library-csharp.md",
       "redirect_url": "/bing/search-apis/bing-custom-search/overview",
       "redirect_document_id": false
     },
     {
-      "source_path": "/bing/search-apis/bing-custom-search/quickstarts/sdk/custom-search-client-library-java.md",
+      "source_path": "bing/search-apis/bing-custom-search/quickstarts/sdk/custom-search-client-library-java.md",
       "redirect_url": "/bing/search-apis/bing-custom-search/overview",
       "redirect_document_id": false
     },
@@ -151,7 +151,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "/bing/search-apis/bing-custom-search/quickstarts/sdk/custom-search-client-library-python.md",
+      "source_path": "bing/search-apis/bing-custom-search/quickstarts/sdk/custom-search-client-library-python.md",
       "redirect_url": "/bing/search-apis/bing-custom-search/overview",
       "redirect_document_id": false
     },
