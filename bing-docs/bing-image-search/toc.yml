@@ -7,40 +7,10 @@
     expanded: true
   - name: Compare the Bing Search APIs
     href: ../bing-web-search/bing-api-comparison.md
-- name: Quickstarts
-  items:
-  - name: Quickstarts
-    href: quickstarts/quickstarts.md
-  - name: REST API
-    items:
-    - name: C#
-      href: quickstarts/rest/csharp.md
-    - name: Java
-      href: quickstarts/rest/java.md
-    - name: Node.js
-      href: quickstarts/rest/nodejs.md
-    - name: PHP
-      href: quickstarts/rest/php.md
-    - name: Python
-      href: quickstarts/rest/python.md
-    - name: Ruby
-      href: quickstarts/rest/ruby.md
-  - name: SDK (client library)
-    items:
-    - name: C#
-      href: quickstarts/sdk/image-search-client-library-csharp.md
-    - name: Java
-      href: quickstarts/sdk/image-search-client-library-java.md
-    - name: Node.js
-      href: quickstarts/sdk/image-search-client-library-javascript.md
-    - name: Python
-      href: quickstarts/sdk/image-search-client-library-python.md
 - name: Tutorials
   items:
   - name: Build an image search web application
     href: tutorial/bing-image-search-single-page-app.md
-- name: Samples
-  href: samples.md
 - name: How-to guides
   items:
   - name: Get images from the web

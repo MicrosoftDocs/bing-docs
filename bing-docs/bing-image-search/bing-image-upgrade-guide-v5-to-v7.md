@@ -3,13 +3,12 @@ title: Upgrade from Bing Image Search API v5 to v7
 titleSuffix: Bing Search Services
 description: This upgrade guide describes changes between version 5 and version 7 of the Bing Image Search API. Use this guide to help you identify the parts of your application that you need to update to use version 7.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 06/30/2023
 ---
 
 # Bing Image Search API v7 upgrade guide
@@ -20,12 +19,11 @@ This upgrade guide identifies the changes between version 5 and version 7 of the
 
 ### Endpoints
 
-- Changed the `cognitive` subdomain to `bing`. 
+- Changed the `cognitive` subdomain to `bing`.
 - Changed the endpoint's version number from v5 to v7.
 - Removed the `/bing` folder.
 
 New search endpoint: `https://api.bing.microsoft.com/v7.0/images/search`
-
 
 ### Error response objects and error codes
 
@@ -34,7 +32,6 @@ New search endpoint: `https://api.bing.microsoft.com/v7.0/images/search`
 - Added the following fields to the `Error` object.  
   - `subCode`&mdash;Partitions the error code into discrete buckets, if possible.
   - `moreDetails`&mdash;Additional information about the error described in the `message` field.
-
 
 - Replaced the v5 error codes with the following possible `code` and `subCode` values.
 
@@ -69,16 +66,13 @@ ExpiredAuthorizationToken|InsufficientAuthorization.AuthorizationExpired
 InsufficientScope|InsufficientAuthorization
 Blocked|InvalidRequest.Blocked
 
-
 ### Use Bing Visual Search API to get image insights
 
 Use [Bing Visual Search API](../bing-visual-search/overview.md) instead of the `/images/search` endpoint to get insights about images.
 
-
 ### Query parameters
 
 - Changed the list of supported markets of the Shopping filter value to en-US only. See [imageType](reference/query-parameters.md#imagetype).  
-
 
 ### Response objects
 
@@ -89,7 +83,6 @@ Use [Bing Visual Search API](../bing-visual-search/overview.md) instead of the `
 - Removed the `displayShoppingSourcesBadges` and `displayRecipeSourcesBadges` fields from [ImageAnswer](reference/response-objects.md#imageanswer).  
 
 - Renamed the `nextOffsetAddCount` field of [ImageAnswer](reference/response-objects.md#imageanswer) to `nextOffset`. The way you use the offset has also changed. Previously, you set the [offset](reference/query-parameters.md#offset) query parameter to the `nextOffsetAddCount` value plus the previous offset value plus the number of images in the result. Now, you set `offset` to the `nextOffset` value.  
-
 
 ## Non-breaking changes
 

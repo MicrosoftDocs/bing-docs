@@ -224,6 +224,66 @@
       "source_path": "bing-docs/bing-entity-search/samples.md",
       "redirect_url": "/bing/search-apis/bing-entity-search/overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/rest/csharp.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/rest/java.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/rest/nodejs.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/rest/php.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/rest/python.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/rest/ruby.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/sdk/image-search-client-library-csharp.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/sdk/image-search-client-library-java.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/sdk/image-search-client-library-javascript.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/sdk/image-search-client-library-python.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/quickstarts.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/samples.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
     }
   ]
 }

@@ -3,16 +3,15 @@ title: Search for GIF images using the Bing Image Search API
 titleSuffix: Bing Search Services
 description: The Bing Image Search API enables you to also search across the entire Web for the most relevant .gif images.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 06/30/2023
 ---
 
-# Search for animated GIF images 
+# Search for animated GIF images
 
 Bing Image Search API lets you search across the entire Web for the most relevant animated GIF images. To get only GIF images, set the [imageType](../reference/query-parameters.md#imagetype) query parameter to AnimatedGif
 
@@ -22,7 +21,6 @@ The following cURL example shows how to use the API to get animated GIF images.
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/images/search?q=interesting&imageType=AnimatedGif&mkt=en-us
 ```
 
-
 ## Tips and suggestions
 
 - Specify the [maxFileSize](../reference/query-parameters.md#maxfilesize) and [minFileSize](../reference/query-parameters.md#minfilesize) query parameters. Because most GIFs in our index are under 2 MB, set *maxFileSize* to 2000000. This also helps to control the data size if bandwidth is a concern, such as in mobile device scenarios.
@@ -30,11 +28,9 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 - Use the [safeSearch](../reference/query-parameters.md#safesearch) query parameter to block adult content. Set to `strict` to block adult content.
 - Use the *AnimatedGifHttps* image type to return get only animated GIF images that are from an HTTPS address. For security, many applications require connection to external Web links over HTTPS.
 
-
 <a name="gifExample"></a>
 
 ## Getting animated GIFs using Java
-
 
 ```java
 package gifSearch;
@@ -66,7 +62,7 @@ import com.google.gson.JsonParser;
 
 public class GIFsearch {
 
-	// Replace the subscriptionKey string value with your valid subscription key.
+ // Replace the subscriptionKey string value with your valid subscription key.
     static String subscriptionKey = "YOUR-ACCESS-KEY";
 
     static String host = "https://api.bing.microsoft.com";
@@ -147,8 +143,6 @@ class SearchResults{
 
 ```
 
-
 ## Next steps
 
-- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
 - Learn about the [Image search tutorial](../tutorial/bing-image-search-single-page-app.md)
