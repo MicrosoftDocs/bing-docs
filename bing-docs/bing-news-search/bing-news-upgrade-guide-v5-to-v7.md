@@ -3,14 +3,12 @@ title: Upgrade Bing News Search API v5 to v7
 titleSuffix: Bing Search Services
 description: This upgrade guide identifies the changes between version 5 and version 7 of Bing News Search API. Use this guide to help you identify the parts of your application that you need to update to use version 7.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 07/07/2023
 ---
 
 # News Search API upgrade guide
@@ -21,7 +19,7 @@ This upgrade guide identifies the changes between version 5 and version 7 of Bin
 
 ### Endpoints
 
-- Changed the `cognitive` subdomain to `bing`. 
+- Changed the `cognitive` subdomain to `bing`.
 - Changed the endpoint's version number from v5 to v7.
 - Removed the `/bing` folder.
 
