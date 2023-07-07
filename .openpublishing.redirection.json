@@ -349,6 +349,51 @@
       "source_path": "bing-docs/bing-news-search/samples.md",
       "redirect_url": "/bing/search-apis/bing-news-search/overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/quickstarts/rest/csharp.md",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/quickstarts/rest/java.md",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/quickstarts/rest/nodejs.md",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/quickstarts/rest/php.md",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/quickstarts/rest/python.md",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/quickstarts/rest/ruby.md",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/quickstarts/sdk/spell-check-client-library-csharp",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/quickstarts/quickstarts.md",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/samples.md",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
     }
   ]
 }

@@ -3,13 +3,12 @@ title: "Tutorial: Getting Spell Check Results using Bing Spell Check API"
 titleSuffix: Bing Search Services
 description: Use this tutorial to build a web page that sends queries to the Bing Spell Check API, and displays the results.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 07/07/2023
 ---
 
 # Tutorial: Build a Web page Spell Check client
@@ -19,16 +18,16 @@ In this tutorial, we'll build a Web page that allows users to query the Bing Spe
 This tutorial shows you how to:
 
 > [!div class="checklist"]
+>
 > - Make a simple query to the Bing Spell Check API.
 > - Display query results.
 
 ## Prerequisites
 
-
 To follow along with the tutorial, you need a subscription key for the Bing Spell Check API. If you don't have one, you'll need:
 
-* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
-* [A Bing Spell Check resource](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesBingSpellCheck-v7).
+- An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
+- [A Bing Spell Check resource](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesBingSpellCheck-v7).
 
 ## Create a new Web page
 
@@ -295,7 +294,7 @@ Save the file.
 
 ## Display results
 
-Open the Web page in your browser. At the prompt, enter your Bing Spell Check API subscription key. Enter a query (for example, "Hollo, wlrd!") in the **Spell Check** text box and press **Enter**. The Web page then displays the query results.
+Open the Web page in your browser. At the prompt, enter your Bing Spell Check API subscription key. Enter a query (for example, "Hollo, wolrd!") in the **Spell Check** text box and press **Enter**. The Web page then displays the query results.
 
 ```json
 {
@@ -318,7 +317,7 @@ Open the Web page in your browser. At the prompt, enter your Bing Spell Check AP
     },
     {
       "offset": 7,
-      "token": "wlrd",
+      "token": "wolrd",
       "type": "UnknownToken",
       "suggestions": [
         {
