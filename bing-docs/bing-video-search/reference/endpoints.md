@@ -7,8 +7,7 @@ ms.subservice: bing-video-search
 author: alekhyasasi
 manager: ehansen
 ms.topic: reference
-ms.date: 06/16/2022
-ms.author: v-apunnamara
+ms.date: 07/11/2023
 ---
 
 # Video Search APIs v7 reference

@@ -8,26 +8,22 @@ ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: conceptual
 author: alekhyasasi
-ms.date: 04/05/2022
-ms.author: v-apunnamara
+ms.date: 07/11/2023
 ---
 
 # Get videos that are trending
 
-If you’re building a user experience that shows videos that are trending on social media in different categories, use this API. 
+If you’re building a user experience that shows videos that are trending on social media in different categories, use this API.
 
 Calling the API is easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 
-```
-https://api.bing.microsoft.com/v7.0/videos/trending
-```
+`<https://api.bing.microsoft.com/v7.0/videos/trending>`
 
-Here's a cURL example that shows you how to call the endpoint using your subscription key. 
+Here's a cURL example that shows you how to call the endpoint using your subscription key.
 
 ```curl
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/videos/trending
 ```  
-
 
 ## Request and response headers
 
@@ -46,7 +42,7 @@ Here's a cURL example that includes these headers.
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/v7.0/videos/trending
 ```
 
-Bing returns a couple of headers you should capture. 
+Bing returns a couple of headers you should capture.
 
 - BingAPIs-TraceId &mdash; ID that identifies the request in the log file.
 - X-MSEdge-ClientID &mdash; The ID that you need to pass in subsequent request to provide continuity of experience.
@@ -60,7 +56,6 @@ Here's a cURL call that returns the response headers. If you want to remove the 
 curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/videos/trending
 ```
 
-
 ## Query parameters
 
 The only query parameter that you should pass is the *mkt* parameter. Set to the market where the results come from, which is typically the market where the user is making the request from. For a list of markets that support trending videos, see [Market codes](../reference/market-codes.md#trending-video-api-markets).
@@ -73,10 +68,9 @@ Here's a cURL example that includes the *mkt* query parameter.
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/videos/trending?mkt=en-us
 ```
 
-
 ## Handling the response
 
-When you send a request to Trending Videos API, it returns a [TrendingVideos](../reference/response-objects.md#trendingvideos) object in the response body. The **TrendingVideos** object contains a list of videos to highlight in the banner and a list of trending videos by category. 
+When you send a request to Trending Videos API, it returns a [TrendingVideos](../reference/response-objects.md#trendingvideos) object in the response body. The **TrendingVideos** object contains a list of videos to highlight in the banner and a list of trending videos by category.
 
 ```json
 {
@@ -162,8 +156,7 @@ The `bannerTiles` field contains the list of [Tile](../reference/response-object
 Use `thumbnailUrl` to display an image of the video. Use `description` to attribute the image. Use `headLine` to provide a description of the video. Options for making the thumbnail clickable:
 
 - Use `contentUrl` to take the user to the provider's website where they can watch the video.
-- Use `webSearchUrl` to take the user to Bing's Video search results where they can watch this and other videos. 
-
+- Use `webSearchUrl` to take the user to Bing's Video search results where they can watch this and other videos.
 
 ### Displaying categories of trending videos
 
@@ -240,16 +233,11 @@ The `tiles` field contains the list of [Tile](../reference/response-objects.md#t
 Use `thumbnailUrl` to display an image of the video. Use `description` to attribute the image. Options for making the thumbnail clickable:
 
 - Use `contentUrl` to take the user to the provider's website where they can watch the video.
-- Use `webSearchUrl` to take the user to Bing's Video search results where they can watch this and other videos. 
-
+- Use `webSearchUrl` to take the user to Bing's Video search results where they can watch this and other videos.
 
 ## Next steps
 
 - Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing Video Search.  
 - Learn about [resizing and cropping thumbnails](../../bing-web-search/resize-and-crop-thumbnails.md).  
 - Learn about [searching the web for videos](get-videos.md).
-- Review [Video Search API v7 reference](../reference/endpoints.md) documentation.  
-- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
-
-
-
+- Review [Video Search API v7 reference](../reference/endpoints.md) documentation.

@@ -394,6 +394,66 @@
       "source_path": "bing-docs/bing-spell-check/samples.md",
       "redirect_url": "/bing/search-apis/bing-spell-check/overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/rest/csharp.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/rest/java.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/rest/nodejs.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/rest/php.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/rest/python.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/rest/ruby.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/sdk/video-search-client-library-csharp.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/sdk/video-search-client-library-java.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/sdk/video-search-client-library-javascript.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/sdk/video-search-client-library-python.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/quickstarts.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/samples.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
     }
   ]
 }
