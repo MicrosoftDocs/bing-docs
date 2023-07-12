@@ -3,14 +3,12 @@ title: Handle the Visual Search response
 titleSuffix: Bing Search Services
 description: Shows what the different image insights look like in the JSON response.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: conceptual
-ms.date: 7/15/2020
-ms.author: scottwhi
+ms.date: 7/12/2023
 ---
 
 # Handle the visual search response
@@ -38,7 +36,6 @@ The `image` field is an [Image](../reference/response-objects.md#image) object t
 The `tags` field contains an array of [ImageTag](../reference/response-objects.md#imagetag) objects. Each tag contains a list of actions, display name, an optional bounding box.
 
 The tag you're probably most interested in is the one where the display name is an empty string. This tag contains insights about the image used in the request, such as webpages that include the image, visually similar images, shopping sources and more. Because the entire image is of interest, the default insights tag doesn't include bounding boxes for the regions of interest. [Read more](#default-insights-tag).
-
 
 ```json
 {
@@ -68,13 +65,11 @@ The other tags contain a diverse set of terms derived from the input image. Thes
 
 [!INCLUDE [bing-url-note](../../../includes/bing-url-note.md)]
 
-
 ## Default insights tag
 
 The default tag is the one where the `displayName` field is set to an empty string. This tag provides insights about the image that you sent in the request. The `actionType` field identifies the insight. The list of actions the response includes depends on the image. And for each action, the list of properties may vary by image, so check if the property exists before trying to use it.
 
-
-The following example shows the possible list of insights. 
+The following example shows the possible list of insights.
 
 ```json
 {
@@ -332,7 +327,7 @@ The ImageById insight provides an **Image** object of the source image.
 
 ### RelatedSearches insight
 
-The RelatedSearches insight provides a list of related searches made by others (based on other users' search terms). Use the `displayText` and `webSearchUrl` fields to create a link that takes the user to Bing’s image search results page for the query string. If you want to provide your own experience, use the URL in `searchLink` to get and display the images yourself. 
+The RelatedSearches insight provides a list of related searches made by others (based on other users' search terms). Use the `displayText` and `webSearchUrl` fields to create a link that takes the user to Bing’s image search results page for the query string. If you want to provide your own experience, use the URL in `searchLink` to get and display the images yourself.
 
 ```json
       {
@@ -379,7 +374,7 @@ The DocumentLevelSuggestions insight provides a list of suggested search terms b
 
 ### BestRepresentativeQuery insight
 
-The BestRepresentativeQuery insight provides the query string that Bing thinks best represents the image’s subject (see the `displayName` field). You can use the `webSearchUrl` URL to send the user to Bing’s image search results page or you can use the `serviceUrl` URL to get the images yourself and display them. If you use the `serviceUrl` URL, remember to append query parameters as appropriate. 
+The BestRepresentativeQuery insight provides the query string that Bing thinks best represents the image’s subject (see the `displayName` field). You can use the `webSearchUrl` URL to send the user to Bing’s image search results page or you can use the `serviceUrl` URL to get the images yourself and display them. If you use the `serviceUrl` URL, remember to append query parameters as appropriate.
 
 ```json
         {
@@ -458,7 +453,6 @@ The ProductVisualSearch insight provides a list of images that contain products 
       }
 ```
 
-
 ## Entity insight tag
 
 If Bing recognizes an entity that is a culturally well-known person, place, or thing, one or more of the tags might include an Entity action. Use the `displayName` and `webSearchUrl` fields to create a hyperlink that takes the user to Bing’s search results where they can learn more about the entity.
@@ -491,7 +485,7 @@ If Bing recognizes an entity that is a culturally well-known person, place, or t
         }
       ]
     },
-``` 
+```
 
 But if you set the `enableEntityData` field to **true** in your request, the Entity action includes a `data` that contains the entity data that you can display yourself. For information about setting `enableEntityData`, see [Including entity data](get-insights.md#including-entity-data).
 
@@ -558,12 +552,11 @@ But if you set the `enableEntityData` field to **true** in your request, the Ent
     },
 ```
 
-
 ## The other tags
 
-The other tags contain a diverse set of terms derived from the image sent in the request. These terms enable users to explore concepts found in the image. For example, if the image used in the request shows a black, long sleeve T-shirt, the other tags may contain URLs that you can use to find images of related clothing, such as jackets or sweatshirts. 
+The other tags contain a diverse set of terms derived from the image sent in the request. These terms enable users to explore concepts found in the image. For example, if the image used in the request shows a black, long sleeve T-shirt, the other tags may contain URLs that you can use to find images of related clothing, such as jackets or sweatshirts.
 
-Each tag includes a display name that you can use to categorize the related images, a bounding box that identifies the region of interest in the image, a thumbnail of the image that represents the related images, and URLs that you can use to explore the derived term. 
+Each tag includes a display name that you can use to categorize the related images, a bounding box that identifies the region of interest in the image, a thumbnail of the image that represents the related images, and URLs that you can use to explore the derived term.
 
 For information about the bounding boxes, see [Using bounding boxes](#using-bounding-boxes).
 
@@ -593,10 +586,9 @@ In this example, the list of actions includes the TextResults action type and th
     },
 ```
 
-
 ## Using bounding boxes
 
-All tags other than the default insights tag include bounding boxes that identify regions of interest in the image. For example, if the image includes several celebrities, the tags could include bounding boxes for each recognized celebrity, or if the image contains recognized articles of clothing, the tags could include bounding boxes for each recognized article of clothing. 
+All tags other than the default insights tag include bounding boxes that identify regions of interest in the image. For example, if the image includes several celebrities, the tags could include bounding boxes for each recognized celebrity, or if the image contains recognized articles of clothing, the tags could include bounding boxes for each recognized article of clothing.
 
 You can use the bounding boxes to create hot spots over the image. When the user hovers over the hotspot, you could display details about the contents in that region of the image. You should not include hot spots in an image for bounding boxes that identify the entire image.
 
@@ -660,12 +652,11 @@ The following example shows what the bounding rectangles look like if the area o
       },
 ```
 
-
 ## Text recognition
 
-If the image contains text that the service recognizes, the `displayName` field of one or more of the tags is set to ##TextRecognition. The text recognition tag that has the `actionType` field set to TextRecognition contains all the lines of text found in the image. 
+If the image contains text that the service recognizes, the `displayName` field of one or more of the tags is set to ##TextRecognition. The text recognition tag that has the `actionType` field set to TextRecognition contains all the lines of text found in the image.
 
-The [TextRecognitionAction](../reference/response-objects.md#textrecognitionaction) object includes the `data` field, which is a [TextRegionsModule](../reference/response-objects.md#textregionsmodule) object. The `regions` field lists the areas of the image where text was found. 
+The [TextRecognitionAction](../reference/response-objects.md#textrecognitionaction) object includes the `data` field, which is a [TextRegionsModule](../reference/response-objects.md#textregionsmodule) object. The `regions` field lists the areas of the image where text was found.
 
 ```json
     {
@@ -702,7 +693,7 @@ The [TextRecognitionAction](../reference/response-objects.md#textrecognitionacti
 
 Because the tag's `displayName` field contains ##TextRecognition, do not use it as a category title in the UX. That goes for any display name that starts with ##.
 
-Each [TextRegion](../reference/response-objects.md#textregion) object specifies its bounding box and the lines of text found within the bounding box. The [TextLine](../reference/response-objects.md#textline) object contains a line of text from the image, the line's bounding box, each word in the line, and each words bounding box. 
+Each [TextRegion](../reference/response-objects.md#textregion) object specifies its bounding box and the lines of text found within the bounding box. The [TextLine](../reference/response-objects.md#textline) object contains a line of text from the image, the line's bounding box, each word in the line, and each words bounding box.
 
 ```json
                 "lines": [
@@ -770,11 +761,8 @@ If the list of tags includes other text recognition tags, they're likely URI act
     },
 ```
 
-
 ## Next steps
 
 - Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing Visual Search.  
 - Learn about how to [get image insights](get-insights.md).
-- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
 - Review [Visual Search API v7 reference](../reference/endpoints.md) documentation.  
-

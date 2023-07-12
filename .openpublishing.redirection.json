@@ -454,6 +454,69 @@
       "source_path": "bing-docs/bing-video-search/samples.md",
       "redirect_url": "/bing/search-apis/bing-video-search/overview",
       "redirect_document_id": false
+    },
+
+
+
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/rest/csharp.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/rest/go.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/rest/java.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/rest/nodejs.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/rest/python.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/rest/ruby.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/sdk/visual-search-client-library-csharp.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/sdk/visual-search-client-library-java.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/sdk/visual-search-client-library-javascript.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/sdk/visual-search-client-library-python.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/quickstarts.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/samples.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
     }
   ]
 }
