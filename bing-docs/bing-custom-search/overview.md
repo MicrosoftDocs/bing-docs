@@ -8,13 +8,11 @@ ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: overview
 author: alekhyasasi
-ms.date: 06/12/2023
+ms.author: v-alpunnamar
+ms.date: 09/20/2023
 ---
 
 # What is Bing Custom Search?
-
-> [!NOTE]
-> This documentation is for Bing Search Services. If you're looking for the Cognitive Services version of the documentation, see <a href="https://learn.microsoft.com/azure/cognitive-services/Bing-Custom-Search/overview">Cognitive Services Bing Custom Search</a>.
 
 Bing Custom Search lets you create a tailored, ad-free search experiences for topics that your users care about. You specify the domains and webpages that Bing searches. You can also pin, boost, and demote specific content to create a custom view of the web that helps your users quickly find relevant content. To create your custom view, use the [Bing Custom Search portal](https://customsearch.ai).
 
