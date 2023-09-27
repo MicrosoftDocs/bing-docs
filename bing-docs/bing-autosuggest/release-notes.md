@@ -6,8 +6,9 @@ ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: "overview"
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
-ms.date: 06/12/2023
+ms.date: 09/27/2023
 ---
 
 # Release notes for Autosuggest API

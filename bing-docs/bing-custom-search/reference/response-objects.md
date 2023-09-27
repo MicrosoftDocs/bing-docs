@@ -3,11 +3,12 @@ title: Bing Custom Web Search API v7 response objects
 titleSuffix: Bing Services
 description: Describes the response objects that Bing Custom Web Search API may return in the JSON response.
 manager: alekhyasasi
+ms.author: v-alpunnamar
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: reference
 author: alekhyasasi
-ms.date: 06/12/2023
+ms.date: 09/27/2023
 ---
 
 # Custom Web Search API v7 response objects

@@ -3,11 +3,12 @@ title: Error codes used by the Bing Custom Web Search API
 titleSuffix: Bing Services
 description: Provides the list of HTTP status codes and service error codes that Bing Custom Search may return.
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: reference
-ms.date: 06/12/2023
+ms.date: 09/27/2023
 ---
 
 # HTTP status codes that Bing Custom Web Search API may return

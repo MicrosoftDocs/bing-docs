@@ -4,11 +4,12 @@ titleSuffix: Bing Search Services
 description: After you've configured your custom search experience, you can test it from within the Bing Custom Search portal.
 services: bing-search-services
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: conceptual
-ms.date: 06/12/2023
+ms.date: 09/27/2023
 ---
 
 # Test your Bing Custom Search instance from the Portal

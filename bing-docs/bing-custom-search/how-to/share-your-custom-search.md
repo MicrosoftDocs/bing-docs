@@ -4,11 +4,12 @@ titleSuffix: Bing Search Services
 description: Easily allow collaborative editing and testing of your instance by sharing it with members of your team.
 services: bing-search-services
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: conceptual
-ms.date: 06/12/2023
+ms.date: 09/27/2023
 ---
 
 # Share your Custom Search instance

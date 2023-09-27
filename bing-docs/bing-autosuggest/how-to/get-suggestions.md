@@ -4,11 +4,12 @@ titleSuffix: Bing Search Services
 description: Use Bing Autosuggest API to improve your users' search box experience by providing a list of suggested query strings with each character they type.
 services: bing-search-services
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: conceptual
-ms.date: 06/12/2023
+ms.date: 09/27/2023
 ---
 
 # Getting query string suggestions

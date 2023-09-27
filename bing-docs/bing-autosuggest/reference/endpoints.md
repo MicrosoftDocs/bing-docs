@@ -5,9 +5,10 @@ description: Describes the programming elements of the Bing Autosuggest API.
 ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.topic: reference
-ms.date: 06/12/2023
+ms.date: 09/27/2023
 ---
 
 # Autosuggest API v7 reference

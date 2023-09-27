@@ -4,11 +4,12 @@ titleSuffix: Bing Search Services
 description: The portal lets you create a search instance that specifies the slices of the web (domains, subpages, and webpages) that you want to search.
 services: bing-search-services
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: conceptual
-ms.date: 06/12/2023
+ms.date: 09/27/2023
 ---
 
 # Configure your Bing Custom Search instance

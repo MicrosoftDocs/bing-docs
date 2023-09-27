@@ -4,11 +4,12 @@ titleSuffix: Bing Search Services
 description: High-level overview about using Bing Custom Search to get videos from your custom view of the Web.
 services: bing-search-services
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: conceptual
-ms.date: 06/12/2023
+ms.date: 09/27/2023
 ---
 
 # Get videos from your custom view

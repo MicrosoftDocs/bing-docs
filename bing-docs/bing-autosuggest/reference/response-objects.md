@@ -3,11 +3,12 @@ title: Bing Autosuggest API v7 response objects
 titleSuffix: Bing Services
 description: Describes the response objects that Bing Autosuggest API may return in the JSON response.
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: reference
-ms.date: 06/12/2023
+ms.date: 09/27/2023
 ---
 
 # Autosuggest API v7 response objects

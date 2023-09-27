@@ -4,11 +4,12 @@ titleSuffix: Bing Search Services
 description: Use Bing Autosuggest API to improve your apps search box experience by adding suggested search terms as the user types their query string.
 services: bing-search-services
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: overview
-ms.date: 06/12/2023
+ms.date: 09/27/2023
 ---
 
 # What is Bing Autosuggest?

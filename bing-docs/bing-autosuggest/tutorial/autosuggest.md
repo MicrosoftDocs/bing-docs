@@ -4,11 +4,12 @@ titleSuffix: Bing Search Services
 description: In this tutorial, you will build a web page that allows users to query the Bing Autosuggest API and displays the query results.
 services: bing-search-services
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: tutorial
-ms.date: 06/12/2023
+ms.date: 09/27/2023
 ---
 
 # Tutorial: Get search suggestions on a web page

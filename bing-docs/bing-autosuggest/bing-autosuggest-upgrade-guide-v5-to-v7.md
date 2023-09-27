@@ -4,11 +4,12 @@ titleSuffix: Bing Search Services
 description: This upgrade guide identifies the changes between version 5 and version 7 of the Bing Autosuggest API. Use this guide to help update your application to use version 7.
 services: bing-search-services
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: conceptual
-ms.date: 06/12/2023
+ms.date: 09/27/2023
 ---
 
 # Autosuggest API upgrade guide
