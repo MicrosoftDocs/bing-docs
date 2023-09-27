@@ -3,12 +3,13 @@ title: Search for GIF images using the Bing Image Search API
 titleSuffix: Bing Search Services
 description: The Bing Image Search API enables you to also search across the entire Web for the most relevant .gif images.
 services: bing-search-services
-author: alekhyasasi
+author: alekhyasasi\
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: conceptual
-ms.date: 06/30/2023
+ms.date: 09/27/2023
 ---
 
 # Search for animated GIF images

@@ -4,11 +4,12 @@ titleSuffix: Bing Search Services
 description: Use this quickstart to create a custom Bing instance that can search the domains and webpages that you specify. 
 services: bing-search-services
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: quickstart
-ms.date: 06/12/2023
+ms.date: 09/27/2023
 ---
 
 # Quickstart: Create your first Bing Custom Search instance

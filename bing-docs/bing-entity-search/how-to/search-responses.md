@@ -4,11 +4,12 @@ titleSuffix: Bing Search Services
 description: The Bing Entity Search API returns entities and places. This topics shows you what the JSON response looks like and how to process it.
 services: bing-search-services
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: conceptual
-ms.date: 06/26/2023
+ms.date: 09/26/2023
 ---
 
 # Handling the entity search response

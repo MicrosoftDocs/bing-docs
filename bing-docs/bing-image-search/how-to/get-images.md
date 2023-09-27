@@ -4,11 +4,12 @@ titleSuffix: Bing Search Services
 description: Use the Bing Image Search API to search for and get relevant images from the web.
 services: bing-search-services
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: conceptual
-ms.date: 06/30/2023
+ms.date: 09/27/2023
 ---
 
 # Search the web for images

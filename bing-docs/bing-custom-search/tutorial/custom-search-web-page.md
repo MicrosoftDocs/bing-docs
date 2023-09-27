@@ -4,11 +4,12 @@ titleSuffix: Bing Search Services
 description: This tutorial shows you how to configure a custom search instance and integrate it into a webpage.
 services: bing-search-services
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: tutorial
-ms.date: 06/12/2023
+ms.date: 09/27/2023
 ---
 
 # Tutorial: Build a Custom Search web page
@@ -110,7 +111,7 @@ Custom Search provides a hosted UI to render the JSON response of your custom se
   
 5. Select your subscription keys from the dropdown lists. Or, you can enter the subscription key manually.
   
-   ![Screenshot of the Hosted UI additional configurations step](./media/custom-search-hosted-ui-subscription-key.png)
+   ![Screenshot of Hosted UI additional configurations step](./media/custom-search-hosted-ui-subscription-key.png)
 
 ## Publish or revert a search instance
 
@@ -143,7 +144,7 @@ The remainder of this tutorial illustrates **Option 1: JavaScript snippet**.
   
 4. In the **New ASP.NET Core Web Application** window, select **Web Application** and click **OK**.  
   
-   ![Screenshot of new project window](./media/custom-search-new-webapp.png)  
+   ![Screenshot of a new project window](./media/custom-search-new-webapp.png)  
 
 ## Edit index.cshtml
 

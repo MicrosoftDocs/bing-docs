@@ -3,11 +3,12 @@ title: Entity types used by the Bing Entity Search API
 titleSuffix: Bing Services
 description: Provides the list of possible entity types that the Bing Entity Search API may return.
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: reference
-ms.date: 06/26/2023
+ms.date: 09/27/2023
 ---
 
 # Entity types used by Bing Entity Search API

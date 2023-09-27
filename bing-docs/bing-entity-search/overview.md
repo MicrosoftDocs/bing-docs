@@ -4,11 +4,12 @@ titleSuffix: Bing Search Services
 description: Use Bing Entity Search API to search for entities and places.
 services: bing-search-services
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: overview
-ms.date: 06/26/2023
+ms.date: 09/26/2023
 ---
 
 # What is Bing Entity Search API?

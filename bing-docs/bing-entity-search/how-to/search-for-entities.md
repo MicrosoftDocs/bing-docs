@@ -4,11 +4,12 @@ titleSuffix: Bing Search Services
 description: Bing Entity Search API returns entities and local business entities.
 services: bing-search-services
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: conceptual
-ms.date: 06/26/2023
+ms.date: 09/26/2023
 ---
 
 # Search the web for entities

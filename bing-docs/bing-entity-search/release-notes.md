@@ -5,9 +5,10 @@ description: Identifies the changes made to Entity Search API for each release.
 ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: overview
+ms.author: v-alpunnamar
 author: alekhyasasi
 manager: ehansen
-ms.date: 06/26/2023
+ms.date: 09/26/2023
 ---
 
 # Release notes for Entity Search API
