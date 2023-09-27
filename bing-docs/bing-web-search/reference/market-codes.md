@@ -7,7 +7,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: reference
-ms.date: 07/13/2023
+ms.date: 09/27/2023
 ---
 
 # Market and language codes used by Bing Web Search API
@@ -52,7 +52,7 @@ For a list of country codes that you may set the [cc](query-parameters.md#cc) qu
 |Switzerland|French|fr-CH
 |Switzerland|German|de-CH
 |Taiwan|Traditional Chinese|zh-TW
-|Turkey|Turkish|tr-TR
+|Türkiye|Turkish|tr-TR
 |United Kingdom|English|en-GB
 |United States|English|en-US  
 |United States|Spanish|es-US  
@@ -96,7 +96,7 @@ The following table lists the country codes that you may set the [cc](query-para
 |Sweden|SE
 |Switzerland|CH
 |Taiwan|TW
-|Turkey|TR
+|Türkiye|TR
 |United Kingdom|GB
 |United States|US
 

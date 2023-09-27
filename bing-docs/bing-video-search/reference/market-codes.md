@@ -3,11 +3,12 @@ title: Market and language codes used by the Bing Video Search APIs
 titleSuffix: Bing Services
 description: Provides the list of markets and languages that you may specify in Bing Search requests.
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: reference
-ms.date: 07/11/2023
+ms.date: 09/27/2023
 ---
 
 # Market and language codes used by Bing Video Search APIs
@@ -55,7 +56,7 @@ For a list of country codes that you may specify in the [cc](query-parameters.md
 |Switzerland|French|fr-CH
 |Switzerland|German|de-CH
 |Taiwan|Traditional Chinese|zh-TW
-|Turkey|Turkish|tr-TR
+|Türkiye|Turkish|tr-TR
 |United Kingdom|English|en-GB
 |United States|English|en-US  
 |United States|Spanish|es-US  
@@ -99,7 +100,7 @@ The following are the country codes that you may specify in the [cc](query-param
 |Sweden|SE
 |Switzerland|CH
 |Taiwan|TW
-|Turkey|TR
+|Türkiye|TR
 |United Kingdom|GB
 |United States|US
 
