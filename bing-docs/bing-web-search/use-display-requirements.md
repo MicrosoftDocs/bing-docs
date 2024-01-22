@@ -8,7 +8,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 06/01/2023
+ms.date: 01/22/2024
 ---
 
 # Bing Search API use and display requirements
@@ -77,6 +77,7 @@ The only exception to these internet search experience requirements is for URL d
     > [!NOTE]
     > This requirement does not apply to reordering implemented through the portal for the Bing Custom Search API.
 - Display content that was not included within any part of a response in a way that would lead a user to believe that content is part of the response.
+- Use Responses for websites where you are restricted by the website from using such content, including but not limited to, where your crawler has been blocked via robots.txt.
 - Display advertising that is not provided by Microsoft on any page that displays any part of a response.
 - Display any advertising on pages with responses:
   - From the Bing Image, News Search, Video Search, or Visual Search APIs, or
