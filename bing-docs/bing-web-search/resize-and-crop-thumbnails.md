@@ -5,7 +5,7 @@ description: Some answers from the Bing Search APIs include URLs to thumbnail im
 services: bing-search-services
 author: alekhyasasi
 manager: ehansen
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
 ms.date: 01/29/2024
