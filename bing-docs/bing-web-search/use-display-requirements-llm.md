@@ -4,11 +4,12 @@ titleSuffix: Bing Search Services
 description: The requirements for displaying search results from the Bing Search APIs with LLM in your applications.
 services: bing-search-services
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 01/22/2024
+ms.date: 01/29/2024
 ---
 
 # Use and Display requirements of Bing Search APIs, with your LLM
@@ -17,6 +18,7 @@ ms.date: 01/22/2024
 > The Use and Display requirements on this page apply to the Bing Search APIs, with your LLM. For Use and Display Requirements specific to using the Bing Search APIs, refer [here](use-display-requirements.md).
 
 These Bing Search APIs, with your LLM use and display requirements apply to any implementation of the content and associated information from the following Bing Search APIs, including relationships, metadata, and other signals. Specific terms apply to use of Bing Search APIs, with your LLM used in connection with large language models (LLMs), see "LLM use and display requirements" below.
+
 - Bing Entity Search
 - Bing Image Search
 - Bing News Search
@@ -25,9 +27,10 @@ These Bing Search APIs, with your LLM use and display requirements apply to any 
 - Bing Spell Check
 - Bing Autosuggest
 
-Note use of Bing Custom Search and Bing Visual Search is not included in Bing Search APIs, with your LLM. 
+Note use of Bing Custom Search and Bing Visual Search is not included in Bing Search APIs, with your LLM.
 
 ## Definitions
+
 |Term|Description
 |-|-
 |Answer|A category of results returned in a response. For example, a response from the Bing Web Search API can include answers in the categories of webpage results, image, video, and news.
@@ -49,7 +52,7 @@ Note use of Bing Custom Search and Bing Visual Search is not included in Bing Se
 
 ## Bing Search APIs
 
-**Note**
+**Note**:
 
 The requirements in this section apply to only the Search APIs, which does not include Bing Spell Check or Bing Autosuggest. This section applies to use and display of Responses from the Search APIs.
 
@@ -87,6 +90,7 @@ All data returned in Responses may only be used in internet search experiences. 
 ### Privacy Notice
 
 **Do:**
+
 - Prominently include a functional hyperlink to the [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839), near each point in the user experience (UX) that offers a user the ability to input a search query. Label the hyperlink **Microsoft Privacy Statement**.
 
 ## LLM use and display requirements for Search APIs, Bing Spell Check API and Bing Autosuggest API
