@@ -56,9 +56,9 @@ In this tutorial, we discuss only selected portions of the source code. Copy and
 
 To follow along with the tutorial, you need subscription keys for the Bing Search API, and Bing Maps API. 
 
-* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
+* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/ai-services/).
 * Once you have your Azure subscription:
-  * <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesBingSearch-v7"  title="Create a Bing Search resource"  target="_blank">Create a Bing Search resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
+  * <a href="https://ms.portal.azure.com/#create/Microsoft.BingSearch"  title="Create a Bing Search resource"  target="_blank">Create a Bing Search resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
   * <a href="https://www.microsoft.com/maps/create-a-bing-maps-key.aspx"  title="Create a Computer Vision resource"  target="_blank">Create a Bing Maps resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
 
 ## App components
