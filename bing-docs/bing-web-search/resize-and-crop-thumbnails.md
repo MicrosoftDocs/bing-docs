@@ -8,7 +8,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 02/15/2024
+ms.date: 02/14/2024
 ms.author: v-alpunnamar
 ---
 
