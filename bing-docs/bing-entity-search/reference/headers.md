@@ -8,6 +8,7 @@ ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: reference
 ms.date: 02/16/2024
+ms.author: v-alpunnamar
 ---
 
 # Entity Search API v7 headers
