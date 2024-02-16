@@ -3,14 +3,13 @@ title: "Tutorial: Getting Automatic suggestions Results using Bing Autosuggest A
 titleSuffix: Bing Search Services
 description: In this tutorial, you will build a web page that allows users to query the Bing Autosuggest API and displays the query results.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 02/15/2024
+ms.author: v-alpunnamar
 ---
 
 # Tutorial: Get search suggestions on a web page
@@ -25,7 +24,8 @@ This tutorial shows you how to:
 
 ## Prerequisites
 
-To follow along with the tutorial, you need a subscription key for the Bing Autosuggest API. If you don't have one, [create a Bing Autosuggest resource](https://portal.azure.com/#create/Microsoft.CognitiveServicesBingAutosuggest-v7) in the Azure portal.
+To follow along with the tutorial, you need a subscription key for the Bing Autosuggest API. If you don't have one, [create a Bing Autosuggest resource](https://ms.portal.azure.com/#create/microsoft.bingsearch) in the Azure portal.
+
 
 ## Create a new Web page
 
