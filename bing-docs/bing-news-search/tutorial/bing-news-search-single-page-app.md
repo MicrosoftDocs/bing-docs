@@ -3,13 +3,13 @@ title: "Tutorial: Create a single-page web app using the Bing News Search API"
 titleSuffix: Bing Search Services
 description: Use this tutorial to build a single-page web application that can send search queries to the Bing News API, and display the results within the webpage.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 02/19/2024
+ms.author: v-alpunnamar
 ---
 
 # Tutorial: Create a single-page web app
@@ -25,6 +25,7 @@ The Bing News Search API lets you search the Web and obtain results of the news 
 
 The tutorial app illustrates how to:
 > [!div class="checklist"]
+>
 > * Perform a Bing News Search API call in JavaScript.
 > * Pass search options to the Bing News Search API.
 > * Display news search results from four categories: any-type, business, health, or politics, from time-frames of 24 hours, the past week, month, or all available time.
@@ -34,7 +35,6 @@ The tutorial app illustrates how to:
 
 The tutorial page is entirely self-contained; it does not use any external frameworks, style sheets, or image files. It uses only widely supported JavaScript language features and works with current versions of all major Web browsers.
 
-
 ## Prerequisites
 
 To follow along with the tutorial, you need subscription keys for the Bing Search API. If you don't have these, you'll need to create them:
@@ -43,9 +43,11 @@ To follow along with the tutorial, you need subscription keys for the Bing Searc
 * Once you have your Azure subscription, <a href="https://ms.portal.azure.com/#create/Microsoft.BingSearch"  title="Create a Bing Search resource"  target="_blank">create a Bing Search resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
 
 ## App components
+
 Like any single-page Web app, this tutorial application includes three parts:
 
 > [!div class="checklist"]
+>
 > * HTML - Defines the structure and content of the page
 > * CSS - Defines the appearance of the page
 > * JavaScript - Defines the behavior of the page
@@ -55,6 +57,7 @@ Most of the HTML and CSS is conventional, so the tutorial doesn't discuss it. Th
 ```html
 <form name="bing" onsubmit="return newBingNewsSearch(this)">
 ```
+
 The `onsubmit` handler returns `false`, which keeps the form from being submitted to a server. The JavaScript code does the work of collecting the necessary information from the form and performing the search.
 
 The HTML also contains the divisions (HTML `<div>` tags) where the search results appear.
@@ -63,7 +66,7 @@ The HTML also contains the divisions (HTML `<div>` tags) where the search result
 
 To avoid having to include the Bing Search API subscription key in the code, we use the browser's persistent storage to store the key. Before the key is stored, we prompt for the user's key. If the key is later rejected by the API, we invalidate the stored key so the user will be prompted again.
 
-We define `storeValue` and `retrieveValue` functions that use either the `localStorage` object (not all browsers support it) or a cookie. The `getSubscriptionKey()` function uses these functions to store and retrieve the user's key. 
+We define `storeValue` and `retrieveValue` functions that use either the `localStorage` object (not all browsers support it) or a cookie. The `getSubscriptionKey()` function uses these functions to store and retrieve the user's key.
 
 ``` javascript
 // Cookie names for data we store
@@ -90,13 +93,16 @@ function getSubscriptionKey() {
     return key;
 }
 ```
+
 The HTML `<form>` tag `onsubmit` calls the `bingWebSearch` function to return search results. `bingWebSearch` uses `getSubscriptionKey()` to authenticate each query. As shown in the previous definition, `getSubscriptionKey` prompts the user for the key if the key hasn't been entered. The key is then stored for continuing use by the application.
 
 ```html
 <form name="bing" onsubmit="this.offset.value = 0; return bingWebSearch(this.query.value, 
     bingSearchOptions(this), getSubscriptionKey())">
 ```
+
 ## Selecting search options
+
 The following figure shows the query text box and options that define a search for news about school funding.
 
 ![Bing News Search options](../media/news-search-categories.PNG)
@@ -143,6 +149,7 @@ function bingSearchOptions(form) {
 For example, the `SafeSearch` parameter in an actual API call can be `strict`, `moderate`, or `off`, with `moderate` being the default. Our form, however, uses a checkbox, which has only two states. The JavaScript code converts this setting to either `strict` or `off` (`moderate` is not used).
 
 ## Performing the request
+
 Given the query, the options string, and the API key, the `BingNewsSearch` function uses an `XMLHttpRequest` object to make the request to the Bing News Search endpoint.
 
 ```javascript
@@ -204,7 +211,7 @@ function bingNewsSearch(query, options, key) {
 }
 ```
 
-Upon successful completion of the HTTP request, JavaScript calls the `load` event handler, the `handleBingResponse()` function, to handle a successful HTTP GET request to the API. 
+Upon successful completion of the HTTP request, JavaScript calls the `load` event handler, the `handleBingResponse()` function, to handle a successful HTTP GET request to the API.
 
 ```javascript
 // handle Bing search request results
@@ -385,9 +392,10 @@ The `news` renderer is shown in the following JavaScript excerpt:
 The news renderer function:
 
 > [!div class="checklist"]
+>
 > * Creates a paragraph tag, assigns it to the `news` class, and pushes it to the html array.
 > * Calculates image thumbnail size (width is fixed at 60 pixels, height calculated proportionately).
-> * Builds the HTML `<img>` tag to display the image thumbnail. 
+> * Builds the HTML `<img>` tag to display the image thumbnail.
 > * Builds the HTML `<a>` tags that link to the image and the page that contains it.
 > * Builds the description that displays information about the image and the site it's on.
 
@@ -428,5 +436,6 @@ cors-proxy-server
 Leave the command window open while you use the tutorial app; closing the window stops the proxy. In the expandable HTTP Headers section below the search results, you can now see the `X-MSEdge-ClientID` header (among others) and verify that it is the same for each request.
 
 ## Next steps
+>
 > [!div class="nextstepaction"]
 > [Bing News Search API reference](../reference/endpoints.md)
