@@ -3,14 +3,13 @@ title: "Tutorial: Bing Entity Search single-page web app"
 titleSuffix: Bing Azure Services
 description: This tutorial shows how to use the Bing Entity Search API in a single-page Web application.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 02/19/2024
+ms.author: v-alpunnamar
 ---
 
 # Tutorial: Single-page web app
