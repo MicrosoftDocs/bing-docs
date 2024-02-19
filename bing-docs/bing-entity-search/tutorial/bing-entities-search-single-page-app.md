@@ -37,6 +37,7 @@ Our app therefore calls upon the Bing Maps service to obtain latitude and longit
 The tutorial app illustrates how to:
 
 > [!div class="checklist"]
+>
 > * Perform a Bing Entity Search API call in JavaScript.
 > * Perform a Bing Maps `locationQuery` API call in JavaScript.
 > * Pass search options to the API calls.
@@ -53,7 +54,7 @@ In this tutorial, we discuss only selected portions of the source code. Copy and
 
 ## Prerequisites
 
-To follow along with the tutorial, you need subscription keys for the Bing Search API, and Bing Maps API. 
+To follow along with the tutorial, you need subscription keys for the Bing Search API, and Bing Maps API.
 
 * An Azure subscription - [Create one for free](https://azure.microsoft.com/free/ai-services/).
 * Once you have your Azure subscription:
@@ -65,6 +66,7 @@ To follow along with the tutorial, you need subscription keys for the Bing Searc
 Like any single-page Web app, the tutorial application includes three parts:
 
 > [!div class="checklist"]
+>
 > * HTML - Defines the structure and content of the page
 > * CSS - Defines the appearance of the page
 > * JavaScript - Defines the behavior of the page
@@ -90,7 +92,7 @@ The HTML also contains the divisions (HTML `<div>` tags) where the search result
 
 To avoid having to include the Bing Search and Bing Maps API subscription keys in the code, we use the browser's persistent storage to store them. If either key has not been stored, we prompt for it and store it for later use. If the key is later rejected by the API, we invalidate the stored key so the user is asked for it upon their next search.
 
-We define `storeValue` and `retrieveValue` functions that use either the `localStorage` object (if the browser supports it) or a cookie. Our `getSubscriptionKey()` function uses these functions to store and retrieve the user's key. 
+We define `storeValue` and `retrieveValue` functions that use either the `localStorage` object (if the browser supports it) or a cookie. Our `getSubscriptionKey()` function uses these functions to store and retrieve the user's key.
 
 ```javascript
 // cookie names for data we store
@@ -167,7 +169,7 @@ The `mapquery` field isn't handled in `bingSearchOptions()` because it is used f
 
 ## Obtaining a location
 
-The Bing Maps API offers a <a href="https://learn.microsoft.com/bingmaps/rest-services/locations/find-a-location-by-query" target="_blank">locationQuery method</a>, which we use to find the latitude and longitude of the location the user enters. These coordinates are then passed to the Bing Entity Search API with the user's request. The search results prioritize entities and places that are close to the specified location.
+The Bing Maps API offers a [locationQuery method](https://learn.microsoft.com/bingmaps/rest-services/locations/find-a-location-by-query), which we use to find the latitude and longitude of the location the user enters. These coordinates are then passed to the Bing Entity Search API with the user's request. The search results prioritize entities and places that are close to the specified location.
 
 We can't access the Bing Maps API using an ordinary `XMLHttpRequest` query in a Web app because the service does not support cross-origin queries. Fortunately, it supports JSONP (the "P" is for "padded"). A JSONP response is an ordinary JSON response wrapped in a function call. The request is made by inserting using a `<script>` tag into the document. (Loading scripts is not subject to browser security policies.)
 
@@ -251,7 +253,7 @@ function bingMapsCallback(response) {
 }
 ```
 
-Along with latitude and longitude, the Bing Entity Search query requires a *radius* that indicates the precision of the location information. We calculate the radius using the *bounding box* provided in the Bing Maps response. The bounding box is a rectangle that surrounds the entire location. For example, if the user enters `NYC`, the result contains roughly central coordinates of New York City and a bounding box that encompasses the city. 
+Along with latitude and longitude, the Bing Entity Search query requires a *radius* that indicates the precision of the location information. We calculate the radius using the *bounding box* provided in the Bing Maps response. The bounding box is a rectangle that surrounds the entire location. For example, if the user enters `NYC`, the result contains roughly central coordinates of New York City and a bounding box that encompasses the city.
 
 We first calculate the distances from the primary coordinates to each of the four corners of the bounding box using the function `haversineDistance()` (not shown). We use the largest of these four distances as the radius. The minimum radius is a kilometer. This value is also used as a default if no bounding box is provided in the response.
 
@@ -312,7 +314,7 @@ function bingEntitySearch(query, latlong, options, key) {
 }
 ```
 
-Upon successful completion of the HTTP request, JavaScript calls our `load` event handler, the `handleBingResponse()` function, to handle a successful HTTP GET request to the API. 
+Upon successful completion of the HTTP request, JavaScript calls our `load` event handler, the `handleBingResponse()` function, to handle a successful HTTP GET request to the API.
 
 ```javascript
 // handle Bing search request results
@@ -398,9 +400,9 @@ The Bing Entity Search API [requires you to display results in a specified order
 
 Instead, we use the `rankingResponse` collection in the search results to order the results for display. This object refers to items in the `Entitiess` and/or `Places` collections.
 
-`rankingResponse` may contain up to three collections of search results, designated `pole`, `mainline`, and `sidebar`. 
+`rankingResponse` may contain up to three collections of search results, designated `pole`, `mainline`, and `sidebar`.
 
-`pole`, if present, is the most relevant search result and should be displayed prominently. `mainline` refers to the bulk of the search results. Mainline results should be displayed immediately after `pole` (or first, if `pole` is not present). 
+`pole`, if present, is the most relevant search result and should be displayed prominently. `mainline` refers to the bulk of the search results. Mainline results should be displayed immediately after `pole` (or first, if `pole` is not present).
 
 Finally. `sidebar` refers to auxiliary search results. They may be displayed in an actual sidebar or simply after the mainline results. We have chosen the latter for our tutorial app.
 
@@ -408,8 +410,8 @@ Each item in a `rankingResponse` collection refers to the actual search result i
 
 | Item | Description |
 |-|-|
-|`id`|The `id` looks like a URL, but should not be used for links. The `id` type of a ranking result matches the `id` of either a search result item in an answer collection, *or* an entire answer collection (such as `Entities`).
-|`answerType`<br>`resultIndex`|The `answerType` refers to the top-level answer collection that contains the result (for example, `Entities`). The `resultIndex` refers to the result's index within that collection. If `resultIndex` is omitted, the ranking result refers to the entire collection.
+|`id`|The `id` looks like a URL, but should not be used for links. The `id` type of a ranking result matches the `id` of either a search result item in an answer collection, *or* an entire answer collection (such as `Entities`).|
+|`answerType`<br>`resultIndex`|The `answerType` refers to the top-level answer collection that contains the result (for example, `Entities`). The `resultIndex` refers to the result's index within that collection. If `resultIndex` is omitted, the ranking result refers to the entire collection.|
 
 > [!NOTE]
 > For more information on this part of the search response, see [Rank Results](../../bing-web-search/rank-results.md).
@@ -509,7 +511,8 @@ Let's take a closer look at the `entities` renderer:
 Our entity renderer function:
 
 > [!div class="checklist"]
-> * Builds the HTML `<img>` tag to display the image thumbnail, if any. 
+>
+> * Builds the HTML `<img>` tag to display the image thumbnail, if any.
 > * Builds the HTML `<a>` tag that links to the page that contains the image.
 > * Builds the description that displays information about the image and the site it's on.
 > * Incorporates the entity's classification using the display hints, if any.
