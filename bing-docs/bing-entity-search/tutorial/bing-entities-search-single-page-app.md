@@ -3,14 +3,13 @@ title: "Tutorial: Bing Entity Search single-page web app"
 titleSuffix: Bing Azure Services
 description: This tutorial shows how to use the Bing Entity Search API in a single-page Web application.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 02/19/2024
+ms.author: v-alpunnamar
 ---
 
 # Tutorial: Single-page web app
@@ -56,9 +55,9 @@ In this tutorial, we discuss only selected portions of the source code. Copy and
 
 To follow along with the tutorial, you need subscription keys for the Bing Search API, and Bing Maps API. 
 
-* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
+* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/ai-services/).
 * Once you have your Azure subscription:
-  * <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesBingSearch-v7"  title="Create a Bing Search resource"  target="_blank">Create a Bing Search resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
+  * <a href="https://ms.portal.azure.com/#create/Microsoft.BingSearch"  title="Create a Bing Search resource"  target="_blank">Create a Bing Search resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
   * <a href="https://www.microsoft.com/maps/create-a-bing-maps-key.aspx"  title="Create a Computer Vision resource"  target="_blank">Create a Bing Maps resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
 
 ## App components
