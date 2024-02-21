@@ -19,16 +19,16 @@ In this tutorial, we'll build a Web page that allows users to query the Bing Spe
 This tutorial shows you how to:
 
 > [!div class="checklist"]
+>
 > - Make a simple query to the Bing Spell Check API.
 > - Display query results.
 
 ## Prerequisites
 
-
 To follow along with the tutorial, you need a subscription key for the Bing Spell Check API. If you don't have one, you'll need:
 
-* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/ai-services/).
-* [A Bing Spell Check resource](https://ms.portal.azure.com/#create/Microsoft.BingSearch). 
+- An Azure subscription - [Create one for free](https://azure.microsoft.com/free/ai-services/).
+- [A Bing Spell Check resource](https://ms.portal.azure.com/#create/Microsoft.BingSearch).
 
 ## Create a new Web page
 
