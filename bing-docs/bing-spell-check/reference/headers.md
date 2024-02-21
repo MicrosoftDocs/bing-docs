@@ -7,7 +7,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: reference
-ms.date: 09/20/2024
+ms.date: 02/20/2024
 ms.author: v-alpunnamar
 ---
 
