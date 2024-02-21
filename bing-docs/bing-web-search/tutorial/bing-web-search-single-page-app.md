@@ -8,7 +8,8 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: tutorial
-ms.date: 04/07/2023
+ms.date: 02/21/2024
+ms.author: v-alpunnamar
 ---
 
 # Tutorial: Create a single-page app using the Bing Web Search API
