@@ -3,13 +3,13 @@ title: "Tutorial: Getting Spell Check Results using Bing Spell Check API"
 titleSuffix: Bing Search Services
 description: Use this tutorial to build a web page that sends queries to the Bing Spell Check API, and displays the results.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 02/20/2024
+ms.author: v-alpunnamar
 ---
 
 # Tutorial: Build a Web page Spell Check client
