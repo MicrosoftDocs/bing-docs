@@ -9,7 +9,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: tutorial
-ms.date: 09/27/2023
+ms.date: 02/19/2024
 ---
 
 # Tutorial: Single-page web app
@@ -56,9 +56,9 @@ In this tutorial, we discuss only selected portions of the source code. Copy and
 
 To follow along with the tutorial, you need subscription keys for the Bing Search API, and Bing Maps API.
 
-* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
+* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/ai-services/).
 * Once you have your Azure subscription:
-  * <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesBingSearch-v7"  title="Create a Bing Search resource"  target="_blank">Create a Bing Search resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
+  * <a href="https://ms.portal.azure.com/#create/Microsoft.BingSearch"  title="Create a Bing Search resource"  target="_blank">Create a Bing Search resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
   * <a href="https://www.microsoft.com/maps/create-a-bing-maps-key.aspx"  title="Create a Computer Vision resource"  target="_blank">Create a Bing Maps resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
 
 ## App components
@@ -169,7 +169,7 @@ The `mapquery` field isn't handled in `bingSearchOptions()` because it is used f
 
 ## Obtaining a location
 
-The Bing Maps API offers a <a href="https://learn.microsoft.com/bingmaps/rest-services/locations/find-a-location-by-query" target="_blank">locationQuery method</a>, which we use to find the latitude and longitude of the location the user enters. These coordinates are then passed to the Bing Entity Search API with the user's request. The search results prioritize entities and places that are close to the specified location.
+The Bing Maps API offers a [locationQuery method](https://learn.microsoft.com/bingmaps/rest-services/locations/find-a-location-by-query), which we use to find the latitude and longitude of the location the user enters. These coordinates are then passed to the Bing Entity Search API with the user's request. The search results prioritize entities and places that are close to the specified location.
 
 We can't access the Bing Maps API using an ordinary `XMLHttpRequest` query in a Web app because the service does not support cross-origin queries. Fortunately, it supports JSONP (the "P" is for "padded"). A JSONP response is an ordinary JSON response wrapped in a function call. The request is made by inserting using a `<script>` tag into the document. (Loading scripts is not subject to browser security policies.)
 
@@ -410,8 +410,8 @@ Each item in a `rankingResponse` collection refers to the actual search result i
 
 | Item | Description |
 |-|-|
-|`id`|The `id` looks like a URL, but should not be used for links. The `id` type of a ranking result matches the `id` of either a search result item in an answer collection, *or* an entire answer collection (such as `Entities`).
-|`answerType`<br>`resultIndex`|The `answerType` refers to the top-level answer collection that contains the result (for example, `Entities`). The `resultIndex` refers to the result's index within that collection. If `resultIndex` is omitted, the ranking result refers to the entire collection.
+|`id`|The `id` looks like a URL, but should not be used for links. The `id` type of a ranking result matches the `id` of either a search result item in an answer collection, *or* an entire answer collection (such as `Entities`).|
+|`answerType`<br>`resultIndex`|The `answerType` refers to the top-level answer collection that contains the result (for example, `Entities`). The `resultIndex` refers to the result's index within that collection. If `resultIndex` is omitted, the ranking result refers to the entire collection.|
 
 > [!NOTE]
 > For more information on this part of the search response, see [Rank Results](../../bing-web-search/rank-results.md).

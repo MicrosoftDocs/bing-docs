@@ -5,10 +5,11 @@ description: Some answers from the Bing Search APIs include URLs to thumbnail im
 services: bing-search-services
 author: alekhyasasi
 manager: ehansen
-ms.service: cognitive-services
+ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 07/13/2023
+ms.date: 02/14/2024
+ms.author: v-alpunnamar
 ---
 
 # Resize and crop thumbnail images
@@ -18,7 +19,8 @@ ms.date: 07/13/2023
 
 Some answers include URLs to thumbnail images served by Bing. The following examples show several thumbnail URL formats that you might find in an answer.
 
-```http
+
+```curl
 https://<host>/th?id=ON.A317B1375C1ADD5C646CB8635AE4E9&pid=News
 https://<host>/th?id=OVP.VC36z4V1MoxzlwETyoaQHgFo&pid=Api
 https://<host>/th?id=AMMS_c1a785119b4d9fc14b6571a2a2f728&w=110&h=110&c=7&rs=1&qlt=80&cdv=1&pid=16.1
@@ -34,7 +36,9 @@ If you specify an image size that’s larger than the thumbnail’s original siz
 
 To prevent Bing from adding white padding if the requested size is greater than the thumbnail’s original size, include the *p* query parameter. For example, if you include the *p* parameter in the above example, Bing returns a 474x316 image instead of a 500x333 image. Set the *p* parameter to 0 (zero).
 
-`<https://<host>/th?id=AMMS_92772df988...&w=500&p=0&pid=16.1>`
+```curl
+https://<host>/th?id=AMMS_92772df988...&w=500&p=0&pid=16.1
+```
 
 If you specify both the *w* and *h* query parameters, Bing maintains the thumbnail’s aspect ratio and adds white padding as needed. For example, if the thumbnail’s original size is 474x316 and you set the width and height parameters to 200x200 (&w=200&h=200), Bing returns an image that contains 33 pixels of white padding on the top and bottom. If you include the *p* query parameter, Bing returns an image that’s 200x134.
 

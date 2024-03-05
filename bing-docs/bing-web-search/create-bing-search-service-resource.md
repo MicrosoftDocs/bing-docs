@@ -8,7 +8,8 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 07/13/2023
+ms.date: 02/15/2024
+ms.author: v-alpunnamar
 ---
 
 # Create Bing Search resource through Azure Marketplace
@@ -40,7 +41,8 @@ The following steps walk you through creating a Bing Search resource:
 
   >[!NOTE]
   > While creating Bing Custom Search resource ensure **Bing Custom Search** is selected as top level service and not "Bing Search".
-   > :::image type="content" source="media/bing-web-api/bing-custom-search-create.png" alt-text="Bing Custom Search Create breadcrumb":::
+  > 
+  > :::image type="content" source="media/bing-web-api/bing-custom-search-create.png" alt-text="Bing Custom Search Create breadcrumb":::
 
 1. Enter a resource name. Names may contain alphanumeric characters and dashes (-) only.
 1. The **Subscription** field could be set to **Free Trial** or select your appropriate subscription.
