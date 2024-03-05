@@ -44,6 +44,546 @@
       "source_path": "bing-docs/bing-image-search/how-to/image-insights.md",
       "redirect_url": "/bing/search-apis/bing-image-search/overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-autosuggest/quickstarts/rest/csharp.md",
+      "redirect_url": "/bing/search-apis/bing-autosuggest/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-autosuggest/quickstarts/rest/java.md",
+      "redirect_url": "/bing/search-apis/bing-autosuggest/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-autosuggest/quickstarts/rest/nodejs.md",
+      "redirect_url": "/bing/search-apis/bing-autosuggest/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-autosuggest/quickstarts/rest/php.md",
+      "redirect_url": "/bing/search-apis/bing-autosuggest/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-autosuggest/quickstarts/rest/python.md",
+      "redirect_url": "/bing/search-apis/bing-autosuggest/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-autosuggest/quickstarts/rest/ruby.md",
+      "redirect_url": "/bing/search-apis/bing-autosuggest/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing/search-apis/bing-autosuggest/quickstarts/sdk/autosuggest-client-library-csharp.md",
+      "redirect_url": "/bing/search-apis/bing-autosuggest/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-autosuggest/quickstarts/sdk/autosuggest-client-library-go.md",
+      "redirect_url": "/bing/search-apis/bing-autosuggest/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-autosuggest/quickstarts/sdk/image-search-client-library-javascript.md",
+      "redirect_url": "/bing/search-apis/bing-autosuggest/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-autosuggest/quickstarts/sdk/image-search-client-library-python.md",
+      "redirect_url": "/bing/search-apis/bing-autosuggest/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-autosuggest/quickstarts/quickstarts.md",
+      "redirect_url": "/bing/search-apis/bing-autosuggest/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-autosuggest/samples.md",
+      "redirect_url": "/bing/search-apis/bing-autosuggest/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-custom-search/quickstarts/rest/csharp.md",
+      "redirect_url": "/bing/search-apis/bing-custom-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-custom-search/quickstarts/rest/java.md",
+      "redirect_url": "/bing/search-apis/bing-custom-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-custom-search/quickstarts/rest/nodejs.md",
+      "redirect_url": "/bing/search-apis/bing-custom-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-custom-search/quickstarts/rest/php.md",
+      "redirect_url": "/bing/search-apis/bing-custom-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-custom-search/quickstarts/rest/python.md",
+      "redirect_url": "/bing/search-apis/bing-custom-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-custom-search/quickstarts/rest/ruby.md",
+      "redirect_url": "/bing/search-apis/bing-custom-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-custom-search/quickstarts/sdk/custom-search-client-library-csharp.md",
+      "redirect_url": "/bing/search-apis/bing-custom-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing/search-apis/bing-custom-search/quickstarts/sdk/custom-search-client-library-java.md",
+      "redirect_url": "/bing/search-apis/bing-custom-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-custom-search/quickstarts/sdk/image-search-client-library-javascript.md",
+      "redirect_url": "/bing/search-apis/bing-custom-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing/search-apis/bing-custom-search/quickstarts/sdk/custom-search-client-library-python.md",
+      "redirect_url": "/bing/search-apis/bing-custom-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-custom-search/quickstarts/quickstarts.md",
+      "redirect_url": "/bing/search-apis/bing-custom-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-custom-search/samples.md",
+      "redirect_url": "/bing/search-apis/bing-custom-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-entity-search/quickstarts/rest/csharp.md",
+      "redirect_url": "/bing/search-apis/bing-entity-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-entity-search/quickstarts/rest/java.md",
+      "redirect_url": "/bing/search-apis/bing-entity-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-entity-search/quickstarts/rest/nodejs.md",
+      "redirect_url": "/bing/search-apis/bing-entity-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-entity-search/quickstarts/rest/php.md",
+      "redirect_url": "/bing/search-apis/bing-entity-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-entity-search/quickstarts/rest/python.md",
+      "redirect_url": "/bing/search-apis/bing-entity-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-entity-search/quickstarts/rest/ruby.md",
+      "redirect_url": "/bing/search-apis/bing-entity-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-entity-search/quickstarts/sdk/image-search-client-library-csharp.md",
+      "redirect_url": "/bing/search-apis/bing-entity-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-entity-search/quickstarts/sdk/image-search-client-library-java.md",
+      "redirect_url": "/bing/search-apis/bing-entity-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-entity-search/quickstarts/sdk/image-search-client-library-javascript.md",
+      "redirect_url": "/bing/search-apis/bing-entity-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-entity-search/quickstarts/sdk/image-search-client-library-python.md",
+      "redirect_url": "/bing/search-apis/bing-entity-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-entity-search/quickstarts/quickstarts.md",
+      "redirect_url": "/bing/search-apis/bing-entity-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-entity-search/samples.md",
+      "redirect_url": "/bing/search-apis/bing-entity-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/rest/csharp.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/rest/java.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/rest/nodejs.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/rest/php.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/rest/python.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/rest/ruby.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/sdk/image-search-client-library-csharp.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/sdk/image-search-client-library-java.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/sdk/image-search-client-library-javascript.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/sdk/image-search-client-library-python.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/quickstarts/quickstarts.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-image-search/samples.md",
+      "redirect_url": "/bing/search-apis/bing-image-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-news-search/quickstarts/rest/csharp.md",
+      "redirect_url": "/bing/search-apis/bing-news-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-news-search/quickstarts/rest/go.md",
+      "redirect_url": "/bing/search-apis/bing-news-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-news-search/quickstarts/rest/java.md",
+      "redirect_url": "/bing/search-apis/bing-news-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-news-search/quickstarts/rest/nodejs.md",
+      "redirect_url": "/bing/search-apis/bing-news-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-news-search/quickstarts/rest/php.md",
+      "redirect_url": "/bing/search-apis/bing-news-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-news-search/quickstarts/rest/python.md",
+      "redirect_url": "/bing/search-apis/bing-news-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-news-search/quickstarts/rest/ruby.md",
+      "redirect_url": "/bing/search-apis/bing-news-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-news-search/quickstarts/sdk/image-search-client-library-csharp.md",
+      "redirect_url": "/bing/search-apis/bing-news-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-news-search/quickstarts/sdk/image-search-client-library-java.md",
+      "redirect_url": "/bing/search-apis/bing-news-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-news-search/quickstarts/sdk/image-search-client-library-javascript.md",
+      "redirect_url": "/bing/search-apis/bing-news-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-news-search/quickstarts/sdk/image-search-client-library-python.md",
+      "redirect_url": "/bing/search-apis/bing-news-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-news-search/quickstarts/quickstarts.md",
+      "redirect_url": "/bing/search-apis/bing-news-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-news-search/samples.md",
+      "redirect_url": "/bing/search-apis/bing-news-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/quickstarts/rest/csharp.md",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/quickstarts/rest/java.md",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/quickstarts/rest/nodejs.md",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/quickstarts/rest/php.md",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/quickstarts/rest/python.md",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/quickstarts/rest/ruby.md",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/quickstarts/sdk/spell-check-client-library-csharp",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/quickstarts/quickstarts.md",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-spell-check/samples.md",
+      "redirect_url": "/bing/search-apis/bing-spell-check/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/rest/csharp.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/rest/java.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/rest/nodejs.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/rest/php.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/rest/python.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/rest/ruby.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/sdk/video-search-client-library-csharp.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/sdk/video-search-client-library-java.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/sdk/video-search-client-library-javascript.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/sdk/video-search-client-library-python.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/quickstarts/quickstarts.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-video-search/samples.md",
+      "redirect_url": "/bing/search-apis/bing-video-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/rest/csharp.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/rest/go.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/rest/java.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/rest/nodejs.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/rest/python.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/rest/ruby.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/sdk/visual-search-client-library-csharp.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/sdk/visual-search-client-library-java.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/sdk/visual-search-client-library-javascript.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/sdk/visual-search-client-library-python.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/quickstarts/quickstarts.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-visual-search/samples.md",
+      "redirect_url": "/bing/search-apis/bing-visual-search/overview",
+      "redirect_document_id": false
+    },
+
+
+
+
+
+    {
+      "source_path": "bing-docs/bing-web-search/quickstarts/rest/csharp.md",
+      "redirect_url": "/bing/search-apis/bing-web-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-web-search/quickstarts/rest/go.md",
+      "redirect_url": "/bing/search-apis/bing-web-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-web-search/quickstarts/rest/java.md",
+      "redirect_url": "/bing/search-apis/bing-web-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-web-search/quickstarts/rest/nodejs.md",
+      "redirect_url": "/bing/search-apis/bing-web-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-web-search/quickstarts/rest/php.md",
+      "redirect_url": "/bing/search-apis/bing-web-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-web-search/quickstarts/rest/python.md",
+      "redirect_url": "/bing/search-apis/bing-web-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-web-search/quickstarts/rest/ruby.md",
+      "redirect_url": "/bing/search-apis/bing-web-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-web-search/quickstarts/sdk/web-search-client-library-csharp.md",
+      "redirect_url": "/bing/search-apis/bing-web-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-web-search/quickstarts/sdk/web-search-client-library-java.md",
+      "redirect_url": "/bing/search-apis/bing-web-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-web-search/quickstarts/sdk/web-search-client-library-javascript.md",
+      "redirect_url": "/bing/search-apis/bing-web-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-web-search/quickstarts/sdk/web-search-client-library-python.md",
+      "redirect_url": "/bing/search-apis/bing-web-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-web-search/quickstarts/quickstarts.md",
+      "redirect_url": "/bing/search-apis/bing-web-search/overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "bing-docs/bing-web-search/samples.md",
+      "redirect_url": "/bing/search-apis/bing-web-search/overview",
+      "redirect_document_id": false
     }
   ]
 }

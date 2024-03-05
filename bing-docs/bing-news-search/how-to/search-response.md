@@ -8,8 +8,7 @@ ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: conceptual
 author: alekhyasasi
-ms.date: 04/05/2022
-ms.author: v-apunnamara
+ms.date: 07/07/2023
 ---
 
 # Handling the news search response
@@ -110,11 +109,8 @@ Note that in some cases, the [Video](../reference/response-objects.md#video) obj
       },
 ```
 
-
 ## Next steps
 
 - Learn how to [get trending news](trending-news.md).
 - Learn how to [get news by news category](category-news.md).
-- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing News Search.  
-- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
-
+- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing News Search.

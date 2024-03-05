@@ -3,13 +3,12 @@ title: How to use rankings to display search results
 titleSuffix: Bing Search Services
 description: Learn how to use ranking to display search results from the Bing Web Search API.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 07/13/2023
 ---
 
 # Use ranking to display search results  
@@ -82,10 +81,9 @@ Within each group (mainline or sidebar), the [Items](reference/response-objects.
   
 - `value`  
   
-  The `value` field contains an ID that matches the ID of either an answer or a result within the answer. Either the answer or the results contain the ID but not both. The fragment portion of the URI identifies the answer type and index. For example, `https://<host>/api/v7.0/#WebPages.9`, identifies the 10th webpage in the Webpages answer. 
+  The `value` field contains an ID that matches the ID of either an answer or a result within the answer. Either the answer or the results contain the ID but not both. The fragment portion of the URI identifies the answer type and index. For example, `https://<host>/api/v7.0/#WebPages.9`, identifies the 10th webpage in the Webpages answer.
 
-
-Because the videos ranking item doesn’t include the `resultIndex` field and the `id` URI is missing the index value, you’d display all video results together. 
+Because the videos ranking item doesn’t include the `resultIndex` field and the `id` URI is missing the index value, you’d display all video results together.
 
 ```json
         {
@@ -162,7 +160,7 @@ However, because the Webpages answer doesn’t include an `id` field, you'd disp
       },
 ```
 
-To use the ranking ID, simply match the ranking ID with the ID of an answer or one of its results. If you use the `answerType` and `resultIndex` fields, use `answerType` to identify the answer that contains the results to display. Then, use `resultIndex` to index through the answer's results to get the result to display. 
+To use the ranking ID, simply match the ranking ID with the ID of an answer or one of its results. If you use the `answerType` and `resultIndex` fields, use `answerType` to identify the answer that contains the results to display. Then, use `resultIndex` to index through the answer's results to get the result to display.
 
 Based on the ranking response example for the saffron query, you’d display the following search results in the mainline:
 
@@ -173,7 +171,6 @@ Based on the ranking response example for the saffron query, you’d display the
 And you’d display the following search results in the sidebar:
 
 - Entity 0
-
 
 ## Next steps
 

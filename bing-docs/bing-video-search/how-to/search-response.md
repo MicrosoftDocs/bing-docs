@@ -8,8 +8,7 @@ ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: conceptual
 author: alekhyasasi
-ms.date: 06/27/2022
-ms.author: v-apunnamara
+ms.date: 07/11/2023
 ---
 
 # Handle the video search response
@@ -203,4 +202,3 @@ For information about how to handle the highlighting markers in `displayText`, s
 
 - Learn how to [get trending videos](trending-videos.md).
 - Learn how to [get insights about a video](video-insights.md) such as related videos.
-- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.

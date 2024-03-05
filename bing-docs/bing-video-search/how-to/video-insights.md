@@ -3,14 +3,12 @@ title: Get video insights using the Bing Video Search API
 titleSuffix: Bing Search Services
 description: Learn how to use the Bing Video Search API to get more information about videos, such as related videos.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 07/11/2023
 ---
 
 # Get insights about a video
@@ -48,7 +46,6 @@ The top-level object in the response is a [VideoDetails](../reference/response-o
 
 The `relatedVideos` field contains a list of videos that are related to the specified videos and the `videoResult` field contains the video that the insights are based on.
 
-
 ## Getting related videos insights  
 
 To get videos that are related to the specified video, set the [modules](../reference/query-parameters.md#modulesrequested) query parameter to `RelatedVideos`.
@@ -63,7 +60,7 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
       {
         "webSearchUrl": "https:\/\/www.bing.com\/videos\/search?q=&view=detail&mid=B84EB61E20A24C7F09F2B84EB61E20A24C7F09F2",
         "name": "Solo sailing Los Angeles to Hawaii on 23ft boat",
-        "description": "Instagram @SamHolmesSailing This video documents the 27 days alone at sea aboard my small 23ft sailing yacht. I sailed 2100 nautical miles from Los Angeles California to Hilo Hawai’i. This was my first big ocean crossing. The boat was a Ranger 23. If you’re interested in contributing to the next adventure, links for patreon, paypal and ...",
+        "description": "Instagram @SamHolmesSailing This video documents the 27 days alone at sea aboard my small 23ft sailing yacht. I sailed 2100 nautical miles from Los Angeles California to Hilo Hawai'i. This was my first big ocean crossing. The boat was a Ranger 23. If you’re interested in contributing to the next adventure, links for patreon, paypal and ...",
         "thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?id=OVP.i57jQTjnUvZDfgjYJzjDegEsDh&pid=Api",
         "datePublished": "2019-07-17T22:15:26.0000000",
         "publisher": [
@@ -103,10 +100,7 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 For information about displaying the videos that Bing returns, see [Displaying videos](search-response.md#displaying-videos).
 
-
 ## Next steps
 
 - Learn how to [get trending videos](trending-videos.md).
 - Learn how to [search the web for videos](get-videos.md).
-- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
-

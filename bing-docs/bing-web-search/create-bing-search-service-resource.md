@@ -41,7 +41,7 @@ The following steps walk you through creating a Bing Search resource:
 
   >[!NOTE]
   > While creating Bing Custom Search resource ensure **Bing Custom Search** is selected as top level service and not "Bing Search".
-  >
+  > 
   > :::image type="content" source="media/bing-web-api/bing-custom-search-create.png" alt-text="Bing Custom Search Create breadcrumb":::
 
 1. Enter a resource name. Names may contain alphanumeric characters and dashes (-) only.
@@ -59,5 +59,4 @@ The following steps walk you through creating a Bing Search resource:
 ## Next steps
 
 - Learn about [calling the Bing Web Search API](search-the-web.md).
-- Learn about the [quickstarts](quickstarts/quickstarts.md) and [samples](samples.md) that are available to help you get up and running fast.
 - Review [Web Search API v7 reference](reference/endpoints.md) documentation.  

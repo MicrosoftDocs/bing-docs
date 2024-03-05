@@ -3,16 +3,15 @@ title: Using rank to display search results
 titleSuffix: Bing Search Services
 description: Shows how to use the Bing RankingResponse answer to display search results in rank order.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 07/13/2023
 ---
 
-# Build a console app search client in C#
+# Build a console app search client in C #
 
 This tutorial shows how to build a simple .NET Core console app that allows users to query the Bing Web Search API and display ranked results.
 
@@ -25,9 +24,9 @@ This tutorial shows how to:
 
 To follow along with the tutorial, you need:
 
-* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
-* Once you have your Azure subscription, <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesBingSearch-v7"  title="Create a Bing Search resource"  target="_blank">create a Bing Search resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
-* The [Visual Studio IDE](https://www.visualstudio.com/downloads/).
+- An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
+- Once you have your Azure subscription, <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesBingSearch-v7"  title="Create a Bing Search resource"  target="_blank">create a Bing Search resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
+- The [Visual Studio IDE](https://www.visualstudio.com/downloads/).
 
 ## Create a new Console App project
 
@@ -306,7 +305,7 @@ These methods work together to output the search results to the console.
 
 Run the application. The output should look similar to the following:
 
-```
+```javascript
 Enter Bing query: sailing lessons seattle
 
 WebPage:

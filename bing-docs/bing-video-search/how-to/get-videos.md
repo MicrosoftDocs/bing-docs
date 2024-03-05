@@ -3,13 +3,12 @@ title: "Search for videos using the Bing Video Search API"
 titleSuffix: Bing Search Services
 description: The Bing Video Search API finds and returns relevant videos from the web.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 07/11/2023
 ---
 
 # Search the web for videos
@@ -18,16 +17,13 @@ Use Bing Video Search API to search the Web for videos that matches the user's r
 
 It's easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 
-```
-https://api.bing.microsoft.com/v7.0/videos/search
-```
+`<https://api.bing.microsoft.com/v7.0/videos/search>`
 
 Here's a cURL example that shows you how to call the endpoint using your subscription key. Change the *q* query parameter to search for whatever videos you'd like.
 
 ```curl
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/videos/search?q=sailing+dinghies
 ```
-
 
 ## Request and response headers
 
@@ -46,7 +42,7 @@ Here's a cURL example that includes these headers.
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/v7.0/videos/search?q=sailing+dinghies
 ```
 
-Bing returns a couple of headers you should capture. 
+Bing returns a couple of headers you should capture.
 
 - BingAPIs-TraceId &mdash; ID that identifies the request in the log file.
 - X-MSEdge-ClientID &mdash; The ID that you need to pass in subsequent request to provide continuity of experience.
@@ -59,7 +55,6 @@ Here's a cURL call that returns the response headers. If you want to remove the 
 ```curl
 curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/videos/search?q=sailing+dinghies
 ```
-
 
 ## Query parameters
 
@@ -81,7 +76,6 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 For information about query parameters that you can use to filter the search results, see [Filter the videos that Bing returns](#filter-the-videos-that-bing-returns).
 
-
 ## Filter the videos that Bing returns
 
 When you query the Web, Bing returns all relevant videos that it finds. But what if you're only interested in videos that you can embed in your webpage or videos that are free? Simple, just use one or more of the following query parameters to filter the types of videos that you want. For more details about these parameters and others, see [Filter query parameters](../reference/query-parameters.md#filter-query-parameters).
@@ -93,7 +87,6 @@ When you query the Web, Bing returns all relevant videos that it finds. But what
 - [resolution](../reference/query-parameters.md#resolution) &mdash; Filter videos by resolution (for example, videos that are 1080p or higher).
 - [videoLength](../reference/query-parameters.md#videolength) &mdash; Filter videos by length (for example, videos that are between five and 20 minutes).
 
-
 The following example shows how to get embeddable videos that Bing discovered in the past week that are free.  
 
 ```http
@@ -104,7 +97,7 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 To get videos from a specific domain, use the [site:](https://help.bing.microsoft.com/#apex/18/en-US/10001/-1) query operator in the query string. The response may contain results from other sites depending on the number of relevant results found on the specified site.
 
-The following example gets sailing videos found on contososailing.com.
+The following example gets sailing videos found on `contososailing.com`.
 
 ```http
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/videos/search?q=sailing+dinghies+site%3Acontososailing.com&mkt=en-us
@@ -115,15 +108,14 @@ curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsof
 
 ### Filter by SafeSearch Setting
 
-The [safeSearch](../reference/query-parameters.md#safesearch) query parameter lets you filter videos for adult content. 
+The [safeSearch](../reference/query-parameters.md#safesearch) query parameter lets you filter videos for adult content.
 
 You may set the *safeSearch* parameter to one of the following values:
 
-- Moderate &mdash; Does not return videos with adult content. 
+- Moderate &mdash; Does not return videos with adult content.
 - Strict &mdash; Does not return videos with adult content.
 
 The default is Moderate. If you specify Off, Bing ignores it and will use Moderate.
-
 
 ## Next steps
 
@@ -132,5 +124,3 @@ The default is Moderate. If you specify Off, Bing ignores it and will use Modera
 - Learn how to [get trending videos](trending-videos.md).
 - Learn how to [get insights about a video](video-insights.md) such as related videos.
 - Learn what happens if you don't stay within your queries per second (QPS) limit. Hint: your requests get [throttled](../../bing-web-search/throttling-requests.md).
-- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
-

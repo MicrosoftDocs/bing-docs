@@ -195,7 +195,7 @@ function bingNewsSearch(query, options, key) {
     // event handler for successful response
     request.addEventListener("load", handleBingResponse);
 
-    // event handler for erorrs
+    // event handler for errors
     request.addEventListener("error", function() {
         renderErrorMessage("Error completing request");
     });

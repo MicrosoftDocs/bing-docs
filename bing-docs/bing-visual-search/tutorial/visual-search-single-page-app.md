@@ -3,14 +3,12 @@ title: " Build a single-page Web app - Bing Visual Search"
 titleSuffix: Bing Search Services
 description: Learn how to integrate the Bing Visual Search API into a single-page Web application.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 07/12/2023
 ---
 # Tutorial: Create a Visual Search single-page web app
 

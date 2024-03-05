@@ -19,6 +19,7 @@ ms.author: v-alpunnamar
 
 Some answers include URLs to thumbnail images served by Bing. The following examples show several thumbnail URL formats that you might find in an answer.
 
+
 ```curl
 https://<host>/th?id=ON.A317B1375C1ADD5C646CB8635AE4E9&pid=News
 https://<host>/th?id=OVP.VC36z4V1MoxzlwETyoaQHgFo&pid=Api

@@ -295,7 +295,7 @@ Save the file.
 
 ## Display results
 
-Open the Web page in your browser. At the prompt, enter your Bing Spell Check API subscription key. Enter a query (for example, "Hollo, wlrd!") in the **Spell Check** text box and press **Enter**. The Web page then displays the query results.
+Open the Web page in your browser. At the prompt, enter your Bing Spell Check API subscription key. Enter a query (for example, "Hollo, wolrd!") in the **Spell Check** text box and press **Enter**. The Web page then displays the query results.
 
 ```json
 {
@@ -318,7 +318,7 @@ Open the Web page in your browser. At the prompt, enter your Bing Spell Check AP
     },
     {
       "offset": 7,
-      "token": "wlrd",
+      "token": "wolrd",
       "type": "UnknownToken",
       "suggestions": [
         {

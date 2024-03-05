@@ -7,8 +7,7 @@ ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: reference
 author: alekhyasasi
-ms.date: 04/05/2022
-ms.author: v-apunnamara
+ms.date: 07/07/2023
 ---
 
 # News Search APIs v7 response objects
@@ -24,10 +23,10 @@ The top-level object in the response depends on the endpoint you call. If you ca
 
 Defines the error that occurred.  
   
-|Name|Value|Type 
+|Name|Value|Type
 |-|-|-  
 |<a name="error-code"></a>code|The error code that identifies the category of error. For a list of possible codes, see [Error codes](error-codes.md#error-codes).|String
-|<a name="error-message"></a>message|A description of the error.|String 
+|<a name="error-message"></a>message|A description of the error.|String
 |<a name="error-moredetails"></a>moreDetails|A description that provides additional information about the error.|String
 |<a name="error-parameter"></a>parameter|The query parameter in the request that caused the error.|String
 |<a name="error-subcode"></a>subCode|The error code that identifies the error. For example, if `code` is InvalidRequest, `subCode` may be ParameterInvalid or ParameterInvalidValue.|String
@@ -50,8 +49,8 @@ Defines a thumbnail image.
 > Because URL formats and parameters are subject to change without notice, all image URLs should be used as-is; you should not take dependencies on the URL format or parameters. The exception is those parameters and values discussed by [Resize and crop thumbnail images](../../bing-web-search/resize-and-crop-thumbnails.md).  
   
 |Name|Value|Type
-|-|-|- 
-|provider|A list of owners of the image.|[Organization](#organization) 
+|-|-|-
+|provider|A list of owners of the image.|[Organization](#organization)
 |thumbnail|A link to a thumbnail of the image.|[Thumbnail](#thumbnail)  
 |url|A URL to the image.|String
 
@@ -62,9 +61,8 @@ Defines the size of the media content.
 |Name|Value|Type
 |-|-|-
 |height|The height of the media content, in pixels.|Integer
-|width|The width of the media content, in pixels.|Integer 
+|width|The width of the media content, in pixels.|Integer
 
-  
 ## NewsAnswer  
 
 Defines the top-level object that the response includes when the news request succeeds.  
@@ -80,9 +78,8 @@ If the service suspects a denial of service attack, the request succeeds (HTTP s
 |<a name="news-sort"></a>sort|A list of options for sorting the news articles. For example, sort by relevance (default) or date. To determine which sort order the request used, see the `isSelected` field.<br/><br/>Only the News Search API includes this field.|[SortValue](#sortvalue)[]
 |<a name="news-totalmatches"></a>totalEstimatedMatches|The estimated number of news articles that are relevant to the query. Use this number along with the [count](query-parameters.md#count) and [offset](query-parameters.md#offset) query parameters to page the results.<br/><br/>Only the News Search API includes this field.|Long
 |<a name="news-value"></a>value|A list of news articles that are relevant to the query term.<br/><br/>If there are no results to return for the request, the array is empty.|[NewsArticle](#newsarticle)[]  
-|webSearchUrl|A URL to the top news stories on Bing. Included only for `/news` requests.|String 
+|webSearchUrl|A URL to the top news stories on Bing. Included only for `/news` requests.|String
 
-  
 ## NewsArticle  
 
 Defines a news article.  
@@ -131,7 +128,6 @@ Defines a list of news articles that are related to the search query.
 |<a name="relatedtopic-name"></a>name|The query term that returned the related news articles.|String
 |webSearchUrl|A URL that takes the user to the Bing search results for the related query.|String
 
-  
 ## SortValue  
 
 Defines a sort order to use for the request.  
@@ -140,20 +136,18 @@ Defines a sort order to use for the request.
 |-|-|-
 |id|An identifier that identifies the articles sort order. The following are the possible values:<ul><li>date &mdash; Sort by date.</li><li>relevance &mdash; Sort by relevance.</li></ul>|String
 |isSelected|A Boolean value that determines whether the response used this sort order. If **true**, the response used this sort order.|Boolean  
-|name|The display name of the sort order.|String 
+|name|The display name of the sort order.|String
 |url|A URL that you can use to make the same request using this sort order.|String  
-
 
 ## TextAttribution  
 
 Defines a contractual rule for plain text attribution.  
   
-|Name|Value|Type 
+|Name|Value|Type
 |-|-|-
 |_type|A type hint, which is set to TextAttribution.|String
-|<a name="textattribution-text"></a>text|The attribution text.<br/><br/>Text attribution applies to the news article as a whole and should be displayed immediately following the article's presentation. If there are multiple text or link attribution rules that do not specify a target field, you should concatenate them and display them using a "Data from: " label.|String 
+|<a name="textattribution-text"></a>text|The attribution text.<br/><br/>Text attribution applies to the news article as a whole and should be displayed immediately following the article's presentation. If there are multiple text or link attribution rules that do not specify a target field, you should concatenate them and display them using a "Data from: " label.|String
   
-
 ## Thing  
 
 Defines an entity that the article mentions.  
@@ -162,7 +156,6 @@ Defines an entity that the article mentions.
 |-|-|-
 |name|The name of the entity that the article mentions.|String
 
-  
 ## Thumbnail  
 
 Defines a link to the related image.  
@@ -180,7 +173,7 @@ Defines a trending news topic.
 |Name|Value|Type
 |-|-|-
 |<a name="topic-image"></a>image|A link to a related image.<br/><br/>The `Image` object in this context contains only the `url` and `provider` fields. The `provider` field is an array of [Organization](#organization) objects that identify the image providers.|Image
-|<a name="topic-isbreakingnews"></a>isBreakingNews|A Boolean value that indicates whether the topic is considered breaking news. If the topic is considered breaking news, the value is **true**.|Boolean 
+|<a name="topic-isbreakingnews"></a>isBreakingNews|A Boolean value that indicates whether the topic is considered breaking news. If the topic is considered breaking news, the value is **true**.|Boolean
 |<a name="topic-name"></a>name|The title of the trending topic.|String  
 |newsSearchUrl|A URL to the Bing News search results for the search query term (see the `query` field).|String  
 |<a name="topic-query"></a>query|A search query term that returns this trending topic.|[Query](#query)  
@@ -195,6 +188,7 @@ Defines the top-level object that the response includes when the trending topics
 |<a name="trendingtopic-value"></a>value|A list of trending news topics on Bing.<br/><br/>If there are no results to return for the request, the array is empty.|[Topic](#topic)[]
 
 ## Video  
+
 Defines a video that's related to the news article.  
   
 > [!NOTE]
@@ -204,7 +198,7 @@ Defines a video that's related to the news article.
 |-|-|-
 |<a name="video-allowhttpsembed"></a>allowHttpsEmbed|A Boolean value that determines whether you may embed the video (see the `embedHtml` field) on pages that use the HTTPS protocol.|Boolean  
 |<a name="video-embedhtml"></a>embedHtml|An iFrame that lets you embed and run the video in your webpage.|String  
-|<a name="video-motion"></a>motionThumbnailUrl|A URL to an animated thumbnail that shows a preview of the video. Typically, you use this URL to play a preview of the video when the user mouses over the thumbnail of the video on your results page.|String 
+|<a name="video-motion"></a>motionThumbnailUrl|A URL to an animated thumbnail that shows a preview of the video. Typically, you use this URL to play a preview of the video when the user mouses over the thumbnail of the video on your results page.|String
 |<a name="video-name"></a>name|The name of the video.|String
 |<a name="video-thumbnail"></a>thumbnail|The width and height of the thumbnail image or motion thumbnail.|[MediaSize](#mediasize)
 |<a name="video-thumbnailurl"></a>thumbnailUrl|A URL to a thumbnail image of the video. For information about resizing the image, see [Resize and crop thumbnail images](../../bing-web-search/resize-and-crop-thumbnails.md).|String

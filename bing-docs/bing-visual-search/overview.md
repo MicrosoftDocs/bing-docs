@@ -8,7 +8,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: overview
-ms.date: 01/18/2023
+ms.date: 07/12/2023
 ---
 
 # What is the Bing Visual Search API?
@@ -22,7 +22,7 @@ Bing Visual Search API returns insights about an image. For example, Bing can he
 
 To get started using the API, pick the subscription you want from <a href="https://aka.ms/bingsearchapipricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call.
 
-You can easily call the API by sending a native HTTP GET request or by using the Visual Search SDK. For examples to help you get up and running quickly for either option, see [Quickstarts](quickstarts/quickstarts.md).
+You can easily call the API by sending a native HTTP GET request or by using the Visual Search SDK.
 
 ## Features  
 

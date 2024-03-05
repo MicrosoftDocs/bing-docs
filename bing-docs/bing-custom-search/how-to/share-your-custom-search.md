@@ -3,14 +3,13 @@ title: Share your custom search - Bing Custom Search
 titleSuffix: Bing Search Services
 description: Easily allow collaborative editing and testing of your instance by sharing it with members of your team.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 09/27/2023
 ---
 
 # Share your Custom Search instance
@@ -20,9 +19,9 @@ You can easily allow collaborative editing and testing of your instance by shari
 - Sign in to [Custom Search](https://customsearch.ai).
 - Select the Custom Search instance you want to share.
 - Click the Settings icon (appears as a gear).
-- Under **Share Your Instance**, enter the email address of the person to share your instance with and click **Share**. 
+- Under **Share Your Instance**, enter the email address of the person to share your instance with and click **Share**.
 
-After adding the email address, it appears in the **Instance shared with** list. Repeat the process for each person you want to share your instance with. 
+After adding the email address, it appears in the **Instance shared with** list. Repeat the process for each person you want to share your instance with.
 
 To add someone's email to the list, it isn't necessary for them to have a Custom Search account but they will need to have an account before they make configuration changes. After you share an instance with someone, they'll see it in their list of Custom Search instances. Only one person can modify an instance at a time. If you try to modify an instance that someone else is editing, a warning is shown. An instance may be shared with a maximum of 10 users.
 
