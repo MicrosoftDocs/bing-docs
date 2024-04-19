@@ -3,11 +3,12 @@ title: Query parameters used by Image Search APIs
 titleSuffix: Bing Services
 description: Describes the query parameters that you can use to affect the results of a Bing Image Search APIs request.
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: reference
-ms.date: 03/07/2023
+ms.date: 04/19/2024
 ---
 
 # Image Search API v7 query parameters
@@ -50,5 +51,5 @@ These do not apply to Trending Images API or Image Insights API. Also, these par
 |<a name="minfilesize"></a>minFileSize|Filter images that are greater than or equal to the specified file size.<br/><br/>The maximum file size that you may specify is 520,192 bytes. If you specify a larger value, the API uses 520,192. It is possible that the response may include images that are slightly smaller than the specified minimum.<br/><br/>You may specify this filter and `maxFileSize` to filter images within a range of file sizes.|Integer
 |<a name="minheight"></a>minHeight|Filter images that have a height that is greater than or equal to the specified height. Specify the height in pixels.<br/><br/>You may specify this filter and `maxHeight` to filter images within a range of heights.<br/><br/>This filter and the `height` filter are mutually exclusive.|Integer
 |<a name="minwidth"></a>minWidth|Filter images that have a width that is greater than or equal to the specified width. Specify the width in pixels.<br/><br/>You may specify this filter and `maxWidth` to filter images within a range of widths.<br/><br/>This filter and the `width` filter are mutually exclusive.|Integer
-|<a name="size"></a>size|Filter images by the following sizes:<ul><li>Small &mdash; Return images that are less than 200x200 pixels.</li><li>Medium &mdash; Return images that are greater than or equal to 200x200 pixels but less than 500x500 pixels.</li><li>Large &mdash; Return images that are 500x500 pixels or larger.</li><li>Wallpaper &mdash; Return wallpaper images.</li><li>All &mdash; Do not filter by size. Specifying this value is the same as not specifying the `size` parameter.</li></ul>You may use this parameter along with the `height` or `width` parameters. For example, you may use `height` and `size` to request small images that are 150 pixels tall.|String
+|<a name="size"></a>size|Filter images by the following sizes:<ul><li>Small &mdash; Return images that are less than 200x200 pixels.</li><li>Medium &mdash; Return images that have either the width or height between 200 and 500 pixels.</li><li>Large &mdash; Return images that have either the width or height at 500 pixels or larger.</li><li>Wallpaper &mdash; Return wallpaper images.</li><li>All &mdash; Do not filter by size. Specifying this value is the same as not specifying the `size` parameter.</li></ul>You may use this parameter along with the `height` or `width` parameters. For example, you may use `height` and `size` to request small images that are 150 pixels tall.|String
 |<a name="width"></a>width|Filter images that have the specified width, in pixels.<br/><br/>You may use this filter with the `size` filter to return small images that have a width of 150 pixels.|UnsignedShort
