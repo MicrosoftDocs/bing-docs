@@ -340,7 +340,7 @@ Defines a webpage that is relevant to the query.
 |-|-|-
 |about|For internal use only.|Object[]
 |<a name="datelastcrawled"></a>dateLastCrawled|The last time that Bing crawled the webpage. The date is in the form, YYYY-MM-DDTHH:MM:SS. For example, 2015-04-13T05:23:39.|String
-|datePublished | The time that webpage published. The date is in the form, YYYY-MM-DDTHH:MM:SS. <br/>For example, 2015-04-13T05:23:39.| String
+|datePublished | The time that webpage published. The date is in the form, YYYY-MM-DDTHH:MM:SS. <br/>Example: 2015-04-13T05:23:39.| String
 |datePublishedDisplayText | The display version of the datePublished.| String
 |contractualRules|A list of rules that you must adhere to if you display the answer. The following contractual rules may apply.<ul><li>[LicenseAttribution](#licenseattribution)</li></ul><br>For information about displaying contractual rules, see [Data Attribution](../data-attribution.md).|Object[]
 |<a name="deeplinks"></a>deepLinks|A list of links to related content that Bing found in the website that contains this webpage.<br/><br/>The `Webpage` object in this context includes only the `name` and `url` fields and optionally the `snippet` field.|[Webpage](#webpage)[]
