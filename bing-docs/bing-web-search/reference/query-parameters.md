@@ -3,11 +3,12 @@ title: Query parameters used by Web Search API
 titleSuffix: Bing Services
 description: Describes the query parameters that you can use in Bing Web Search API requests to affect the results.
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: reference
-ms.date: 04/07/2023
+ms.date: 06/10/2024
 ---
 
 # Web Search API v7 query parameters
