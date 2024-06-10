@@ -4,10 +4,11 @@ titleSuffix: Bing Services
 description: Describes the query parameters that you can use in Bing Autosuggest API requests to affect the results.
 author: alekhyasasi
 manager: ehansen
+ms.author: v-alpunnamar
 ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: reference
-ms.date: 04/07/2023
+ms.date: 06/10/2024
 ---
 
 # Autosuggest API v7 query parameters
