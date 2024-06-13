@@ -7,7 +7,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: reference
-ms.date: 02/21/2024
+ms.date: 06/13/2024
 ms.author: v-alpunnamar
 ---
 
