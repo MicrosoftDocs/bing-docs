@@ -9,11 +9,12 @@ metadata:
   titleSuffix: Bing Search Services
   description: The Bing Search APIs let you build web-connected apps and services that find webpages, images, news and more without advertisements.
   services: bing-search-services
+  author: alekhyasasi
   ms.service: bing-search-services
   ms.subservice: bing-web-search
   ms.topic: hub-page
   ms.collection: collection
-  author: alekhyasasi
+  ms.author: v-alpunnamar
   ms.date: 06/01/2023
 
 highlightedContent:
