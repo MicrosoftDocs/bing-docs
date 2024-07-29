@@ -28,7 +28,7 @@ These Bing Search APIs, with your LLM use and display requirements apply to any 
 - Bing Spell Check
 - Bing Autosuggest
 
-Note use of Bing Custom Search and Bing Visual Search is not included in Bing Search APIs, with your LLM.
+Note use of Bing Visual Search is not included in Bing Search APIs, with your LLM.
 
 ## Definitions
 
