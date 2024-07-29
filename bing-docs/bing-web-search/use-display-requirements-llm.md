@@ -9,7 +9,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 01/29/2024
+ms.date: 08/01/2024
 ---
 
 # Use and Display requirements of Bing Search APIs, with your LLM
@@ -24,6 +24,7 @@ These Bing Search APIs, with your LLM use and display requirements apply to any 
 - Bing News Search
 - Bing Video Search
 - Bing Web Search
+- Bing Custom Search
 - Bing Spell Check
 - Bing Autosuggest
 
