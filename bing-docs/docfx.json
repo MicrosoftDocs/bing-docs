@@ -41,8 +41,7 @@
     "globalMetadata": {
       "breadcrumb_path": "/bing/search-apis/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/bing-docs",
+      "feedback_system": "Standard",
       "defaultDevLang": "csharp",
       "searchScope": ["Bing Search"],
       "uhfHeaderId": "MSDocsHeader-BingSearch"
