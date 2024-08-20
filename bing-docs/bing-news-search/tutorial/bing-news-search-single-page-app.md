@@ -8,7 +8,12 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: tutorial
+<<<<<<< HEAD
 ms.date: 07/07/2023
+=======
+ms.date: 02/19/2024
+ms.author: v-alpunnamar
+>>>>>>> main
 ---
 
 # Tutorial: Create a single-page web app
@@ -38,8 +43,8 @@ The tutorial page is entirely self-contained; it does not use any external frame
 
 To follow along with the tutorial, you need subscription keys for the Bing Search API. If you don't have these, you'll need to create them:
 
-* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
-* Once you have your Azure subscription, <a href="https://portal.azure.com/#create/Microsoft.CognitiveServicesBingSearch-v7"  title="Create a Bing Search resource"  target="_blank">create a Bing Search resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
+* An Azure subscription - [Create one for free](https://azure.microsoft.com/free/ai-services/).
+* Once you have your Azure subscription, <a href="https://ms.portal.azure.com/#create/Microsoft.BingSearch"  title="Create a Bing Search resource"  target="_blank">create a Bing Search resource <span class="docon docon-navigate-external x-hidden-focus"></span></a> in the Azure portal to get your key and endpoint. After it deploys, click **Go to resource**.
 
 ## App components
 

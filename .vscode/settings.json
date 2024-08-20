@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
+<<<<<<< HEAD
         "accentcolor",
         "acceptlanguage",
         "activetab",
@@ -149,5 +150,18 @@
         "websearchurl",
         "wwwroot",
         "yourkeygoeshere"
+=======
+        "areen't",
+        "Divs",
+        "docon",
+        "Entitiess",
+        "erorrs",
+        "errmsg",
+        "jsobj",
+        "latlong",
+        "mapquery",
+        "noresults",
+        "queryurl"
+>>>>>>> main
     ]
 }
