@@ -8,7 +8,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 07/13/2023
+ms.date: 08/20/2024
 ---
 
 # Upgrade from Bing Web Search API v5 to v7
@@ -45,26 +45,26 @@ New search endpoint: `https://api.bing.microsoft.com/v7.0/search`
 
 - The following maps the previous error codes to the new codes. If you've taken a dependency on v5 error codes, update your code accordingly.
 
-|Version 5 code|Version 7 code.subCode
+|Version 5 code | Version 7 code.subCode
 |-|-
-|RequestParameterMissing|InvalidRequest.ParameterMissing
-RequestParameterInvalidValue|InvalidRequest.ParameterInvalidValue
-ResourceAccessDenied|InsufficientAuthorization
-ExceededVolume|RateLimitExceeded
-ExceededQpsLimit|RateLimitExceeded
-Disabled|InsufficientAuthorization.AuthorizationDisabled
-UnexpectedError|ServerError.UnexpectedError
-DataSourceErrors|ServerError.ResourceError
-AuthorizationMissing|InvalidAuthorization.AuthorizationMissing
-HttpNotAllowed|InvalidRequest.HttpNotAllowed
-UserAgentMissing|InvalidRequest.ParameterMissing
-NotImplemented|ServerError.NotImplemented
-InvalidAuthorization|InvalidAuthorization
-InvalidAuthorizationMethod|InvalidAuthorization
-MultipleAuthorizationMethod|InvalidAuthorization.AuthorizationRedundancy
-ExpiredAuthorizationToken|InsufficientAuthorization.AuthorizationExpired
-InsufficientScope|InsufficientAuthorization
-Blocked|InvalidRequest.Blocked
+| RequestParameterMissing | InvalidRequest.ParameterMissing
+| RequestParameterInvalidValue | InvalidRequest.ParameterInvalidValue
+| ResourceAccessDenied | InsufficientAuthorization
+| ExceededVolume | RateLimitExceeded
+| ExceededQpsLimit | RateLimitExceeded
+| Disabled | InsufficientAuthorization.AuthorizationDisabled
+| UnexpectedError | ServerError.UnexpectedError
+| DataSourceErrors | ServerError.ResourceError
+| AuthorizationMissing | InvalidAuthorization.AuthorizationMissing
+| HttpNotAllowed | InvalidRequest.HttpNotAllowed
+| UserAgentMissing | InvalidRequest.ParameterMissing
+| NotImplemented | ServerError.NotImplemented
+|InvalidAuthorization | InvalidAuthorization
+| InvalidAuthorizationMethod | InvalidAuthorization
+| MultipleAuthorizationMethod | InvalidAuthorization.AuthorizationRedundancy
+| ExpiredAuthorizationToken | InsufficientAuthorization.AuthorizationExpired
+| InsufficientScope | InsufficientAuthorization
+| Blocked | InvalidRequest.Blocked
 
 ## Non-breaking changes  
 
