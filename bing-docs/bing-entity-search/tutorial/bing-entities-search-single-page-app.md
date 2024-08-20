@@ -5,19 +5,27 @@ description: This tutorial shows how to use the Bing Entity Search API in a sing
 services: bing-search-services
 author: alekhyasasi
 <<<<<<< HEAD
+<<<<<<< HEAD
 ms.author: v-alpunnamar
 =======
 >>>>>>> main
+=======
+ms.author: v-alpunnamar
+>>>>>>> 2c771186b1a7e59ee906c686cf2acb991eb462f4
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: tutorial
+<<<<<<< HEAD
 <<<<<<< HEAD
 ms.date: 09/27/2023
 =======
 ms.date: 02/19/2024
 ms.author: v-alpunnamar
 >>>>>>> main
+=======
+ms.date: 02/19/2024
+>>>>>>> 2c771186b1a7e59ee906c686cf2acb991eb462f4
 ---
 
 # Tutorial: Single-page web app

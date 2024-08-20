@@ -9,11 +9,16 @@ ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: tutorial
 <<<<<<< HEAD
+<<<<<<< HEAD
 ms.date: 07/07/2023
 =======
 ms.date: 02/19/2024
 ms.author: v-alpunnamar
 >>>>>>> main
+=======
+ms.date: 02/19/2024
+ms.author: v-alpunnamar
+>>>>>>> 2c771186b1a7e59ee906c686cf2acb991eb462f4
 ---
 
 # Tutorial: Create a single-page web app

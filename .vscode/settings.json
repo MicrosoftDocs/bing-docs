@@ -1,6 +1,9 @@
 {
     "cSpell.words": [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 2c771186b1a7e59ee906c686cf2acb991eb462f4
         "accentcolor",
         "acceptlanguage",
         "activetab",
@@ -149,8 +152,12 @@
         "websearch",
         "websearchurl",
         "wwwroot",
+<<<<<<< HEAD
         "yourkeygoeshere"
 =======
+=======
+        "yourkeygoeshere",
+>>>>>>> 2c771186b1a7e59ee906c686cf2acb991eb462f4
         "areen't",
         "Divs",
         "docon",
@@ -162,6 +169,9 @@
         "mapquery",
         "noresults",
         "queryurl"
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 2c771186b1a7e59ee906c686cf2acb991eb462f4
     ]
 }

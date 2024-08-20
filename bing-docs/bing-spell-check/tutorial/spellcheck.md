@@ -9,11 +9,16 @@ ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: tutorial
 <<<<<<< HEAD
+<<<<<<< HEAD
 ms.date: 07/07/2023
 =======
 ms.date: 02/20/2024
 ms.author: v-alpunnamar
 >>>>>>> main
+=======
+ms.date: 02/20/2024
+ms.author: v-alpunnamar
+>>>>>>> 2c771186b1a7e59ee906c686cf2acb991eb462f4
 ---
 
 # Tutorial: Build a Web page Spell Check client
@@ -32,12 +37,17 @@ This tutorial shows you how to:
 To follow along with the tutorial, you need a subscription key for the Bing Spell Check API. If you don't have one, you'll need:
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 - An Azure subscription - [Create one for free](https://azure.microsoft.com/free/cognitive-services/).
 - [A Bing Spell Check resource](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesBingSpellCheck-v7).
 =======
 - An Azure subscription - [Create one for free](https://azure.microsoft.com/free/ai-services/).
 - [A Bing Spell Check resource](https://ms.portal.azure.com/#create/Microsoft.BingSearch).
 >>>>>>> main
+=======
+- An Azure subscription - [Create one for free](https://azure.microsoft.com/free/ai-services/).
+- [A Bing Spell Check resource](https://ms.portal.azure.com/#create/Microsoft.BingSearch).
+>>>>>>> 2c771186b1a7e59ee906c686cf2acb991eb462f4
 
 ## Create a new Web page
 
