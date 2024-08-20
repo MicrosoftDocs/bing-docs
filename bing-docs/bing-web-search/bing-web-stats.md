@@ -3,13 +3,12 @@ title: Add analytics to the Bing Web Search API
 titleSuffix: Bing Search Services
 description: Bing Statistics provides analytics to the Bing Image Search API. Analytics include call volume, top query strings, geographic distribution, and more. 
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 07/13/2023
 ---
 
 # Add analytics to the Bing Search APIs
@@ -17,10 +16,10 @@ ms.author: scottwhi
 Bing Statistics provides analytics for the Bing Search APIs. These analytics include call volume, top query strings, geographic distribution, and more. You can enable Bing Statistics in the [Azure portal](https://ms.portal.azure.com) by navigating to your Azure resource and clicking **Enable Bing Statistics**.
 
 > [!IMPORTANT]
+>
 > - Bing Statistics is not available with resources on the free `F0` pricing tier.
 > - You may not use any data available via the Bing Statistics dashboard to create applications for distribution to third parties.
 > - Enabling Bing Statistics increases your subscription rate slightly. See [pricing](https://aka.ms/bingstatisticspricing) for details.
-
 
 The following image shows the available analytics for each Bing Search API endpoint.
 
@@ -31,6 +30,7 @@ The following image shows the available analytics for each Bing Search API endpo
 Bing updates analytics data every 24 hours and maintains up to 13 months' worth of history that you can access from the [analytics dashboard](https://bingapistatistics.com). Make sure you're signed in using the same Microsoft account (MSA) you used to sign up for Bing Statistics.
 
 > [!NOTE]  
+>
 > - It may take up to 24 hours for metrics to surface on the dashboard. The dashboard shows the date and time the data was last updated.  
 > - Metrics are available from the time you enable the Bing Statistics Add-in.
 
@@ -49,7 +49,7 @@ By default, the charts and graphs display all metrics and data that you have acc
   - **Past 24 hours**: Includes analytics from the last 24 hours.  
   - **Past week**: Includes analytics from the previous 7 days.  
   - **Past month**: Includes analytics from the previous 30 days.  
-  - **A custom date range**: Includes analytics from the specified date range, if available. 
+  - **A custom date range**: Includes analytics from the specified date range, if available.
 
 ## Charts and graphs
 
@@ -89,4 +89,3 @@ The following are the metrics that the dashboard may include.
 - **Answers Returned Distribution**: The answers that Web Search API returned in the response.
 
 - **Response Server Distribution**: The application server that served your API requests. The possible values are Bing.com (for traffic served from desktop and laptop devices) and Bing.com-mobile (for traffic served from mobile devices). The server is determined using the request's User-Agent header value. If the request doesn't include the User-Agent header, Bing tries to derive the server from other signals.
-

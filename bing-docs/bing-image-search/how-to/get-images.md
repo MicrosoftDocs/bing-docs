@@ -4,11 +4,12 @@ titleSuffix: Bing Search Services
 description: Use the Bing Image Search API to search for and get relevant images from the web.
 services: bing-search-services
 author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: conceptual
-ms.date: 03/07/2023
+ms.date: 09/27/2023
 ---
 
 # Search the web for images
@@ -125,4 +126,3 @@ The default is Moderate.
 - Learn how to [get the next page](../../bing-web-search/page-results.md) of search results.
 - Learn how to [get trending images](trending-images.md).
 - Learn what happens if you don't stay within your queries per second (QPS) limit. Hint: your requests get [throttled](../../bing-web-search/throttling-requests.md).
-- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.

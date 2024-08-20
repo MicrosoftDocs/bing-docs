@@ -8,7 +8,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: conceptual
-ms.date: 03/07/2023
+ms.date: 07/12/2023
 ---
 
 # Get insights about an image
@@ -317,4 +317,3 @@ Content-Type: image/jpeg
 ## Next steps
 
 - Learn about the [response](search-response.md) that Bing returns.
-- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.

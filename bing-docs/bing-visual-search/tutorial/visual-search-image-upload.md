@@ -3,14 +3,12 @@ title:  "Tutorial: How to upload image using the Bing Visual Search API"
 titleSuffix: Bing Search Services
 description: Learn how to upload an image to Bing, get insights about it, display the response.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 07/15/2023
 ---
 
 # Tutorial: Upload images to the Bing Visual Search API
@@ -22,6 +20,7 @@ You can find the full source code for this sample with additional error handling
 The tutorial app illustrates how to:
 
 > [!div class="checklist"]
+>
 > * Upload an image to the Bing Visual Search API
 > * Display image search results in a web application
 > * Explore the different insights provided by the API
@@ -468,7 +467,6 @@ function addDivContent(div, tag, json) {
 ## Display insights for different actions
 
 The following functions display insights for different actions. The functions either provide a clickable image or clickable link that sends you to a webpage with more information about the image. This page is either hosted by Bing.com or the image's original website. Not all of the insights' data is displayed in this application. To see all the fields available for an insight, see the [Images - Visual Search](../reference/response-objects.md) reference.
-
 
 ### RelatedImages insights
 

@@ -7,8 +7,7 @@ ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: reference
 author: alekhyasasi
-ms.date: 06/16/2022
-ms.author: v-apunnamara
+ms.date: 07/11/2023
 ---
 
 # Video Search APIs v7 response objects
@@ -203,7 +202,7 @@ The modules query parameter affects the fields that Bing includes in the respons
 |Name|Value|Type
 |-|-|-
 |_type|Type hint, which is set to Api.VideoDetails.VideoDetails.|String  
-|<a name="videodetials-relatedvideos"></a>relatedVideos|A list of videos that are similar to the specified video.[VideosModule](#videosmodule)
+|<a name="videodetails-relatedvideos"></a>relatedVideos|A list of videos that are similar to the specified video.[VideosModule](#videosmodule)
 |<a name="videodetails-videoresults"></a>videoResult|The original video that you requested insights of (this is the video that you set the [id](query-parameters.md#id) query parameter to in your insights request).|[Video](#video)
   
 ## VideosAnswer  

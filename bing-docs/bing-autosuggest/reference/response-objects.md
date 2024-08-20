@@ -2,13 +2,13 @@
 title: Bing Autosuggest API v7 response objects
 titleSuffix: Bing Services
 description: Describes the response objects that Bing Autosuggest API may return in the JSON response.
-author: swhite-msft
+author: alekhyasasi
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: reference
-ms.date: 07/15/2017
-ms.author: scottwhi
+ms.date: 09/27/2023
 ---
 
 # Autosuggest API v7 response objects
@@ -20,15 +20,14 @@ If the request succeeds, the top-level object in the response is the [Suggestion
 > [!NOTE]
 > Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.
 
-  
 ## Error  
 
 Defines the error that occurred.  
   
-|Name|Value|Type 
+|Name|Value|Type
 |-|-|-  
 |<a name="error-code"></a>code|The error code that identifies the category of error. For a list of possible codes, see [Error codes](error-codes.md#error-codes).|String
-|<a name="error-message"></a>message|A description of the error.|String 
+|<a name="error-message"></a>message|A description of the error.|String
 |<a name="error-moredetails"></a>moreDetails|A description that provides additional information about the error.|String
 |<a name="error-parameter"></a>parameter|The query parameter in the request that caused the error.|String
 |<a name="error-subcode"></a>subCode|The error code that identifies the error. For example, if `code` is InvalidRequest, `subCode` may be ParameterInvalid or ParameterInvalidValue.|String
@@ -43,12 +42,11 @@ The top-level object that the response includes when the request fails.
 |_type|Type hint, which is set to ErrorResponse.|String
 |<a name="errors"></a>errors|A list of errors that describe the reasons why the request failed.|[Error](#error)[]  
   
-  
 ## QueryContext  
 
-Defines the query string that Bing used for the request.   
+Defines the query string that Bing used for the request.
   
-|Name|Value|Type 
+|Name|Value|Type
 |-|-|-
 |adultIntent|Not used.|Boolean
 |alterationOverrideQuery|Not used.|String
@@ -56,7 +54,6 @@ Defines the query string that Bing used for the request.
 |askUserForLocation|Not used.|String
 |originalQuery|The user's query term.|String
   
-
 ## SearchAction  
 
 Defines a query search suggestion.  
@@ -68,7 +65,6 @@ Defines a query search suggestion.
 |<a name="searchaction-searchkind"></a>searchKind|The type of suggestion. The following are the possible values:<ul><li>CustomSearch &mdash; The suggestion is from a non-web search suggestion data source.</li><li>WebSearch &mdash; The suggestion is from a web search suggestion data source.</li></ul>|String
 |<a name="searchaction-url"></a>url|The URL that takes the user to the Bing search results page for the suggested query.|String
   
-
 ## SuggestionGroup  
 
 Defines a group of suggestions of the same type.  
@@ -78,7 +74,6 @@ Defines a group of suggestions of the same type.
 |<a name="suggestgroup-name"></a>name|The name of the group. The name identifies the type of suggestions that the group contains. For example, web search suggestions. The following are the possible group names:<ul><li>Custom &mdash; The group contains suggestions from a non-web search suggestions data source.</li><li>Web &mdash; The group contains web search suggestions.</li></ul>|String
 |<a name="suggestgroup-searchsuggestions"></a>searchSuggestions|A list of up to 8 suggestions. If there are no suggestions, the array is empty.<br/><br/>You must display all suggestions in the order provided. The list is in order of decreasing relevance. The first suggestion is the most relevant and the last suggestion is the least relevant. The size of the list is subject to change.|[SearchAction](#searchaction)[]  
   
-
 ## Suggestions  
 
 The top-level object that the response includes when the request succeeds.  

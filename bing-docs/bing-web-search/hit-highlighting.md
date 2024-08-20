@@ -3,13 +3,12 @@ title: How to use decoration markers to highlight text
 titleSuffix: Bing Search Services
 description: Learn how to use text decorations and hit highlighting in your search results.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 07/13/2023
 ---
 
 # Using decoration markers to highlight text
@@ -26,23 +25,21 @@ To specify whether you want Bing to use Unicode characters or HTML tags to mark 
 
 The default is Raw.
 
-
 ## Hit highlighting example
 
 The following example shows a web result for `Sailing Dinghy`. Bing marked the beginning and end of the query term using the E000 and E001 Unicode characters.
   
-![Hit Highlighting](media/bing-web-api/bing-hit-highlighting.png) 
+![Hit Highlighting](media/bing-web-api/bing-hit-highlighting.png)
 
 Before displaying the result in your user interface, replace the Unicode characters with ones that are appropriate for your display format.
-
 
 ## Additional text decorations
 
 Bing can return several different text decorations. For example, a `Computation` answer can contain subscript markers for the query term `log(2)` in the `expression` field.
 
-![computation markers](media/bing-web-api/bing-markers-computation.png) 
+![computation markers](media/bing-web-api/bing-markers-computation.png)
 
-If the request did not specify decorations, the `expression` field would contain `log10(2)`. 
+If the request did not specify decorations, the `expression` field would contain `log10(2)`.
 
 If `textDecorations` is **true**, Bing may include the following markers in the display strings of answers. If there is no equivalent HTML tag, the table cell is empty.
 
@@ -70,4 +67,3 @@ If `textDecorations` is **true**, Bing may include the following markers in the 
 |U+E017|\</sub>|Marks the end of subscript content.
 |U+E018|\<sup>|Marks the beginning of superscript content.
 |U+E019|\</sup>|Marks the end of superscript content.
-

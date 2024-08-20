@@ -8,7 +8,7 @@ ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: conceptual
 author: alekhyasasi
-ms.date: 03/07/2023
+ms.date: 06/30/2023
 ---
 
 # Handle the image search response
@@ -280,4 +280,3 @@ For information about how to handle the highlighting markers in `displayText`, s
 ## Next steps
 
 - Learn how to [get trending images](trending-images.md).
-- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.

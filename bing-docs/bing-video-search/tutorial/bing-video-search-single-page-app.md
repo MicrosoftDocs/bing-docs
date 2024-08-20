@@ -3,16 +3,15 @@ title: "Tutorial: Build a single-page Bing Video Search app"
 titleSuffix: Bing Search Services
 description: This tutorial explains how to use the Bing Video Search API in a single-page Web application.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 07/11/2023
 ---
 # Tutorial: Single-page Video Search app
+
 The Bing Video Search API lets you search the Web and get video results relevant to a search query. In this tutorial, we build a single-page Web application that uses the Bing search API to display search results on the page. The application includes HTML, CSS, and JavaScript components.
 
 <!-- Remove until it can be replaced with a sanitized version.
@@ -26,6 +25,7 @@ The Bing Video Search API lets you search the Web and get video results relevant
 
 This tutorial app illustrates how to:
 > [!div class="checklist"]
+>
 > * Perform a Bing Video Search API call in JavaScript.
 > * Pass search options to the Bing Search API.
 > * Display video search results or to optionally include Web pages, news, or images.
@@ -36,11 +36,12 @@ This tutorial app illustrates how to:
 
 The tutorial page is entirely self-contained; it does not use any external frameworks, style sheets, or image files. It uses only widely supported JavaScript language features and works with current versions of all major Web browsers.
 
-
 ## App components
+
 Like any single-page Web app, this tutorial application includes three parts:
 
 > [!div class="checklist"]
+>
 > * HTML - Defines the structure and content of the page.
 > * CSS - Defines the appearance of the page.
 > * JavaScript - Defines the behavior of the page.
@@ -50,6 +51,7 @@ Most of the HTML and CSS is conventional, so the tutorial doesn't discuss it. Th
 ```html
 <form name="bing" onsubmit="return bingWebSearch(this)">
 ```
+
 The `onsubmit` handler returns `false`, which keeps the form from being submitted to a server. The JavaScript code does the work of collecting the necessary information from the form and performing the search.
 
 The HTML also contains the divisions (HTML `<div>` tags) where the search results appear.
@@ -81,13 +83,16 @@ function getSubscriptionKey() {
     return key;
 }
 ```
+
 The HTML `<form>` tag `onsubmit` calls the `bingWebSearch` function to return search results. `bingWebSearch` uses `getSubscriptionKey()` to authenticate each query. As shown in the previous definition, `getSubscriptionKey` prompts the user for the key if the key hasn't been entered. The key is then stored for continuing use by the application.
 
 ```html
 <form name="bing" onsubmit="this.offset.value = 0; return bingWebSearch(this.query.value, 
     bingSearchOptions(this), getSubscriptionKey())">
 ```
+
 ## Selecting search options
+
 The following figure shows the query text box and options that define a search.
 
 ![Bing News Search options](../media/video-search-options.PNG)
@@ -135,7 +140,8 @@ function bingSearchOptions(form) {
 For example, the `SafeSearch` parameter in an actual API call can be either `strict` or `moderate`, with `moderate` being the default.
 
 ## Performing the request
-Given the query, the options string, and the API key, the `BingWebSearch` function uses an `XMLHttpRequest` object to make the request to the Bing Search endpoint. 
+
+Given the query, the options string, and the API key, the `BingWebSearch` function uses an `XMLHttpRequest` object to make the request to the Bing Search endpoint.
 
 ```javascript
 // Search on the query, using search options, authenticated by the key.
@@ -169,7 +175,7 @@ function bingWebSearch(query, options, key) {
     // event handler for successful response
     request.addEventListener("load", handleOnLoad);
 
-    // event handler for erorrs
+    // event handler for errors
     request.addEventListener("error", function() {
         renderErrorMessage("Error completing request");
     });
@@ -184,7 +190,8 @@ function bingWebSearch(query, options, key) {
     return false;
 }
 ```
-On successful completion of the HTTP request, JavaScript calls the `load` event handler, `handleOnLoad()`, to handle a successful HTTP GET request to the API. 
+
+On successful completion of the HTTP request, JavaScript calls the `load` event handler, `handleOnLoad()`, to handle a successful HTTP GET request to the API.
 
 ```javascript
 // handle Bing search request results
@@ -251,7 +258,7 @@ function handleOnLoad() {
 
 > [!IMPORTANT]
 > If an error occurs in the search operation, the Bing News Search API returns a non-200 HTTP status code and includes error information in the JSON response. Additionally, if the request was rate-limited, the API returns an empty response.
-A successful HTTP request does *not* necessarily mean that the search itself succeeded. 
+A successful HTTP request does *not* necessarily mean that the search itself succeeded.
 
 Much of the code in both of the preceding functions is dedicated to error handling. Errors may occur at the following stages:
 
@@ -264,6 +271,7 @@ Much of the code in both of the preceding functions is dedicated to error handli
 Errors are handled by calling `renderErrorMessage()` with any details known about the error. If the response passes the full gauntlet of error tests, we call `renderSearchResults()` to display the search results in the page.
 
 ## Displaying search results
+
 The main function for displaying the search results is `renderSearchResults()`. This function takes the JSON returned by the Bing News Search service and renders the news results and the related searches, if any.
 
 ```javascript
@@ -281,7 +289,8 @@ function renderSearchResults(results) {
     }
 }
 ```
-The search results are returned as the top-level `value` object in the JSON response. We pass them to our function `renderResultsItems()`, which iterates through them and calls a function to render each item into HTML. 
+
+The search results are returned as the top-level `value` object in the JSON response. We pass them to our function `renderResultsItems()`, which iterates through them and calls a function to render each item into HTML.
 The resulting HTML is returned to `renderSearchResults()`, where it is inserted into the `results` division in the page.
 
 ```javascript
@@ -318,13 +327,14 @@ In the JavaScript code the object, `searchItemRenderers`, can contains *renderer
 
 ```javascript
 searchItemRenderers = {
-	news: function(item) { ... },
-	webPages: function (item) { ... }, 
+ news: function(item) { ... },
+ webPages: function (item) { ... }, 
     images: function(item, index, count) { ... },
     videos: function (item, section, index, count) { ... },
     relatedSearches: function(item) { ... }
 }
 ```
+
 A renderer function can accept the following parameters:
 
 |Parameter|Description|
@@ -362,15 +372,17 @@ The `video` renderer is shown in the following javascript excerpt. Using the Vid
 
 The renderer function:
 > [!div class="checklist"]
+>
 > * Creates a paragraph tag, assigns it to the `images` class, and pushes it to the HTML array.
 > * Calculates image thumbnail size (width is fixed at 60 pixels, height calculated proportionately).
-> * Builds the HTML `<img>` tag to display the image thumbnail. 
+> * Builds the HTML `<img>` tag to display the image thumbnail.
 > * Builds the HTML `<a>` tags that link to the image and the page that contains it.
 > * Builds the description that displays information about the image and the site it's on.
 
 The thumbnail size is used in both the `<img>` tag and the `h` and `w` fields in the thumbnail's URL. Bing will return a [thumbnail](../../bing-web-search/resize-and-crop-thumbnails.md) of exactly that size.
 
 ## Persisting client ID
+
 Responses from the Bing search APIs may include an `X-MSEdge-ClientID` header that should be sent back to the API with successive requests. If multiple Bing Search APIs are being used, the same client ID should be used with all of them, if possible.
 
 Providing the `X-MSEdge-ClientID` header allows the Bing APIs to associate all of a user's searches, which has two important benefits.
@@ -404,5 +416,6 @@ cors-proxy-server
 Leave the command window open while you use the tutorial app; closing the window stops the proxy. In the expandable HTTP Headers section below the search results, you can now see the `X-MSEdge-ClientID` header (among others) and verify that it is the same for each request.
 
 ## Next steps
+>
 > [!div class="nextstepaction"]
 > [Bing Video Search API reference](../reference/endpoints.md)
