@@ -16,7 +16,7 @@ ms.author: scottwhi
 
 Use this quickstart to make your first call to the Bing Web Search API. This Python application sends a search request to the API, and shows the JSON response. Although this application is written in Python, the API is a RESTful Web service compatible with most programming languages.
 
-This example is run as a Jupyter notebook on [MyBinder](https://mybinder.org). To run it, select the launch binder badge:
+This example is run as a Jupyter Notebook on [MyBinder](https://mybinder.org). To run it, select the launch binder badge:
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/Microsoft/cognitive-services-notebooks/master?filepath=BingWebSearchAPI.ipynb)
 
