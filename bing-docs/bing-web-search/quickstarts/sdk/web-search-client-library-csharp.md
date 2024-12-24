@@ -9,7 +9,7 @@ ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: mdeifallah
 ---
 
 # Quickstart: Use a Bing Web Search .NET client library
