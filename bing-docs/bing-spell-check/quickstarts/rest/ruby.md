@@ -10,7 +10,7 @@ ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: aahi
+ms.author: scottwhi
 ---
 # Quickstart: Check spelling with Bing Spell Check REST API and Ruby
 
