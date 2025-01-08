@@ -4,12 +4,28 @@ titleSuffix: Bing Azure Services
 description: This tutorial shows how to use the Bing Entity Search API in a single-page Web application.
 services: bing-search-services
 author: alekhyasasi
+<<<<<<< HEAD
+<<<<<<< HEAD
+ms.author: v-alpunnamar
+=======
+>>>>>>> main
+=======
+ms.author: v-alpunnamar
+>>>>>>> 2c771186b1a7e59ee906c686cf2acb991eb462f4
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-entity-search
 ms.topic: tutorial
+<<<<<<< HEAD
+<<<<<<< HEAD
+ms.date: 09/27/2023
+=======
 ms.date: 02/19/2024
 ms.author: v-alpunnamar
+>>>>>>> main
+=======
+ms.date: 02/19/2024
+>>>>>>> 2c771186b1a7e59ee906c686cf2acb991eb462f4
 ---
 
 # Tutorial: Single-page web app
@@ -298,7 +314,7 @@ function bingEntitySearch(query, latlong, options, key) {
     // event handler for successful response
     request.addEventListener("load", handleBingResponse);
     
-    // event handler for erorrs
+    // event handler for errors
     request.addEventListener("error", function() {
         renderErrorMessage("Error completing request");
     });
@@ -350,7 +366,7 @@ function handleBingResponse() {
             renderErrorMessage("Empty response (are you sending too many requests too quickly?)");
         }
     if (divHidden("pole") && divHidden("mainline") && divHidden("sidebar")) 
-        showDiv("noresults", "No results.<p><small>Looking for restaurants or other local businesses? Those currently areen't supported outside the US.</small>");
+        showDiv("noresults", "No results.<p><small>Looking for restaurants or other local businesses? Those currently aren't supported outside the US.</small>");
     }
 
     // Any other HTTP status is an error
@@ -398,7 +414,7 @@ Errors are handled by calling `renderErrorMessage()` with any details known abou
 
 The Bing Entity Search API [requires you to display results in a specified order](../../bing-web-search/use-display-requirements.md). Since the API may return two different kinds of responses, it is not enough to iterate through the top level `Entities` or `Places` collection in the JSON response and display those results. (If you want only one type of result, use the `responseFilter` query parameter.)
 
-Instead, we use the `rankingResponse` collection in the search results to order the results for display. This object refers to items in the `Entitiess` and/or `Places` collections.
+Instead, we use the `rankingResponse` collection in the search results to order the results for display. This object refers to items in the `Entities` and/or `Places` collections.
 
 `rankingResponse` may contain up to three collections of search results, designated `pole`, `mainline`, and `sidebar`.
 

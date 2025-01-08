@@ -3,14 +3,12 @@ title: Upgrade Bing Video Search API v5 to v7
 titleSuffix: Bing Search Services
 description: This upgrade guide identifies the changes between version 5 and version 7 of the Bing Video Search API. Use this guide to help you identify the parts of your application that you need to update to use version 7.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 07/11/2023
 ---
 
 # Video Search API upgrade guide
@@ -21,12 +19,11 @@ This upgrade guide identifies the changes between version 5 and version 7 of the
 
 ### Endpoints
 
-- Changed the `cognitive` subdomain to `bing`. 
+- Changed the `cognitive` subdomain to `bing`.
 - Changed the endpoint's version number from v5 to v7.
 - Removed the `/bing` folder.
 
 New search endpoint: `https://api.bing.microsoft.com/v7.0/video/search`
-
 
 ### Error response objects and error codes
 
@@ -35,7 +32,6 @@ New search endpoint: `https://api.bing.microsoft.com/v7.0/video/search`
 - Added the following fields to the `Error` object.  
   - `subCode`&mdash;Partitions the error code into discrete buckets, if possible.
   - `moreDetails`&mdash;Additional information about the error described in the `message` field.
-   
 
 - Replaced the v5 error codes with the following possible `code` and `subCode` values.
 
@@ -79,4 +75,3 @@ Blocked|InvalidRequest.Blocked
 - Renamed the `nextOffsetAddCount` field of [VideosAnswer](reference/response-objects.md#videosanswer) to `nextOffset`. The way you use the offset has also changed. Previously, you would set the [offset](reference/query-parameters.md#offset) query parameter to the `nextOffset` value plus the previous offset value plus the number of videos in the result. Now, you simply set the `offset` query parameter to the `nextOffset` value.  
   
 - Changed the data type of the `relatedVideos` field from `Video[]` to `VideosModule` (see [VideoDetails](reference/response-objects.md#videodetails)).
-

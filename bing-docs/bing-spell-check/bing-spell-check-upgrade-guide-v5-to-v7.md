@@ -3,14 +3,12 @@ title: Upgrade Bing Spell Check API v5 to v7
 titleSuffix: Bing Search Services
 description: Identifies the parts of your application that you need to update to use version 7.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 07/07/2023
 ---
 
 # Spell Check API upgrade guide
@@ -21,12 +19,11 @@ This upgrade guide identifies the changes between version 5 and version 7 of the
 
 ### Endpoints
 
-- Changed the `cognitive` subdomain to `bing`. 
+- Changed the `cognitive` subdomain to `bing`.
 - Changed the endpoint's version number from v5 to v7.
 - Removed the `/bing` folder.
 
 New search endpoint: `https://api.bing.microsoft.com/v7.0/spellcheck`
-
 
 ### Error response objects and error codes
 
@@ -35,7 +32,6 @@ New search endpoint: `https://api.bing.microsoft.com/v7.0/spellcheck`
 - Added the following fields to the `Error` object.  
   - `subCode`&mdash;Partitions the error code into discrete buckets, if possible.
   - `moreDetails`&mdash;Additional information about the error described in the `message` field.
-   
 
 - Replaced the v5 error codes with the following possible `code` and `subCode` values.  
   
@@ -69,4 +65,3 @@ MultipleAuthorizationMethod|InvalidAuthorization.AuthorizationRedundancy
 ExpiredAuthorizationToken|InsufficientAuthorization.AuthorizationExpired
 InsufficientScope|InsufficientAuthorization
 Blocked|InvalidRequest.Blocked
-

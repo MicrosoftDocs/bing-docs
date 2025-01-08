@@ -8,8 +8,7 @@ ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: overview
 author: alekhyasasi
-ms.date: 04/05/2022
-ms.author: v-apunnamara
+ms.date: 07/13/2023
 ---
 
 # What is the Bing Web Search API?
@@ -18,10 +17,9 @@ Bing Web Search API enables safe, ad-free, location-aware search results, surfac
 
 ## Get started
 
-To get started using the API, pick the subscription you want from <a href="https://aka.ms/bingsearchapipricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call. 
+To get started using the API, pick the subscription you want from <a href="https://aka.ms/bingsearchapipricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call.
 
-You can easily call the API by sending a native HTTP GET request or by using the Web Search SDK. For examples to help you get up and running quickly for either option, see [Quickstarts](quickstarts/quickstarts.md).
-
+You can easily call the API by sending a native HTTP GET request or by using the Web Search SDK.
 
 ## Features  
 
@@ -35,7 +33,6 @@ By default, the API returns and ranks whatever content is relevant to the user's
 
 Bing also provides API metrics, which you can use to inform your strategic decisions. Quickly retrieve statistics such as your top queries, call volume, market distribution, response code summary, and much more. For details, see [Bing Web Statistics](bing-web-stats.md).
 
-
 ### Search or search-like experience
 
 Bing Web Search API may only be used as a result of a direct user query or search, or as a result of an action within an app or experience that logically can be interpreted as a user’s search request. For illustration purposes, the following are some examples of acceptable search or search-like experiences:
@@ -46,7 +43,6 @@ Bing Web Search API may only be used as a result of a direct user query or searc
 - User dwells on a particular object or entity in a visual search type scenario.
 
 If you are not sure if your experience can be considered a search-like experience, check with Microsoft.
-
 
 ## Next steps
 

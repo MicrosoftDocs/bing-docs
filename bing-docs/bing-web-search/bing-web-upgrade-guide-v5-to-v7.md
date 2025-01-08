@@ -3,13 +3,12 @@ title: Upgrade from API v5 to v7 - Bing Web Search API
 titleSuffix: Bing Search Services
 description: Determine which parts of your application require updates to use the Bing Web Search v7 APIs.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 08/20/2024
 ---
 
 # Upgrade from Bing Web Search API v5 to v7
@@ -20,12 +19,11 @@ This upgrade guide identifies the changes between version 5 and version 7 of the
 
 ### Endpoints
 
-- Changed the `cognitive` subdomain to `bing`. 
+- Changed the `cognitive` subdomain to `bing`.
 - Changed the endpoint's version number from v5 to v7.
 - Removed the `/bing` folder.
 
 New search endpoint: `https://api.bing.microsoft.com/v7.0/search`
-
 
 ### Error response objects and error codes
 
@@ -34,7 +32,6 @@ New search endpoint: `https://api.bing.microsoft.com/v7.0/search`
 - Added the following fields to the `Error` object.  
   - `subCode`&mdash;Partitions the error code into discrete buckets, if possible.
   - `moreDetails`&mdash;Additional information about the error described in the `message` field.
-
 
 - Replaced the v5 error codes with the following possible `code` and `subCode` values.
 
@@ -48,27 +45,26 @@ New search endpoint: `https://api.bing.microsoft.com/v7.0/search`
 
 - The following maps the previous error codes to the new codes. If you've taken a dependency on v5 error codes, update your code accordingly.
 
-|Version 5 code|Version 7 code.subCode
+|Version 5 code | Version 7 code.subCode
 |-|-
-|RequestParameterMissing|InvalidRequest.ParameterMissing
-RequestParameterInvalidValue|InvalidRequest.ParameterInvalidValue
-ResourceAccessDenied|InsufficientAuthorization
-ExceededVolume|RateLimitExceeded
-ExceededQpsLimit|RateLimitExceeded
-Disabled|InsufficientAuthorization.AuthorizationDisabled
-UnexpectedError|ServerError.UnexpectedError
-DataSourceErrors|ServerError.ResourceError
-AuthorizationMissing|InvalidAuthorization.AuthorizationMissing
-HttpNotAllowed|InvalidRequest.HttpNotAllowed
-UserAgentMissing|InvalidRequest.ParameterMissing
-NotImplemented|ServerError.NotImplemented
-InvalidAuthorization|InvalidAuthorization
-InvalidAuthorizationMethod|InvalidAuthorization
-MultipleAuthorizationMethod|InvalidAuthorization.AuthorizationRedundancy
-ExpiredAuthorizationToken|InsufficientAuthorization.AuthorizationExpired
-InsufficientScope|InsufficientAuthorization
-Blocked|InvalidRequest.Blocked
-
+| RequestParameterMissing | InvalidRequest.ParameterMissing
+| RequestParameterInvalidValue | InvalidRequest.ParameterInvalidValue
+| ResourceAccessDenied | InsufficientAuthorization
+| ExceededVolume | RateLimitExceeded
+| ExceededQpsLimit | RateLimitExceeded
+| Disabled | InsufficientAuthorization.AuthorizationDisabled
+| UnexpectedError | ServerError.UnexpectedError
+| DataSourceErrors | ServerError.ResourceError
+| AuthorizationMissing | InvalidAuthorization.AuthorizationMissing
+| HttpNotAllowed | InvalidRequest.HttpNotAllowed
+| UserAgentMissing | InvalidRequest.ParameterMissing
+| NotImplemented | ServerError.NotImplemented
+|InvalidAuthorization | InvalidAuthorization
+| InvalidAuthorizationMethod | InvalidAuthorization
+| MultipleAuthorizationMethod | InvalidAuthorization.AuthorizationRedundancy
+| ExpiredAuthorizationToken | InsufficientAuthorization.AuthorizationExpired
+| InsufficientScope | InsufficientAuthorization
+| Blocked | InvalidRequest.Blocked
 
 ## Non-breaking changes  
 

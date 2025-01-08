@@ -59,5 +59,4 @@ The following steps walk you through creating a Bing Search resource:
 ## Next steps
 
 - Learn about [calling the Bing Web Search API](search-the-web.md).
-- Learn about the [quickstarts](quickstarts/quickstarts.md) and [samples](samples.md) that are available to help you get up and running fast.
 - Review [Web Search API v7 reference](reference/endpoints.md) documentation.  

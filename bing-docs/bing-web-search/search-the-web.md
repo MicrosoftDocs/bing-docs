@@ -3,13 +3,12 @@ title: Search the web
 titleSuffix: Bing Search Services
 description: Use Bing Web Search API to surface relevant information from billions of web documents.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 07/13/2023
 ---
 
 # Search the web
@@ -18,9 +17,7 @@ Use Bing Web Search API to search billions of web documents for content that's r
 
 It's easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 
-```
-https://api.bing.microsoft.com/v7.0/search
-```
+`<https://api.bing.microsoft.com/v7.0/search>`
 
 Here's a cURL example that shows you how to call the endpoint using your subscription key. Change the *q* query parameter to search for whatever you'd like.
 
@@ -85,4 +82,3 @@ For information about query parameters that you can use to filter the search res
 - Learn about the [response](search-responses.md) that Bing returns for the user's query.
 - Learn how to [get the next page](page-results.md) of search results.
 - Learn what happens if you don't stay within your queries per second (QPS) limit. Hint: your requests get [throttled](throttling-requests.md).
-- Learn about the [quickstarts](quickstarts/quickstarts.md) and [samples](samples.md) that are available to help you get up and running fast.

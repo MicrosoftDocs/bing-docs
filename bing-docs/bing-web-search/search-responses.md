@@ -8,11 +8,10 @@ ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
 author: alekhyasasi
-ms.date: 04/05/2022
-ms.author: v-apunnamara
+ms.date: 07/13/2023
 ---
 
-# Handling the web search response 
+# Handling the web search response
 
 When you send a request to Web Search API, it returns a [SearchResponse](reference/response-objects.md#searchresponse) object in the response body. The object may include one or more of the following answer types:
 
@@ -94,7 +93,7 @@ The webpage may include a few other fields that you should account for like deep
 
 ### Deep links
 
-Deep links are related webpages that Bing found on the webpage’s website. The **Webpage** object in this context includes only the name and URL fields and may include the snippet field. 
+Deep links are related webpages that Bing found on the webpage’s website. The **Webpage** object in this context includes only the name and URL fields and may include the snippet field.
 
 ```json
         "deepLinks": [
@@ -142,18 +141,17 @@ Deep links can also have nested deep links.
           },
 ```
 
-
 ### Malware notice
 
-If Bing determines that a webpage may cause a potential issue for the user if they click the link, Bing provides a notice that you should display next to the webpage's link. Potential issues might be that the page contains malware, is a phishing site, or is not recommended for purchasing pharmaceuticals. 
+If Bing determines that a webpage may cause a potential issue for the user if they click the link, Bing provides a notice that you should display next to the webpage's link. Potential issues might be that the page contains malware, is a phishing site, or is not recommended for purchasing pharmaceuticals.
 
-The following image shows how Bing might display the notice for the query, _canada drugs_. Bing displays the warning when the user hovers over the webpage in the search results page, tabs to it, or touches the webpage on a touch device. 
+The following image shows how Bing might display the notice for the query, _canada drugs_. Bing displays the warning when the user hovers over the webpage in the search results page, tabs to it, or touches the webpage on a touch device.
 
-![Malware notice](media/bing-web-api/malware-notice.png) 
+![Malware notice](media/bing-web-api/malware-notice.png)
 
 Bing does not let the user click the link or deep links in the search results page. However, the warning does include a link that the user can click to navigate to the webpage if they choose to.
 
-The following example shows what the notice looks like in the JSON response. 
+The following example shows what the notice looks like in the JSON response.
 
 ```json
         "malware": {
@@ -165,7 +163,6 @@ The following example shows what the notice looks like in the JSON response.
 ```
 
 If you follow Bing's approach of disabling the webpage's link in the search results, then you'd use the webpage's link in the notice's "visit anyway" link.
-
 
 ### Contractual rules
 
@@ -188,7 +185,6 @@ If a webpage requires attribution, the **Webpage** object includes the `contract
 ```
 
 To learn more about attribution, see [Data attribution](data-attribution.md).
-
 
 ## Images answer
 
@@ -229,7 +225,7 @@ The [images](../bing-image-search/reference/response-objects.md#imageanswer) ans
 ```
 
 The `contentUrl` is the image's URL, the `hostPageUrl` is the URL of the webpage that includes the image, and `thumbnailUrl` is the URL to a thumbnail version of the image in `contentUrl`.
- 
+
 Depending on the user's device, you'd typically display a subset of the thumbnails, with an option for the user to see the remaining images.
 
 You can also expand the thumbnail as the user hovers the cursor over it. Be sure to attribute the image if you expand it. For example, by extracting the host from `hostPageDisplayUrl` and displaying it below the image. For information about resizing the thumbnail, see [Resizing and cropping thumbnails](resize-and-crop-thumbnails.md).
@@ -237,7 +233,6 @@ You can also expand the thumbnail as the user hovers the cursor over it. Be sure
 If the user clicks the thumbnail, use `webSearchUrl` to take the user to Bing's search results page for images, which contains a collage of the images.
 
 For details about the image answer and images, see [Image Search API](../bing-image-search/overview.md).
-
 
 ## Videos answer
 
@@ -294,7 +289,6 @@ If the user clicks the thumbnail, the following are the options for viewing the 
 - Use `embedHtml` to embed the video in your own experience.
 
 For details about the video answer and videos, see [Video Search API](../bing-video-search/overview.md).
-
 
 ## News answer
 
@@ -356,12 +350,11 @@ If Bing finds a video that's related to the article, it includes the video's URL
         },
 ```
 
-Depending on the user's device, you'd display a subset of the news articles with an option for the user to view the remaining articles. Use `name` and `url` to create a hyperlink that takes the user to the news article on the host's site. If the article includes an image, make the image clickable using `url`. 
+Depending on the user's device, you'd display a subset of the news articles with an option for the user to view the remaining articles. Use `name` and `url` to create a hyperlink that takes the user to the news article on the host's site. If the article includes an image, make the image clickable using `url`.
 
 Be sure to use `contractualRules` to attribute the article. For information about attribution, see [Data attribution](data-attribution.md).
 
 For details about the news answer and news articles, see [News Search API](../bing-news-search/overview.md).
-
 
 ## Related searches answer
 
@@ -379,14 +372,13 @@ Use the `displayText` query string and the `webSearchUrl` URL to create a hyperl
 
 For information about how to handle the highlighting markers in `displayText`, see [Hit Highlighting](hit-highlighting.md).
 
-
 ## Computation answer
 
 If the user enters a mathematical expression or a unit conversion query, the response may contain a [Computation](reference/response-objects.md#computation) answer. The `computation` answer contains the normalized expression and its result.
 
 ### Unit conversions
 
-A unit conversion query is a query that converts one unit to another. For example, *How many feet in 10 meters?* or *How many tablespoons in a 1/4 cup?*
+A unit conversion query is a query that converts one unit to another. For example, _How many feet in 10 meters?_ or *How many tablespoons in a 1/4 cup?*
 
 The following shows the `computation` answer for *How many feet in 10 meters?*
 
@@ -480,12 +472,11 @@ A mathematical expression may contain the following functions:
 
 Mathematical expressions that contain variables (for example, 4x+6=18, where x is the variable) are not supported.
 
-
 ## TimeZone answer
 
-If the user enters a time or date query, the response may contain a [TimeZone](reference/response-objects.md#timezone) answer. This answer supports implicit or explicit queries. An implicit query, such as *What time is it?*, returns the local time based on the user's location. An explicit query, such as *What time is it in Seattle?*, returns the local time for Seattle, WA.
+If the user enters a time or date query, the response may contain a [TimeZone](reference/response-objects.md#timezone) answer. This answer supports implicit or explicit queries. An implicit query, such as _What time is it?_, returns the local time based on the user's location. An explicit query, such as _What time is it in Seattle?_, returns the local time for Seattle, WA.
 
-Implicit queries, such as *What time zone am I in?*, require the user's location to provide accurate results. Although optional, you should always provide the user’s location using the X-Search-Location and X-MSEdge-ClientIP [headers](reference/headers.md). If you don’t provide the user’s location and Bing thinks the query would benefit from the user's location, it sets the [QueryContext](reference/response-objects.md#querycontext) object’s `askUserForLocation` field to **true**.
+Implicit queries, such as _What time zone am I in?_, require the user's location to provide accurate results. Although optional, you should always provide the user’s location using the X-Search-Location and X-MSEdge-ClientIP [headers](reference/headers.md). If you don’t provide the user’s location and Bing thinks the query would benefit from the user's location, it sets the [QueryContext](reference/response-objects.md#querycontext) object’s `askUserForLocation` field to **true**.
 
 ```json
   "queryContext": {
@@ -660,10 +651,9 @@ Query: What time zone am I in
   },
 ```
 
-
 ## SpellSuggestion answer
 
-If Bing determines that the user may have intended to search for something different, the response includes a [SpellSuggestions](reference/response-objects.md#spellsuggestions) object. For example, if the user searches for *carlos pen*, Bing may determine that the user likely intended to search for Carlos Pena instead (based on past searches by others of *carlos pen*). The following shows an example spell response.
+If Bing determines that the user may have intended to search for something different, the response includes a [SpellSuggestions](reference/response-objects.md#spellsuggestions) object. For example, if the user searches for _carlos pen_, Bing may determine that the user likely intended to search for Carlos Pena instead (based on past searches by others of _carlos pen_). The following shows an example spell response.
 
 ```json
   "spellSuggestions": {
@@ -677,7 +667,6 @@ If Bing determines that the user may have intended to search for something diffe
   },
 ```
 
-
 ## QueryContext answer
 
 Each response contains a [QueryContext](reference/response-objects.md#querycontext) object that provides the context that Bing used for the request. At a minimum, the context contains the user’s query string.
@@ -688,7 +677,7 @@ Each response contains a [QueryContext](reference/response-objects.md#queryconte
   },
 ```
 
-If the user's query string contains a spelling mistake, the context includes `alteredQuery` field, with contains the corrected spelling. Bing uses the `alteredQuery` query string in the request instead of the user’s query string. 
+If the user's query string contains a spelling mistake, the context includes `alteredQuery` field, with contains the corrected spelling. Bing uses the `alteredQuery` query string in the request instead of the user’s query string.
 
 ```json
 "queryContext": {
@@ -702,9 +691,9 @@ The following example shows how Bing uses this information in the UX. If you pro
 
 ![Query context UX example](media/bing-web-api/bing-query-context.PNG)  
 
-### User location 
+### User location
 
-Some queries are helped by knowing the user’s location. For example, if the user asks for *today’s weather* or *restaurants near me*, the context object includes the `askUserForLocation` field. If *true*, you should send a new query and include the X-MSEdge-ClientIP and X-Search-Location [headers](reference/headers.md) with the user’s location.
+Some queries are helped by knowing the user’s location. For example, if the user asks for _today’s weather_ or _restaurants near me_, the context object includes the `askUserForLocation` field. If _true_, you should send a new query and include the X-MSEdge-ClientIP and X-Search-Location [headers](reference/headers.md) with the user’s location.
 
 ```json
   "queryContext": {
@@ -723,7 +712,6 @@ If the user’s query has adult intent, the context includes the `adultIntent` f
     "adultIntent": true
   },
 ```
-
 
 ## RankingResponse answer
 
@@ -786,10 +774,9 @@ The following example shows parts of the ranking response answer for brevity.
 
 ```
 
-
 ## Translations answer
 
-The [Translations](reference/response-objects.md#webanswer) answer contains the translation of a word or phrase from one language to another. The context used in the translation comes from the query string and other signals. For example, in the query, *amigo in english*, Spanish is inferred from Amigo. If the query string doesn’t explicitly specify the language to translate the text into (for example, if the query is *bon appetit*), Bing infers the language from the browser’s language setting.
+The [Translations](reference/response-objects.md#webanswer) answer contains the translation of a word or phrase from one language to another. The context used in the translation comes from the query string and other signals. For example, in the query, _amigo in english_, Spanish is inferred from Amigo. If the query string doesn’t explicitly specify the language to translate the text into (for example, if the query is _bon appetit_), Bing infers the language from the browser’s language setting.
 
 The `originalText` field contains the word or phrase to translate and `translatedText` contains the translated text. If the translation request cannot be satisfied within system-defined thresholds, the `translatedText` field is set to "…". If this occurs, you shouldn’t display the answer.
 
@@ -818,10 +805,9 @@ The `originalText` field contains the word or phrase to translate and `translate
 
 Be sure to use `contractualRules` to attribute the article. For information about attribution, see [Data attribution](data-attribution.md).
 
-
 ## Entities answer
 
-The [entities](../bing-entity-search/reference/response-objects.md#entityanswer) answer contains a list of entity objects that Bing thought were relevant to the query. Each [entity](../bing-entity-search/reference/response-objects.md#entity) in the list identifies a person, place, or thing. Bing returns well-known entities only. Well-known people may include singers, actors, athletes, models, and others. Places refers to well-known tourist attractions, organizations, and localities such as a cities, states, countries, and regions. Things cover everything else not covered by places and people, such as animals, foods, drinks, books, songs, movies, and more. For information about places such as restaurants, hotels, or other local businesses, see the [Places answer](#places-answer). 
+The [entities](../bing-entity-search/reference/response-objects.md#entityanswer) answer contains a list of entity objects that Bing thought were relevant to the query. Each [entity](../bing-entity-search/reference/response-objects.md#entity) in the list identifies a person, place, or thing. Bing returns well-known entities only. Well-known people may include singers, actors, athletes, models, and others. Places refers to well-known tourist attractions, organizations, and localities such as a cities, states, countries, and regions. Things cover everything else not covered by places and people, such as animals, foods, drinks, books, songs, movies, and more. For information about places such as restaurants, hotels, or other local businesses, see the [Places answer](#places-answer).
 
 ### Dominant entity versus disambiguation entities
 
@@ -914,9 +900,9 @@ Bing returns a dominant entity when there is no ambiguity as to which entity sat
 
 The [EntityPresentationInfo](../bing-entity-search/reference/response-objects.md#entitypresentationinfo) object contains information that tells you whether the entity is a dominant entity or a disambiguation entity (see the `entityScenario` field). The object may also include one or more hints (see the `entityTypeHints` field) that tell you the entity’s type. The list of hints could contain a single hint such as Movie or a list of hints such as Place, LocalBusiness, Restaurant. Each successive hint in the array narrows the entity's type. But not all entities include type hints.
 
-If the list contains one or more disambiguation entities (the `entityScenario` field is set to DisambiguationItem), consider displaying a list of entities and letting the user select the one they’re interested in. The **Entity** object’s `name` field contains the entity’s name. Use the name along with the URL in the `url` field, if it exists, or the `webSearchUrl` field to create a hyperlink. The entity includes the `url` field only if Bing found a website or webpage for the entity. The URL in the `webSearchUrl` field takes the user to Bing’s search result page for the entity. 
+If the list contains one or more disambiguation entities (the `entityScenario` field is set to DisambiguationItem), consider displaying a list of entities and letting the user select the one they’re interested in. The **Entity** object’s `name` field contains the entity’s name. Use the name along with the URL in the `url` field, if it exists, or the `webSearchUrl` field to create a hyperlink. The entity includes the `url` field only if Bing found a website or webpage for the entity. The URL in the `webSearchUrl` field takes the user to Bing’s search result page for the entity.
 
-The following answer shows what the JSON response looks like for the query, *mt rainier*. Most entities include the entity’s name, short description, contractual rules, and URL to Bing’s search results page where the user can get more information about the entity. The optional fields that not all entities include are the `image`, `url`, and `entityTypeHints` fields. 
+The following answer shows what the JSON response looks like for the query, _mt rainier_. Most entities include the entity’s name, short description, contractual rules, and URL to Bing’s search results page where the user can get more information about the entity. The optional fields that not all entities include are the `image`, `url`, and `entityTypeHints` fields.
 
 ```json
 {
@@ -1019,26 +1005,24 @@ The following answer shows what the JSON response looks like for the query, *mt 
 
 ### Entity attribution
 
-Entities may include the `contractualRules` field, which contains one or more attributions that you must apply when you display the entity. Not all entities include rules. If the entity provides contractual rules, you must abide by them. 
+Entities may include the `contractualRules` field, which contains one or more attributions that you must apply when you display the entity. Not all entities include rules. If the entity provides contractual rules, you must abide by them.
 
 Entity information typically comes from third parties. You are responsible for ensuring that your use is appropriate; for example, by complying with any creative commons license your user experience relies on.
 
 For information about applying attribution, see [Data Attribution](data-attribution.md).
 
-
 ## Places answer
 
-The [places](../bing-entity-search/reference/response-objects.md#localentityanswer) answer contains a list of local business entity objects that Bing thought were relevant to the query. Bing returns this answer only when the query specifies the name of a local business or asks for a type of business. For example, *microsoft store* and *restaurants near me*. Each [place](../bing-entity-search/reference/response-objects.md#entity) in the list identifies a restaurant, hotel, or other local business.
+The [places](../bing-entity-search/reference/response-objects.md#localentityanswer) answer contains a list of local business entity objects that Bing thought were relevant to the query. Bing returns this answer only when the query specifies the name of a local business or asks for a type of business. For example, _microsoft store_ and _restaurants near me_. Each [place](../bing-entity-search/reference/response-objects.md#entity) in the list identifies a restaurant, hotel, or other local business.
 
 > [!NOTE]
-> The Places answer supports only U.S. business locations. 
- 
-> [!NOTE]
-> You, or a third party on your behalf, may not use, retain, store, cache, share, or distribute any data from the Places answer for the purpose of testing, developing, training, distributing or making available any non-Microsoft service or feature.
+>
+> - The Places answer supports only U.S. business locations.
+> - You, or a third party on your behalf, may not use, retain, store, cache, share, or distribute any data from the Places answer for the purpose of testing, developing, training, distributing or making available any non-Microsoft service or feature.
 
-Local aware queries such as *restaurant near me* require the user's location to provide accurate results. Although optional, you should always provide the user’s location using the X-Search-Location and X-MSEdge-ClientIP [headers](reference/headers.md). The X-Search-Location header uses the user’s geographical coordinates (latitude and longitude). 
+Local aware queries such as _restaurant near me_ require the user's location to provide accurate results. Although optional, you should always provide the user’s location using the X-Search-Location and X-MSEdge-ClientIP [headers](reference/headers.md). The X-Search-Location header uses the user’s geographical coordinates (latitude and longitude).
 
-```
+```javascript
 X-Search-Location: lat:47.806897;long:-122.221304;re:30
 ```
 
@@ -1051,7 +1035,7 @@ If you don’t provide the user’s location and Bing thinks the query would ben
   },
 ```
 
-The [EntityPresentationInfo](../bing-entity-search/reference/response-objects.md#entitypresentationinfo) object contains hints that identify the local entity's type. The list contains a list of hints such as Place, LocalBusiness, Restaurant. Each successive hint in the array narrows the entity's type. 
+The [EntityPresentationInfo](../bing-entity-search/reference/response-objects.md#entitypresentationinfo) object contains hints that identify the local entity's type. The list contains a list of hints such as Place, LocalBusiness, Restaurant. Each successive hint in the array narrows the entity's type.
 
 ```json
         "entityPresentationInfo": {
@@ -1066,7 +1050,7 @@ The [EntityPresentationInfo](../bing-entity-search/reference/response-objects.md
 
 The local entity includes the place's name, address, and telephone number. If the URL to the place’s website is known, the entity includes it, too. When you display the entity information, use the URL in the `url` field to create link that takes the user to the business' website; otherwise, use the URL in `webSearchUrl` to take the user to Bing’s search results page for the entity.
 
-The following example shows what the JSON response looks like for the query, *coffee near me*. 
+The following example shows what the JSON response looks like for the query, _coffee near me_.
 
 ```json
   "places": {
@@ -1104,7 +1088,6 @@ The following example shows what the JSON response looks like for the query, *co
 Note that the address’ `neighborhood` field may contain an empty string.
 
 Note that the `_type` field identifies the local entity object's type. The above example shows the object's type as Restaurant. Others object types include Hotel and LocalBusiness.
-
 
 ## Next steps  
 

@@ -39,22 +39,10 @@ highlightedContent:
 conceptualContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
   title: Get started
-  summary: Get started quickly searching the web using one of the following quickstarts. 
+  summary: Get started quickly searching the web using one of the following quickstart. 
   items:
     - title: Bing Web Search
-      links:      
-        - url: quickstarts/sdk/web-search-client-library-csharp.md
-          itemType: quickstart
-          text: Use C#
-        - url: quickstarts/sdk/web-search-client-library-java.md
-          itemType: quickstart
-          text: Use Java
-        - url: quickstarts/sdk/web-search-client-library-javascript.md
-          itemType: quickstart
-          text: Use JavaScript
-        - url: quickstarts/sdk/web-search-client-library-python.md
-          itemType: quickstart
-          text: Use Python
+      links:
         - url: tutorial/bing-web-search-single-page-app.md
           itemType: tutorial
           text: Web Search tutorial
@@ -64,18 +52,6 @@ conceptualContent:
 
     - title: Bing Custom Search API
       links:
-        - text: Create a custom search instance
-          itemType: quickstart
-          url: ../bing-custom-search/how-to/quick-start.md
-        - text: Use C#
-          itemType: quickstart
-          url: ../bing-custom-search/quickstarts/sdk/custom-search-client-library-csharp.md
-        - text: Use Java
-          itemType: quickstart
-          url: ../bing-custom-search/quickstarts/sdk/custom-search-client-library-java.md
-        - text: Use Python
-          itemType: quickstart
-          url: ../bing-custom-search/quickstarts/sdk/custom-search-client-library-python.md
         - text: Create a single page web-app
           itemType: tutorial
           url: ../bing-custom-search/tutorial/custom-search-web-page.md
@@ -85,18 +61,6 @@ conceptualContent:
 
     - title: Bing Image Search
       links:      
-        - text: Use C#
-          itemType: quickstart
-          url: ../bing-image-search/quickstarts/sdk/image-search-client-library-csharp.md
-        - text: Use Java
-          itemType: quickstart
-          url: ../bing-image-search/quickstarts/sdk/image-search-client-library-java.md
-        - text: Use JavaScript
-          itemType: quickstart
-          url: ../bing-image-search/quickstarts/sdk/image-search-client-library-javascript.md
-        - text: Use Python
-          itemType: quickstart
-          url: ../bing-image-search/quickstarts/sdk/image-search-client-library-python.md
         - text: Create a single page web-app
           itemType: tutorial
           url: ../bing-image-search/tutorial/bing-image-search-single-page-app.md
@@ -107,18 +71,6 @@ conceptualContent:
           
     - title: Bing Entity Search API
       links:
-        - text: Use C#
-          itemType: quickstart
-          url: ../bing-entity-search/quickstarts/sdk/entity-search-client-library-csharp.md
-        - text: Use Java
-          itemType: quickstart
-          url: ../bing-entity-search/quickstarts/sdk/entity-search-client-library-java.md
-        - text: Use JavaScript
-          itemType: quickstart
-          url: ../bing-entity-search/quickstarts/sdk/entity-search-client-library-javascript.md
-        - text: Use Python
-          itemType: quickstart
-          url: ../bing-entity-search/quickstarts/sdk/entity-search-client-library-python.md
         - text: Create a single page web-app
           itemType: tutorial
           url: ../bing-entity-search/tutorial/bing-entities-search-single-page-app.md
@@ -128,18 +80,6 @@ conceptualContent:
 
     - title: Bing News Search API
       links:
-        - text: Use C#
-          itemType: quickstart
-          url: ../bing-news-search/quickstarts/sdk/news-search-client-library-csharp.md
-        - text: Use Java
-          itemType: quickstart
-          url: ../bing-news-search/quickstarts/sdk/news-search-client-library-java.md
-        - text: Use JavaScript
-          itemType: quickstart
-          url: ../bing-news-search/quickstarts/sdk/news-search-client-library-javascript.md
-        - text: Use Python
-          itemType: quickstart
-          url: ../bing-news-search/quickstarts/sdk/news-search-client-library-python.md
         - text: Create a single page web-app
           itemType: tutorial
           url: ../bing-news-search/tutorial/bing-news-search-single-page-app.md
@@ -149,18 +89,6 @@ conceptualContent:
 
     - title: Bing Video Search API
       links:
-        - text: Use C#
-          itemType: quickstart
-          url: ../bing-video-search/quickstarts/sdk/video-search-client-library-csharp.md
-        - text: Use Java
-          itemType: quickstart
-          url: ../bing-video-search/quickstarts/sdk/video-search-client-library-java.md
-        - text: Use JavaScript
-          itemType: quickstart
-          url: ../bing-video-search/quickstarts/sdk/video-search-client-library-javascript.md
-        - text: Use Python
-          itemType: quickstart
-          url: ../bing-video-search/quickstarts/sdk/video-search-client-library-python.md
         - text: Create a single page web-app
           itemType: tutorial
           url: ../bing-video-search/tutorial/bing-video-search-single-page-app.md
@@ -170,18 +98,6 @@ conceptualContent:
 
     - title: Bing Visual Search API
       links:
-        - url: ../bing-visual-search/quickstarts/sdk/visual-search-client-library-csharp.md
-          itemType: quickstart
-          text: Use C#
-        - url: ../bing-visual-search/quickstarts/sdk/visual-search-client-library-java.md
-          itemType: quickstart
-          text: Use Java
-        - url: ../bing-visual-search/quickstarts/sdk/visual-search-client-library-javascript.md
-          itemType: quickstart
-          text: Use JavaScript
-        - url: ../bing-visual-search/quickstarts/sdk/visual-search-client-library-python.md
-          itemType: quickstart
-          text: Use Python
         - text: Visual Search tutorial
           itemType: tutorial
           url: ../bing-visual-search/tutorial/visual-search-single-page-app.md
@@ -191,21 +107,6 @@ conceptualContent:
 
     - title: Bing Autosuggest API
       links:
-        - text: Use C#
-          itemType: quickstart
-          url: ../bing-autosuggest/quickstarts/sdk/autosuggest-client-library-csharp.md
-        - text: Use Go
-          itemType: quickstart
-          url: ../bing-autosuggest/quickstarts/sdk/autosuggest-client-library-go.md
-        - text: Use Java
-          itemType: quickstart
-          url: ../bing-autosuggest/quickstarts/rest/java.md
-        - text: Use Node.js
-          itemType: quickstart
-          url: ../bing-autosuggest/quickstarts/rest/nodejs.md
-        - text: Use Python
-          itemType: quickstart
-          url: ../bing-autosuggest/quickstarts/rest/python.md
         - text: Create a single page web-app
           itemType: quickstart
           url: ../bing-autosuggest/tutorial/autosuggest.md
@@ -215,18 +116,6 @@ conceptualContent:
 
     - title: Bing Spell Check API
       links:
-        - text: Use C#
-          itemType: quickstart
-          url: ../bing-spell-check/quickstarts/sdk/spell-check-client-library-csharp.md
-        - text: Use Java
-          itemType: quickstart
-          url: ../bing-spell-check/quickstarts/rest/java.md
-        - text: Use Node.js
-          itemType: quickstart
-          url: ../bing-spell-check/quickstarts/rest/nodejs.md
-        - text: Use Python
-          itemType: quickstart
-          url: ../bing-spell-check/quickstarts/rest/python.md
         - text: Create a single page web-app
           itemType: tutorial
           url: ../bing-spell-check/tutorial/spellcheck.md
@@ -257,7 +146,28 @@ additionalContent:
   sections:
 
   - title: Reference
-    items:      
+    items:
+      - title: Query Parameters
+        links:
+          - text: Bing Web Search 
+            url: reference/query-parameters.md
+          - text: Bing Custom Search 
+            url: ../bing-custom-search/reference/query-parameters.md
+          - text: Bing Image Search 
+            url: ../bing-image-search/reference/query-parameters.md
+          - text: Bing Entity Search 
+            url: ../bing-entity-search/reference/query-parameters.md
+          - text: Bing News Search 
+            url: ../bing-news-search/reference/query-parameters.md
+          - text: Bing Video Search 
+            url: ../bing-video-search/reference/query-parameters.md
+          - text: Bing Visual Search 
+            url: ../bing-visual-search/reference/query-parameters.md
+          - text: Bing Autosuggest 
+            url: ../bing-autosuggest/reference/query-parameters.md
+          - text: Bing Spell Check
+            url: ../bing-spell-check/reference/query-parameters.md
+
       - title: REST API v7
         links:
           - text: Bing Web Search 
@@ -278,100 +188,68 @@ additionalContent:
             url: ../bing-autosuggest/reference/endpoints.md
           - text: Bing Spell Check
             url: ../bing-spell-check/reference/endpoints.md
-#          - text: Bing Local Business Search
-#            url: ../bing-local-business-search/local-search-reference.md
-      - title: .NET SDK
+
+      - title: Entity types
         links:
-          - text: Bing Web Search
-            url: /dotnet/api/overview/azure/cognitiveservices/bing-web-search-api-readme?view=azure-dotnet
-          - text: Bing Custom Search
-            url: /dotnet/api/overview/azure/cognitiveservices/bing-custom-search-readme?view=azure-dotnet
-          - text: Bing Entity Search
-            url: /dotnet/api/overview/azure/cognitiveservices/bing-entity-search-api-readme?view=azure-dotnet
-          - text: Bing Image Search
-            url: /dotnet/api/overview/azure/cognitiveservices/bing-image-search-readme?view=azure-dotnet
-          - text: Bing News Search
-            url: /dotnet/api/overview/azure/cognitiveservices/bing-news-search-readme?view=azure-dotnet
-          - text: Bing Video Search
-            url: /dotnet/api/overview/azure/cognitiveservices/bing-video-search-readme?view=azure-dotnet
-          - text: Bing Visual Search
-            url: /dotnet/api/overview/azure/cognitiveservices/bing-visual-search-readme?view=azure-dotnet
+          - text: Bing Web Search 
+            url: reference/entity-types.md
+          - text: Bing Custom Search 
+            url: ../bing-custom-search/reference/entity-types.md
+          - text: Bing Image Search 
+            url: ../bing-image-search/reference/entity-types.md
+          - text: Bing Entity Search 
+            url: ../bing-entity-search/reference/entity-types.md
+          - text: Bing News Search 
+            url: ../bing-news-search/reference/entity-types.md
+          - text: Bing Video Search 
+            url: ../bing-video-search/reference/entity-types.md
+          - text: Bing Visual Search 
+            url: ../bing-visual-search/reference/entity-types.md
+          - text: Bing Autosuggest 
+            url: ../bing-autosuggest/reference/entity-types.md
           - text: Bing Spell Check
-            url: /dotnet/api/overview/azure/cognitiveservices/bing-spell-check-readme?view=azure-dotnet
-          - text: Bing Autosuggest
-            url: /dotnet/api/overview/azure/cognitiveservices/bing-autosuggest-readme?view=azure-dotnet
-      - title: Java SDK
+            url: ../bing-spell-check/reference/entity-types.md
+     
+      - title: Market codes
         links:
-          - text: Bing Web Search
-            url: /java/api/overview/azure/cognitiveservices/client/bingwebsearchapi?view=azure-java-stable
-          - text: Bing Custom Search
-            url: /java/api/overview/azure/cognitiveservices/client/bingcustomsearch?view=azure-java-stable
-          - text: Bing Entity Search
-            url: /java/api/overview/azure/cognitiveservices/client/bingentitysearchapi?view=azure-java-stable
-          - text: Bing Image Search
-            url: /java/api/overview/azure/cognitiveservices/client/bingimagesearch?view=azure-java-stable
-          - text: Bing News Search
-            url: /java/api/overview/azure/cognitiveservices/client/bingnewssearch?view=azure-java-stable
-          - text: Bing Video Search
-            url: /java/api/overview/azure/cognitiveservices/client/bingvideosearch?view=azure-java-stable
-          - text: Bing Visual Search
-            url: /java/api/overview/azure/cognitiveservices/client/bingvisualsearch?view=azure-java-stable
+          - text: Bing Web Search 
+            url: reference/market-codes.md
+          - text: Bing Custom Search 
+            url: ../bing-custom-search/reference/market-codes.md
+          - text: Bing Image Search 
+            url: ../bing-image-search/reference/market-codes.md
+          - text: Bing Entity Search 
+            url: ../bing-entity-search/reference/market-codes.md
+          - text: Bing News Search 
+            url: ../bing-news-search/reference/market-codes.md
+          - text: Bing Video Search 
+            url: ../bing-video-search/reference/market-codes.md
+          - text: Bing Visual Search 
+            url: ../bing-visual-search/reference/market-codes.md
+          - text: Bing Autosuggest 
+            url: ../bing-autosuggest/reference/market-codes.md
           - text: Bing Spell Check
-            url: /java/api/overview/azure/cognitiveservices/client/bingspellcheck?view=azure-java-stable
-          - text: Bing Autosuggest
-            url: /java/api/overview/azure/cognitiveservices/client/bingautosuggest?view=azure-java-stable
-      - title: Python SDK
-        links:
-          - text: Bing Web Search
-            url: /python/api/overview/azure/cognitiveservices/bing-web-search-api-readme?view=azure-python
-          - text: Bing Custom Search
-            url: /python/api/overview/azure/cognitiveservices/bing-custom-search-readme?view=azure-python
-          - text: Bing Entity Search
-            url: /python/api/overview/azure/cognitiveservices/bing-entity-search-api-readme?view=azure-python
-          - text: Bing Image Search
-            url: /python/api/overview/azure/cognitiveservices/bing-image-search-readme?view=azure-python
-          - text: Bing News Search
-            url: /python/api/overview/azure/cognitiveservices/bing-news-search-readme?view=azure-python
-          - text: Bing Video Search
-            url: /python/api/overview/azure/cognitiveservices/bing-video-search-readme?view=azure-python
-          - text: Bing Visual Search
-            url: /python/api/overview/azure/cognitiveservices/bing-visual-search-readme?view=azure-python
+            url: ../bing-spell-check/reference/market-codes.md
           
-      - title: Node.js SDK
+          
+      - title: Response objects
         links:
-          - text: Bing Web Search
-            url: /javascript/api/@azure/cognitiveservices-websearch/?view=azure-node-latest
-          - text: Bing Custom Search
-            url: /javascript/api/@azure/cognitiveservices-customsearch/?view=azure-node-latest
-          - text: Bing Entity Search
-            url: /javascript/api/@azure/cognitiveservices-entitysearch/?view=azure-node-latest
-          - text: Bing Image Search
-            url: /javascript/api/@azure/cognitiveservices-imagesearch/?view=azure-node-latest
-          - text: Bing News Search
-            url: /javascript/api/@azure/cognitiveservices-newssearch/?view=azure-node-latest
-          - text: Bing Video Search
-            url: /javascript/api/@azure/cognitiveservices-videosearch/?view=azure-node-latest
-          - text: Bing Visual Search
-            url: /javascript/api/@azure/cognitiveservices-visualsearch/?view=azure-node-latest
+          - text: Bing Web Search 
+            url: reference/response-objects.md
+          - text: Bing Custom Search 
+            url: ../bing-custom-search/reference/response-objects.md
+          - text: Bing Image Search 
+            url: ../bing-image-search/reference/response-objects.md
+          - text: Bing Entity Search 
+            url: ../bing-entity-search/reference/response-objects.md
+          - text: Bing News Search 
+            url: ../bing-news-search/reference/response-objects.md
+          - text: Bing Video Search 
+            url: ../bing-video-search/reference/response-objects.md
+          - text: Bing Visual Search 
+            url: ../bing-visual-search/reference/response-objects.md
+          - text: Bing Autosuggest 
+            url: ../bing-autosuggest/reference/response-objects.md
           - text: Bing Spell Check
-            url: /javascript/api/@azure/cognitiveservices-spellcheck/?view=azure-node-latest
-          - text: Bing Autosuggest
-            url: /javascript/api/@azure/cognitiveservices-autosuggest/?view=azure-node-latest
-      - title: Go SDK
-        links:
-          - text: Bing Web Search
-            url: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/websearch
-          - text: Bing Custom Search
-            url: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/customsearch
-          - text: Bing Entity Search
-            url: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/entitysearch
-          - text: Bing Image Search
-            url: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/imagesearch
-          - text: Bing News Search
-            url: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/newssearch
-          - text: Bing Video Search
-            url: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/videosearch
-          - text: Bing Spell Check
-            url: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/spellcheck
-          - text: Bing Autosuggest
-            url: https://godoc.org/github.com/Azure/azure-sdk-for-go/services/cognitiveservices/v1.0/autosuggest
+            url: ../bing-spell-check/reference/response-objects.md
+    

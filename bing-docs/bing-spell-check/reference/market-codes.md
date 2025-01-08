@@ -7,7 +7,7 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: reference
-ms.date: 05/23/2023
+ms.date: 09/27/2023
 ---
 
 # Market and language codes used by Bing Spell Check API

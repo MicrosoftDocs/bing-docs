@@ -3,13 +3,12 @@ title: "Tutorial: Create a single-page web app - Bing Image Search API"
 titleSuffix: Bing Search services
 description: The Bing Image Search API enables you to search the web for high-quality, relevant images. Use this tutorial to build a single-page web application that can send search queries to the API, and display the results within the webpage.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 06/30/2023
 ---
 
 # Tutorial: Create a single-page app using the Bing Image Search API
@@ -19,6 +18,7 @@ The Bing Image Search API enables you to search the web for high-quality, releva
 The tutorial app illustrates how to:
 
 > [!div class="checklist"]
+>
 > * Perform a Bing Image Search API call in JavaScript
 > * Improve search results using search options
 > * Display and page through search results
@@ -35,8 +35,7 @@ The full source code for this tutorial is available on [GitHub](https://github.c
 
 ## Manage and store user subscription keys
 
-This application uses web browsers' persistent storage to store API subscription keys. If no key is stored, the webpage will prompt the user for their key and store it for later use. If the key is later rejected by the API, The app will remove it from storage. 
-
+This application uses web browsers' persistent storage to store API subscription keys. If no key is stored, the webpage will prompt the user for their key and store it for later use. If the key is later rejected by the API, The app will remove it from storage.
 
 Define `storeValue` and `retrieveValue` functions to use either the `localStorage` object (if the browser supports it) or a cookie.
 
@@ -187,7 +186,7 @@ function bingImageSearch(query, options, key) {
     // event handler for successful response
     request.addEventListener("load", handleBingResponse);
 
-    // event handler for erorrs
+    // event handler for errors
     request.addEventListener("error", function() {
         renderErrorMessage("Error completing request");
     });

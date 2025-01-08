@@ -8,26 +8,22 @@ ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: conceptual
 author: alekhyasasi
-ms.date: 04/05/2022
-ms.author: v-apunnamara
+ms.date: 07/07/2023
 ---
 
 # Get news that's trending on social networks
 
-If you’re building a news-only search results page and you want to get news that’s trending on social media, call this API. 
+If you’re building a news-only search results page and you want to get news that’s trending on social media, call this API.
 
 Calling the API is easy. If you have your subscription key, just send an HTTP GET request to the following endpoint:
 
-```
-https://api.bing.microsoft.com/v7.0/news/trendingtopics
-```
+`<https://api.bing.microsoft.com/v7.0/news/trendingtopics>`
 
 Here's a cURL example that shows you how to call the endpoint using your subscription key:
 
 ```curl
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news/trendingtopics
 ```
-
 
 ## Request and response headers
 
@@ -46,7 +42,7 @@ Here's a cURL example that includes these headers.
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" -H "X-MSEdge-ClientID: 00B4230B74496E7A13CC2C1475056FF4" -H "X-MSEdge-ClientIP: 11.22.33.44" -H "X-Search-Location: lat:55;long:-111;re:22" -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.65 Safari/537.36" https://api.bing.microsoft.com/v7.0/news/trendingtopics?mkt=en-us
 ```
 
-Bing returns a couple of headers you should capture. 
+Bing returns a couple of headers you should capture.
 
 - BingAPIs-TraceId &mdash; ID that identifies the request in the log file.
 - X-MSEdge-ClientID &mdash; The ID that you need to pass in subsequent request to provide continuity of experience.
@@ -59,7 +55,6 @@ Here's a cURL call that returns the response headers. If you want to remove the 
 ```curl
 curl -D - -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news/trendingtopics?mkt=en-us
 ```
-
 
 ## Query parameters
 
@@ -76,7 +71,6 @@ Here's a cURL example that includes these query parameters.
 ```curl
 curl -H "Ocp-Apim-Subscription-Key: <yourkeygoeshere>" https://api.bing.microsoft.com/v7.0/news/trendingtopics?mkt=en-us&since=1597755615&sortby=date
 ```
-
 
 ## What the response looks like
 
@@ -116,11 +110,9 @@ The following JSON fragment shows what the Trending News response looks like. Us
 
 [!INCLUDE [bing-url-note](../../../includes/bing-url-note.md)]
 
-
 ## Next steps
 
 - Learn how to [get news by news category](category-news.md).
 - Learn how to [get search for news](search-for-news.md) on the Web.
 - Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing News Search.  
 - Learn what happens if you don't stay within your queries per second (QPS) limit. Hint: your requests get [throttled](../../bing-web-search/throttling-requests.md).
-- Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.

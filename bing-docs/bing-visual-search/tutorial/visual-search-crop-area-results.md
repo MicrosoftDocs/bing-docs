@@ -3,16 +3,15 @@ title: "Tutorial: Crop an image with the Bing Visual Search SDK"
 titleSuffix: Bing Search Services
 description: Use the Bing Visual Search SDK to get insights from specific ares on an image.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 07/12/2023
 ---
 
-# Tutorial: Crop an image with the Bing Visual Search SDK for C#
+# Tutorial: Crop an image with the Bing Visual Search SDK for C #
 
 The Bing Visual Search SDK enables you to crop an image before finding similar online images. This application crops a single person from an image containing several people, and then returns search results containing similar images found online.
 
@@ -21,6 +20,7 @@ The full source code for this application is available with additional error han
 This tutorial illustrates how to:
 
 > [!div class="checklist"]
+>
 > * Send a request using the Bing Visual Search SDK
 > * Crop an area of image to search with Bing Visual Search
 > * Receive and handle the response
@@ -31,10 +31,10 @@ This tutorial illustrates how to:
 * Any edition of [Visual Studio 2019](https://www.visualstudio.com/downloads/).
 * If you are using Linux/MacOS, this application can be run using [Mono](https://www.mono-project.com/).
 * The [NuGet Custom Search](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.CustomSearch/1.2.0) package installed.
-    - From the Solution Explorer in Visual Studio, right-click on your project and select **Manage NuGet Packages** from the menu. Install the `Microsoft.Azure.CognitiveServices.Search.CustomSearch` package. Installing the NuGet Custom Search package also installs the following assemblies:
-        - Microsoft.Rest.ClientRuntime
-        - Microsoft.Rest.ClientRuntime.Azure
-        - Newtonsoft.Json
+  * From the Solution Explorer in Visual Studio, right-click on your project and select **Manage NuGet Packages** from the menu. Install the `Microsoft.Azure.CognitiveServices.Search.CustomSearch` package. Installing the NuGet Custom Search package also installs the following assemblies:
+    * Microsoft.Rest.ClientRuntime
+    * Microsoft.Rest.ClientRuntime.Azure
+    * Newtonsoft.Json
 
 [!INCLUDE [bing-image-search-signup-requirements](../../../includes/bing-visual-search-signup-requirements.md)]
 
@@ -104,8 +104,10 @@ Getting the actual image URLs requires a cast that reads an `ActionType` as `Ima
 ```
 
 ## Next steps
+>
 > [!div class="nextstepaction"]
 > [Create a Visual Search single-page web app](visual-search-single-page-app.md)
 
 ## See also
+>
 > [What is the Bing Visual Search API?](../overview.md)

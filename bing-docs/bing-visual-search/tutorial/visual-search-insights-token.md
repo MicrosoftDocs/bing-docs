@@ -3,14 +3,12 @@ title: "Find similar images from previous searches using image insights tokens a
 titleSuffix: Bing Search Services
 description: Use the Bing Visual Search client library to get URLs of images from previous searches. 
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
-
 ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: tutorial
-ms.date: 07/15/2020
-ms.author: scottwhi
+ms.date: 07/12/2023
 ---
 # Tutorial: Find similar images from previous searches using an image insights token
 
@@ -23,17 +21,16 @@ The full source code for this tutorial can be found with additional error handli
 * Any edition of [Visual Studio 2019](https://www.visualstudio.com/downloads/).
 * If you are using Linux/MacOS, you can run this application using [Mono](https://www.mono-project.com/).
 * The NuGet Visual Search and Image Search packages.
-    - From the Solution Explorer in Visual Studio, right-click on your project and select **Manage NuGet Packages** from the menu. Install the `Microsoft.Azure.CognitiveServices.Search.CustomSearch` package, and the `Microsoft.Azure.CognitiveServices.Search.ImageSearch` package. Installing the NuGet packages also installs the following:
-        - Microsoft.Rest.ClientRuntime
-        - Microsoft.Rest.ClientRuntime.Azure
-        - Newtonsoft.Json
-
+  * From the Solution Explorer in Visual Studio, right-click on your project and select **Manage NuGet Packages** from the menu. Install the `Microsoft.Azure.CognitiveServices.Search.CustomSearch` package, and the `Microsoft.Azure.CognitiveServices.Search.ImageSearch` package. Installing the NuGet packages also installs the following:
+    * Microsoft.Rest.ClientRuntime
+    * Microsoft.Rest.ClientRuntime.Azure
+    * Newtonsoft.Json
 
 [!INCLUDE [bing-visual-search-signup-requirements](../../../includes/bing-visual-search-signup-requirements.md)]
 
 ## Get the ImageInsightsToken from the Bing Image Search client library
 
-This application uses an `ImageInsightsToken` obtained through the [Bing Image Search client library](../../bing-image-search/quickstarts/sdk/image-search-client-library-csharp.md). In a new C# console application, create a client to call the API using `ImageSearchClient()`. Then use `SearchAsync()` with your query:
+This application uses an `ImageInsightsToken`. In a new C# console application, create a client to call the API using `ImageSearchClient()`. Then use `SearchAsync()` with your query:
 
 ```csharp
 var client = new ImageSearchClient(new Microsoft.Azure.CognitiveServices.Search.ImageSearch.ApiKeyServiceClientCredentials(subKey));
