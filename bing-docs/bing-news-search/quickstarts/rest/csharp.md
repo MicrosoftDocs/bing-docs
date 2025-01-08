@@ -9,7 +9,7 @@ ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: v-apunnamara
+ms.author: v-alpunnamar
 ms.custom: seodec2018
 ---
 
