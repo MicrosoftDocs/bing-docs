@@ -54,6 +54,6 @@ If you are not sure if your experience can be considered a search-like experienc
 ## Next steps
 
 - Learn about other APIs in the [family of Bing Search APIs](../bing-web-search/bing-api-comparison.md).
-- Learn about [use and display requirements](../bing-web-search/use-display-requirements.md) for Bing Visual Search.  
+- Learn about [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal) for Bing Visual Search.  
 - Learn about what's in the [JSON response](how-to/search-response.md).
 - Review [Visual Search API v7 reference](reference/endpoints.md) documentation.  

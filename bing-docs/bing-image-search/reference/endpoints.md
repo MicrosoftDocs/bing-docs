@@ -15,7 +15,7 @@ ms.date: 07/15/2020
 
 The Image Search APIs let you search for images that are relevant to the user's search query and also get trending videos. This section provides technical details about the query parameters and headers that you use to request images and the JSON response objects that contain them. For examples that show how to make requests, see [Bing Image Search overview](../overview.md).
   
-For information about permitted use and display of the results, see [Use and display requirements](../../bing-web-search/use-display-requirements.md).
+For information about permitted use and display of the results, see [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal).
 
 > [!NOTE]
 > Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.

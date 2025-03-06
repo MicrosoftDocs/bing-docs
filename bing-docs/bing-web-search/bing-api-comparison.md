@@ -36,5 +36,5 @@ Bing provides API metrics such as your top queries, call volume, market distribu
 
 ## Next steps
 
-- Learn about [use and display requirements](use-display-requirements.md) for Bing search results.  
+- Learn about [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal) for Bing search results.  
 - Learn about <a href="https://aka.ms/bingsearchapipricing" target="_blank">pricing and subscription options</a>.

@@ -162,5 +162,5 @@ If you don't want to call one of Bing's Search APIs, you can use the URL in the 
 
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
 - Learn about the [Bing Search APIs](../../bing-web-search/bing-api-comparison.md) where you can use the suggested search strings.
-- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing Search APIs.  
+- Learn about [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal) for Bing Search APIs.  
 - Review [Autosuggest API v7 reference](../reference/endpoints.md) documentation.  
