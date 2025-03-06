@@ -3,14 +3,14 @@ title: "Quickstart: Check spelling with the REST API and Ruby - Bing Spell Check
 titleSuffix: Bing Search Services
 description: Get started with Bing Spell Check REST API to check spelling and grammar using Ruby.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 
 ms.service: bing-search-services
 ms.subservice: bing-spell-check
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: aahi
+ms.author: v-alpunnamar
 ---
 # Quickstart: Check spelling with Bing Spell Check REST API and Ruby
 
