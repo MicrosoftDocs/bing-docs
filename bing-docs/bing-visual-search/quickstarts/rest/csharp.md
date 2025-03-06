@@ -209,7 +209,7 @@ Here's the HTTP request. It's your basic HTTP POST request. Use whatever HTTP cl
 
 That's all there is to sending a Visual Search request and getting back insights. To see what the JSON response looks like, see [Handling the insights search response](../../how-to/search-response.md).
 
-The rest of the sections walk you through one way of parsing the JSON response and displaying the insights. Be sure to read the [use and display requirements](../../../bing-web-search/use-display-requirements.md) to make sure you comply with all display requirements.
+The rest of the sections walk you through one way of parsing the JSON response and displaying the insights. Be sure to read the [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal) to make sure you comply with all display requirements.
 
 For information about resizing the thumbnails, see [Resizing and cropping thumbnails](../../../bing-web-search/resize-and-crop-thumbnails.md).
 

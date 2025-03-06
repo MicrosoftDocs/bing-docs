@@ -291,7 +291,7 @@ Errors are handled by calling `renderErrorMessage()`. If the response passes all
 
 ## Display search results
 
-There are [use and display requirements](../use-display-requirements.md) for results returned by the Bing Web Search API. Since a response may include various result types, it isn't enough to iterate through the top-level `WebPages` collection. Instead, the sample app uses `RankingResponse` to order the results to spec.
+There are [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal) for results returned by the Bing Web Search API. Since a response may include various result types, it isn't enough to iterate through the top-level `WebPages` collection. Instead, the sample app uses `RankingResponse` to order the results to spec.
 
 > [!NOTE]
 > If you only want a single result type, use the `responseFilter` query parameter, or consider using one of the other Bing Search endpoints, such as Bing Image Search.

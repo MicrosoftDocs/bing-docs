@@ -115,6 +115,6 @@ Note that in some cases, the [Video](../reference/response-objects.md#video) obj
 
 - Learn how to [get trending news](trending-news.md).
 - Learn how to [get news by news category](category-news.md).
-- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing News Search.  
+- Learn about [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal) for Bing News Search.  
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
 
