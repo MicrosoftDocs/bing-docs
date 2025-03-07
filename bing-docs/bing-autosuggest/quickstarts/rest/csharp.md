@@ -149,7 +149,7 @@ The HTTP request is just your basic HTTP GET request. Use whatever HTTP client w
 
 That's all there is to sending a search request and getting back search string suggestions. To see what the JSON response looks like, see [Handling the response](../../how-to/get-suggestions.md#handling-the-response).
 
-The rest of the sections walk you through one way of parsing the JSON response and displaying the suggestions. Be sure to read the [use and display requirements](../../../bing-web-search/use-display-requirements.md) to make sure you comply with all display requirements.
+The rest of the sections walk you through one way of parsing the JSON response and displaying the suggestions. Be sure to read the [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal) to make sure you comply with all display requirements.
 
 
 ## Displaying the suggestions

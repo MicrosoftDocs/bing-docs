@@ -245,7 +245,7 @@ Use `thumbnailUrl` to display an image of the video. Use `description` to attrib
 
 ## Next steps
 
-- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing Video Search.  
+- Learn about [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal) for Bing Video Search.  
 - Learn about [resizing and cropping thumbnails](../../bing-web-search/resize-and-crop-thumbnails.md).  
 - Learn about [searching the web for videos](get-videos.md).
 - Review [Video Search API v7 reference](../reference/endpoints.md) documentation.  

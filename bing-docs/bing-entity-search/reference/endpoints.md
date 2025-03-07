@@ -19,7 +19,7 @@ The Entity Search API lets you send a search query to Bing and get back search r
 > The Entity Search API supports only US business locations for Place answers. 
 
   
-For information about permitted use and display of the results, see [Use and display requirements](../../bing-web-search/use-display-requirements.md).
+For information about permitted use and display of the results, see [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal).
 
 > [!NOTE]
 > Because URL formats and parameters are subject to change without notice, use all URLs as-is. You should not take dependencies on the URL format or parameters except where noted.

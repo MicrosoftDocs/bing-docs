@@ -129,7 +129,7 @@ Notice that the [NewsAnswer](../reference/response-objects.md#newsanswer) object
 - Learn about the [response](search-response.md) that Bing returns.
 - Learn how to [get trending news](trending-news.md).
 - Learn how to [get search for news](search-for-news.md) on the Web.
-- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing News Search.  
+- Learn about [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal) for Bing News Search.  
 - Learn what happens if you don't stay within your queries per second (QPS) limit. Hint: your requests get [throttled](../../bing-web-search/throttling-requests.md).
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
 

@@ -348,6 +348,6 @@ Note that the `_type` field identifies the local entity object's type. The above
 
 ## Next steps  
 
-- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for displaying Bing Entity Search results.  
+- Learn about [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal) for displaying Bing Entity Search results.  
 - Learn about how to use the `RankingResponse` object to [order the search results](../../bing-web-search/rank-results.md) in your UX.
 - Learn about the [JSON objects](../reference/response-objects.md) found in the response.  
