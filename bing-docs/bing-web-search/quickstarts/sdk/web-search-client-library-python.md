@@ -317,4 +317,4 @@ When you're done with this project, make sure to remove your subscription key fr
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Cognitive Services Python SDK samples](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples)
+> [Bing Search Python SDK samples](https://github.com/microsoft/bing-search-sdk-for-python)
