@@ -26,6 +26,12 @@ highlightedContent:
     - title: Page through search results
       itemType: how-to-guide
       url: page-results.md
+    - title: Use and display requirements
+      itemType: reference
+      url: use-display-requirements.md
+    - title: Use and display requirements of Bing Search APIs, with your LLM  
+      itemType: reference
+      url: use-display-requirements-llm.md
     - title: API pricing details
       itemType: reference
       url: https://aka.ms/bingsearchapipricing
