@@ -37,7 +37,7 @@ Bing provides API metrics, which you can use to inform your strategic decisions.
 ## Next steps
 
 - Learn about other APIs in the [family of Bing Search APIs](../bing-web-search/bing-api-comparison.md).
-- Learn about [use and display requirements](../bing-web-search/use-display-requirements.md) for Bing Search APIs.  
+- Learn about [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal) for Bing Search APIs.  
 - Learn about [calling the API](how-to/get-suggestions.md).
 - Review [Autosuggest API v7 reference](reference/endpoints.md) documentation.  
 

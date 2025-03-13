@@ -15,7 +15,7 @@ ms.author: v-alpunnamar
 # Resize and crop thumbnail images
 
 > [!NOTE]
-> Be sure when cropping and resizing thumbnail images that you're doing so in accordance with a search scenario that respects third party rights, as required by your Bing Search API [use and display requirements](use-display-requirements.md).
+> Be sure when cropping and resizing thumbnail images that you're doing so in accordance with a search scenario that respects third party rights, as required by your Bing Search API [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal).
 
 Some answers include URLs to thumbnail images served by Bing. The following examples show several thumbnail URL formats that you might find in an answer.
 

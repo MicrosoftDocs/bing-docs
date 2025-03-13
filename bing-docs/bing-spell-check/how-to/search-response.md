@@ -84,6 +84,6 @@ Based on the text string, *when its your turn turn, john, come runing*, the foll
 
 ## Next steps  
 
-- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for displaying Bing Spell Check results.  
+- Learn about [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal) for displaying Bing Spell Check results.  
 - Learn about the [JSON objects](../reference/response-objects.md) found in the response.  
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.

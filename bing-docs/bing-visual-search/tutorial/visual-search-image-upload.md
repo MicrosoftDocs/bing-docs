@@ -15,7 +15,7 @@ ms.author: scottwhi
 
 # Tutorial: Upload images to the Bing Visual Search API
 
-The Bing Visual Search API enables you to search the web for images similar to ones you upload. Use this tutorial to create a web application that can send an image to the API, and display the insights it returns within the webpage. Note that this application does not adhere to all [Bing Use and Display Requirements](../../bing-web-search/use-display-requirements.md) for using the API.
+The Bing Visual Search API enables you to search the web for images similar to ones you upload. Use this tutorial to create a web application that can send an image to the API, and display the insights it returns within the webpage. Note that this application does not adhere to all [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal) for using the API.
 
 You can find the full source code for this sample with additional error handling and annotations on [GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/Tutorials/Bing-Visual-Search/BingVisualSearchUploadImage.html).
 

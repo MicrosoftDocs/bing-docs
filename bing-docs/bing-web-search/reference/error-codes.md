@@ -12,9 +12,6 @@ ms.date: 06/07/2023
 
 # HTTP status codes that Bing Web Search API may return
 
-> [!NOTE]
-> If you are using the Bing APIs, bring your own LLM S15 instance and expect to exceed the 1M queries per day quota, you should consider implementing monitoring to detect when you are nearing your limit so you can automate switching to the next tier, S16.
-
 The following are the possible HTTP status codes that a request may return.  
   
 |Status code|Description  

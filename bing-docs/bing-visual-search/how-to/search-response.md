@@ -773,7 +773,7 @@ If the list of tags includes other text recognition tags, they're likely URI act
 
 ## Next steps
 
-- Learn about [use and display requirements](../../bing-web-search/use-display-requirements.md) for Bing Visual Search.  
+- Learn about [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal) for Bing Visual Search.  
 - Learn about how to [get image insights](get-insights.md).
 - Learn about the [quickstarts](../quickstarts/quickstarts.md) and [samples](../samples.md) that are available to help you get up and running fast.
 - Review [Visual Search API v7 reference](../reference/endpoints.md) documentation.  

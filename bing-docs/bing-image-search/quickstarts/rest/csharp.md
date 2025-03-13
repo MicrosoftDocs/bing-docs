@@ -190,7 +190,7 @@ Here's the HTTP request. It's your basic HTTP GET request. Use whatever HTTP cli
 
 That's all the more there is to sending a search request and getting back search results. To see what the answer looks like in the JSON response, see [Handling the images search response](../../how-to/search-response.md).
 
-The rest of the sections walk you through one way of parsing the JSON response and displaying the search results. Be sure to read the [use and display requirements](../../../bing-web-search/use-display-requirements.md) to make sure you comply with all display requirements.
+The rest of the sections walk you through one way of parsing the JSON response and displaying the search results. Be sure to read the [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal) to make sure you comply with all display requirements.
 
 For information about resizing the thumbnails, see [Resizing and cropping thumbnails](../../../bing-web-search/resize-and-crop-thumbnails.md).
 
