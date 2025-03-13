@@ -2,6 +2,10 @@
 
 This repo holds the [public facing documentation for the Bing APIs](https://learn.microsoft.com/en-us/bing/search-apis/).
 
+## PR Processing
+
+Follow the [recommended instructions for PRs](https://learn.microsoft.com/en-us/contribute/content/process-pull-request).
+
 ## Testing Changes & Staging
 
 You cannot test locally. However, you can preview your changes in a staging environment.
