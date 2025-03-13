@@ -116,4 +116,4 @@ When using Search APIs, Bing Spell Check API, or Bing Autosuggest API in connect
 
 ## GDPR compliance
 
-With respect to any personal data subject to the European Union General Data Protection Regulation (GDPR) and that is processed in connection with calls to the Search APIs, Bing Spell Check API, or Bing Autosuggest API, you understand that you and Microsoft are independent data controllers under the GDPR. You are independently responsible for your compliance with the GDPR.
+With respect to any personal data subject to the European Union General Data Protection Regulation (GDPR) and that is processed in connection with calls to the Search APIs, Bing Spell Check API, or Bing Autosuggest API, you understand that you and Microsoft are independent data controllers under the GDPR. You are independently responsible for your compliance with the GDPR. 
