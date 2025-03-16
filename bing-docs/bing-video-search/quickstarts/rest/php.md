@@ -50,7 +50,7 @@ The Bing Video Search API returns video results from the Bing search engine.
 // Replace the accessKey string value with your valid access key.
 $accessKey = 'enter key here';
 
-$endpoint = 'https://api.bing.microsoft.com/bing/v7.0/videos/search';
+$endpoint = 'https://api.bing.microsoft.com/v7.0/videos/search';
 
 $term = 'kittens';
 
