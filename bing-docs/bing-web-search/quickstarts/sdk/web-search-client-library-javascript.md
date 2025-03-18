@@ -102,4 +102,4 @@ When you're done with this project, make sure to remove your subscription key fr
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Cognitive Services Node.js SDK samples](https://github.com/Azure-Samples/cognitive-services-node-sdk-samples)
+> [Bing Search Node.js SDK samples](https://github.com/Azure-Samples/cognitive-services-node-sdk-samples)
