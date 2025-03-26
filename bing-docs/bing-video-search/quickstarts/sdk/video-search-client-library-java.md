@@ -8,12 +8,12 @@ manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: v-grvanpelt
 ---
 
 # Quickstart: Use the Bing Video Search Java client library
 
-Use this quickstart to begin searching for news with the Bing Video Search client library for Java. While Bing Video Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples/tree/master/Search/BingVideoSearch), with additional annotations, and features.
+Use this quickstart to begin searching for news with the Bing Video Search client library for Java. While Bing Video Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/VideoSearchSample), with additional annotations, and features.
 
 ## Prerequisites
 
@@ -160,4 +160,6 @@ Create a new Java project in your favorite IDE or editor, and import the followi
 ## See also 
 
 * [What is the Bing Video Search API?](../../overview.md)
+<!--
 * [Cognitive services .NET SDK samples](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7)
+-->
