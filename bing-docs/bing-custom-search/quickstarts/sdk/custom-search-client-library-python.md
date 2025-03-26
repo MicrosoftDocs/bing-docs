@@ -9,18 +9,20 @@ ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: v-grvanpelt
 ---
 
 # Quickstart: Use the Bing Custom Search Python client library
 
-Get started with the Bing Custom Search client library for Python. Follow these steps to install the package and try out the example code for basic tasks. The Bing Custom Search API enables you to create tailored, ad-free search experiences for topics that you care about. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/blob/master/samples/search/custom_search_samples.py).
+Get started with the Bing Custom Search client library for Python. Follow these steps to install the package and try out the example code for basic tasks. The Bing Custom Search API enables you to create tailored, ad-free search experiences for topics that you care about. The source code for this sample can be found on [GitHub](https://github.com/microsoft/bing-search-sdk-for-python/blob/main/samples/sdk/custom_search_samples.py).
 
 Use the Bing Custom Search client library for Python to:
 
 - Find search results on the web from your Bing Custom Search instance.
 
+<!--
 [Reference documentation](/python/api/overview/azure/cognitiveservices/customsearch?view=azure-python) | [Library source code](https://github.com/Azure/azure-sdk-for-python/tree/master/sdk/cognitiveservices/azure-cognitiveservices-search-customsearch) | [Package (PyPi)](https://pypi.org/project/azure-cognitiveservices-search-customsearch/) | [Samples](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/)
+-->
 
 ## Prerequisites
 

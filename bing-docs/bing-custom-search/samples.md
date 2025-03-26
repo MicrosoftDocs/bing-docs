@@ -9,7 +9,7 @@ ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: sample
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: v-grvanpelt
 ---
 
 # Bing Custom Search API samples
@@ -35,10 +35,10 @@ Here's a list of SDK samples by language. The list is subject to change. For the
 
 |Language|Sample
 |-|-
-|[C#](https://github.com/microsoft/bing-search-dotnet-samples/tree/main/rest)|[Bing Custom Search](https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/BingWebSearchV7.cs)
-|[Java](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples)|[Bing Custom Search](https://github.com/microsoft/bing-search-java-samples/blob/main/rest/BingWebSearchV7.java)
+|[C#](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/samples/BingSearchSamples/BingCustomWebSearch)|[Bing Custom Search](https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/BingWebSearchV7.cs)
+|[Java](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/CustomSearchSample)|[Bing Custom Search](https://github.com/microsoft/bing-search-java-samples/blob/main/rest/BingWebSearchV7.java)
 |[Node.js](https://github.com/Azure-Samples/cognitive-services-node-sdk-samples)|[Bing Custom Search](https://github.com/microsoft/bing-search-nodejs-samples/blob/main/rest/BingWebSearchV7.js)
-|[Python](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples)|[Bing Custom Search](https://github.com/microsoft/bing-search-python-samples/blob/main/rest/BingWebSearchV7.py)
+|[Python](https://github.com/microsoft/bing-search-sdk-for-python/blob/main/samples/sdk/custom_search_samples.py)|[Bing Custom Search](https://github.com/microsoft/bing-search-python-samples/blob/main/rest/BingWebSearchV7.py)
 
 
 ## Next steps
