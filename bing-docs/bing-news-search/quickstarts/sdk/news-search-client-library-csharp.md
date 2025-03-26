@@ -14,7 +14,7 @@ ms.author: scottwhi
 
 # Quickstart: Use the Bing News Search .NET client library
 
-Use this quickstart to begin searching for news with the Bing News Search client library for C#. While Bing News Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7/BingNewsSearch).
+Use this quickstart to begin searching for news with the Bing News Search client library for C#. While Bing News Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/samples/BingSearchSamples/BingNewsSearch).
 
 ## Prerequisites
 
