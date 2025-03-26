@@ -9,7 +9,7 @@ ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: v-grvanpelt
 ---
 
 # Quickstart: Use a Bing Web Search Java client library
@@ -17,7 +17,7 @@ ms.author: scottwhi
 
 The Bing Web Search client library makes it easy to integrate Bing Web Search into your Java application. In this quickstart, you'll learn how to send a request, receive a JSON response, and filter and parse the results.
 
-Want to see the code right now? Samples for the [Bing Search client libraries for Java](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples/tree/master/Search) are available on GitHub.
+Want to see the code right now? Samples for the [Bing Search client libraries for Java](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/WebSearchSample) are available on GitHub.
 
 ## Prerequisites
 
@@ -292,5 +292,5 @@ When you're done with this project, make sure to remove your subscription key fr
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Bing Search Java SDK samples](https://github.com/microsoft/bing-search-sdk-for-java)
+> [Bing Web Search Java SDK samples](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/WebSearchSample)
 

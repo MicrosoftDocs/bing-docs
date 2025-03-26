@@ -9,7 +9,7 @@ ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: sample
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: v-grvanpelt
 ---
 
 # Bing Web Search samples
@@ -37,10 +37,10 @@ Here's a list of SDK samples by language. The list is subject to change. For the
 
 |Language|Sample
 |-|-
-|<a href="https://github.com/microsoft/bing-search-dotnet-samples/tree/main/rest" target="_blank">C#</a>|<a href="https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/BingWebSearchV7.cs" target="_blank">Bing Web Search</a>
-|<a href="https://github.com/microsoft/bing-search-sdk-for-java" target="_blank">Java</a>|<a href="https://github.com/microsoft/bing-search-java-samples/blob/main/rest/BingWebSearchV7.java" target="_blank">Bing Web Search</a>
-|<a href="https://github.com/microsoft/bing-search-sdk-for-java" target="_blank">Node.js</a>|<a href="https://github.com/microsoft/bing-search-nodejs-samples/blob/main/rest/BingWebSearchV7.js" target="_blank">Bing Web Search</a>
-|<a href="https://github.com/microsoft/bing-search-sdk-for-python" target="_blank">Python</a>|<a href="https://github.com/microsoft/bing-search-python-samples/blob/main/rest/BingWebSearchV7.py" target="_blank">Bing Web Search</a>
+|<a href="https://github.com/microsoft/bing-search-sdk-for-net/tree/main/samples/BingSearchSamples/BingWebSearch" target="_blank">C#</a>|<a href="https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/BingWebSearchV7.cs" target="_blank">Bing Web Search</a>
+|<a href="https://github.com/microsoft/bing-search-sdk-for-java/blob/main/samples/sdk/WebSearchSample/BingWebSearchSample.java" target="_blank">Java</a>|<a href="https://github.com/microsoft/bing-search-java-samples/blob/main/rest/BingWebSearchV7.java" target="_blank">Bing Web Search</a>
+|<a href="https://github.com/Azure-Samples/cognitive-services-node-sdk-samples" target="_blank">Node.js</a>|<a href="https://github.com/microsoft/bing-search-nodejs-samples/blob/main/rest/BingWebSearchV7.js" target="_blank">Bing Web Search</a>
+|<a href="https://github.com/microsoft/bing-search-sdk-for-python/blob/main/samples/sdk/web_search_samples.py" target="_blank">Python</a>|<a href="https://github.com/microsoft/bing-search-python-samples/blob/main/rest/BingWebSearchV7.py" target="_blank">Bing Web Search</a>
 
 
 ## Next steps
