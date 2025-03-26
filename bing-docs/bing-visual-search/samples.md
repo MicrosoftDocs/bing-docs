@@ -9,7 +9,7 @@ ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: sample
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: v-grvanpelt
 ---
 
 # Bing Visual Search API samples
@@ -34,10 +34,10 @@ Here's a list of SDK samples by language. The list is subject to change. For the
 
 |Language|Sample
 |-|-
-|[C#](https://github.com/microsoft/bing-search-dotnet-samples/tree/main/rest)|[Bing Visual Search](https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/BingWebSearchV7.cs)
-|[Java](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples)|[Bing Visual Search](https://github.com/microsoft/bing-search-java-samples/blob/main/rest/BingWebSearchV7.java)
+|[C#](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/samples/BingSearchSamples/BingVisualSearch)|[Bing Visual Search](https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/BingWebSearchV7.cs)
+|[Java](https://github.com/microsoft/bing-search-sdk-for-java/blob/main/samples/sdk/VisualSearchSample/BingVisualSearchSample.java)|[Bing Visual Search](https://github.com/microsoft/bing-search-java-samples/blob/main/rest/BingWebSearchV7.java)
 |[Node.js](https://github.com/Azure-Samples/cognitive-services-node-sdk-samples)|[Bing Visual Search](https://github.com/microsoft/bing-search-nodejs-samples/blob/main/rest/BingWebSearchV7.js)
-|[Python](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples)|[Bing Visual Search](https://github.com/microsoft/bing-search-python-samples/blob/main/rest/BingWebSearchV7.py)</a>
+|[Python](https://github.com/microsoft/bing-search-sdk-for-python/blob/main/samples/sdk/visual_search_samples.py)|[Bing Visual Search](https://github.com/microsoft/bing-search-python-samples/blob/main/rest/BingWebSearchV7.py)</a>
 
 
 ## Next steps
