@@ -9,7 +9,7 @@ ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: sample
 ms.date: 07/15/2020
-ms.author: v-grvanp
+ms.author: v-grvanpelt
 ---
 
 # Bing Image Search API samples

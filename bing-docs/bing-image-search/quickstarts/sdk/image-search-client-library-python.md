@@ -9,7 +9,7 @@ ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: v-grvanp
+ms.author: v-grvanpelt
 ---
 
 # Quickstart: Use the Bing Image Search Python client library
