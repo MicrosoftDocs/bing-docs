@@ -9,7 +9,7 @@ ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: v-grvanpelt
 ---
 
 # Quickstart: Use the Bing News Search Python client library
