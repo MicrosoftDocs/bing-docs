@@ -9,14 +9,14 @@ ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: v-grvanpelt
 ---
 
 # Quickstart: Use the Bing Image Search .NET client library
 
 Use this quickstart to make your first image search using the Bing Image Search client library, which is a wrapper for the API and contains the same features. This simple C# application sends an image search query, parses the JSON response, and displays the URL of the first image returned.
 
-The source code for this sample is available [on GitHub](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7/BingImageSearch) with additional error handling and annotations.
+The source code for this sample is available [on GitHub](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/samples/BingSearchSamples/BingImageSearch/quickstart) with additional error handling and annotations.
 
 ## Prerequisites
 * Any edition of [Visual Studio 2017 or later](https://visualstudio.microsoft.com/vs/whatsnew/).
@@ -93,5 +93,5 @@ if (imageResults != null)
 ## See also
 
 * [What is Bing Image Search?](../../overview.md)  
-* [.NET samples for the Azure Cognitive Services SDK](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7)
+* [.NET samples for the Bing Image Search SDK](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/samples/BingSearchSamples/BingImageSearch)
 * [Bing Image Search API reference](../../reference/endpoints.md)
