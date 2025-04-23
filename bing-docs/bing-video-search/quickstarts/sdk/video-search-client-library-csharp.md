@@ -9,12 +9,12 @@ ms.service: bing-search-services
 ms.subservice: bing-video-search
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: v-grvanpelt
 ---
 
 # Quickstart: Use the Bing Video Search .NET client library
 
-Use this quickstart to begin searching for news with the Bing Video Search client library for C#. While Bing Video Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7/BingVideoSearch) with additional annotations, and features.
+Use this quickstart to begin searching for news with the Bing Video Search client library for C#. While Bing Video Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/samples/BingSearchSamples/BingVideoSearch) with additional annotations, and features.
 
 ## Prerequisites
 
@@ -85,4 +85,4 @@ Installing the [NuGet Video Search SDK package](https://www.nuget.org/packages/M
 ## See also 
 
 * [What is the Bing Video Search API?](../../overview.md)
-* [Cognitive services .NET SDK samples](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7)
+* [Bing Video Search .NET SDK samples](https://github.com/microsoft/bing-search-sdk-for-net/blob/main/samples/BingSearchSamples/BingVideoSearch/VideoSearchSamples.cs)
