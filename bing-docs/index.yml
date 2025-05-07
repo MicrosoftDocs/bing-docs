@@ -1,10 +1,11 @@
 ### YamlMime:Hub
 
 title: | 
-  Product to be retired\n 
-  Bing Search and Bing Custom Search APIs will be retired on 11th August 2025.\n 
-  New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement) \n\n 
-  Bing Search Services developer documentation # < 60 chars
+  Product to be retired:  
+  Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
+  New deployments are not available and existing resources will be disabled.
+
+  Bing Search Services developer documentation
 summary: Official developer documentation for Bing Search Services. Learn how to build web-connected apps and services that find webpages, images, news, videos, and more without advertisements. # < 160 chars
 # brand: aspnet | azure | dotnet | dynamics | m365 | ms-graph | office | power-bi | power-platform | sql | sql-server | vs | visual-studio | windows | xamarin
 brand: m365
