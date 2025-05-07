@@ -8,10 +8,8 @@ ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: overview
 author: alekhyasasi
-ms.date: 04/05/2022
-ms.author: 
-    - v-apunnamara
-    - angepereira
+ms.date: 05/07/2025
+ms.author:  v-apunnamara, angepereira
 ---
 
 > [!WARNING] 

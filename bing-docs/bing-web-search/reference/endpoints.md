@@ -4,9 +4,7 @@ titleSuffix: Bing Services
 description: Describes the programming elements of the Bing Web Search API.
 ms.service: bing-search-services
 ms.subservice: bing-web-search
-author: 
-    - swhite-msft
-    - angepereira
+author:  swhite-msft
 manager: ehansen
 ms.topic: reference
 ms.date: 07/15/2020

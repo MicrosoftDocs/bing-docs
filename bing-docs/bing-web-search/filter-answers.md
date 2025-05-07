@@ -3,9 +3,7 @@ title: How to filter search results
 titleSuffix: Bing Search Services
 description: You can filter the types of answers that Bing includes in the response (for example images, videos, and news) by using the 'responseFilter' query parameter.
 services: bing-search-services
-author: 
-    - swhite-msft
-    - angepereira
+author:  swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

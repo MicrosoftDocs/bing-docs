@@ -3,9 +3,7 @@ title: Upgrade from API v5 to v7 - Bing Web Search API
 titleSuffix: Bing Search Services
 description: Determine which parts of your application require updates to use the Bing Web Search v7 APIs.
 services: bing-search-services
-author: 
-  - swhite-msft
-  - angepereira
+author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

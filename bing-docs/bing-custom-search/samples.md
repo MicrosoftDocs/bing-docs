@@ -3,9 +3,7 @@ title: Bing Custom Search API samples
 titleSuffix: Bing Search Services
 description: Use the Bing Custom Search API samples to search your view of the web for webpages and more.
 services: bing-search-services
-author: 
-    - swhite-msft
-    - angepereira
+author:  swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-custom-search

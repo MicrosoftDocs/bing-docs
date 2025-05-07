@@ -3,9 +3,7 @@ title: Get videos from your Custom Search instance
 titleSuffix: Bing Search Services
 description: High-level overview about using Bing Custom Search to get videos from your custom view of the Web.
 services: bing-search-services
-author: 
-    - swhite-msft
-    - angepereira
+author:  swhite-msft
 manager: ehansen
 
 ms.service: bing-search-services

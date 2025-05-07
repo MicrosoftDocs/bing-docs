@@ -5,9 +5,7 @@ description: Identifies the changes made to Web Search API for each release.
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: "overview"
-author: 
-    - swhite-msft
-    - angepereira
+author:  swhite-msft
 manager: ehansen
 ms.author: "scottwhi"
 ms.date: 07/15/2020

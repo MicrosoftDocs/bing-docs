@@ -3,9 +3,7 @@ title: Define Custom Autosuggest suggestions - Bing Custom Search
 titleSuffix: Bing Search Services
 description: Custom Autosuggest returns a list of suggested search query strings that are relevant to your search experience.
 services: bing-search-services
-author: 
-    - alekhyasasi
-    - angepereira
+author:  alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-custom-search

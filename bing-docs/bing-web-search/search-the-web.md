@@ -3,9 +3,7 @@ title: Search the web
 titleSuffix: Bing Search Services
 description: Use Bing Web Search API to surface relevant information from billions of web documents.
 services: bing-search-services
-author: 
-    - swhite-msft
-    - angepereira
+author:  swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

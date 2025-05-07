@@ -3,9 +3,7 @@ title: Bing Web Search JavaScript client library quickstart
 titleSuffix: Bing Search Services
 description: Learn how to get web search results using the JavaScript client library for Bing Web Search API.
 services: bing-search-services
-author: 
-    - swhite-msft
-    - angepereira
+author:  swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

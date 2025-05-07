@@ -9,9 +9,7 @@ ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual
 ms.date: 01/19/2023
-ms.author: 
-    - v-apunnamara
-    - angepereira
+ms.author:  v-apunnamara
 ---
 > [!WARNING] 
 > **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 

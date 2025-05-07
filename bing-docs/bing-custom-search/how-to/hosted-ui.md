@@ -3,9 +3,7 @@ title: Configure a hosted UI for Bing Custom Search
 titleSuffix: Bing Search Services
 description: Use this article to configure and integrate a hosted UI for Bing Custom Search.
 services: bing-search-services
-author: 
-  - swhite-msft
-  - angepereira
+author: swhite-msft
 manager: ehansen
 
 ms.service: bing-search-services

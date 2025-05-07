@@ -3,9 +3,7 @@ title: "Quickstart: Perform a web search with Node.js - Bing Web Search REST API
 titleSuffix: Bing Search Services
 description: Learn how to get web search results using Node.js and Bing Web Search API.
 services: bing-search-services
-author: 
-  - swhite-msft
-  - angepereira
+author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

@@ -3,18 +3,14 @@ title: Configure your Bing Custom Search instance
 titleSuffix: Bing Search Services
 description: The portal lets you create a search instance that specifies the slices of the web (domains, subpages, and webpages) that you want to search.
 services: bing-search-services
-author: 
-   - swhite-msft
-   - angepereira
+author: swhite-msft
 manager: ehansen
 
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: conceptual
 ms.date: 07/15/2020
-ms.author: 
-   - scottwhi
-   - angepereira
+ms.author: scottwhi
 ---
 > [!WARNING] 
 > **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 

@@ -3,9 +3,7 @@ title: Throttling requests - Bing Web Search API
 titleSuffix: Bing Search Services
 description: The service and your subscription type determine the number of queries per second (QPS) that you can make.
 services: bing-search-services
-author: 
-    - swhite-msft
-    - angepereira
+author:  swhite-msft
 manager: ehansen
 ms.assetid:
 ms.service: bing-search-services

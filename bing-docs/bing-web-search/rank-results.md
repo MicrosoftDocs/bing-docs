@@ -3,9 +3,7 @@ title: How to use rankings to display search results
 titleSuffix: Bing Search Services
 description: Learn how to use ranking to display search results from the Bing Web Search API.
 services: bing-search-services
-author: 
-  - swhite-msft
-  - angepereira
+author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

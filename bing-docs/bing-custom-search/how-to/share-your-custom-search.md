@@ -3,9 +3,7 @@ title: Share your custom search - Bing Custom Search
 titleSuffix: Bing Search Services
 description: Easily allow collaborative editing and testing of your instance by sharing it with members of your team.
 services: bing-search-services
-author: 
-    - swhite-msft
-    - angepereira
+author:  swhite-msft
 manager: ehansen
 
 ms.service: bing-search-services

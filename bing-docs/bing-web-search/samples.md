@@ -3,9 +3,7 @@ title: Bing Web Search samples
 titleSuffix: Bing Search Services
 description: Use the Bing Web Search samples to learn how to add search capabilities to your Python, Node.js, C#, or Java application.
 services: bing-search-services
-author: 
-    - swhite-msft
-    - angepereira
+author:  swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

@@ -3,9 +3,7 @@ title: Bing Web Search quickstarts
 titleSuffix: Bing Search Services
 description: Use these quickstarts to make your first Web Search API call in a matter of minutes.
 services: bing-search-services
-author: 
-    - swhite-msft
-    - angepereira
+author:  swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

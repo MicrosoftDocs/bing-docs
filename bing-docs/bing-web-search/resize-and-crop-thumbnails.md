@@ -3,9 +3,7 @@ title: Resize and crop image thumbnails - Bing Web Search API
 titleSuffix: Bing Search Services
 description: Some answers from the Bing Search APIs include URLs to thumbnail images served by Bing, which you can resize and crop, and may contain query parameters.
 services: bing-search-services
-author: 
-    - alekhyasasi
-    - angepereira
+author:  alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

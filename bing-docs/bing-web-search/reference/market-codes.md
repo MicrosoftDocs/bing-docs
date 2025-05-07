@@ -2,9 +2,7 @@
 title: Market and language codes used by the Bing Web Search API
 titleSuffix: Bing Services
 description: Provides the list of markets and languages that you may specify in Bing Search requests.
-author: 
-    - swhite-msft
-    - angepereira
+author:  swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

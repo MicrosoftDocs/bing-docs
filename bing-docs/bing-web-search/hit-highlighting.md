@@ -3,9 +3,7 @@ title: How to use decoration markers to highlight text
 titleSuffix: Bing Search Services
 description: Learn how to use text decorations and hit highlighting in your search results.
 services: bing-search-services
-author: 
-    - swhite-msft
-    - angepereira
+author:  swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

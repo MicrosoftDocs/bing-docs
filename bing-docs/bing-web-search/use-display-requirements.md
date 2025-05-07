@@ -4,9 +4,7 @@ titleSuffix: Bing Search Services
 description: The requirements for displaying search results from the Bing Search APIs in your applications.
 services: bing-search-services
 author: alekhyasasi
-ms.author: 
-  - v-alpunnamar
-  - angepereira
+ms.author: v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

@@ -2,9 +2,7 @@
 title: Entity types used by the Bing Web Search API
 titleSuffix: Bing Services
 description: Provides the list of possible entity types that the Bing Web Search API may return.
-author: 
-    - swhite-msft
-    - angepereira
+author:  swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

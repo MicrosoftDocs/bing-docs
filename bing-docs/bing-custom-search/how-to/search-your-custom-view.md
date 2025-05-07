@@ -3,9 +3,7 @@ title: Search a custom view
 titleSuffix: Bing Search Services
 description: After you've configured your custom search experience, you can test it from within the Bing Custom Search portal.
 services: bing-search-services
-author: 
-    - swhite-msft
-    - angepereira
+author:  swhite-msft
 manager: ehansen
 
 ms.service: bing-search-services

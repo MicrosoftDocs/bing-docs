@@ -2,9 +2,7 @@
 title: Error codes used by the Bing Web Search API
 titleSuffix: Bing Services
 description: Provides the list of HTTP status codes and service error codes that Bing Search may return.
-author: 
-  - alekhyasasi
-  - angepereira
+author:  alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

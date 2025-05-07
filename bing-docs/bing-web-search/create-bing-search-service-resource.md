@@ -4,9 +4,7 @@ titleSuffix: Bing Search Services
 description: Use Azure Marketplace to sign up for a Bing Search Service and get your key.
 services: bing-search-services
 author: alekhyasasi
-manager: 
-  - ehansen
-  - angepereira
+manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: conceptual

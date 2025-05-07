@@ -3,9 +3,7 @@ title: "Quickstart: Create your first Bing Custom Search instance"
 titleSuffix: Bing Search Services
 description: Use this quickstart to create a custom Bing instance that can search the domains and webpages that you specify. 
 services: bing-search-services
-author: 
-   - swhite-msft
-   - angepereira
+author: swhite-msft
 manager: ehansen
 
 ms.service: bing-search-services

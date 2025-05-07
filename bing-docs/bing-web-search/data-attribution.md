@@ -3,9 +3,7 @@ title: Attributing search results
 titleSuffix: Bing Search Services
 description: Some Bing search results require attribution. This topic shows how to provide attribution when you display search results.
 services: bing-search-services
-author: 
-  - swhite-msft
-  - angepereira
+author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

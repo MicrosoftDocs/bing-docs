@@ -3,9 +3,7 @@ title: Bing Web Search C# client library quickstart
 titleSuffix: Bing Search Services
 description: Learn how to get web search results using the .NET client library for Bing Web Search API.
 services: bing-search-services
-author: 
-    - swhite-msft
-    - angepereira
+author:  swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

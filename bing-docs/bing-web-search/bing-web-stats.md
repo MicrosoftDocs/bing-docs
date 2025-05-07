@@ -3,9 +3,7 @@ title: Add analytics to the Bing Web Search API
 titleSuffix: Bing Search Services
 description: Bing Statistics provides analytics to the Bing Image Search API. Analytics include call volume, top query strings, geographic distribution, and more. 
 services: bing-search-services
-author: 
-  - swhite-msft
-  - angepereira
+author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

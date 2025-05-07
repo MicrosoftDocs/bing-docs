@@ -2,9 +2,7 @@
 title: Headers used by Web Search API
 titleSuffix: Bing Services
 description: Describes the headers used by Bing Web Search API requests and responses.
-author: 
-    - alekhyasasi
-    - angepereira
+author:  alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search

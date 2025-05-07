@@ -3,9 +3,7 @@ title: How to page through search results - Bing Search APIs
 titleSuffix: Bing Search Services
 description: Learn how to page through search results from the Bing Search APIs.
 services: bing-search-services
-author: 
-  - swhite-msft
-  - angepereira
+author: swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
