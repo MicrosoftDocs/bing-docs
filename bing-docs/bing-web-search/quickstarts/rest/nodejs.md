@@ -12,6 +12,12 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
+> [!WARNING] 
+> <strong> Product to be retired</strong> Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
+> New deployments are not available and existing resources will be disabled. <a href='https://aka.ms/BingAPIsRetirement' target='_blank' class='c-hyperlink'> Learn more </a>
+
+
+
 # Quickstart: Search the web using the Bing Web Search REST API and Node.js
 
 Use this quickstart to make your first call to the Bing Web Search API. This Node.js application sends a search request to the API, and shows the JSON response. Although this application is written in JavaScript, the API is a RESTful Web service compatible with most programming languages.
