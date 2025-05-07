@@ -3,7 +3,9 @@ title: How to page through search results - Bing Search APIs
 titleSuffix: Bing Search Services
 description: Learn how to page through search results from the Bing Search APIs.
 services: bing-search-services
-author: swhite-msft
+author: 
+  - swhite-msft
+  - angepereira
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
@@ -12,9 +14,9 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 > [!WARNING] 
-> <strong> Product to be retired</strong> Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. <a href='https://aka.ms/BingAPIsRetirement' target='_blank' class='c-hyperlink'> Learn more </a>
-
+> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
+> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
+<br/>
 
 # Paging search results
 

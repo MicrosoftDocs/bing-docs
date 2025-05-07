@@ -4,7 +4,9 @@ titleSuffix: Bing Search Services
 description: The requirements for displaying search results from the Bing Search APIs with LLM in your applications.
 services: bing-search-services
 author: alekhyasasi
-ms.author: v-alpunnamar
+ms.author: 
+  - v-alpunnamar
+  - angepereira
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
@@ -12,9 +14,9 @@ ms.topic: conceptual
 ms.date: 08/01/2024
 ---
 > [!WARNING] 
-> <strong> Product to be retired</strong> Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. <a href='https://aka.ms/BingAPIsRetirement' target='_blank' class='c-hyperlink'> Learn more </a>
-
+> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
+> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
+<br/>
 
 # Use and Display requirements of Bing Search APIs, with your LLM
 

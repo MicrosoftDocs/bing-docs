@@ -3,7 +3,9 @@ title: "Quickstart: Create your first Bing Custom Search instance"
 titleSuffix: Bing Search Services
 description: Use this quickstart to create a custom Bing instance that can search the domains and webpages that you specify. 
 services: bing-search-services
-author: swhite-msft
+author: 
+   - swhite-msft
+   - angepereira
 manager: ehansen
 
 ms.service: bing-search-services
@@ -13,9 +15,9 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 > [!WARNING] 
-> <strong> Product to be retired</strong> Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. <a href='https://aka.ms/BingAPIsRetirement' target='_blank' class='c-hyperlink'> Learn more </a>
-
+> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
+> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
+<br/>
 
 # Quickstart: Create your first Bing Custom Search instance
 

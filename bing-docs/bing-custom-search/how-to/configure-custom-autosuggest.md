@@ -3,7 +3,9 @@ title: Define Custom Autosuggest suggestions - Bing Custom Search
 titleSuffix: Bing Search Services
 description: Custom Autosuggest returns a list of suggested search query strings that are relevant to your search experience.
 services: bing-search-services
-author: alekhyasasi
+author: 
+    - alekhyasasi
+    - angepereira
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
@@ -11,9 +13,9 @@ ms.topic: conceptual
 ms.date: 04/07/2023
 ---
 > [!WARNING] 
-> <strong> Product to be retired</strong> Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. <a href='https://aka.ms/BingAPIsRetirement' target='_blank' class='c-hyperlink'> Learn more </a>
-
+> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
+> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
+<br/>
 
 # Configure your custom autosuggest experience
 
