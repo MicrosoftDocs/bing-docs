@@ -2,7 +2,7 @@
 title: Headers used by Web Search API
 titleSuffix: Bing Services
 description: Describes the headers used by Bing Web Search API requests and responses.
-author: alekhyasasi
+author:  alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
@@ -10,6 +10,11 @@ ms.topic: reference
 ms.date: 06/13/2024
 ms.author: v-alpunnamar
 ---
+> [!WARNING] 
+> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
+> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
+<br/>
+
 
 # Web Search API v7 headers
 

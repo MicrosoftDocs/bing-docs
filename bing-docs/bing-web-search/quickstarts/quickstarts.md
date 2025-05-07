@@ -3,7 +3,7 @@ title: Bing Web Search quickstarts
 titleSuffix: Bing Search Services
 description: Use these quickstarts to make your first Web Search API call in a matter of minutes.
 services: bing-search-services
-author: swhite-msft
+author:  swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
@@ -11,6 +11,10 @@ ms.topic: sample
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
+> [!WARNING] 
+> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
+> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
+<br/>
 
 # Bing Web Search quickstarts
 
