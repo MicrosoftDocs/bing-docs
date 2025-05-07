@@ -3,13 +3,17 @@ title: Query parameters used by Web Search API
 titleSuffix: Bing Services
 description: Describes the query parameters that you can use in Bing Web Search API requests to affect the results.
 author: alekhyasasi
-ms.author: v-alpunnamar
+ms.author:  v-alpunnamar
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: reference
 ms.date: 06/10/2024
 ---
+> [!WARNING] 
+> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
+> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
+<br/>
 
 # Web Search API v7 query parameters
 

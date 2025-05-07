@@ -3,7 +3,7 @@ title: Bing Web Search C# client library quickstart
 titleSuffix: Bing Search Services
 description: Learn how to get web search results using the .NET client library for Bing Web Search API.
 services: bing-search-services
-author: swhite-msft
+author:  swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
@@ -11,6 +11,10 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
+> [!WARNING] 
+> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
+> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
+<br/>
 
 # Quickstart: Use a Bing Web Search .NET client library
 

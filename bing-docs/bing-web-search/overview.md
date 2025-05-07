@@ -8,9 +8,14 @@ ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: overview
 author: alekhyasasi
-ms.date: 04/05/2022
-ms.author: v-apunnamara
+ms.date: 05/07/2025
+ms.author:  v-apunnamara
 ---
+
+> [!WARNING] 
+> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
+> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
+
 
 # What is the Bing Web Search API?
 

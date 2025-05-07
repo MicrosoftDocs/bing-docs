@@ -11,6 +11,11 @@ ms.subservice: bing-web-search
 ms.topic: conceptual
 ms.date: 01/29/2024
 ---
+> [!WARNING] 
+> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
+> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
+<br/>
+
 
 # Bing Search API use and display requirements
 
