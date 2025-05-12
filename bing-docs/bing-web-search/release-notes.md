@@ -5,11 +5,15 @@ description: Identifies the changes made to Web Search API for each release.
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: "overview"
-author: "swhite-msft"
+author:  swhite-msft
 manager: ehansen
 ms.author: "scottwhi"
 ms.date: 07/15/2020
 ---
+> [!WARNING] 
+> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
+> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
+<br/>
 
 # Release notes for Web Search API
 

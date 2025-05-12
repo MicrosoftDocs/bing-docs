@@ -3,7 +3,7 @@ title: Bing Custom Search API samples
 titleSuffix: Bing Search Services
 description: Use the Bing Custom Search API samples to search your view of the web for webpages and more.
 services: bing-search-services
-author: swhite-msft
+author:  swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
@@ -11,6 +11,10 @@ ms.topic: sample
 ms.date: 07/15/2020
 ms.author: v-grvanpelt
 ---
+> [!WARNING] 
+> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
+> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
+<br/>
 
 # Bing Custom Search API samples
 
