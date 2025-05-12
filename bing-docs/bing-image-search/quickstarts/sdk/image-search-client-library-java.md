@@ -9,14 +9,14 @@ ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: v-grvanpelt
 ---
 
 # Quickstart: Use the Bing Image Search Java client library
 
 Use this quickstart to make your first image search using the Bing Image Search client library, which is a wrapper for the API and contains the same features. This simple Java application sends an image search query, parses the JSON response, and displays the URL of the first image returned.
 
-The source code for this sample is available [on GitHub](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples/tree/master/Search/BingImageSearch/Quickstart) with additional error handling and annotations.
+The source code for this sample is available [on GitHub](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/ImageSearchSample) with additional error handling and annotations.
 
 ## Prerequisites
 
@@ -97,5 +97,5 @@ else {
 ## See also
 
 * [What is Bing Image Search?](../../overview.md)  
-* [Java samples for the Azure Cognitive Services SDK](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples)
+* [Java samples for the Bing Image Search SDK](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/ImageSearchSample)
 * [Bing Image Search API reference](../../reference/endpoints.md)

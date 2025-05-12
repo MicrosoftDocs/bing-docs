@@ -9,12 +9,12 @@ ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: v-grvanpelt
 ---
 
 # Quickstart: Use the Bing News Search Java client library
 
-Use this quickstart to begin searching for news with the Bing News Search client library for Java. While Bing News Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples/tree/master/Search/BingNewsSearch).
+Use this quickstart to begin searching for news with the Bing News Search client library for Java. While Bing News Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/NewsSearchSample).
 
 ## Prerequisites
 

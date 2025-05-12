@@ -9,14 +9,14 @@ ms.service: bing-search-services
 ms.subservice: bing-image-search
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: v-grvanpelt
 ---
 
 # Quickstart: Use the Bing Image Search Python client library
 
 Use this quickstart to make your first image search using the Bing Image Search client library, which is a wrapper for the API and contains the same features. This simple Python application sends an image search query, parses the JSON response, and displays the URL of the first image returned.
 
-The source code for this sample is available [on GitHub](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples/blob/master/samples/search/image-search-quickstart.py) with additional error handling and annotations.
+The source code for this sample is available [on GitHub](https://github.com/microsoft/bing-search-sdk-for-python/blob/main/samples/sdk/image-search-quickstart.py) with additional error handling and annotations.
 
 ## Prerequisites
 
@@ -82,6 +82,6 @@ else:
 ## See also
 
 * [What is Bing Image Search?](../../overview.md)  
-* [Python samples for the Azure Cognitive Services SDK](https://github.com/Azure-Samples/cognitive-services-python-sdk-samples)  
+* [Python samples for the Bing Image Search SDK](https://github.com/microsoft/bing-search-sdk-for-python/blob/main/samples/sdk/image_search_samples.py)  
 * [Bing Image Search API reference](../../reference/endpoints.md)
 

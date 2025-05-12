@@ -9,14 +9,16 @@ ms.service: bing-search-services
 ms.subservice: bing-visual-search
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: v-grvanpelt
 ---
 
 # Quickstart: Use the Bing Visual Search .NET client library
 
-Use this quickstart to begin getting image insights from the Bing Visual Search service, using the C# client library. While Bing Visual Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7/BingVisualSearch).
+Use this quickstart to begin getting image insights from the Bing Visual Search service, using the C# client library. While Bing Visual Search has a REST API compatible with most programming languages, the client library provides an easy way to integrate the service into your applications. The source code for this sample can be found on [GitHub](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/samples/BingSearchSamples/BingVisualSearch).
 
+<!--
 [Reference documentation](/dotnet/api/overview/azure/cognitiveservices/bing-visual-search-readme) | [Library source code](https://github.com/Azure/azure-sdk-for-net/tree/master/sdk/cognitiveservices/Search.BingVisualSearch) | [Package (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.VisualSearch/) | [Samples](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/)
+-->
 
 ## Prerequisites
 

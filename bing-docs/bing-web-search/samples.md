@@ -3,7 +3,7 @@ title: Bing Web Search samples
 titleSuffix: Bing Search Services
 description: Use the Bing Web Search samples to learn how to add search capabilities to your Python, Node.js, C#, or Java application.
 services: bing-search-services
-author: swhite-msft
+author:  swhite-msft
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-web-search
@@ -11,6 +11,10 @@ ms.topic: sample
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
+> [!WARNING] 
+> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
+> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
+<br/>
 
 # Bing Web Search samples
 
