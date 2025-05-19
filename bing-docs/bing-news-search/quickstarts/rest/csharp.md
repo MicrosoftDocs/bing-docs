@@ -3,13 +3,13 @@ title: "Quickstart: Perform a news search with C# - Bing News Search REST API"
 titleSuffix: Bing Search Services
 description: Use this quickstart to send a request to Bing News Search REST API using C#.
 services: bing-search-services
-author: swhite-msft
+author: alekhyasasi
 manager: ehansen
 ms.service: bing-search-services
 ms.subservice: bing-news-search
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: aahi
+ms.author: v-alpunnamar
 ms.custom: seodec2018
 ---
 
