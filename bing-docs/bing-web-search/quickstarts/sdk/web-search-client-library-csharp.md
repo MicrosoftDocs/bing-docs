@@ -9,7 +9,7 @@ ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: v-grvanpelt
 ---
 > [!WARNING] 
 > **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
@@ -20,7 +20,7 @@ ms.author: scottwhi
 
 The Bing Web Search client library makes it easy to integrate Bing Web Search into your C# application. In this quickstart, you'll learn how to instantiate a client, send a request, and print the response.
 
-Want to see the code right now? Samples for the [Bing Search client libraries for .NET](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7) are available on GitHub.
+Want to see the code right now? Samples for the [Bing Search client libraries for .NET](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/samples/BingSearchSamples/BingWebSearch) are available on GitHub.
 
 ## Prerequisites
 
@@ -427,4 +427,4 @@ When you're done with this project, make sure to remove your subscription key fr
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Cognitive Services .NET SDK samples](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/)
+> [Bing Web Search .NET SDK samples](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/samples/BingSearchSamples/BingWebSearch)
