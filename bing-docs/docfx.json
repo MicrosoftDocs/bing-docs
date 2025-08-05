@@ -39,9 +39,13 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/bing/search-apis/breadcrumb/toc.json",
+      "ROBOTS": "NOINDEX,NOFOLLOW",
+      "is_archived": true,
+      "is_retired": true,
+      "learn_archive": "manual",
+      "breadcrumb_path": "/previous-versions/bing/search-apis/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "Standard",
+      "feedback_system": "None",
       "defaultDevLang": "csharp",
       "searchScope": ["Bing Search"],
       "uhfHeaderId": "MSDocsHeader-BingSearch"
