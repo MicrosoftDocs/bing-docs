@@ -4,10 +4,11 @@ titleSuffix: Bing Services
 description: Provides the list of HTTP status codes and service error codes that Bing Autosuggest may return.
 author: alekhyasasi
 manager: ehansen
+ms.author: dutescufilip
 ms.service: bing-search-services
 ms.subservice: bing-autosuggest
 ms.topic: reference
-ms.date: 06/01/2023
+ms.date: 06/08/2025
 ---
 
 # HTTP status codes that Bing Autosuggest API may return
