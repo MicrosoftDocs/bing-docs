@@ -12,11 +12,6 @@ ms.date: 07/15/2020
 ms.author: scottwhi
 ---
 
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Quickstart: Search the web using the Bing Web Search REST API and Node.js
 
 Use this quickstart to make your first call to the Bing Web Search API. This Node.js application sends a search request to the API, and shows the JSON response. Although this application is written in JavaScript, the API is a RESTful Web service compatible with most programming languages.
@@ -57,11 +52,11 @@ if (!SUBSCRIPTION_KEY) {
 
 ## Create a function to make the request
 
-This function makes a secure GET request and saves the search query as a query parameter in the path. 
+This function makes a secure GET request and saves the search query as a query parameter in the path.
 
-1. Use `encodeURIComponent` to escape invalid characters. The subscription key is passed in a header. 
+1. Use `encodeURIComponent` to escape invalid characters. The subscription key is passed in a header.
 
-2. The callback receives a [response](https://nodejs.org/dist/latest-v10.x/docs/api/http.html#http_class_http_serverresponse) that subscribes to the `data` event to aggregate the JSON body, the `error` event to log any issues, and the `end` event to know when the message should be considered complete. 
+2. The callback receives a [response](https://nodejs.org/dist/latest-v10.x/docs/api/http.html#http_class_http_serverresponse) that subscribes to the `data` event to aggregate the JSON body, the `error` event to log any issues, and the `end` event to know when the message should be considered complete.
 
 3. When the app is complete, it prints the relevant headers and message body. You can adjust the colors and set the depth to suit your preference. A depth of `1` gives a nice summary of the response.
 

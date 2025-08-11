@@ -11,11 +11,6 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Quickstart: Use PHP to call the Bing Web Search API  
 
 Use this quickstart to make your first call to the Bing Web Search API. This PHP application sends a search request to the API, and shows the response. Although this application is written in PHP, the API is a RESTful Web service compatible with most programming languages.
@@ -43,7 +38,7 @@ Before we get started, locate php.ini and uncomment this line:
 
 1. Create a new PHP project in your favorite IDE or editor. Add opening and closing tags: `<?php` and `?>`.
 
-3. Confirm that the `$endpoint` value is correct and replace the `$accesskey` value with a valid subscription key from your Azure account. 
+3. Confirm that the `$endpoint` value is correct and replace the `$accesskey` value with a valid subscription key from your Azure account.
 
 4. Optionally, customize the search query by replacing the value for `$term`.
 
@@ -287,4 +282,3 @@ Responses from the Bing Web Search API are returned as JSON. This sample respons
 
 > [!div class="nextstepaction"]
 > [Bing Web Search API single-page app tutorial](../../tutorial/bing-web-search-single-page-app.md)
-

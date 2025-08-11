@@ -11,11 +11,6 @@ ms.topic: conceptual
 ms.date: 01/19/2023
 ms.author:  v-apunnamara
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Bing family of search APIs
 
 Bing provides a family of search APIs that let your users comb billions of web documents and get back safe, ad-free, location-aware search results. Depending on the API, you can get back all relevant web results or only relevant news, images, or videos.

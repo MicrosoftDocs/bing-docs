@@ -11,11 +11,6 @@ ms.topic: conceptual
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 
 # Upgrade from Bing Web Search API v5 to v7
 
@@ -25,12 +20,11 @@ This upgrade guide identifies the changes between version 5 and version 7 of the
 
 ### Endpoints
 
-- Changed the `cognitive` subdomain to `bing`. 
+- Changed the `cognitive` subdomain to `bing`.
 - Changed the endpoint's version number from v5 to v7.
 - Removed the `/bing` folder.
 
 New search endpoint: `https://api.bing.microsoft.com/v7.0/search`
-
 
 ### Error response objects and error codes
 
@@ -39,7 +33,6 @@ New search endpoint: `https://api.bing.microsoft.com/v7.0/search`
 - Added the following fields to the `Error` object.  
   - `subCode`&mdash;Partitions the error code into discrete buckets, if possible.
   - `moreDetails`&mdash;Additional information about the error described in the `message` field.
-
 
 - Replaced the v5 error codes with the following possible `code` and `subCode` values.
 
@@ -73,7 +66,6 @@ MultipleAuthorizationMethod|InvalidAuthorization.AuthorizationRedundancy
 ExpiredAuthorizationToken|InsufficientAuthorization.AuthorizationExpired
 InsufficientScope|InsufficientAuthorization
 Blocked|InvalidRequest.Blocked
-
 
 ## Non-breaking changes  
 

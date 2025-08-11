@@ -10,11 +10,6 @@ ms.subservice: bing-web-search
 ms.topic: reference
 ms.date: 06/10/2024
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Web Search API v7 query parameters
 
 The following are the query parameters that requests may include. The Required column indicates whether you must specify the parameter. You must URL encode the query parameter values.  

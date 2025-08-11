@@ -10,17 +10,12 @@ ms.topic: reference
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 
 # Entity types used by Bing Web Search API
 
 This section contains the list entity hints that the [EntityPresentationInfo](../../bing-entity-search/reference/response-objects.md#entitypresentationinfo) object's `entityTypeHint` field can be set to. The hints are grouped by category of entities.  
   
-## Base entity types 
+## Base entity types
   
 - Generic  
 - Person  
@@ -51,8 +46,8 @@ This section contains the list entity hints that the [EntityPresentationInfo](..
 - SubRegion  
 - TouristAttraction  
 - Travel  
- 
-## Media base type entity hints 
+
+## Media base type entity hints
   
 - Book  
 - Movie  
@@ -75,7 +70,7 @@ This section contains the list entity hints that the [EntityPresentationInfo](..
 - CollegeOrUniversity  
 - School  
 - Speciality  
- 
+
 ## Other entity hints
   
 - Animal  
@@ -84,4 +79,3 @@ This section contains the list entity hints that the [EntityPresentationInfo](..
 - Food  
 - Product  
 - SportsTeam  
-

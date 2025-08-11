@@ -11,23 +11,17 @@ ms.topic: conceptual
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Attributing search results
 
 While Bing gathers some information by crawling the web, other information is obtained via licensors who place restrictions on the use of their data. It is important to understand that while Bing organizes and makes certain inferences or connections with the data, Bing is, in most cases, not the owner of this data. As such, partners must ensure that they adhere to fair use, copyright or other restrictions that may exist on the source data.
 
 If any part of an answer includes the `contractualRules`, `attributions`, or `provider` fields, you must attribute the data. If the answer does not include any of these fields, no attribution is required. If the answer includes the `contractualRules` field, you must use it to attribute the data instead of `attributions` or `provider`.
- 
 
 ## What data does a contractual rule apply to?
 
-If the contractual rule includes the `targetPropertyName` field, you must apply the rule to the data in the field that `targetPropertyName` points to. Otherwise, the rule applies to the data in the object that contains the `contractualRules` field. 
+If the contractual rule includes the `targetPropertyName` field, you must apply the rule to the data in the field that `targetPropertyName` points to. Otherwise, the rule applies to the data in the object that contains the `contractualRules` field.
 
-Because the **LinkAttribution** and **TextAttribution** rules in the following example fragment don’t include `targetPropertyName`, the rules apply to the entity object. In this case, you must include a line immediately following the entity data that attributes the data to the providers. The line should be clearly labeled to indicate that the providers are the source of the data. For example, "Data from: Wikipedia | STATS LLC © 2016". 
+Because the **LinkAttribution** and **TextAttribution** rules in the following example fragment don’t include `targetPropertyName`, the rules apply to the entity object. In this case, you must include a line immediately following the entity data that attributes the data to the providers. The line should be clearly labeled to indicate that the providers are the source of the data. For example, "Data from: Wikipedia | STATS LLC © 2016".
 
 For **LinkAttribution** rules, you must create a hyperlink to the provider's website. In this case, make Wikipedia a hyperlink to the Wikipedia webpage that contains information about the entity.
 
@@ -79,7 +73,6 @@ But in the following example, the **MediaAttribution** contractual rule identifi
 
 The above example also shows data that includes both the `contractualRules` and `provider` fields. Because `contractualRules` exists, you ignore the image's `provider` field and use the **MediaAttribution** rule to provide attribution for the image.
 
-
 ## Contractual rules
 
 For information about possible contractual rules that a Bing API response may contain, see the following sections.
@@ -87,7 +80,6 @@ For information about possible contractual rules that a Bing API response may co
 - [License attribution](#license-attribution)
 - [Link and text attribution](#link-and-text-attribution)
 - [Media attribution](#media-attribution)
-
 
 ### License attribution
 
@@ -116,6 +108,3 @@ If the entity includes an image and you display it, you must provide a click-thr
 The following example includes a contractual rule and the `provider` field. Because the example includes the contractual rule, ignore the `provider` field and apply the **MediaAttribution** rule.
 
 ![Media attribution](media/attribution/mediaattribution.png)  
-
-
-
