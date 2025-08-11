@@ -4,16 +4,12 @@ titleSuffix: Bing Services
 description: Provides the list of HTTP status codes and service error codes that Bing Search may return.
 author:  alekhyasasi
 manager: ehansen
+ms.author: dutescufilip
 ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: reference
 ms.date: 06/07/2023
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 
 # HTTP status codes that Bing Web Search API may return
 

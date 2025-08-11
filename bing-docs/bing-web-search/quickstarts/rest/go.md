@@ -11,11 +11,6 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Quickstart: Search the web using the Bing Web Search REST API and Go
 
 Use this quickstart to make your first call to the Bing Web Search API. This Go application sends a search request to the API, and shows the JSON response. Although this application is written in Go, the API is a RESTful Web service compatible with most programming languages.
@@ -23,6 +18,7 @@ Use this quickstart to make your first call to the Bing Web Search API. This Go 
  The code examples in this quickstart require only core libraries; there are no external dependencies.  
 
 ## Prerequisites
+
 Here are a few things that you'll need before running this quickstart:
 
 * [Go binaries](https://golang.org/dl/)
@@ -110,10 +106,10 @@ type BingAnswer struct {
 
 ## Declare the main function and define variables  
 
-This code declares the main function and sets the required variables: 
+This code declares the main function and sets the required variables:
 
-2. Confirm that the endpoint is correct and replace the `token` value with a valid subscription key from your Azure account. 
- 
+2. Confirm that the endpoint is correct and replace the `token` value with a valid subscription key from your Azure account.
+
 3. Optionally, customize the search query by replacing the value for `searchTerm`.
 
 ```go

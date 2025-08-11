@@ -11,11 +11,6 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Quickstart: Use a Bing Web Search JavaScript client library
 
 The Bing Web Search client library makes it easy to integrate Bing Web Search into your Node.js application. In this quickstart, you'll learn how to instantiate a client, send a request, and print the response.
@@ -23,6 +18,7 @@ The Bing Web Search client library makes it easy to integrate Bing Web Search in
 Want to see the code right now? Samples for the [Bing Search client libraries for JavaScript](https://github.com/Azure-Samples/cognitive-services-node-sdk-samples/tree/master/Samples) are available on GitHub.
 
 ## Prerequisites
+
 Here are a few things that you'll need before running this quickstart:
 
 * [Node.js 6](https://nodejs.org/en/download/) or later

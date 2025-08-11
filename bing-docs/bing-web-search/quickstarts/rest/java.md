@@ -11,11 +11,6 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Quickstart: Use Java to search the web with the Bing Web Search REST API, an Azure cognitive service
 
 In this quickstart, you'll use a Java application to make your first call to the Bing Web Search API. This Java application sends a search request to the API, and shows the JSON response. Although this application is written in Java, the API is a RESTful Web service compatible with most programming languages.
@@ -75,9 +70,9 @@ public class BingWebSearch {
 
 The following code sets the `subscriptionKey`, `host`, `path`, and `searchTerm`. Add this code to the `BingWebSearch` class described in the previous section:
 
-1. Replace the `subscriptionKey` value with a valid subscription key from your Azure account. 
+1. Replace the `subscriptionKey` value with a valid subscription key from your Azure account.
 
-2. Optionally, customize the search query by replacing the value for `searchTerm`. 
+2. Optionally, customize the search query by replacing the value for `searchTerm`.
 
 ```java
 // Enter a valid subscription key.

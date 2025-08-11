@@ -11,11 +11,6 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Quickstart: Use Python to call the Bing Web Search API  
 
 Use this quickstart to make your first call to the Bing Web Search API. This Python application sends a search request to the API, and shows the JSON response. Although this application is written in Python, the API is a RESTful Web service compatible with most programming languages.
@@ -41,7 +36,7 @@ This example is run as a Jupyter notebook on [MyBinder](https://mybinder.org). T
    assert subscription_key
    ```
 
-2. Declare the Bing Web Search API endpoint. 
+2. Declare the Bing Web Search API endpoint.
 
    ```python
    search_url = "https://api.bing.microsoft.com/v7.0/search"
@@ -55,7 +50,7 @@ This example is run as a Jupyter notebook on [MyBinder](https://mybinder.org). T
 
 ## Make a request
 
-This code uses the `requests` library to call the Bing Web Search API and return the results as a JSON object. The API key is passed in the `headers` dictionary, and the search term and query parameters are passed in the `params` dictionary. 
+This code uses the `requests` library to call the Bing Web Search API and return the results as a JSON object. The API key is passed in the `headers` dictionary, and the search term and query parameters are passed in the `params` dictionary.
 
 For a complete list of options and parameters, see [Bing Web Search API v7](../../reference/query-parameters.md).
 
@@ -92,4 +87,3 @@ To run this code locally, see the complete [sample available on GitHub](https://
 
 > [!div class="nextstepaction"]
 > [Bing Web Search API single-page app tutorial](../../tutorial/bing-web-search-single-page-app.md)
-

@@ -11,11 +11,6 @@ ms.topic: conceptual
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Filter the answers that Bing returns
 
 When you query the Web, Bing returns all relevant content that it finds. This could include webpages, images, news, videos, and more. But what if you're only interested in webpages and news; how can you tell Bing you're not interested in any other answers? You use the [responseFilter](reference/query-parameters.md#responsefilter) query parameter.
@@ -34,15 +29,13 @@ Remember that you need to URL-encode all query parameters, so the parameter actu
 
 Bing includes the answers you request only if it finds relevant content that ranks high enough for the page of results you requested. For example, if you filter the response for images, videos, and news but Bing doesn't find relevant videos and news results that rank high enough for the first page, the response includes only images. But if you page through more results, they may include videos and news content.
 
-To exclude specific answers from the response, prefix a minus sign (-) to the answer's name. For example, "-images." 
+To exclude specific answers from the response, prefix a minus sign (-) to the answer's name. For example, "-images."
 
 In theory, you could use *responseFilter* to filter for a single answer like only images or news but you're strongly discouraged from doing so. Instead, you should use the answer-specific endpoint to get richer results and better performance. For example, to receive only images, send the request using [Image Search API](../bing-image-search/overview.md). The Image Search API offers filters that are not available to the Web Search API.  
-
 
 ## Getting results from a specific site
 
 To get search results from a specific domain, use Bing's [site:](https://help.bing.microsoft.com/#apex/18/en-US/10001/-1) operator in the query string. The response may contain results from other sites depending on the number of relevant results found on the specified site.
- 
 
 ```
 q=sailing+dinghies+site%3Acontososailing.com
@@ -50,7 +43,6 @@ q=sailing+dinghies+site%3Acontososailing.com
 
 > [!NOTE]
 > Depending on the query, if you use the `site:` query operator, there is the chance that the response may contain adult content regardless of the [safeSearch](reference/query-parameters.md#safesearch) setting. You should use `site:` only if you are aware of the content on the site and your scenario supports the possibility of adult content.
-
 
 ## Specifying the content's freshness
 
@@ -78,13 +70,11 @@ To limit the results to a single date, set the *freshness* parameter to the spec
 
 The results may include webpages that fall outside the specified period if the number of webpages that Bing finds that matches your criteria is less than the number of webpages you requested (or the default number that Bing returns).
 
-
 ## Returning the top n answers
 
 A response may include any number of answer types. To limit the number of answers in the response to the top two ranked answers, set the [answerCount](reference/query-parameters.md#answercount) query parameter to 2. Bing chooses the answers based on ranking. For example, if Bing ranks the answers as webpages, images, videos, and relatedSearches, the response includes only webpages and images.
 
 If the request includes the [responseFilter](reference/query-parameters.md#responsefilter) and *answerCount* query parameters, both apply. For example, if you set *responseFilter* to webpages and news and *answerCount* to 2, the response contains only webpages since news is not ranked.
-
 
 ## Promoting answers that are not ranked
 
@@ -102,7 +92,6 @@ The answers that you want to promote do not count against the *answerCount* limi
 
 You may use *promote* only if you specify the *answerCount* query parameter.
 
-
 ## Limiting the number of webpages
 
 By default, Web Search API returns 10 webpages. If you want to receive a different number of webpages, use the [count](reference/query-parameters.md#count) query parameter. The following example shows how to get back only 5 webpages.
@@ -115,7 +104,6 @@ The *count* query parameter affects only the number of webpages that Bing return
 
 You can also use the *count* and *offset* query parameters together to page through all the webpages that match the user’s intent. For details about paging results, see [Paging results](page-results.md).
 
-
 ## Filtering adult content
 
 The [safeSearch](reference/query-parameters.md#safesearch) query parameter lets you filter out webpages, images, and videos with adult content. You may set this parameter to one of the following values:
@@ -125,7 +113,6 @@ The [safeSearch](reference/query-parameters.md#safesearch) query parameter lets 
 - Strict &mdash; Does not return content with adult text, images, or videos.
 
 The default is Moderate.
-
 
 ## Next steps
 

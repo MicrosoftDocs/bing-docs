@@ -11,13 +11,7 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Quickstart: Use a Bing Web Search Java client library
-
 
 The Bing Web Search client library makes it easy to integrate Bing Web Search into your Java application. In this quickstart, you'll learn how to send a request, receive a JSON response, and filter and parse the results.
 
@@ -297,4 +291,3 @@ When you're done with this project, make sure to remove your subscription key fr
 
 > [!div class="nextstepaction"]
 > [Cognitive Services Java SDK samples](https://github.com/Azure-Samples/cognitive-services-java-sdk-samples/tree/master/Search/BingWebSearch)
-

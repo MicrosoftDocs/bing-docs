@@ -11,11 +11,6 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Quickstart: Use Ruby to call the Bing Web Search API  
 
 Use this quickstart to make your first call to the Bing Web Search API. This Ruby application sends a search request to the API, and shows the JSON response. Although this application is written in Ruby, the API is a RESTful Web service compatible with most programming languages.
@@ -45,7 +40,7 @@ require 'json'
 
 A few variables must be set before we can continue:
 
-1. Confirm that the `uri` and `path` values are valid and replace the `accessKey` value with a subscription key from your Azure account. 
+1. Confirm that the `uri` and `path` values are valid and replace the `accessKey` value with a subscription key from your Azure account.
 
 2. Optionally, customize the search query by replacing the value for `term`.
 
@@ -269,4 +264,3 @@ Responses from the Bing Web Search API are returned as JSON. This sample respons
 
 > [!div class="nextstepaction"]
 > [Bing Web Search API single-page app tutorial](../../tutorial/bing-web-search-single-page-app.md)
-

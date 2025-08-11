@@ -12,15 +12,9 @@ ms.topic: conceptual
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Configure your hosted UI experience
 
 Bing Custom Search provides a hosted UI that easily integrates into your webpage using JavaScript. You can configure the UI's layout, color, and search options in the Custom Search portal.
-
 
 ## Configure your hosted UI
 
@@ -35,9 +29,9 @@ To configure a hosted UI for your web applications, follow these steps. As you m
 4. Select a layout.
 
     - Search bar and results (default): Displays a search box with search results below it.  
-      
+
     - Results only: Displays search results only, without a search box. When using this layout, you must provide the search string (`&q=<search string>`). Add the query parameter (*q*) to the request URL in the JavaScript snippet, or the HTML endpoint link.  
-      
+
     - Pop-over: Provides a search box and displays the search results in a sliding overlay.
 
 5. Select a color theme. You can customize the colors to fit your application by clicking **Customize theme**. To change a color, either enter the color's RGB HEX value (for example, `#366eb8`) or click on the color preview.
@@ -49,10 +43,9 @@ To configure a hosted UI for your web applications, follow these steps. As you m
 
 6. Under **Additional Configurations**, provide values as appropriate for your app. These settings are optional. To see the effect of applying or removing them, see the preview pane on the right.  
 
-7. Enter the search subscription key or choose one from the dropdown list. The dropdown list is populated with keys from your Azure account's subscriptions.   
+7. Enter the search subscription key or choose one from the dropdown list. The dropdown list is populated with keys from your Azure account's subscriptions.
 
-8. If you enabled autosuggest, enter the autosuggest subscription key or choose one from the dropdown list. The dropdown list is populated with keys from your Azure account's subscriptions. 
-
+8. If you enabled autosuggest, enter the autosuggest subscription key or choose one from the dropdown list. The dropdown list is populated with keys from your Azure account's subscriptions.
 
 ## Publish or revert a search instance
 
@@ -62,7 +55,6 @@ After configuring and validating your changes, click **Publish** to make your ho
 
 Before publishing, if you decide that you don't want to keep the changes you've made, click **Revert**. When you revert your changes, the **Published** version remains unchanged and the **Configuration** version is reverted to match the **Published** version.
 
-
 ## Consume your custom UI
 
 To consume your hosted UI after publishing it, select the **Production** tab and then select the **Endpoints** tab. In the list of endpoints, click **Hosted UI**.
@@ -71,7 +63,7 @@ Click **Additional parameters** if you want to include the *safeSearch* query pa
 
 Finally, use one of the following options to access your custom hosted UI:
 
-- Copy the JavaScript snippet and paste it into your webpage. The following is an example only (copy the actual snippet from the portal). 
+- Copy the JavaScript snippet and paste it into your webpage. The following is an example only (copy the actual snippet from the portal).
   
   ```html
   <html>
@@ -91,10 +83,9 @@ Finally, use one of the following options to access your custom hosted UI:
   > [!IMPORTANT]
   > The page cannot display your privacy statement or other notices and terms. Suitability for your use may vary.  
 
-
 ## Configuration options
 
-The following sections describe the additional configurations listed under **Additional Configurations** (see step 6 above). These settings are optional. To see the effect of applying or removing them, see the preview pane on the right. 
+The following sections describe the additional configurations listed under **Additional Configurations** (see step 6 above). These settings are optional. To see the effect of applying or removing them, see the preview pane on the right.
 
 ### Web search configurations
 
@@ -134,8 +125,8 @@ The following configuration is shown if you click **Show advanced configurations
 The following configurations are shown if you click **Show advanced configurations**.  
 
 - Search box text placeholder: The text displayed in the search box prior to user input.
-- Title link url: The target for the title link. 
-- Logo URL: The image displayed next to the title. 
+- Title link url: The target for the title link.
+- Logo URL: The image displayed next to the title.
 - Favicon: The icon displayed in the browser's title bar.
 
 The following configurations apply only if you consume the Hosted UI through the HTML endpoint (they don't apply if you use the JavaScript snippet).
@@ -145,4 +136,3 @@ The following configurations apply only if you consume the Hosted UI through the
 - Title link URL
 - Logo URL
 - Faviicon URL  
-
