@@ -11,17 +11,11 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Quickstart: Search the web using C# and Bing Web Search API
 
-Use this quickstart to make your first call to Bing Web Search API. This C# console application sends a search request to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. The source code for this sample is available on <a href="https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/quickstarts/WebSearch.cs" target="_blank">GitHub</a>. 
+Use this quickstart to make your first call to Bing Web Search API. This C# console application sends a search request to Bing and parses the response. Since it's a console application, it displays a text-based version of the response for illustrative purposes only. The source code for this sample is available on <a href="https://github.com/microsoft/bing-search-dotnet-samples/blob/main/rest/quickstarts/WebSearch.cs" target="_blank">GitHub</a>.
 
-Grab your favorite .NET editor, JSON library, and [Create Bing Search Service resource](../../create-bing-search-service-resource.md) for Bing Web Search and let's get started. 
-
+Grab your favorite .NET editor, JSON library, and [Create Bing Search Service resource](../../create-bing-search-service-resource.md) for Bing Web Search and let's get started.
 
 ## Create a project and declare dependencies
 
@@ -36,7 +30,6 @@ using System.Linq;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 ```
-
 
 ## Declare a namespace and class for your program
 
@@ -88,7 +81,6 @@ Here are all the query parameters you can add to the base URI. The *q* parameter
         private const string ANSWER_COUNT = "&answerCount=";
         private const string PROMOTE = "&promote=";
 ```
-
 
 ## Declare the Main method
 
@@ -147,7 +139,6 @@ This example uses dictionaries instead of objects to access the response data.
         }
 ```
 
-
 ## The HTTP call
 
 Here's the HTTP request. It's your basic HTTP GET request. Use whatever HTTP client works for you.
@@ -173,12 +164,11 @@ That's all there is to sending a search request and getting back search results.
 
 The rest of the sections walk you through one way of parsing the JSON response and displaying the search results. Be sure to read the [Terms of Use and Use and Display Requirements](https://aka.ms/BingAPIsLegal) to make sure you comply with all display requirements.
 
-
 ## Using ranking to display the search results
 
 If the request succeeds, the code calls the `PrintResponse` method to print the search results in the console window.
 
-The example uses the RankingResponse answer to display the search results. The ranking determines which answers to display in the pole, mainline, and sidebar sections of the search results page. For information about using the RankingResponse answer, see [Use ranking to display search results](../../rank-results.md). 
+The example uses the RankingResponse answer to display the search results. The ranking determines which answers to display in the pole, mainline, and sidebar sections of the search results page. For information about using the RankingResponse answer, see [Use ranking to display search results](../../rank-results.md).
 
 ```csharp
         // Prints the JSON response data for pole, mainline, and sidebar.
@@ -330,7 +320,7 @@ If the item includes the `resultIndex` field, use the index value to display tha
 
 ### Display answer results
 
-This example accesses a few of the fields from each type of answer result and applies any contractual rules. You will likely use data from more of the fields than are shown in this example. For information about the fields that each answer result may include, see [Response objects](../../reference/response-objects.md). 
+This example accesses a few of the fields from each type of answer result and applies any contractual rules. You will likely use data from more of the fields than are shown in this example. For information about the fields that each answer result may include, see [Response objects](../../reference/response-objects.md).
 
 ```csharp
         // Displays all webpages in the Webpages answer.
@@ -684,7 +674,6 @@ The `GetRulesByField` method builds a dictionary of the rules that the calling m
         }
 ```
 
-
 ## Handling errors
 
 This section shows an option for handling errors that the service may return. For example, the service returns an error if your subscription key is not valid or is not valid for the specified endpoint. The service may also return an error if you specify a parameter value that's not valid.
@@ -742,8 +731,6 @@ This section shows an option for handling errors that the service may return. Fo
         }
 ```
 
-
 ## Next steps
 
 - For a more in depth web app example, see the [Web Search tutorial](../../tutorial/bing-web-search-single-page-app.md).
-

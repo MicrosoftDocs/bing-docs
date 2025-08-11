@@ -5,16 +5,12 @@ description: Custom Autosuggest returns a list of suggested search query strings
 services: bing-search-services
 author:  alekhyasasi
 manager: ehansen
+ms.author: dutescufilip
 ms.service: bing-search-services
 ms.subservice: bing-custom-search
 ms.topic: conceptual
 ms.date: 04/07/2023
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Configure your custom autosuggest experience
 
 Use Custom Autosuggest API to improve your users' search box experience by providing a list of suggested query strings with each character they type. The list will contain a maximum of 10 suggestions.

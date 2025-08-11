@@ -11,11 +11,6 @@ author: alekhyasasi
 ms.date: 04/05/2022
 ms.author: v-apunnamara
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # What is Bing Custom Search?
 
 > [!NOTE]
@@ -29,10 +24,9 @@ After defining your view, integrate it into your website or application by calli
 
 ## Get started
 
-To get started using the API, pick the subscription you want from <a href="https://aka.ms/bingsearchapipricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call. 
+To get started using the API, pick the subscription you want from <a href="https://aka.ms/bingsearchapipricing" target="_blank">Bing API Pricing</a>. After getting your subscription key, you're all set to make your first call.
 
 You can easily call the API by sending a native HTTP GET request or by using the Custom Search SDK. For examples to help you get up and running quickly for either option, see [Quickstarts](quickstarts/quickstarts.md).
-
 
 ## Features
 
@@ -41,16 +35,15 @@ Custom Search provides the following features:
 |Feature|Description
 |-|-
 |[Define your view of the web](how-to/define-your-custom-view.md)|Identify the content that your users care about.
-|[Define a search experience that you host within your website or app](how-to/hosted-ui.md)|Configure and host a search experience that you can integrate into a webpage or app using JavaScript. 
+|[Define a search experience that you host within your website or app](how-to/hosted-ui.md)|Configure and host a search experience that you can integrate into a webpage or app using JavaScript.
 |[Share your custom search instance](how-to/share-your-custom-search.md)|Collaboratively edit and test your search instance with teammates.
 
-After defining your custom view of the web, use the following APIs to query its content. 
+After defining your custom view of the web, use the following APIs to query its content.
 
 - Custom Search API  &mdash; Lets your users search for webpages and more from the domains and sites specified in your custom search instance.
 - [Custom Image API](how-to/get-images-from-instance.md) &mdash; Lets your users search for images from the domains and sites specified in your custom search instance.
 - [Custom Video API](how-to/get-videos-from-instance.md) &mdash; Lets your users search for videos from the domains and sites specified in your custom search instance.
 - [Custom Autosuggest API](how-to/configure-custom-autosuggest.md) &mdash; Lets you provide suggested search strings to your users as they type in your search box.
-
 
 ### Search or search-like experience
 
@@ -62,7 +55,6 @@ Bing Custom Search API may only be used as a result of a direct user query or se
 - User dwells on a particular object or entity in a visual search type scenario.
 
 If you are not sure if your experience can be considered a search-like experience, check with Microsoft.
-
 
 ## Next steps
 

@@ -11,11 +11,6 @@ ms.topic: sample
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Bing Web Search quickstarts
 
 Use these quickstarts to make your first Web Search API call in a matter of minutes.
@@ -30,14 +25,12 @@ Use these quickstarts to make your first Web Search API call in a matter of minu
 - [Python](rest/python.md)
 - [Ruby](rest/ruby.md)
 
-
 ## Quickstarts using the Bing client library
 
 - [C#](sdk/web-search-client-library-csharp.md)
 - [Java](sdk/web-search-client-library-java.md)
 - [JavaScript](sdk/web-search-client-library-javascript.md)
 - [Python](sdk/web-search-client-library-python.md)
-
 
 ## Next steps
 

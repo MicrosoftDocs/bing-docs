@@ -11,11 +11,6 @@ ms.topic: conceptual
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Paging search results
 
 When you call any of the Bing APIs (for example, the Web Search API or Image Search API), the API returns a list of results. The list is a subset of the total number of results that may be relevant to the query. To get the estimated total number of available results, access the answer object's `totalEstimatedMatches` field.
@@ -35,7 +30,6 @@ The following example shows the `totalEstimatedMatches` field for News Search AP
 ```
 
 The estimated number of matches **is only an estimate** and may likely change from request to request.
-
 
 ## Paging through search results
 
@@ -72,7 +66,6 @@ The following table list the default and maximum count value per API.
 
 For the Image, News, and Video APIs, paging applies to only the general search endpoint. For example, you may not use paging with the trending endpoints.
 
-
 ## Paging web search results
 
 The Web Search API returns results that include webpages and may include other answers like images, videos, and news. When you page the search results, you are paging the webpage results and not the other answers. For example, if you set count to 15, Bing returns 15 webpage results, but may return 35 images and 4 news articles.
@@ -80,7 +73,6 @@ The Web Search API returns results that include webpages and may include other a
 The answers that Bing returns from page to page is unknown. For example, Bing may include news on the first page but not the second page, or vise-versa.
 
 Note that if you specify the *responseFilter* query parameter and do not include Webpages in the list of filters, you should not use the *count* and *offset* parameters.
-
 
 ## Paging image and video results
 
@@ -107,7 +99,6 @@ To eliminate duplicate results, set the *offset* query parameter to the value in
 For example, if you want to page 30 images at a time, you'd set *count* to 30 and *offset* to 0 in your first request. In your next request, you'd set *count* to 30 and *offset* to the value of `nextOffset`. The value of `nextOffset` will be 30 if there are no duplicates or it may be 32 if there are 2 duplicates.
 
 Use the same technique when paging videos.
-
 
 ## Next steps
 

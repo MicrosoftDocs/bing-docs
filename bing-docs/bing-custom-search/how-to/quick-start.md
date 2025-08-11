@@ -12,11 +12,6 @@ ms.topic: quickstart
 ms.date: 07/15/2020
 ms.author: scottwhi
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Quickstart: Create your first Bing Custom Search instance
 
 To use Bing Custom Search, create a custom search instance that defines your view or slice of the web. The instance contains the public domains, websites, and webpages that you want to search, along with any ranking adjustments you may want.

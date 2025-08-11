@@ -11,11 +11,6 @@ ms.topic: conceptual
 ms.date: 02/14/2024
 ms.author: v-alpunnamar
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 
 # Resize and crop thumbnail images
 

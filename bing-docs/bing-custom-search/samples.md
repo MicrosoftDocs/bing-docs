@@ -11,14 +11,9 @@ ms.topic: sample
 ms.date: 07/15/2020
 ms.author: v-grvanpelt
 ---
-> [!WARNING] 
-> **Product to be retired** Bing Search and Bing Custom Search APIs will be retired on 11th August 2025. 
-> New deployments are not available and existing resources will be disabled. [Learn more](https://aka.ms/BingAPIsRetirement)
-<br/>
-
 # Bing Custom Search API samples
 
-Use the Bing Custom Search API samples to search your view of the web for webpages and more. The samples, prerequisites, and build instructions are provided on GitHub. 
+Use the Bing Custom Search API samples to search your view of the web for webpages and more. The samples, prerequisites, and build instructions are provided on GitHub.
 
 ## Samples using native HTTP GET requests
 
@@ -31,8 +26,6 @@ Here's a list of REST samples by language. The list is subject to change. For th
 |[JavaScript](https://github.com/microsoft/bing-search-nodejs-samples/tree/main/rest)|[Bing Custom Search](https://github.com/microsoft/bing-search-nodejs-samples/blob/main/rest/BingCustomSearchV7.js)
 |[Python](https://github.com/microsoft/bing-search-python-samples/tree/main/rest)|[Bing Custom Search](https://github.com/microsoft/bing-search-python-samples/blob/main/rest/BingCustomSearchV7.py)
 
-
-
 ## Samples using the Bing client library
 
 Here's a list of SDK samples by language. The list is subject to change. For the current list, see GitHub.
@@ -43,7 +36,6 @@ Here's a list of SDK samples by language. The list is subject to change. For the
 |[Java](https://github.com/microsoft/bing-search-sdk-for-java/tree/main/samples/sdk/CustomSearchSample)|[Bing Custom Search](https://github.com/microsoft/bing-search-java-samples/blob/main/rest/BingWebSearchV7.java)
 |[Node.js](https://github.com/Azure-Samples/cognitive-services-node-sdk-samples)|[Bing Custom Search](https://github.com/microsoft/bing-search-nodejs-samples/blob/main/rest/BingWebSearchV7.js)
 |[Python](https://github.com/microsoft/bing-search-sdk-for-python/blob/main/samples/sdk/custom_search_samples.py)|[Bing Custom Search](https://github.com/microsoft/bing-search-python-samples/blob/main/rest/BingWebSearchV7.py)
-
 
 ## Next steps
 
