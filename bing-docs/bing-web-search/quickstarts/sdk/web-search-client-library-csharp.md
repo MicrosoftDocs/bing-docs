@@ -9,13 +9,13 @@ ms.service: bing-search-services
 ms.subservice: bing-web-search
 ms.topic: quickstart
 ms.date: 07/15/2020
-ms.author: scottwhi
+ms.author: mdeifallah
 ---
 # Quickstart: Use a Bing Web Search .NET client library
 
 The Bing Web Search client library makes it easy to integrate Bing Web Search into your C# application. In this quickstart, you'll learn how to instantiate a client, send a request, and print the response.
 
-Want to see the code right now? Samples for the [Bing Search client libraries for .NET](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/tree/master/BingSearchv7) are available on GitHub.
+Want to see the code right now? Samples for the [Bing Search client libraries for .NET](https://github.com/microsoft/bing-search-sdk-for-net/tree/main/samples/BingSearchSamples/BingWebSearch) are available on GitHub.
 
 ## Prerequisites
 
@@ -33,15 +33,11 @@ Here are a few things that you'll need before running this quickstart:
 
 ## Create a project and install dependencies
 
-> [!TIP]
-> Get the latest code as a Visual Studio solution from [GitHub](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/).
+The first step is to create a new console project. If you need help with setting up a console project, see [Hello World -- Your First Program (C# Programming Guide)](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program). To use the Bing Web Search SDK in your application, you'll need to install `Microsoft.Bing.Search.WebSearch` using the NuGet Package Manager.
 
-The first step is to create a new console project. If you need help with setting up a console project, see [Hello World -- Your First Program (C# Programming Guide)](/dotnet/csharp/programming-guide/inside-a-program/hello-world-your-first-program). To use the Bing Web Search SDK in your application, you'll need to install `Microsoft.Azure.CognitiveServices.Search.WebSearch` using the NuGet Package Manager.
-
-The [Web Search SDK package](https://www.nuget.org/packages/Microsoft.Azure.CognitiveServices.Search.WebSearch/1.2.0) also installs:
+The [Web Search SDK package](https://www.nuget.org/packages/Microsoft.Bing.Search.WebSearch/1.0.0) also installs:
 
 * Microsoft.Rest.ClientRuntime
-* Microsoft.Rest.ClientRuntime.Azure
 * Newtonsoft.Json
 
 ## Declare dependencies
@@ -51,10 +47,12 @@ Open your project in Visual Studio or Visual Studio Code and import these depend
 ```csharp
 using System;
 using System.Collections.Generic;
-using Microsoft.Azure.CognitiveServices.Search.WebSearch;
-using Microsoft.Azure.CognitiveServices.Search.WebSearch.Models;
+using Microsoft.Bing.WebSearch;
+using Microsoft.Bing.WebSearch.Models;
 using System.Linq;
+using Newtonsoft.Json;
 ```
+> :warning: **The next sections are deprecated, and the code samples are going to be updated soon**: Be very careful here!
 
 ## Create project scaffolding
 
@@ -418,8 +416,3 @@ This sample uses the `answer_count`, `promote`, and `safe_search` parameters to 
 ## Clean up resources
 
 When you're done with this project, make sure to remove your subscription key from the application's code.
-
-## Next steps
-
-> [!div class="nextstepaction"]
-> [Cognitive Services .NET SDK samples](https://github.com/Azure-Samples/cognitive-services-dotnet-sdk-samples/)
