@@ -19,7 +19,7 @@ Use this quickstart to make your first call to the Bing Video Search API. This s
 
 The source code for this sample is available [on GitHub](https://github.com/Azure-Samples/cognitive-services-REST-api-samples/blob/master/python/Search/BingVideoSearchv7.py) with additional error handling, and code annotations.
 
-You can run this example as a Jupyter notebook on [MyBinder](https://mybinder.org) by selecting the **launch binder** badge: 
+You can run this example as a Jupyter Notebook on [MyBinder](https://mybinder.org) by selecting the **launch binder** badge: 
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/Microsoft/cognitive-services-notebooks/master?filepath=BingVideoSearchAPI.ipynb)
 
